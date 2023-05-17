@@ -3243,8 +3243,8 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 
 
 local MainWindow = Rayfield:CreateWindow({
-	Name = "Main",
-	LoadingTitle = "Hub are Loading...",
+	Name = "SuperX Hub",
+	LoadingTitle = "Welcome...",
 	LoadingSubtitle = "Made By SuperSupers Team",
 	ConfigurationSaving = {
 	   Enabled = true,
