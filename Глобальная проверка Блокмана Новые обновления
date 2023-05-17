@@ -1079,25 +1079,98 @@ print("Защищено LLC & Supers")
 print("Защищено LLC & Supers")
 print("Защищено LLC & Supers")
 
-local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
-local window = kavoUi.CreateLib("ZK Hub Loader","DarkTheme")
+setclipboard("Key: Supers")
+
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+
+
+local MainWindow = Rayfield:CreateWindow({
+	Name = "SuperX Hub",
+	LoadingTitle = "Hub Loading...",
+	LoadingSubtitle = "Made By Supers",
+	ConfigurationSaving = {
+	   Enabled = true,
+	   FolderName = nil, -- Create a custom folder for your hub/game
+	   FileName = "Super Hub"
+	},
+	Discord = {
+	   Enabled = false,
+	   Invite = "https://discord.gg/hfHb9C95", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
+	   RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+	},
+	KeySystem = true, -- Set this to true to use our key system
+	KeySettings = {
+	   Title = "SuperX Hub",
+	   Subtitle = "Key System",
+	   Note = "Key: ",
+	   FileName = "Super Key",
+	   SaveKey = true,
+	   GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+	   Key = "Supers"
+	}
+ })
+
+
+ local MainTab = MainWindow:CreateTab("Main", 4483362458) -- Title, Image
  
----Tabs
+local BanTab = MainWindow:CreateTab("Our New Hub", 4483362458) -- Title, Image
+
+local Button = BanTab:CreateButton({
+	Name = "ZK Hub 1.0",
+	Callback = function(v)
+		loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\76\76\67\116\101\97\109\115\47\90\75\72\117\98\47\109\97\105\110\47\37\68\48\37\57\51\37\68\49\37\56\48\37\68\49\37\56\51\37\68\48\37\66\70\37\68\48\37\66\70\37\68\48\37\66\48\37\50\48\37\68\48\37\65\49\37\68\48\37\66\70\37\68\48\37\57\68\37\50\48\37\68\48\37\57\49\37\68\48\37\57\51\37\50\48\37\68\48\37\66\51\37\68\48\37\66\48\34\41\41\40\41\10")()
+	end,
+ })
+
+ local Button = MainTab:CreateButton({
+	Name = "Speedhack",
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
+	end,
+ })
+
+
+
+local Button = MainTab:CreateButton({
+	Name = "Animation",
+	Callback = function(v)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
+	end,
+ })
  
-local Tab1 = window:NewTab("[Menu]")
-local Tab1Section = Tab1:NewSection("ZK Hub v1.0")
+ 
+ 
+ local Button = MainTab:CreateButton({
+	Name = "Fly",
+	Callback = function(v)
+		loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+	end,
+ })
+ 
 
 
-Tab1Section:NewButton("[] Lastest Version []","v1.0",function()
-loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\76\76\67\116\101\97\109\115\47\90\75\72\117\98\47\109\97\105\110\47\37\68\48\37\57\51\37\68\49\37\56\48\37\68\49\37\56\51\37\68\48\37\66\70\37\68\48\37\66\70\37\68\48\37\66\48\37\50\48\37\68\48\37\65\49\37\68\48\37\66\70\37\68\48\37\57\68\37\50\48\37\68\48\37\57\49\37\68\48\37\57\51\37\50\48\37\68\48\37\66\51\37\68\48\37\66\48\34\41\41\40\41\10")()
+ local Slider = MainTab:CreateSlider({
+	Name = "Walkspeed",
+	Range = {16, 250},
+	Increment = 10,
+	Suffix = "Walkspeed",
+	CurrentValue = 10,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+	end,
+ })
 
-print("Loaded v1.0")
-end)
 
-Tab1Section:NewButton("[] Premium + LLC Executor []","v5.1",function()
-for _,v in pairs(game.Players:GetPlayers()) do
-if v:IsA("Player") then
-v:Kick("You don't have permission to use this script.")
-end end
-print("You don't have permission to use this script.")
-end)
+
+ local Slider = MainTab:CreateSlider({
+	Name = "JumpPower",
+	Range = {50, 500},
+	Increment = 10,
+	Suffix = "JumpPower",
+	CurrentValue = 10,
+	Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+	end,
+ })
