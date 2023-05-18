@@ -1,0 +1,36 @@
+--// ServerScriptService \\--
+
+local lighting = game:GetService("Lighting")
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local event = replicatedStorage:findFirstChild("ChangeTime")
+
+while wait(0.5) do
+ local hours = math.floor(lighting:GetMinutesAfterMidnight() / 60)
+ local suffix = "AM"
+ local minutes = lighting:GetMinutesAfterMidnight() - (hours * 60)
+ if hours > 11 then
+  hours = hours - 12
+  suffix = "PM"
+ end
+ 
+ if hours == 0 then
+  hours = 12
+ end
+ 
+ if minutes < 10 then
+  minutes = "0" .. minutes
+ end
+  
+ local text = hours .. ":" .. minutes .. " " .. suffix
+ event:FireAllClients(text)
+ lighting:SetMinutesAfterMidnight(lighting:GetMinutesAfterMidnight() + 1)
+end
+
+--// LocalGUI Script \\--
+
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local event = replicatedStorage:findFirstChild("ChangeTime")
+
+event.OnClientEvent:connect(function(text)
+ script.Parent.Text = text
+end)
