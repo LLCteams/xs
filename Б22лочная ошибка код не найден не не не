@@ -3242,13 +3242,19 @@ print("Защищено LLC & Supers")
 	
 
  
+ 
+	
+
+
+    
+	
  local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 
 local MainWindow = Rayfield:CreateWindow({
 	Name = "SuperX Hub [v1.1]",
 	LoadingTitle = "Welcome to SuperX.",
-	LoadingSubtitle = "Made By Supers Team",
+	LoadingSubtitle = "Made by Supers Team.",
 	ConfigurationSaving = {
 	   Enabled = true,
 	   FolderName = nil, -- Create a custom folder for your hub/game
@@ -3278,36 +3284,34 @@ local MainWindow = Rayfield:CreateWindow({
  
  local JKTab = MainWindow:CreateTab("Break In", 4483362458) -- Title, Image
  
- local CSTab = MainWindow:CreateTab("Tool", 4483362458) -- Title, Image
+ local CSTab = MainWindow:CreateTab("Others", 4483362458) -- Title, Image
 
-local BanTab = MainWindow:CreateTab("Hub", 4483362458) 
+local BanTab = MainWindow:CreateTab("Hub", 4483362458)
 
 local ADTab = MainWindow:CreateTab("Admin", 4483362458)
 
-local GGTab = MainWinfow:CreateTab("Executor", 4483362458)
-
-local Button = CSTab:CreateButton({
+local Button = ADTab:CreateButton({
 	Name = "Nameless Admin",
 	Callback = function(v)
 		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Nameless-Admin-10833"))()
 	end,
  })
  
- local Button = CSTab:CreateButton({
+ local Button = ADTab:CreateButton({
 	Name = "Reviz Admin",
 	Callback = function(v)
 		loadstring(game:HttpGet("https://pastebin.com/raw/Caniwq2N",true))()
 	end,
  })
 
-local Button = CSTab:CreateButton({
+local Button = ADTab:CreateButton({
 	Name = "Synapse X",
 	Callback = function(v)
 		loadstring(game:HttpGet("https://pastebin.com/raw/M3HjLPU7"))()
 	end,
  })
  
- local Button = CSTab:CreateButton({
+ local Button = ADTab:CreateButton({
 	Name = "Krnl",
 	Callback = function(v)
 		loadstring(game:HttpGet("https://pastebin.com/raw/M3HjLPU7"))()
@@ -3554,3 +3558,4 @@ local Button = MainTab:CreateButton({
  })
  
  
+	
