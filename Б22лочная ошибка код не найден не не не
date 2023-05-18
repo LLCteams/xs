@@ -3239,13 +3239,16 @@ print("Защищено LLC & Supers")
 print("Защищено LLC & Supers")
 print("Защищено LLC & Supers")
 
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+	
+
+ 
+ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 
 local MainWindow = Rayfield:CreateWindow({
-	Name = "SuperX Hub",
+	Name = "SuperX Hub [v1.1]",
 	LoadingTitle = "Welcome to SuperX.",
-	LoadingSubtitle = "Made By SuperSupers Team",
+	LoadingSubtitle = "Made By Supers Team",
 	ConfigurationSaving = {
 	   Enabled = true,
 	   FolderName = nil, -- Create a custom folder for your hub/game
@@ -3258,7 +3261,7 @@ local MainWindow = Rayfield:CreateWindow({
 	},
 	KeySystem = false, -- Set this to true to use our key system
 	KeySettings = {
-	   Title = "SuperX Hub [Beta]",
+	   Title = "SuperX Hub New",
 	   Subtitle = "Key System",
 	   Note = "Because this beta we will give you free keys [Key: Supers]",
 	   FileName = "Super Key",
@@ -3274,8 +3277,49 @@ local MainWindow = Rayfield:CreateWindow({
  local OhTab = MainWindow:CreateTab("Murder Mystery 2", 4483362458) -- Title, Image
  
  local JKTab = MainWindow:CreateTab("Break In", 4483362458) -- Title, Image
+ 
+ local CSTab = MainWindow:CreateTab("Tool", 4483362458) -- Title, Image
 
-local BanTab = MainWindow:CreateTab("ZK Hub", 4483362458) -- Title, ImageImage
+local BanTab = MainWindow:CreateTab("Hub", 4483362458) 
+
+local ADTab = MainWindow:CreateTab("Admin", 4483362458)
+
+local GGTab = MainWinfow:CreateTab("Executor", 4483362458)
+
+local Button = CSTab:CreateButton({
+	Name = "Nameless Admin",
+	Callback = function(v)
+		loadstring(game:HttpGet("https://scriptblox.com/raw/Universal-Script-Nameless-Admin-10833"))()
+	end,
+ })
+ 
+ local Button = CSTab:CreateButton({
+	Name = "Reviz Admin",
+	Callback = function(v)
+		loadstring(game:HttpGet("https://pastebin.com/raw/Caniwq2N",true))()
+	end,
+ })
+
+local Button = CSTab:CreateButton({
+	Name = "Synapse X",
+	Callback = function(v)
+		loadstring(game:HttpGet("https://pastebin.com/raw/M3HjLPU7"))()
+	end,
+ })
+ 
+ local Button = CSTab:CreateButton({
+	Name = "Krnl",
+	Callback = function(v)
+		loadstring(game:HttpGet("https://pastebin.com/raw/M3HjLPU7"))()
+	end,
+ })
+
+local Button = CSTab:CreateButton({
+	Name = "Btools",
+	Callback = function(v)
+		Instance.new("HopperBin", game.Players.LocalPlayer.Backpack).BinType = 4
+	end,
+ })
 
 local Button = OhTab:CreateButton({
 	Name = "Murder Mystery 2 Panel",
@@ -3290,6 +3334,47 @@ local Button = OhTab:CreateButton({
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/vwSaraa/LunarHub/main/mm2"))()
 	end,
  })
+ 
+ local Button = JKTab:CreateButton({
+    Name = "Swat",
+    Callback = function(A_1)
+      local A_1 = "SwatGun"
+local A_2 = true
+local Event = game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole
+Event:FireServer(A_1, A_2)
+    end,
+})
+ 
+ local Button = JKTab:CreateButton({
+    Name = "Gun",
+    Callback = function(A_1)
+          local A_1 = "Gun"
+local A_2 = true
+local Event = game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole
+Event:FireServer(A_1, A_2)
+    end,
+})
+ 
+ local Button = JKTab:CreateButton({
+    Name = "LinkedSword",
+    Callback = function(v)
+      game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("LinkedSword")
+    end,
+})
+
+local Button = JKTab:CreateButton({
+    Name = "Bat",
+    Callback = function(v)
+      game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Bat")
+    end,
+})
+
+local Button = JKTab:CreateButton({
+    Name = "Key",
+    Callback = function(v)
+      game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Key")
+    end,
+})
 
 local Button = JKTab:CreateButton({
 	Name = "Chips",
@@ -3309,13 +3394,6 @@ local Button = JKTab:CreateButton({
     Name = "Apple",
     Callback = function(v)
       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Apple")
-    end,
-})
-
-local Button = JKTab:CreateButton({
-    Name = "LinkedSword",
-    Callback = function(v)
-      game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("LinkedSword")
     end,
 })
 
@@ -3356,9 +3434,58 @@ local Button = JKTab:CreateButton({
  
 
 local Button = BanTab:CreateButton({
-	Name = "ZK Hub 1.0",
+	Name = "ZK Hub 1.2",
 	Callback = function(v)
 		loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\76\76\67\116\101\97\109\115\47\90\75\72\117\98\47\109\97\105\110\47\37\68\48\37\57\51\37\68\49\37\56\48\37\68\49\37\56\51\37\68\48\37\66\70\37\68\48\37\66\70\37\68\48\37\66\48\37\50\48\37\68\48\37\65\49\37\68\48\37\66\70\37\68\48\37\57\68\37\50\48\37\68\48\37\57\49\37\68\48\37\57\51\37\50\48\37\68\48\37\66\51\37\68\48\37\66\48\34\41\41\40\41\10")()
+	end,
+ })
+ 
+ local Button = BanTab:CreateButton({
+	Name = "Multi Hub v3",
+	Callback = function(v)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/Multi-Hub-V3/main/Multi%20Hub%20V3"))()
+	end,
+ })
+ 
+ local Button = BanTab:CreateButton({
+	Name = "Moon Ui v13",
+	Callback = function(v)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/IlikeyocutgHAH/MoonUI-v13-102-SCRIPTS/main/MoonUI%20v13!"))()
+	end,
+ })
+ 
+ local Button = CSTab:CreateButton({
+	Name = "Davi Hub v1",
+	Callback = function(v)
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/Davicoderliner/davigui/main/Daviguiv2loader.lua"),true))()
+	end,
+ })
+ 
+ local Button = BanTab:CreateButton({
+	Name = "Games Hub v6",
+	Callback = function(v)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/TakeModzz/Games-Hub-Script/main/Games%20Hub%20(Always%20updated)"))()
+	end,
+ })
+ 
+ local Button = CSTab:CreateButton({
+	Name = "Auratus X",
+	Callback = function(v)
+		loadstring(game:HttpGet('https://pastebin.com/raw/U40qtHfh'))()
+	end,
+ })
+ 
+ local Button = BanTab:CreateButton({
+	Name = "Bido Skins Hub",
+	Callback = function(v)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Bido%20SkinsV1.2"))()
+	end,
+ })
+ 
+ local Button = BanTab:CreateButton({
+	Name = "Moon v3",
+	Callback = function(v)
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/voiddscripts/moon/main/script.lua"))()
 	end,
  })
 
@@ -3373,6 +3500,13 @@ local Button = MainTab:CreateButton({
 	Name = "Gravity",
 	Callback = function(v)
 		game.Workspace.Gravity = 100
+	end,
+ })
+ 
+ local Button = MainTab:CreateButton({
+	Name = "Jump Power",
+	Callback = function(v)
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
 	end,
  })
 
@@ -3392,8 +3526,7 @@ local Button = MainTab:CreateButton({
 	end,
  })
  
-
-
+ 
  local Slider = MainTab:CreateSlider({
 	Name = "Walkspeed",
 	Range = {16, 250},
