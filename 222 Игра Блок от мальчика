@@ -1,0 +1,15 @@
+local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
+local window = kavoUi.CreateLib("Loader [V3.0]","DarkTheme")
+ 
+---Tabs
+ 
+local Tab1 = window:NewTab("[Menu]")
+local Tab1Section = Tab1:NewSection("Loader v3.0")
+
+
+Tab1Section:NewButton("[🌟] SuperX Hub [🌟]","v1.0",function()
+loadstring(game:HttpGet("https://hastepaste.com/raw/sOoDfyYGiV"))()
+print("Report out channel making you cannot using our script.")
+end)
+
+
