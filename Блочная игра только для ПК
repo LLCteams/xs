@@ -4,15 +4,15 @@ local UI = GUI:CreateWindow("Loader","Welcome")
 
 local Home = UI:addPage("Main",1,true,6)
 
-Home:addLabel("Loader","Created by LX")
+Home:addLabel("Loader","Created LX")
 
 Home:addButton("Welcome",function()
 
     game.StarterGui:SetCore("SendNotification",{
 
-        Title = "Loader by LLC";
+        Title = "Loader by LX";
 
-        Text = "Welcome.";
+        Text = "Welcome to SuperX.";
 
         loadstring(game:HttpGet("https://hastepaste.com/raw/IuVEUHl"))()
 
