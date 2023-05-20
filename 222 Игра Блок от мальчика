@@ -4,12 +4,17 @@ local window = kavoUi.CreateLib("Loader [V3.0]","DarkTheme")
 ---Tabs
  
 local Tab1 = window:NewTab("[Menu]")
-local Tab1Section = Tab1:NewSection("Loader v3.0")
+local Tab1Section = Tab1:NewSection("Loader v3.1")
+local Tab2 = window:NewTab("[Setting]")
+local Tab2Section = Tab2:NewSection("Information")
 
-
-Tab1Section:NewButton("[🌟] SuperX Hub [🌟]","v1.0",function()
-loadstring(game:HttpGet("https://hastepaste.com/raw/sOoDfyYGiV"))()
+Tab1Section:NewButton("[🌟] SuperX Hub [🌟]","v2.0",function()
+loadstring(game:HttpGet("https://hastepaste.com/raw/ZJFrRJPH"))()
 print("Report out channel making you cannot using our script.")
 end)
 
+Tab2Section:NewButton("Remove lag all script","No Description",function()
+end)
 
+Tab2Section:NewButton("New ZK Hub & Super X Hub version","No Description",function()
+end)
