@@ -6,7 +6,7 @@ local MainWindow = Rayfield:CreateWindow({
 	LoadingTitle = "Welcome to SuperX",
 	LoadingSubtitle = "Improved balanced graphics, news, short & safe script.",
 	ConfigurationSaving = {
-	   Enabled = true,
+	   Enabled = false,
 	   FolderName = nil, -- Create a custom folder for your hub/game
 	   FileName = "Super Hub"
 	},
