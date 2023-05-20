@@ -1,7 +1,7 @@
 print("Checking..")
 print(" ??? ")
-wait(20,1)
-wait(20,1)
+wait(7,1)
+wait(7,1)
 print("Done.")
 wait(5,0)
 print("--- ZK Hub [Version 2.6] ---")
@@ -17,7 +17,7 @@ game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 22
 
 local Button = script.Parent
 local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
-local window = kavoUi.CreateLib("ZK Hub","Synapse")
+local window = kavoUi.CreateLib("ZK Hub [Games Hub]","Synapse")
  
 ---Tabs
  
@@ -27,7 +27,7 @@ local Tab2 = window:NewTab("[Credits]")
 local Tab2Section = Tab2:NewSection("Owner : ")
 local Tab2Section = Tab2:NewSection("Helper : ")
 local Tab2Section = Tab2:NewSection("Script : Hub")
-local Tab2Section = Tab2:NewSection("Version : 1.5")
+local Tab2Section = Tab2:NewSection("Version : 2.6")
 local Tab2Section = Tab2:NewSection("[Check Console!]")
 local Tab2Section = Tab2:NewSection("[Server Time: Updated]")
 local Tab2 = window:NewTab("[Update]")
