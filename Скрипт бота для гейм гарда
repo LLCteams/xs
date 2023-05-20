@@ -100,11 +100,11 @@ LP:addToggle("Noclip",function(value)
 
     if value == false then
 
-        for a, b in pairs(Workspace:GetChildren()) do
+        for a, b in pairs(Workspace:GetChildren())
 
     else
 
-        for i, v in pairs(Workspace[Plr.Name]:GetChildren()) do
+        for i, v in pairs(Workspace[Plr.Name]:GetChildren())
 
     end
 
