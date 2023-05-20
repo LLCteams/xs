@@ -96,8 +96,6 @@ LP:addToggle("HackSpeed",function(value)
 
 end)
 
-
-
 LP:addToggle("HackJump",function(value)
     if value == false then
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
@@ -114,7 +112,7 @@ LP:addToggle("HackGravity",function(value)
 
     else
 
-        game.Workspace.Gravity = 100
+        game.Workspace.Gravity = 60
 
     end
 
@@ -133,3 +131,4 @@ LP:addTextBox("Jump Power / 50 is default","Number here",function(value)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 
 end)
+        
