@@ -20,7 +20,7 @@ Home:addButton("Loader [v2.3]",function()
 
 end)
 
-local LP = UI:addPage("Local",2,false,6)
+local LP = UI:addPage("Hub",2,false,6)
 
 -- Label
 
@@ -75,5 +75,41 @@ LP:addToggle("HackSpeed",function(value)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 26
 
     end
+
+end)
+
+LP:addToggle("HackJump",function(value)
+    if value == false then
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+    else
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
+    end
+end)
+
+LP:addToggle("HackGravity",function(value)
+
+    if value == false then
+
+        game.Workspace.Gravity = 50
+
+    else
+
+        game.Workspace.Gravity = 100
+
+    end
+
+end)
+
+LP:addSlider("WalkSpeed",16,150,function(value)
+
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
+
+end)
+
+-- Textbox
+
+LP:addTextBox("Jump Power / 50 is default","Number here",function(value)
+
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 
 end)
