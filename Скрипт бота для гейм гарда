@@ -1,18 +1,43 @@
 local GUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/aaaa"))()
 
-local UI = GUI:CreateWindow("Loader","Welcome")
+local UI = GUI:CreateWindow("Loader Super X","Welcome")
 
 local Home = UI:addPage("Main",1,true,6)
 
-Home:addLabel("Loader","Created by LX")
+Home:addLabel("Loader","Fixed version")
 
-Home:addButton("Welcome",function()
+Home:addButton("Loader [v2.3]",function()
+
     game.StarterGui:SetCore("SendNotification",{
-        Title = "Clicked";
-        Text = "Welcome.";
+
+        Title = "Loader by LLC";
+
+        Text = "Welcome, Key is 208.33.22";
+
+        loadstring(game:HttpGet("https://hastepaste.com/raw/IuVEUHl"))()
+
     })
+
 end)
 
-LP:addButton("Loader",function()
-    loadstring(game:HttpGet("https://hastepaste.com/raw/IuVEUHl"))()
+local LP = UI:addPage("Local",2,false,6)
+
+-- Label
+
+LP:addLabel("Loader","Our Lastest version v2.5")
+
+--- Button
+
+LP:addButton("Loader [v2.5]",function()
+
+    game.StarterGui:SetCore("SendNotification",{
+
+        Title = "Loader by LLC";
+
+        Text = "Get key from LLC Discord!";
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/77%D0%91%D0%BB%D0%BE%D0%BA%20%D0%BC%D0%B0%D0%BD%20%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%20%D0%B4%D0%BB%D1%8F%20gg"))()
+
+    })
+
 end)
