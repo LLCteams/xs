@@ -9,7 +9,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 
 
 local MainWindow = Rayfield:CreateWindow({
-	Name = "SuperX Hub [2.3]",
+	Name = "SuperX Hub [2.5]",
 	LoadingTitle = "Welcome to SuperX",
 	LoadingSubtitle = "Improved balanced graphics, news, short & safe script.",
 	ConfigurationSaving = {
@@ -22,7 +22,7 @@ local MainWindow = Rayfield:CreateWindow({
 	   Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD.
 	   RememberJoins = true -- Set this to false to make them join the discord every time they load it up
 	},
-	KeySystem = false, -- Set this to true to use our key system
+	KeySystem = true, -- Set this to true to use our key system
 	KeySettings = {
 	   Title = "SuperX Hub",
 	   Subtitle = "Key System",
@@ -30,7 +30,7 @@ local MainWindow = Rayfield:CreateWindow({
 	   FileName = "Super Key",
 	   SaveKey = true,
 	   GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-	   Key = "2001.322.2"
+	   Key = "208.33.22"
 	}
  })
 
