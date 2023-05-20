@@ -11,7 +11,7 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 local MainWindow = Rayfield:CreateWindow({
 	Name = "SuperX Hub [2.3]",
 	LoadingTitle = "Welcome to SuperX",
-	LoadingSubtitle = "Improved balanced graphics, short & safe script.",
+	LoadingSubtitle = "Improved balanced graphics, news, short & safe script.",
 	ConfigurationSaving = {
 	   Enabled = true,
 	   FolderName = nil, -- Create a custom folder for your hub/game
@@ -24,7 +24,7 @@ local MainWindow = Rayfield:CreateWindow({
 	},
 	KeySystem = false, -- Set this to true to use our key system
 	KeySettings = {
-	   Title = "SuperX Hub New",
+	   Title = "SuperX Hub",
 	   Subtitle = "Key System",
 	   Note = "You need a key to enter script.",
 	   FileName = "Super Key",
