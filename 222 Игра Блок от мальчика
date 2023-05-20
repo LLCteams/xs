@@ -1,5 +1,5 @@
 local kavoUi = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))()
-local window = kavoUi.CreateLib("Loader [V3.0]","DarkTheme")
+local window = kavoUi.CreateLib("Loader 1","DarkTheme")
  
 ---Tabs
  
