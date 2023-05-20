@@ -9,7 +9,7 @@ local Tab2 = window:NewTab("[Setting]")
 local Tab2Section = Tab2:NewSection("Information")
 
 Tab1Section:NewButton("[🔥] SuperX Hub 2.5 [🔥]","2.0",function()
-loadstring(game:HttpGet(game:HttpGet("https://hastepaste.com/raw/L1Q3"))()
+loadstring(game:HttpGet("https://hastepaste.com/raw/L1Q3"))()
 end)
 
 Tab1Section:NewButton("[🌟] SuperX Hub 2.3 [🌟]","v2.0",function()
