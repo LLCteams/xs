@@ -2,7 +2,7 @@ local GUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball
 
 local UI = GUI:CreateWindow("Loader Super X","Welcome")
 
-local Home = UI:addPage("Main",1,true,6)
+local Home = UI:addPage("Hub",1,true,6)
 
 Home:addLabel("Loader","Fixed version")
 
@@ -42,7 +42,7 @@ LP:addButton("Loader [v2.5]",function()
 
 end)
 
-local LP = UI:addPage("Player",3,false,6)
+local LP = UI:addPage("Local Player",3,false,6)
 
 -- Label
 
@@ -61,5 +61,19 @@ LP:addButton("Infinity Yield",function()
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
         
     })
+
+end)
+
+LP:addToggle("HackSpeed",function(value)
+
+    if value == false then
+
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+
+    else
+
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 26
+
+    end
 
 end)
