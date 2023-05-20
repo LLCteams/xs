@@ -96,6 +96,20 @@ LP:addToggle("HackSpeed",function(value)
 
 end)
 
+LP:addToggle("Noclip",function(value)
+
+    if value == false then
+
+        for a, b in pairs(Workspace:GetChildren()) do
+
+    else
+
+        for i, v in pairs(Workspace[Plr.Name]:GetChildren()) do
+
+    end
+
+end)
+
 LP:addToggle("HackJump",function(value)
     if value == false then
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
