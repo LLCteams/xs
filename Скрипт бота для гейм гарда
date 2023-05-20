@@ -41,3 +41,25 @@ LP:addButton("Loader [v2.5]",function()
     })
 
 end)
+
+local LP = UI:addPage("Player",3,false,6)
+
+-- Label
+
+LP:addLabel("Beta","Players forneeded")
+
+--- Button
+
+LP:addButton("Infinity Yield",function()
+
+    game.StarterGui:SetCore("SendNotification",{
+
+        Title = "Loader by LLC";
+
+        Text = "Infinity Yield";
+
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+        
+    })
+
+end)
