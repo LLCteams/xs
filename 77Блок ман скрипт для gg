@@ -23,7 +23,7 @@ local MainWindow = Rayfield:CreateWindow({
 	   FileName = "Super Key",
 	   SaveKey = true,
 	   GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-	   Key = "208.33.22"
+	   Key = "HD.200.18"
 	}
  })
 
