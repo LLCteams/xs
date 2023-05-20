@@ -108,11 +108,11 @@ LP:addToggle("HackGravity",function(value)
 
     if value == false then
 
-        game.Workspace.Gravity = 20
+        game.Workspace.Gravity = 100
 
     else
 
-        game.Workspace.Gravity = 100
+        game.Workspace.Gravity = 20
 
     end
 
