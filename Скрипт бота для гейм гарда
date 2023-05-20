@@ -64,6 +64,24 @@ LP:addButton("Infinity Yield",function()
 
 end)
 
+
+LP:addButton("ESP",function()
+
+    game.StarterGui:SetCore("SendNotification",{
+
+        Title = "Loader by LLC";
+
+        Text = "ESP";
+
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%A1%D1%83%D0%BF%D0%B5%D1%80%20%D1%83%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%BD%D0%B5%D1%82"))()
+        
+    })
+
+end)
+
+
+
+
 LP:addToggle("HackSpeed",function(value)
 
     if value == false then
