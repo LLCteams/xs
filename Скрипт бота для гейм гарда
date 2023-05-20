@@ -82,7 +82,7 @@ LP:addToggle("HackJump",function(value)
     if value == false then
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
     else
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 150
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 140
     end
 end)
 
@@ -90,7 +90,7 @@ LP:addToggle("HackGravity",function(value)
 
     if value == false then
 
-        game.Workspace.Gravity = 50
+        game.Workspace.Gravity = 20
 
     else
 
