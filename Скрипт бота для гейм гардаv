@@ -184,6 +184,7 @@ end
 end
 
 end
+   })
 
 end)        
 
@@ -198,36 +199,37 @@ LP:addLabel("Local","Don't use in games with anti cheats")
 JP:addButton("ZK Games Hub",function()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/Blockymod%20%D1%82%D0%B5%D1%81%D1%82-%D0%B2%D0%B5%D1%82%D0%BA%D0%B0-%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B0"))((
+  })
 
 end)
 
 JP:addButton("Arosia Hub",function()
 
 loadstring(Game:GetObjects("rbxassetid://1255908305")[1].Source)()
-
+  })
 end)
 
 JP:addButton("Fire x Hub",function()
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/tyreltrijo/firex/main/firex'))()
-
+  })
 end)
 
 JP:addButton("Sussy Hub",function()
 
 loadstring(game:HttpGet(('https://gist.githubusercontent.com/Nilrogram/8b0c8bd710be142f383c71f79279752c/raw/e4fb01a7de7cd498bb53270d2ad191dfab268a88/FE%2520SussyHub'),true))();
-
+  })
 end)
 
 JP:addButton("British Hub",function()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/YourLocalNzi/Ye/main/RedCoat8102-obfuscated.lua"))()
-
+  })
 end)
 
 JP:addButton("Bido Skins Hub",function()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Bido%20SkinsV1.2"))()
-
+  })
 end)
 
