@@ -2,9 +2,9 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 
 
 local MainWindow = Rayfield:CreateWindow({
-	Name = "Super X Hub [3.0]",
+	Name = "Super X [V3.0]",
 	LoadingTitle = "Welcome to Super X",
-	LoadingSubtitle = "Improved balanced graphics, news, short & safe script.",
+	LoadingSubtitle = "Improved balanced graphics, news, antilag & rares script.",
 	ConfigurationSaving = {
 	   Enabled = false,
 	   FolderName = nil, -- Create a custom folder for your hub/game
@@ -19,7 +19,7 @@ local MainWindow = Rayfield:CreateWindow({
 	KeySettings = {
 	   Title = "Super X Hub",
 	   Subtitle = "Key System",
-	   Note = "You need a key to enter script.",
+	   Note = "You need a key to enter script, many users have using Super X and safe there are our best can doing it.",
 	   FileName = "Super Key",
 	   SaveKey = true,
 	   GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
@@ -34,7 +34,7 @@ local MainWindow = Rayfield:CreateWindow({
  
  local JKTab = MainWindow:CreateTab("Break In", 4483362458) -- Title, Image
  
- local CSTab = MainWindow:CreateTab("Others", 4483362458) -- Title, Image
+ local CSTab = MainWindow:CreateTab("Btools", 4483362458) -- Title, Image
 
 local BanTab = MainWindow:CreateTab("Hub", 4483362458)
 
@@ -306,4 +306,16 @@ local Button = MainTab:CreateButton({
 	end,
  })
  
+ local Button = MainTab:CreateButton({
+
+	Name = "Searcher",
+
+	Callback = function(v)
+
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/ScriptSearcher"))()
+
+	end,
+
+ })
+
  
