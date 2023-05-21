@@ -82,6 +82,15 @@ local Button = CSTab:CreateButton({
 	end,
  })
 
+
+local Button = CSTab:CreateButton({
+	Name = "F3X",
+	Callback = function(v)
+		loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
+	end,
+ })
+
+
 local Button = OhTab:CreateButton({
 	Name = "Murder Mystery 2 Panel",
 	Callback = function(v)
