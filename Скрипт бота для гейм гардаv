@@ -50,7 +50,7 @@ LP:addLabel("Beta","Players forneeded")
 
 --- Button
 
-LP:addButton("Infinity Yield",function()
+TP:addButton("Infinity Yield",function()
 
     game.StarterGui:SetCore("SendNotification",{
 
@@ -64,7 +64,7 @@ LP:addButton("Infinity Yield",function()
 
 end)
 
-LP:addButton("F3X Btools",function()
+TP:addButton("F3X Btools",function()
 
     game.StarterGui:SetCore("SendNotification",{
 
@@ -80,7 +80,7 @@ LP:addButton("F3X Btools",function()
 
 end)
 
-LP:addButton("ESP",function()
+TP:addButton("ESP",function()
 
     game.StarterGui:SetCore("SendNotification",{
 
@@ -94,7 +94,7 @@ LP:addButton("ESP",function()
 
 end)
 
-LP:addButton("Tracer ESP",function()
+TP:addButton("Tracer ESP",function()
 
     game.StarterGui:SetCore("SendNotification",{
 
@@ -111,7 +111,7 @@ LP:addButton("Tracer ESP",function()
 end)
 
 
-LP:addToggle("HackSpeed",function(value)
+TP:addToggle("HackSpeed",function(value)
 
     if value == false then
 
@@ -125,7 +125,7 @@ LP:addToggle("HackSpeed",function(value)
 
 end)
 
-LP:addToggle("HackJump",function(value)
+TP:addToggle("HackJump",function(value)
     if value == false then
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
     else
@@ -133,7 +133,7 @@ LP:addToggle("HackJump",function(value)
     end
 end)
 
-LP:addToggle("HackGravity",function(value)
+TP:addToggle("HackGravity",function(value)
 
     if value == false then
 
@@ -147,7 +147,7 @@ LP:addToggle("HackGravity",function(value)
 
 end)
 
-LP:addSlider("WalkSpeed",16,150,function(value)
+TP:addSlider("WalkSpeed",16,150,function(value)
 
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = value
 
@@ -155,21 +155,21 @@ end)
 
 -- Textbox
 
-LP:addTextBox("Jump Power / 50 is default","Number here",function(value)
+TP:addTextBox("Jump Power / 50 is default","Number here",function(value)
 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = value
 
 end)
         
-local LP = UI:addPage("Troll",4,false,6)
+local KP = UI:addPage("Troll",4,false,6)
 
 -- Label
 
-LP:addLabel("Trolling","Some may not done")
+KP:addLabel("Trolling","Some may not done")
 
 --- Button
 
-LP:addButton("Giver Tool",function()
+KP:addButton("Giver Tool",function()
 
     for _,v in pairs(game:GetDescendants()) do
 
