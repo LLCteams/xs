@@ -64,6 +64,21 @@ LP:addButton("Infinity Yield",function()
 
 end)
 
+LP:addButton("F3X Btools",function()
+
+    game.StarterGui:SetCore("SendNotification",{
+
+        Title = "Loader by LLC";
+
+        Text = "F3X Btools";
+
+        loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
+
+        
+
+    })
+
+end)
 
 LP:addButton("ESP",function()
 
