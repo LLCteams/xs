@@ -1,6 +1,6 @@
 local GUI = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/aaaa"))()
 
-local UI = GUI:CreateWindow("Loader Super X","Welcome")
+local UI = GUI:CreateWindow("Loader Super X","Made By LX & LLC")
 
 local Home = UI:addPage("Hub",1,true,6)
 
@@ -28,7 +28,7 @@ LP:addLabel("Loader","Our Lastest version v2.5")
 
 --- Button
 
-LP:addButton("Loader [v2.5]",function()
+LP:addButton("Loader [v3.0]",function()
 
     game.StarterGui:SetCore("SendNotification",{
 
