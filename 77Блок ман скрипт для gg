@@ -28,7 +28,7 @@ local MainWindow = Rayfield:CreateWindow({
  })
 
 
- local MainTab = MainWindow:CreateTab("Main", 8652665149) -- Title, Image
+ local MainTab = MainWindow:CreateTab("Main", 4483362458) -- Title, Image
  
  local OhTab = MainWindow:CreateTab("Murder Mystery 2", 4483362458) -- Title, Image
  
