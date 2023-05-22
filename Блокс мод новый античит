@@ -1,0 +1,47 @@
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+local win = DiscordLib:Window("Super X [V3.1]")
+
+local serv = win:Server("Select to use!", "")
+
+local btns = serv:Channel("Main")
+
+btns:Button("Updated List", function()
+
+DiscordLib:Notification("Tips", "New 3.0 Beta >> New 3.0 >> 3.1 Beta", "Okay!")
+
+end)
+
+btns:Seperator()
+
+btns:Button("Super X BETA", function()
+
+DiscordLib:Notification("Tips", "Do you want execute?", "Okay!")
+
+wait(6.6)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%91%D0%BB%D0%B0%20%D1%82%D1%8B%20%D1%81%D0%BF%D1%80%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%B5%D1%88%D1%8C"))()
+
+end)
+
+btns:Button("Super X 3.0", function()
+
+DiscordLib:Notification("Tips", "Do you want execute?", "Okay!")
+
+wait(6.6)
+
+loadstring(game:HttpGet("https://hastepaste.com/raw/gm0uaeIqV"))()
+
+end)
+
+btns:Button("ZK Games Hub", function()
+
+DiscordLib:Notification("Tips", "Do you want execute?", "Okay!")
+
+wait(6.6)
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/tyreltrijo/firex/main/firex'))()
+
+end)
+
+win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
