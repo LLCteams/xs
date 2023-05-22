@@ -1,0 +1,33 @@
+
+local events = game.ReplicatedStorage.Events
+
+game.Players.PlayerAdded:Connect(function(plr) -- When Players Join
+    events.Joining:FireAllClients(plr)
+end)
+
+game.Players.PlayerRemoving:Connect(function(plr) -- When Players Leave
+    events.Leaving:FireAllClients(plr)
+end)
+
+Script 2 (StartGui Script, Local Script):
+
+local events = game.ReplicatedStorage.Events
+local startGui = game.StarterGui
+
+events.Joining.OnClientEvent:Connect(function(plr) -- If you rename your events to something else, Make sure to change the "Joining" in the script to your new event name.
+ startGui:SetCore("ChatMakeSystemMessage",{
+  Text = plr.Name.." Has Joined the Game"; -- You are able to change the "Has left the game" here
+  Color = Color3.fromRGB(0, 255, 0); -- You are able to change the color of the text here
+  Font = Enum.Font.SourceSansBold; -- You are able to change the font here
+  FontSize = Enum.FontSize.Size32; -- You are able to change the font size here
+ })
+end)
+
+events.Leaving.OnClientEvent:Connect(function(plr) -- If you rename your events to something else, Make sure to change the "Leaving" in the script to your new event name.
+ startGui:SetCore("ChatMakeSystemMessage",{
+  Text = plr.Name.." Has left the game"; -- You are able to change the "Has left the game" here
+  Color = Color3.fromRGB(225, 0, 552); -- You are able to change the color of the text here
+  Font = Enum.Font.SourceSansBold; -- You are able to change the font here
+  FontSize = Enum.FontSize.Size25; -- You are able to change the font size here
+ })
+end)
