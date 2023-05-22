@@ -1,0 +1,410 @@
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+
+local Window = Rayfield:CreateWindow({
+   Name = "Super X [3.0]",
+   LoadingTitle = "Smooth and safe to use, new system.",
+   LoadingSubtitle = "By LX & Technological",
+   ConfigurationSaving = {
+      Enabled = true,
+      FolderName = nil, -- Create a custom folder for your hub/game
+      FileName = "Super Hub"
+   },
+   Discord = {
+      Enabled = false,
+      Invite = "noinvitelink", -- The Discord invite code, do not include discord.gg/. E.g. discord.gg/ABCD would be ABCD
+      RememberJoins = true -- Set this to false to make them join the discord every time they load it up
+   },
+   KeySystem = false, -- Set this to true to use our key system
+   KeySettings = {
+      Title = "Untitled",
+      Subtitle = "Key System",
+      Note = "No method of obtaining the key is provided",
+      FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
+      GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
+      Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
+   }
+})
+
+local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
+
+local Section = Tab:CreateSection("Player")
+
+local Paragraph = Tab:CreateParagraph({Title = "Players", Content = "Player"})
+
+Paragraph:Set({Title = "Useful for character", Content = "Character"})
+
+Section:Set("Player needed in games")
+
+Rayfield:Notify({
+   Title = "Credits & Update",
+   Content = "We will upgrade every error so you can use it normally, thanks to LX & Tech for making it also removing issues.",
+   Duration = 6.5,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = {
+         Name = "I Agree.",
+         Callback = function()
+         print("User has been agree it.")
+      end
+   },
+},
+})
+
+local Toggle = Tab:CreateToggle({
+   Name = "Speed",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function()
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
+   end,
+})
+
+Toggle:Set(false)
+
+local Toggle = Tab:CreateToggle({
+   Name = "Test",
+   CurrentValue = false,
+   Flag = "Toggle1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the toggle is pressed
+   -- The variable (Value) is a boolean on whether the toggle is true or false
+   end,
+})
+
+Toggle:Set(false)
+
+local ColorPicker = Tab:CreateColorPicker({
+    Name = "Color Picker",
+    Color = Color3.fromRGB(255,255,255),
+    Flag = "ColorPicker1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+    Callback = function(Value)
+        -- The function that takes place every time the color picker is moved/changed
+        -- The variable (Value) is a Color3fromRGB value based on which color is selected
+    end
+})
+
+local Slider = Tab:CreateSlider({
+   Name = "Test",
+   Range = {0, 100},
+   Increment = 10,
+   Suffix = "Speed",
+   CurrentValue = 10,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the slider changes
+   -- The variable (Value) is a number which correlates to the value the slider is currently at
+   end,
+})
+
+local Slider = Tab:CreateSlider({
+   Name = "Test",
+   Range = {0, 100},
+   Increment = 10,
+   Suffix = "Jump",
+   CurrentValue = 10,
+   Flag = "Slider1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Value)
+   -- The function that takes place when the slider changes
+   -- The variable (Value) is a number which correlates to the value the slider is currently at
+   end,
+})
+
+Slider:Set(10) -- The new slider integer value
+
+local Keybind = Tab:CreateKeybind({
+   Name = "Keybind [C]",
+   CurrentKeybind = "C",
+   HoldToInteract = false,
+   Flag = "Keybind1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
+   Callback = function(Keybind)
+   -- The function that takes place when the keybind is pressed
+   -- The variable (Keybind) is a boolean for whether the keybind is being held or not (HoldToInteract needs to be true)
+   end,
+})
+
+Keybind:Set("RightCtrl") -- Keybind (string)
+
+--- Test
+
+local Bab = Window:CreateTab("Games", 4483362458) -- Title, Image
+
+local But = Bab:CreateSection("Script for Games")
+
+local Paragraph = Bab:CreateParagraph({Title = "Games", Content = "Player"})
+
+Paragraph:Set({Title = "Maybe work some", Content = "More Added Soon"})
+
+But:Set("For Games & More")
+
+local Button = Bab:CreateButton({
+   Name = "Our 2.5 Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://hastepaste.com/raw/gm0uaeIqV"))()
+   end,
+})
+
+Button:Set("Super X")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/Blockymod%20%D1%82%D0%B5%D1%81%D1%82-%D0%B2%D0%B5%D1%82%D0%BA%D0%B0-%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B0"))()
+   end,
+})
+
+Button:Set("ZK Games")
+
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/tyreltrijo/firex/main/firex'))()
+   end,
+})
+
+Button:Set("Fire x")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Bido%20SkinsV1.2"))()
+   end,
+})
+
+Button:Set("Bido Skins")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet(('https://gist.githubusercontent.com/Nilrogram/8b0c8bd710be142f383c71f79279752c/raw/e4fb01a7de7cd498bb53270d2ad191dfab268a88/FE%2520SussyHub'),true))();
+   end,
+})
+
+Button:Set("Sussy")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/YourLocalNzi/Ye/main/RedCoat8102-obfuscated.lua"))()
+   end,
+})
+
+Button:Set("British")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))() 
+   end,
+})
+
+Button:Set("Ice")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+   end,
+})
+
+Button:Set("Ez")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet(('https://pastebin.com/raw/Zt1a4aE9')))() 
+   end,
+})
+
+Button:Set("Psy")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/GhostHub'))()
+   end,
+})
+
+Button:Set("Ghost")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+   end,
+})
+
+Button:Set("Owl")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet(('https://pastebin.com/raw/Zt1a4aE9')))() 
+   end,
+})
+
+Button:Set("Psy")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(Game:GetObjects("rbxassetid://1255908305")[1].Source)()
+   end,
+})
+
+Button:Set("Arosia")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/LwQkm563"))()
+   end,
+})
+
+Button:Set("Moon")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/TakeModzz/Games-Hub-Script/main/Games%20Hub%20(Always%20updated)"))()
+   end,
+})
+
+Button:Set("Games V6")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/RandomAdamYT/DarkHub/master/Init", true))()
+   end,
+})
+
+Button:Set("Dark")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+   end,
+})
+
+Button:Set("VG")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/UltraStuff/scripts2/main/doors"))()
+   end,
+})
+
+Button:Set("Door Stuff")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/V31nc/2642/Created/VHub"))()
+   end,
+})
+
+Button:Set("V")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/UmhaEvTT",true))()
+   end,
+})
+
+Button:Set("Fathom")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/Davicoderliner/davigui/main/DaviguiV2prealphaloader.lua',true))()
+   end,
+})
+
+Button:Set("Davi V2")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://pastebin.com/raw/U40qtHfh'))()
+   end,
+})
+
+Button:Set("Auratus X")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/GeronimoZhidkova/Multi-Hub-V3/main/Multi%20Hub%20V3"))()
+   end,
+})
+
+Button:Set("Multi V3")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/IlikeyocutgHAH/MoonUI-v13-102-SCRIPTS/main/MoonUI%20v13!"))()
+   end,
+})
+
+Button:Set("Moon V13")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   		loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%91%D0%BB%20%D1%82%D0%B5%D1%81%D1%82%20%D0%B4%D0%BB%D1%8F%20%D1%81%D0%BF%D0%B5%D1%86%20%D0%B4%D0%BB%D1%8F%20%D0%B3%D0%B0"))()
+   end,
+})
+
+Button:Set("Hut")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet(("https://raw.githubusercontent.com/Davicoderliner/davigui/main/Daviguiv2loader.lua"),true))()
+   end,
+})
+
+Button:Set("Davi V2")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet('https://pastebin.com/raw/0MLPL32f'))()
+   end,
+})
+
+Button:Set("Animations R6")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Script%20Game"))()
+   end,
+})
+
+Button:Set("Speed X")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet(('https://raw.githubusercontent.com/TheScriptMaster1/ScriptMaster-Hub/main/scriptmasterhub.lua')))()
+   end,
+})
+
+Button:Set("ScriptMaster")
+
+local Button = Bab:CreateButton({
+   Name = "Hub",
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/NEWBUTIF/HauntedSoul/main/Loader"))()
+   end,
+})
+
+Button:Set("Butif")
