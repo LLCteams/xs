@@ -25,7 +25,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 })
 wait(4.0)
 game:GetService("StarterGui"):SetCore("SendNotification",{
-     Title = "Super X 2";
+     Title = "Super X";
      Text = "Presenting...";
 })
 wait(6.0)
@@ -63,7 +63,7 @@ Flux:Notification("Executed!", "Okay!")
 end)
 tab:Button("Jump Power", "Makes your Jump Higher",function()
 Flux:Notification("Do you want to execute?", "Okay!")
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = 20
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 110
 Flux:Notification("Executed!", "Okay!")
 end)
 tab:Button("Shiftlock", "Mobiles.", function()
@@ -106,7 +106,7 @@ Flux:Notification("Do you want to execute?", "Okay!")
 wait(2.5)
 for _,v in pairs(game.Players:GetPlayers()) do
 if v:IsA("Player") then
-v:Kick("Leave.")
+v:Kick("You have been kicked by Super X")
 end end
 end)
 tab:Line()
