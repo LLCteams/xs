@@ -1,8 +1,30 @@
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
-Text = "[Roblox]: Admin Trolling Super X";
+Text = "{Roblox} Your using HD Admin scripts but not on console! please try again or contact Roblox.help to fix or restart Roblox!";
 Color = Color3.new(161,161,161);
 FontSize = Enum.FontSize.Size24;
 })
+wait(2.0)
+game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
+
+Text = "{builderman} Something is not done, please update Roblox or try to using in console. required script can't be used in public server! and how you used it?";
+
+Color = Color3.new(161,161,161);
+
+FontSize = Enum.FontSize.Size24;
+
+})
+wait(4.0)
+game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
+
+Text = "[Super X]: Anticheat server has bypassed, now finish all!";
+
+Color = Color3.new(161,161,161);
+
+FontSize = Enum.FontSize.Size24;
+
+})
+
+wait(3.0)
 
 local Library = loadstring(game:HttpGet("https://www.soggy-ware.cf/Libs/PromptGui.lua"))()
 Library:New({
