@@ -1,3 +1,9 @@
+game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
+Text = "[Roblox]: Admin Trolling Super X";
+Color = Color3.new(161,161,161);
+FontSize = Enum.FontSize.Size24;
+})
+
 local Library = loadstring(game:HttpGet("https://www.soggy-ware.cf/Libs/PromptGui.lua"))()
 Library:New({
       Title = "Welcome to Super X",
