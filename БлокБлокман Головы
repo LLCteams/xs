@@ -25,7 +25,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 })
 wait(4.0)
 game:GetService("StarterGui"):SetCore("SendNotification",{
-     Title = "Super X";
+     Title = "Super X 2";
      Text = "Presenting...";
 })
 wait(6.0)
