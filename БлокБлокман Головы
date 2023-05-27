@@ -221,16 +221,21 @@ end)
 local zz = win:Tab("Game", "http://www.roblox.com/asset/?id=6022668888")
 
 zz:Label("Game")
+zz:Button("Murder Mystery 2!", "Best Maybe work because not our own script.", function()
+
+Flux:Notification("Do you want execute? here are key: lunarhubnicebye", "Okay!")
+
+wait(5.0)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vwSaraa/LunarHub/main/mm2"))()
+
+end)
 zz:Button("Murder Mystery 2", "Maybe work because not our own script.", function()
 Flux:Notification("Do you want execute?", "Okay!")
 wait(5.0)
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/MM2%20Admin%20Panel'),true))()
 end)
-zz:Button("Murder Mystery 2", "Best Maybe work because not our own script.", function()
-Flux:Notification("Do you want execute? here are key: lunarhubnicebye", "Okay!")
-wait(5.0)
-loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
-end)
+
 zz:Button("Murder Mystery 2", "Maybe work because not our own script.", function()
 
 Flux:Notification("Do you want execute?", "Okay!")
