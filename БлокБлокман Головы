@@ -1,22 +1,22 @@
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
-Text = "{Roblox} Your using HD Admin required, please try again or contact Roblox.help to fix or restart Roblox!";
+Text = "{Roblox} Your script failed to execute, require on /console line is 1 and public server are line 2 but succes to execute on line 3 & 6.";
 Color = Color3.new(161,161,161);
 FontSize = Enum.FontSize.Size24;
-})
-wait(3.0)
-game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
-
-Text = "{System} Something is not done, please update Roblox or try to using in console. required script can't be used in public server! and how you used it? only Roblox Admin can using required in public.";
-
-Color = Color3.new(161,161,161);
-
-FontSize = Enum.FontSize.Size24;
-
 })
 wait(4.0)
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
 
-Text = "[Super X 3.2]: Anticheat server has bypassed, now finish all!";
+Text = "{System} Failed to load require(0000).llcteam(5999)";
+
+Color = Color3.new(161,161,161);
+
+FontSize = Enum.FontSize.Size24;
+
+})
+wait(5.0)
+game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
+
+Text = "[Super X] Anticheat models has bypassed, now anything on Super X will working.";
 
 Color = Color3.new(161,161,161);
 
@@ -24,7 +24,7 @@ FontSize = Enum.FontSize.Size24;
 
 })
 
-wait(6.0)
+wait(8.0)
 
 local Library = loadstring(game:HttpGet("https://www.soggy-ware.cf/Libs/PromptGui.lua"))()
 Library:New({
@@ -62,7 +62,7 @@ wait(6.0)
 --- Hubs
 local Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/fluxlib.txt")()
 
-local win = Flux:Window("Super X", "V3 Beta", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
+local win = Flux:Window("Super X [HD Script]", "V3 Beta", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
 local tab = win:Tab("Home", "http://www.roblox.com/asset/?id=6023426915")
 
 game:GetService("StarterGui"):SetCore("SendNotification",{
