@@ -98,10 +98,6 @@ Flux:Notification("Do you want execute?", "Okay!")
 
 wait(5.0)
 
-JoinSoundId = 5606953326
-
-LeaveSoundId = 5606947971
-
 loadstring(game:HttpGet("https://pastebin.com/raw/bPahhkn0"))()
 
 end)
