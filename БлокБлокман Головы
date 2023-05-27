@@ -16,7 +16,7 @@ FontSize = Enum.FontSize.Size24;
 wait(4.0)
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
 
-Text = "[Super X]: Anticheat server has bypassed, now finish all!";
+Text = "[Super X 3.2]: Anticheat server has bypassed, now finish all!";
 
 Color = Color3.new(161,161,161);
 
@@ -699,6 +699,13 @@ end)
 xx:Button("Fathom Hub", "Others Hub", function()
 Flux:Notification("Do you want execute?", "Okay!")
 loadstring(game:HttpGet("https://pastebin.com/raw/UmhaEvTT",true))()
+end)
+xx:Button("Scripter Hub", "Maybe worked..", function()
+
+Flux:Notification("Do you want execute?", "Okay!")
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/uaahjajajqoqiqkqhwhwhw/SCRIPTERV3/main/Protected.lua.txt"))()
+
 end)
 xx:Button("Obby Hub", "Others Hub", function()
 Flux:Notification("Do you want execute?", "Okay!")
