@@ -39,19 +39,26 @@ Library:New({
             print("User Not Supporting!")
       end
 })
-wait(7.0)
+wait(8.0)
 
 game:GetService("StarterGui"):SetCore("SendNotification",{
      Title = "Super X";
      Text = "Please wait...";
 })
 
-wait(2.5)
+wait(6.0)
 game:GetService("StarterGui"):SetCore("SendNotification",{
      Title = "Super X";
      Text = "Filtering Enabled.";
 })
-wait(4.0)
+game:GetService("StarterGui"):SetCore("SendNotification",{
+
+     Title = "Super X";
+
+     Text = "Autoexec failed, try active on Super X!"
+
+})
+wait(6.0)
 game:GetService("StarterGui"):SetCore("SendNotification",{
      Title = "Super X";
      Text = "Presenting...";
