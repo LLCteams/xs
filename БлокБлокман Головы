@@ -231,6 +231,27 @@ Flux:Notification("Do you want execute? here are key: lunarhubnicebye", "Okay!")
 wait(5.0)
 loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
 end)
+zz:Button("Murder Mystery 2", "Maybe work because not our own script.", function()
+
+Flux:Notification("Do you want execute?", "Okay!")
+
+wait(5.0)
+
+loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
+
+end)
+
+zz:Line()
+
+zz:Button("Bed wars", "Maybe work because not our own script.", function()
+
+Flux:Notification("Do you want execute?", "Okay!")
+
+wait(5.0)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/lightHubDev/Artis/main/MainScript"))()
+
+end)
 zz:Line()
 zz:Button("Survive The Killer!", "Maybe work because not our own script.", function()
 Flux:Notification("Do you want execute?", "Okay!")
@@ -1093,6 +1114,7 @@ dd:Label("Update List")
 
 dd:Line()
 
-dd:Label("UPD: New Script, Feature")
+dd:Label("UPD: Bedwars script, Feature")
 
 dd:Label("UPD: Bypasser Console")
+dd:Label("FIX: MM2 Scripts")
