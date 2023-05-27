@@ -2,6 +2,7 @@ game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "Start
 Text = "{Roblox} Your script failed to execute, console lines 3 & 6 needed! ";
 Color = Color3.new(161,161,161);
 FontSize = Enum.FontSize.Size24;
+print("Failed to execute but line is worth 3 / 6 or try required.")
 })
 wait(4.0)
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
@@ -1085,3 +1086,13 @@ Flux:Notification("Do you want execute?", "Okay!")
 wait(3.0)
 require(11560761226).HD("v")
 end)
+
+local dd = win:Tab("Coming Soon", "http:///asset/?id=6022668888")
+
+dd:Label("Update List")
+
+dd:Line()
+
+dd:Label("UPD: New Script, Feature")
+
+dd:Label("UPD: Bypasser Console")
