@@ -1,0 +1,12 @@
+     local plr = game.GetService"Players"
+
+     local Lp = plr.LocalPlayer
+
+     Lp.Chatted:Connect(function(msg)
+
+     if msg:sub(1,2) == "/e" then
+
+     loadstring(tostring(msg:sub(4)))()
+
+end
+end)
