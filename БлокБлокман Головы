@@ -849,6 +849,13 @@ cc:Button("Animations", "Maybe worked..", function()
 Flux:Notification("Do you want execute?", "Okay!")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Animation-Hub/main/Animation%20Gui", true))()
 end)
+cc:Button("Fate's Esp", "Maybe worked..", function()
+
+Flux:Notification("Do you want execute?", "Okay!")
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/fatesc/fates-esp/main/main.lua'))()
+
+end)
 cc:Button("RTX", "Maybe worked..", function()
 Flux:Notification("Do you want execute?", "Okay!")
 loadstring(game:HttpGet(('https://pastefy.ga/xXkUxA0P/raw'),true))()
