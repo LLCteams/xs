@@ -1,12 +1,12 @@
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
-Text = "{Roblox} Your script failed to execute, require on /console line is 1 and public server are line 2 but succes to execute on line 3 & 6.";
+Text = "{Roblox} Your script failed to execute, console lines 3 & 6 needed! ";
 Color = Color3.new(161,161,161);
 FontSize = Enum.FontSize.Size24;
 })
 wait(4.0)
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
 
-Text = "{System} Failed to load require(2007744).llcteam(59909)";
+Text = "{System} Failed to load >require(2007744).llcteam(59909) forgot to addcmd 2?";
 
 Color = Color3.new(161,161,161);
 
