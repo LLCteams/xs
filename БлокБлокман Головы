@@ -16,7 +16,7 @@ FontSize = Enum.FontSize.Size24;
 wait(5.0)
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
 
-Text = "[Super X] Anticheat models has bypassed, now anything on Super X will working.";
+Text = "[Super X]: Anticheat models has bypassed, now anything on Super X will working.";
 
 Color = Color3.new(161,161,161);
 
@@ -173,10 +173,17 @@ vs:Label("Executor & Bypasser")
 vs:Textbox("Super X Executor", "Type a loadstring script with new command.", function(k)
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = k
 end)
-vs:Toggle("loadstring line", "When you active it, line loadstring only can be used.", function()
+vs:Toggle("Loadstring line", "When you active it, line loadstring only can be used.", function()
 end)
 vs:Toggle("Bypass SafeChat", "Active it if you want say badwords!", function()
 print("Active!")
+end)
+vs:Button("Autoexecution Chat", "Auto execution script on chat with letter [ ex [your script] ]", function()
+
+Flux:Notification("Do you want execute?", "Okay!")
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%91%D0%BB%D0%BE%D0%BA%D1%81%20%D0%91%D0%BE%D0%B3%20%D0%BC%D0%B8%D1%80%D0%B0"))()
+
 end)
 vs:Line()
 vs:Label("Fake Executor")
