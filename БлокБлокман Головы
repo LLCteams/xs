@@ -718,8 +718,7 @@ xx:Button("Scripter Hub", "Maybe worked..", function()
 
 Flux:Notification("Do you want execute?", "Okay!")
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/uaahjajajqoqiqkqhwhwhw/SCRIPTERV3/main/Protected.lua.txt"))()
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/uaahjajajqoqiqkqhwhwhw/SCRIPTERV3/main/SCRIPTER%20HUB%20V4"))()
 end)
 xx:Button("Obby Hub", "Others Hub", function()
 Flux:Notification("Do you want execute?", "Okay!")
