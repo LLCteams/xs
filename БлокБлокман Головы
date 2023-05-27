@@ -30,7 +30,7 @@ local Library = loadstring(game:HttpGet("https://www.soggy-ware.cf/Libs/PromptGu
 Library:New({
       Title = "Welcome to Super X",
     Footer = "Now dear friends, we gived it free enjoy it!",
-    Text = "Private Version v3.1",
+    Text = "Private Version v3.2",
     Icon = "http://www.roblox.com/thumbs/asset.ashx?assetid=10010679532&x=100&y=100&format=png",
     Yes = function()
             print("User Supporting!")
@@ -72,7 +72,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 wait(6.0)
 game:GetService("StarterGui"):SetCore("SendNotification",{
      Title = "Super X";
-     Text = "Succes!";
+     Text = "Succes! V3.2";
 })
 wait(1.0)
 
