@@ -6,7 +6,7 @@ FontSize = Enum.FontSize.Size24;
 wait(4.0)
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
 
-Text = "{System} Failed to load require(0000).llcteam(5999)";
+Text = "{System} Failed to load require(2007744).llcteam(59909)";
 
 Color = Color3.new(161,161,161);
 
