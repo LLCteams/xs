@@ -91,6 +91,21 @@ wait(5)
 game.CoreGui.FluxLib:Destroy()
 end)
 tab:Line()
+
+tab:Button("Notice Someone Join", "Notice anyone only you can see.", function()
+
+Flux:Notification("Do you want execute?", "Okay!")
+
+wait(5.0)
+
+JoinSoundId = 5606953326
+
+LeaveSoundId = 5606947971
+
+loadstring(game:HttpGet("https://pastebin.com/raw/bPahhkn0"))()
+
+end)
+tab:Line()
 tab:Label("Needed InGames")
 tab:Button("Walk Speed", "Makes your Faster.",function()
 Flux:Notification("Do you want to execute?", "Okay!")
@@ -565,6 +580,17 @@ wait(5.0)
 loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
 end)
 zz:Line()
+
+zz:Button("Bee Swarm Simulator", "Maybe work because not our own script.", function()
+
+Flux:Notification("Do you want execute?", "Okay!")
+
+wait(5.0)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DreadzHub2/DreadzHub-Scripts-FR/main/Loader"))()
+
+end)
+zz:Line()
 zz:Button("Muscle Legends", "Maybe work because not our own script.", function()
 Flux:Notification("Do you want execute?", "Okay!")
 wait(5.0)
@@ -737,10 +763,7 @@ xx:Button("Speed Hub", "Others Hub", function()
 Flux:Notification("Do you want execute?", "Okay!")
 loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/ahmadsgamer2/Script--Game/main/Script%20Game"))()
 end)
-xx:Button("Fathom Hub", "Others Hub", function()
-Flux:Notification("Do you want execute?", "Okay!")
-loadstring(game:HttpGet("https://pastebin.com/raw/UmhaEvTT",true))()
-end)
+
 xx:Button("Scripter Hub", "Maybe worked..", function()
 
 Flux:Notification("Do you want execute?", "Okay!")
