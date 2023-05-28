@@ -2,7 +2,7 @@ game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "Start
 Text = "{Roblox} Executed script require but your line in 4 & 2! ";
 Color = Color3.new(161,161,161);
 FontSize = Enum.FontSize.Size24;
-print("Failed to execute but line is worth 3 / 6 or try required.")
+print("Failed to execute but line is worth 3/8 or try required v5.")
 })
 wait(4.0)
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
@@ -68,7 +68,7 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 
      Title = "Super X";
 
-     Text = "Blocked admins line 1..."
+     Text = "Blocking admins line 1..."
 
 })
 wait(6.0)
@@ -138,6 +138,34 @@ if game.Players.LocalPlayer.Character.Humanoid.Health < 5 then
     wait(1.5)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(deathmanok)
 end
+end)
+tab:Button("God modes", "Work MM2 or another games", function()
+Flux:Notification("Do you want to execute?", "Okay!")
+wait(5.0)
+local accessories = {}
+function GodMode()
+    if game.Players.LocalPlayer.Character then
+        if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+            for _, accessory in pairs(game.Players.LocalPlayer.Character.Humanoid:GetAccessories()) do
+                table.insert(accessories, accessory:Clone())
+            end
+            game.Players.LocalPlayer.Character.Humanoid.Name = "deku"
+        end
+        local v = game.Players.LocalPlayer.Character["deku"]:Clone()
+        v.Parent = game.Players.LocalPlayer.Character
+        v.Name = "Humanoid"
+        wait(0.1)
+        game.Players.LocalPlayer.Character["deku"]:Destroy()
+        workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+        for _, accessory in pairs(accessories) do
+            game.Players.LocalPlayer.Character.Humanoid:AddAccessory(accessory)
+        end
+        game.Players.LocalPlayer.Character.Animate.Disabled = true
+        wait(0.1)
+        game.Players.LocalPlayer.Character.Animate.Disabled = false
+    end
+end
+GodMode()
 end)
 tab:Button("Kill all [Tools]", "Work MM2 or another refresh round.", function()
 Flux:Notification("Do you want to execute?", "Okay!")
@@ -1147,12 +1175,10 @@ end)
 
 local dd = win:Tab("Coming Soon", "http:///asset/?id=6022668888")
 
-dd:Label("Update List")
-
-dd:Line()
-
+dd:Label("Newest Update V3.3")
 dd:Label("UPD: Bedwars script, Feature")
 dd:Label("UPD: Lines 2 Console")
 dd:Label("UPD: New Systems Bypasser v2")
 dd:Label("UPD: Bypasser Console")
+dd:Label("UPD: God Modes")
 dd:Label("FIX: MM2 Scripts")
