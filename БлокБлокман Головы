@@ -1,5 +1,5 @@
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
-Text = "{Roblox} Executed script require but your line in 4 & 2! ";
+Text = "{Roblox} Executed script require but your line in 6 & 2! ";
 Color = Color3.new(161,161,161);
 FontSize = Enum.FontSize.Size24;
 print("Failed to execute but line is worth 3/8 or try required v5.")
@@ -7,7 +7,7 @@ print("Failed to execute but line is worth 3/8 or try required v5.")
 wait(4.0)
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
 
-Text = "{System} Failed to load >require(899081).superx(163209)";
+Text = "{System} succesful execute >require(899081).superx(163209)";
 
 Color = Color3.new(161,161,161);
 
