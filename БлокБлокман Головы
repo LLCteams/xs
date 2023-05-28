@@ -221,6 +221,15 @@ wait(5.0)
 loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
 end)
 tab:Line()
+tab:Button("Hitbox", "Hitboxs killing easy!", function()
+
+Flux:Notification("Execute Hitboxs", "Okay!")
+
+wait(5.0)
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/HitboxExpander.lua"))()
+end)
+tab:Line()
 tab:Button("Chams Esp", "Can view anyone while hiding or died.", function()
 Flux:Notification("Execute Chams Esp?", "Okay!")
 wait(5.0)
