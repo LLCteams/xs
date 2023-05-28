@@ -17,7 +17,7 @@ FontSize = Enum.FontSize.Size24;
 wait(5.0)
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
 
-Text = "[Super X]: Anticheat clients has bypassed, now anything on Super X will working.";
+Text = "[Super X]: Your outfrom version hub, V3 has been upgrade to V4!";
 
 Color = Color3.new(161,161,161);
 
@@ -25,7 +25,19 @@ FontSize = Enum.FontSize.Size24;
 
 })
 
+
 wait(8.0)
+
+
+game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
+
+Text = "[Super X]: Anticheat clients has bypassed, now anything on Super X will working.";
+
+Color = Color3.new(161,161,161);
+
+FontSize = Enum.FontSize.Size24;
+
+})
 
 local Library = loadstring(game:HttpGet("https://www.soggy-ware.cf/Libs/PromptGui.lua"))()
 Library:New({
