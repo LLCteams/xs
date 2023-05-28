@@ -17,7 +17,7 @@ FontSize = Enum.FontSize.Size24;
 wait(5.0)
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
 
-Text = "[Super X]: Your outfrom version hub, V3 has been upgrade to V4!";
+Text = "[Super X]: We hope you enjoyed V3!";
 
 Color = Color3.new(161,161,161);
 
@@ -823,7 +823,7 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/tyreltrijo/firex/main
 end)
 xx:Button("Bido Skins Hub", "Others Hub", function()
 Flux:Notification("Do you want execute?", "Okay!")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Bido%20SkinsV1.2"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BidoSkinsYT/BidoSkinsYT/main/Bido%20Skins%20V1.4"))()
 end)
 xx:Button("Sussy Hub", "Others Hub", function()
 Flux:Notification("Do you want execute?", "Okay!")
@@ -1188,3 +1188,4 @@ dd:Label("UPD: New Systems Bypasser v2")
 dd:Label("UPD: Bypasser Console")
 dd:Label("UPD: God Modes")
 dd:Label("FIX: MM2 Scripts")
+dd:Label("FIX: Bido Skins Hub")
