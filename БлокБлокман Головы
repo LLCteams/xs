@@ -1,5 +1,5 @@
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
-Text = "{Roblox} Executed script require but your line in 6 & 2! ";
+Text = "{Roblox} Executed script [Ultimate Trolling Super X]";
 Color = Color3.new(161,161,161);
 FontSize = Enum.FontSize.Size24;
 print("Failed to execute but line is worth 3/8 or try required v5.")
@@ -17,7 +17,7 @@ FontSize = Enum.FontSize.Size24;
 wait(5.0)
 game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
 
-Text = "[Super X]: We hope you enjoyed V3!";
+Text = "[Super X]: We hope you enjoyed V3 Trolls!";
 
 Color = Color3.new(161,161,161);
 
@@ -82,7 +82,7 @@ wait(6.0)
 --- Hubs
 local Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/fluxlib.txt")()
 
-local win = Flux:Window("Super X", "V3 Beta", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
+local win = Flux:Window("Super X", "Ultimate Trolling V3", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
 local tab = win:Tab("Home", "http://www.roblox.com/asset/?id=6023426915")
 
 game:GetService("StarterGui"):SetCore("SendNotification",{
