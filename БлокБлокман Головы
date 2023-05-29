@@ -1,100 +1,118 @@
-game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
-Text = "{Roblox} Executed script [Ultimate Trolling Super X]";
-Color = Color3.new(161,161,161);
-FontSize = Enum.FontSize.Size24;
-print("Failed to execute but line is worth 3/8 or try required v5.")
+local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
+
+
+--[[
+   MessageBoxIcons:
+      • Question
+      • Error
+      • Warning
+
+   MessageBoxButtons:
+      • YesNo
+      • OKCancel
+      • OK
+--]]
+-- AnchorPoint is 0.5,0.5
+MessageBox.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "Roblox Super X Creator", Description = "We are so sorry Super X are cannot able to execute anymore.\nSuper X V4 will came out soon.\nArceus X needed to execute Super X\n \n", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
+   if (res == "Yes") then
+       MessageBox.Show({MessageBoxButtons = "OK", Description = "We will try get better next time\n also the V4 will came sooner!", Text = "Super X V3"})
+   elseif (res == "No") then
+       MessageBox.Show({MessageBoxButtons = "OK", Description = "Super X error and cannot use for now\nwe are so sorry!", Text = "Super X V3"})
+   end
+end})
+
+wait(22)
+
+local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
+
+
+--[[
+   MessageBoxIcons:
+      • Question
+      • Error
+      • Warning
+
+   MessageBoxButtons:
+      • YesNo
+      • OKCancel
+      • OK
+--]]
+-- AnchorPoint is 0.5,0.5
+MessageBox.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "Roblox Super X Creator", Description = "We are so sorry Super X are cannot able to execute anymore.\nSuper X V4 will came out soon.\nArceus X needed to execute Super X\n \n", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
+   if (res == "Yes") then
+       MessageBox.Show({MessageBoxButtons = "OK", Description = "We will try get better next time\n also the V4 will came sooner!", Text = "Super X V3"})
+   elseif (res == "No") then
+       MessageBox.Show({MessageBoxButtons = "OK", Description = "Super X error and cannot use for now\nwe are so sorry!", Text = "Super X V3"})
+   end
+end})
+
+wait(22)
+
+local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
+
+notifLib:CreatePromptNotif({
+ TweenSpeed = 1,
+ Title = "Super X V3.4",
+ Text = "Better than V3.3?",
+ Duration = 5,
+ Callback = function(Value)
+   print(Value)
+ end
 })
-wait(4.0)
-game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
 
-Text = "{System} succesful execute >require(899081).superx(163209)";
+wait(7.0)
 
-Color = Color3.new(161,161,161);
+notifLib:CreatePromptNotif({
+ TweenSpeed = 1,
+ Title = "Super X V3.4",
+ Text = "Active no logs?",
+ Duration = 5,
+ Callback = function(Value)
+   print(Value)
+ end
+})
 
-FontSize = Enum.FontSize.Size24;
+wait(7.0)
 
+notifLib:CreateDefaultNotif({
+ TweenSpeed = 1,
+ Title = "Super X V3.4",
+ Text = "Filtering Enabled!",
+ Duration = 5
+})
+
+wait(7.0)
+
+notifLib:CreateDefaultNotif({
+ TweenSpeed = 1,
+ Title = "Super X V3.4",
+ Text = "Unlock FPS Enabled!",
+ Duration = 5
+})
+
+wait(7.0)
+
+notifLib:CreateDefaultNotif({
+ TweenSpeed = 1,
+ Title = "Super X V3.4",
+ Text = "Removing admin view...",
+ Duration = 5
+})
+
+wait(7.0)
+
+notifLib:CreateDefaultNotif({
+ TweenSpeed = 1,
+ Title = "Super X V3.4",
+ Text = "Succes now enjoys!",
+ Duration = 5
 })
 wait(5.0)
-game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
 
-Text = "[Super X]: We hope you enjoyed V3 Trolls!";
-
-Color = Color3.new(161,161,161);
-
-FontSize = Enum.FontSize.Size24;
-
-})
-
-
-wait(8.0)
-
-
-game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage",{ --Getting "StarterGui" and calling the function
-
-Text = "[Super X]: Anticheat clients has bypassed, now anything on Super X will working.";
-
-Color = Color3.new(161,161,161);
-
-FontSize = Enum.FontSize.Size24;
-
-})
-
-local Library = loadstring(game:HttpGet("https://www.soggy-ware.cf/Libs/PromptGui.lua"))()
-Library:New({
-      Title = "Welcome to Super X",
-    Footer = "Now dear friends, enjoy the big script hub!",
-    Text = "Private Version v3.3",
-    Icon = "http://www.roblox.com/thumbs/asset.ashx?assetid=10010679532&x=100&y=100&format=png",
-    Yes = function()
-            print("User Supporting!")
-      end,
-      Cancel = function()
-            print("User Not Supporting!")
-      end
-})
-wait(8.0)
-
-game:GetService("StarterGui"):SetCore("SendNotification",{
-     Title = "Super X";
-     Text = "Welcome back!";
-})
-
-wait(6.0)
-game:GetService("StarterGui"):SetCore("SendNotification",{
-     Title = "Super X";
-     Text = "Filtering Enabled.";
-})
-game:GetService("StarterGui"):SetCore("SendNotification",{
-
-     Title = "Super X";
-
-     Text = "Blocking admins line 1..."
-
-})
-wait(6.0)
-game:GetService("StarterGui"):SetCore("SendNotification",{
-     Title = "Super X";
-     Text = "Succes blocked.";
-})
-wait(6.0)
-
-
---- Hubs
 local Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/fluxlib.txt")()
 
-local win = Flux:Window("Super X", "Ultimate Trolling V3", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
+local win = Flux:Window("Super X", "V3", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
 local tab = win:Tab("Home", "http://www.roblox.com/asset/?id=6023426915")
-
-game:GetService("StarterGui"):SetCore("SendNotification",{
-     Title = "Super X";
-     Text = "Loading...";
-})
-wait(6.0)
-game:GetService("StarterGui"):SetCore("SendNotification",{
-     Title = "Super X";
-     Text = "Succes! V3.3";
-})
-wait(1.0)
 
 tab:Label("Removes")
 tab:Button("Remove", "Remove Super X Hub", function()
