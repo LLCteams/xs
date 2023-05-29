@@ -940,6 +940,13 @@ cc:Button("Copy Chat", "Maybe worked..", function()
 Flux:Notification("Do you want execute?", "Okay!")
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe./8fb5ed20fb168d1ae3044ede45b90f67e3fb37a2/file'),true))()
 end)
+cc:Button("Save Teleports", "Maybe worked..", function()
+
+Flux:Notification("Do you want execute?", "Okay!")
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/Tp%20Place%20GUI'),true))()
+
+end)
 cc:Button("Backwards Time", "Maybe worked..", function()
 Flux:Notification("Do you want execute?", "Okay!")
 loadstring(game:HttpGet("https://pastebin.com/raw/cgWLwdN9", true))()
