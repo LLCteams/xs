@@ -50,7 +50,7 @@ wait(8)
 notifLib:CreatePromptNotif({
  TweenSpeed = 1,
  Title = "Super X V3.4",
- Text = "Better than V3.3?",
+ Text = "You will accept V4 releases and V3 gone?",
  Duration = 5,
  Callback = function(Value)
    print(Value)
@@ -1253,13 +1253,11 @@ wait(3.0)
 require(11560761226).HD("v")
 end)
 
-local dd = win:Tab("Coming Soon", "http:///asset/?id=6022668888")
+local dd = win:Tab("Credits", "http:///asset/?id=6022668888")
 
-dd:Label("Newest V3.4")
-dd:Label("UPD: Bedwars script, Feature")
-dd:Label("UPD: Lines 2 Console")
-dd:Label("UPD: New Systems Bypasser v2")
-dd:Label("UPD: Bypasser Console")
-dd:Label("UPD: God Modes")
-dd:Label("FIX: MM2 Scripts")
-dd:Label("FIX: Bido Skins Hub")
+dd:Button("Creator: Super [Click]", "Owner of scripts", "Okay!")
+setclipboard("https://youtube.com/@SuperX_RobloxHub")
+end)
+dd:Label("Recommended to trolls")
+dd:Label("Version: 3.4")
+dd:Label("Coming Up V4")
