@@ -1255,8 +1255,8 @@ end)
 
 local dd = win:Tab("Credits", "http:///asset/?id=6022668888")
 
-dd:Button("Creator: Super [Click]", "Owner of scripts", "Okay!")
-setclipboard("https://youtube.com/@SuperX_RobloxHub")
+dd:Label("Creator: Super [Click]")
+dd:Label("https://youtube.com/@SuperX_RobloxHub")
 end)
 dd:Label("Recommended to trolls")
 dd:Label("Version: 3.4")
