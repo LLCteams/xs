@@ -1,3 +1,25 @@
+
+local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
+
+notifLib:CreatePromptNotif({
+
+ TweenSpeed = 1,
+
+ Title = "Super X V3.4",
+
+ Text = "If V4 shows up wait 8 second V3.4 is show after it!",
+
+ Duration = 5,
+
+ Callback = function(Value)
+
+   print(Value)
+
+ end
+
+})
+wait(8.0)
+
 local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
 
 
@@ -24,8 +46,6 @@ end})
 wait(8)
 
 
-
-local notifLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/Sw1ndlerScripts/RobloxScripts/main/Notification%20Library/main.lua"))()
 
 notifLib:CreatePromptNotif({
  TweenSpeed = 1,
