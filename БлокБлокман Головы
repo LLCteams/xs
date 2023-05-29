@@ -95,6 +95,24 @@ wait(7.0)
 notifLib:CreateDefaultNotif({
  TweenSpeed = 1,
  Title = "Super X V3.4",
+ Text = "User verified to use.",
+ Duration = 5
+})
+
+wait(7.0)
+
+notifLib:CreateDefaultNotif({
+ TweenSpeed = 1,
+ Title = "Super X V3.4",
+ Text = "Roblox console has bypassed!",
+ Duration = 5
+})
+
+wait(7.0)
+
+notifLib:CreateDefaultNotif({
+ TweenSpeed = 1,
+ Title = "Super X V3.4",
  Text = "Removing admin view...",
  Duration = 5
 })
@@ -825,10 +843,6 @@ end)
 xx:Button("Owl Hub", "Others Hub", function()
 Flux:Notification("Do you want execute?", "Okay!")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
-end)
-xx:Button("Psy Hub", "Others Hub", function()
-Flux:Notification("Do you want execute?", "Okay!")
-loadstring(game:HttpGet(('https://pastebin.com/raw/Zt1a4aE9')))() 
 end)
 xx:Button("Animation Hub", "Others Hub", function()
 Flux:Notification("Do you want execute?", "Okay!")
