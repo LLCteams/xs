@@ -1228,7 +1228,7 @@ end)
 
 local dd = win:Tab("Coming Soon", "http:///asset/?id=6022668888")
 
-dd:Label("Newest Update V3.3")
+dd:Label("Newest V3.4")
 dd:Label("UPD: Bedwars script, Feature")
 dd:Label("UPD: Lines 2 Console")
 dd:Label("UPD: New Systems Bypasser v2")
