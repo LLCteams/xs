@@ -6,7 +6,7 @@ wait(12);
 
 Notify({
 Description = "We have to check, Please wait...";
-Duration = 18;
+Duration = 6;
 });
 
 wait(20);
@@ -14,7 +14,7 @@ wait(20);
 
 Notify({
 Description = "Done [V1.1.2]";
-Duration = 50;
+Duration = 5;
 });
 
 wait(8);
