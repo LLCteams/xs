@@ -13,16 +13,427 @@ wait(20);
 
 
 Notify({
-Description = "Version no longer available.";
-Duration = 16;
+Description = "Done [V1.1.2]";
+Duration = 50;
 });
 
-wait(14)
+wait(8);
+
+Notify({
+Description = "Please wait, we check for roblox.";
+Duration = 50;
+});
+
+wait(15)
+
+Notify({
+Description = "ItemConsole: roblox.com/console";
+Duration = 4;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/scriptexe";
+Duration = 6;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/localserver";
+Duration = 7;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/clientserver";
+Duration = 8;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/home";
+Duration = 10;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/asset:id";
+Duration = 4;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/command";
+Duration = 5;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/error66";
+Duration = 7;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/volt";
+Duration = 10;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/roblox2016";
+Duration = 6;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/clientside/out";
+Duration = 9;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/tool/btool";
+Duration = 7;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/anticheat";
+Duration = 5;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/games";
+Duration = 6;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/robloxstudio";
+Duration = 4;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/creategame";
+Duration = 10;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/credits";
+Duration = 9;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/world";
+Duration = 5;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/userself";
+Duration = 5;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/userplayer";
+Duration = 4;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/loadstring";
+Duration = 9;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/chat";
+Duration = 6;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/invisible";
+Duration = 8;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/placeid";
+Duration = 6;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/gameid";
+Duration = 7;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/gamefav";
+Duration = 3;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/gameold";
+Duration = 4;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/logo2022";
+Duration = 7;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/rounds";
+Duration = 9;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/bypass";
+Duration = 8;
+});
+
+wait(6)
+Notify({
+Description = "ItemConsole: roblox.com/forcefile";
+Duration = 6;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/profile";
+Duration = 5;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/username";
+Duration = 6;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/setting";
+Duration = 8;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/avatar";
+Duration = 6;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/itemid";
+Duration = 5;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/hats";
+Duration = 3;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/shirt";
+Duration = 3;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/t-shirt";
+Duration = 10;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/pants";
+Duration = 7;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/color";
+Duration = 10;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/head";
+Duration = 5;
+});
+
+wait(6)
 
 
+Notify({
+Description = "ItemConsole: roblox.com/ultimate";
+Duration = 4;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/searching";
+Duration = 3;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/event";
+Duration = 8;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/pendingrbx";
+Duration = 7;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/friend";
+Duration = 4;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/add:friend";
+Duration = 4;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/usersdata";
+Duration = 10;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/publiclist";
+Duration = 8;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/privatelist";
+Duration = 3;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/robux";
+Duration = 10;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/tix";
+Duration = 8;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/freerobux";
+Duration = 7;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/buy:sell";
+Duration = 6;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/animation";
+Duration = 9;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/guestcharacter";
+Duration = 6;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/noobcharacter";
+Duration = 7;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/ugcitem";
+Duration = 8;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/oofsound";
+Duration = 7;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/newsound";
+Duration = 10;
+});
+
+wait(6)
+
+Notify({
+Description = "ItemConsole: roblox.com/targetuser";
+Duration = 10;
+});
+
+wait(40)
 
 
-wait(999999)
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
 
 local Luxt = Luxtl.CreateWindow("Volt Hub", 6105620301)
