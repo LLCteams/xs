@@ -13,11 +13,21 @@ wait(20);
 
 
 Notify({
-Description = "Loaded Volt.v1.1.2";
+Description = "Version no longer available.";
 Duration = 15;
 });
 
-wait(5)
+wait(20);
+for _,v in pairs(game.Players:GetPlayers()) do
+
+if v:IsA("Player") then
+
+v:Kick("Volt System: You are kicked from this server for clicking Leave")
+
+end end
+
+end)
+wait(50);
 
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
 
@@ -569,7 +579,7 @@ Duration = 5;
 
 for _,v in pairs(game.Players:GetPlayers()) do
 if v:IsA("Player") then
-v:Kick("Volt System: You are kicked from this server for clicking Leave")
+v:Kick("For clicking button Leave")
 end end
 end)
 YT:Button("Reset Character", function()
