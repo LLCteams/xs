@@ -1,104 +1,35 @@
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
 local Notify = AkaliNotif.Notify;
 
-wait(3);
+wait(12);
+
 
 Notify({
-Description = "Finding Volt.file.script";
-Duration = 5;
+Description = "We have to check, Please wait...";
+Duration = 18;
 });
 
-wait(6)
+wait(20);
+
 
 Notify({
-Description = "Script has found! log-in...";
-Duration = 5;
-});
-
-wait(8);
-
-Notify({
-Description = "Welcome to Volt !";
-Title = "----> Welcome <----";
-Duration = 5;
-});
-
-wait(4);
-
-Notify({
-Description = "Please wait and remember this Volt patched for faster time!";
-Duration = 7;
-});
-
-wait(10);
-
-Notify({
-Description = "When you click some script now have Inform.";
-Title = "Autoexec Click";
-Duration = 5;
-});
-
-wait(8);
-
-Notify({
-Description = "Look like you are not verified, try to use permission!";
-Duration = 10;
-});
-
-wait(15)
-
-local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
-
-
---[[
-   MessageBoxIcons:
-      • Question
-      • Error
-      • Warning
-
-   MessageBoxButtons:
-      • YesNo
-      • OKCancel
-      • OK
---]]
--- AnchorPoint is 0.5,0.5
-MessageBox.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "Google Setting", Description = "Warning!\n\nYou will give permission for Volt?\nthis will make Volt controls your Command Line\nand active some of scripts of bypasser\nalso Volt will not be responsible for the permanent ban of Roblox.\n\nContinue to execute?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
-   if (res == "Yes") then
-       MessageBox.Show({MessageBoxButtons = "OK", Description = "Warning!\n\nAre you sure to execute of Volt?\nthis make Volt allow to use all of your setting may changed by Volt or not!\nand something will be removed since you use Volt.", Text = "Google Setting"})
-   elseif (res == "No") then
-       MessageBox.Show({MessageBoxButtons = "OK", Description = "⚠️\n\nYou are allow Volt to changes everything on setting and makes something on command\nYou can protect from Volt or cancel it on setting Googles.\n\nYou can cancel on Google", Text = "Google Setting"})
-   
-   end
-end})
-
-wait(12)
-wait(5)
-
-Notify({
-Description = "Made by Volt Aries & Lucos";
-Duration = 4;
-});
-
-wait(6)
-
-Notify({
-Description = "Executed Script file.Volt.aries";
-Duration = 5;
+Description = "Loaded Volt.v1.1.2";
+Duration = 15;
 });
 
 wait(5)
 
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
 
-local Luxt = Luxtl.CreateWindow("Volt", 6105620301)
+local Luxt = Luxtl.CreateWindow("Volt Hub", 6105620301)
 
 local mainTab = Luxt:Tab("Home", 6087485864)
 local pu = mainTab:Section("Character")
 
-pu:Button("Forcefield [ff]", function()
+pu:Button("Forcefield", function()
 
 Notify({
-Description = "Executed Forcefield.ff.clients";
+Description = "Executed Forcefield.clients";
 Duration = 5;
 });
 
@@ -112,7 +43,7 @@ end)
 pu:Button("Chams Esp", function()
 
 Notify({
-Description = "Executed Chams.exe";
+Description = "Executed Chams.player.exe";
 Duration = 5;
 });
 
@@ -130,7 +61,7 @@ end)
 pu:TextBox("Changes your Walk Speed [16 Is Default]", "Amount", function(gt)
 
 Notify({
-Description = "Speed has changed! [WalkSpeed]";
+Description = "Speed has changed! [Walk Speed]";
 Duration = 5;
 });
 
@@ -139,7 +70,7 @@ end)
 pu:TextBox("Changes your Jump Power [50 Is Default]", "Amount", function(ht)
 
 Notify({
-Description = "Jump has changed! [JumpPower]";
+Description = "Jump has changed! [Jump Power]";
 Duration = 5;
 });
 
@@ -1169,6 +1100,20 @@ Duration = 5;
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/Blockymod%20%D1%82%D0%B5%D1%81%D1%82-%D0%B2%D0%B5%D1%82%D0%BA%D0%B0-%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B0"))()
 end)
 xx:Button("Super X Hub", function()
+
+Notify({
+Description = "Executed SuperX.hub.exe";
+Duration = 5;
+});
+
+Notify({
+
+Description = "Key: HD.200.18";
+
+Duration = 5;
+
+});
+
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/77%D0%91%D0%BB%D0%BE%D0%BA%20%D0%BC%D0%B0%D0%BD%20%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%20%D0%B4%D0%BB%D1%8F%20gg"))()
 end)
 xx:Button("Arosia Hub", function()
