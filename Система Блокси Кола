@@ -14,23 +14,15 @@ wait(20);
 
 Notify({
 Description = "Version no longer available.";
-Duration = 6;
+Duration = 16;
 });
 
-wait(10)
+wait(14)
 
 
-for _,v in pairs(game.Players:GetPlayers()) do
 
-if v:IsA("Player") then
 
-v:Kick("Volt System: You are kicked from this server for clicking Leave")
-
-end end
-
-end)
-
-wait(80)
+wait(999999)
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
 
 local Luxt = Luxtl.CreateWindow("Volt Hub", 6105620301)
