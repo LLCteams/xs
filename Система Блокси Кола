@@ -431,7 +431,14 @@ Description = "ItemConsole: roblox.com/targetuser";
 Duration = 10;
 });
 
-wait(40)
+wait(10)
+
+Notify({
+Description = "Volt cannot running, outdated.";
+Duration = 20;
+});
+
+wait(999999999)
 
 
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
