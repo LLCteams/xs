@@ -16,7 +16,7 @@ local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xH
       • OK
 --]]
 -- AnchorPoint is 0.5,0.5
-MessageBox.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "Google Setting", Description = "Warning!\n\nYou will give permission for Volt?\nthis will make Volt controls your Command Line\nand active some of scripts of bypasser\nalso Volt will not be responsible for the permanent ban of Roblox.\n\nContinue to execute?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
+MessageBox.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "Google Setting", Description = "Warning!\n\nBefore acces or using Volt, you will see 18+ text but this not safely for anyone.\nYou will give permission for Volt to running?\nthis will make Volt controls your Command Line\nand active some of scripts of bypasser and a 18+ texts\nalso Volt will not be responsible for the permanent ban of Roblox.\n\nContinue to execute?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
    if (res == "Yes") then
        MessageBox.Show({MessageBoxButtons = "OK", Description = "Warning!\n\nAre you sure to execute of Volt?\nthis make Volt allow to use all of your setting may changed by Volt or not!\nand something will be removed since you use Volt.", Text = "Google Setting"})
    elseif (res == "No") then
@@ -25,12 +25,27 @@ MessageBox.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "Google Setting", Des
    end
 end})
 
+Notify({
+
+Description = "Ads: about,18+,chats,orsmt,condos";
+
+Duration = 10;
+
+});
+
+Notify({
+
+Description = "[...]: 😝 aghh.. uh.. ahh..";
+
+Duration = 5;
+
+});
 
 wait(6)
 
 Notify({
-Description = "Fix an issue [😝] aah..";
-Duration = 25;
+Description = "Fixing issue [😝] aah pleas wait..";
+Duration = 45;
 });
 
 
@@ -43,13 +58,13 @@ Title = "Something went wrong...";
 Duration = 3;
 });
 
-wait(27)
+wait(46)
 
 Notify({
 
-Description = "Issue Solved [😝] ah..";
+Description = "Issue Solved [😝] uh.. agh.. ah..";
 
-Duration = 5;
+Duration = 20;
 
 });
 
