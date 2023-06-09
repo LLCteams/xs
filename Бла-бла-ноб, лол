@@ -29,20 +29,30 @@ end})
 wait(6)
 
 Notify({
-Description = "🔧 InFixing 🔧";
-Title = "Status Update";
-Duration = 999999;
+Description = "Fix an issue [😝] aah..";
+Duration = 25;
 });
+
+
 
 wait(5)
 
 Notify({
 Description = "We have stopped some script.";
 Title = "Something went wrong...";
-Duration = 30;
+Duration = 3;
 });
 
-wait(2)
+wait(27)
+
+Notify({
+
+Description = "Issue Solved [😝] ah..;
+
+Duration = 5;
+
+});
+
 
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
 
@@ -50,6 +60,24 @@ local Luxt = Luxtl.CreateWindow("Volt", 6105620301)
 
 local mainTab = Luxt:Tab("Home", 6087485864)
 local pu = mainTab:Section("Movement")
+pu:Button("Normal Walk Speed", function()
+
+Notify({
+Description = "Normal [Walk Speed]";
+Duration = 5;
+});
+
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+pu:Button("Normal Jump Power", function()
+
+Notify({
+Description = "Normal [Jump Power]";
+Duration = 5;
+});
+
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
 pu:TextBox("Changes your Walk Speed [16 Is Default]", "Amount", function(gt)
 
 Notify({
