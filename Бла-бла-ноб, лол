@@ -47,7 +47,7 @@ wait(27)
 
 Notify({
 
-Description = "Issue Solved [😝] ah..;
+Description = "Issue Solved [😝] ah..";
 
 Duration = 5;
 
