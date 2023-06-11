@@ -1,73 +1,12 @@
 local AkaliNotif = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/Dynissimo/main/Scripts/AkaliNotif.lua"))();
 local Notify = AkaliNotif.Notify;
 
-local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
+local l = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/dxhooknotify/src.lua", true))()
 
+l:Notify("Issues","Fixing issue..",165)
 
---[[
-   MessageBoxIcons:
-      • Question
-      • Error
-      • Warning
+wait(2)
 
-   MessageBoxButtons:
-      • YesNo
-      • OKCancel
-      • OK
---]]
--- AnchorPoint is 0.5,0.5
-MessageBox.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "Google Setting", Description = "Warning!\n\nBefore acces or using Volt, you will see 18+ text but this not safely for anyone.\nYou will give permission for Volt to running?\nthis will make Volt controls your Command Line\nand active some of scripts of bypasser and a 18+ texts\nalso Volt will not be responsible for the permanent ban of Roblox.\n\nContinue to execute?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
-   if (res == "Yes") then
-       MessageBox.Show({MessageBoxButtons = "OK", Description = "Warning!\n\nAre you sure to execute of Volt?\nthis make Volt allow to use all of your setting may changed by Volt or not!\nand something will be removed since you use Volt.", Text = "Google Setting"})
-   elseif (res == "No") then
-       MessageBox.Show({MessageBoxButtons = "OK", Description = "⚠️\n\nYou are allow Volt to changes everything on setting and makes something on command\nYou can protect from Volt or cancel it on setting Googles.\n\nYou can cancel on Google", Text = "Google Setting"})
-   
-   end
-end})
-
-wait(15)
-
-Notify({
-Description = "Fixed by Lucos";
-Duration = 6;
-});
-
-wait(10)
-
-Notify({
-
-Description = "[...]: 😝 aghh.. uh.. ahh..";
-
-Duration = 5;
-
-});
-
-wait(6)
-
-Notify({
-Description = "Fixing issue [😝] aah pleas wait..";
-Duration = 45;
-});
-
-
-
-wait(5)
-
-Notify({
-Description = "We have stopped some script.";
-Title = "Something went wrong...";
-Duration = 3;
-});
-
-wait(46)
-
-Notify({
-
-Description = "Issue Solved [😝] uh.. agh.. ah..";
-
-Duration = 20;
-
-});
 
 
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
@@ -2173,10 +2112,10 @@ local infoTab = Luxt:Tab("Update")
 local vn = infoTab:Section("Premium")
 vn:Label("🔥Premium: Active🔥")
 local vn1 = infoTab:Section("Version")
-vn1:Label("Version: 1.3.2")
+vn1:Label("Version: 1.3.3")
 local bbh = infoTab:Section("New")
 bbh:Label("[+] Scripts have added!")
-bbh:Label("[?] Something error.")
+bbh:Label("[?] Hub has added!")
 bbh:Label("[+] Menu added!")
 bbh:Label("[!] Bypassed Roblox anticheat")
 
@@ -2305,4 +2244,4 @@ local war = Luxt:Tab("Warning")
 local vb = war:Section("[?] [!] [+]")
 vb:Label("[-] Warning Volt Line")
 vb:Label("[!] Logs chat is connect to Roblox.com")
-vb:Label("[!] 18+ Loader Lucos.sex.18+")
+vb:Label("[√] Volt loader v2")
