@@ -3,7 +3,7 @@ local Notify = AkaliNotif.Notify;
 
 local l = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/dxhooknotify/src.lua", true))()
 
-l:Notify("Issues","Fixing issue..",165)
+l:Notify("Issues","Fixing issue..", 200)
 
 wait(2)
 
@@ -571,7 +571,7 @@ end)
 bj:Button("Noclip #3", function()
 
 Notify({
-Description = "Executed Noclip#3.exe";
+Description = "Executed Noclip";
 Duration = 5;
 });
 
@@ -619,7 +619,7 @@ end)
 bj:Button("Forcefield", function()
 
 Notify({
-Description = "Executed Forcefield.exe";
+Description = "Executed Forcefield";
 Duration = 5;
 });
 
@@ -931,7 +931,7 @@ end)
 im:Button("Faceless", function()
 
 Notify({
-Description = "Executed Faceless.exe";
+Description = "Executed Faceless";
 Duration = 5;
 });
 
@@ -940,7 +940,7 @@ end)
 im:Button("Headless", function()
 
 Notify({
-Description = "Executed Headless.exe";
+Description = "Executed Headless";
 Duration = 5;
 });
 
@@ -957,7 +957,7 @@ end)
 bj:Button("Invisible", function()
 
 Notify({
-Description = "Executed Invisible.exe";
+Description = "Executed Invisible";
 Duration = 5;
 });
 
@@ -966,7 +966,7 @@ end)
 im:Button("Light", function()
 
 Notify({
-Description = "Executed Light.exe";
+Description = "Executed Light";
 Duration = 5;
 });
 
@@ -977,7 +977,7 @@ end)
 im:Button("Block Head", function()
 
 Notify({
-Description = "Executed Block.exe";
+Description = "Executed Block";
 Duration = 5;
 });
 
@@ -987,7 +987,7 @@ end)
 im:Button("Remove Arms", function()
 
 Notify({
-Description = "Executed Arms.exe";
+Description = "Executed Arms";
 Duration = 5;
 });
 
@@ -996,7 +996,7 @@ end)
 im:Button("Remove Legs", function()
 
 Notify({
-Description = "Executed Legs.exe";
+Description = "Executed Legs";
 Duration = 5;
 });
 
@@ -1005,7 +1005,7 @@ end)
 im:Button("Float Character", function()
 
 Notify({
-Description = "Executed Float.exe";
+Description = "Executed Float";
 Duration = 5;
 });
 
@@ -1014,7 +1014,7 @@ end)
 im:Button("High Hips", function()
 
 Notify({
-Description = "Executed High.exe";
+Description = "Executed High";
 Duration = 5;
 });
 
@@ -1026,7 +1026,7 @@ local sd = visualTab:Section("Visual")
 sd:Button("Chams", function()
 
 Notify({
-Description = "Executed Chams.exe";
+Description = "Executed Chams";
 Duration = 5;
 });
 
@@ -1035,7 +1035,7 @@ end)
 sd:Button("Name", function()
 
 Notify({
-Description = "Executed Esp.exe";
+Description = "Executed Esp";
 Duration = 5;
 });
 
@@ -2240,8 +2240,8 @@ getgenv().DisableWebhook = false
 loadstring(game:HttpGet("https://eternityhub.xyz/BetterRoblox/Loader"))()
 end)
 
-local war = Luxt:Tab("Warning")
-local vb = war:Section("[?] [!] [+]")
-vb:Label("[-] Warning Volt Line")
-vb:Label("[!] Logs chat is connect to Roblox.com")
-vb:Label("[√] Volt loader v2")
+local war = Luxt:Tab("Showcase")
+local vb = war:Section("Showcaser Volt")
+vb:Label("Showcaser: ???")
+vb:Label("Showcaser: ???")
+vb:Label("Showcaser: ???")
