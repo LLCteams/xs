@@ -1866,7 +1866,7 @@ end)
 xx:Button("Super X Beta", function()
 
 Notify({
-Description = "Executed SuperX.Beta;
+Description = "Executed SuperX.Beta";
 Duration = 5;
 });
 
@@ -2306,10 +2306,3 @@ local vb = war:Section("[?] [!] [+]")
 vb:Label("[-] Warning Volt Line")
 vb:Label("[!] Logs chat is connect to Roblox.com")
 vb:Label("[!] 18+ Loader Lucos.sex.18+")
-vb:Label("[-] Working Volt Line")
-vb:Label("[√] Working Normal")
-vb:Label("[√] Antidetect console")
-vb:Label("[-] Error Volt Line")
-vb:Label("[?] Unknown error PC inform")
-vb:Label("[?] ---")
-vb:Label("[-]")
