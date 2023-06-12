@@ -3,7 +3,7 @@ local Notify = AkaliNotif.Notify;
 
 local l = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/dxhooknotify/src.lua", true))()
 
-l:Notify("Issues","Fixing issue..", 200)
+l:Notify("Antidetect V2","Activing...", 130)
 
 wait(2)
 
@@ -15,6 +15,7 @@ local Luxt = Luxtl.CreateWindow("Volt", 6105620301)
 
 local mainTab = Luxt:Tab("Home", 6087485864)
 local pu = mainTab:Section("Movement")
+
 pu:Button("Normal Walk Speed", function()
 
 Notify({
@@ -2124,8 +2125,9 @@ bbh:Label("[!] Bypassed Roblox anticheat")
 local creditsTab = Luxt:Tab("Credits")
 local cf = creditsTab:Section("Creator")
 cf:Credit("Volt Is {Offline}")
+cf:Credit("Roblox Account: SupersNoob2013")
 local cf1 = creditsTab:Section("Helper")
-cf1:Credit("Lucos Is {Online}")
+cf1:Credit("Lucos Is {Offline}")
 local cf2 = creditsTab:Section("Bypass")
 cf2:Credit("Bypassed Roblox Anticheat auto:volt.rbx.true")
 
@@ -2140,7 +2142,7 @@ Duration = 5;
 
 loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
 end)
-ff:Button("Focus Anti AFK", function()
+ff:Button("Anti AFK", function()
 loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/anti-afk%20via%20autofocus.txt"))()
 end)
 ff:Button("Infinite Jump", function()
