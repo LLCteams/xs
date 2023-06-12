@@ -3,7 +3,7 @@ local Notify = AkaliNotif.Notify;
 
 local l = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/dxhooknotify/src.lua", true))()
 
-l:Notify("Detected !","Fixing V3..", 140)
+l:Notify("New script improvements!","Volt Is Down.", 999999)
 
 wait(2)
 
