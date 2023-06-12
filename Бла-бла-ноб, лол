@@ -3,7 +3,7 @@ local Notify = AkaliNotif.Notify;
 
 local l = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/dxhooknotify/src.lua", true))()
 
-l:Notify("Antidetect V2","Activing...", 130)
+l:Notify("Detected !","Fixing V3..", 140)
 
 wait(2)
 
