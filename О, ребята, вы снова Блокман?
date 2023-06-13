@@ -3,7 +3,7 @@ local Notify = AkaliNotif.Notify;
 
 local l = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/dxhooknotify/src.lua", true))()
 
-l:Notify("Volt Upgraded","Highly update with this can giving everyone best for playing and counter.", 15)
+l:Notify("Last of all version","Patch Time: 2 Day", 15)
 
 wait(4)
 
