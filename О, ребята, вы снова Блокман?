@@ -3,11 +3,9 @@ local Notify = AkaliNotif.Notify;
 
 local l = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/dxhooknotify/src.lua", true))()
 
-l:Notify("Volt Version Upgrade","Volt loading acces..", 12)
+l:Notify("Volt Upgraded","Highly update with this can giving everyone best for playing and counter.", 15)
 
-wait(6)
-
-l:Notify("V2 Required canceled!","Volt is Down.", 999999999)
+wait(4)
 
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
 local Luxt = Luxtl.CreateWindow("Volt Splash", 6105620301)
