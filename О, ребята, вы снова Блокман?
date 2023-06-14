@@ -3,7 +3,7 @@ local Notify = AkaliNotif.Notify;
 
 local l = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/dxhooknotify/src.lua", true))()
 
-l:Notify("Last of all version","Patch Time: 2 Day", 15)
+l:Notify("Outdated version.","Volt v1.9.9", 9999999999)
 
 wait(4)
 
