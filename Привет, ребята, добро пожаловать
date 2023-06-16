@@ -11,8 +11,7 @@ tab:Button("Swat", print)
       local A_2 = true
       local Event = game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole
       Event:FireServer(A_1, A_2)
-      end
-end)
+
 tab:Button("Police", print)
          Name = "Gun",
          Callback = function(A_1)
@@ -20,77 +19,64 @@ tab:Button("Police", print)
           local A_2 = true
           local Event = game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole
          Event:FireServer(A_1, A_2)
-         end
-end)
+         
 tab:Button("Linked Sword", print)
 Name = "LinkedSword",
      Callback = function(v)
        game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("LinkedSword")
-       end
-end)
+       
 tab:Button("Bat", print)
 Name = "Bat",
     Callback = function(v)
       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Bat")
-      end
-end)
+      
 tab:Button("Basement Key", print)
 Name = "Key",
     Callback = function(v)
       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Key")
-      end
-end)
+      
 tab:Button("Chips", print)
 Name = "Chips",
 	Callback = function(v)
 		game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Chips")
-		end
-end)
+		
 tab:Button("Lollipop", print)
 Name = "Lollipop",
     Callback = function(v)
       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Lollipop")
-      end
-end)
+      
 tab:Button("Apple", print)
 Name = "Apple",
     Callback = function(v)
       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Apple")
-      end
-end)
+      
 tab:Button("Cookie", print)
 Name = "Cookie",
     Callback = function(v)
       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Cookie")
-      end
-end)
+      
 tab:Button("Bloxy Cola", print)
 Name = "Bloxy cola",
     Callback = function(v)
       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("BloxyCola")
-      end
-end)
+      
 tab:Button("Bloxy Cola", print)
 Name = "Expired Bloxy cola",
     Callback = function(v)
       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("ExpiredBloxyCola")
-      end
-end)
+      
 tab:Button("Medkit", print)
 Name = "Medkit",
     Callback = function(v)
       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("MedKit")
-      end
-end)
+      
 tab:Button("Cure", print)
 Name = "Cure",
     Callback = function(v)
       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Cure")
-      end
-end)
+      
 tab:Button("Plank", print)
 Name = "Plank",
     Callback = function(v)
       game.ReplicatedStorage.RemoteEvents.GiveTool:FireServer("Plank")
-      end
-end)
+      
