@@ -1,5 +1,5 @@
 local Players = game:GetService("Players")
-local ESP = loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-ESP-Library-9570", true))("there are cats in your walls let them out let them out let them out")
+local ESP = loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-ESP-Library-9570", true))("there")
 
 --SYNAPSE ONLY
 --[[
