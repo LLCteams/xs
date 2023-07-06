@@ -1,12 +1,4 @@
 
-
-game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Created By:",  	
-Text = "Xirius",
-	Icon = "",
-	Duration = 12
-})
-
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
 local Luxt = Luxtl.CreateWindow("Zombie Uprising", 13951232354)
 
