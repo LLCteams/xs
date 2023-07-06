@@ -2,8 +2,8 @@
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
 Title = "Created By:",  	
-Text = "Aries_Volt#0001",
-	Icon = "rbxassetid://13964592926",
+Text = "Xirius",
+	Icon = "",
 	Duration = 12
 })
 
