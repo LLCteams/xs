@@ -1,0 +1,160 @@
+
+
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+Title = "Created By:",  	
+Text = "Xirius",
+	Icon = "",
+	Duration = 12
+})
+
+local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
+local Luxt = Luxtl.CreateWindow("Zombie Uprising", 13951232354)
+
+local mainTab = Luxt:Tab("Character")
+local nes = mainTab:Section("Movement")
+nes:Button("Speed [Bypass]", function()
+net = true
+notify = false
+loadstring("\13\10\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\71\101\116\79\98\106\101\99\116\115\40\34\114\98\120\97\115\115\101\116\105\100\58\47\47\55\50\53\55\55\54\49\55\56\53\34\41\91\49\93\46\83\111\117\114\99\101\41\40\41\13\10")()
+end)
+local nas = mainTab:Section("Misc")
+nas:Button("Protector [Client]", function()
+ff = Instance.new("ForceField", game.Players.LocalPlayer.Character)
+ff.Visible = true
+ 
+-- Sets health to max
+maxHealth = game.Players.LocalPlayer.Humanoid.MaxHealth
+player.Health = maxHealth
+end)
+nas:Button("Full Bright", function()
+local Light = game:GetService("Lighting")
+
+function dofullbright()
+Light.Ambient = Color3.new(1, 1, 1)
+Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+Light.ColorShift_Top = Color3.new(1, 1, 1)
+end
+
+dofullbright()
+
+Light.LightingChanged:Connect(dofullbright)
+end)
+nas:Button("Pet Light", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Light%20Part%20Pet'))()
+end)
+nas:Button("Views Ping", function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/MvKKJ331'),true))()
+end)
+nas:Button("Shader V1", function()
+local find1 = game.Lighting:FindFirstChildWhichIsA("BloomEffect") if find1 then
+    game.Lighting:FindFirstChildWhichIsA("BloomEffect"):Destroy()
+end
+local find2 = game.Lighting:FindFirstChildWhichIsA("SunRaysEffect") if find2 then
+    game.Lighting:FindFirstChildWhichIsA("SunRaysEffect"):Destroy()
+end
+local find3 = game.Lighting:FindFirstChildWhichIsA("ColorCorrectionEffect") if find3 then
+    game.Lighting:FindFirstChildWhichIsA("ColorCorrectionEffect"):Destroy()
+end
+local find4 = game.Lighting:FindFirstChildWhichIsA("BlurEffect") if find4 then
+    game.Lighting:FindFirstChildWhichIsA("BlurEffect"):Destroy()
+end
+local find5 = game.Lighting:FindFirstChildWhichIsA("Sky") if find5 then
+    game.Lighting:FindFirstChildWhichIsA("Sky"):Destroy()
+end
+end)
+local homeTab = Luxt:Tab("Visual")
+local wow = homeTab:Section("XRay")
+local goreng = false
+wow:Toggle("XRay", function(goreng)
+
+       if goreng == true then
+       
+       NotificationLibrary:SendNotification("Success", "Active !", 4)
+
+        for _, descendant in pairs(workspace:GetDescendants()) do
+            if descendant:IsA("BasePart") then
+                if not descendant:FindFirstChild("OriginalTransparency") then
+                    local originalTransparency = Instance.new("NumberValue")
+                    originalTransparency.Name = "OriginalTransparency"
+                    originalTransparency.Value = descendant.Transparency
+                    originalTransparency.Parent = descendant
+                end
+                descendant.Transparency = 0.5
+            end
+        end
+    else
+    
+    NotificationLibrary:SendNotification("Success", "Deactive !", 4)
+    
+        for _, descendant in pairs(workspace:GetDescendants()) do
+            if descendant:IsA("BasePart") then
+                if descendant:FindFirstChild("OriginalTransparency") then
+                    descendant.Transparency = descendant.OriginalTransparency.Value
+                    descendant.OriginalTransparency:Destroy()
+                end
+            end
+        end
+    end
+end)
+local hum = homeTab:Section("Esp Teams")
+hum:Toggle("Esp [Team]", function(state)
+getgenv().enabled = state --Toggle on/off
+getgenv().filluseteamcolor = true --Toggle fill color using player team color on/off
+getgenv().outlineuseteamcolor = true --Toggle outline color using player team color on/off
+getgenv().fillcolor = Color3.new(0, 0, 0) --Change fill color, no need to edit if using team color
+getgenv().outlinecolor = Color3.new(1, 1, 1) --Change outline color, no need to edit if using team color
+getgenv().filltrans = 0.5 --Change fill transparency
+getgenv().outlinetrans = 0.5 --Change outline transparency
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/Highlight-ESP.lua"))()
+end)
+local hp = homeTab:Section("Zombie/All")
+hp:Button("Health All", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%91%D1%80%D1%83%D1%85%20%D0%BD%D1%83%D0%B1"))()
+end)
+hp:Button("Boxes All", function()
+while wait(0.5) do
+    for i, box in ipairs(workspace:GetDescendants()) do
+        if box:FindFirstChild("Humanoid") then
+            if not box:FindFirstChild("EspBox") then
+                if box ~= game.Players.LocalPlayer.Character then
+                    local esp = Instance.new("BoxHandleAdornment",box)
+                    esp.Adornee = box
+                    esp.ZIndex = 0
+                    esp.Size = Vector3.new(5, 6, 2)
+                    esp.Transparency = 0.5 --Changes Transparency 
+                    esp.Color3 = Color3.fromRGB(0,255,0) --Color change
+                    esp.AlwaysOnTop = true
+                    esp.Name = "EspBox"
+                end
+            end
+        end
+    end
+end
+end)
+local fun = Luxt:Tab("Other")
+local fan = fun:Section("Fun Give Badges")
+fan:Button("Owner Of Game", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+Title = "Best #1",  	
+Text = "Infinity kills !",
+	Icon = "rbxassetid://13964592926",
+	Duration = 4
+})
+end)
+fan:Button("Only one left", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+Title = "Last Survive!",  	
+Text = "The only one survivor",
+	Icon = "rbxassetid://13964592926",
+	Duration = 4
+})
+end)
+fan:Button("1000+ Kills", function()
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+Title = "Level Up!",  	
+Text = "Earned 1000+ kills",
+	Icon = "rbxassetid://13964592926",
+	Duration = 4
+})
+end)
