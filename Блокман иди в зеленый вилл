@@ -25,8 +25,10 @@ Tab1:Label('Status: Working')
 
 local Tab2 = Library:CreateTab('2')
 
+Tab2:Label('- V3 -')
 Tab2:Button('Volt V3.0.0', function()
 game.CoreGui.ShadowLib:Destroy()
+print('V3.0.0 has been outdated')
 end)
 Tab2:Label('Status: Outdated')
 
