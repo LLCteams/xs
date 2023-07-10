@@ -6,6 +6,13 @@ _G.Settings = {
 ['Keybind'] = 'K'
 }
 
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+Title = "Loader",	
+Text = "Succesfully loaded.",
+	Icon = "",
+	Duration = 6
+})
+
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9%2C%20%D0%BD%D0%BE%20%D1%81%D1%82%D0%B0%D1%80%D1%8B%D0%B9"))()
 
 
