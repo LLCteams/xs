@@ -10,6 +10,35 @@ Text = "Xirius",
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
 local Luxt = Luxtl.CreateWindow("Zombie Uprising", 13951232354)
 
+local homeTab = Luxt:Tab("Combat")
+local wes = homeTab:Section("Fire Gun")
+wes:Button("Fast Fire", function()
+local spread1 = {
+  Increase = 0,
+  Decrease = 0,
+  Max = 0,
+  Min = 0
+}
+local rec = {
+  Tilt = { 0, 0 },
+  Side = { 0, 0 },
+  Vertical = { 0, 0 },
+  Back = { 0, 0 },
+  Aimed = 0,
+  FirstShot = 0
+}
+for i,v in pairs(getgc(true)) do
+   if type(v) == 'table' and rawget(v, 'magsize') then
+       v.magsize = math.huge
+       v.storedammo = math.huge
+       v.rpm = math.huge
+       v.spread = spread1
+       v.recoil = rec
+       v.mode = "Auto"
+   end
+end
+end)
+
 local mainTab = Luxt:Tab("Character")
 local nes = mainTab:Section("Movement")
 nes:Button("Speed [Bypass]", function()
