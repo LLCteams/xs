@@ -1,6 +1,13 @@
-Plz like and subscribe 😁
+-- Plz like and subscribe
 
-The script:
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+Title = "Prison Life",	
+Text = "Succes by azsirx#2081",
+	Icon = "rbxassetid://13996809508",
+	Duration = 20
+})
+
+-- The script:
 local ScreenGui = Instance.new("ScreenGui")
 local F = Instance.new("TextButton")
 local UICorner = Instance.new("UICorner")
