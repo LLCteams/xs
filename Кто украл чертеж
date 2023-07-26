@@ -1,0 +1,208 @@
+Plz like and subscribe 😁
+
+The script:
+local ScreenGui = Instance.new("ScreenGui")
+local F = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local UIAspectRatioConstraint = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
+local C = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local UIAspectRatioConstraint_2 = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
+local Sprint = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local UIAspectRatioConstraint_3 = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint_3 = Instance.new("UITextSizeConstraint")
+local Console = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UIAspectRatioConstraint_4 = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint_4 = Instance.new("UITextSizeConstraint")
+local HideShow = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local UIAspectRatioConstraint_5 = Instance.new("UIAspectRatioConstraint")
+local UITextSizeConstraint_5 = Instance.new("UITextSizeConstraint")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+F.Name = "F"
+F.Parent = ScreenGui
+F.Active = false
+F.BackgroundColor3 = Color3.fromRGB(138, 138, 138)
+F.BackgroundTransparency = 0.500
+F.Position = UDim2.new(0.84203732, 0, 0.48365292, 0)
+F.Selectable = false
+F.Size = UDim2.new(0.0691562966, 0, 0.133689836, 0)
+F.Font = Enum.Font.SourceSans
+F.Text = "F"
+F.TextColor3 = Color3.fromRGB(255, 255, 255)
+F.TextScaled = true
+F.TextSize = 14.000
+F.TextWrapped = true
+
+UICorner.CornerRadius = UDim.new(0.150000006, 0)
+UICorner.Parent = F
+
+UIAspectRatioConstraint.Parent = F
+UIAspectRatioConstraint.AspectRatio = 1.000
+
+UITextSizeConstraint.Parent = F
+UITextSizeConstraint.MaxTextSize = 49
+
+C.Name = "C"
+C.Parent = ScreenGui
+C.Active = false
+C.BackgroundColor3 = Color3.fromRGB(138, 138, 138)
+C.BackgroundTransparency = 0.500
+C.Position = UDim2.new(0.75351727, 0, 0.638733149, 0)
+C.Selectable = false
+C.Size = UDim2.new(0.0691562966, 0, 0.133689836, 0)
+C.Font = Enum.Font.SourceSans
+C.Text = "C"
+C.TextColor3 = Color3.fromRGB(255, 255, 255)
+C.TextScaled = true
+C.TextSize = 14.000
+C.TextWrapped = true
+
+UICorner_2.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_2.Parent = C
+
+UIAspectRatioConstraint_2.Parent = C
+UIAspectRatioConstraint_2.AspectRatio = 1.000
+
+UITextSizeConstraint_2.Parent = C
+UITextSizeConstraint_2.MaxTextSize = 49
+
+Sprint.Name = "Sprint"
+Sprint.Parent = ScreenGui
+Sprint.Active = false
+Sprint.BackgroundColor3 = Color3.fromRGB(138, 138, 138)
+Sprint.BackgroundTransparency = 0.500
+Sprint.Position = UDim2.new(0.172604382, 0, 0.542476475, 0)
+Sprint.Selectable = false
+Sprint.Size = UDim2.new(0.0691562966, 0, 0.133689836, 0)
+Sprint.Font = Enum.Font.SourceSans
+Sprint.Text = "Sprint"
+Sprint.TextColor3 = Color3.fromRGB(255, 255, 255)
+Sprint.TextScaled = true
+Sprint.TextSize = 14.000
+Sprint.TextWrapped = true
+
+UICorner_3.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_3.Parent = Sprint
+
+UIAspectRatioConstraint_3.Parent = Sprint
+UIAspectRatioConstraint_3.AspectRatio = 1.000
+
+UITextSizeConstraint_3.Parent = Sprint
+UITextSizeConstraint_3.MaxTextSize = 22
+
+Console.Name = "Console"
+Console.Parent = ScreenGui
+Console.Active = false
+Console.BackgroundColor3 = Color3.fromRGB(138, 138, 138)
+Console.BackgroundTransparency = 0.500
+Console.Position = UDim2.new(0.869000018, 0, 0.0820000023, 0)
+Console.Selectable = false
+Console.Size = UDim2.new(0.0414937772, 0, 0.0802139044, 0)
+Console.Font = Enum.Font.SourceSans
+Console.Text = "CONSOLE"
+Console.TextColor3 = Color3.fromRGB(255, 255, 255)
+Console.TextScaled = true
+Console.TextSize = 14.000
+Console.TextWrapped = true
+
+UICorner_4.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_4.Parent = Console
+
+UIAspectRatioConstraint_4.Parent = Console
+
+UITextSizeConstraint_4.Parent = Console
+UITextSizeConstraint_4.MaxTextSize = 8
+
+HideShow.Name = "HideShow"
+HideShow.Parent = ScreenGui
+HideShow.Active = false
+HideShow.BackgroundColor3 = Color3.fromRGB(138, 138, 138)
+HideShow.BackgroundTransparency = 0.500
+HideShow.Position = UDim2.new(0.916999996, 0, 0.0820000023, 0)
+HideShow.Selectable = false
+HideShow.Size = UDim2.new(0.0414937772, 0, 0.0802139044, 0)
+HideShow.ZIndex = 11
+HideShow.Font = Enum.Font.SourceSans
+HideShow.Text = "HIDE BUTTON"
+HideShow.TextColor3 = Color3.fromRGB(255, 255, 255)
+HideShow.TextScaled = true
+HideShow.TextSize = 14.000
+HideShow.TextWrapped = true
+
+UICorner_5.CornerRadius = UDim.new(0.150000006, 0)
+UICorner_5.Parent = HideShow
+
+UIAspectRatioConstraint_5.Parent = HideShow
+
+UITextSizeConstraint_5.Parent = HideShow
+UITextSizeConstraint_5.MaxTextSize = 19
+
+-- Scripts:
+
+local function IKJFSC_fake_script() -- F.Script 
+	local script = Instance.new('Script', F)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pcall(function() keypress(Enum.KeyCode[string.upper("F")]) end)
+	end)
+end
+coroutine.wrap(IKJFSC_fake_script)()
+local function TTZYCWP_fake_script() -- C.Script 
+	local script = Instance.new('Script', C)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pcall(function() keypress(Enum.KeyCode[string.upper("C")]) end)
+	end)
+end
+coroutine.wrap(TTZYCWP_fake_script)()
+local function UZHMT_fake_script() -- Sprint.Script 
+	local script = Instance.new('Script', Sprint)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if game.Players.LocalPlayer.Character.Humanoid.WalkSpeed == 16 then
+			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 24
+		elseif game.Players.LocalPlayer.Character.Humanoid.WalkSpeed == 24 then
+			game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+		end
+	end)
+end
+coroutine.wrap(UZHMT_fake_script)()
+local function HXGRRA_fake_script() -- Console.Script 
+	local script = Instance.new('Script', Console)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		pcall(function() keypress(Enum.KeyCode[string.upper("F9")]) end)
+	end)
+end
+coroutine.wrap(HXGRRA_fake_script)()
+local function ILHHCCK_fake_script() -- HideShow.Script 
+	local script = Instance.new('Script', HideShow)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	 if script.Parent.Parent.HideShow.Text == "HIDE BUTTON" then
+		script.Parent.Parent.Sprint.Visible = false
+		script.Parent.Parent.F.Visible = false
+		script.Parent.Parent.C.Visible = false
+		script.Parent.Parent.Console.Visible = false
+		script.Parent.Parent.HideShow.Text = "SHOW BUTTON"
+		elseif script.Parent.Parent.HideShow.Text == "SHOW BUTTON" then
+			script.Parent.Parent.Sprint.Visible = true
+			script.Parent.Parent.F.Visible = true
+			script.Parent.Parent.C.Visible = true
+			script.Parent.Parent.Console.Visible = true
+			script.Parent.Parent.HideShow.Text = "HIDE BUTTON"
+		end
+	end)
+end
+coroutine.wrap(ILHHCCK_fake_script)()
