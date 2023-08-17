@@ -1,4 +1,6 @@
 game.Players.LocalPlayer:Kick('Roblox server Http error try close the client and try again.')
+wait(2)
+game.Players.LocalPlayer:Kick('Failed to load Volt, roblox shutdown for sometimes.')
 wait(9999)
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
