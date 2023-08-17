@@ -1,6 +1,4 @@
-game.Players.LocalPlayer:Kick('A Http error from server, please reconnect and remove the clients.')
-wait(2)
-game.Players.LocalPlayer:Kick('Search detected! cheating are not allowed on roblox.')
+print('Bypassed v1.0.0')
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
