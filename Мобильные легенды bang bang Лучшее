@@ -25,7 +25,7 @@ do
     Fluent:Notify({
         Title = "Welcome !",
         Content = "Welcome to volt",
-        SubContent = "v1.0.1", -- Optional
+        SubContent = "v1.0.2", -- Optional
         Duration = 5 -- Set to nil to make the notification not disappear
     })
 
@@ -51,12 +51,15 @@ do
                         Callback = function()
                             print("Confirmed the execute.")
                             XnewX()
+                            Setfpscap(144)
+                            Setfpscap(144)
                         end
                     },
                     {
                         Title = "Cancel",
                         Callback = function()
                             print("Cancelled the execute.")
+                            Setfpscap(144)
                         end
                     }
                 }
@@ -66,10 +69,11 @@ do
 
 
 
-    local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "FPS Boost", Default = false })
+    local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Fix FPS Boost", Default = false })
 
     Toggle:OnChanged(function()
         print("FPS Boosted!", Options.MyToggle.Value)
+        Setfpscap(60)
     end)
 
     Options.MyToggle:SetValue(false)
