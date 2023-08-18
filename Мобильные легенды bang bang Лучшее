@@ -6,7 +6,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "Volt " .. Fluent.Version,
-    SubTitle = "| Test version",
+    SubTitle = "| beta version",
     TabWidth = 160,
     Size = UDim2.fromOffset(450, 370),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -33,7 +33,7 @@ do
 
     Tabs.Main:AddParagraph({
         Title = "Volt",
-        Content = "Volt is hub where you can using it for free.\nthank you for using Volt!"
+        Content = "Volt is hub where you can using it for free, bypass any anticheat server\nthank you for using Volt!"
     })
 
 
@@ -51,15 +51,13 @@ do
                         Callback = function()
                             print("Confirmed the execute.")
                             XnewX()
-                            Setfpscap(144)
-                            Setfpscap(144)
                         end
                     },
                     {
                         Title = "Cancel",
                         Callback = function()
                             print("Cancelled the execute.")
-                            Setfpscap(144)
+                            print('')
                         end
                     }
                 }
@@ -73,7 +71,7 @@ do
 
     Toggle:OnChanged(function()
         print("FPS Boosted!", Options.MyToggle.Value)
-        Setfpscap(60)
+        print('')
     end)
 
     Options.MyToggle:SetValue(false)
