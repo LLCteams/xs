@@ -6,7 +6,7 @@ local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.
 
 local Window = Fluent:CreateWindow({
     Title = "Volt " .. Fluent.Version,
-    SubTitle = "| test version",
+    SubTitle = "| Test version",
     TabWidth = 160,
     Size = UDim2.fromOffset(450, 370),
     Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
@@ -25,7 +25,7 @@ do
     Fluent:Notify({
         Title = "Welcome !",
         Content = "Welcome to volt",
-        SubContent = "volt show up.", -- Optional
+        SubContent = "v1.0.1", -- Optional
         Duration = 5 -- Set to nil to make the notification not disappear
     })
 
