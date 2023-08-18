@@ -25,7 +25,7 @@ do
     Fluent:Notify({
         Title = "Welcome !",
         Content = "Welcome to volt",
-        SubContent = "v1.0.2", -- Optional
+        SubContent = "v1.0.3", -- Optional
         Duration = 5 -- Set to nil to make the notification not disappear
     })
 
