@@ -1,5 +1,5 @@
-print('Bypassed v5.0')
-game.Players.LocalPlayer:Kick('A Http error from server, please close the client and re-install Roblox.')
+
+game.Players.LocalPlayer:Kick('A Http error from server, please close the client and reinstall Roblox.')
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
@@ -22,7 +22,7 @@ local Tabs = {
 
 local Options = Fluent.Options
 
-
+do
     Fluent:Notify({
         Title = "Welcome !",
         Content = "Welcome to volt",
