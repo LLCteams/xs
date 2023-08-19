@@ -1,4 +1,4 @@
-print('Bypassed v4.6')
+print('Bypassed v5.0')
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
@@ -664,7 +664,7 @@ Tab1:Label('Status: Unsupported !')
 local Tab2 = Library:CreateTab('2')
 
 Tab2:Label('New version')
-Tab2:Label('v5.0.0 in fixing !')
+Tab2:Label('v5.0.0 are in updating 🔧')
 
 local Tab3 = Library:CreateTab('3')
 
