@@ -263,9 +263,6 @@ Fluent:Notify({
 -- which has been marked to be one that auto loads!
 SaveManager:LoadAutoloadConfig()
 
-wait(4)
-game:ShutDown()
-
 function XnewX()
 
 getgenv().d = "Made by Scar"
