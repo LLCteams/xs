@@ -22,7 +22,7 @@ local Tabs = {
 
 local Options = Fluent.Options
 
-do
+
     Fluent:Notify({
         Title = "Welcome !",
         Content = "Welcome to volt",
