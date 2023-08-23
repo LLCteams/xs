@@ -1,15 +1,12 @@
 print('Thank you for using Volt, stay safe! v1.1.5')
-wait(2)
+
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
 Title = "Thanks to our",  	
-Text = "helper",
+Text = "helper:)",
 	Icon = "rbxassetid://13964592926",
-	Duration = 6
+	Duration = 8
 })
-
-wait(1)
-
 
 
 local ScreenGui = Instance.new("ScreenGui")
@@ -24,7 +21,7 @@ AFText.BackgroundTransparency = 0.5
 AFText.Size = UDim2.new(0.9, 0, 0, 30)
 AFText.Position = UDim2.new(0.05, 0, 0.9, 0)
 AFText.Font = Enum.Font.FredokaOne
-AFText.Text = "Thank for using Volt  [23/August/2023]"
+AFText.Text = "Thank for using Volt"
 AFText.TextColor3 = Color3.fromRGB(250, 250, 250)
 AFText.TextSize = 20
 
