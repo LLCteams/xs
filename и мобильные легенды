@@ -1,9 +1,9 @@
 print('Thank you for using Volt, stay safe! v1.1.5')
-game.Players.LocalPlayer:Kick('Unknown line has found!')
+print('Volt can't support another hubs has 900+ script.')
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Thanks to our",  	
-Text = "helper:)",
+Title = "Welcome",  	
+Text = "V1.1.5",
 	Icon = "rbxassetid://13964592926",
 	Duration = 8
 })
