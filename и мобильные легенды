@@ -1,4 +1,6 @@
+--[[
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/3104f25e0b011fb971f00b541e34ac6c7136db04/%D0%9B%D0%BE%D0%BA%D0%BA%D0%B8%D0%BC%D0%BE%D0%B4%D1%8B"))()
+]]--
 
 print('Thank you for using Volt, stay safe! v1.1.5')
 print('Volt cant support another hubs has 900+ script.')
