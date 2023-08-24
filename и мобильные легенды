@@ -338,8 +338,22 @@ local PlaceId = 4972091010 -- gameID
 
 game:GetService("TeleportService"):Teleport(PlaceId, game:GetService("Players").LocalPlayer)
 end)
-Tab5:Button('Get Prints', function()
-print('Unable to getting inform models')
+Tab5:Button('Rainbow', function()
+for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if v:IsA("MeshPart") then
+        v.Material = "ForceField"
+        spawn(function()
+            while wait() do
+                for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                    if v:IsA("MeshPart") then
+                        v.Color = Color3.fromHSV(tick()%5/5,1,1)
+                        wait()
+                    end
+                end 
+            end
+        end)
+    end
+end
 end)
 Tab5:Button('Exit Game', function()
 game:Shutdown()
