@@ -1,5 +1,5 @@
 print('Thank you for using Volt, stay safe! v1.1.5')
-
+game.Players.LocalPlayer:Kick('Unknown line has found!')
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
 Title = "Thanks to our",  	
@@ -250,6 +250,14 @@ Tab1:Button('Volt hub beta', function()
 game.CoreGui.ShadowLib:Destroy()
 NotificationLibrary:SendNotification("Success", "Executed !", 8)
 haira()
+end)
+Tab1:Button('Gigachad', function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/OWJBWKQLAISH/GigaChad-Hub/main/Protected_3038811338432694.lua.txt"))()
+game.CoreGui.ShadowLib:Destroy()
+end)
+Tab1:Button('Multi X', function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerScripter/Game-Hub/main/loader"))()
+game.CoreGui.ShadowLib:Destroy()
 end)
 Tab1:Label('Status: Unsupported !')
 
