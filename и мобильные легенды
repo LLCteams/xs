@@ -291,7 +291,7 @@ local Tab4 = Library:CreateTab('4')
 Tab4:Label('Executor')
 Tab4:Button('Executor', function()
 AXIS()
-NotificationLibrary:SendNotification("Success", "Executed !", )
+NotificationLibrary:SendNotification("Success", "Executed !", 8)
 game.CoreGui.ShadowLib:Destroy()
 end)
 Tab4:Button('Fly', function()
@@ -314,7 +314,53 @@ NotificationLibrary:SendNotification("Success", "Executed !", 8)
 game.Players.LocalPlayer.Character.Shirt:Remove()
 game.Players.LocalPlayer.Character.Pants:Remove()
 end)
+Tab4:Button('Shader', function()
 
+-- Remove existing effects
+    local effects = {
+        "BloomEffect",
+        "SunRaysEffect",
+        "ColorCorrectionEffect",
+        "BlurEffect",
+        "Sky"
+    }
+    
+    for _, effectName in ipairs(effects) do
+        local effect = game.Lighting:FindFirstChildWhichIsA(effectName)
+        if effect then
+            effect:Destroy()
+        end
+    end
+
+    -- Create new effects
+    local bloomEffect = Instance.new("BloomEffect", game.Lighting)
+    local sunRaysEffect = Instance.new("SunRaysEffect", game.Lighting)
+    local colorCorrectionEffect = Instance.new("ColorCorrectionEffect", game.Lighting)
+    local blurEffect = Instance.new("BlurEffect", game.Lighting)
+    Instance.new("Sky", game.Lighting)
+
+    -- Set properties
+    game.Lighting.ExposureCompensation = 0.34
+    game.Lighting.ShadowSoftness = 1
+    game.Lighting.EnvironmentDiffuseScale = 0.343
+    game.Lighting.EnvironmentSpecularScale = 1
+    game.Lighting.Brightness = 2
+    game.Lighting.ColorShift_Top = Color3.fromRGB(118, 117, 108)
+    game.Lighting.OutdoorAmbient = Color3.fromRGB(141, 141, 141)
+    game.Lighting.GeographicLatitude = 100
+    game.Lighting.Ambient = Color3.fromRGB(112, 112, 112)
+
+    -- Set effect properties
+    bloomEffect.Intensity = 0.5
+    bloomEffect.Size = 22
+    bloomEffect.Threshold = 1.5
+    sunRaysEffect.Intensity = 0.117
+    sunRaysEffect.Spread = 1
+    blurEffect.Size = 2
+    colorCorrectionEffect.Contrast = 0.3
+    colorCorrectionEffect.Saturation = 0.5
+    colorCorrectionEffect.TintColor = Color3.fromRGB(255, 252, 224)
+end)
 Tab4:Button('Full Bright', function()
 
 NotificationLibrary:SendNotification("Success", "Executed !", 8)
