@@ -1,5 +1,5 @@
 print('Thank you for using Volt, stay safe! v1.1.5')
-print('Volt can't support another hubs has 900+ script.')
+print('Volt cant support another hubs has 900+ script.')
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
 Title = "Welcome",  	
