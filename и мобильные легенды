@@ -21,8 +21,8 @@ local function SendNotification(title, text, icon, duration)
 end
 
 -- Chat System Messages
-SendSystemMessage("                   Volt Updated !", Color3.fromRGB(75, 55, 0))
-SemdSystemMessage("")
+SendSystemMessage("                   Volt Updated !", Color3.fromRGB(35, 222, 0))
+SendSystemMessage("")
 SendSystemMessage("[+] New Scripts", Color3.fromRGB(0, 255, 0))
 SendSystemMessage("[~] Stability update", Color3.fromRGB(0, 255, 0))
 SendSystemMessage("[~] Patched script", Color3.fromRGB(0, 255, 0))
