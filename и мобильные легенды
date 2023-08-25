@@ -25,26 +25,27 @@ SendSystemMessage("                   Volt Updated !", Color3.fromRGB(35, 122, 0
 SendSystemMessage("")
 SendSystemMessage("[+] New script", Color3.fromRGB(0, 255, 0))
 SendSystemMessage("[~] Stability update", Color3.fromRGB(0, 255, 0))
-SendSystemMessage("[×] Patch script", Color3.fromRGB(0, 255, 0))
+SendSystemMessage("[×] MSX remove", Color3.fromRGB(0, 255, 0))
+SendSystemMessage("[=] Improved loader", Color3.fromRGB(0, 255, 0))
 SendSystemMessage("")
-wait(6)
+wait(3)
 SendSystemMessage("Waiting to load..")
 
 
-wait(7)
+wait(5)
 
 SendSystemMessage("Loaded.")
 
 wait(2)
 
-print('Thank you for using Volt, stay safe! v1.1.5')
+print('Thank you for using Volt, stay safe! v1.2.6')
 print('Volt cant support another hubs has 900+ script.')
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
 Title = "Welcome",  	
 Text = "",
 	Icon = "rbxassetid://13964592926",
-	Duration = 8
+	Duration = 4
 })
 
 local ScreenGui = Instance.new("ScreenGui")
@@ -59,7 +60,7 @@ AFText.BackgroundTransparency = 0.5
 AFText.Size = UDim2.new(0.9, 0, 0, 30)
 AFText.Position = UDim2.new(0.05, 0, 0.9, 0)
 AFText.Font = Enum.Font.FredokaOne
-AFText.Text = "Thank for using Volt"
+AFText.Text = "Welcome!"
 AFText.TextColor3 = Color3.fromRGB(250, 250, 250)
 AFText.TextSize = 20
 
@@ -160,7 +161,7 @@ TextLabel.BorderSizePixel = 0
 TextLabel.Position = UDim2.new(0.5, 0, 0, 20)
 TextLabel.Size = UDim2.new(0, 250, 0, 50)
 TextLabel.Font = Enum.Font.SourceSans
-TextLabel.Text = "Select your scripts"
+TextLabel.Text = "SELECT A SCRIPT"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 24
 
@@ -189,7 +190,7 @@ TextLabel_2.BorderSizePixel = 0
 TextLabel_2.Position = UDim2.new(0, 0, 0, 260)
 TextLabel_2.Size = UDim2.new(0, 300, 0, 40)
 TextLabel_2.Font = Enum.Font.SourceSans
-TextLabel_2.Text = "Thanks to our helper for remake"
+TextLabel_2.Text = "BETA VERSION"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 20
 
@@ -202,7 +203,7 @@ TextLabel_3.BorderSizePixel = 0
 TextLabel_3.Position = UDim2.new(0, 0, 0, 0)
 TextLabel_3.Size = UDim2.new(0, 300, 0, 20)
 TextLabel_3.Font = Enum.Font.SourceSans
-TextLabel_3.Text = "Volt created by aries"
+TextLabel_3.Text = "Welcome to Volt"
 TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextSize = 14
 
@@ -291,10 +292,6 @@ haira()
 end)
 Tab1:Button('Gigachad', function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/OWJBWKQLAISH/GigaChad-Hub/main/Protected_3038811338432694.lua.txt"))()
-game.CoreGui.ShadowLib:Destroy()
-end)
-Tab1:Button('Multi X', function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerScripter/Game-Hub/main/loader"))()
 game.CoreGui.ShadowLib:Destroy()
 end)
 Tab1:Label('Status: Unsupported !')
