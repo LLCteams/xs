@@ -43,7 +43,7 @@ print('Volt cant support another hubs has 990+ script.')
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
 Title = "Welcome",  	
-Text = "..game.Players.LocalPlayer.Name..",
+Text = ":) "..game.Players.LocalPlayer.Name.."",
 	Icon = "rbxassetid://13964592926",
 	Duration = 4
 })
