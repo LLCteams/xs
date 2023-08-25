@@ -39,11 +39,11 @@ SendSystemMessage("Loaded.")
 wait(2)
 
 print('Thank you for using Volt, stay safe! v1.2.6')
-print('Volt cant support another hubs has 900+ script.')
+print('Volt cant support another hubs has 990+ script.')
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
 Title = "Welcome",  	
-Text = "",
+Text = "..game.Players.LocalPlayer.Name..",
 	Icon = "rbxassetid://13964592926",
 	Duration = 4
 })
