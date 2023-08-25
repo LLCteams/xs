@@ -155,7 +155,7 @@ end)
 
 UICorner_4.Parent = CloseButton
 
-wait(99999999999)
+wait(9999999999999)
 
 local function SendSystemMessage(text, color)
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
