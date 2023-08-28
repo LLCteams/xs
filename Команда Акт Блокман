@@ -3,14 +3,15 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/3104f2
 ]]--
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Search failed to load!",  	
+Title = "Searcher failed to running.",  	
 Text = ""..game.Players.LocalPlayer.Name.."",
 	Icon = "rbxassetid://14592768901",
-	Duration = 4
+	Duration = 6
 })
 
-print('Falsed; anticheat dxrblx server')
-wait(2)
+print('Falsed; anticheat byfron server')
+wait(1)
+print('true; server clients-volt')
 
 local Players = game:GetService("Players")
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
@@ -53,7 +54,6 @@ if not game:IsLoaded() then
 end
 screenGui:Destroy()
 
-wait(2)
 
 local function SendSystemMessage(text, color)
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
@@ -77,15 +77,15 @@ end
 SendSystemMessage("     Volt Updated !", Color3.fromRGB(129, 16, 210))
 SendSystemMessage("  ---- ---- ---- ---- ---- ----")
 SendSystemMessage("[+] New script", Color3.fromRGB(0, 255, 0))
-wait(2)
+
 SendSystemMessage("[~] Stability update", Color3.fromRGB(255, 221, 1))
-wait(2)
+
 SendSystemMessage("[×] MSX remove", Color3.fromRGB(255, 0, 0))
-wait(2)
+
 SendSystemMessage("[=] Improved loader", Color3.fromRGB(0, 0, 0))
-wait(2)
+
 SendSystemMessage("[#] Not loaded", Color3.fromRGB(10, 150, 200))
-wait(4)
+
 
 -- Gui to Lua
 -- Version: 3.2
