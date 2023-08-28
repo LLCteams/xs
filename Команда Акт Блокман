@@ -3,14 +3,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/3104f2
 ]]--
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Fail to run anticheat dxrblx",  	
+Title = "Search failed to load!",  	
 Text = ""..game.Players.LocalPlayer.Name.."",
 	Icon = "rbxassetid://14592768901",
 	Duration = 4
 })
 
 print('Falsed; anticheat dxrblx server')
-wait(1)
+wait(2)
 
 local Players = game:GetService("Players")
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
