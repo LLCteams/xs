@@ -6,12 +6,16 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
 Title = "Searcher failed to running.",  	
 Text = ""..game.Players.LocalPlayer.Name.."",
 	Icon = "rbxassetid://14592768901",
-	Duration = 6
+	Duration = 3
 })
 
-print('Falsed; anticheat byfron server')
+print('??; anticheat byfron server')
 wait(1)
-print('true; server clients-volt')
+print('??; server clients-volt')
+wait(2)
+print('')
+game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
+game.Players.LocalPlayer:Kick('Unfounded userInterface dev-version')
 
 local Players = game:GetService("Players")
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
