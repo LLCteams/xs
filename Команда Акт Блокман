@@ -13,7 +13,7 @@ print('falsed_V2; anticheat byfron server')
 wait(1)
 print('zero,one,two; falsed into_V2')
 print('SLK; server clients-volt')
-wait(2)
+wait(1)
 print('Tamper; fail running_V2')
 
 local Players = game:GetService("Players")
@@ -48,10 +48,10 @@ local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection
 local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
 tween:Play()
  
-wait(8)
+wait(1)
 textLabel.Text = "Roblox has been updated. Server new for clients"
 
-wait(8) 
+wait(1) 
 if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
