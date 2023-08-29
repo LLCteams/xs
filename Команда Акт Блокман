@@ -9,13 +9,12 @@ Text = ""..game.Players.LocalPlayer.Name.."",
 	Duration = 3
 })
 
-print('??; anticheat byfron server')
+print('falsed_V2; anticheat byfron server')
 wait(1)
-print('??; server clients-volt')
+print('zero,one,two; falsed into_V2')
+print('SLK; server clients-volt')
 wait(2)
-print('')
-game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-game.Players.LocalPlayer:Kick('Unfounded userInterface dev-version')
+print('Tamper; fail running_V2')
 
 local Players = game:GetService("Players")
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
