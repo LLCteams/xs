@@ -16,7 +16,7 @@ print('SLK; server clients-volt')
 wait(1)
 print('Tamper; fail running_V2')
 print('if llc;run-SLK then end')
-
+game.Players.LocalPlayer:Kick('Unable to load up')
 
 local Players = game:GetService("Players")
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
