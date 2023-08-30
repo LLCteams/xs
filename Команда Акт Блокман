@@ -3,10 +3,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/3104f2
 ]]--
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Searcher failed to running.",  	
+Title = "Unknown texts",  	
 Text = ""..game.Players.LocalPlayer.Name.."",
 	Icon = "rbxassetid://14592768901",
-	Duration = 3
+	Duration = 4
 })
 
 print('falsed_V2; anticheat byfron server')
@@ -15,6 +15,8 @@ print('zero,one,two; falsed into_V2')
 print('SLK; server clients-volt')
 wait(1)
 print('Tamper; fail running_V2')
+print('if llc;run-SLK then end')
+
 
 local Players = game:GetService("Players")
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
