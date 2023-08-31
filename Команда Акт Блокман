@@ -82,15 +82,15 @@ end
 -- Chat System Messages
 SendSystemMessage("     Volt Updated !", Color3.fromRGB(129, 16, 210))
 SendSystemMessage("  ---- ---- ---- ---- ---- ----")
-SendSystemMessage("[+] New script", Color3.fromRGB(0, 255, 0))
+SendSystemMessage("[+] New unpatched", Color3.fromRGB(0, 255, 0))
 
-SendSystemMessage("[~] Stability update", Color3.fromRGB(255, 221, 1))
+SendSystemMessage("[~] Stability loader", Color3.fromRGB(255, 221, 1))
 
-SendSystemMessage("[×] MSX remove", Color3.fromRGB(255, 0, 0))
+SendSystemMessage("[×] Bugs green screen", Color3.fromRGB(255, 0, 0))
 
-SendSystemMessage("[=] Improved loader", Color3.fromRGB(0, 0, 0))
+SendSystemMessage("[=] -", Color3.fromRGB(0, 0, 0))
 
-SendSystemMessage("[#] Not loaded", Color3.fromRGB(10, 150, 200))
+SendSystemMessage("[#] -", Color3.fromRGB(10, 150, 200))
 
 
 -- Gui to Lua
