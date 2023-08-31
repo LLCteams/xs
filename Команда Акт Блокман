@@ -192,11 +192,8 @@ CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function()
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Oops..executor won't support!",  	
-Text = ""..game.Players.LocalPlayer.Name.."",
-	Icon = "rbxassetid://14592768901",
-	Duration = 4
-})
+SendSystemMessage("We're so sorry, cannot execute Volt with unsupported levels. Try again with recommended Exploit!")
+
 wait(999999999999)
 XnewX()
 end)
