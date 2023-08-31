@@ -106,7 +106,7 @@ VHubAndSection.BackgroundTransparency = 1.000
 VHubAndSection.Position = UDim2.new(0.0820000023, 0, 0, 0)
 VHubAndSection.Size = UDim2.new(0, 164, 0, 30)
 VHubAndSection.Font = Enum.Font.GothamBold
-VHubAndSection.Text = "      Volt | V5.0.0"
+VHubAndSection.Text = "   Volt | V5.0.0"
 VHubAndSection.TextColor3 = Color3.fromRGB(255, 255, 255)
 VHubAndSection.TextSize = 14.000
 VHubAndSection.TextXAlignment = Enum.TextXAlignment.Left
@@ -145,7 +145,7 @@ ErrorMessage.BackgroundTransparency = 1.000
 ErrorMessage.Position = UDim2.new(0.291111112, 0, 0.444444448, 0)
 ErrorMessage.Size = UDim2.new(0, 311, 0, 50)
 ErrorMessage.Font = Enum.Font.Gotham
-ErrorMessage.Text = "Enjoy your experience with Volt !\nThank you for your supports."
+ErrorMessage.Text = "Enjoy your experience with Volt !\nThanks for your supports!"
 ErrorMessage.TextColor3 = Color3.fromRGB(255, 255, 255)
 ErrorMessage.TextSize = 15.000
 ErrorMessage.TextWrapped = true
@@ -191,7 +191,13 @@ CloseButton.Text = "Execute"
 CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function()
-game.Players.LocalPlayer:Kick('')
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+Title = "Oops..executor won't support!",  	
+Text = ""..game.Players.LocalPlayer.Name.."",
+	Icon = "rbxassetid://14592768901",
+	Duration = 4
+})
+wait(999999999999)
 XnewX()
 end)
 
