@@ -33,7 +33,7 @@ end
 SendSystemMessage("  ---- ---- ---- ---- ---- ----")
 SendSystemMessage("     Volt Upgraded !", Color3.fromRGB(129, 16, 210))
 SendSystemMessage("  ---- ---- ---- ---- ---- ----")
-SendSystemMessage("[+] New unpatched", Color3.fromRGB(0, 255, 0))
+SendSystemMessage("[+] V1.0.0 are added back", Color3.fromRGB(0, 255, 0))
 
 SendSystemMessage("[~] Stability loader", Color3.fromRGB(255, 221, 1))
 
@@ -173,10 +173,13 @@ CopyDiscordLinkButton.BackgroundColor3 = Color3.fromRGB(26, 27, 29)
 CopyDiscordLinkButton.Position = UDim2.new(0.600000024, 0, 0.759259224, 0)
 CopyDiscordLinkButton.Size = UDim2.new(0, 150, 0, 30)
 CopyDiscordLinkButton.Font = Enum.Font.Gotham
-CopyDiscordLinkButton.Text = "Close"
+CopyDiscordLinkButton.Text = "V5"
 CopyDiscordLinkButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CopyDiscordLinkButton.TextSize = 12.000
 CopyDiscordLinkButton.MouseButton1Down:connect(function()
+game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
+wait(2)
+print("We're so sorry, cannot execute Volt with unsupported levels. Try again with recommended Exploit! "..game.Players.LocalPlayer.Name.."")
 ScreenGui:Destroy()
 end)
 
@@ -188,14 +191,12 @@ CloseButton.BackgroundColor3 = Color3.fromRGB(26, 27, 29)
 CloseButton.Position = UDim2.new(0.0800000429, 0, 0.759259224, 0)
 CloseButton.Size = UDim2.new(0, 150, 0, 30)
 CloseButton.Font = Enum.Font.Gotham
-CloseButton.Text = "Execute"
+CloseButton.Text = "V1"
 CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function() 
-game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-wait(2)
-print("We're so sorry, cannot execute Volt with unsupported levels. Try again with recommended Exploit! "..game.Players.LocalPlayer.Name.."")
-wait(999999999999)
+wait()
+print("V1.0.0 Executed!")
 XnewX()
 end)
 
