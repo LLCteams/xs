@@ -9,6 +9,7 @@ Text = "Your script is ready!",
 	Duration = 4
 })
 
+print('UnMessage then fix')
 
 local function SendSystemMessage(text, color)
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
