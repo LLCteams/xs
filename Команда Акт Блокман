@@ -30,7 +30,7 @@ end
 
 -- Chat System Messages
 SendSystemMessage("  ---- ---- ---- ---- ---- ----")
-SendSystemMessage("     Volt Updated !", Color3.fromRGB(129, 16, 210))
+SendSystemMessage("     Volt Upgraded !", Color3.fromRGB(129, 16, 210))
 SendSystemMessage("  ---- ---- ---- ---- ---- ----")
 SendSystemMessage("[+] New unpatched", Color3.fromRGB(0, 255, 0))
 
@@ -40,7 +40,7 @@ SendSystemMessage("[×] Bugs green screen", Color3.fromRGB(255, 0, 0))
 
 SendSystemMessage("[=] Fix unsupport executor", Color3.fromRGB(0, 0, 0))
 
-SendSystemMessage("[#] -", Color3.fromRGB(10, 150, 200))
+SendSystemMessage("[#] V5 should be worked now", Color3.fromRGB(10, 150, 200))
 
 
 -- Gui to Lua
@@ -106,7 +106,7 @@ VHubAndSection.BackgroundTransparency = 1.000
 VHubAndSection.Position = UDim2.new(0.0820000023, 0, 0, 0)
 VHubAndSection.Size = UDim2.new(0, 164, 0, 30)
 VHubAndSection.Font = Enum.Font.GothamBold
-VHubAndSection.Text = "         Volt | V1.0.0"
+VHubAndSection.Text = "      Volt | V5.0.0"
 VHubAndSection.TextColor3 = Color3.fromRGB(255, 255, 255)
 VHubAndSection.TextSize = 14.000
 VHubAndSection.TextXAlignment = Enum.TextXAlignment.Left
