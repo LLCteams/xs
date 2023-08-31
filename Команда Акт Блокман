@@ -3,20 +3,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/3104f2
 ]]--
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Unknown texts",  	
-Text = ""..game.Players.LocalPlayer.Name.."",
+Title = ""..game.Players.LocalPlayer.Name.."",  	
+Text = "Your script is ready!",
 	Icon = "rbxassetid://14592768901",
 	Duration = 4
 })
-
-print('falsed_V2; anticheat byfron server')
-wait(1)
-print('zero,one,two; falsed into_V2')
-print('SLK; server clients-volt')
-wait(1)
-print('Tamper; fail running_V2')
-print('if llc;run-SLK then false')
-game.Players.LocalPlayer:Kick('Cannot support this executor.')
 
 
 local function SendSystemMessage(text, color)
@@ -38,6 +29,7 @@ local function SendNotification(title, text, icon, duration)
 end
 
 -- Chat System Messages
+SendSystemMessage("  ---- ---- ---- ---- ---- ----")
 SendSystemMessage("     Volt Updated !", Color3.fromRGB(129, 16, 210))
 SendSystemMessage("  ---- ---- ---- ---- ---- ----")
 SendSystemMessage("[+] New unpatched", Color3.fromRGB(0, 255, 0))
@@ -46,7 +38,7 @@ SendSystemMessage("[~] Stability loader", Color3.fromRGB(255, 221, 1))
 
 SendSystemMessage("[×] Bugs green screen", Color3.fromRGB(255, 0, 0))
 
-SendSystemMessage("[=] -", Color3.fromRGB(0, 0, 0))
+SendSystemMessage("[=] Fix unsupport executor", Color3.fromRGB(0, 0, 0))
 
 SendSystemMessage("[#] -", Color3.fromRGB(10, 150, 200))
 
@@ -141,7 +133,7 @@ VersionOutdatedText.BackgroundTransparency = 1.000
 VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
 VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
 VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = " Welcome, "..game.Players.LocalPlayer.Name..""
+VersionOutdatedText.Text = " Welcome, "..game.Players.LocalPlayer.Name.." to Volt."
 VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 255, 255)
 VersionOutdatedText.TextSize = 15.000
 VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
@@ -199,6 +191,7 @@ CloseButton.Text = "Execute"
 CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function()
+game.Players.LocalPlayer:Kick('')
 XnewX()
 end)
 
