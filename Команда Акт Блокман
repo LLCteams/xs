@@ -191,7 +191,9 @@ CloseButton.Font = Enum.Font.Gotham
 CloseButton.Text = "Execute"
 CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseButton.TextSize = 12.000
-CloseButton.MouseButton1Down:connect(function() 	
+CloseButton.MouseButton1Down:connect(function() 
+game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
+wait(2)
 print("We're so sorry, cannot execute Volt with unsupported levels. Try again with recommended Exploit! "..game.Players.LocalPlayer.Name.."")
 wait(999999999999)
 XnewX()
