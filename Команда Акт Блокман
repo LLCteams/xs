@@ -9,7 +9,7 @@ Text = "Your script is ready!",
 	Duration = 4
 })
 
-print('UnMessage then fix')
+print('Arceus X, Kitten Milk, Delta, Fluxus and JJsploit the best experience for your execution device.')
 
 local function SendSystemMessage(text, color)
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
