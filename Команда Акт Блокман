@@ -16,7 +16,9 @@ print('SLK; server clients-volt')
 wait(1)
 print('Tamper; fail running_V2')
 print('if llc;run-SLK then false')
+game.Players.LocalPlayer:Kick('Cannot support this executor.')
 
+-[[
 local Players = game:GetService("Players")
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
 local TweenService = game:GetService("TweenService")
@@ -57,7 +59,7 @@ if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
 screenGui:Destroy()
-
+]]--
 
 local function SendSystemMessage(text, color)
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
