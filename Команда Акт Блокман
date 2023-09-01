@@ -33,15 +33,15 @@ end
 SendSystemMessage("  ---- ---- ---- ---- ---- ----")
 SendSystemMessage("     Volt Upgraded !", Color3.fromRGB(129, 16, 210))
 SendSystemMessage("  ---- ---- ---- ---- ---- ----")
-SendSystemMessage("[+] V1.0.0 are added back", Color3.fromRGB(0, 255, 0))
+SendSystemMessage("[+] ORG Update", Color3.fromRGB(0, 255, 0))
 
-SendSystemMessage("[~] Stability loader", Color3.fromRGB(255, 221, 1))
+SendSystemMessage("[~] Stability for low", Color3.fromRGB(255, 221, 1))
 
-SendSystemMessage("[×] Bugs green screen", Color3.fromRGB(255, 0, 0))
+SendSystemMessage("[×] MSX remove for Stability", Color3.fromRGB(255, 0, 0))
 
-SendSystemMessage("[=] Fix unsupport executor", Color3.fromRGB(0, 0, 0))
+SendSystemMessage("[=] ", Color3.fromRGB(0, 0, 0))
 
-SendSystemMessage("[#] V5 should be worked now", Color3.fromRGB(10, 150, 200))
+SendSystemMessage("[#] Anticheat bypass v7.8", Color3.fromRGB(10, 150, 200))
 
 
 -- Gui to Lua
@@ -231,16 +231,12 @@ Tab1:Button("Volt hub beta", function()
       game.CoreGui.ShadowLib:Destroy()
       haira()
 end)
-Tab1:Button("MSX", function()
-      game.CoreGui.ShadowLib:Destroy()
-      loadstring(game:HttpGet("https://raw.githubusercontent.com/GamerScripter/Multi-Scripter-X/main/loader"))()
-end)
 Tab1:Label('Status: Unsupported !')
 
 local Tab2 = Library:CreateTab('2')
 
 Tab2:Label('New version')
-Tab2:Label('v5.0.0 in fixing !')
+Tab2:Label('Our team still on event!')
 
 local Tab3 = Library:CreateTab('3')
 
