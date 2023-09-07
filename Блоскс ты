@@ -3,7 +3,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/3104f2
 ]]--
 
 print('Error while show message from require(commands)-(volt).\n\n\n[LAST UPDATED: 2023/08/10]\n[Volt userTeam: 23]\n[Volt news: Bypasser]\n[Developer Mode: Actived]')
-print('\nUpdate are never got leak.')
+print('Owner just make a new rule for Volt!\nUpdate are never got leak.')
 
 --[[
 local function SendSystemMessage(text, color)
@@ -188,7 +188,6 @@ CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function() 
 XnewX()
 ScreenGui:Destroy()
-game.Players.LocalPlayer:Kick("Your best script are failed to run.")
 end)
 
 function theCopy()
