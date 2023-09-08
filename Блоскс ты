@@ -2,7 +2,7 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/3104f25e0b011fb971f00b541e34ac6c7136db04/%D0%9B%D0%BE%D0%BA%D0%BA%D0%B8%D0%BC%D0%BE%D0%B4%D1%8B"))()
 ]]--
 
-print('Volt are have permission to show message from require(commands)-(volt).\n\n\n[LAST UPDATED: 2023/08/10]\n[Volt userTeam: 23]\n[Volt news: Bypasser]\n[Developer Mode: Actived]\n[Perm-Owner: Actived]')
+print('Volt are have permission to show message from require(commands)-(volt).\n\n\n[LAST UPDATED: 2023/09/08]\n[Volt userTeam: 23]\n[Volt news: Hub]\n[Developer Mode: Actived]\n[Perm-Owner: Actived]')
 
 --[[
 local function SendSystemMessage(text, color)
@@ -164,12 +164,13 @@ CopyDiscordLinkButton.BackgroundColor3 = Color3.fromRGB(26, 27, 29)
 CopyDiscordLinkButton.Position = UDim2.new(0.600000024, 0, 0.759259224, 0)
 CopyDiscordLinkButton.Size = UDim2.new(0, 150, 0, 30)
 CopyDiscordLinkButton.Font = Enum.Font.Gotham
-CopyDiscordLinkButton.Text = "V5"
+CopyDiscordLinkButton.Text = "V2"
 CopyDiscordLinkButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CopyDiscordLinkButton.TextSize = 12.000
 CopyDiscordLinkButton.MouseButton1Down:connect(function()
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-print('[</>] Auto-execute are failed.')
+print('[</>] Auto-executed.')
+XMON()
 ScreenGui:Destroy()
 end)
 
@@ -455,6 +456,31 @@ end)
 Tab4:Button('Shader', function()
 isX()
 end)
+
+function XMON()
+
+local DarkLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%A2%D1%8B%20%D0%BC%D0%B8%D0%BB%D1%8B%D0%B9%2C%20%D0%BD%D0%BE%20%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D1%83%D0%B5%D1%88%D1%8C"))()
+local WindowOne = DarkLib:Window() -- Makes Window
+
+local TabOne = WindowOne:Tab("Test") -- Makes Tab
+local TabTwo = WindowOne:Tab("Config") -- Makes Tab
+local TabThree = WindowOne:Tab("AutoFarm") -- Makes Tab
+local TabFour = WindowOne:Tab("Misc") -- Makes Tab
+local TabFive = WindowOne:Tab("Trolling") -- Makes Tab
+local TabSix = WindowOne:Tab("Theme") -- Makes Tab
+local TabSeven = WindowOne:Tab("Discord") -- Makes Tab
+local TabEight = WindowOne:Tab("Credits") -- Makes Tab
+
+
+
+
+TabOne:Label("Welcome to Niceso!")
+
+TabOne:Button("Button", function() -- Makes Button
+    print('Cannot execute for test.\n[Unavailable for now.')
+    end)
+    
+end
 
 function isX()
 
