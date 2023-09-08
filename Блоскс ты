@@ -186,7 +186,7 @@ CloseButton.Text = "V1"
 CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function() 
-XnewX()
+
 ScreenGui:Destroy()
 end)
 
