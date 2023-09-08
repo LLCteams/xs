@@ -414,6 +414,11 @@ Tab2:Label('Our team still on event!')
 
 local Tab3 = Library:CreateTab('C')
 
+Tab3:Button('Tp Zombie Uprising', function()
+    local PlaceId = 4972091010 -- gameID
+
+    game:GetService("TeleportService"):Teleport(PlaceId, game:GetService("Players").LocalPlayer)
+end)
 Tab3:Label('Game Script')
 Tab3:Button('Breaking Point', function()
       dupebp()
@@ -431,8 +436,7 @@ Tab3:Label('Status: Unsupported !')
 
 local Tab4 = Library:CreateTab('D')
 
-Tab4:Label('Executor')
-Tab4:Button('Executor', function()
+Tab4:Button('VExecutor', function()
       AXIS()
       game.CoreGui.ShadowLib:Destroy()
 end)
@@ -456,6 +460,23 @@ Tab4:Button('Naked', function()
 
     game.Players.LocalPlayer.Character.Shirt:Remove()
     game.Players.LocalPlayer.Character.Pants:Remove()
+end)
+Tab4:Button('Rainbow', function()
+    for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if v:IsA("MeshPart") then
+        v.Material = "ForceField"
+        spawn(function()
+            while wait() do
+                for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                    if v:IsA("MeshPart") then
+                        v.Color = Color3.fromHSV(tick()%5/5,1,1)
+                        wait()
+                    end
+                end 
+            end
+        end)
+    end
+end
 end)
 Tab4:Button('Shader', function()
 isX()
@@ -531,34 +552,8 @@ Tab4:Label('Status: Unsupported !')
 local Tab5 = Library:CreateTab('E')
 
 Tab5:Label('Setting')
-Tab5:Button('Teleport Zombie Uprising', function()
-    local PlaceId = 4972091010 -- gameID
-
-    game:GetService("TeleportService"):Teleport(PlaceId, game:GetService("Players").LocalPlayer)
-end)
-Tab5:Button('Rainbow', function()
-    for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-    if v:IsA("MeshPart") then
-        v.Material = "ForceField"
-        spawn(function()
-            while wait() do
-                for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-                    if v:IsA("MeshPart") then
-                        v.Color = Color3.fromHSV(tick()%5/5,1,1)
-                        wait()
-                    end
-                end 
-            end
-        end)
-    end
-end
-end)
-Tab5:Button('Save Volt', function()
-KeepVoltOn = true
-		if KeepVoltOn and syn.queue_on_teleport then
-			syn.queue_on_teleport('loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/3104f25e0b011fb971f00b541e34ac6c7136db04/%D0%9B%D0%BE%D0%BA%D0%BA%D0%B8%D0%BC%D0%BE%D0%B4%D1%8B"))()')
-		end
-		updatesaves()
+Tab5:Button('Check', function()
+game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
 end)
 Tab5:Button('Rejoin', function()
 game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
@@ -862,6 +857,7 @@ animateIn()
 
 function XnewX()
 
+--[[
 getgenv().d = "Made by Scar"
 local d = getgenv().d
 
@@ -943,6 +939,8 @@ print('')
 print('')
 print('')
 
+]]--
+
 local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/Arceus-X-UI-Library/main/source.lua"))()
 lib:SetTitle("Arceus X | Hacks")
 lib:SetIcon("rbxassetid://13964592926")
@@ -976,7 +974,7 @@ lib:AddButton("God", function()
                 game.Players.LocalPlayer.Character.BodyEffects.BreakingParts:Destroy()
 end)
 
-lib:AddToggle("Sit-UnSit", function(state)
+lib:AddToggle("Sit", function(state)
       if state then
         -- sitTrue
          game.Players.LocalPlayer.Character.Humanoid.Sit = true
