@@ -2,8 +2,7 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/3104f25e0b011fb971f00b541e34ac6c7136db04/%D0%9B%D0%BE%D0%BA%D0%BA%D0%B8%D0%BC%D0%BE%D0%B4%D1%8B"))()
 ]]--
 
-print('Error while show message from require(commands)-(volt).\n\n\n[LAST UPDATED: 2023/08/10]\n[Volt userTeam: 23]\n[Volt news: Bypasser]\n[Developer Mode: Actived]')
-print('Owner just make a new rule for Volt!\nUpdate are never got leak.')
+print('Volt are have permission to show message from require(commands)-(volt).\n\n\n[LAST UPDATED: 2023/08/10]\n[Volt userTeam: 23]\n[Volt news: Bypasser]\n[Developer Mode: Actived]\n[Perm-Owner: Actived]')
 
 --[[
 local function SendSystemMessage(text, color)
@@ -186,7 +185,7 @@ CloseButton.Text = "V1"
 CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function() 
-
+XnewX()
 ScreenGui:Destroy()
 end)
 
