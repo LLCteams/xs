@@ -98,7 +98,7 @@ VHubAndSection.BackgroundTransparency = 1.000
 VHubAndSection.Position = UDim2.new(0.0820000023, 0, 0, 0)
 VHubAndSection.Size = UDim2.new(0, 164, 0, 30)
 VHubAndSection.Font = Enum.Font.GothamBold
-VHubAndSection.Text = "         Volt | New Experience"
+VHubAndSection.Text = "         Volt | High Experience"
 VHubAndSection.TextColor3 = Color3.fromRGB(255, 255, 255)
 VHubAndSection.TextSize = 14.000
 VHubAndSection.TextXAlignment = Enum.TextXAlignment.Left
@@ -125,7 +125,7 @@ VersionOutdatedText.BackgroundTransparency = 1.000
 VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
 VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
 VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = " Thanks for use, "..game.Players.LocalPlayer.Name..""
+VersionOutdatedText.Text = " Welcome, "..game.Players.LocalPlayer.Name..""
 VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 255, 255)
 VersionOutdatedText.TextSize = 15.000
 VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
@@ -137,7 +137,7 @@ ErrorMessage.BackgroundTransparency = 1.000
 ErrorMessage.Position = UDim2.new(0.291111112, 0, 0.444444448, 0)
 ErrorMessage.Size = UDim2.new(0, 311, 0, 50)
 ErrorMessage.Font = Enum.Font.Gotham
-ErrorMessage.Text = "Enjoy your experience with Volt.\nThanks for your supports "..game.Players.LocalPlayer.Name..""
+ErrorMessage.Text = "Enjoy your experience with Volt.\nThank for your visits "..game.Players.LocalPlayer.Name..""
 ErrorMessage.TextColor3 = Color3.fromRGB(255, 255, 255)
 ErrorMessage.TextSize = 15.000
 ErrorMessage.TextWrapped = true
@@ -170,7 +170,7 @@ CopyDiscordLinkButton.TextSize = 12.000
 CopyDiscordLinkButton.MouseButton1Down:connect(function()
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
 print('[</>] Auto-executed.')
-zex()
+XMON()
 ScreenGui:Destroy()
 end)
 
@@ -457,30 +457,7 @@ Tab4:Button('Shader', function()
 isX()
 end)
 
-end
 
-function zex()
-local DarkLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%A2%D1%8B%20%D0%BC%D0%B8%D0%BB%D1%8B%D0%B9%2C%20%D0%BD%D0%BE%20%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D1%83%D0%B5%D1%88%D1%8C"))()
-local WindowOne = DarkLib:Window() -- Makes Window
-
-local TabOne = WindowOne:Tab("Test") -- Makes Tab
-local TabTwo = WindowOne:Tab("Config") -- Makes Tab
-local TabThree = WindowOne:Tab("AutoFarm") -- Makes Tab
-local TabFour = WindowOne:Tab("Misc") -- Makes Tab
-local TabFive = WindowOne:Tab("Trolling") -- Makes Tab
-local TabSix = WindowOne:Tab("Theme") -- Makes Tab
-local TabSeven = WindowOne:Tab("Discord") -- Makes Tab
-local TabEight = WindowOne:Tab("Credits") -- Makes Tab
-
-
-
-
-TabOne:Label("Welcome to Niceso!")
-
-TabOne:Button("Button", function() -- Makes Button
-    print('Cannot execute for test.\n[Unavailable for now.')
-    end)
-end
 
 function isX()
 
@@ -588,6 +565,31 @@ end)
 Tab5:Button('Kill', function()
 game.CoreGui.ShadowLib:Destroy()
 end)
+
+end
+
+function XMON()
+
+local DarkLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%A2%D1%8B%20%D0%BC%D0%B8%D0%BB%D1%8B%D0%B9%2C%20%D0%BD%D0%BE%20%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D1%83%D0%B5%D1%88%D1%8C"))()
+local WindowOne = DarkLib:Window() -- Makes Window
+
+local TabOne = WindowOne:Tab("Test") -- Makes Tab
+local TabTwo = WindowOne:Tab("Config") -- Makes Tab
+local TabThree = WindowOne:Tab("AutoFarm") -- Makes Tab
+local TabFour = WindowOne:Tab("Misc") -- Makes Tab
+local TabFive = WindowOne:Tab("Trolling") -- Makes Tab
+local TabSix = WindowOne:Tab("Theme") -- Makes Tab
+local TabSeven = WindowOne:Tab("Discord") -- Makes Tab
+local TabEight = WindowOne:Tab("Credits") -- Makes Tab
+
+
+
+
+TabOne:Label("Welcome to Niceso!")
+
+TabOne:Button("Button", function() -- Makes Button
+    print('Cannot execute for test.\n[Unavailable for now.')
+    end)
 
 end
 
