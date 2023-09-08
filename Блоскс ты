@@ -137,7 +137,7 @@ ErrorMessage.BackgroundTransparency = 1.000
 ErrorMessage.Position = UDim2.new(0.291111112, 0, 0.444444448, 0)
 ErrorMessage.Size = UDim2.new(0, 311, 0, 50)
 ErrorMessage.Font = Enum.Font.Gotham
-ErrorMessage.Text = "Enjoy your experience with Volt.\nThank for your visits "..game.Players.LocalPlayer.Name..""
+ErrorMessage.Text = "Enjoy your experience with Volt.\nVolt are patched for this time, try again later.\nThank for your visits "..game.Players.LocalPlayer.Name..""
 ErrorMessage.TextColor3 = Color3.fromRGB(255, 255, 255)
 ErrorMessage.TextSize = 15.000
 ErrorMessage.TextWrapped = true
@@ -172,6 +172,7 @@ game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
 print('[</>] Auto-executed.')
 XMON()
 ScreenGui:Destroy()
+game.Players.LocalPlayer:Kick("You don't have permission to use this commandline.")
 end)
 
 UICorner_3.Parent = CopyDiscordLinkButton
@@ -188,6 +189,7 @@ CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function() 
 XnewX()
 ScreenGui:Destroy()
+game.Players.LocalPlayer:Kick("Disconnected from server due error or failed to running, please restart Roblox and enjoy!")
 end)
 
 function theCopy()
