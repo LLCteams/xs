@@ -1,6 +1,7 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/main/UniversalSkeleton.lua"))()
 
 
+-- By LLc
 local Skeletons = {}
 for _, Player in next, game.Players:GetChildren() do
 	table.insert(Skeletons, Library:NewSkeleton(Player, true));
