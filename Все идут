@@ -165,7 +165,7 @@ CopyDiscordLinkButton.TextSize = 12.000
 CopyDiscordLinkButton.MouseButton1Down:connect(function()
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
 print('[</>] Executed!')
-XMON()
+XnewX()
 ScreenGui:Destroy()
 end)
 
