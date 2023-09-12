@@ -1,6 +1,7 @@
 print('Volt is have new permission to show message from require(consolecmd)-(volt).\n\n\n[LAST UPDATED: 2023/11/08]\n\n[Volt userTeam: 23]\n\n[UPD: In]\n[Vers: 1.8.9]\n[Dev Mode: Active]\n[Perm Owner: Active]')
 print('\nNew feature on Volt loader, new hub, bypass system anticheat and many more!\nThanks to our team for fixing and adding these feature!')
 
+--[[
 local function SendSystemMessage(text, color)
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
         Text = text,
@@ -29,6 +30,7 @@ SendSystemMessage("[×] System bypass v6.0 remove.", Color3.fromRGB(255, 0, 0))
 SendSystemMessage("[=] Update more faster and stable.", Color3.fromRGB(0, 0, 0))
 SendSystemMessage("[#] Anticheat bypass for mobile.", Color3.fromRGB(10, 150, 200))
 SendSystemMessage(" >>> [ type /console to show every hidden update ] <<< ")
+]]--
 
 -- Gui to Lua
 -- Version: 3.2
