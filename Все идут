@@ -1,8 +1,10 @@
 print('Volt is have new permission to show message from require(consolecmd)-(volt).\n\n\n[LAST UPDATED: 2023/11/08]\n\n[Volt userTeam: 23]\n\n[UPD: In]\n[Vers: 1.8.9]\n[Dev Mode: Active]\n[Perm Owner: Active]')
 print('\nNew feature on Volt loader, new hub, bypass system anticheat and many more!\nThanks to our team for fixing and adding these feature!')
 game.Players.LocalPlayer:Kick("You are detected for using cheat on Client!")
+wait(4)
+game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
 
-wait(5)
+wait(999999999)
 --[[
 local function SendSystemMessage(text, color)
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
