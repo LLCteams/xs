@@ -112,7 +112,7 @@ VHubImage_2.Parent = MainFrame
 VHubImage_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 VHubImage_2.BackgroundTransparency = 1.000
 VHubImage_2.Position = UDim2.new(0.0288888887, 10, 0.150000006, 0)
-VHubImage_2.Size = UDim2.new(0, 60, 0, 60)
+VHubImage_2.Size = UDim2.new(0, 62, 0, 62)
 VHubImage_2.Image = "rbxassetid://14763564468"
 
 VersionOutdatedText.Name = "VersionOutdatedText"
@@ -134,7 +134,7 @@ ErrorMessage.BackgroundTransparency = 1.000
 ErrorMessage.Position = UDim2.new(0.291111112, 0, 0.444444448, 0)
 ErrorMessage.Size = UDim2.new(0, 311, 0, 50)
 ErrorMessage.Font = Enum.Font.Gotham
-ErrorMessage.Text = "Enjoy your experience with Volt.\nCreated by Volt team\nThank for your visits "..game.Players.LocalPlayer.Name..""
+ErrorMessage.Text = "Enjoy your experience with Volt.\nCreated with some secret uis\nThank for your visits "..game.Players.LocalPlayer.Name..""
 ErrorMessage.TextColor3 = Color3.fromRGB(255, 255, 255)
 ErrorMessage.TextSize = 15.000
 ErrorMessage.TextWrapped = true
@@ -370,8 +370,12 @@ end)
 Tab5:Button('Rejoin', function()
 game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
 end)
+Tab5:Button('Antikick', function()
+XXXL()
+end)
 Tab5:Button('FPS', function()
 print('FPS Changed for "..game.Players.LocalPlayer.Name.."\n{FPS: 20sm}\n{PING: 1ms}')
+LXXX()
 end)
 Tab5:Button('Exit', function()
 game:Shutdown()
@@ -410,6 +414,113 @@ end)
 Tab6:Button('Body 3', function()
 ESPXX()
 end)
+
+end
+
+function LXXX()
+
+getgenv().boostFPS = true 
+
+repeat task.wait() until game:IsLoaded();
+
+local vim = game:GetService("VirtualInputManager")
+local CoreGui = game:GetService("CoreGui")
+
+
+setfpscap(5000)
+
+CoreGui.DescendantAdded:Connect(function(d)
+   if d.Name == "MainView" and d.Parent.Name == "DevConsoleUI" and boostFPS then
+       task.wait()
+       local screen = d.Parent.Parent.Parent
+       screen.Enabled = false;
+   end
+end)
+
+vim:SendKeyEvent(true, "F9", 0, game)    
+wait()
+vim:SendKeyEvent(false, "F9", 0, game)  
+
+setfpscap(5000)
+
+task.spawn(function()
+	while true do task.wait()
+
+        if not getgenv().boostFPS then
+            local panel = CoreGui:FindFirstChild("DevConsoleMaster", true);
+
+            if panel then
+                panel.Enabled = true;
+                vim:SendKeyEvent(true, "F9", 0, game)    
+                vim:SendKeyEvent(false, "F9", 0, game)  
+                repeat task.wait() until boostFPS
+            end
+
+            continue;
+        end
+
+
+		warn("")
+
+		if not CoreGui:FindFirstChild("DevConsoleUI", true):FindFirstChild("MainView") then
+			vim:SendKeyEvent(true, "F9", 0, game)    
+			wait()
+			vim:SendKeyEvent(false, "F9", 0, game)  
+			continue
+		end
+	end
+end)
+
+end
+
+function XXXL()
+
+--// Cache
+
+local getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller, stringlower = getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller, string.lower
+
+--// Loaded check
+
+if getgenv().ED_AntiKick then return end
+
+--// Variables
+
+local Players, StarterGui, OldNamecall = game:GetService("Players"), game:GetService("StarterGui")
+
+--// Global Variables
+
+getgenv().ED_AntiKick = {
+	SendNotifications = true, -- Set to true if you want to get notified for every event
+	CheckCaller = false -- Set to true if you want to disable kicking by other executed scripts
+}
+
+--// Main
+
+OldNamecall = hookmetamethod(game, "__namecall", newcclosure(function(...)
+	if (getgenv().ED_AntiKick.CheckCaller and not checkcaller() or true) and stringlower(getnamecallmethod()) == "kick" then
+		if getgenv().ED_AntiKick.SendNotifications then
+			StarterGui:SetCore("SendNotification", {
+				Title = "Volt Script",
+				Text = "The script has successfully intercepted an attempted kick.",
+				Icon = "",
+				Duration = 5,
+			})
+		end
+
+		return nil
+	end
+
+	return OldNamecall(...)
+end))
+
+if getgenv().ED_AntiKick.SendNotifications then
+	StarterGui:SetCore("SendNotification", {
+		Title = "Volt Script",
+		Text = "Antikick executed!",
+		Icon = "",
+		Duration = 3,
+	})
+end
 
 end
 
