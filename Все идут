@@ -1,10 +1,7 @@
 print('Volt is have new permission to show message from require(consolecmd)-(volt).\n\n\n[LAST UPDATED: 2023/11/08]\n\n[Volt userTeam: 23]\n\n[UPD: In]\n[Vers: 1.8.9]\n[Dev Mode: Active]\n[Perm Owner: Active]')
-print('\nNew feature on Volt loader, new hub, bypass system anticheat and many more!\nThanks to our team for fixing and adding these feature!')
-game.Players.LocalPlayer:Kick("You are detected for using cheat on Client!")
-wait(4)
-game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
+print('\nNew feature on Volt loader, new hub, bypass system anticheat and many more with better feature from our teams!\nThanks to our team for fixing and adding these feature!')
 
-wait(999999999)
+wait(2)
 --[[
 local function SendSystemMessage(text, color)
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
@@ -89,7 +86,7 @@ VHubImage.Parent = InfoBar
 VHubImage.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
 VHubImage.BackgroundTransparency = 1.000
 VHubImage.Position = UDim2.new(0.00999999978, 0, 0, 0)
-VHubImage.Size = UDim2.new(0, 20, 0, 20)
+VHubImage.Size = UDim2.new(0, 0, 0, 0)
 VHubImage.Image = "rbxassetid://4597457883"
 
 VHubAndSection.Name = "VHubAndSection"
@@ -116,7 +113,7 @@ VHubImage_2.Parent = MainFrame
 VHubImage_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 VHubImage_2.BackgroundTransparency = 1.000
 VHubImage_2.Position = UDim2.new(0.0288888887, 10, 0.150000006, 0)
-VHubImage_2.Size = UDim2.new(0, 62, 0, 62)
+VHubImage_2.Size = UDim2.new(0, 65, 0, 65)
 VHubImage_2.Image = "rbxassetid://14763564468"
 
 VersionOutdatedText.Name = "VersionOutdatedText"
@@ -126,7 +123,7 @@ VersionOutdatedText.BackgroundTransparency = 1.000
 VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
 VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
 VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = " Welcome, "..game.Players.LocalPlayer.Name..""
+VersionOutdatedText.Text = " We are having issue for this time!"
 VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 255, 255)
 VersionOutdatedText.TextSize = 15.000
 VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
@@ -138,7 +135,7 @@ ErrorMessage.BackgroundTransparency = 1.000
 ErrorMessage.Position = UDim2.new(0.291111112, 0, 0.444444448, 0)
 ErrorMessage.Size = UDim2.new(0, 311, 0, 50)
 ErrorMessage.Font = Enum.Font.Gotham
-ErrorMessage.Text = "Enjoy your experience with Volt.\nstay safe cutie;)\nThank for your visits "..game.Players.LocalPlayer.Name..""
+ErrorMessage.Text = "Enjoy your experience with Volt.\nFixed by xirius_2\nThank for your visits "..game.Players.LocalPlayer.Name..""
 ErrorMessage.TextColor3 = Color3.fromRGB(255, 255, 255)
 ErrorMessage.TextSize = 15.000
 ErrorMessage.TextWrapped = true
