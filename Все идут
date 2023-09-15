@@ -162,7 +162,7 @@ CopyDiscordLinkButton.BackgroundColor3 = Color3.fromRGB(26, 27, 29)
 CopyDiscordLinkButton.Position = UDim2.new(0.600000024, 0, 0.759259224, 0)
 CopyDiscordLinkButton.Size = UDim2.new(0, 150, 0, 30)
 CopyDiscordLinkButton.Font = Enum.Font.Gotham
-CopyDiscordLinkButton.Text = "V2"
+CopyDiscordLinkButton.Text = "NEW UI"
 CopyDiscordLinkButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CopyDiscordLinkButton.TextSize = 12.000
 CopyDiscordLinkButton.MouseButton1Down:connect(function()
@@ -180,7 +180,7 @@ CloseButton.BackgroundColor3 = Color3.fromRGB(26, 27, 29)
 CloseButton.Position = UDim2.new(0.0800000429, 0, 0.759259224, 0)
 CloseButton.Size = UDim2.new(0, 150, 0, 30)
 CloseButton.Font = Enum.Font.Gotham
-CloseButton.Text = ""
+CloseButton.Text = "EASY UI"
 CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function() 
