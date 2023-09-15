@@ -1,9 +1,5 @@
-game.Players.LocalPlayer:Kick('You dont have permission to running script on Clients!')
-wait(4)
-game:Shutdown()
 
-wait(9999999999)
-print('Volt is have new permission to show message from require(consolecmd)-(volt).\n\n\n[LAST UPDATED: 2023/11/08]\n\n[Volt userTeam: 23]\n\n[UPD: In]\n[Vers: 1.8.9]\n[Dev Mode: Active]\n[Perm Owner: Active]')
+print('Volt is have new permission to show message from require(consolecmd)-(volt).\n\n\n[LAST UPDATED: 2023/15/08]\n\n[Volt userTeam: 23]\n\n[UPD: In]\n[Vers: 1.8.9]\n[Dev Mode: Active]\n[Perm Owner: Active]')
 print('\nNew feature on Volt loader, new hub, bypass system anticheat and many more with better feature from our teams!\nThanks to our team for fixing and adding these feature!')
 
 wait(2)
@@ -140,7 +136,7 @@ ErrorMessage.BackgroundTransparency = 1.000
 ErrorMessage.Position = UDim2.new(0.291111112, 0, 0.444444448, 0)
 ErrorMessage.Size = UDim2.new(0, 311, 0, 50)
 ErrorMessage.Font = Enum.Font.Gotham
-ErrorMessage.Text = "Enjoy your experience with Volt.\nV1.8.9\nThank for your visits "..game.Players.LocalPlayer.Name..""
+ErrorMessage.Text = "Enjoy your experience with Volt.\nWe are here for you!\nThank for your visits "..game.Players.LocalPlayer.Name..""
 ErrorMessage.TextColor3 = Color3.fromRGB(255, 255, 255)
 ErrorMessage.TextSize = 15.000
 ErrorMessage.TextWrapped = true
