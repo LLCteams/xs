@@ -1,8 +1,14 @@
-
+game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
+wait(1)
 print('Volt is have new permission to show message from require(consolecmd)-(volt).\n\n\n[LAST UPDATED: 2023/15/08]\n\n[Volt userTeam: 23]\n\n[UPD: Robo]\n[Vers: 1.8.9]\n[Dev Mode: Active]\n[Perm Owner: Active]')
-print('\nNew feature on Volt loader, new hub, bypass system anticheat and many more with better feature from our teams!\nThanks to our team for fixing and adding these feature!')
-
+print('Undetectable for free!\nNew feature on Volt loader, new hub, bypass system anticheat and many more with better feature from our teams!\nThanks to our team for fixing and adding these feature!')
+wait(1)
+print('')
+print('Please wait, we making it ready for you.')
 wait(2)
+print('Done, running the menu!\n\n[Console: Robo]\n[Executor: Exploit]\n[BIT: 32]')
+
+wait(1)
 --[[
 local function SendSystemMessage(text, color)
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
