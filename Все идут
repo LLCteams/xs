@@ -1,14 +1,8 @@
-game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-wait(1)
+
 print('Volt is have new permission to show message from require(consolecmd)-(volt).\n\n\n[LAST UPDATED: 2023/15/08]\n\n[Volt userTeam: 23]\n\n[UPD: Robo]\n[Vers: 1.8.9]\n[Dev Mode: Active]\n[Perm Owner: Active]')
 print('Undetectable for free!\nNew feature on Volt loader, new hub, bypass system anticheat and many more with better feature from our teams!\nThanks to our team for fixing and adding these feature!')
 wait(1)
-print('')
-print('Please wait, we making it ready for you.')
-wait(2)
-print('Done, running the menu!\n\n[Console: Robo]\n[Executor: Exploit]\n[BIT: 32]')
 
-wait(1)
 --[[
 local function SendSystemMessage(text, color)
     game.StarterGui:SetCore("ChatMakeSystemMessage", {
@@ -187,12 +181,12 @@ CloseButton.BackgroundColor3 = Color3.fromRGB(26, 27, 29)
 CloseButton.Position = UDim2.new(0.0800000429, 0, 0.759259224, 0)
 CloseButton.Size = UDim2.new(0, 150, 0, 30)
 CloseButton.Font = Enum.Font.Gotham
-CloseButton.Text = "EASY UI"
+CloseButton.Text = "QUICK HACK"
 CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function() 
 print('[</>] Executed!')
-Zploits()
+ZNewZ()
 ScreenGui:Destroy()
 end)
 
@@ -215,7 +209,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCte
 
 local Tab1 = Library:CreateTab('A')
 
-Tab1:Label('Oldest version')
+Tab1:Label('Old Version')
 Tab1:Button("Volt", function()
       game.CoreGui.ShadowLib:Destroy()
       boost()
@@ -233,7 +227,7 @@ end)
 
 local Tab2 = Library:CreateTab('B')
 
-Tab2:Label('New version')
+Tab2:Label('New Version')
 Tab2:Button("Niceso", function()
      game.CoreGui.ShadowLib:Destroy()
      XMON()
@@ -424,6 +418,80 @@ GOLDEN()
 end)
 Tab6:Button('Body 3', function()
 ESPXX()
+end)
+
+end
+
+function ZNewZ()
+
+local lib = loadstring(game:HttpGet('https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%BE%D0%BA%D0%BC%D0%B0%D0%BD%D0%B3%D0%BE%20%D1%82%D0%B0%D0%BA%D0%B6%D0%B5%20%D0%BF%D0%BE%D0%B1%D0%B5%D0%B6%D0%B4%D0%B0%D0%B5%D1%82'))()
+
+local window = lib.createWindow("Volt Beta", "Volt", true) -- lib.createWindow(title, name, draggable)
+local tab1 = window.createTab(">> New >>") -- window.createTab(name)
+
+tab1.createText("Welcome to Quick Hacks!")
+tab1.createButton("Undetectable (Recommended)", function() 
+wait(5)
+	window.notification("Volt notification", "Volt has been changed, please use 1x and now cannot be kick or detected.")
+end)
+tab1.createToggle("FPS Boost", function(value)
+    print(value)
+end)
+local InfiniteJumpEnabled;
+tab1.createToggle("Infinite Jump", false, function(State)
+
+InfiniteJumpEnabled = State
+end)
+tab1.createToggle("Speed", false, function(you)
+	if you == false then	
+	     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+	
+	else
+	
+	     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 24
+  	end
+end)
+local isNoClipEnabled = false
+tab1.createToggle("Noclip", false, function(enabled)
+
+isNoClipEnabled = enabled
+    local character = game.Players.LocalPlayer.Character
+
+    while isNoClipEnabled do
+        for _, part in pairs(character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CanCollide = false
+            end
+        end
+        game:GetService("RunService").Stepped:Wait()
+    end
+end)
+tab1.createToggle("XRay", false, function(volt)
+    if volt == true then
+    
+        for _, descendant in pairs(workspace:GetDescendants()) do
+            if descendant:IsA("BasePart") then
+                if not descendant:FindFirstChild("OriginalTransparency") then
+                    local originalTransparency = Instance.new("NumberValue")
+                    originalTransparency.Name = "OriginalTransparency"
+                    originalTransparency.Value = descendant.Transparency
+                    originalTransparency.Parent = descendant
+                end
+                descendant.Transparency = 0.5
+            end
+        end
+        
+      else
+      
+       for _, descendant in pairs(workspace:GetDescendants()) do
+            if descendant:IsA("BasePart") then
+                if descendant:FindFirstChild("OriginalTransparency") then
+                    descendant.Transparency = descendant.OriginalTransparency.Value
+                    descendant.OriginalTransparency:Destroy()
+                end
+            end
+        end
+    end
 end)
 
 end
