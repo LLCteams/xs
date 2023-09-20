@@ -1,6 +1,7 @@
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
+wait(2)
 print("Loading loadstring...!!!\n")
-wait(1)
+wait(7)
 print("Done up..!!")
 wait(3)
 print('Volt is have new permission to show message from require(consolecmd)-(volt).\n\n\n[LAST UPDATED: 2023/20/08]\n\n[Volt userTeam: 23]\n\n[UPD: Clocs]\n[Vers: 1.8.9]\n[Dev Mode: Active]\n[Perm Owner: Active]')
