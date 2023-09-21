@@ -143,7 +143,7 @@ VHubImage_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 VHubImage_2.BackgroundTransparency = 1.000
 VHubImage_2.Position = UDim2.new(0.0288888887, 10, 0.150000006, 0)
 VHubImage_2.Size = UDim2.new(0, 65, 0, 65)
-VHubImage_2.Image = "rbxassetid://14835883184"
+VHubImage_2.Image = "rbxassetid://14835947941"
 
 VersionOutdatedText.Name = "VersionOutdatedText"
 VersionOutdatedText.Parent = MainFrame
