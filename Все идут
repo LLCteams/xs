@@ -1,20 +1,10 @@
-game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-wait(2)
-print("Loading loadstring...!!!\n")
-wait(7)
-print("Done up..!!")
-wait(3)
-print('Volt is have new permission to show message from require(consolecmd)-(volt).\n\n\n[LAST UPDATED: 2023/20/08]\n\n[Volt userTeam: 23]\n\n[UPD: Clocs]\n[Vers: 1.8.9]\n[Dev Mode: Active]\n[Perm Owner: Active]')
-print('Volt are undetectable for free, we here to make you easy feel cheating with Volt new Version update and Powerful.\nNew feature on Volt loader, new hub, bypass system anticheat and many more with better feature from our teams!\nThanks to our team for fixing and adding these feature!')
-wait(1)
-
 local lib = loadstring(game:HttpGet('https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%BE%D0%BA%D0%BC%D0%B0%D0%BD%D0%B3%D0%BE%20%D1%82%D0%B0%D0%BA%D0%B6%D0%B5%20%D0%BF%D0%BE%D0%B1%D0%B5%D0%B6%D0%B4%D0%B0%D0%B5%D1%82'))()
 
 local window = lib.createWindow("Volt Beta", "Volt", true) -- lib.createWindow(title, name, draggable)
 local tab1 = window.createTab(">> New >>") -- window.createTab(name)
 
 tab1.createText("Welcome to Bypasser!")
-tab1.createToggle("Undetectable (64-32 Bypass)", false, function() 
+tab1.createToggle("Undetectable (64-32 Bypass)", false, function(loader) 
       if loader == false then
           wait(2)
         window.notification("Volt notification", "Volt has been changed, please use 1x and now cannot be kick or detected.")
@@ -24,6 +14,20 @@ tab1.createToggle("Undetectable (64-32 Bypass)", false, function()
         window.notification("Volt information", "Volt undetectable has off.")
     end
 end)
+tab1.createButton("Destroy UI", function()
+game.CoreGui.lib:Destroy()
+end)
+
+
+game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
+wait(2)
+print("Loading loadstring...!!!\n")
+wait(7)
+print("Done up..!!")
+wait(3)
+print('Volt is have new permission to show message from require(consolecmd)-(volt).\n\n\n[LAST UPDATED: 2023/20/08]\n\n[Volt userTeam: 23]\n\n[UPD: Clocs]\n[Vers: 1.8.9]\n[Volt Light Mode: Active]\n[Perm Owner: Active]')
+print('Volt are undetectable and Powerful, we here to make you easy feel cheating with Volt new Version update and with Powerful.\nNew feature on Volt loader, new hub, bypass system anticheat and many more with better feature from our teams!\nThanks to our team for fixing and adding these feature!')
+wait(1)
 
 
 local function SendSystemMessage(text, color)
@@ -121,7 +125,7 @@ VHubAndSection.BackgroundTransparency = 1.000
 VHubAndSection.Position = UDim2.new(0.0820000023, 0, 0, 0)
 VHubAndSection.Size = UDim2.new(0, 164, 0, 30)
 VHubAndSection.Font = Enum.Font.GothamBold
-VHubAndSection.Text = "         Volt | High Experience"
+VHubAndSection.Text = "Volt | High Experience"
 VHubAndSection.TextColor3 = Color3.fromRGB(255, 255, 255)
 VHubAndSection.TextSize = 14.000
 VHubAndSection.TextXAlignment = Enum.TextXAlignment.Left
