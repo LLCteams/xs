@@ -38,16 +38,9 @@ tab1.createButton("Destroy UI", function()
 game.CoreGui.lib:Destroy()
 end)
 
-
-game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-wait(2)
-print("Loading loadstring...!!!\n")
-wait(7)
-print("Done up..!!")
-wait(3)
 print('Volt is have new permission to show message from require(consolecmd)-(volt).\n\n\n[LAST UPDATED: 2023/20/08]\n\n[Volt userTeam: 23]\n\n[UPD: Clocs]\n[Vers: 1.8.9]\n[Volt Light Mode: Active]\n[Perm Owner: Active]')
 print('Volt are undetectable and Powerful, we here to make you easy feel cheating with Volt new Version update and with Powerful.\nNew feature on Volt loader, new hub, bypass system anticheat and many more with better feature from our teams!\nThanks to our team for fixing and adding these feature!')
-wait(1)
+
 
 
 local function SendSystemMessage(text, color)
