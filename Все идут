@@ -1,3 +1,23 @@
+local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
+
+Notification.Notify("Systems", "Volt is setting up for you!", "rbxassetid://13969186916", {
+    Duration = 8,       
+    Main = {
+        Rounding = true,
+    }
+});
+
+Notification.WallNotification("Systems", "Welcome.", {
+        Duration = 3,
+
+        TitleSettings = {
+            Enabled = false
+        }
+    });
+    
+ --clear notifications 
+ --Notification.ClearAllNotifications()
+
 local lib = loadstring(game:HttpGet('https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%BE%D0%BA%D0%BC%D0%B0%D0%BD%D0%B3%D0%BE%20%D1%82%D0%B0%D0%BA%D0%B6%D0%B5%20%D0%BF%D0%BE%D0%B1%D0%B5%D0%B6%D0%B4%D0%B0%D0%B5%D1%82'))()
 
 local window = lib.createWindow("Volt Beta", "Volt", true) -- lib.createWindow(title, name, draggable)
@@ -6,12 +26,12 @@ local tab1 = window.createTab(">> New >>") -- window.createTab(name)
 tab1.createText("Welcome to Bypasser!")
 tab1.createToggle("Undetectable (64-32 Bypass)", false, function(loader) 
       if loader == false then
-          wait(2)
-        window.notification("Volt notification", "Volt has been changed, please use 1x and now cannot be kick or detected.")
+          
+        window.notification("Volt information", "Volt undetectable has off.")
 
    else
 
-        window.notification("Volt information", "Volt undetectable has off.")
+        window.notification("Volt notification", "Volt has been changed, please use 1x and now cannot be kick or detected.")
     end
 end)
 tab1.createButton("Destroy UI", function()
@@ -143,7 +163,7 @@ VHubImage_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 VHubImage_2.BackgroundTransparency = 1.000
 VHubImage_2.Position = UDim2.new(0.0288888887, 10, 0.150000006, 0)
 VHubImage_2.Size = UDim2.new(0, 65, 0, 65)
-VHubImage_2.Image = "rbxassetid://14835947941"
+VHubImage_2.Image = "rbxassetid://13969186916"
 
 VersionOutdatedText.Name = "VersionOutdatedText"
 VersionOutdatedText.Parent = MainFrame
