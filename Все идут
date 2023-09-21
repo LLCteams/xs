@@ -1,12 +1,5 @@
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
-Notification.Notify("Systems", "Volt is setting up for you!", "rbxassetid://14763564468", {
-    Duration = 14,       
-    Main = {
-        Rounding = true,
-    }
-});
-
 Notification.WallNotification("Systems", "V1.0.0", {
         Duration = 8,
 
@@ -14,6 +7,14 @@ Notification.WallNotification("Systems", "V1.0.0", {
             Enabled = false
         }
     });
+wait(8)
+
+Notification.Notify("Systems", "Volt is setting up for you!", "rbxassetid://14763564468", {
+    Duration = 20,       
+    Main = {
+        Rounding = true,
+    }
+});
     
  --clear notifications 
  --Notification.ClearAllNotifications()
@@ -21,7 +22,7 @@ Notification.WallNotification("Systems", "V1.0.0", {
 wait(15)
 
 Notification.Notify("Systems", "Volt has been loaded.", "rbxassetid://14763564468", {
-    Duration = 4,       
+    Duration = 24,       
     Main = {
         Rounding = true,
     }
