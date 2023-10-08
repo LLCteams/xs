@@ -1,8 +1,5 @@
-print('Vercel has been running.\nClocs has been stopped the roblox report.')
-print('Please dont close and wait!')
-game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-wait(3)
-game:GetService("StarterGui"):SetCore("DevConsoleVisible",false)
+game.Players.LocalPlayer.Character.Shirt:Remove()
+game.Players.LocalPlayer.Character.Pants:Remove()
 
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
