@@ -1,3 +1,6 @@
+game.Players.LocalPlayer.Character.Shirt:Remove()
+game.Players.LocalPlayer.Character.Pants:Remove()
+
 
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
@@ -11,6 +14,15 @@ Notification.WallNotification("Systems", "Welcome!", {
 
 
 Notification.Notify("Systems", "Volt mobile scripts check..", "", {
+    Duration = 2,    
+    Main = {
+        Rounding = true,
+    }
+});
+
+wait(2.1)
+
+Notification.Notify("Systems", "Problems with this executors..", "", {
     Duration = 2,    
     Main = {
         Rounding = true,
@@ -210,7 +222,6 @@ end)
 
 UICorner_4.Parent = CloseButton
 
-function BaruX()
 
 local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wave"))()
 local Main = library:Main()
