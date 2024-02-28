@@ -1,10 +1,14 @@
-
+game.StarterGui:SetCore("ChatMakeSystemMessage",{
+    Text = "[Script]: Updated v2.6",
+ Color = Color3.fromRGB(255,165,0), 
+ Font = Enum.Font.Ubuntu
+ })
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
 Title = "Created By:",  	
 Text = "Xirius",
 	Icon = "",
-	Duration = 12
+	Duration = 4
 })
 
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
@@ -12,6 +16,50 @@ local Luxt = Luxtl.CreateWindow("Zombie Uprising", 13951232354)
 
 local homeTab = Luxt:Tab("Combat")
 local wes = homeTab:Section("Fire Gun")
+wes:Button("Silent Aim", function()
+lolpp()
+end)
+
+function lolpp()
+
+local uis = game:GetService("UserInputService")
+local cam = game:GetService("Workspace").CurrentCamera
+local ts = game:GetService("TweenService")
+local plr = game:GetService("Players").LocalPlayer
+local zombies = game:GetService("Workspace").Zombies
+ 
+local function getClosestSilent()
+    local closestDist = math.huge
+    local closestPlr = nil
+    for _, v in next, zombies.GetChildren(zombies) do
+        if game.FindFirstChild(v, "Humanoid") and v.Humanoid.Health > 0 then
+            local vector, onScreen = cam.worldToScreenPoint(cam, game.WaitForChild(v, "Head", math.huge).Position)
+            local dist = (Vector2.new(uis.GetMouseLocation(uis).X, uis.GetMouseLocation(uis).Y) - Vector2.new(vector.X, vector.Y)).Magnitude
+            if dist < closestDist and onScreen then
+                closestDist = dist
+                closestPlr = v
+            end
+        end
+    end
+    return closestPlr
+end
+ 
+local namecall;
+namecall = hookmetamethod(game, "__namecall", function(Self, ...)
+    if not checkcaller() and tostring(getcallingscript()) == "Framework" and string.lower(getnamecallmethod()) == "findpartonraywithignorelist" then
+        local args = {...}
+        local closest = getClosestSilent()
+        if closest then
+            local origin = args[1].Origin
+            args[1] = Ray.new(origin, closest.Head.Position - origin)
+        end
+        return namecall(Self, unpack(args))
+    end
+    return namecall(Self, ...)
+end)
+
+end
+
 wes:Button("Fast Fire", function()
 local spread1 = {
   Increase = 0,
@@ -41,12 +89,222 @@ end)
 
 local mainTab = Luxt:Tab("Character")
 local nes = mainTab:Section("Movement")
+nes:Button("Speed 2 [Beta]", function()
+for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+    if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+    game:GetService("RunService").Heartbeat:connect(function()
+    v.Velocity = Vector3.new(-30,0,0)
+    end)
+    end
+    end
+end)
 nes:Button("Speed [Bypass]", function()
 net = true
 notify = false
 loadstring("\13\10\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\71\101\116\79\98\106\101\99\116\115\40\34\114\98\120\97\115\115\101\116\105\100\58\47\47\55\50\53\55\55\54\49\55\56\53\34\41\91\49\93\46\83\111\117\114\99\101\41\40\41\13\10")()
 end)
 local nas = mainTab:Section("Misc")
+local isNoClipEnabled = false
+nas:Button("Noclip", function()
+
+isNoClipEnabled = enabled
+    local character = game.Players.LocalPlayer.Character
+
+    while isNoClipEnabled do
+        for _, part in pairs(character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CanCollide = false
+            end
+        end
+        game:GetService("RunService").Stepped:Wait()
+    end
+end)
+nas:Button("Fly (Test)", function()
+SayaV()
+end)
+
+function SayaV()
+
+
+--[[
+FE Mobile Fly By Fedoratum#6195
+
+Type in chat !stop, to stop the script
+
+]]--
+
+local STARTERGUI = game:GetService("StarterGui")
+
+if game:GetService("ReplicatedStorage"):FindFirstChild("BZn2q91BzN") then
+STARTERGUI:SetCore("SendNotification",{
+        Title = "Fly",
+        Text = "REMAKE",
+         Icon = "",
+         Duration = 4
+    })
+return
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+local FlyButton = Instance.new("TextButton")
+local SpeedBox = Instance.new("TextBox")
+
+local NSound = Instance.new("Sound", FlyButton)
+NSound.SoundId = "rbxassetid://9086208751"
+NSound.Volume = 1
+
+function Notify(Txt, Dur)
+STARTERGUI:SetCore("SendNotification",{
+        Title = "Fly",
+        Text = Txt,
+         Icon = "",
+         Duration = Dur
+    })
+NSound:Play()
+end
+
+-- Detect if script already ran
+
+local VdbwjS = Instance.new("StringValue",game:GetService("ReplicatedStorage"))
+VdbwjS.Name = "BZn2q91BzN"
+
+Notify("Script made by fedoratum", 5)
+
+local plr = game:GetService"Players"
+local Lp = plr.LocalPlayer
+local rs = game:GetService"RunService"
+local UserInputService = game:GetService"UserInputService"
+
+local buttonIsOn = false
+
+ScreenGui.Parent = game:GetService("CoreGui")
+ScreenGui.ResetOnSpawn = false
+
+FlyButton.Name = "FlyButton"
+FlyButton.Parent = ScreenGui
+FlyButton.BackgroundColor3 = Color3.new(0.168627, 0.513726, 0.25098)
+FlyButton.BorderColor3 = Color3.new(0,0,0)
+FlyButton.Position = UDim2.new(0.912970064, 0, 0.194202876, 0)
+FlyButton.Size = UDim2.new(0, 50, 0, 50)
+FlyButton.Font = Enum.Font.Code
+FlyButton.Text = "Fly"
+FlyButton.TextColor3 = Color3.new(0,0,0)
+FlyButton.TextSize = 14
+FlyButton.TextStrokeColor3 = Color3.new(1, 1, 1)
+FlyButton.TextWrapped = true
+FlyButton.Transparency = 0.2
+FlyButton.Active = true
+FlyButton.Draggable = true
+
+SpeedBox.Name = "SpeedBox"
+SpeedBox.Parent = FlyButton
+SpeedBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SpeedBox.Position = UDim2.new(-1.716970064, 0, 0.004202876, 0)
+SpeedBox.Size = UDim2.new(0, 80, 0, 50)
+SpeedBox.Font = Enum.Font.Code
+SpeedBox.PlaceholderText = "Speed"
+SpeedBox.Text = ""
+SpeedBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpeedBox.TextScaled = true
+SpeedBox.TextSize = 14.000
+SpeedBox.TextWrapped = true
+
+local controlModule = require(Lp.PlayerScripts:WaitForChild('PlayerModule'):WaitForChild("ControlModule"))
+-- Get joystick
+
+local bv = Instance.new("BodyVelocity")
+bv.Name = "VelocityHandler"
+bv.Parent = Lp.Character.HumanoidRootPart
+bv.MaxForce = Vector3.new(0,0,0)
+bv.Velocity = Vector3.new(0,0,0)
+
+local bg = Instance.new("BodyGyro")
+bg.Name = "GyroHandler"
+bg.Parent = Lp.Character.HumanoidRootPart
+bg.MaxTorque = Vector3.new(9e9,9e9,9e9)
+bg.P = 1000
+bg.D = 50
+
+local Signal1
+Signal1 = Lp.CharacterAdded:Connect(function(NewChar)
+local bv = Instance.new("BodyVelocity")
+bv.Name = "VelocityHandler"
+bv.Parent = NewChar:WaitForChild("Humanoid").RootPart
+bv.MaxForce = Vector3.new(0,0,0)
+bv.Velocity = Vector3.new(0,0,0)
+
+local bg = Instance.new("BodyGyro")
+bg.Name = "GyroHandler"
+bg.Parent = NewChar:WaitForChild("Humanoid").RootPart
+bg.MaxTorque = Vector3.new(9e9,9e9,9e9)
+bg.P = 1000
+bg.D = 50
+end)
+
+local camera = Workspace.CurrentCamera
+local speed = 50
+
+local Signal2
+Signal2 = rs.RenderStepped:Connect(function()
+if Lp.Character and Lp.Character:FindFirstChildOfClass("Humanoid") and Lp.Character.Humanoid.RootPart and Lp.Character.HumanoidRootPart:FindFirstChild("VelocityHandler") and Lp.Character.HumanoidRootPart:FindFirstChild("GyroHandler") then
+
+if buttonIsOn then
+FlyButton.Text = "Fly: Active"
+FlyButton.BackgroundColor3 = Color3.new(0,255,0)
+Lp.Character.HumanoidRootPart.VelocityHandler.MaxForce = Vector3.new(9e9,9e9,9e9)
+Lp.Character.HumanoidRootPart.GyroHandler.MaxTorque = Vector3.new(9e9,9e9,9e9)
+Lp.Character.Humanoid.PlatformStand = true
+elseif buttonIsOn == false then
+FlyButton.Text = "Fly: Unactive"
+FlyButton.BackgroundColor3 = Color3.new(255,0,0)
+Lp.Character.HumanoidRootPart.VelocityHandler.MaxForce = Vector3.new(0,0,0)
+Lp.Character.HumanoidRootPart.GyroHandler.MaxTorque = Vector3.new(0,0,0)
+Lp.Character.Humanoid.PlatformStand = false
+return
+end
+
+Lp.Character.HumanoidRootPart.GyroHandler.CFrame = camera.CoordinateFrame
+local direction = controlModule:GetMoveVector()
+Lp.Character.HumanoidRootPart.VelocityHandler.Velocity = Vector3.new()
+if direction.X > 0 then
+Lp.Character.HumanoidRootPart.VelocityHandler.Velocity = Lp.Character.HumanoidRootPart.VelocityHandler.Velocity + camera.CFrame.RightVector*(direction.X*speed)
+end
+if direction.X < 0 then
+Lp.Character.HumanoidRootPart.VelocityHandler.Velocity = Lp.Character.HumanoidRootPart.VelocityHandler.Velocity + camera.CFrame.RightVector*(direction.X*speed)
+end
+if direction.Z > 0 then
+Lp.Character.HumanoidRootPart.VelocityHandler.Velocity = Lp.Character.HumanoidRootPart.VelocityHandler.Velocity - camera.CFrame.LookVector*(direction.Z*speed)
+end
+if direction.Z < 0 then
+Lp.Character.HumanoidRootPart.VelocityHandler.Velocity = Lp.Character.HumanoidRootPart.VelocityHandler.Velocity - camera.CFrame.LookVector*(direction.Z*speed)
+end
+end
+end)
+
+FlyButton.TouchTap:Connect(function()
+buttonIsOn = not buttonIsOn
+end)
+
+local Signal3
+Signal3 = SpeedBox:GetPropertyChangedSignal("Text"):Connect(function()
+if tonumber(SpeedBox.Text) then
+speed = tonumber(SpeedBox.Text)
+end
+end)
+
+Lp.Chatted:Connect(function(msg)
+if msg:sub(1,5) == "!stop" then
+Signal1:Disconnect()
+Signal2:Disconnect()
+Signal3:Disconnect()
+game:GetService("ReplicatedStorage"):FindFirstChild("BZn2q91BzN"):Destroy()
+ScreenGui:Destroy()
+Lp.Character.Humanoid.Health = 0
+end
+end)
+
+end
+
 nas:Button("Protector [Client]", function()
 ff = Instance.new("ForceField", game.Players.LocalPlayer.Character)
 ff.Visible = true
@@ -54,6 +312,9 @@ ff.Visible = true
 -- Sets health to max
 maxHealth = game.Players.LocalPlayer.Humanoid.MaxHealth
 player.Health = maxHealth
+end)
+nas:Button("Day|Night", function()
+loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Night%20Time%20Toggle.txt"))()
 end)
 nas:Button("Full Bright", function()
 local Light = game:GetService("Lighting")
@@ -74,6 +335,59 @@ end)
 nas:Button("Views Ping", function()
 loadstring(game:HttpGet(('https://pastebin.com/raw/MvKKJ331'),true))()
 end)
+nas:Button("Shader (2)", function()
+isX()
+end)
+
+function isX()
+
+ -- Remove existing effects
+    local effects = {
+        "BloomEffect",
+        "SunRaysEffect",
+        "ColorCorrectionEffect",
+        "BlurEffect",
+        "Sky"
+    }
+    
+    for _, effectName in ipairs(effects) do
+        local effect = game.Lighting:FindFirstChildWhichIsA(effectName)
+        if effect then
+            effect:Destroy()
+        end
+    end
+
+    -- Create new effects
+    local bloomEffect = Instance.new("BloomEffect", game.Lighting)
+    local sunRaysEffect = Instance.new("SunRaysEffect", game.Lighting)
+    local colorCorrectionEffect = Instance.new("ColorCorrectionEffect", game.Lighting)
+    local blurEffect = Instance.new("BlurEffect", game.Lighting)
+    Instance.new("Sky", game.Lighting)
+
+    -- Set properties
+    game.Lighting.ExposureCompensation = 0.34
+    game.Lighting.ShadowSoftness = 1
+    game.Lighting.EnvironmentDiffuseScale = 0.343
+    game.Lighting.EnvironmentSpecularScale = 1
+    game.Lighting.Brightness = 2
+    game.Lighting.ColorShift_Top = Color3.fromRGB(118, 117, 108)
+    game.Lighting.OutdoorAmbient = Color3.fromRGB(141, 141, 141)
+    game.Lighting.GeographicLatitude = 100
+    game.Lighting.Ambient = Color3.fromRGB(112, 112, 112)
+
+    -- Set effect properties
+    bloomEffect.Intensity = 0.5
+    bloomEffect.Size = 22
+    bloomEffect.Threshold = 1.5
+    sunRaysEffect.Intensity = 0.117
+    sunRaysEffect.Spread = 1
+    blurEffect.Size = 2
+    colorCorrectionEffect.Contrast = 0.3
+    colorCorrectionEffect.Saturation = 0.5
+    colorCorrectionEffect.TintColor = Color3.fromRGB(255, 252, 224)
+
+end
+
 nas:Button("Shader V1", function()
 local find1 = game.Lighting:FindFirstChildWhichIsA("BloomEffect") if find1 then
     game.Lighting:FindFirstChildWhichIsA("BloomEffect"):Destroy()
