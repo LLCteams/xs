@@ -29,7 +29,7 @@ end)
 local newtabs = Luxt:Tab("New")
 local cass = newtabs:Section("Under review")
 cass:Button("[1] Executor", function()
-   game:GetService("CoreGui"):FindFirstChild(Luxtl.WindowName):Destroy()
+   betatest()
 end)
 cass:Toggle("[2] Camera Toggle", function(consoles)
            if consoles then
