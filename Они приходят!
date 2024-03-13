@@ -1,3 +1,5 @@
+wait(1)
+
 game.StarterGui:SetCore("ChatMakeSystemMessage",{
     Text = "--- [ Script | Changelogs ] ---\nNew script\n fix some script.\n\nBy Xirius",
  Color = Color3.fromRGB(255,165,0), 
@@ -11,7 +13,7 @@ Text = "1. Xirius Bolt",
 	Duration = 20
 })
 
-wait(1.3)
+wait(1.2)
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
 local Luxt = Luxtl.CreateWindow("Zombie Uprising", 13951232354)
 
@@ -25,7 +27,7 @@ print('')
 end)
 
 local newtabs = Luxt:Tab("New")
-local cass = newtabs:Section("Under review")
+local cass = newtabs:Section("Under-review")
 cass:Button("[1] Exit Script", function()
    game:GetService("CoreGui"):FindFirstChild(Luxtl.WindowName):Destroy()
 end)
@@ -44,9 +46,9 @@ else
 end
 cass:Toggle("[3] Fog Light", function(nooby)
       if nooby then
-         game.Lighting.FogStart = 0
-     else
          game.Lighting.FogStart = math.huge
+     else
+         game.Lighting.FogStart = 0
       end
 end)
 
