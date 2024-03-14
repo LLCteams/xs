@@ -1,14 +1,14 @@
 repeat wait() until game:IsLoaded()
 
 game.StarterGui:SetCore("ChatMakeSystemMessage",{
-    Text = "--- [ Script | Changelogs ] ---\nNew script\n fix some script.\n\nBy Xirius",
+    Text = "--- [ Script | Changelogs ] ---\nNew script",
  Color = Color3.fromRGB(255,165,0), 
  Font = Enum.Font.Ubuntu
  })
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
 Title = "Created By:",  	
-Text = "1. Xirius Bolt",
+Text = "Xirius Bolt",
 	Icon = "rbxassetid://8677814109",
 	Duration = 20
 })
@@ -47,13 +47,47 @@ end
 cass:Toggle("[3] Fog Light", function(nooby)
       if nooby then
          game.Lighting.FogStart = 0
-     else
+     else 
          game.Lighting.FogStart = math.huge
       end
 end)
 
 local homeTab = Luxt:Tab("Combat")
 local wes = homeTab:Section("Fire Gun")
+wes:Button("[7] Godmode", function()
+lastone()
+end)
+
+function lastone()
+local player = game.Players.LocalPlayer
+
+ 
+
+local healthRegenRate = 100000000000000
+
+ 
+
+function regenerateHealth()
+
+    while true do
+
+        -- Increase the player's health by the regen rate
+
+        player.Character.Humanoid.Health = player.Character.Humanoid.Health + healthRegenRate
+
+ 
+
+        wait(0.00000000000000000000000000000000000001)
+
+    end
+
+end
+
+ 
+
+regenerateHealth()
+
+end
 wes:Button("[70%] Aim Damage", function()
 print('')
 end)
