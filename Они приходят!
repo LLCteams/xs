@@ -1,5 +1,7 @@
 repeat wait() until game:IsLoaded()
 
+print('Welcome to Universe X\ncreated by Xirius')
+print('--- v3.0 ---')
 wait(1)
 game.StarterGui:SetCore("ChatMakeSystemMessage",{
     Text = "--- [ Script | Changelogs ] ---\nNew script",
