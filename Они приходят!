@@ -96,7 +96,7 @@ VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
 VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
 VersionOutdatedText.Font = Enum.Font.GothamBold
 VersionOutdatedText.Text = " Status: Updated last hour  |  v0.4.2"
-VersionOutdatedText.TextColor3 = Color3.fromRGB(0, 255, 0)
+VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 0, 255)
 VersionOutdatedText.TextSize = 15.000
 VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
 
