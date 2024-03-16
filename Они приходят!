@@ -68,7 +68,7 @@ VHubAndSection.BackgroundTransparency = 1.000
 VHubAndSection.Position = UDim2.new(0.0820000023, 0, 0, 0)
 VHubAndSection.Size = UDim2.new(0, 164, 0, 30)
 VHubAndSection.Font = Enum.Font.GothamBold
-VHubAndSection.Text = "Welcome to Universe X !"
+VHubAndSection.Text = "Universe X    |    v0.4.2"
 VHubAndSection.TextColor3 = Color3.fromRGB(0, 0, 0)
 VHubAndSection.TextSize = 14.000
 VHubAndSection.TextXAlignment = Enum.TextXAlignment.Left
@@ -95,7 +95,7 @@ VersionOutdatedText.BackgroundTransparency = 1.000
 VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
 VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
 VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = " Status: Updated last hour  |  v0.4.2"
+VersionOutdatedText.Text = " Status: Updated 5 hours ago  |  Limited Script"
 VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 0, 255)
 VersionOutdatedText.TextSize = 15.000
 VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
@@ -166,6 +166,14 @@ local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/
 local Luxt = Luxtl.CreateWindow("Zombie Uprising", 13951232354)
 
 local abbb = Luxt:Tab("Credits")
+local uov = abbb:Section("#2")
+uov:Label("Game's ID [ "..game.PlaceId.." ]")
+uov:Label("Server ID [ "..game.JobId.." ]")
+uov:Label("Time's [ "..os.date("%X").." ]")
+local iops = abbb:Section("#1")
+iops:Label("Health [ "..game.Players.LocalPlayer.Character.Humanoid.Health.." ]")
+iops:Label("Fps [ "..math.floor(workspace:GetRealPhysicsFPS()).." ]")
+iops:Label("Ping [ "..game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString().." ]")
 local ubd = abbb:Section("Creater")
 ubd:Button("Xirius", function()
 print('')
@@ -712,6 +720,58 @@ while wait(0.5) do
 end
 end)
 local payto = Luxt:Tab("Settings")
+local hiz = payto:Section("Servers")
+hiz:Button("Low Server", function()
+Lowv()
+end)
+function Lowv()
+local Http = game:GetService("HttpService")
+local TPS = game:GetService("TeleportService")
+local Api = "https://games.roblox.com/v1/games/"
+
+local _place = game.PlaceId
+local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+function ListServers(cursor)
+   local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+   return Http:JSONDecode(Raw)
+end
+
+local Server, Next; repeat
+   local Servers = ListServers(Next)
+   Server = Servers.data[1]
+   Next = Servers.nextPageCursor
+until Server
+
+TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+end
+hiz:Button("Server Hopper", function()
+hoppv()
+end)
+function hoppv()
+local Player = game.Players.LocalPlayer    
+local Http = game:GetService("HttpService")
+local TPS = game:GetService("TeleportService")
+local Api = "https://games.roblox.com/v1/games/"
+
+local _place,_id = game.PlaceId, game.JobId
+local _servers = Api.._place.."/servers/Public?sortOrder=Desc&limit=100"
+function ListServers(cursor)
+   local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+   return Http:JSONDecode(Raw)
+end
+
+local Next; repeat
+   local Servers = ListServers(Next)
+   for i,v in next, Servers.data do
+       if v.playing < v.maxPlayers and v.id ~= _id then
+           local s,r = pcall(TPS.TeleportToPlaceInstance,TPS,_place,v.id,Player)
+           if s then break end
+       end
+   end
+   
+   Next = Servers.nextPageCursor
+until not Next
+end
 local haz = payto:Section("Settings")
 haz:Button("[+] Console", function()
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
