@@ -1,5 +1,14 @@
 repeat wait() until game:IsLoaded()
 
+if identifyexecutor and identifyexecutor() == "Arceus" then
+
+hookfunction(game.HttpGetAsync, game.HttpGet)
+
+oldfunction = hookfunction(game.HttpGet, function(self, url, ...)
+warn(self)
+return oldfunction(self, url)
+end)
+
 -- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
