@@ -87,7 +87,7 @@ VersionOutdatedText.BackgroundTransparency = 1.000
 VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
 VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
 VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = " v3.0"
+VersionOutdatedText.Text = " Status: Updating.. | v3.0"
 VersionOutdatedText.TextColor3 = Color3.fromRGB(0, 255, 0)
 VersionOutdatedText.TextSize = 15.000
 VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
@@ -131,6 +131,7 @@ CopyDiscordLinkButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 CopyDiscordLinkButton.TextSize = 12.000
 CopyDiscordLinkButton.MouseButton1Down:connect(function()
 newonep()
+wait(9999999999)
 ScreenGui:Destroy()
 end)
 
