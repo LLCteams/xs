@@ -108,7 +108,7 @@ ErrorMessage.Position = UDim2.new(0.291111112, 0, 0.444444448, 0)
 ErrorMessage.Size = UDim2.new(0, 311, 0, 50)
 ErrorMessage.Font = Enum.Font.Gotham
 ErrorMessage.Text = "Free and recommended with 100% safe.\nUser: "..game.Players.LocalPlayer.Name.."\nUser Id: "..game.Players.LocalPlayer.UserId..""
-ErrorMessage.TextColor3 = Color3.fromRGB(255, 221, 1)
+ErrorMessage.TextColor3 = Color3.fromRGB(255, 0, 255)
 ErrorMessage.TextSize = 15.000
 ErrorMessage.TextWrapped = true
 ErrorMessage.TextXAlignment = Enum.TextXAlignment.Left
@@ -135,7 +135,7 @@ CopyDiscordLinkButton.Position = UDim2.new(0.600000024, 0, 0.759259224, 0)
 CopyDiscordLinkButton.Size = UDim2.new(0, 150, 0, 30)
 CopyDiscordLinkButton.Font = Enum.Font.Gotham
 CopyDiscordLinkButton.Text = "Zombie Uprising"
-CopyDiscordLinkButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CopyDiscordLinkButton.TextColor3 = Color3.fromRGB(255, 0, 255)
 CopyDiscordLinkButton.TextSize = 12.000
 CopyDiscordLinkButton.MouseButton1Down:connect(function()
 newonep()
@@ -151,7 +151,7 @@ CloseButton.Position = UDim2.new(0.0800000429, 0, 0.759259224, 0)
 CloseButton.Size = UDim2.new(0, 150, 0, 30)
 CloseButton.Font = Enum.Font.Gotham
 CloseButton.Text = "Exit Script"
-CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.TextColor3 = Color3.fromRGB(255, 0, 255)
 CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function() 
 ScreenGui:Destroy()
