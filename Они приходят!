@@ -1,10 +1,160 @@
 repeat wait() until game:IsLoaded()
 
-print('Welcome to Universe X\ncreated by Xirius')
-print('--- v3.0 ---')
-wait(1)
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local InfoBar = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local VHubImage = Instance.new("ImageLabel")
+local VHubAndSection = Instance.new("TextLabel")
+local Line1 = Instance.new("Frame")
+local VHubImage_2 = Instance.new("ImageLabel")
+local VersionOutdatedText = Instance.new("TextLabel")
+local ErrorMessage = Instance.new("TextLabel")
+local DescriptionText = Instance.new("TextLabel")
+local CopyDiscordLinkButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local CloseButton = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game:GetService("CoreGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.DisplayOrder = 999999999
+ScreenGui.ResetOnSpawn = false
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = ScreenGui
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+MainFrame.LayoutOrder = 999999999
+MainFrame.Position = UDim2.new(0.174855486, 0, 0.194284841, 0)
+MainFrame.Size = UDim2.new(0, 450, 0, 270)
+MainFrame.Draggable = true
+
+UICorner.CornerRadius = UDim.new(0, 20)
+UICorner.Parent = MainFrame
+
+InfoBar.Name = "InfoBar"
+InfoBar.Parent = MainFrame
+InfoBar.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+InfoBar.Size = UDim2.new(0, 450, 0, 30)
+
+UICorner_2.Parent = InfoBar
+
+VHubImage.Name = "VHubImage"
+VHubImage.Parent = InfoBar
+VHubImage.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
+VHubImage.BackgroundTransparency = 1.000
+VHubImage.Position = UDim2.new(0.00999999978, 0, 0, 0)
+VHubImage.Size = UDim2.new(0, 0, 0, 0)
+VHubImage.Image = ""
+
+VHubAndSection.Name = "VHubAndSection"
+VHubAndSection.Parent = InfoBar
+VHubAndSection.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VHubAndSection.BackgroundTransparency = 1.000
+VHubAndSection.Position = UDim2.new(0.0820000023, 0, 0, 0)
+VHubAndSection.Size = UDim2.new(0, 164, 0, 30)
+VHubAndSection.Font = Enum.Font.GothamBold
+VHubAndSection.Text = "Welcome to Universe X !"
+VHubAndSection.TextColor3 = Color3.fromRGB(0, 0, 0)
+VHubAndSection.TextSize = 14.000
+VHubAndSection.TextXAlignment = Enum.TextXAlignment.Left
+
+Line1.Name = "Line1"
+Line1.Parent = MainFrame
+Line1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Line1.BorderSizePixel = 0
+Line1.Position = UDim2.new(0, 0, 0.111111112, 0)
+Line1.Size = UDim2.new(0, 450, 0, 1)
+
+VHubImage_2.Name = "VHubImage"
+VHubImage_2.Parent = MainFrame
+VHubImage_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VHubImage_2.BackgroundTransparency = 1.000
+VHubImage_2.Position = UDim2.new(0.0288888887, 10, 0.150000006, 0)
+VHubImage_2.Size = UDim2.new(0, 65, 0, 65)
+VHubImage_2.Image = ""
+
+VersionOutdatedText.Name = "VersionOutdatedText"
+VersionOutdatedText.Parent = MainFrame
+VersionOutdatedText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VersionOutdatedText.BackgroundTransparency = 1.000
+VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
+VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
+VersionOutdatedText.Font = Enum.Font.GothamBold
+VersionOutdatedText.Text = " v3.0"
+VersionOutdatedText.TextColor3 = Color3.fromRGB(0, 255, 0)
+VersionOutdatedText.TextSize = 15.000
+VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
+
+ErrorMessage.Name = "ErrorMessage"
+ErrorMessage.Parent = MainFrame
+ErrorMessage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ErrorMessage.BackgroundTransparency = 1.000
+ErrorMessage.Position = UDim2.new(0.291111112, 0, 0.444444448, 0)
+ErrorMessage.Size = UDim2.new(0, 311, 0, 50)
+ErrorMessage.Font = Enum.Font.Gotham
+ErrorMessage.Text = "Free and recommended with 100% safe.\nUser: "..game.Players.LocalPlayer.Name.."\nUser Id: "..game.Players.LocalPlayer.UserId..""
+ErrorMessage.TextColor3 = Color3.fromRGB(0, 255, 0)
+ErrorMessage.TextSize = 15.000
+ErrorMessage.TextWrapped = true
+ErrorMessage.TextXAlignment = Enum.TextXAlignment.Left
+ErrorMessage.TextYAlignment = Enum.TextYAlignment.Top
+
+DescriptionText.Name = "DescriptionText"
+DescriptionText.Parent = MainFrame
+DescriptionText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DescriptionText.BackgroundTransparency = 1.000
+DescriptionText.BorderColor3 = Color3.fromRGB(27, 42, 53)
+DescriptionText.Position = UDim2.new(0.0222222228, 0, 0.444444448, 0)
+DescriptionText.Size = UDim2.new(0, 115, 0, 35)
+DescriptionText.Font = Enum.Font.Gotham
+DescriptionText.Text = "⚙️"
+DescriptionText.TextColor3 = Color3.fromRGB(255, 255, 255)
+DescriptionText.TextSize = 15.000
+DescriptionText.TextXAlignment = Enum.TextXAlignment.Right
+DescriptionText.TextYAlignment = Enum.TextYAlignment.Top
+
+CopyDiscordLinkButton.Name = "CopyDiscordLinkButton"
+CopyDiscordLinkButton.Parent = MainFrame
+CopyDiscordLinkButton.BackgroundColor3 = Color3.fromRGB(255, 211, 1)
+CopyDiscordLinkButton.Position = UDim2.new(0.600000024, 0, 0.759259224, 0)
+CopyDiscordLinkButton.Size = UDim2.new(0, 150, 0, 30)
+CopyDiscordLinkButton.Font = Enum.Font.Gotham
+CopyDiscordLinkButton.Text = "Zombie Uprising"
+CopyDiscordLinkButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CopyDiscordLinkButton.TextSize = 12.000
+CopyDiscordLinkButton.MouseButton1Down:connect(function()
+newonep()
+ScreenGui:Destroy()
+end)
+
+UICorner_3.Parent = CopyDiscordLinkButton
+
+CloseButton.Name = "CloseButton"
+CloseButton.Parent = MainFrame
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 221, 1)
+CloseButton.Position = UDim2.new(0.0800000429, 0, 0.759259224, 0)
+CloseButton.Size = UDim2.new(0, 150, 0, 30)
+CloseButton.Font = Enum.Font.Gotham
+CloseButton.Text = "Exit Script"
+CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.TextSize = 12.000
+CloseButton.MouseButton1Down:connect(function() 
+ScreenGui:Destroy()
+end)
+
+UICorner_4.Parent = CloseButton
+
+function newonep()
+wait(0.5)
 game.StarterGui:SetCore("ChatMakeSystemMessage",{
-    Text = "--- [ Script | Changelogs ] ---\nNew script",
+    Text = "-- [ Changelogs ] --\nNew Script",
  Color = Color3.fromRGB(255,165,0), 
  Font = Enum.Font.Ubuntu
  })
@@ -16,7 +166,7 @@ Text = "Xirius Bolt",
 	Duration = 5
 })
 
-wait(1)
+wait(1.2)
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
 local Luxt = Luxtl.CreateWindow("Zombie Uprising", 13951232354)
 
@@ -29,10 +179,28 @@ ubd:Button("Helper: rbxscript", function()
 print('')
 end)
 
-local newtabs = Luxt:Tab("New")
+local newtabs = Luxt:Tab("Interface")
+local bass = newtabs:Section("Camera")
+bass:Toggle("[#] Soon Inviscam", function(Settings)
+   if Settings == false then
+         Player.DevCameraOcclusionMode = "Zoom"
+     else
+         Player.DevCameraOcclusionMode = "Invisicam"
+     end
+end)
 local cass = newtabs:Section("Under review")
 cass:Button("[1] Executor", function()
-   betatest()
+   game:GetService("CoreGui"):FindFirstChild(Luxtl.WindowName):Destroy()
+end)
+cass:Toggle("[2] Anti Lag", function()
+    for _, v in pairs(Workspace:GetDescendants()) do
+        if v:IsA("BasePart") and not v.Parent:FindFirstChild("Humanoid") then
+             v.Material = Enum.Material.SmoothPlastic
+             if v:IsA("Texture") then
+             v:Destroy()
+        end
+    end
+end
 end)
 cass:Toggle("[2] Camera Toggle", function(consoles)
            if consoles then
@@ -50,49 +218,19 @@ end
 cass:Toggle("[3] Fog Light", function(nooby)
       if nooby then
          game.Lighting.FogStart = 0
-     else 
+     else
          game.Lighting.FogStart = math.huge
       end
 end)
 
 local homeTab = Luxt:Tab("Combat")
 local wes = homeTab:Section("Fire Gun")
-wes:Button("[7] Godmode", function()
-lastone()
-end)
-
-function lastone()
-local player = game.Players.LocalPlayer
-
- 
-
-local healthRegenRate = 100000000000000
-
- 
-
-function regenerateHealth()
-
-    while true do
-
-        -- Increase the player's health by the regen rate
-
-        player.Character.Humanoid.Health = player.Character.Humanoid.Health + healthRegenRate
-
- 
-
-        wait(0.00000000000000000000000000000000000001)
-
-    end
-
-end
-
- 
-
-regenerateHealth()
-
-end
-wes:Button("[70%] Aim Damage", function()
-print('')
+wes:Toggle("[70%] Aim Damage", function()
+     if console == false then
+             print('')
+         else
+             print('')
+         end
 end)
 
 wes:Button("[100%] Fast Fire", function()
@@ -124,7 +262,7 @@ end)
 
 local mainTab = Luxt:Tab("Character")
 local nes = mainTab:Section("Movement")
-nes:Button("2 [Speed Up]", function()
+nes:Button("[Speed Up]", function()
 for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
     if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
     game:GetService("RunService").Heartbeat:connect(function()
@@ -139,6 +277,16 @@ notify = false
 loadstring("\13\10\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\71\101\116\79\98\106\101\99\116\115\40\34\114\98\120\97\115\115\101\116\105\100\58\47\47\55\50\53\55\55\54\49\55\56\53\34\41\91\49\93\46\83\111\117\114\99\101\41\40\41\13\10")()
 end)
 local nas = mainTab:Section("Misc")
+nas:Toggle("[×] Soon", function(State)
+Settings.InfiniteJump = State
+UserInputService.JumpRequest:connect(
+    function()
+        if Settings.InfiniteJump then
+            Player.Character:FindFirstChildOfClass "Humanoid":ChangeState("Jumping")
+        end
+    end
+)
+end)
 local isNoClipEnabled = false
 nas:Toggle("Noclip", function(isNoClipEnabled)
 
@@ -176,13 +324,14 @@ dofullbright()
 
 Light.LightingChanged:Connect(dofullbright)
 end)
-nas:Button("[1] Pet Light", function()
+local vsx = mainTab:Section("Situation")
+vsx:Button("[1] Pet Light", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Light%20Part%20Pet'))()
 end)
-nas:Button("[2] Views Ping", function()
+vsx:Button("[2] Views Ping", function()
 loadstring(game:HttpGet(('https://pastebin.com/raw/MvKKJ331'),true))()
 end)
-nas:Button("[3] Shader (2.1)", function()
+vsx:Button("[3] Shader (2.1)", function()
 isX()
 end)
 
@@ -235,7 +384,7 @@ function isX()
 
 end
 
-nas:Button("[4] Shader (1.1)", function()
+vsx:Button("[4] Shader (1.1)", function()
 local find1 = game.Lighting:FindFirstChildWhichIsA("BloomEffect") if find1 then
     game.Lighting:FindFirstChildWhichIsA("BloomEffect"):Destroy()
 end
@@ -283,7 +432,134 @@ wow:Toggle("[1] XRay", function(goreng)
         end
     end
 end)
-local hum = homeTab:Section("Esp Teams")
+local hum = homeTab:Section("Esp Team")
+hum:Button("[2] Esp Detector [Team]", function()
+consolec()
+end)
+
+function consolec()
+-- Made by Blissful#4992
+
+local DistFromCenter = 80
+local TriangleHeight = 16
+local TriangleWidth = 16
+local TriangleFilled = true
+local TriangleTransparency = 0
+local TriangleThickness = 1
+local TriangleColor = Color3.fromRGB(255, 255, 255)
+local AntiAliasing = false
+
+----------------------------------------------------------------
+
+local Players = game:service("Players")
+local Player = Players.LocalPlayer
+local Camera = workspace.CurrentCamera
+local RS = game:service("RunService")
+
+local V3 = Vector3.new
+local V2 = Vector2.new
+local CF = CFrame.new
+local COS = math.cos
+local SIN = math.sin
+local RAD = math.rad
+local DRAWING = Drawing.new
+local CWRAP = coroutine.wrap
+local ROUND = math.round
+
+local function GetRelative(pos, char)
+    if not char then return V2(0,0) end
+
+    local rootP = char.PrimaryPart.Position
+    local camP = Camera.CFrame.Position
+    local relative = CF(V3(rootP.X, camP.Y, rootP.Z), camP):PointToObjectSpace(pos)
+
+    return V2(relative.X, relative.Z)
+end
+
+local function RelativeToCenter(v)
+    return Camera.ViewportSize/2 - v
+end
+
+local function RotateVect(v, a)
+    a = RAD(a)
+    local x = v.x * COS(a) - v.y * SIN(a)
+    local y = v.x * SIN(a) + v.y * COS(a)
+
+    return V2(x, y)
+end
+
+local function DrawTriangle(color)
+    local l = DRAWING("Triangle")
+    l.Visible = false
+    l.Color = color
+    l.Filled = TriangleFilled
+    l.Thickness = TriangleThickness
+    l.Transparency = 1-TriangleTransparency
+    return l
+end
+
+local function AntiA(v)
+    if (not AntiAliasing) then return v end
+    return V2(ROUND(v.x), ROUND(v.y))
+end
+
+local function ShowArrow(PLAYER)
+    local Arrow = DrawTriangle(TriangleColor)
+
+    local function Update()
+        local c ; c = RS.RenderStepped:Connect(function()
+            if PLAYER and PLAYER.Character then
+                local CHAR = PLAYER.Character
+                local HUM = CHAR:FindFirstChildOfClass("Humanoid")
+
+                if HUM and CHAR.PrimaryPart ~= nil and HUM.Health > 0 then
+                    local _,vis = Camera:WorldToViewportPoint(CHAR.PrimaryPart.Position)
+                    if vis == false then
+                        local rel = GetRelative(CHAR.PrimaryPart.Position, Player.Character)
+                        local direction = rel.unit
+
+                        local base  = direction * DistFromCenter
+                        local sideLength = TriangleWidth/2
+                        local baseL = base + RotateVect(direction, 90) * sideLength
+                        local baseR = base + RotateVect(direction, -90) * sideLength
+
+                        local tip = direction * (DistFromCenter + TriangleHeight)
+                        
+                        Arrow.PointA = AntiA(RelativeToCenter(baseL))
+                        Arrow.PointB = AntiA(RelativeToCenter(baseR))
+
+                        Arrow.PointC = AntiA(RelativeToCenter(tip))
+
+                        Arrow.Visible = true
+
+                    else Arrow.Visible = false end
+                else Arrow.Visible = false end
+            else 
+                Arrow.Visible = false
+
+                if not PLAYER or not PLAYER.Parent then
+                    Arrow:Remove()
+                    c:Disconnect()
+                end
+            end
+        end)
+    end
+
+    CWRAP(Update)()
+end
+
+for _,v in pairs(Players:GetChildren()) do
+    if v.Name ~= Player.Name then
+        ShowArrow(v)
+    end
+end
+
+Players.PlayerAdded:Connect(function(v)
+    if v.Name ~= Player.Name then
+        ShowArrow(v)
+    end
+end)
+end
 hum:Toggle("[1] Esp [Team-Self]", function(state)
 getgenv().enabled = state --Toggle on/off
 getgenv().filluseteamcolor = true --Toggle fill color using player team color on/off
@@ -318,6 +594,18 @@ while wait(0.5) do
         end
     end
 end
+end)
+local payto = Luxt:Tab("Settings")
+local haz = payto:Section("Settings")
+haz:Button("[+] Console", function()
+game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
+end)
+haz:Button("[×] Exit Game", function()
+wait()
+game:Shutdown()
+end)
+haz:Button("[#] Rejoin", function()
+game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
 end)
 local fun = Luxt:Tab("Other")
 local fan = fun:Section("Fun Give Badges")
@@ -2445,4 +2733,5 @@ local function LTLHER_fake_script() -- FloatingGUI.LocalScript
 end
 coroutine.wrap(LTLHER_fake_script)()
 
+end
 end
