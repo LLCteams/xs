@@ -1,5 +1,13 @@
 repeat wait() until game:IsLoaded()
 
+game:GetService("StarterGui"):SetCore("SendNotification",{ 	
+Title = "Created By:",  	
+Text = "Xirius Bolt",
+	Icon = "rbxassetid://8677814109",
+	Duration = 5
+})
+
+wait(1)
 -- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
@@ -29,7 +37,7 @@ ScreenGui.ResetOnSpawn = false
 MainFrame.Name = "MainFrame"
 MainFrame.Parent = ScreenGui
 MainFrame.Active = true
-MainFrame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+MainFrame.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 MainFrame.LayoutOrder = 999999999
 MainFrame.Position = UDim2.new(0.174855486, 0, 0.194284841, 0)
 MainFrame.Size = UDim2.new(0, 450, 0, 270)
@@ -87,7 +95,7 @@ VersionOutdatedText.BackgroundTransparency = 1.000
 VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
 VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
 VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = " Status: Updating.. | v3.0"
+VersionOutdatedText.Text = " Status: Updated last hour  |  v0.4.2"
 VersionOutdatedText.TextColor3 = Color3.fromRGB(0, 255, 0)
 VersionOutdatedText.TextSize = 15.000
 VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
@@ -127,11 +135,10 @@ CopyDiscordLinkButton.Position = UDim2.new(0.600000024, 0, 0.759259224, 0)
 CopyDiscordLinkButton.Size = UDim2.new(0, 150, 0, 30)
 CopyDiscordLinkButton.Font = Enum.Font.Gotham
 CopyDiscordLinkButton.Text = "Zombie Uprising"
-CopyDiscordLinkButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CopyDiscordLinkButton.TextColor3 = Color3.fromRGB(0, 255, 0)
 CopyDiscordLinkButton.TextSize = 12.000
 CopyDiscordLinkButton.MouseButton1Down:connect(function()
 newonep()
-wait(9999999999)
 ScreenGui:Destroy()
 end)
 
@@ -144,7 +151,7 @@ CloseButton.Position = UDim2.new(0.0800000429, 0, 0.759259224, 0)
 CloseButton.Size = UDim2.new(0, 150, 0, 30)
 CloseButton.Font = Enum.Font.Gotham
 CloseButton.Text = "Exit Script"
-CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.TextColor3 = Color3.fromRGB(0, 255, 0)
 CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function() 
 ScreenGui:Destroy()
@@ -153,19 +160,6 @@ end)
 UICorner_4.Parent = CloseButton
 
 function newonep()
-wait(0.5)
-game.StarterGui:SetCore("ChatMakeSystemMessage",{
-    Text = "-- [ Changelogs ] --\nNew Script",
- Color = Color3.fromRGB(255,165,0), 
- Font = Enum.Font.Ubuntu
- })
-
-game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Created By:",  	
-Text = "Xirius Bolt",
-	Icon = "rbxassetid://8677814109",
-	Duration = 5
-})
 
 wait(1.2)
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
@@ -192,6 +186,13 @@ end)
 local cass = newtabs:Section("Under review")
 cass:Button("[1] Executor", function()
    game:GetService("CoreGui"):FindFirstChild(Luxtl.WindowName):Destroy()
+end)
+cass:Toggle("[4] Anti-ban", function(vors)
+   if vors == false then
+          print('')
+       else
+          print('')
+       end
 end)
 cass:Toggle("[2] Anti Lag", function()
     for _, v in pairs(Workspace:GetDescendants()) do
@@ -225,7 +226,8 @@ cass:Toggle("[3] Fog Light", function(nooby)
 end)
 
 local homeTab = Luxt:Tab("Combat")
-local wes = homeTab:Section("Fire Gun")
+local wes = homeTab:Section("Immortal")
+wes:Label("Godmode")
 wes:Button("[3] Godmode", function()
 local accessories = {}
 function GodMode()
@@ -271,15 +273,31 @@ end
  
 regenerateHealth()
 end
-wes:Toggle("[70%] Aim Damage", function()
+local wrs = homeTab:Section("Gun")
+wrs:Label("Recommended use one")
+wrs:Toggle("[50%] Aim {Boss Damage}", function()
      if console == false then
              print('')
          else
              print('')
          end
 end)
-
-wes:Button("[100%] Fast Fire", function()
+wrs:Toggle("[85%] Aim {Damage}", function()
+     if console == false then
+             print('')
+         else
+             print('')
+         end
+end)
+wrs:Toggle("[70%] Aim {Damage}", function()
+     if console == false then
+             print('')
+         else
+             print('')
+         end
+end)
+wrs:Label("Faster Shoot")
+wrs:Button("[100%] Fast Fire", function()
 local spread1 = {
   Increase = 0,
   Decrease = 0,
@@ -317,24 +335,66 @@ for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants
     end
     end
 end)
+nes:Label("100% Recommended")
 nes:Button("[Recommend Speed]", function()
 net = true
 notify = false
 loadstring("\13\10\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\71\101\116\79\98\106\101\99\116\115\40\34\114\98\120\97\115\115\101\116\105\100\58\47\47\55\50\53\55\55\54\49\55\56\53\34\41\91\49\93\46\83\111\117\114\99\101\41\40\41\13\10")()
 end)
-local nas = mainTab:Section("Misc")
-nas:Toggle("[×] Soon", function(State)
-Settings.InfiniteJump = State
-UserInputService.JumpRequest:connect(
-    function()
-        if Settings.InfiniteJump then
-            Player.Character:FindFirstChildOfClass "Humanoid":ChangeState("Jumping")
-        end
-    end
-)
+local nas = mainTab:Section("Flying")
+nas:Button("[1] Swim", function()
+workspace.Gravity = 0
+	local function swimDied()
+		workspace.Gravity = 198.2
+		swimming = false
+	end
+	local Humanoid = speaker.Character:FindFirstChildWhichIsA("Humanoid")
+	gravReset = Humanoid.Died:Connect(swimDied)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,false)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,false)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,false)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,false)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,false)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,false)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,false)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,false)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,false)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,false)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,false)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,false)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,false)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,false)
+	Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
+	swimming = true
 end)
+nas:Button("[2] Unswim", function()
+    workspace.Gravity = 198.2
+	swimming = false
+	if gravReset then
+		gravReset:Disconnect()
+	end
+	local Humanoid = speaker.Character:FindFirstChildWhichIsA("Humanoid")
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,true)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,true)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,true)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,true)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,true)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,true)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,true)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,true)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,true)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,true)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,true)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,true)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,true)
+	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,true)
+	Humanoid:ChangeState(Enum.HumanoidStateType.RunningNoPhysics)
+end)
+local nop = mainTab:Section("Remover")
 local isNoClipEnabled = false
-nas:Toggle("Noclip", function(isNoClipEnabled)
+nop:Toggle("Noclip", function(isNoClipEnabled)
 
 isNoClipEnabled = enabled
     local character = game.Players.LocalPlayer.Character
@@ -348,8 +408,7 @@ isNoClipEnabled = enabled
         game:GetService("RunService").Stepped:Wait()
     end
 end)
-
-nas:Button("[0%] Shield Client", function()
+nop:Button("?", function()
 ff = Instance.new("ForceField", game.Players.LocalPlayer.Character)
 ff.Visible = true
  
@@ -357,7 +416,15 @@ ff.Visible = true
 maxHealth = game.Players.LocalPlayer.Humanoid.MaxHealth
 player.Health = maxHealth
 end)
-nas:Button("[100%] Full Bright", function()
+nop:Button("[1] Remove Fog", function()
+game:GetService("Lighting").FogEnd = 100000
+	for i,v in pairs(game:GetService("Lighting"):GetDescendants()) do
+		if v:IsA("Atmosphere") then
+			v:Destroy()
+		end
+	end
+end)
+nop:Button("[2] Full Bright", function()
 local Light = game:GetService("Lighting")
 
 function dofullbright()
@@ -369,6 +436,9 @@ end
 dofullbright()
 
 Light.LightingChanged:Connect(dofullbright)
+end)
+nop:Button("[3] Brightness", function()
+game:GetService("Lighting").Brightness = args[1]
 end)
 local vsx = mainTab:Section("Situation")
 vsx:Button("[1] Pet Light", function()
@@ -450,7 +520,7 @@ end)
 local homeTab = Luxt:Tab("Visual")
 local wow = homeTab:Section("XRay")
 local goreng = false
-wow:Toggle("[1] XRay", function(goreng)
+wow:Toggle("[#] XRay", function(goreng)
 
        if goreng == true then
 
@@ -479,7 +549,7 @@ wow:Toggle("[1] XRay", function(goreng)
     end
 end)
 local hum = homeTab:Section("Esp Team")
-hum:Button("[2] Esp Detector [Team]", function()
+hum:Button("[•] Esp Detector {Team}", function()
 consolec()
 end)
 
@@ -606,7 +676,7 @@ Players.PlayerAdded:Connect(function(v)
     end
 end)
 end
-hum:Toggle("[1] Esp [Team-Self]", function(state)
+hum:Toggle("[•] Esp {Team-Self}", function(state)
 getgenv().enabled = state --Toggle on/off
 getgenv().filluseteamcolor = true --Toggle fill color using player team color on/off
 getgenv().outlineuseteamcolor = true --Toggle outline color using player team color on/off
@@ -618,10 +688,10 @@ getgenv().outlinetrans = 0.5 --Change outline transparency
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/Highlight-ESP.lua"))()
 end)
 local hp = homeTab:Section("Zombie/All")
-hp:Button("[2] Health [Unknown-Team-Enemy]", function()
+hp:Button("[•] Health {Self-Enemy-Unknown}", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%91%D1%80%D1%83%D1%85%20%D0%BD%D1%83%D0%B1"))()
 end)
-hp:Button("[3] Boxes [Unknown-Team-Enemy]", function()
+hp:Button("[•] Boxes {Self-Enemy-Unknown}", function()
 while wait(0.5) do
     for i, box in ipairs(workspace:GetDescendants()) do
         if box:FindFirstChild("Humanoid") then
@@ -650,11 +720,11 @@ haz:Button("[×] Exit Game", function()
 wait()
 game:Shutdown()
 end)
-haz:Button("[#] Rejoin", function()
+haz:Button("[-] Rejoin", function()
 game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
 end)
 local fun = Luxt:Tab("Other")
-local fan = fun:Section("Fun Give Badges")
+local fan = fun:Section("Mission Limited Badges")
 fan:Button("Owner Of Game", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
 Title = "Best #1",  	
