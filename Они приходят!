@@ -68,7 +68,7 @@ VHubAndSection.BackgroundTransparency = 1.000
 VHubAndSection.Position = UDim2.new(0.0820000023, 0, 0, 0)
 VHubAndSection.Size = UDim2.new(0, 164, 0, 30)
 VHubAndSection.Font = Enum.Font.GothamBold
-VHubAndSection.Text = "Universe X    |    v0.4.2"
+VHubAndSection.Text = "Universe X    |    v0.4.3"
 VHubAndSection.TextColor3 = Color3.fromRGB(0, 0, 0)
 VHubAndSection.TextSize = 14.000
 VHubAndSection.TextXAlignment = Enum.TextXAlignment.Left
@@ -95,7 +95,7 @@ VersionOutdatedText.BackgroundTransparency = 1.000
 VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
 VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
 VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = " Status: Updated 5 hours ago  |  Limited Script"
+VersionOutdatedText.Text = " Status: Updated 20 hours ago  |  Limited Script"
 VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 0, 255)
 VersionOutdatedText.TextSize = 15.000
 VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
@@ -184,6 +184,9 @@ end)
 
 local newtabs = Luxt:Tab("Interface")
 local bass = newtabs:Section("Camera")
+bass:TextBox("[#] Fov", "Amount", function(txt)
+game.Workspace.CurrentCamera.FieldOfView = txt
+end)
 bass:Toggle("[#] Soon Inviscam", function(Settings)
    if Settings == false then
          Player.DevCameraOcclusionMode = "Zoom"
@@ -343,10 +346,52 @@ for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants
     end
     end
 end)
+nes:Button("[•] Speed Up", function()
+for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+
+
+if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+
+
+game:GetService("RunService").Heartbeat:connect(function()
+
+v.Velocity = Vector3.new(0,35,0)
+
+
+wait(0.5)
+
+end)
+
+end
+
+end
+
+
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+
+
+	Title = "Universe X";
+	
+
+	Text = "Speed Up.";
+	
+
+	Icon = ""})
+	
+
+Duration = 16;
+end)
 nes:Label("100% Recommended")
 nes:Button("[Recommend Speed]", function()
 net = true
 notify = false
+loadstring("\13\10\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\71\101\116\79\98\106\101\99\116\115\40\34\114\98\120\97\115\115\101\116\105\100\58\47\47\55\50\53\55\55\54\49\55\56\53\34\41\91\49\93\46\83\111\117\114\99\101\41\40\41\13\10")()
+end)
+nes:Button("[•] Speed", function()
+net = true -- if false = do nothing
+notify = false -- set this to false if u don't want to see notiflication
+
 loadstring("\13\10\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\71\101\116\79\98\106\101\99\116\115\40\34\114\98\120\97\115\115\101\116\105\100\58\47\47\55\50\53\55\55\54\49\55\56\53\34\41\91\49\93\46\83\111\117\114\99\101\41\40\41\13\10")()
 end)
 local nas = mainTab:Section("Flying")
@@ -449,9 +494,6 @@ nop:Button("[3] Brightness", function()
 game:GetService("Lighting").Brightness = args[1]
 end)
 local vsx = mainTab:Section("Situation")
-vsx:Button("[1] Pet Light", function()
-loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Light%20Part%20Pet'))()
-end)
 vsx:Button("[2] Views Ping", function()
 loadstring(game:HttpGet(('https://pastebin.com/raw/MvKKJ331'),true))()
 end)
@@ -557,6 +599,9 @@ wow:Toggle("[#] XRay", function(goreng)
     end
 end)
 local hum = homeTab:Section("Esp Team")
+hum:Button("[•] Chams {New}", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%A1%D1%83%D0%BF%D0%B5%D1%80%20%D1%83%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%BD%D0%B5%D1%82"))()
+end)
 hum:Button("[•] Esp Detector {Team}", function()
 consolec()
 end)
@@ -709,6 +754,26 @@ while wait(0.5) do
                     esp.Adornee = box
                     esp.ZIndex = 0
                     esp.Size = Vector3.new(5, 6, 2)
+                    esp.Transparency = 1 --Changes Transparency 
+                    esp.Color3 = Color3.fromRGB(0,255,0) --Color change
+                    esp.AlwaysOnTop = true
+                    esp.Name = "EspBox"
+                end
+            end
+        end
+    end
+end
+end)
+hp:Button("[•] Boxes {Self-Enemy-Unknown}", function()
+while wait(0.5) do
+    for i, box in ipairs(workspace:GetDescendants()) do
+        if box:FindFirstChild("Humanoid") then
+            if not box:FindFirstChild("EspBox") then
+                if box ~= game.Players.LocalPlayer.Character then
+                    local esp = Instance.new("BoxHandleAdornment",box)
+                    esp.Adornee = box
+                    esp.ZIndex = 0
+                    esp.Size = Vector3.new(5, 6, 2)
                     esp.Transparency = 0.5 --Changes Transparency 
                     esp.Color3 = Color3.fromRGB(0,255,0) --Color change
                     esp.AlwaysOnTop = true
@@ -779,6 +844,14 @@ end)
 haz:Button("[×] Exit Game", function()
 wait()
 game:Shutdown()
+end)
+haz:Button("[~] Reset", function()
+game.Players.LocalPlayer.Character.Head:Destroy()
+if game.Players.LocalPlayer.Character.Humanoid.Health < 5 then 
+    local deathmanok = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").position
+    wait(1.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(deathmanok)
+end
 end)
 haz:Button("[-] Rejoin", function()
 game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
