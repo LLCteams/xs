@@ -95,7 +95,7 @@ VersionOutdatedText.BackgroundTransparency = 1.000
 VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
 VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
 VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = " Status: Patched  |  Final version"
+VersionOutdatedText.Text = " Status: Working  |  Final version"
 VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 0, 255)
 VersionOutdatedText.TextSize = 15.000
 VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
@@ -144,7 +144,6 @@ Text = "Universe X failed.",
 	Icon = "rbxassetid://8677814109",
 	Duration = 3
 })
-wait(99999999999999999999)
 newonep()
 ScreenGui:Destroy()
 end)
