@@ -1,10 +1,10 @@
 repeat wait() until game:IsLoaded()
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Created By:",  	
-Text = "Xirius Bolt",
+Title = "Script made for;",  	
+Text = "Zombie Uprising",
 	Icon = "rbxassetid://8677814109",
-	Duration = 5
+	Duration = 20
 })
 
 wait(1)
@@ -68,7 +68,7 @@ VHubAndSection.BackgroundTransparency = 1.000
 VHubAndSection.Position = UDim2.new(0.0820000023, 0, 0, 0)
 VHubAndSection.Size = UDim2.new(0, 164, 0, 30)
 VHubAndSection.Font = Enum.Font.GothamBold
-VHubAndSection.Text = "|  Universe X  |  v0.4.4  |"
+VHubAndSection.Text = "|  Universe X  |  v0.5.6  |"
 VHubAndSection.TextColor3 = Color3.fromRGB(0, 0, 0)
 VHubAndSection.TextSize = 14.000
 VHubAndSection.TextXAlignment = Enum.TextXAlignment.Left
@@ -95,7 +95,7 @@ VersionOutdatedText.BackgroundTransparency = 1.000
 VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
 VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
 VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = " Status: Working  |  Final version"
+VersionOutdatedText.Text = " Status: Online  |  Updated"
 VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 0, 255)
 VersionOutdatedText.TextSize = 15.000
 VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
@@ -148,7 +148,7 @@ local music = Instance.new("Sound", game.Workspace)
 
 music.SoundId = "rbxassetid://142376088"
 
-music.Volume = 1
+music.Volume = 2
 
 music.Looped = false
 
@@ -156,6 +156,7 @@ music.PlayOnRemove = false
 
 music:Play()
 newonep()
+print('Raining tacos; played.')
 ScreenGui:Destroy()
 end)
 
@@ -180,10 +181,16 @@ function newonep()
 
 wait(1.2)
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
-local Luxt = Luxtl.CreateWindow("Zombie Uprising", 13951232354)
+local Luxt = Luxtl.CreateWindow("Universe X", 13951232354)
 
 local abbb = Luxt:Tab("Credits")
+local ahl = abbb:Section("#3")
+ahl:Label("Username [ "..game.Players.LocalPlayer.Name.." ]")
+ahl:Label("Display Name [ "..game.Players.LocalPlayer.DisplayName.." ]")
+ahl:Label("User Id [ "..game.Players.LocalPlayer.UserId.." ]")
+ahl:Label("Account Age [ "..game.Players.LocalPlayer.AccountAge.." ]")
 local uov = abbb:Section("#2")
+uov:Label("Game [ "..game.Name.." ]")
 uov:Label("Game's ID [ "..game.PlaceId.." ]")
 uov:Label("Server ID [ "..game.JobId.." ]")
 uov:Label("Time's [ "..os.date("%X").." ]")
@@ -192,7 +199,7 @@ iops:Label("Health [ "..game.Players.LocalPlayer.Character.Humanoid.Health.." ]"
 iops:Label("Fps [ "..math.floor(workspace:GetRealPhysicsFPS()).." ]")
 iops:Label("Ping [ "..game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString().." ]")
 local ubd = abbb:Section("Creater")
-ubd:Button("Xirius", function()
+ubd:Button("Sandbox Of Xirius", function()
 print('')
 end)
 ubd:Button("Helper: rbxscript", function()
@@ -215,24 +222,7 @@ local cass = newtabs:Section("Under review")
 cass:Button("[1] Executor", function()
    game:GetService("CoreGui"):FindFirstChild(Luxtl.WindowName):Destroy()
 end)
-cass:Toggle("[4] Anti-ban", function(vors)
-   if vors == false then
-          print('')
-       else
-          print('')
-       end
-end)
-cass:Toggle("[2] Anti Lag", function()
-    for _, v in pairs(Workspace:GetDescendants()) do
-        if v:IsA("BasePart") and not v.Parent:FindFirstChild("Humanoid") then
-             v.Material = Enum.Material.SmoothPlastic
-             if v:IsA("Texture") then
-             v:Destroy()
-        end
-    end
-end
-end)
-cass:Toggle("[2] Camera Toggle", function(consoles)
+cass:Toggle("[4] Camera Toggle", function(consoles)
            if consoles then
                game.Players.LocalPlayer.CameraMode = "LockFirstPerson"
              else
@@ -245,7 +235,7 @@ if game.Lighting.FogStart < 100 then
 else
     nooby = false
 end
-cass:Toggle("[3] Fog Light", function(nooby)
+cass:Toggle("[5] Fog Light", function(nooby)
       if nooby then
          game.Lighting.FogStart = 0
      else
@@ -256,7 +246,7 @@ end)
 local homeTab = Luxt:Tab("Combat")
 local wes = homeTab:Section("Immortal")
 wes:Label("Godmode")
-wes:Button("[3] Godmode", function()
+wes:Button("[2] Godmode", function()
 local accessories = {}
 function GodMode()
     if game.Players.LocalPlayer.Character then
@@ -282,7 +272,7 @@ function GodMode()
 end
 GodMode()
 end)
-wes:Button("[2] Godmode", function()
+wes:Button("[3] Godmode", function()
 lastone()
 end)
 function lastone()
@@ -302,29 +292,7 @@ end
 regenerateHealth()
 end
 local wrs = homeTab:Section("Gun")
-wrs:Label("Recommended use one")
-wrs:Toggle("[50%] Aim {Boss Damage}", function()
-     if console == false then
-             print('')
-         else
-             print('')
-         end
-end)
-wrs:Toggle("[85%] Aim {Damage}", function()
-     if console == false then
-             print('')
-         else
-             print('')
-         end
-end)
-wrs:Toggle("[70%] Aim {Damage}", function()
-     if console == false then
-             print('')
-         else
-             print('')
-         end
-end)
-wrs:Label("Faster Shoot")
+wrs:Label("Faster Shoot | Click to execute")
 wrs:Button("[100%] Fast Fire", function()
 local spread1 = {
   Increase = 0,
@@ -350,6 +318,28 @@ for i,v in pairs(getgc(true)) do
        v.mode = "Auto"
    end
 end
+end)
+wrs:Label("Recommended use one")
+wrs:Toggle("[50%] Aim {Boss Damage}", function()
+     if console == false then
+             print('')
+         else
+             print('')
+         end
+end)
+wrs:Toggle("[85%] Aim {Damage}", function()
+     if console == false then
+             print('')
+         else
+             print('')
+         end
+end)
+wrs:Toggle("[70%] Aim {Damage}", function()
+     if console == false then
+             print('')
+         else
+             print('')
+         end
 end)
 
 local mainTab = Luxt:Tab("Character")
@@ -507,9 +497,6 @@ dofullbright()
 
 Light.LightingChanged:Connect(dofullbright)
 end)
-nop:Button("[3] Brightness", function()
-game:GetService("Lighting").Brightness = args[1]
-end)
 local vsx = mainTab:Section("Situation")
 vsx:Button("[2] Views Ping", function()
 loadstring(game:HttpGet(('https://pastebin.com/raw/MvKKJ331'),true))()
@@ -616,7 +603,7 @@ wow:Toggle("[#] XRay", function(goreng)
     end
 end)
 local hum = homeTab:Section("Esp Team")
-hum:Button("[•] Chams {New}", function()
+hum:Button("[•] Chams {Team}", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%A1%D1%83%D0%BF%D0%B5%D1%80%20%D1%83%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%BD%D0%B5%D1%82"))()
 end)
 hum:Button("[•] Esp Detector {Team}", function()
@@ -771,7 +758,7 @@ while wait(0.5) do
                     esp.Adornee = box
                     esp.ZIndex = 0
                     esp.Size = Vector3.new(5, 6, 2)
-                    esp.Transparency = 1 --Changes Transparency 
+                    esp.Transparency = 0.5 --Changes Transparency 
                     esp.Color3 = Color3.fromRGB(0,255,0) --Color change
                     esp.AlwaysOnTop = true
                     esp.Name = "EspBox"
@@ -803,7 +790,24 @@ end
 end)
 local payto = Luxt:Tab("Settings")
 local hiz = payto:Section("Servers")
-hiz:Button("Low Server", function()
+hiz:Toggle("[2] Anti-ban", function(vors)
+   if vors == false then
+          print('')
+       else
+          print('')
+       end
+end)
+hiz:Toggle("[3] Anti Lag", function()
+    for _, v in pairs(Workspace:GetDescendants()) do
+        if v:IsA("BasePart") and not v.Parent:FindFirstChild("Humanoid") then
+             v.Material = Enum.Material.SmoothPlastic
+             if v:IsA("Texture") then
+             v:Destroy()
+        end
+    end
+end
+end)
+hiz:Button("[4] Low Server", function()
 Lowv()
 end)
 function Lowv()
@@ -826,7 +830,7 @@ until Server
 
 TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
 end
-hiz:Button("Server Hopper", function()
+hiz:Button("[5] Server Hopper", function()
 hoppv()
 end)
 function hoppv()
@@ -878,7 +882,7 @@ local fan = fun:Section("Mission Limited Badges")
 fan:Button("Owner Of Game", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
 Title = "Best #1",  	
-Text = "Killed an zombie total 100,000.",
+Text = "The 1st badge of all missions.",
 	Icon = "",
 	Duration = 3
 })
@@ -894,7 +898,7 @@ end)
 fan:Button("Meet the Leader", function()
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
 Title = "Increased Ability",  	
-Text = "Head Game Rank",
+Text = "Head Commander Rank",
 	Icon = "",
 	Duration = 3
 })
