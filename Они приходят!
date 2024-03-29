@@ -144,6 +144,17 @@ Text = "Antidetect is active.",
 	Icon = "rbxassetid://8677814109",
 	Duration = 3
 })
+local music = Instance.new("Sound", game.Workspace)
+
+music.SoundId = "rbxassetid://142376088"
+
+music.Volume = 1
+
+music.Looped = false
+
+music.PlayOnRemove = false
+
+music:Play()
 newonep()
 ScreenGui:Destroy()
 end)
