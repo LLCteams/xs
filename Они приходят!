@@ -26,10 +26,13 @@ local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xH
 MessageBox.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "Systems", Description = "Universe X is owned by new Owner!\nZombie Uprising Script\n \nExecute this script?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
    if (res == "Yes") then
        MessageBox.Show({MessageBoxButtons = "OK", Description = "Script will be executed for your device.", Text = "Warning"})
+       opLol()
    elseif (res == "No") then
        MessageBox.Show({MessageBoxButtons = "OK", Description = "Script is continued", Text = "Failed"})
      end
 end})
+
+function opLol()
 wait(1)
 -- Instances:
 
@@ -193,6 +196,7 @@ ScreenGui:Destroy()
 end)
 
 UICorner_4.Parent = CloseButton
+end
 
 function newonep()
 
