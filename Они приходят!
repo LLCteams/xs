@@ -8,6 +8,29 @@ Text = "Zombie Uprising",
 })
 
 wait(1)
+local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
+
+
+--[[
+   MessageBoxIcons:
+      • Question
+      • Error
+      • Warning
+
+   MessageBoxButtons:
+      • YesNo
+      • OKCancel
+      • OK
+--]]
+-- AnchorPoint is 0.5,0.5
+MessageBox.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "Systems", Description = "Universe X is owned by new Owner!\nZombie Uprising Script\n \nExecute this script?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
+   if (res == "Yes") then
+       MessageBox.Show({MessageBoxButtons = "OK", Description = "Script will be executed for your device.", Text = "Warning"})
+   elseif (res == "No") then
+       MessageBox.Show({MessageBoxButtons = "OK", Description = "Script is continued", Text = "Failed"})
+     end
+end})
+wait(1)
 -- Instances:
 
 local ScreenGui = Instance.new("ScreenGui")
@@ -134,16 +157,26 @@ CopyDiscordLinkButton.BackgroundColor3 = Color3.fromRGB(255, 211, 1)
 CopyDiscordLinkButton.Position = UDim2.new(0.600000024, 0, 0.759259224, 0)
 CopyDiscordLinkButton.Size = UDim2.new(0, 150, 0, 30)
 CopyDiscordLinkButton.Font = Enum.Font.Gotham
-CopyDiscordLinkButton.Text = "Script"
+CopyDiscordLinkButton.Text = "[ EXIT ]"
 CopyDiscordLinkButton.TextColor3 = Color3.fromRGB(255, 0, 255)
 CopyDiscordLinkButton.TextSize = 12.000
 CopyDiscordLinkButton.MouseButton1Down:connect(function()
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Error; 1092",  	
-Text = "Antidetect is active.",
-	Icon = "rbxassetid://8677814109",
-	Duration = 3
-})
+ScreenGui:Destroy()
+end)
+
+UICorner_3.Parent = CopyDiscordLinkButton
+
+CloseButton.Name = "CloseButton"
+CloseButton.Parent = MainFrame
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 221, 1)
+CloseButton.Position = UDim2.new(0.0800000429, 0, 0.759259224, 0)
+CloseButton.Size = UDim2.new(0, 150, 0, 30)
+CloseButton.Font = Enum.Font.Gotham
+CloseButton.Text = "[ EXECUTE ]"
+CloseButton.TextColor3 = Color3.fromRGB(255, 0, 255)
+CloseButton.TextSize = 12.000
+CloseButton.MouseButton1Down:connect(function() 
 local music = Instance.new("Sound", game.Workspace)
 
 music.SoundId = "rbxassetid://142376088"
@@ -157,21 +190,6 @@ music.PlayOnRemove = false
 music:Play()
 newonep()
 print('Raining tacos; played.')
-ScreenGui:Destroy()
-end)
-
-UICorner_3.Parent = CopyDiscordLinkButton
-
-CloseButton.Name = "CloseButton"
-CloseButton.Parent = MainFrame
-CloseButton.BackgroundColor3 = Color3.fromRGB(255, 221, 1)
-CloseButton.Position = UDim2.new(0.0800000429, 0, 0.759259224, 0)
-CloseButton.Size = UDim2.new(0, 150, 0, 30)
-CloseButton.Font = Enum.Font.Gotham
-CloseButton.Text = "Exit Script"
-CloseButton.TextColor3 = Color3.fromRGB(255, 0, 255)
-CloseButton.TextSize = 12.000
-CloseButton.MouseButton1Down:connect(function() 
 ScreenGui:Destroy()
 end)
 
@@ -199,10 +217,10 @@ iops:Label("Health [ "..game.Players.LocalPlayer.Character.Humanoid.Health.." ]"
 iops:Label("Fps [ "..math.floor(workspace:GetRealPhysicsFPS()).." ]")
 iops:Label("Ping [ "..game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString().." ]")
 local ubd = abbb:Section("Creater")
-ubd:Button("Sandbox Of Xirius", function()
+ubd:Button("--- New Owner ---", function()
 print('')
 end)
-ubd:Button("Helper: rbxscript", function()
+ubd:Button("Helper: Xeploits", function()
 print('')
 end)
 
