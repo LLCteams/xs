@@ -74,9 +74,10 @@ function headsetLib(title, description, button, callback, closewhenclicked, text
 end
 
 
-headsetLib("Universe X", "Allow to execute Universe X from new page?", "Allow", function() -- # title, description (description, button), callback
+headsetLib("Universe X", "Allow to execute Universe X\nfrom new page?", "Allow", function() -- # title, description (description, button), callback
     print("Allowed.")
     newXz()
+    wait(1.2)
 end, true, false) -- # closewhenclicked, textscaled
 
 function newXz()
