@@ -1,10 +1,10 @@
 repeat wait() until game:IsLoaded()
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Script made for;",  	
-Text = "Zombie Uprising",
+Title = "Looking for Volt?",  	
+Text = "Visit our websites",
 	Icon = "rbxassetid://8677814109",
-	Duration = 20
+	Duration = 10
 })
 
 function headsetLib(title, description, button, callback, closewhenclicked, textscaled)
@@ -176,7 +176,7 @@ VHubAndSection.BackgroundTransparency = 1.000
 VHubAndSection.Position = UDim2.new(0.0820000023, 0, 0, 0)
 VHubAndSection.Size = UDim2.new(0, 164, 0, 30)
 VHubAndSection.Font = Enum.Font.GothamBold
-VHubAndSection.Text = "|  Universe X  |v0.5.7|  Zombie Uprising |"
+VHubAndSection.Text = "|  Universe X  | Beta |  Zombie Uprising |"
 VHubAndSection.TextColor3 = Color3.fromRGB(0, 0, 0)
 VHubAndSection.TextSize = 14.000
 VHubAndSection.TextXAlignment = Enum.TextXAlignment.Left
@@ -203,7 +203,7 @@ VersionOutdatedText.BackgroundTransparency = 1.000
 VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
 VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
 VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = " Status: New version available! {|} v0.5.7"
+VersionOutdatedText.Text = " Status: Bypassed Update {|} v1.6.1"
 VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 0, 255)
 VersionOutdatedText.TextSize = 15.000
 VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
@@ -261,11 +261,10 @@ CloseButton.Text = "[ EXECUTE ]"
 CloseButton.TextColor3 = Color3.fromRGB(255, 0, 255)
 CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function() 
-print('Unfound; items.script Universe-X')
 ScreenGui:Destroy()
-wait(1)
+print('Allowed.items; items.script Universe-X')
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-wait(999999999999999999)
+wait(1)
 newonep()
 end)
 
