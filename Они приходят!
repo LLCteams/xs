@@ -16,6 +16,13 @@ function headsetLib(title, description, button, callback, closewhenclicked, text
             > callback: A function to execute when the button is clicked.
             > closewhenclicked: A boolean indicating whether the dialog box should close when the button is clicked.
             > textscaled: A string specifying which elements should have scaled text.
+
+local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://142376088"
+music.Volume = 0.5
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
     ]]--
 
     local Players = game:GetService("Players")
@@ -74,14 +81,14 @@ function headsetLib(title, description, button, callback, closewhenclicked, text
 end
 
 
-headsetLib("Universe X", "Allow to execute Universe X\nfrom new page?", "Allow", function() -- # title, description (description, button), callback
+headsetLib("Universe X", "Execute Latest Universe X?", "Execute", function() -- # title, description (description, button), callback
     print("Allowed.")
     newXz()
-    wait(1.2)
+    wait(0.5)
 end, true, false) -- # closewhenclicked, textscaled
 
-function newXz()
 wait(1)
+function newXz()
 local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
 
 
@@ -97,12 +104,12 @@ local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xH
       • OK
 --]]
 -- AnchorPoint is 0.5,0.5
-MessageBox.Show({Position = UDim2.new(0.5,0,0.5,0), Text = "Systems", Description = "Universe X is owned by new Owner!\nZombie Uprising Script\n \nExecute this script?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
+MessageBox.Show({Position = UDim2.new(0.7,0,0.7,0), Text = "Systems", Description = "Universe X is owned by new Owner!\nZombie Uprising Script\n \nExecute this script?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
    if (res == "Yes") then
        MessageBox.Show({MessageBoxButtons = "OK", Description = "Script will be executed for your device.", Text = "Warning"})
        opLol()
    elseif (res == "No") then
-       MessageBox.Show({MessageBoxButtons = "OK", Description = "Script is continued", Text = "Failed"})
+       MessageBox.Show({MessageBoxButtons = "OK", Description = "Script is not continued\nto be executed", Text = "Failed"})
      end
 end})
 end
@@ -169,7 +176,7 @@ VHubAndSection.BackgroundTransparency = 1.000
 VHubAndSection.Position = UDim2.new(0.0820000023, 0, 0, 0)
 VHubAndSection.Size = UDim2.new(0, 164, 0, 30)
 VHubAndSection.Font = Enum.Font.GothamBold
-VHubAndSection.Text = "|  Universe X  |  Zombie Uprising |"
+VHubAndSection.Text = "|  Universe X  |v0.5.7|  Zombie Uprising |"
 VHubAndSection.TextColor3 = Color3.fromRGB(0, 0, 0)
 VHubAndSection.TextSize = 14.000
 VHubAndSection.TextXAlignment = Enum.TextXAlignment.Left
@@ -196,7 +203,7 @@ VersionOutdatedText.BackgroundTransparency = 1.000
 VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
 VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
 VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = " Status: Online  {|} v0.5.7"
+VersionOutdatedText.Text = " Status: New version available! {|} v0.5.7"
 VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 0, 255)
 VersionOutdatedText.TextSize = 15.000
 VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
@@ -254,20 +261,12 @@ CloseButton.Text = "[ EXECUTE ]"
 CloseButton.TextColor3 = Color3.fromRGB(255, 0, 255)
 CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function() 
-local music = Instance.new("Sound", game.Workspace)
-
-music.SoundId = "rbxassetid://142376088"
-
-music.Volume = 0.5
-
-music.Looped = false
-
-music.PlayOnRemove = false
-
-music:Play()
-newonep()
-print('Raining tacos; played.')
+print('Unfound; items.script Universe-X')
 ScreenGui:Destroy()
+wait(1)
+game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
+wait(999999999999999999)
+newonep()
 end)
 
 UICorner_4.Parent = CloseButton
