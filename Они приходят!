@@ -414,6 +414,7 @@ print('Raining tacos; unfounded.')
 end)
 
 UICorner_4.Parent = CloseButton
+end
 
 function newonep()
 
