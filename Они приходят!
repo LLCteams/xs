@@ -1,3 +1,5 @@
+game.Players.LocalPlayer:Kick("We are be back soon!")
+
 local DiscordLib =
     loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
