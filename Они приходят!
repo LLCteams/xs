@@ -140,6 +140,7 @@ loadstring(game:HttpGet("https://pastebin.com/raw/0N1y7RyM"))()
         TextBox.Text = ""
     end
 end)
+end
 
 function BETA()
 
