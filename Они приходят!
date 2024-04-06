@@ -391,7 +391,6 @@ CopyDiscordLinkButton.Text = "[ Close ]"
 CopyDiscordLinkButton.TextColor3 = Color3.fromRGB(255, 0, 255)
 CopyDiscordLinkButton.TextSize = 12.000
 CopyDiscordLinkButton.MouseButton1Down:connect(function()
-game:GetService("StarterGui"):SetCore("SendNotification",{ 	
 ScreenGui:Destroy()
 end)
 
