@@ -1,19 +1,15 @@
-game.Players.LocalPlayer:Kick("We are be back soon!")
-
-local DiscordLib =
-    loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
+local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
 local win = DiscordLib:Window("Loader X")
 
 local serv = win:Server("Loader", "1")
-
 local btns = serv:Channel("Universe X")
 
 btns:Button(
     "Hide And Seek",
     function()
         DiscordLib:Notification("Notify", "Executed!", "Okay!")
-        BETA()
+        Hide()
     end
 )
 
@@ -23,11 +19,14 @@ btns:Button(
     "Zombie Uprising",
     function()
         DiscordLib:Notification("Notify", "Executed!", "Okay!")
-        IOP()
+        zombie()
     end
 )
 
-function IOP()
+function zombie()
+
+repeat wait() until game:IsLoaded()
+
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
@@ -71,7 +70,7 @@ Instructions.Size = UDim2.new(1, 0, 0, 30)
 Instructions.Position = UDim2.new(0, 0, 0.2, 0)
 Instructions.Text = "Enter your key to enter script."
 Instructions.TextSize = 13
-Instructions.TextColor3 = Color3.fromRGB(150, 150, 150)
+Instructions.TextColor3 = Color3.fromRGB(255, 0, 0)
 Instructions.BackgroundTransparency = 1
 Instructions.Parent = Frame
 
@@ -142,7 +141,6 @@ LEL()
         TextBox.Text = ""
     end
 end)
-end
 
 function LEL()
 function headsetLib(title, description, button, callback, closewhenclicked, textscaled)
@@ -254,13 +252,12 @@ end})
 end
 
 function iopBob()
-repeat wait() until game:IsLoaded()
 
 game:GetService("StarterGui"):SetCore("SendNotification",{ 	
 Title = "Script made for;",  	
 Text = "Zombie Uprising",
 	Icon = "rbxassetid://8677814109",
-	Duration = 20
+	Duration = 2
 })
 
 wait(1)
@@ -324,7 +321,7 @@ VHubAndSection.BackgroundTransparency = 1.000
 VHubAndSection.Position = UDim2.new(0.0820000023, 0, 0, 0)
 VHubAndSection.Size = UDim2.new(0, 164, 0, 30)
 VHubAndSection.Font = Enum.Font.GothamBold
-VHubAndSection.Text = "|  Universe X  | Beta |  v0.7.9  |"
+VHubAndSection.Text = "|  Universe X  | Beta | v1.6.1  |"
 VHubAndSection.TextColor3 = Color3.fromRGB(0, 0, 0)
 VHubAndSection.TextSize = 14.000
 VHubAndSection.TextXAlignment = Enum.TextXAlignment.Left
@@ -351,7 +348,7 @@ VersionOutdatedText.BackgroundTransparency = 1.000
 VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
 VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
 VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = " Status: Online  |  Updated"
+VersionOutdatedText.Text = " Status: Bypass Update  |  v1.6.1"
 VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 0, 255)
 VersionOutdatedText.TextSize = 15.000
 VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
@@ -390,7 +387,7 @@ CopyDiscordLinkButton.BackgroundColor3 = Color3.fromRGB(255, 211, 1)
 CopyDiscordLinkButton.Position = UDim2.new(0.600000024, 0, 0.759259224, 0)
 CopyDiscordLinkButton.Size = UDim2.new(0, 150, 0, 30)
 CopyDiscordLinkButton.Font = Enum.Font.Gotham
-CopyDiscordLinkButton.Text = "[ CLOSE ]"
+CopyDiscordLinkButton.Text = "[ Close ]"
 CopyDiscordLinkButton.TextColor3 = Color3.fromRGB(255, 0, 255)
 CopyDiscordLinkButton.TextSize = 12.000
 CopyDiscordLinkButton.MouseButton1Down:connect(function()
@@ -406,21 +403,17 @@ CloseButton.BackgroundColor3 = Color3.fromRGB(255, 221, 1)
 CloseButton.Position = UDim2.new(0.0800000429, 0, 0.759259224, 0)
 CloseButton.Size = UDim2.new(0, 150, 0, 30)
 CloseButton.Font = Enum.Font.Gotham
-CloseButton.Text = "[ EXECUTE ]"
+CloseButton.Text = "[ Execute ]"
 CloseButton.TextColor3 = Color3.fromRGB(255, 0, 255)
 CloseButton.TextSize = 12.000
 CloseButton.MouseButton1Down:connect(function() 
 ScreenGui:Destroy()
 newonep()
-print('Raining tacos; unfounded.')
 end)
 
 UICorner_4.Parent = CloseButton
-end
 
 function newonep()
-
-wait(1.2)
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
 local Luxt = Luxtl.CreateWindow("Universe X", 13951232354)
 
@@ -3247,8 +3240,9 @@ coroutine.wrap(LTLHER_fake_script)()
 end
 end
 end
+end
 
-function BETA()
+function Hide()
 
 repeat wait() until game:IsLoaded()
 
@@ -3340,7 +3334,7 @@ CheckKeyCorner.CornerRadius = UDim.new(0, 5)
 CheckKeyCorner.Parent = CheckKey
 
 GetKey.MouseButton1Click:Connect(function()
-   setclipboard("https://work.ink/1Uo5/luo7zxfz")
+   setclipboard("Soon")
 end)
 
 local function validateKey(key)
@@ -3480,6 +3474,12 @@ function iopBob()
 
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
 local Luxt = Luxtl.CreateWindow("Universe X", 13951232354)
+
+local nub = Luxt:Tab("Universe X")
+local bot = nub:Section("Other Script")
+bot:Button("Zombie Uprising", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/0N1y7RyM"))()
+end)
 
 local abbb = Luxt:Tab("Credits")
 local ahl = abbb:Section("#3")
