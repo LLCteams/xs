@@ -1,3 +1,5 @@
+game.Players.LocalPlayer:Kick('Universe X In Update, be back for some.minutes!')
+
 local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
 local win = DiscordLib:Window("Loader X")
