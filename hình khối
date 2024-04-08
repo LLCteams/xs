@@ -118,12 +118,12 @@ function Luxt1.CreateWindow(libName, logoId)
     MainFrame.Parent = shadow
     MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     MainFrame.Position = UDim2.new(0.048, 0,0.075, 0)
-    MainFrame.Size = UDim2.new(0, 333, 0, 442)
+    MainFrame.Size = UDim2.new(0, 233, 0, 442)
 
     sideHeading.Name = "sideHeading"
     sideHeading.Parent = MainFrame
     sideHeading.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
-    sideHeading.Size = UDim2.new(0, 155, 0, 452)
+    sideHeading.Size = UDim2.new(0, 155, 0, 442)
     sideHeading.ZIndex = 2
 
     MainCorner.CornerRadius = UDim.new(0, 5)
@@ -154,7 +154,7 @@ function Luxt1.CreateWindow(libName, logoId)
     hubName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     hubName.BackgroundTransparency = 1.000
     hubName.Position = UDim2.new(0.290000081, 0, 0.0299999975, 0)
-    hubName.Size = UDim2.new(0, 110, 0, 16)
+    hubName.Size = UDim2.new(0, 86, 0, 16)
     hubName.ZIndex = 2
     hubName.Font = Enum.Font.GothamSemibold
     hubName.Text = libName
@@ -203,7 +203,7 @@ function Luxt1.CreateWindow(libName, logoId)
     wave.Position = UDim2.new(0.0213434305, 0, 0, 0)
     wave.Size = UDim2.new(0.97865659, 0, 0.557522118, 0)
     wave.Image = "rbxassetid://13997143086"
-    wave.ImageColor3 = Color3.fromRGB(181, 249, 255)
+    wave.ImageColor3 = Color3.fromRGB(150, 150, 150)
     wave.ImageTransparency = 0.300
     wave.ScaleType = Enum.ScaleType.Slice
 
@@ -228,8 +228,8 @@ function Luxt1.CreateWindow(libName, logoId)
     shadow.Size = UDim2.new(0, 609, 0, 530)
     shadow.ZIndex = 0
     shadow.Image = "rbxassetid://13997143086"
-    shadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
-    shadow.ImageTransparency = 0.200
+    shadow.ImageColor3 = Color3.fromRGB(150, 231, 109)
+    shadow.ImageTransparency = 1.000
 
     local TabHandling = {}
 
@@ -270,7 +270,7 @@ function Luxt1.CreateWindow(libName, logoId)
         tabLogo.BorderSizePixel = 0
         tabLogo.Size = UDim2.new(0, 25, 0, 25)
         tabLogo.ZIndex = 2
-        tabLogo.Image = "rbxassetid://"..tabId
+        tabLogo.Image = "rbxassetid://13997143086"..tabId
         tabLogo.ImageColor3 = Color3.fromRGB(153, 255, 238)
         --
 
