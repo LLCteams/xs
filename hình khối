@@ -143,7 +143,7 @@ function Luxt1.CreateWindow(libName, logoId)
     hubLogo.Position = UDim2.new(0.0567928664, 0, 0.0243411884, 0)
     hubLogo.Size = UDim2.new(0, 30, 0, 30)
     hubLogo.ZIndex = 2
-    hubLogo.Image = "rbxassetid://13997143086"..logoId
+    hubLogo.Image = "rbxassetid://17070999089"..logoId
 
     MainCorner_2.CornerRadius = UDim.new(0, 999)
     MainCorner_2.Name = "MainCorner"
@@ -170,7 +170,7 @@ function Luxt1.CreateWindow(libName, logoId)
     tabFrame.BackgroundTransparency = 1.000
     tabFrame.BorderSizePixel = 0
     tabFrame.Position = UDim2.new(0.0761478543, 0, 0.126385808, 0)
-    tabFrame.Size = UDim2.new(0, 135, 0, 347)
+    tabFrame.Size = UDim2.new(0, 200, 0, 400) 135 -- 347
     tabFrame.ZIndex = 2
     tabFrame.ScrollBarThickness = 0
 
@@ -202,7 +202,7 @@ function Luxt1.CreateWindow(libName, logoId)
     wave.BackgroundTransparency = 1.000
     wave.Position = UDim2.new(0.0213434305, 0, 0, 0)
     wave.Size = UDim2.new(0.97865659, 0, 0.557522118, 0)
-    wave.Image = "rbxassetid://13997143086"
+    wave.Image = "rbxassetid://17070999089"
     wave.ImageColor3 = Color3.fromRGB(181, 249, 255)
     wave.ImageTransparency = 0.300
     wave.ScaleType = Enum.ScaleType.Slice
@@ -227,7 +227,7 @@ function Luxt1.CreateWindow(libName, logoId)
     shadow.Position = UDim2.new(0.319562584, 0, 0.168689325, 0)
     shadow.Size = UDim2.new(0, 609, 0, 530)
     shadow.ZIndex = 0
-    shadow.Image = "rbxassetid://13997143086"
+    shadow.Image = "rbxassetid://17070999089"
     shadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
     shadow.ImageTransparency = 0.200
 
@@ -270,7 +270,7 @@ function Luxt1.CreateWindow(libName, logoId)
         tabLogo.BorderSizePixel = 0
         tabLogo.Size = UDim2.new(0, 25, 0, 25)
         tabLogo.ZIndex = 2
-        tabLogo.Image = "rbxassetid://13997143086"..tabId
+        tabLogo.Image = "rbxassetid://17070999089"..tabId
         tabLogo.ImageColor3 = Color3.fromRGB(153, 255, 238)
         --
 
