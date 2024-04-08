@@ -141,7 +141,7 @@ function Luxt1.CreateWindow(libName, logoId)
     hubLogo.Parent = sideHeading
     hubLogo.BackgroundColor3 = Color3.fromRGB(153, 255, 238)
     hubLogo.Position = UDim2.new(0.0567928664, 0, 0.0243411884, 0)
-    hubLogo.Size = UDim2.new(0, 30, 0, 30)
+    hubLogo.Size = UDim2.new(0, 80, 0, 80)
     hubLogo.ZIndex = 2
     hubLogo.Image = "rbxassetid://13997143086"..logoId
 
@@ -204,7 +204,7 @@ function Luxt1.CreateWindow(libName, logoId)
     wave.Size = UDim2.new(0.97865659, 0, 0.557522118, 0)
     wave.Image = "rbxassetid://13997143086"
     wave.ImageColor3 = Color3.fromRGB(181, 249, 255)
-    wave.ImageTransparency = 1.000
+    wave.ImageTransparency = 0.300
     wave.ScaleType = Enum.ScaleType.Slice
 
     MainCorner_4.CornerRadius = UDim.new(0, 3)
@@ -229,7 +229,7 @@ function Luxt1.CreateWindow(libName, logoId)
     shadow.ZIndex = 0
     shadow.Image = "rbxassetid://13997143086"
     shadow.ImageColor3 = Color3.fromRGB(0, 0, 0)
-    shadow.ImageTransparency = 1.000
+    shadow.ImageTransparency = 0.300
 
     local TabHandling = {}
 
