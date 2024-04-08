@@ -32,12 +32,12 @@ function Luxt1.CreateWindow(libName, logoId)
     key1.Font = Enum.Font.GothamSemibold
     key1.Text = "LeftAlt"
     key1.TextColor3 = Color3.fromRGB(153, 255, 238)
-    key1.TextSize = 14.000
+    key1.TextSize = 6.000
 
     local oldKey = Enum.KeyCode.LeftAlt.Name
 
     key1.MouseButton1Click:connect(function(e) 
-        key1.Text = ". . ."
+        key1.Text = "Load.."
         local a, b = game:GetService('UserInputService').InputBegan:wait();
         if a.KeyCode.Name ~= "Unknown" then
             key1.Text = a.KeyCode.Name
@@ -170,7 +170,7 @@ function Luxt1.CreateWindow(libName, logoId)
     tabFrame.BackgroundTransparency = 1.000
     tabFrame.BorderSizePixel = 0
     tabFrame.Position = UDim2.new(0.0761478543, 0, 0.126385808, 0)
-    tabFrame.Size = UDim2.new(0, 200, 0, 400) 135 -- 347
+    tabFrame.Size = UDim2.new(0, 135, 0, 347) 135 -- 347
     tabFrame.ZIndex = 2
     tabFrame.ScrollBarThickness = 0
 
@@ -270,7 +270,7 @@ function Luxt1.CreateWindow(libName, logoId)
         tabLogo.BorderSizePixel = 0
         tabLogo.Size = UDim2.new(0, 25, 0, 25)
         tabLogo.ZIndex = 2
-        tabLogo.Image = "rbxassetid://17070999089"..tabId
+        tabLogo.Image = "rbxassetid://13997143086"..tabId
         tabLogo.ImageColor3 = Color3.fromRGB(153, 255, 238)
         --
 
