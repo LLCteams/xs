@@ -37,7 +37,7 @@ function Luxt1.CreateWindow(libName, logoId)
     local oldKey = Enum.KeyCode.LeftAlt.Name
 
     key1.MouseButton1Click:connect(function(e) 
-        key1.Text = ". . ."
+        key1.Text = "Load.."
         local a, b = game:GetService('UserInputService').InputBegan:wait();
         if a.KeyCode.Name ~= "Unknown" then
             key1.Text = a.KeyCode.Name
@@ -118,12 +118,12 @@ function Luxt1.CreateWindow(libName, logoId)
     MainFrame.Parent = shadow
     MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     MainFrame.Position = UDim2.new(0.048, 0,0.075, 0)
-    MainFrame.Size = UDim2.new(0, 233, 0, 442)
+    MainFrame.Size = UDim2.new(0, 400, 0, 442)
 
     sideHeading.Name = "sideHeading"
     sideHeading.Parent = MainFrame
     sideHeading.BackgroundColor3 = Color3.fromRGB(21, 21, 21)
-    sideHeading.Size = UDim2.new(0, 155, 0, 442)
+    sideHeading.Size = UDim2.new(0, 400, 0, 442)
     sideHeading.ZIndex = 2
 
     MainCorner.CornerRadius = UDim.new(0, 5)
@@ -141,7 +141,7 @@ function Luxt1.CreateWindow(libName, logoId)
     hubLogo.Parent = sideHeading
     hubLogo.BackgroundColor3 = Color3.fromRGB(153, 255, 238)
     hubLogo.Position = UDim2.new(0.0567928664, 0, 0.0243411884, 0)
-    hubLogo.Size = UDim2.new(0, 30, 0, 30)
+    hubLogo.Size = UDim2.new(0, 400, 0, 442)
     hubLogo.ZIndex = 2
     hubLogo.Image = "rbxassetid://13997143086"..logoId
 
