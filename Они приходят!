@@ -1,5 +1,5 @@
-warn('Murder Mystery Script is hidden by Universe X.')
-error('Bypassed with; Antidetect')
+warn('Systems has enabled, Undetectable!')
+warn('VULKAN is disbled with Mini-secured by Universe X.')
 
 local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
@@ -274,7 +274,7 @@ Luxt1.hrp = Luxt1.lp.Character:WaitForChild('HumanoidRootPart')
 ---- check for correct game ----
 if Luxt1.placeID ~= game.PlaceId then 
     warn("failed; Universe X is selected for Zombie Uprising!")
-    script:Destroy()
+    game.Players.LocalPlayer:Kick("Status script not supported for this game.")
     return 
 end
 
