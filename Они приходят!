@@ -14,7 +14,7 @@ uni:Button(
         UniversalX()
     end
 )
-local btns = serv:Channel("Universe X")
+local btns = serv:Channel("Universe X | Key in-Script")
 
 btns:Button(
     "Hide And Seek",
