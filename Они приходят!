@@ -8,7 +8,7 @@ local win = DiscordLib:Window("Loader X")
 local serv = win:Server("Loader", "1")
 local uni = serv:Channel("Universal X | New UI")
 uni:Button(
-    "Universal",
+    "Universal v1.0",
     function()
         DiscordLib:Notification("Notify", "Executed!", "Okay!")
         UniversalX()
