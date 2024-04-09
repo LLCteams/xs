@@ -6,7 +6,7 @@ local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bl
 local win = DiscordLib:Window("Loader X")
 
 local serv = win:Server("Loader", "1")
-local uni = serv:Channel("Universal")
+local uni = serv:Channel("Universal X | New UI")
 uni:Button(
     "Universal",
     function()
