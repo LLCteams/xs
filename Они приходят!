@@ -1,5 +1,5 @@
-print('Murder Mystery Script is hidden by Universe X.')
-print('UPDATED; Antidetect')
+warn('Murder Mystery Script is hidden by Universe X.')
+warn('UPDATED; Antidetect')
 
 local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
@@ -274,7 +274,7 @@ Luxt1.hrp = Luxt1.lp.Character:WaitForChild('HumanoidRootPart')
 
 ---- check for correct game ----
 if Luxt1.placeID ~= game.PlaceId then 
-    warn("#### - This Script is not for this game. - ####")
+    warn("failed; Universe X is selected for Zombie Uprising!")
     script:Destroy()
     return 
 end
