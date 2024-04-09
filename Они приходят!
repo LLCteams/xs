@@ -1,5 +1,5 @@
 warn('Murder Mystery Script is hidden by Universe X.')
-warn('UPDATED; Antidetect')
+error('Bypassed with; Antidetect')
 
 local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
@@ -263,7 +263,6 @@ end
 function zombie()
 repeat wait() until game:IsLoaded()
 
-Luxt1 = {}
 Luxt1.placeID = 4972091010
 Luxt1.lp = game:GetService('Players').LocalPlayer
 Luxt1.vu = game:GetService('VirtualUser')
