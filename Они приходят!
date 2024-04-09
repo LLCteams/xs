@@ -6,6 +6,14 @@ local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bl
 local win = DiscordLib:Window("Loader X")
 
 local serv = win:Server("Loader", "1")
+local uni = serv:Channel("Universal")
+uni:Button(
+    "Universal",
+    function()
+        DiscordLib:Notification("Notify", "Executed!", "Okay!")
+        UniversalX()
+    end
+)
 local btns = serv:Channel("Universe X")
 
 btns:Button(
@@ -25,6 +33,232 @@ btns:Button(
         zombie()
     end
 )
+
+function UniversalX()
+
+
+print('Universal game script from Universe X.')
+local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/h%C3%ACnh%20kh%E1%BB%91i"))()
+--- https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua
+local Luxt = Luxtl.CreateWindow("Universe X", 13951232354)
+
+local abbb = Luxt:Tab("Credits")
+local ahl = abbb:Section("#3")
+ahl:Label("Username [ "..game.Players.LocalPlayer.Name.." ]")
+ahl:Label("Display Name [ "..game.Players.LocalPlayer.DisplayName.." ]")
+ahl:Label("User Id [ "..game.Players.LocalPlayer.UserId.." ]")
+ahl:Label("Account Age [ "..game.Players.LocalPlayer.AccountAge.." ]")
+local uov = abbb:Section("#2")
+uov:Label("Game [ "..game.Name.." ]")
+uov:Label("Game's ID [ "..game.PlaceId.." ]")
+uov:Label("Server ID [ "..game.JobId.." ]")
+uov:Label("Time's [ "..os.date("%X").." ]")
+local iops = abbb:Section("#1")
+iops:Label("Health [ "..game.Players.LocalPlayer.Character.Humanoid.Health.." ]")
+iops:Label("Fps [ "..math.floor(workspace:GetRealPhysicsFPS()).." ]")
+iops:Label("Ping [ "..game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString().." ]")
+local ubd = abbb:Section("Creater")
+ubd:Button("Sandbox Of Xirius", function()
+print('')
+end)
+ubd:Button("Helper: rbxscript", function()
+print('')
+end)
+
+local sets = Luxt:Tab("Settings")
+local set = sets:Section("Interface")
+set:Button('Check', function()
+game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
+end)
+set:Button('Rejoin', function()
+game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
+end)
+set:Button('Exit', function()
+game:Shutdown()
+end)
+set:Button('Kill', function()
+game.CoreGui.Luxt1:Destroy()
+end)
+local vus = Luxt:Tab("Visual")
+local boz = vus:Section("Rtx")
+boz:Button("Rtx -- 2.1", function()
+local a = game.Lighting
+a.Ambient = Color3.fromRGB(33, 33, 33)
+a.Brightness = 6.67
+a.ColorShift_Bottom = Color3.fromRGB(0, 0, 0)
+a.ColorShift_Top = Color3.fromRGB(255, 247, 237)
+a.EnvironmentDiffuseScale = 0.105
+a.EnvironmentSpecularScale = 0.522
+a.GlobalShadows = true
+a.OutdoorAmbient = Color3.fromRGB(51, 54, 67)
+a.ShadowSoftness = 0.04
+a.GeographicLatitude = -15.525
+a.ExposureCompensation = 0.75
+local b = Instance.new("BloomEffect", a)
+b.Enabled = true
+b.Intensity = 0.04
+b.Size = 1900
+b.Threshold = 0.915
+local c = Instance.new("ColorCorrectionEffect", a)
+c.Brightness = 0.176
+c.Contrast = 0.39
+c.Enabled = true
+c.Saturation = 0.2
+c.TintColor = Color3.fromRGB(217, 145, 57)
+if getgenv().mode == "Summer" then
+   c.TintColor = Color3.fromRGB(255, 220, 148)
+elseif getgenv().mode == "Autumn" then
+   c.TintColor = Color3.fromRGB(217, 145, 57)
+else
+   warn("No mode selected!")
+   print("Please select a mode")
+   b:Destroy()
+   c:Destroy()
+end
+local d = Instance.new("DepthOfFieldEffect", a)
+d.Enabled = true
+d.FarIntensity = 0.077
+d.FocusDistance = 21.54
+d.InFocusRadius = 20.77
+d.NearIntensity = 0.277
+local e = Instance.new("ColorCorrectionEffect", a)
+e.Brightness = 0
+e.Contrast = -0.07
+e.Saturation = 0
+e.Enabled = true
+e.TintColor = Color3.fromRGB(255, 247, 239)
+local e2 = Instance.new("ColorCorrectionEffect", a)
+e2.Brightness = 0.2
+e2.Contrast = 0.45
+e2.Saturation = -0.1
+e2.Enabled = true
+e2.TintColor = Color3.fromRGB(255, 255, 255)
+local s = Instance.new("SunRaysEffect", a)
+s.Enabled = true
+s.Intensity = 0.01
+s.Spread = 0.146
+end)
+
+Plr = {}
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+    table.insert(Plr,v.Name) 
+end
+
+local othe = Luxt:Tab("Others")
+local cvo = othe:Section("#1")
+cvo:TextBox("WalkSpeed", "Number", function(Op)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Op
+end)
+cvo:TextBox("JumpHeight", "Number", function(Yop)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = Yop
+end)
+cvo:Label("-- More --")
+cvo:Toggle("Fly [E]", function(pp)
+    if bos == false then
+    
+           wsframe.Visible = true
+           Fly.Visible = false
+       
+       else
+       
+          repeat wait() 
+	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
+local mouse = game.Players.LocalPlayer:GetMouse() 
+repeat wait() until mouse
+local plr = game.Players.LocalPlayer 
+local torso = plr.Character.Head 
+local flying = false
+local deb = true 
+local ctrl = {f = 0, b = 0, l = 0, r = 0} 
+local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+local maxspeed = 400 
+local speed = 5000 
+
+function Fly() 
+local bg = Instance.new("BodyGyro", torso) 
+bg.P = 9e4 
+bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
+bg.cframe = torso.CFrame 
+local bv = Instance.new("BodyVelocity", torso) 
+bv.velocity = Vector3.new(0,0.1,0) 
+bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
+repeat wait() 
+plr.Character.Humanoid.PlatformStand = true 
+if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
+speed = speed+.5+(speed/maxspeed) 
+if speed > maxspeed then 
+speed = maxspeed 
+end 
+elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
+speed = speed-1 
+if speed < 0 then 
+speed = 0 
+end 
+end 
+if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
+elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
+bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
+else 
+bv.velocity = Vector3.new(0,0.1,0) 
+end 
+bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
+until not flying 
+ctrl = {f = 0, b = 0, l = 0, r = 0} 
+lastctrl = {f = 0, b = 0, l = 0, r = 0} 
+speed = 0 
+bg:Destroy() 
+bv:Destroy() 
+plr.Character.Humanoid.PlatformStand = false 
+end 
+mouse.KeyDown:connect(function(key) 
+if key:lower() == "e" then 
+if flying then flying = false 
+else 
+flying = true 
+Fly() 
+end 
+elseif key:lower() == "w" then 
+ctrl.f = 1 
+elseif key:lower() == "s" then 
+ctrl.b = -1 
+elseif key:lower() == "a" then 
+ctrl.l = -1 
+elseif key:lower() == "d" then 
+ctrl.r = 1 
+end 
+end) 
+mouse.KeyUp:connect(function(key) 
+if key:lower() == "w" then 
+ctrl.f = 0 
+elseif key:lower() == "s" then 
+ctrl.b = 0 
+elseif key:lower() == "a" then 
+ctrl.l = 0 
+elseif key:lower() == "d" then 
+ctrl.r = 0 
+end 
+end)
+Fly()
+end
+end)
+local newtabs = Luxt:Tab("Teleport")
+local bass = newtabs:Section("Teleport")
+
+bass:DropDown("Select a player", Plr, function(t) -- food is chosen item
+    PlayerTP = t
+end)
+bass:Button("Teleport to player", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[PlayerTP].Character.HumanoidRootPart.CFrame
+end)
+bass:Toggle("Auto Teleport", function(t)
+_G.TPPlayer = t
+while _G.TPPlayer do wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[PlayerTP].Character.HumanoidRootPart.CFrame
+end
+end)
+end
 
 function zombie()
 
