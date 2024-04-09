@@ -1,5 +1,5 @@
-warn('Systems has enabled, Undetectable!')
-warn('VULKAN is disbled with Mini-secured by Universe X.')
+warn('Server cannot kick; |"..game.Players.LocalPlayer.Name.."| has Universe X Admin.')
+warn('VULKAN is disabled with Mini-secured by Universe X.')
 
 local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
@@ -262,33 +262,7 @@ end
 
 function zombie()
 repeat wait() until game:IsLoaded()
-
-Luxt1.placeID = 4972091010
-Luxt1.lp = game:GetService('Players').LocalPlayer
-Luxt1.vu = game:GetService('VirtualUser')
-Luxt1.uis = game:GetService('UserInputService')
-Luxt1.rs = game:GetService('ReplicatedStorage')
-Luxt1.humanoid = Luxt1.lp.Character:WaitForChild('Humanoid')
-Luxt1.hrp = Luxt1.lp.Character:WaitForChild('HumanoidRootPart')
-
----- check for correct game ----
-if Luxt1.placeID ~= game.PlaceId then 
-    warn("failed; Universe X is selected for Zombie Uprising!")
-    game.Players.LocalPlayer:Kick("Status script not supported for this game.")
-    return 
-end
-
----- destroy old gui if exists ----
-if game:GetService("CoreGui"):FindFirstChild(Luxt1.WindowName) then
-    game:GetService("CoreGui"):FindFirstChild(Luxt1.WindowName):Destroy()
-    wait(2)
-end
-
----- antiAFK ----
-Luxt1.connectAntiAfk = game:GetService('Players').LocalPlayer.Idled:connect(function()
-    Luxt1.vu:CaptureController()
-    Luxt1.vu:ClickButton2(Vector2.new())
- end)
+warn('Cannot kick user has; Universe X.')
 
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
