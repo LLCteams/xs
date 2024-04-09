@@ -261,8 +261,35 @@ end)
 end
 
 function zombie()
-
 repeat wait() until game:IsLoaded()
+
+Luxt1 = {}
+Luxt1.placeID = 4972091010
+Luxt1.lp = game:GetService('Players').LocalPlayer
+Luxt1.vu = game:GetService('VirtualUser')
+Luxt1.uis = game:GetService('UserInputService')
+Luxt1.rs = game:GetService('ReplicatedStorage')
+Luxt1.humanoid = Luxt1.lp.Character:WaitForChild('Humanoid')
+Luxt1.hrp = Luxt1.lp.Character:WaitForChild('HumanoidRootPart')
+
+---- check for correct game ----
+if Luxt1.placeID ~= game.PlaceId then 
+    warn("#### - This Script is not for this game. - ####")
+    script:Destroy()
+    return 
+end
+
+---- destroy old gui if exists ----
+if game:GetService("CoreGui"):FindFirstChild(Luxt1.WindowName) then
+    game:GetService("CoreGui"):FindFirstChild(Luxt1.WindowName):Destroy()
+    wait(2)
+end
+
+---- antiAFK ----
+Luxt1.connectAntiAfk = game:GetService('Players').LocalPlayer.Idled:connect(function()
+    Luxt1.vu:CaptureController()
+    Luxt1.vu:ClickButton2(Vector2.new())
+ end)
 
 local ScreenGui = Instance.new("ScreenGui")
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
