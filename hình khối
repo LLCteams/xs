@@ -1,5 +1,13 @@
 local Luxt1 = {}
 
+function Luxt1:ToggleUI()
+    if game.CoreGui[LibName].Enabled then
+        game.CoreGui[LibName].Enabled = false
+    else
+        game.CoreGui[LibName].Enabled = true
+    end
+end
+
 function Luxt1.CreateWindow(libName, logoId)
     local LuxtLib = Instance.new("ScreenGui")
     local shadow = Instance.new("ImageLabel")
