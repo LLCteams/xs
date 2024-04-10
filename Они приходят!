@@ -1,11 +1,9 @@
 warn('Server cannot kick; |game.Players.LocalPlayer| has Universe X Admin.')
-warn('UPDATING new version, v1.7.2')
+warn('Universe X has stopped roblox creators anticheat.')
 
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-wait(1.7)
+wait(1)
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",false)
-
-game.Players.LocalPlayer:Kick('Universe X is in-update, | Bewait for some hours! |')
 
 local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
