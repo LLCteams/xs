@@ -248,7 +248,7 @@ function Library:Window(Title, Func, Options)
     ContentFrame.Parent = MainFrame
 
     local Search = Instance.new("TextBox")
-    Search.Name = "Search script from Universe X"
+    Search.Name = "Search"
     Search.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
     Search.BorderColor3 = Color3.fromRGB(20, 20, 20)
     Search.BorderSizePixel = 0
