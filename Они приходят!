@@ -2,9 +2,6 @@ warn('Server cannot kick; |game.Players| has Universe X Admin.')
 warn('Universe X has stopped roblox creators anticheat.')
 
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-wait(1)
---- game:GetService("StarterGui"):SetCore("DevConsoleVisible",false)
-game.Players.LocalPlayer:Kick('Website is down, script be fixed very soon.')
 
 local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
 
@@ -24,12 +21,12 @@ end
 
 local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
-local win = DiscordLib:Window("Loader X")
+local win = DiscordLib:Window("Loader X [v1.7.3]")
 
 local serv = win:Server("Loader", "1")
 local uni = serv:Channel("Universal X | New UI")
 uni:Button(
-    "Universal v1.0",
+    "Universal v1.2",
     function()
         DiscordLib:Notification("Notify", "Executed!", "Okay!")
         UniversalX()
