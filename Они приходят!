@@ -1,8 +1,8 @@
 -- warn('Server cannot kick; |game.Players| has Universe X Admin.')
 -- warn('Universe X has stopped roblox creators anticheat.')
-print('Get script; https://www.notion.so/Universe-X-Official-Website-0b3a55db6fdc4918ae57e3ee810f704d')
+
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-game.Players.LocalPlayer:Kick('Universe X no longer available in scriptblox. removed PUBLIC version because someone reporting.')
+game.Players.LocalPlayer:Kick('Universe X no longer available, removed by scriptblox.')
 
 local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
 
