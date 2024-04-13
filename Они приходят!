@@ -22,7 +22,7 @@ end
 
 local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
-local win = DiscordLib:Window("Loader X [v1.7.3]")
+local win = DiscordLib:Window("Loader X [v1.5.7]")
 
 local serv = win:Server("Loader", "1")
 local uni = serv:Channel("Universal X | New UI")
