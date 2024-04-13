@@ -2,7 +2,6 @@
 -- warn('Universe X has stopped roblox creators anticheat.')
 
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-game.Players.LocalPlayer:Kick('Universe X no longer available, removed by scriptblox.')
 
 local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
 
