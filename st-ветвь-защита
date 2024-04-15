@@ -2,7 +2,7 @@ warn('Server cannot kick; |game.Players| has Universe X Admin.')
 warn('Universe X has stopped roblox creators anticheat.')
 
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-game.Players.LocalPlayer:Kick("Universe X; added for new script, upgrading Volt v3.0.0") 
+game.Players.LocalPlayer:Kick("Universe X; in-Upgraded, Use Volt to changeside of Universe X.") 
 
 
 local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
