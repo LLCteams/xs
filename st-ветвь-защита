@@ -1,908 +1,71 @@
-warn('Server cannot kick; |game.Players| has Universe X Admin.')
-warn('Universe X has stopped roblox creators anticheat.')
+--Made by : https://v3rmillion.net/member.php?action=profile&uid=1265584
 
-game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-game.Players.LocalPlayer:Kick("Universe X; in-Upgraded, Use Volt to changeside of Universe X.") 
+_G.Settings = {
+['Name'] = 'Volt',
+['Intro'] = false,
+['Keybind'] = 'F'
+}
 
+local NotificationLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/lobox920/Notification-Library/Main/Library.lua"))()
 
-local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AF%E6%AD%A3%E6%B0%97%E3%81%A0%E3%82%88"))()
+
+local Tab1 = Library:CreateTab('A')
+
+Tab1:Label("Soon!") 
+local Tab2 = Library:CreateTab('B')
+
+Tab2:Label("Soon!") 
+
+local Tab3 = Library:CreateTab('C')
+
+Tab3:Button('Zombie Uprising', function()
+     loadstring(game:HttpGet("https://pastebin.com/raw/0N1y7RyM"))() 
+end)
+Tab3:Button('Prison Life', function()
+     loadstring(game:HttpGet('https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%9A%D1%82%D0%BE%20%D1%83%D0%BA%D1%80%D0%B0%D0%BB%20%D1%87%D0%B5%D1%80%D1%82%D0%B5%D0%B6'))()
+end)
 
 --[[
-MessageBox.Show({Position = UDim2.new(0.6,0,0.7,0), Text = "Systems", Description = "Universe X will be executed!\nZombie Uprising Script\n \nExecute this script?", MessageBoxIcon = "Question", MessageBoxButtons = "YesNo", Result = function(res)
-   if (res == "Yes") then
-       MessageBox.Show({MessageBoxButtons = "OK", Description = "Script will be executed for your device.", Text = "Warning"})
-       iopBob()
-   elseif (res == "No") then
-       MessageBox.Show({MessageBoxButtons = "OK", Description = "Script is not continued\nto be executed", Text = "Failed"})
-     end
-end})
-end
-
+Tab3:Button('Break In 2', function()
+     loadstring(game:HttpGet("https://freenote.biz/raw/ScmsS7SwTW"))()
+     loadstring(game:HttpGet("https://freenote.biz/raw/80jXm2Q0a7",true))()
+end)
 ]]--
 
+local Tab4 = Library:CreateTab('D')
 
-local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
-
-local win = DiscordLib:Window("Loader X [v1.7.2]")
-
-local serv = win:Server("Loader | Universe X", "1")
-local uni = serv:Channel("Universal X | New UI")
-uni:Button(
-    "Universal v1.0 [-Original-]",
-    function()
-        DiscordLib:Notification("Notify", "Executed!", "Okay!")
-        UniversalX()
-    end
-)
-
-uni:Button(
-    "Universal v2.0 [-Remove Teleport-]",
-    function()
-        DiscordLib:Notification("Notify", "Executed!", "Okay!")
-        newUI()
-    end
-)
-
-local btns = serv:Channel("Universe X | Free-Script")
-
-btns:Button(
-    "Hide And Seek",
-    function()
-        DiscordLib:Notification("Notify", "Key is removed, Executed!", "Okay!")
-        Bar()
-    end
-)
-
-btns:Seperator()
-
-btns:Button(
-    "Zombie Uprising",
-    function()
-        DiscordLib:Notification("Notify", "Key is removed, Executed!", "Okay!")
-        Zom()
-    end
-)
-
-function UniversalX()
-print('Universal v1.0 game script from Universe X.')
-local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/h%C3%ACnh%20kh%E1%BB%91i"))()
---- https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua
-local Luxt = Luxtl.CreateWindow("Universe X", 13951232354)
-
-local abbb = Luxt:Tab("Credits")
-local ahl = abbb:Section("#3")
-ahl:Label("Username [ "..game.Players.LocalPlayer.Name.." ]")
-ahl:Label("Display Name [ "..game.Players.LocalPlayer.DisplayName.." ]")
-ahl:Label("User Id [ "..game.Players.LocalPlayer.UserId.." ]")
-ahl:Label("Account Age [ "..game.Players.LocalPlayer.AccountAge.." ]")
-local uov = abbb:Section("#2")
-uov:Label("Game [ "..game.Name.." ]")
-uov:Label("Game's ID [ "..game.PlaceId.." ]")
-uov:Label("Server ID [ "..game.JobId.." ]")
-uov:Label("Time's [ "..os.date("%X").." ]")
-local iops = abbb:Section("#1")
-iops:Label("Health [ "..game.Players.LocalPlayer.Character.Humanoid.Health.." ]")
-iops:Label("Fps [ "..math.floor(workspace:GetRealPhysicsFPS()).." ]")
-iops:Label("Ping [ "..game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString().." ]")
-local ubd = abbb:Section("Creater")
-ubd:Button("Sandbox Of Xirius", function()
-print('')
+Tab4:Button('Aimbot', function()
+      loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/07e983a8fb68a0b2640f50b12dfbb6a20d1c24ed/%D0%91%D0%BB%D0%BE%D0%BA%D0%BC%D0%B0%D0%BD"))()
+      game.CoreGui.ShadowLib:Destroy()
 end)
-ubd:Button("Helper: rbxscript", function()
-print('')
+Tab4:Label('Other Script')
+Tab4:Button('Shiftlock', function()
+     loadstring(game:HttpGet('https://pastebin.com/raw/WQ9NPeDS'))();
 end)
+Tab4:Button('Naked', function()
 
-local sets = Luxt:Tab("Settings")
-local set = sets:Section("Interface")
-set:Button('Check', function()
-game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
+    game.Players.LocalPlayer.Character.Shirt:Remove()
+    game.Players.LocalPlayer.Character.Pants:Remove()
 end)
-set:Button('Rejoin', function()
-game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
-end)
-set:Button('Exit', function()
-game:Shutdown()
-end)
-set:Button('Kill', function()
-game.CoreGui.Luxt1:Destroy()
-end)
-local vus = Luxt:Tab("Visual")
-local boz = vus:Section("Rtx")
-boz:Button("Rtx -- 2.1", function()
-local a = game.Lighting
-a.Ambient = Color3.fromRGB(33, 33, 33)
-a.Brightness = 6.67
-a.ColorShift_Bottom = Color3.fromRGB(0, 0, 0)
-a.ColorShift_Top = Color3.fromRGB(255, 247, 237)
-a.EnvironmentDiffuseScale = 0.105
-a.EnvironmentSpecularScale = 0.522
-a.GlobalShadows = true
-a.OutdoorAmbient = Color3.fromRGB(51, 54, 67)
-a.ShadowSoftness = 0.04
-a.GeographicLatitude = -15.525
-a.ExposureCompensation = 0.75
-local b = Instance.new("BloomEffect", a)
-b.Enabled = true
-b.Intensity = 0.04
-b.Size = 1900
-b.Threshold = 0.915
-local c = Instance.new("ColorCorrectionEffect", a)
-c.Brightness = 0.176
-c.Contrast = 0.39
-c.Enabled = true
-c.Saturation = 0.2
-c.TintColor = Color3.fromRGB(217, 145, 57)
-if getgenv().mode == "Summer" then
-   c.TintColor = Color3.fromRGB(255, 220, 148)
-elseif getgenv().mode == "Autumn" then
-   c.TintColor = Color3.fromRGB(217, 145, 57)
-else
-   warn("No mode selected!")
-   print("Please select a mode")
-   b:Destroy()
-   c:Destroy()
-end
-local d = Instance.new("DepthOfFieldEffect", a)
-d.Enabled = true
-d.FarIntensity = 0.077
-d.FocusDistance = 21.54
-d.InFocusRadius = 20.77
-d.NearIntensity = 0.277
-local e = Instance.new("ColorCorrectionEffect", a)
-e.Brightness = 0
-e.Contrast = -0.07
-e.Saturation = 0
-e.Enabled = true
-e.TintColor = Color3.fromRGB(255, 247, 239)
-local e2 = Instance.new("ColorCorrectionEffect", a)
-e2.Brightness = 0.2
-e2.Contrast = 0.45
-e2.Saturation = -0.1
-e2.Enabled = true
-e2.TintColor = Color3.fromRGB(255, 255, 255)
-local s = Instance.new("SunRaysEffect", a)
-s.Enabled = true
-s.Intensity = 0.01
-s.Spread = 0.146
-end)
-
-Plr = {}
-for i,v in pairs(game:GetService("Players"):GetChildren()) do
-    table.insert(Plr,v.Name) 
-end
-
-local othe = Luxt:Tab("Others")
-local cvo = othe:Section("#1")
-cvo:TextBox("WalkSpeed", "Number", function(Op)
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Op
-end)
-cvo:TextBox("JumpHeight", "Number", function(Yop)
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = Yop
-end)
-cvo:Label("-- More --")
-cvo:Toggle("Fly [E]", function(pp)
-    if bos == false then
-    
-           wsframe.Visible = true
-           Fly.Visible = false
-       
-       else
-       
-          repeat wait() 
-	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
-local mouse = game.Players.LocalPlayer:GetMouse() 
-repeat wait() until mouse
-local plr = game.Players.LocalPlayer 
-local torso = plr.Character.Head 
-local flying = false
-local deb = true 
-local ctrl = {f = 0, b = 0, l = 0, r = 0} 
-local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
-local maxspeed = 400 
-local speed = 5000 
-
-function Fly() 
-local bg = Instance.new("BodyGyro", torso) 
-bg.P = 9e4 
-bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
-bg.cframe = torso.CFrame 
-local bv = Instance.new("BodyVelocity", torso) 
-bv.velocity = Vector3.new(0,0.1,0) 
-bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
-repeat wait() 
-plr.Character.Humanoid.PlatformStand = true 
-if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
-speed = speed+.5+(speed/maxspeed) 
-if speed > maxspeed then 
-speed = maxspeed 
-end 
-elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
-speed = speed-1 
-if speed < 0 then 
-speed = 0 
-end 
-end 
-if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
-bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
-lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
-elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
-bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
-else 
-bv.velocity = Vector3.new(0,0.1,0) 
-end 
-bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
-until not flying 
-ctrl = {f = 0, b = 0, l = 0, r = 0} 
-lastctrl = {f = 0, b = 0, l = 0, r = 0} 
-speed = 0 
-bg:Destroy() 
-bv:Destroy() 
-plr.Character.Humanoid.PlatformStand = false 
-end 
-mouse.KeyDown:connect(function(key) 
-if key:lower() == "e" then 
-if flying then flying = false 
-else 
-flying = true 
-Fly() 
-end 
-elseif key:lower() == "w" then 
-ctrl.f = 1 
-elseif key:lower() == "s" then 
-ctrl.b = -1 
-elseif key:lower() == "a" then 
-ctrl.l = -1 
-elseif key:lower() == "d" then 
-ctrl.r = 1 
-end 
-end) 
-mouse.KeyUp:connect(function(key) 
-if key:lower() == "w" then 
-ctrl.f = 0 
-elseif key:lower() == "s" then 
-ctrl.b = 0 
-elseif key:lower() == "a" then 
-ctrl.l = 0 
-elseif key:lower() == "d" then 
-ctrl.r = 0 
-end 
-end)
-Fly()
-end
-end)
-local newtabs = Luxt:Tab("Teleport")
-local bass = newtabs:Section("Teleport")
-
-bass:DropDown("Select a player", Plr, function(t) -- food is chosen item
-    PlayerTP = t
-end)
-bass:Button("Teleport to player", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[PlayerTP].Character.HumanoidRootPart.CFrame
-end)
-bass:Toggle("Auto Teleport", function(t)
-_G.TPPlayer = t
-while _G.TPPlayer do wait()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[PlayerTP].Character.HumanoidRootPart.CFrame
-end
-end)
-end
-
-
-function Zom()
-repeat wait() until game:IsLoaded()
-
-game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Script made for;",  	
-Text = "Zombie Uprising",
-	Icon = "rbxassetid://8677814109",
-	Duration = 2
-})
-
-wait(1)
--- Instances:
-
-local ScreenGui = Instance.new("ScreenGui")
-local MainFrame = Instance.new("Frame")
-local UICorner = Instance.new("UICorner")
-local InfoBar = Instance.new("Frame")
-local UICorner_2 = Instance.new("UICorner")
-local VHubImage = Instance.new("ImageLabel")
-local VHubAndSection = Instance.new("TextLabel")
-local Line1 = Instance.new("Frame")
-local VHubImage_2 = Instance.new("ImageLabel")
-local VersionOutdatedText = Instance.new("TextLabel")
-local ErrorMessage = Instance.new("TextLabel")
-local DescriptionText = Instance.new("TextLabel")
-local CopyDiscordLinkButton = Instance.new("TextButton")
-local UICorner_3 = Instance.new("UICorner")
-local CloseButton = Instance.new("TextButton")
-local UICorner_4 = Instance.new("UICorner")
-
---Properties:
-
-ScreenGui.Parent = game:GetService("CoreGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.DisplayOrder = 999999999
-ScreenGui.ResetOnSpawn = false
-
-MainFrame.Name = "MainFrame"
-MainFrame.Parent = ScreenGui
-MainFrame.Active = true
-MainFrame.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-MainFrame.LayoutOrder = 999999999
-MainFrame.Position = UDim2.new(0.174855486, 0, 0.194284841, 0)
-MainFrame.Size = UDim2.new(0, 450, 0, 270)
-MainFrame.Draggable = true
-
-UICorner.CornerRadius = UDim.new(0, 20)
-UICorner.Parent = MainFrame
-
-InfoBar.Name = "InfoBar"
-InfoBar.Parent = MainFrame
-InfoBar.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
-InfoBar.Size = UDim2.new(0, 450, 0, 30)
-
-UICorner_2.Parent = InfoBar
-
-VHubImage.Name = "VHubImage"
-VHubImage.Parent = InfoBar
-VHubImage.BackgroundColor3 = Color3.fromRGB(55, 55, 55)
-VHubImage.BackgroundTransparency = 1.000
-VHubImage.Position = UDim2.new(0.00999999978, 0, 0, 0)
-VHubImage.Size = UDim2.new(0, 0, 0, 0)
-VHubImage.Image = ""
-
-VHubAndSection.Name = "VHubAndSection"
-VHubAndSection.Parent = InfoBar
-VHubAndSection.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-VHubAndSection.BackgroundTransparency = 1.000
-VHubAndSection.Position = UDim2.new(0.0820000023, 0, 0, 0)
-VHubAndSection.Size = UDim2.new(0, 164, 0, 30)
-VHubAndSection.Font = Enum.Font.GothamBold
-VHubAndSection.Text = "|  Universe X  | Beta | v1.6.1  |"
-VHubAndSection.TextColor3 = Color3.fromRGB(0, 0, 0)
-VHubAndSection.TextSize = 14.000
-VHubAndSection.TextXAlignment = Enum.TextXAlignment.Left
-
-Line1.Name = "Line1"
-Line1.Parent = MainFrame
-Line1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Line1.BorderSizePixel = 0
-Line1.Position = UDim2.new(0, 0, 0.111111112, 0)
-Line1.Size = UDim2.new(0, 450, 0, 1)
-
-VHubImage_2.Name = "VHubImage"
-VHubImage_2.Parent = MainFrame
-VHubImage_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-VHubImage_2.BackgroundTransparency = 1.000
-VHubImage_2.Position = UDim2.new(0.0288888887, 10, 0.150000006, 0)
-VHubImage_2.Size = UDim2.new(0, 65, 0, 65)
-VHubImage_2.Image = ""
-
-VersionOutdatedText.Name = "VersionOutdatedText"
-VersionOutdatedText.Parent = MainFrame
-VersionOutdatedText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-VersionOutdatedText.BackgroundTransparency = 1.000
-VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
-VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
-VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = " Status: Bypass Update  |  v1.6.1"
-VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 0, 255)
-VersionOutdatedText.TextSize = 15.000
-VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
-
-ErrorMessage.Name = "ErrorMessage"
-ErrorMessage.Parent = MainFrame
-ErrorMessage.BackgroundColor3 = Color3.fromRGB(255, 0, 255)
-ErrorMessage.BackgroundTransparency = 1.000
-ErrorMessage.Position = UDim2.new(0.291111112, 0, 0.444444448, 0)
-ErrorMessage.Size = UDim2.new(0, 311, 0, 50)
-ErrorMessage.Font = Enum.Font.Gotham
-ErrorMessage.Text = "Free and recommended with 100% safe.\nUser: "..game.Players.LocalPlayer.Name.."\nUser Id: "..game.Players.LocalPlayer.UserId..""
-ErrorMessage.TextColor3 = Color3.fromRGB(10, 150, 200)
-ErrorMessage.TextSize = 15.000
-ErrorMessage.TextWrapped = true
-ErrorMessage.TextXAlignment = Enum.TextXAlignment.Left
-ErrorMessage.TextYAlignment = Enum.TextYAlignment.Top
-
-DescriptionText.Name = "DescriptionText"
-DescriptionText.Parent = MainFrame
-DescriptionText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-DescriptionText.BackgroundTransparency = 1.000
-DescriptionText.BorderColor3 = Color3.fromRGB(27, 42, 53)
-DescriptionText.Position = UDim2.new(0.0222222228, 0, 0.444444448, 0)
-DescriptionText.Size = UDim2.new(0, 115, 0, 35)
-DescriptionText.Font = Enum.Font.Gotham
-DescriptionText.Text = "⚙️"
-DescriptionText.TextColor3 = Color3.fromRGB(255, 255, 255)
-DescriptionText.TextSize = 15.000
-DescriptionText.TextXAlignment = Enum.TextXAlignment.Right
-DescriptionText.TextYAlignment = Enum.TextYAlignment.Top
-
-CopyDiscordLinkButton.Name = "CopyDiscordLinkButton"
-CopyDiscordLinkButton.Parent = MainFrame
-CopyDiscordLinkButton.BackgroundColor3 = Color3.fromRGB(255, 211, 1)
-CopyDiscordLinkButton.Position = UDim2.new(0.600000024, 0, 0.759259224, 0)
-CopyDiscordLinkButton.Size = UDim2.new(0, 150, 0, 30)
-CopyDiscordLinkButton.Font = Enum.Font.Gotham
-CopyDiscordLinkButton.Text = "[ Close ]"
-CopyDiscordLinkButton.TextColor3 = Color3.fromRGB(255, 0, 255)
-CopyDiscordLinkButton.TextSize = 12.000
-CopyDiscordLinkButton.MouseButton1Down:connect(function()
-ScreenGui:Destroy()
-end)
-
-UICorner_3.Parent = CopyDiscordLinkButton
-
-CloseButton.Name = "CloseButton"
-CloseButton.Parent = MainFrame
-CloseButton.BackgroundColor3 = Color3.fromRGB(255, 221, 1)
-CloseButton.Position = UDim2.new(0.0800000429, 0, 0.759259224, 0)
-CloseButton.Size = UDim2.new(0, 150, 0, 30)
-CloseButton.Font = Enum.Font.Gotham
-CloseButton.Text = "[ Execute ]"
-CloseButton.TextColor3 = Color3.fromRGB(255, 0, 255)
-CloseButton.TextSize = 12.000
-CloseButton.MouseButton1Down:connect(function() 
-ScreenGui:Destroy()
-newonep()
-end)
-
-UICorner_4.Parent = CloseButton
-
-function newonep()
-local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
-local Luxt = Luxtl.CreateWindow("Universe X", 13951232354)
-
-local abbb = Luxt:Tab("Credits")
-local ahl = abbb:Section("#3")
-ahl:Label("Username [ "..game.Players.LocalPlayer.Name.." ]")
-ahl:Label("Display Name [ "..game.Players.LocalPlayer.DisplayName.." ]")
-ahl:Label("User Id [ "..game.Players.LocalPlayer.UserId.." ]")
-ahl:Label("Account Age [ "..game.Players.LocalPlayer.AccountAge.." ]")
-local uov = abbb:Section("#2")
-uov:Label("Game [ "..game.Name.." ]")
-uov:Label("Game's ID [ "..game.PlaceId.." ]")
-uov:Label("Server ID [ "..game.JobId.." ]")
-uov:Label("Time's [ "..os.date("%X").." ]")
-local iops = abbb:Section("#1")
-iops:Label("Health [ "..game.Players.LocalPlayer.Character.Humanoid.Health.." ]")
-iops:Label("Fps [ "..math.floor(workspace:GetRealPhysicsFPS()).." ]")
-iops:Label("Ping [ "..game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString().." ]")
-local ubd = abbb:Section("Creater")
-ubd:Button("Sandbox Of Xirius", function()
-print('')
-end)
-ubd:Button("Helper: rbxscript", function()
-print('')
-end)
-
-local newtabs = Luxt:Tab("Interface")
-local bass = newtabs:Section("Camera")
-bass:TextBox("[#] Fov", "Amount", function(txt)
-game.Workspace.CurrentCamera.FieldOfView = txt
-end)
-bass:Toggle("[#] Soon Inviscam", function(Settings)
-   if Settings == false then
-         Player.DevCameraOcclusionMode = "Zoom"
-     else
-         Player.DevCameraOcclusionMode = "Invisicam"
-     end
-end)
-local cass = newtabs:Section("Under review")
-cass:Button("[1] Executor", function()
-   game:GetService("CoreGui"):FindFirstChild(Luxtl.WindowName):Destroy()
-end)
-cass:Toggle("[4] Camera Toggle", function(consoles)
-           if consoles then
-               game.Players.LocalPlayer.CameraMode = "LockFirstPerson"
-             else
-               game.Players.LocalPlayer.CameraMode = "Classic"
-        end
-end)
------ Script
-if game.Lighting.FogStart < 100 then
-    nooby = true
-else
-    nooby = false
-end
-cass:Toggle("[5] Fog Light", function(nooby)
-      if nooby then
-         game.Lighting.FogStart = 0
-     else
-         game.Lighting.FogStart = math.huge
-      end
-end)
-
-local homeTab = Luxt:Tab("Combat")
-local wes = homeTab:Section("Immortal")
-wes:Label("Godmode")
-wes:Button("[2] Godmode", function()
-local accessories = {}
-function GodMode()
-    if game.Players.LocalPlayer.Character then
-        if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
-            for _, accessory in pairs(game.Players.LocalPlayer.Character.Humanoid:GetAccessories()) do
-                table.insert(accessories, accessory:Clone())
+Tab4:Button('Rainbow', function()
+    for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if v:IsA("MeshPart") then
+        v.Material = "ForceField"
+        spawn(function()
+            while wait() do
+                for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                    if v:IsA("MeshPart") then
+                        v.Color = Color3.fromHSV(tick()%5/5,1,1)
+                        wait()
+                    end
+                end 
             end
-            game.Players.LocalPlayer.Character.Humanoid.Name = "deku"
-        end
-        local v = game.Players.LocalPlayer.Character["deku"]:Clone()
-        v.Parent = game.Players.LocalPlayer.Character
-        v.Name = "Humanoid"
-        wait(0.1)
-        game.Players.LocalPlayer.Character["deku"]:Destroy()
-        workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
-        for _, accessory in pairs(accessories) do
-            game.Players.LocalPlayer.Character.Humanoid:AddAccessory(accessory)
-        end
-        game.Players.LocalPlayer.Character.Animate.Disabled = true
-        wait(0.1)
-        game.Players.LocalPlayer.Character.Animate.Disabled = false
+        end)
     end
 end
-GodMode()
 end)
-wes:Button("[3] Godmode", function()
-lastone()
-end)
-function lastone()
-local player = game.Players.LocalPlayer
- 
-local healthRegenRate = 100000000000000
- 
-function regenerateHealth()
-    while true do
-        -- Increase the player's health by the regen rate
-        player.Character.Humanoid.Health = player.Character.Humanoid.Health + healthRegenRate
- 
-        wait(0.00000000000000000000000000000000000001)
-    end
-end
- 
-regenerateHealth()
-end
-local wrs = homeTab:Section("Gun")
-wrs:Label("Faster Shoot | Click to execute")
-wrs:Button("Silent Aim", function()
-TeamAim()
-end)
-function TeamAim()
-local zombies = game:GetService("Workspace").Zombies
-local Players = game:GetService("Players")
-local LocalPlayer = Players.LocalPlayer
-local mouse = LocalPlayer:GetMouse()
-local Camera = workspace.CurrentCamera
-local Debris = game:GetService("Debris")
-local UserInputService = game:GetService("UserInputService")
-local target = false
-local RunService = game:GetService("RunService")
-
-
-getfenv().lock = "Random" -- Head or Hitbox or Random
-
-fov = 99999;
-local fovCircle = true;
-local st = tonumber(tick());
-warn("Loading script...")
-
-if fovCircle then
-function createcircle()
-    local a=Drawing.new('Circle');a.Transparency=1;a.Thickness=1.5;a.Visible=true;a.Color=Color3.fromRGB(0,255,149);a.Filled=false;a.Radius=fov;
-    return a;
-end;  
-local fovc = createcircle();
-spawn(function()
-    RunService:BindToRenderStep("FovCircle",1,function()
-        fovc.Position = Vector2.new(mouse.X,mouse.Y)
-    end);
-end);
-end;
-
--- function isFfa()
--- local am = #Players:GetChildren();
--- local amm = 0;
--- for i , v in pairs(Players:GetChildren()) do
--- if v.Team == LocalPlayer.Team then
--- amm = amm + 1;
--- end;
--- end;
--- return am == amm;
---end;
-function getnearest()
-local nearestmagnitude = math.huge
-local nearestenemy = nil
-local vector = nil
---local ffa = isFfa();
-for i,v in next, zombies:GetChildren() do
-if v and  v:FindFirstChild("HumanoidRootPart") and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 then
-local vector, onScreen = Camera:WorldToScreenPoint(v["HumanoidRootPart"].Position)
-if onScreen then
-local ray = Ray.new(
-Camera.CFrame.p,
-(v["Head"].Position-Camera.CFrame.p).unit*500
-)
-local ignore = {
-LocalPlayer.Character,
-}
-local hit,position,normal=workspace:FindPartOnRayWithIgnoreList(ray,ignore)
-if hit and hit:FindFirstAncestorOfClass("Model") and zombies:FindFirstChild(hit:FindFirstAncestorOfClass("Model").Name)then
-local magnitude = (Vector2.new(mouse.X, mouse.Y) - Vector2.new(vector.X, vector.Y)).magnitude
-if magnitude < nearestmagnitude and magnitude <= fov then
-nearestenemy = v
-nearestmagnitude = magnitude
-end
-end
-end
-end
-end
-return nearestenemy
-end
-
-
-
-local meta = getrawmetatable(game)
-setreadonly(meta, false)
-local oldNamecall = meta.__namecall
-meta.__namecall = newcclosure(function(...)
-    
-local method = getnamecallmethod()
-local args = {...}
-if string.find(method,'Ray') then
-if target then
-    if args[1].Name ~= "Workspace" then
-            print(args[1])
-        end;
-args[2] = Ray.new(workspace.CurrentCamera.CFrame.Position, (target.Position + Vector3.new(0,(workspace.CurrentCamera.CFrame.Position-target.Position).Magnitude/500,0) - workspace.CurrentCamera.CFrame.Position).unit * 5000)
-end
-end
-return oldNamecall(unpack(args))
-end)
-
-warn("Script loaded!\nTime taken: "..math.abs(tonumber(tick())-st))
-RunService:BindToRenderStep("SilentAim",1,function()
-if UserInputService:IsMouseButtonPressed(0) and Players.LocalPlayer.Character and Players.LocalPlayer.Character:FindFirstChild("Humanoid") and Players.LocalPlayer.Character.Humanoid.Health > 0 then
-local enemy = getnearest()
-if enemy and enemy:FindFirstChild("Humanoid") and enemy.Humanoid.Health > 0 then                
-local vector, onScreen = Camera:WorldToScreenPoint(enemy["Head"].Position)
-local head = (Vector2.new(mouse.X, mouse.Y) - Vector2.new(vector.X, vector.Y)).magnitude
-local vector, onScreen = Camera:WorldToScreenPoint(enemy["HumanoidRootPart"].Position)
-local hitbox = (Vector2.new(mouse.X, mouse.Y) - Vector2.new(vector.X, vector.Y)).magnitude
-if head <= hitbox then
-magnitude = head
-else
-magnitude = hitbox;
-end;
-if getfenv().lock == "Head" then
-target = workspace.Zombies[enemy.Name]["Head"]
-else
-if getfenv().lock == "Random" then
-if magnitude == hitbox then
-target = zombies[enemy.Name]["HumanoidRootPart"];
-else
-target = zombies[enemy.Name]["Head"]
-end;
-else
-target = zombies[enemy.Name]["HumanoidRootPart"];
-end;
-
-end;
-else
-target = nil
-end
-end
-end)
-end
-
-wrs:Button("[100%] Fast Fire", function()
-local spread1 = {
-  Increase = 0,
-  Decrease = 0,
-  Max = 0,
-  Min = 0
-}
-local rec = {
-  Tilt = { 0, 0 },
-  Side = { 0, 0 },
-  Vertical = { 0, 0 },
-  Back = { 0, 0 },
-  Aimed = 0,
-  FirstShot = 0
-}
-for i,v in pairs(getgc(true)) do
-   if type(v) == 'table' and rawget(v, 'magsize') then
-       v.magsize = math.huge
-       v.storedammo = math.huge
-       v.rpm = math.huge
-       v.spread = spread1
-       v.recoil = rec
-       v.mode = "Auto"
-   end
-end
-end)
-wrs:Label("Recommended use one")
-wrs:Toggle("[50%] Aim {Boss Damage}", function()
-     if console == false then
-             print('')
-         else
-             print('')
-         end
-end)
-wrs:Toggle("[85%] Aim {Damage}", function()
-     if console == false then
-             print('')
-         else
-             print('')
-         end
-end)
-wrs:Toggle("[70%] Aim {Damage}", function()
-     if console == false then
-             print('')
-         else
-             print('')
-         end
-end)
-
-local mainTab = Luxt:Tab("Character")
-local nes = mainTab:Section("Movement")
-nes:Button("[Speed Up]", function()
-for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
-    if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
-    game:GetService("RunService").Heartbeat:connect(function()
-    v.Velocity = Vector3.new(-30,0,0)
-    end)
-    end
-    end
-end)
-nes:Button("[•] Speed Up", function()
-for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
-
-
-if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
-
-
-game:GetService("RunService").Heartbeat:connect(function()
-
-v.Velocity = Vector3.new(0,35,0)
-
-
-wait(0.5)
-
-end)
-
-end
-
-end
-
-
-
-game:GetService("StarterGui"):SetCore("SendNotification", { 
-
-
-	Title = "Universe X";
-	
-
-	Text = "Speed Up.";
-	
-
-	Icon = ""})
-	
-
-Duration = 16;
-end)
-nes:Label("100% Recommended")
-nes:Button("[Recommend Speed]", function()
-net = true
-notify = false
-loadstring("\13\10\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\71\101\116\79\98\106\101\99\116\115\40\34\114\98\120\97\115\115\101\116\105\100\58\47\47\55\50\53\55\55\54\49\55\56\53\34\41\91\49\93\46\83\111\117\114\99\101\41\40\41\13\10")()
-end)
-nes:Button("[•] Speed", function()
-net = true -- if false = do nothing
-notify = false -- set this to false if u don't want to see notiflication
-
-loadstring("\13\10\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\71\101\116\79\98\106\101\99\116\115\40\34\114\98\120\97\115\115\101\116\105\100\58\47\47\55\50\53\55\55\54\49\55\56\53\34\41\91\49\93\46\83\111\117\114\99\101\41\40\41\13\10")()
-end)
-local nas = mainTab:Section("Flying")
-nas:Button("[1] Swim", function()
-workspace.Gravity = 0
-	local function swimDied()
-		workspace.Gravity = 198.2
-		swimming = false
-	end
-	local Humanoid = speaker.Character:FindFirstChildWhichIsA("Humanoid")
-	gravReset = Humanoid.Died:Connect(swimDied)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,false)
-	Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
-	swimming = true
-end)
-nas:Button("[2] Unswim", function()
-    workspace.Gravity = 198.2
-	swimming = false
-	if gravReset then
-		gravReset:Disconnect()
-	end
-	local Humanoid = speaker.Character:FindFirstChildWhichIsA("Humanoid")
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,true)
-	Humanoid:ChangeState(Enum.HumanoidStateType.RunningNoPhysics)
-end)
-local nop = mainTab:Section("Remover")
-local isNoClipEnabled = false
-nop:Toggle("Noclip", function(isNoClipEnabled)
-
-isNoClipEnabled = enabled
-    local character = game.Players.LocalPlayer.Character
-
-    while isNoClipEnabled do
-        for _, part in pairs(character:GetDescendants()) do
-            if part:IsA("BasePart") then
-                part.CanCollide = false
-            end
-        end
-        game:GetService("RunService").Stepped:Wait()
-    end
-end)
-nop:Button("?", function()
-ff = Instance.new("ForceField", game.Players.LocalPlayer.Character)
-ff.Visible = true
- 
--- Sets health to max
-maxHealth = game.Players.LocalPlayer.Humanoid.MaxHealth
-player.Health = maxHealth
-end)
-nop:Button("[1] Remove Fog", function()
-game:GetService("Lighting").FogEnd = 100000
-	for i,v in pairs(game:GetService("Lighting"):GetDescendants()) do
-		if v:IsA("Atmosphere") then
-			v:Destroy()
-		end
-	end
-end)
-nop:Button("[2] Full Bright", function()
-local Light = game:GetService("Lighting")
-
-function dofullbright()
-Light.Ambient = Color3.new(1, 1, 1)
-Light.ColorShift_Bottom = Color3.new(1, 1, 1)
-Light.ColorShift_Top = Color3.new(1, 1, 1)
-end
-
-dofullbright()
-
-Light.LightingChanged:Connect(dofullbright)
-end)
-local vsx = mainTab:Section("Situation")
-vsx:Button("[2] Views Ping", function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/MvKKJ331'),true))()
-end)
-vsx:Button("[3] Shader (2.1)", function()
+Tab4:Button('Shader', function()
 isX()
 end)
 
@@ -955,30 +118,261 @@ function isX()
 
 end
 
-vsx:Button("[4] Shader (1.1)", function()
-local find1 = game.Lighting:FindFirstChildWhichIsA("BloomEffect") if find1 then
-    game.Lighting:FindFirstChildWhichIsA("BloomEffect"):Destroy()
-end
-local find2 = game.Lighting:FindFirstChildWhichIsA("SunRaysEffect") if find2 then
-    game.Lighting:FindFirstChildWhichIsA("SunRaysEffect"):Destroy()
-end
-local find3 = game.Lighting:FindFirstChildWhichIsA("ColorCorrectionEffect") if find3 then
-    game.Lighting:FindFirstChildWhichIsA("ColorCorrectionEffect"):Destroy()
-end
-local find4 = game.Lighting:FindFirstChildWhichIsA("BlurEffect") if find4 then
-    game.Lighting:FindFirstChildWhichIsA("BlurEffect"):Destroy()
-end
-local find5 = game.Lighting:FindFirstChildWhichIsA("Sky") if find5 then
-    game.Lighting:FindFirstChildWhichIsA("Sky"):Destroy()
-end
+Tab4:Button('Full Bright', function()
+
+local Light = game:GetService("Lighting")
+
+     function dofullbright()
+     Light.Ambient = Color3.new(1, 1, 1)
+     Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+     Light.ColorShift_Top = Color3.new(1, 1, 1)
+   end
+
+     dofullbright()
+
+      Light.LightingChanged:Connect(dofullbright)
 end)
-local homeTab = Luxt:Tab("Visual")
-local wow = homeTab:Section("XRay")
-local goreng = false
-wow:Toggle("[#] XRay", function(goreng)
 
-       if goreng == true then
+local Tab5 = Library:CreateTab('E')
 
+Tab5:Label('Setting')
+Tab5:Button('Console', function()
+game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
+print('Console is opened, 6 second left to close by systems.')
+wait(6)
+game.GetService("StarterGui"):SetCore("DevConsoleVisible",false)
+end)
+Tab5:Button('Rejoin', function()
+game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
+end)
+Tab5:Button('Antikick', function()
+XXXL()
+end)
+Tab5:Button('LowServer', function()
+LowZ()
+end)
+Tab5:Button('Hopper', function()
+HOPPER()
+end)
+Tab5:Button('PingServer', function()
+PingServer()
+end)
+Tab5:Button('FPS', function()
+print('FPS Changed for user.\n{FPS: 20sm}\n{PING: 1ms}')
+LXXX()
+end)
+Tab5:Button('ExitGame', function()
+game:Shutdown()
+end)
+Tab5:Button('KillVolt', function()
+game.CoreGui.ShadowLib:Destroy()
+end)
+
+local Tab6 = Library:CreateTab('F')
+
+Tab6:Label('Player')
+Tab6:Button('Detector', function()
+EVERY()
+end)
+Tab6:Button('Health', function()
+ANDROIDS()
+end)
+Tab6:Button('HeadBox', function()
+HedBo()
+end)
+Tab6:Button('Aim', function()
+AIME()
+end)
+Tab6:Button('Name', function()
+NAMEZ()
+end)
+Tab6:Button('Stick', function()
+STICK()
+end)
+Tab6:Button('Stick', function()
+IOS()
+end)
+Tab6:Button('Body', function()
+EXP()
+end)
+Tab6:Button('Body 2', function()
+GOLDEN()
+end)
+Tab6:Button('Body 3', function()
+ESPXX()
+end)
+
+--- Systems
+
+function PingServer()
+
+local HTTPService = game:GetService("HttpService")
+local TeleportService = game:GetService("TeleportService")
+local StatsService = game:GetService("Stats")
+
+local function fetchServersData(placeId, limit)
+    local url = string.format("https://games.roblox.com/v1/games/%d/servers/Public?limit=%d", placeId, limit)
+    local success, response = pcall(function()
+        return HTTPService:JSONDecode(game:HttpGet(url))
+    end)
+
+    if success and response and response.data then
+        return response.data
+    end
+
+    return nil
+end
+
+local placeId = game.PlaceId
+local serverLimit = 100
+local servers = fetchServersData(placeId, serverLimit)
+
+if not servers then
+    return
+end
+
+local lowestPingServer = servers[1]
+
+for _, server in pairs(servers) do
+    if server["ping"] < lowestPingServer["ping"] then
+        lowestPingServer = server
+    end
+end
+
+local commonLoadTime = 5
+task.wait(commonLoadTime)
+
+local pingThreshold = 100
+local serverStats = StatsService.Network.ServerStatsItem
+local dataPing = serverStats["Data Ping"]:GetValueString()
+local pingValue = tonumber(dataPing:match("(%d+)"))
+
+if pingValue >= pingThreshold then
+    TeleportService:TeleportToPlaceInstance(placeId, lowestPingServer.id)
+else
+   	-- Good ping
+end
+
+end
+
+function LowZ()
+local Http = game:GetService("HttpService")
+local TPS = game:GetService("TeleportService")
+local Api = "https://games.roblox.com/v1/games/"
+
+local _place = game.PlaceId
+local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+function ListServers(cursor)
+   local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+   return Http:JSONDecode(Raw)
+end
+
+local Server, Next; repeat
+   local Servers = ListServers(Next)
+   Server = Servers.data[1]
+   Next = Servers.nextPageCursor
+until Server
+
+TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+
+end
+
+function HOPPER()
+
+local Player = game.Players.LocalPlayer    
+local Http = game:GetService("HttpService")
+local TPS = game:GetService("TeleportService")
+local Api = "https://games.roblox.com/v1/games/"
+
+local _place,_id = game.PlaceId, game.JobId
+local _servers = Api.._place.."/servers/Public?sortOrder=Desc&limit=100"
+function ListServers(cursor)
+   local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+   return Http:JSONDecode(Raw)
+end
+
+local Next; repeat
+   local Servers = ListServers(Next)
+   for i,v in next, Servers.data do
+       if v.playing < v.maxPlayers and v.id ~= _id then
+           local s,r = pcall(TPS.TeleportToPlaceInstance,TPS,_place,v.id,Player)
+           if s then break end
+       end
+   end
+   
+   Next = Servers.nextPageCursor
+until not Next
+
+end
+
+--[[
+function HedBo()
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local function hitbotExtender()
+   for _, player in pairs(Players:GetPlayers()) do
+       if player.Character and player.Character:FindFirstChild("Head") and player.Team ~= LocalPlayer.Team then
+           player.Character.Head.Size = Vector3.new(5.3,5.3,5.3)
+           player.Character.Head.BrickColor = BrickColor.new(255, 0, 0)
+       end
+   end
+end
+
+while true do
+   wait(2)
+   hitbotExtender()
+   
+end
+]]--
+
+function ZTX()
+
+SendSystemMessage("[Welcome, "..game.Players.LocalPlayer.Name.."]", Color3.fromRGB(0, 0, 0))
+
+local Lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/coastified/src.lua"))()
+local Window = Lib:Window("Volt Quick Hacks", "Scripts", Enum.KeyCode.RightShift)
+local Test = Window:Tab("Others")
+
+Test:Toggle('Speed',function(llc)
+   if llc == false then
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        SendSystemMessage("[Speed]: Deactive", Color3.fromRGB(10, 150, 200))
+     
+  else
+     
+         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 23
+         SendSystemMessage("[Speed]: Active", Color3.fromRGB(10, 150, 200))
+     end
+end)
+
+local IsNoClipEnabled = false
+Test:Toggle('Noclip',function(enabled)
+isNoClipEnabled = enabled
+    local character = game.Players.LocalPlayer.Character
+
+    while isNoClipEnabled do
+        for _, part in pairs(character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CanCollide = false
+            end
+        end
+        game:GetService("RunService").Stepped:Wait()
+    end
+end)
+
+local InfiniteJumpEnabled;
+Test:Toggle('Infinite Jump',function(State)
+
+InfiniteJumpEnabled = State
+end)
+
+Test:Toggle('XRay',function(volt)
+
+    if volt == true then
+    
+        SendSystemMessage("[XRay]: Active", Color3.fromRGB(10, 150, 200))
         for _, descendant in pairs(workspace:GetDescendants()) do
             if descendant:IsA("BasePart") then
                 if not descendant:FindFirstChild("OriginalTransparency") then
@@ -990,10 +384,11 @@ wow:Toggle("[#] XRay", function(goreng)
                 descendant.Transparency = 0.5
             end
         end
-    else
-    
-    
-        for _, descendant in pairs(workspace:GetDescendants()) do
+        
+      else
+      
+      SendSystemMessage("[XRay]: Deactive", Color3.fromRGB(10, 150, 200))
+       for _, descendant in pairs(workspace:GetDescendants()) do
             if descendant:IsA("BasePart") then
                 if descendant:FindFirstChild("OriginalTransparency") then
                     descendant.Transparency = descendant.OriginalTransparency.Value
@@ -1003,15 +398,966 @@ wow:Toggle("[#] XRay", function(goreng)
         end
     end
 end)
-local hum = homeTab:Section("Esp Team")
-hum:Button("[•] Chams {Team}", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%A1%D1%83%D0%BF%D0%B5%D1%80%20%D1%83%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%BD%D0%B5%D1%82"))()
-end)
-hum:Button("[•] Esp Detector {Team}", function()
-consolec()
+
+
+
+--[[
+
+Test:Slider('Fov Size',1,200,75,function(Value)
+    print(Value)
 end)
 
-function consolec()
+Test:Colorpicker("Color",Color3.fromRGB(0,0,0), function(color)
+    print(color)
+end)
+
+Test:Dropdown("Part",{'Head',"UpperTorso","HumanoidRootPart","LowerTorso"}, function(objective)
+    print(objective)
+end)
+
+]]--
+
+--- 274b30067affdc9829c53849cf2b5017
+
+end
+
+function ZNewZ()
+
+local lib = loadstring(game:HttpGet('https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%BE%D0%BA%D0%BC%D0%B0%D0%BD%D0%B3%D0%BE%20%D1%82%D0%B0%D0%BA%D0%B6%D0%B5%20%D0%BF%D0%BE%D0%B1%D0%B5%D0%B6%D0%B4%D0%B0%D0%B5%D1%82'))()
+
+local window = lib.createWindow("Volt Beta", "Volt", true) -- lib.createWindow(title, name, draggable)
+local tab1 = window.createTab(">> New >>") -- window.createTab(name)
+
+tab1.createText("Welcome to Quick Hacks!")
+tab1.createButton("Break In 2", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%9D%D0%BE%D0%B2%D0%BE%D0%B5%2C%20%D0%BD%D0%BE%20%D1%81%D0%B5%D0%B9%D1%87%D0%B0%D1%81"))()
+loadstring(game:HttpGet("https://freenote.biz/raw/80jXm2Q0a7",true))()
+end)
+tab1.createButton("Undetectable (Recommended)", function() 
+wait(2)
+   SendSystemMessage("[ANTIBAN]: Active", Color3.fromRGB(10, 150, 200))
+	window.notification("Volt notification", "Volt has been changed, please use one time only")
+end)
+tab1.createToggle("FPS Boost", function(value)
+SendSystemMessage("[LagPing]: Deactive", Color3.fromRGB(10, 150, 200))
+    print(value)
+end)
+local InfiniteJumpEnabled;
+tab1.createToggle("Infinite Jump", false, function(State)
+
+InfiniteJumpEnabled = State
+end)
+tab1.createToggle("Speed", false, function(you)
+	if you == false then	
+	SendSystemMessage("[Speed]: Deactive", Color3.fromRGB(10, 150, 200))
+	     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+	
+	else
+	
+	     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 24
+	SendSystemMessage("[Speed]: Active", Color3.fromRGB(10, 150, 200))
+  	end
+end)
+local isNoClipEnabled = false
+tab1.createToggle("Noclip", false, function(enabled)
+
+isNoClipEnabled = enabled
+    local character = game.Players.LocalPlayer.Character
+
+    while isNoClipEnabled do
+        for _, part in pairs(character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CanCollide = false
+            end
+        end
+        game:GetService("RunService").Stepped:Wait()
+    end
+end)
+tab1.createToggle("XRay", false, function(volt)
+    if volt == true then
+    
+    SendSystemMessage("[XRay]: Active", Color3.fromRGB(10, 150, 200))
+        for _, descendant in pairs(workspace:GetDescendants()) do
+            if descendant:IsA("BasePart") then
+                if not descendant:FindFirstChild("OriginalTransparency") then
+                    local originalTransparency = Instance.new("NumberValue")
+                    originalTransparency.Name = "OriginalTransparency"
+                    originalTransparency.Value = descendant.Transparency
+                    originalTransparency.Parent = descendant
+                end
+                descendant.Transparency = 0.5
+            end
+        end
+        
+      else
+      
+      SendSystemMessage("[XRay]: Deactive", Color3.fromRGB(10, 150, 200))
+       for _, descendant in pairs(workspace:GetDescendants()) do
+            if descendant:IsA("BasePart") then
+                if descendant:FindFirstChild("OriginalTransparency") then
+                    descendant.Transparency = descendant.OriginalTransparency.Value
+                    descendant.OriginalTransparency:Destroy()
+                end
+            end
+        end
+    end
+end)
+
+end
+
+function LXXX()
+
+getgenv().boostFPS = true 
+
+repeat task.wait() until game:IsLoaded();
+
+local vim = game:GetService("VirtualInputManager")
+local CoreGui = game:GetService("CoreGui")
+
+
+setfpscap(5000)
+
+CoreGui.DescendantAdded:Connect(function(d)
+   if d.Name == "MainView" and d.Parent.Name == "DevConsoleUI" and boostFPS then
+       task.wait()
+       local screen = d.Parent.Parent.Parent
+       screen.Enabled = false;
+   end
+end)
+
+vim:SendKeyEvent(true, "F9", 0, game)    
+wait()
+vim:SendKeyEvent(false, "F9", 0, game)  
+
+setfpscap(5000)
+
+task.spawn(function()
+	while true do task.wait()
+
+        if not getgenv().boostFPS then
+            local panel = CoreGui:FindFirstChild("DevConsoleMaster", true);
+
+            if panel then
+                panel.Enabled = true;
+                vim:SendKeyEvent(true, "F9", 0, game)    
+                vim:SendKeyEvent(false, "F9", 0, game)  
+                repeat task.wait() until boostFPS
+            end
+
+            continue;
+        end
+
+
+		warn("")
+
+		if not CoreGui:FindFirstChild("DevConsoleUI", true):FindFirstChild("MainView") then
+			vim:SendKeyEvent(true, "F9", 0, game)    
+			wait()
+			vim:SendKeyEvent(false, "F9", 0, game)  
+			continue
+		end
+	end
+end)
+
+end
+
+function XXXL()
+
+--// Cache
+
+local getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller, stringlower = getgenv, getnamecallmethod, hookmetamethod, newcclosure, checkcaller, string.lower
+
+--// Loaded check
+
+if getgenv().ED_AntiKick then return end
+
+--// Variables
+
+local Players, StarterGui, OldNamecall = game:GetService("Players"), game:GetService("StarterGui")
+
+--// Global Variables
+
+getgenv().ED_AntiKick = {
+	SendNotifications = true, -- Set to true if you want to get notified for every event
+	CheckCaller = false -- Set to true if you want to disable kicking by other executed scripts
+}
+
+--// Main
+
+OldNamecall = hookmetamethod(game, "__namecall", newcclosure(function(...)
+	if (getgenv().ED_AntiKick.CheckCaller and not checkcaller() or true) and stringlower(getnamecallmethod()) == "kick" then
+		if getgenv().ED_AntiKick.SendNotifications then
+			StarterGui:SetCore("SendNotification", {
+				Title = "Volt Script",
+				Text = "The script has successfully intercepted an attempted kick.",
+				Icon = "",
+				Duration = 5,
+			})
+		end
+
+		return nil
+	end
+
+	return OldNamecall(...)
+end))
+
+if getgenv().ED_AntiKick.SendNotifications then
+	StarterGui:SetCore("SendNotification", {
+		Title = "Volt Script",
+		Text = "Antikick executed!",
+		Icon = "",
+		Duration = 3,
+	})
+end
+
+end
+
+function ANDROIDS()
+
+-- xiba 4/4/2023
+-- join XCT for more scripts
+-- https://discord.gg/Dgp598affj
+
+local function ApplyESP(v)
+   if v.Character and v.Character:FindFirstChildOfClass'Humanoid' then
+       v.Character.Humanoid.NameDisplayDistance = 9e9
+       v.Character.Humanoid.NameOcclusion = "NoOcclusion"
+       v.Character.Humanoid.HealthDisplayDistance = 9e9
+       v.Character.Humanoid.HealthDisplayType = "AlwaysOn"
+       v.Character.Humanoid.Health = v.Character.Humanoid.Health -- triggers changed
+   end
+end
+for i,v in pairs(game.Players:GetPlayers()) do
+   ApplyESP(v)
+   v.CharacterAdded:Connect(function()
+       task.wait(0.33)
+       ApplyESP(v)
+   end)
+end
+
+game.Players.PlayerAdded:Connect(function(v)
+   ApplyESP(v)
+   v.CharacterAdded:Connect(function()
+       task.wait(0.33)
+       ApplyESP(v)
+   end)
+end)
+
+end
+
+function IOS()
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Blissful4992/ESPs/main/UniversalSkeleton.lua"))()
+
+
+local Skeletons = {}
+for _, Player in next, game.Players:GetChildren() do
+	table.insert(Skeletons, Library:NewSkeleton(Player, true));
+end
+game.Players.PlayerAdded:Connect(function(Player)
+	table.insert(Skeletons, Library:NewSkeleton(Player, true));
+end)
+
+end
+
+function ESPXX()
+
+-- 1. Load the library
+local Sense = loadstring(game:HttpGet('https://sirius.menu/sense'))()
+
+-- 2. Change the configuration.
+Sense.teamSettings.enemy.enabled = true
+Sense.teamSettings.enemy.box = true
+Sense.teamSettings.enemy.boxColor[1] = Color3.new(0, 0.25, 0.75)
+
+-- 3. Load the esp. It doesn't really matter where you put this, but it's recommended you put it at the end of your script.
+Sense.Load()
+
+-- 4. Unload the esp. When you unload Sense, it will clean up every drawing object and instance it has made.
+--Sense.Unload()
+
+end
+
+function NAMEZ()
+
+--//Made by Blissful#4992
+local settings = {
+    Color = Color3.fromRGB(255, 0, 0),
+    Size = 15,
+    Transparency = 1, -- 1 Visible - 0 Not Visible
+    AutoScale = true
+}
+
+local space = game:GetService("Workspace")
+local player = game:GetService("Players").LocalPlayer
+local camera = space.CurrentCamera
+
+local function NewText(color, size, transparency)
+    local text = Drawing.new("Text")
+    text.Visible = false
+    text.Text = ""
+    text.Position = Vector2.new(0, 0)
+    text.Color = color
+    text.Size = size
+    text.Center = true
+    text.Transparency = transparency
+    return text
+end
+
+local function Visibility(state, lib)
+    for u, x in pairs(lib) do
+        x.Visible = state
+    end
+end
+
+local function Size(size, lib)
+    for u, x in pairs(lib) do
+        x.Size = size
+    end
+end
+
+for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+    local library = {
+        name = NewText(settings.Color, settings.Size, settings.Transparency)
+    }
+    local function ESP()
+        local connection
+        connection = game:GetService("RunService").RenderStepped:Connect(function()
+            if v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v.Name ~= player.Name and v.Character.Humanoid.Health > 0 then
+                local HumanoidRootPart_Pos, OnScreen = camera:WorldToViewportPoint(v.Character.HumanoidRootPart.Position)
+                if OnScreen then
+                    library.name.Text = v.Name
+                    library.name.Position = Vector2.new(HumanoidRootPart_Pos.X, HumanoidRootPart_Pos.Y)
+                    --// AutoScale
+                    if settings.AutoScale then
+                        local distance = (Vector3.new(camera.CFrame.X, camera.CFrame.Y, camera.CFrame.Z) - v.Character.HumanoidRootPart.Position).magnitude
+                        local textsize = math.clamp(1/distance*1000, 2, 30) -- 2 is min text size, 30 is max text size, change to your liking
+                        Size(textsize, library)
+                    else 
+                        Size(settings.Size, library)
+                    end
+                    --//--
+                    Visibility(true, library)
+                else 
+                    Visibility(false, library)
+                end
+            else 
+                Visibility(false, library)
+                if game.Players:FindFirstChild(v.Name) == nil then
+                    connection:Disconnect()
+                end
+            end
+        end)
+    end
+    coroutine.wrap(ESP)()
+end
+
+game.Players.PlayerAdded:Connect(function(newplr)
+    print(newplr)
+    local library = {
+        name = NewText(settings.Color, settings.Size, settings.Transparency)
+    }
+    local function ESP()
+        local connection
+        connection = game:GetService("RunService").RenderStepped:Connect(function()
+            if newplr.Character ~= nil and newplr.Character:FindFirstChild("Humanoid") ~= nil and newplr.Character:FindFirstChild("HumanoidRootPart") ~= nil and newplr.Name ~= player.Name and newplr.Character.Humanoid.Health > 0 then
+                local HumanoidRootPart_Pos, OnScreen = camera:WorldToViewportPoint(newplr.Character.HumanoidRootPart.Position)
+                if OnScreen then
+                    library.name.Text = newplr.Name
+                    library.name.Position = Vector2.new(HumanoidRootPart_Pos.X, HumanoidRootPart_Pos.Y)
+                    --// AutoScale
+                    if settings.AutoScale then
+                        local distance = (Vector3.new(camera.CFrame.X, camera.CFrame.Y, camera.CFrame.Z) - newplr.Character.HumanoidRootPart.Position).magnitude
+                        local textsize = math.clamp(1/distance*1000, 2, 30) -- 2 is min text size, 20 is max text size, change to your liking
+                        Size(textsize, library)
+                    else 
+                        Size(settings.Size, library)
+                    end
+                    --//--
+                    Visibility(true, library)
+                else 
+                    Visibility(false, library)
+                end
+            else 
+                Visibility(false, library)
+                if game.Players:FindFirstChild(newplr.Name) == nil then
+                    connection:Disconnect()
+                end
+            end
+        end)
+    end
+    coroutine.wrap(ESP)()
+end)
+
+end
+
+function AIME()
+
+-- Settings
+local Settings = {
+    Box_Color = Color3.fromRGB(255, 0, 0),
+    Box_Thickness = 2,
+    Team_Check = false,
+    Team_Color = false,
+    Autothickness = true
+}
+
+--Locals
+local Space = game:GetService("Workspace")
+local Player = game:GetService("Players").LocalPlayer
+local Camera = Space.CurrentCamera
+
+-- Locals
+local function NewLine(color, thickness)
+    local line = Drawing.new("Line")
+    line.Visible = false
+    line.From = Vector2.new(0, 0)
+    line.To = Vector2.new(0, 0)
+    line.Color = color
+    line.Thickness = thickness
+    line.Transparency = 1
+    return line
+end
+
+local function Vis(lib, state)
+    for i, v in pairs(lib) do
+        v.Visible = state
+    end
+end
+
+local function Colorize(lib, color)
+    for i, v in pairs(lib) do
+        v.Color = color
+    end
+end
+
+local Black = Color3.fromRGB(0, 0, 0)
+
+local function Rainbow(lib, delay)
+    for hue = 0, 1, 1/30 do
+        local color = Color3.fromHSV(hue, 0.6, 1)
+        Colorize(lib, color)
+        wait(delay)
+    end
+    Rainbow(lib)
+end
+--Main Draw Function
+local function Main(plr)
+    repeat wait() until plr.Character ~= nil and plr.Character:FindFirstChild("Humanoid") ~= nil
+    local R15
+    if plr.Character.Humanoid.RigType == Enum.HumanoidRigType.R15 then
+        R15 = true
+    else 
+        R15 = false
+    end
+    local Library = {
+        TL1 = NewLine(Settings.Box_Color, Settings.Box_Thickness),
+        TL2 = NewLine(Settings.Box_Color, Settings.Box_Thickness),
+
+        TR1 = NewLine(Settings.Box_Color, Settings.Box_Thickness),
+        TR2 = NewLine(Settings.Box_Color, Settings.Box_Thickness),
+
+        BL1 = NewLine(Settings.Box_Color, Settings.Box_Thickness),
+        BL2 = NewLine(Settings.Box_Color, Settings.Box_Thickness),
+
+        BR1 = NewLine(Settings.Box_Color, Settings.Box_Thickness),
+        BR2 = NewLine(Settings.Box_Color, Settings.Box_Thickness)
+    }
+    coroutine.wrap(Rainbow)(Library, 0.15)
+    local oripart = Instance.new("Part")
+    oripart.Parent = Space
+    oripart.Transparency = 1
+    oripart.CanCollide = false
+    oripart.Size = Vector3.new(1, 1, 1)
+    oripart.Position = Vector3.new(0, 0, 0)
+    --Updater Loop
+    local function Updater()
+        local c 
+        c = game:GetService("RunService").RenderStepped:Connect(function()
+            if plr.Character ~= nil and plr.Character:FindFirstChild("Humanoid") ~= nil and plr.Character:FindFirstChild("HumanoidRootPart") ~= nil and plr.Character.Humanoid.Health > 0 and plr.Character:FindFirstChild("Head") ~= nil then
+                local Hum = plr.Character
+                local HumPos, vis = Camera:WorldToViewportPoint(Hum.HumanoidRootPart.Position)
+                if vis then
+                    oripart.Size = Vector3.new(Hum.HumanoidRootPart.Size.X, Hum.HumanoidRootPart.Size.Y*1.5, Hum.HumanoidRootPart.Size.Z)
+                    oripart.CFrame = CFrame.new(Hum.HumanoidRootPart.CFrame.Position, Camera.CFrame.Position)
+                    local SizeX = oripart.Size.X
+                    local SizeY = oripart.Size.Y
+                    local TL = Camera:WorldToViewportPoint((oripart.CFrame * CFrame.new(SizeX, SizeY, 0)).p)
+                    local TR = Camera:WorldToViewportPoint((oripart.CFrame * CFrame.new(-SizeX, SizeY, 0)).p)
+                    local BL = Camera:WorldToViewportPoint((oripart.CFrame * CFrame.new(SizeX, -SizeY, 0)).p)
+                    local BR = Camera:WorldToViewportPoint((oripart.CFrame * CFrame.new(-SizeX, -SizeY, 0)).p)
+
+                    if Settings.Team_Check then
+                        if plr.TeamColor == Player.TeamColor then
+                            Colorize(Library, Color3.fromRGB(0, 255, 0))
+                        else 
+                            Colorize(Library, Color3.fromRGB(255, 0, 0))
+                        end
+                    end
+
+                    if Settings.Team_Color then
+                        Colorize(Library, plr.TeamColor.Color)
+                    end
+
+                    local ratio = (Camera.CFrame.p - Hum.HumanoidRootPart.Position).magnitude
+                    local offset = math.clamp(1/ratio*750, 2, 300)
+
+                    Library.TL1.From = Vector2.new(TL.X, TL.Y)
+                    Library.TL1.To = Vector2.new(TL.X + offset, TL.Y)
+                    Library.TL2.From = Vector2.new(TL.X, TL.Y)
+                    Library.TL2.To = Vector2.new(TL.X, TL.Y + offset)
+
+                    Library.TR1.From = Vector2.new(TR.X, TR.Y)
+                    Library.TR1.To = Vector2.new(TR.X - offset, TR.Y)
+                    Library.TR2.From = Vector2.new(TR.X, TR.Y)
+                    Library.TR2.To = Vector2.new(TR.X, TR.Y + offset)
+
+                    Library.BL1.From = Vector2.new(BL.X, BL.Y)
+                    Library.BL1.To = Vector2.new(BL.X + offset, BL.Y)
+                    Library.BL2.From = Vector2.new(BL.X, BL.Y)
+                    Library.BL2.To = Vector2.new(BL.X, BL.Y - offset)
+
+                    Library.BR1.From = Vector2.new(BR.X, BR.Y)
+                    Library.BR1.To = Vector2.new(BR.X - offset, BR.Y)
+                    Library.BR2.From = Vector2.new(BR.X, BR.Y)
+                    Library.BR2.To = Vector2.new(BR.X, BR.Y - offset)
+
+                    Vis(Library, true)
+
+                    if Settings.Autothickness then
+                        local distance = (Player.Character.HumanoidRootPart.Position - oripart.Position).magnitude
+                        local value = math.clamp(1/distance*100, 1, 4) --0.1 is min thickness, 6 is max
+                        for u, x in pairs(Library) do
+                            x.Thickness = value
+                        end
+                    else 
+                        for u, x in pairs(Library) do
+                            x.Thickness = Settings.Box_Thickness
+                        end
+                    end
+                else 
+                    Vis(Library, false)
+                end
+            else 
+                Vis(Library, false)
+                if game:GetService("Players"):FindFirstChild(plr.Name) == nil then
+                    for i, v in pairs(Library) do
+                        v:Remove()
+                        oripart:Destroy()
+                    end
+                    c:Disconnect()
+                end
+            end
+        end)
+    end
+    coroutine.wrap(Updater)()
+end
+
+-- Draw Boxes
+for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+    if v.Name ~= Player.Name then
+      coroutine.wrap(Main)(v)
+    end
+end
+
+game:GetService("Players").PlayerAdded:Connect(function(newplr)
+    coroutine.wrap(Main)(newplr)
+end)
+
+end
+
+function STICK()
+
+-- Preview: https://gyazo.com/02cfb4aa8659ba5f6ee67a90514cc34d
+-- Made by Blissful#4992
+local Settings = {
+    Color = Color3.fromRGB(255, 203, 138), -- Color of the line
+    Thickness = 1, -- Thickness of the line (Overruled by AutoThickness if activated)
+    Transparency = 1, -- 1 Visible - 0 Not Visible
+    AutoThickness = true, -- Makes Thickness above futile, scales according to distance, good for less encumbered screen
+    Length = 15, -- In studs of the line
+    Smoothness = 0.2 -- 0.01 - Less Smooth(Faster), 1 - Smoother (Slower)
+}
+
+local toggle = true -- use this variable if you wanna integrate into a GUI
+
+local player = game:GetService("Players").LocalPlayer
+local camera = game:GetService("Workspace").CurrentCamera
+
+local function ESP(plr) --//Main function handling specific plr loop esp for line etc
+    local line = Drawing.new("Line") --// Parse and Set the line for tracer
+    line.Visible = false
+    line.From = Vector2.new(0, 0)
+    line.To = Vector2.new(0, 0)
+    line.Color = Settings.Color
+    line.Thickness = Settings.Thickness
+    line.Transparency = Settings.Transparency
+
+    local function Updater() --// Function to update the ESP therefore, line destinations etc every /render/
+        local connection
+        connection = game:GetService("RunService").RenderStepped:Connect(function() -- Putting function in a connection var in order to disconnect if needed, to save performance
+            if toggle and plr.Character ~= nil and plr.Character:FindFirstChild("Humanoid") ~= nil and plr.Character:FindFirstChild("HumanoidRootPart") ~= nil and plr.Character.Humanoid.Health > 0 and plr.Character:FindFirstChild("Head") ~= nil then
+                local headpos, OnScreen = camera:WorldToViewportPoint(plr.Character.Head.Position)
+                if OnScreen then -- checks if player is on screen or not
+                    local offsetCFrame = CFrame.new(0, 0, -Settings.Length)
+                    local check = false
+                    line.From = Vector2.new(headpos.X, headpos.Y)
+                    if Settings.AutoThickness then
+                        local distance = (player.Character.HumanoidRootPart.Position - plr.Character.HumanoidRootPart.Position).magnitude --//AutoThickness
+                        local value = math.clamp(1/distance*100, 0.1, 3) --0.1 is min thickness, 4 is max
+                        line.Thickness = value
+                    end
+                    repeat
+                        local dir = plr.Character.Head.CFrame:ToWorldSpace(offsetCFrame)
+                        offsetCFrame = offsetCFrame * CFrame.new(0, 0, Settings.Smoothness)
+                        local dirpos, vis = camera:WorldToViewportPoint(Vector3.new(dir.X, dir.Y, dir.Z))
+                        if vis then
+                            check = true
+                            line.To = Vector2.new(dirpos.X, dirpos.Y)
+                            line.Visible = true
+                            offsetCFrame = CFrame.new(0, 0, -Settings.Length)
+                        end
+                    until check == true
+                else 
+                    line.Visible = false
+                end
+            else 
+                line.Visible = false
+                if game.Players:FindFirstChild(plr.Name) == nil then
+                    connection:Disconnect()
+                end
+            end
+        end)
+    end
+    coroutine.wrap(Updater)()
+end
+
+for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+    if v.Name ~= player.Name then
+        coroutine.wrap(ESP)(v)
+    end
+end
+
+game.Players.PlayerAdded:Connect(function(newplr)
+    if newplr.Name ~= player.Name then
+        coroutine.wrap(ESP)(newplr)
+    end
+end)
+
+end
+
+function GOLDEN()
+
+-- Preview: https://cdn.discordapp.com/attachments/807887111667056680/820258191224340490/chams.png
+-- Made by Blissful#4992
+local Settings = {
+    TeamCheck = true, -- Overules Color
+    Red = Color3.fromRGB(255, 0, 0),
+    Green = Color3.fromRGB(0, 255, 0),
+    Color = Color3.fromRGB(255, 0, 0),
+    TeamColor = false
+}
+
+--// Locals
+local player = game:GetService("Players").LocalPlayer
+local camera = game:GetService("Workspace").CurrentCamera
+local mouse = player:GetMouse()
+
+local function NewQuad(color)
+    local quad = Drawing.new("Quad")
+    quad.Visible = false
+    quad.PointA = Vector2.new(0,0)
+    quad.PointB = Vector2.new(0,0)
+    quad.PointC = Vector2.new(0,0)
+    quad.PointD = Vector2.new(0,0)
+    quad.Color = color
+    quad.Filled = true
+    quad.Thickness = 1
+    quad.Transparency = 0.25
+    return quad
+end
+
+local function Colorize(color, lib)
+    for i, v in pairs(lib) do
+        v.Color = color
+    end
+end
+
+local function ESP(object, plr)
+    local part = object
+    --// Quads for 3D box (6)
+    local quads = {
+        quad1 = NewQuad(Settings.Color),
+        quad2 = NewQuad(Settings.Color),
+        quad3 = NewQuad(Settings.Color),
+        quad4 = NewQuad(Settings.Color),
+        quad5 = NewQuad(Settings.Color),
+        quad6 = NewQuad(Settings.Color)
+    }
+
+    --// Updates ESP in render loop
+    local function Updater()
+        local connection
+        connection = game:GetService("RunService").RenderStepped:Connect(function()
+            if plr.Character ~= nil and plr.Character:FindFirstChild("HumanoidRootPart") ~= nil and plr.Character:FindFirstChild("Humanoid") ~= nil and plr.Character.Humanoid.Health > 0 and plr.Character:FindFirstChild(object.Name) ~= nil then
+                    local partpos, onscreen = camera:WorldToViewportPoint(part.Position)
+                    if onscreen then
+                        local size_X = part.Size.X/2
+                        local size_Y = part.Size.Y/2
+                        local size_Z = part.Size.Z/2
+                        
+                        local Top1 = camera:WorldToViewportPoint((part.CFrame * CFrame.new(-size_X, size_Y, -size_Z)).p)
+                        local Top2 = camera:WorldToViewportPoint((part.CFrame * CFrame.new(-size_X, size_Y, size_Z)).p)
+                        local Top3 = camera:WorldToViewportPoint((part.CFrame * CFrame.new(size_X, size_Y, size_Z)).p)
+                        local Top4 = camera:WorldToViewportPoint((part.CFrame * CFrame.new(size_X, size_Y, -size_Z)).p)
+    
+                        local Bottom1 = camera:WorldToViewportPoint((part.CFrame * CFrame.new(-size_X, -size_Y, -size_Z)).p)
+                        local Bottom2 = camera:WorldToViewportPoint((part.CFrame * CFrame.new(-size_X, -size_Y, size_Z)).p)
+                        local Bottom3 = camera:WorldToViewportPoint((part.CFrame * CFrame.new(size_X, -size_Y, size_Z)).p)
+                        local Bottom4 = camera:WorldToViewportPoint((part.CFrame * CFrame.new(size_X, -size_Y, -size_Z)).p)
+    
+                        --// Top:
+                        quads.quad1.PointA = Vector2.new(Top1.X, Top1.Y)
+                        quads.quad1.PointB = Vector2.new(Top2.X, Top2.Y)
+                        quads.quad1.PointC = Vector2.new(Top3.X, Top3.Y)
+                        quads.quad1.PointD = Vector2.new(Top4.X, Top4.Y)
+    
+                        --//Bottom:
+                        quads.quad2.PointA = Vector2.new(Bottom1.X, Bottom1.Y)
+                        quads.quad2.PointB = Vector2.new(Bottom2.X, Bottom2.Y)
+                        quads.quad2.PointC = Vector2.new(Bottom3.X, Bottom3.Y)
+                        quads.quad2.PointD = Vector2.new(Bottom4.X, Bottom4.Y)
+    
+                        --//Sides:
+                        quads.quad3.PointA = Vector2.new(Top1.X, Top1.Y)
+                        quads.quad3.PointB = Vector2.new(Top2.X, Top2.Y)
+                        quads.quad3.PointC = Vector2.new(Bottom2.X, Bottom2.Y)
+                        quads.quad3.PointD = Vector2.new(Bottom1.X, Bottom1.Y)
+                        
+                        quads.quad4.PointA = Vector2.new(Top2.X, Top2.Y)
+                        quads.quad4.PointB = Vector2.new(Top3.X, Top3.Y)
+                        quads.quad4.PointC = Vector2.new(Bottom3.X, Bottom3.Y)
+                        quads.quad4.PointD = Vector2.new(Bottom2.X, Bottom2.Y)
+                        
+                        quads.quad5.PointA = Vector2.new(Top3.X, Top3.Y)
+                        quads.quad5.PointB = Vector2.new(Top4.X, Top4.Y)
+                        quads.quad5.PointC = Vector2.new(Bottom4.X, Bottom4.Y)
+                        quads.quad5.PointD = Vector2.new(Bottom3.X, Bottom3.Y)
+    
+                        quads.quad6.PointA = Vector2.new(Top4.X, Top4.Y)
+                        quads.quad6.PointB = Vector2.new(Top1.X, Top1.Y)
+                        quads.quad6.PointC = Vector2.new(Bottom1.X, Bottom1.Y)
+                        quads.quad6.PointD = Vector2.new(Bottom4.X, Bottom4.Y)
+    
+                        if Settings.Team_Check then
+                            if plr.TeamColor == player.TeamColor then
+                                local group_color = Settings.Green
+                                Colorize(group_color, quads)
+                            else 
+                                local group_color = Settings.Red
+                                Colorize(group_color, quads)
+                            end
+                        else 
+                            local group_color = Settings.Color
+                            Colorize(group_color, quads)
+                        end
+
+                        if Settings.TeamColor then
+                            Colorize(plr.TeamColor.Color, quads)
+                        end
+    
+                        for u, x in pairs(quads) do
+                            x.Visible = true
+                        end
+                    else 
+                        for u, x in pairs(quads) do
+                            x.Visible = false
+                        end
+                    end
+            else 
+                for u, x in pairs(quads) do
+                    x.Visible = false
+                end
+                if game.Players:FindFirstChild(plr.Name) == nil then
+                    connection:Disconnect()
+                end
+            end
+        end)
+    end
+    coroutine.wrap(Updater)()
+end
+
+for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+    spawn(function()
+        if v.Name ~= player.Name then
+            repeat wait() until v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v.Character.Humanoid.Health > 0 and v.Character:FindFirstChild("Head") ~= nil
+            for u, x in pairs(v.Character:GetChildren()) do
+                if x:IsA("MeshPart") or x.Name == "Head" or x.Name == "Left Arm" or x.Name == "Right Arm" or x.Name == "Right Leg" or x.Name == "Left Leg" or x.Name == "Torso" then
+                    coroutine.wrap(ESP)(x, v)
+                end
+            end
+        end
+    end)
+end
+
+game.Players.PlayerAdded:Connect(function(newplr)
+    spawn(function()
+        if newplr.Name ~= player.Name then
+            repeat wait() until newplr.Character ~= nil and newplr.Character:FindFirstChild("Humanoid") ~= nil and newplr.Character:FindFirstChild("HumanoidRootPart") ~= nil and newplr.Character.Humanoid.Health > 0 and newplr.Character:FindFirstChild("Head") ~= nil
+            for u, x in pairs(newplr.Character:GetChildren()) do
+                if x:IsA("MeshPart") or x.Name == "Head" or x.Name == "Left Arm" or x.Name == "Right Arm" or x.Name == "Right Leg" or x.Name == "Left Leg" or x.Name == "Torso" then
+                    coroutine.wrap(ESP)(x, newplr)
+                end
+            end
+        end
+    end)
+end)
+
+end
+
+function EXP()
+
+-- Services
+local RunService = game:GetService("RunService");
+local PlayersService = game:GetService("Players");
+
+-- Variables
+local Camera = workspace.CurrentCamera;
+local LastPos;
+local Lines = {};
+local Quads = {};
+
+-- Functions
+local function HasCharacter(Player)
+    return Player.Character and Player.Character:FindFirstChild("HumanoidRootPart");
+end;
+
+local function DrawQuad(PosA, PosB, PosC, PosD)
+    local PosAScreen, PosAVisible = Camera:WorldToViewportPoint(PosA);
+    local PosBScreen, PosBVisible = Camera:WorldToViewportPoint(PosB);
+    local PosCScreen, PosCVisible = Camera:WorldToViewportPoint(PosC);
+    local PosDScreen, PosDVisible = Camera:WorldToViewportPoint(PosD);
+
+    if (not PosAVisible and not PosBVisible and not PosCVisible and not PosDVisible) then return; end;
+
+    local PosAVec = Vector2.new(PosAScreen.X, PosAScreen.Y);
+    local PosBVec = Vector2.new(PosBScreen.X, PosBScreen.Y);
+    local PosCVec = Vector2.new(PosCScreen.X, PosCScreen.Y);
+    local PosDVec = Vector2.new(PosDScreen.X, PosDScreen.Y);
+
+    local Quad = Drawing.new("Quad");
+        Quad.Thickness = .5;
+        Quad.Color = Color3.fromRGB(255, 255, 255);
+        Quad.Transparency = .25;
+        Quad.ZIndex = 1;
+        Quad.Filled = true
+        Quad.Visible = true;
+
+        Quad.PointA = PosAVec;
+        Quad.PointB = PosBVec;
+        Quad.PointC = PosCVec;
+        Quad.PointD = PosDVec;
+
+    table.insert(Quads, Quad)
+end
+
+local function DrawLine(From, To)
+    local FromScreen, FromVisible = Camera:WorldToViewportPoint(From);
+    local ToScreen, ToVisible = Camera:WorldToViewportPoint(To);
+
+    if (not FromVisible and not ToVisible) then return; end;
+
+    local FromPos = Vector2.new(FromScreen.X, FromScreen.Y);
+    local ToPos = Vector2.new(ToScreen.X, ToScreen.Y);
+
+    local Line = Drawing.new("Line");
+        Line.Thickness = 1;
+        Line.From = FromPos
+        Line.To = ToPos
+        Line.Color = Color3.fromRGB(255, 255, 255);
+        Line.Transparency = 1;
+        Line.ZIndex = 1;
+        Line.Visible = true;
+
+    table.insert(Lines, Line)
+end
+
+-- Thank you Nahida#5000 for this function (GetCorners = GetVertices)
+local function GetCorners(Part)
+    local CF, Size, Corners = Part.CFrame, Part.Size / 2, {};
+    for X = -1, 1, 2 do for Y = -1, 1, 2 do for Z = -1, 1, 2 do
+        Corners[#Corners+1] = (CF * CFrame.new(Size * Vector3.new(X, Y, Z))).Position;      
+    end; end; end;
+    return Corners;
+end;
+
+local function DrawEsp(Player)
+    local HRP = Player.Character.HumanoidRootPart;
+
+    -- Constructing the 3d box.
+    local CubeVertices = GetCorners({CFrame = HRP.CFrame * CFrame.new(0, -0.5, 0), Size = Vector3.new(3, 5, 3)});
+
+    -- Drawing the 3d box.
+        -- Bottom face:
+        DrawLine(CubeVertices[1], CubeVertices[2]);
+        DrawLine(CubeVertices[2], CubeVertices[6]);
+        DrawLine(CubeVertices[6], CubeVertices[5]);
+        DrawLine(CubeVertices[5], CubeVertices[1]);
+
+        DrawQuad(CubeVertices[1], CubeVertices[2], CubeVertices[6], CubeVertices[5]);
+       
+        -- Side faces:
+        DrawLine(CubeVertices[1], CubeVertices[3]);
+        DrawLine(CubeVertices[2], CubeVertices[4]);
+        DrawLine(CubeVertices[6], CubeVertices[8]);
+        DrawLine(CubeVertices[5], CubeVertices[7]);
+
+        DrawQuad(CubeVertices[2], CubeVertices[4], CubeVertices[8], CubeVertices[6]);
+        DrawQuad(CubeVertices[1], CubeVertices[2], CubeVertices[4], CubeVertices[3]);
+        DrawQuad(CubeVertices[1], CubeVertices[5], CubeVertices[7], CubeVertices[3]);
+        DrawQuad(CubeVertices[5], CubeVertices[7], CubeVertices[8], CubeVertices[6]);
+
+        -- Top face:
+        DrawLine(CubeVertices[3], CubeVertices[4]);
+        DrawLine(CubeVertices[4], CubeVertices[8]);
+        DrawLine(CubeVertices[8], CubeVertices[7]);
+        DrawLine(CubeVertices[7], CubeVertices[3]);
+       
+        DrawQuad(CubeVertices[3], CubeVertices[4], CubeVertices[8], CubeVertices[7]);
+end;
+
+local function BoxEsp()
+    local Players = PlayersService:GetPlayers();
+
+    for i = 1, #Lines do
+        local Line = rawget(Lines, i);
+        if (Line) then Line:Remove(); end;
+    end;
+
+    Lines = {};
+
+    for i = 1, #Quads do
+        local Quad = rawget(Quads, i);
+        if (Quad) then Quad:Remove(); end;
+    end;
+
+    Quads = {};
+
+    for i = 1, #Players do
+        local Player = rawget(Players, i);
+        if HasCharacter(Player) then
+            DrawEsp(Player);
+        end;
+    end;
+end;
+
+-- Main
+RunService.RenderStepped:Connect(BoxEsp);
+
+end
+
+function EVERY()
+
 -- Made by Blissful#4992
 
 local DistFromCenter = 80
@@ -1133,1536 +1479,30 @@ Players.PlayerAdded:Connect(function(v)
         ShowArrow(v)
     end
 end)
-end
-hum:Toggle("[•] Esp {Team-Self}", function(state)
-getgenv().enabled = state --Toggle on/off
-getgenv().filluseteamcolor = true --Toggle fill color using player team color on/off
-getgenv().outlineuseteamcolor = true --Toggle outline color using player team color on/off
-getgenv().fillcolor = Color3.new(0, 0, 0) --Change fill color, no need to edit if using team color
-getgenv().outlinecolor = Color3.new(1, 1, 1) --Change outline color, no need to edit if using team color
-getgenv().filltrans = 0.5 --Change fill transparency
-getgenv().outlinetrans = 0.5 --Change outline transparency
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/Highlight-ESP.lua"))()
-end)
-local hp = homeTab:Section("Zombie/All")
-hp:Button("[•] Health {Self-Enemy-Unknown}", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%91%D1%80%D1%83%D1%85%20%D0%BD%D1%83%D0%B1"))()
-end)
-hp:Button("[•] Boxes {Self-Enemy-Unknown}", function()
-while wait(0.5) do
-    for i, box in ipairs(workspace:GetDescendants()) do
-        if box:FindFirstChild("Humanoid") then
-            if not box:FindFirstChild("EspBox") then
-                if box ~= game.Players.LocalPlayer.Character then
-                    local esp = Instance.new("BoxHandleAdornment",box)
-                    esp.Adornee = box
-                    esp.ZIndex = 0
-                    esp.Size = Vector3.new(5, 6, 2)
-                    esp.Transparency = 0.5 --Changes Transparency 
-                    esp.Color3 = Color3.fromRGB(0,255,0) --Color change
-                    esp.AlwaysOnTop = true
-                    esp.Name = "EspBox"
-                end
-            end
-        end
-    end
-end
-end)
-hp:Button("[•] Boxes {Self-Enemy-Unknown}", function()
-while wait(0.5) do
-    for i, box in ipairs(workspace:GetDescendants()) do
-        if box:FindFirstChild("Humanoid") then
-            if not box:FindFirstChild("EspBox") then
-                if box ~= game.Players.LocalPlayer.Character then
-                    local esp = Instance.new("BoxHandleAdornment",box)
-                    esp.Adornee = box
-                    esp.ZIndex = 0
-                    esp.Size = Vector3.new(5, 6, 2)
-                    esp.Transparency = 0.5 --Changes Transparency 
-                    esp.Color3 = Color3.fromRGB(0,255,0) --Color change
-                    esp.AlwaysOnTop = true
-                    esp.Name = "EspBox"
-                end
-            end
-        end
-    end
-end
-end)
-local payto = Luxt:Tab("Settings")
-local hiz = payto:Section("Servers")
-hiz:Toggle("[2] Anti-ban", function(vors)
-   if vors == false then
-          print('')
-       else
-          print('')
-       end
-end)
-hiz:Toggle("[3] Anti Lag", function()
-    for _, v in pairs(Workspace:GetDescendants()) do
-        if v:IsA("BasePart") and not v.Parent:FindFirstChild("Humanoid") then
-             v.Material = Enum.Material.SmoothPlastic
-             if v:IsA("Texture") then
-             v:Destroy()
-        end
-    end
-end
-end)
-hiz:Button("[4] Low Server", function()
-Lowv()
-end)
-function Lowv()
-local Http = game:GetService("HttpService")
-local TPS = game:GetService("TeleportService")
-local Api = "https://games.roblox.com/v1/games/"
-
-local _place = game.PlaceId
-local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
-function ListServers(cursor)
-   local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
-   return Http:JSONDecode(Raw)
-end
-
-local Server, Next; repeat
-   local Servers = ListServers(Next)
-   Server = Servers.data[1]
-   Next = Servers.nextPageCursor
-until Server
-
-TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
-end
-hiz:Button("[5] Server Hopper", function()
-hoppv()
-end)
-function hoppv()
-local Player = game.Players.LocalPlayer    
-local Http = game:GetService("HttpService")
-local TPS = game:GetService("TeleportService")
-local Api = "https://games.roblox.com/v1/games/"
-
-local _place,_id = game.PlaceId, game.JobId
-local _servers = Api.._place.."/servers/Public?sortOrder=Desc&limit=100"
-function ListServers(cursor)
-   local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
-   return Http:JSONDecode(Raw)
-end
-
-local Next; repeat
-   local Servers = ListServers(Next)
-   for i,v in next, Servers.data do
-       if v.playing < v.maxPlayers and v.id ~= _id then
-           local s,r = pcall(TPS.TeleportToPlaceInstance,TPS,_place,v.id,Player)
-           if s then break end
-       end
-   end
-   
-   Next = Servers.nextPageCursor
-until not Next
-end
-local haz = payto:Section("Settings")
-haz:Button("[+] Console", function()
-game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-end)
-haz:Button("[×] Exit Game", function()
-wait()
-game:Shutdown()
-end)
-haz:Button("[~] Reset", function()
-game.Players.LocalPlayer.Character.Head:Destroy()
-if game.Players.LocalPlayer.Character.Humanoid.Health < 5 then 
-    local deathmanok = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").position
-    wait(1.5)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(deathmanok)
-end
-end)
-haz:Button("[-] Rejoin", function()
-game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
-end)
-local fun = Luxt:Tab("Other")
-local fan = fun:Section("Mission Limited Badges")
-fan:Button("Owner Of Game", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Best #1",  	
-Text = "The 1st badge of all missions.",
-	Icon = "",
-	Duration = 3
-})
-end)
-fan:Button("Only one left", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Last Survive!",  	
-Text = "The only one survivor",
-	Icon = "",
-	Duration = 3
-})
-end)
-fan:Button("Meet the Leader", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Increased Ability",  	
-Text = "Head Commander Rank",
-	Icon = "",
-	Duration = 3
-})
-end)
-fan:Button("Premium Reward", function()
-game:GetService("StarterGui"):SetCore("SendNotification",{ 	
-Title = "Level Cash Up!",  	
-Text = "Earned 50,000+ Cashback Premium!",
-	Icon = "",
-	Duration = 3
-})
-end)
-end
-end
-
-function Bar()
-repeat wait() until game:IsLoaded()
-
-local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
-local Luxt = Luxtl.CreateWindow("Universe X", 13951232354)
-
-local nub = Luxt:Tab("Universe X")
-local bot = nub:Section("Other Script")
-bot:Button("Zombie Uprising", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/0N1y7RyM"))()
-end)
-
-local abbb = Luxt:Tab("Credits")
-local ahl = abbb:Section("#3")
-ahl:Label("Username [ "..game.Players.LocalPlayer.Name.." ]")
-ahl:Label("Display Name [ "..game.Players.LocalPlayer.DisplayName.." ]")
-ahl:Label("User Id [ "..game.Players.LocalPlayer.UserId.." ]")
-ahl:Label("Account Age [ "..game.Players.LocalPlayer.AccountAge.." ]")
-local uov = abbb:Section("#2")
-uov:Label("Game [ Hide And Seek ]")
-uov:Label("Game's ID [ "..game.PlaceId.." ]")
-uov:Label("Server ID [ "..game.JobId.." ]")
-uov:Label("Time's [ "..os.date("%X").." ]")
-local iops = abbb:Section("#1")
-iops:Label("Health [ "..game.Players.LocalPlayer.Character.Humanoid.Health.." ]")
-iops:Label("Fps [ "..math.floor(workspace:GetRealPhysicsFPS()).." ]")
-iops:Label("Ping [ "..game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString().." ]")
-local ubd = abbb:Section("Creater")
-ubd:Button("Owner: Xirius", function()
-print('')
-end)
-ubd:Button("Helper: rbxscript", function()
-print('')
-end)
-
-local settings = Luxt:Tab("Settings")
-local up = settings:Section("Situation")
-up:Button("Shader (1.1)", function()
-isX()
-end)
-
-function isX()
-
- -- Remove existing effects
-    local effects = {
-        "BloomEffect",
-        "SunRaysEffect",
-        "ColorCorrectionEffect",
-        "BlurEffect",
-        "Sky"
-    }
-    
-    for _, effectName in ipairs(effects) do
-        local effect = game.Lighting:FindFirstChildWhichIsA(effectName)
-        if effect then
-            effect:Destroy()
-        end
-    end
-
-    -- Create new effects
-    local bloomEffect = Instance.new("BloomEffect", game.Lighting)
-    local sunRaysEffect = Instance.new("SunRaysEffect", game.Lighting)
-    local colorCorrectionEffect = Instance.new("ColorCorrectionEffect", game.Lighting)
-    local blurEffect = Instance.new("BlurEffect", game.Lighting)
-    Instance.new("Sky", game.Lighting)
-
-    -- Set properties
-    game.Lighting.ExposureCompensation = 0.34
-    game.Lighting.ShadowSoftness = 1
-    game.Lighting.EnvironmentDiffuseScale = 0.343
-    game.Lighting.EnvironmentSpecularScale = 1
-    game.Lighting.Brightness = 2
-    game.Lighting.ColorShift_Top = Color3.fromRGB(118, 117, 108)
-    game.Lighting.OutdoorAmbient = Color3.fromRGB(141, 141, 141)
-    game.Lighting.GeographicLatitude = 100
-    game.Lighting.Ambient = Color3.fromRGB(112, 112, 112)
-
-    -- Set effect properties
-    bloomEffect.Intensity = 0.5
-    bloomEffect.Size = 22
-    bloomEffect.Threshold = 1.5
-    sunRaysEffect.Intensity = 0.117
-    sunRaysEffect.Spread = 1
-    blurEffect.Size = 2
-    colorCorrectionEffect.Contrast = 0.3
-    colorCorrectionEffect.Saturation = 0.5
-    colorCorrectionEffect.TintColor = Color3.fromRGB(255, 252, 224)
 
 end
-up:Button("Remove Fog", function()
-game:GetService("Lighting").FogEnd = 100000
-	for i,v in pairs(game:GetService("Lighting"):GetDescendants()) do
-		if v:IsA("Atmosphere") then
-			v:Destroy()
-		end
-	end
-end)
-up:Button("Full Bright", function()
-local Light = game:GetService("Lighting")
 
-function dofullbright()
-Light.Ambient = Color3.new(1, 1, 1)
-Light.ColorShift_Bottom = Color3.new(1, 1, 1)
-Light.ColorShift_Top = Color3.new(1, 1, 1)
-end
+function XMON()
 
-dofullbright()
+local DarkLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%A2%D1%8B%20%D0%BC%D0%B8%D0%BB%D1%8B%D0%B9%2C%20%D0%BD%D0%BE%20%D0%B1%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D1%83%D0%B5%D1%88%D1%8C"))()
+local WindowOne = DarkLib:Window() -- Makes Window
 
-Light.LightingChanged:Connect(dofullbright)
-end)
-local op = settings:Section("Settings")
-op:Button("Console", function()
-game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-end)
-op:Button("Reset", function()
-    game.Players.LocalPlayer.Character.Head:Destroy()
-if game.Players.LocalPlayer.Character.Humanoid.Health < 5 then 
-    local deathmanok = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").position
-    wait(1.5)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(deathmanok)
-end
-end)
-op:Button("Rejoin", function()
-game:GetService("TeleportService"):Teleport(game.PlaceId, Player) 
-end)
-op:Button("Exit Game", function()
-wait()
-game:Shutdown()
-end)
+local TabOne = WindowOne:Tab("Test") -- Makes Tab
+local TabTwo = WindowOne:Tab("Config") -- Makes Tab
+local TabThree = WindowOne:Tab("AutoFarm") -- Makes Tab
+local TabFour = WindowOne:Tab("Misc") -- Makes Tab
+local TabFive = WindowOne:Tab("Trolling") -- Makes Tab
+local TabSix = WindowOne:Tab("Theme") -- Makes Tab
+local TabSeven = WindowOne:Tab("Discord") -- Makes Tab
+local TabEight = WindowOne:Tab("Credits") -- Makes Tab
 
-local news = Luxt:Tab("Visual")
-local hop = news:Section("Esp")
-hop:Toggle("Team Box", function(state)
-getgenv().enabled = state --Toggle on/off
-getgenv().filluseteamcolor = true --Toggle fill color using player team color on/off
-getgenv().outlineuseteamcolor = true --Toggle outline color using player team color on/off
-getgenv().fillcolor = Color3.new(0, 0, 0) --Change fill color, no need to edit if using team color
-getgenv().outlinecolor = Color3.new(1, 1, 1) --Change outline color, no need to edit if using team color
-getgenv().filltrans = 1 --Change fill transparency
-getgenv().outlinetrans = 1 --Change outline transparency
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/Highlight-ESP.lua"))()
-end)
-hop:Button("Green Box", function()
-while wait(0.5) do
-    for i, box in ipairs(workspace:GetDescendants()) do
-        if box:FindFirstChild("Humanoid") then
-            if not box:FindFirstChild("EspBox") then
-                if box ~= game.Players.LocalPlayer.Character then
-                    local esp = Instance.new("BoxHandleAdornment",box)
-                    esp.Adornee = box
-                    esp.ZIndex = 0
-                    esp.Size = Vector3.new(5, 6, 2)
-                    esp.Transparency = 0.5 --Changes Transparency 
-                    esp.Color3 = Color3.fromRGB(0,255,0) --Color change
-                    esp.AlwaysOnTop = true
-                    esp.Name = "EspBox"
-                end
-            end
-        end
-    end
-end
-end)
-hop:Button("Health", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%91%D1%80%D1%83%D1%85%20%D0%BD%D1%83%D0%B1"))()
-end)
-local vocal = Luxt:Tab("Character")
-local kol = vocal:Section("Movement")
-kol:Button("Kill All Hiders", function()
-local localPlayer = game.Players.LocalPlayer
-local localPlayerCF = localPlayer.Character.HumanoidRootPart.CFrame
 
-for _, player in pairs(game.Players:GetPlayers()) do
-    if player ~= localPlayer then
-        player.Character.HumanoidRootPart.CFrame = localPlayerCF
-        player.Character.Humanoid.PlatformStand = true
-        player.Character.Humanoid.WalkSpeed = 0
-        player.Character.Humanoid.JumpPower = 0
-        for _, part in pairs(player.Character:GetDescendants()) do
-            if part:IsA("BasePart") then
-                part.Anchored = true
-            end
-        end
-    end
-end
 
-localPlayer.Character.HumanoidRootPart.Anchored = false
-end)
-kol:Toggle("Anti-kick", function(pop)
-     if pop == false then
-           print('Universe clients has Disabled.')
-        else
-           print('Universe clients has Enabled.')
-       end
-end)
-kol:Label('Character')
-kol:TextBox("WalkSpeed", "Number/16", function(pp)
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = pp
-end)
-kol:TextBox("JumpHeight", "Number/50", function(pop)
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = pop
-end)
-local bol = vocal:Section('Other')
-local IsNoClipEnabled = false
-bol:Toggle('Noclip', function(enabled)
-isNoClipEnabled = enabled
-    local character = game.Players.LocalPlayer.Character
 
-    while isNoClipEnabled do
-        for _, part in pairs(character:GetDescendants()) do
-            if part:IsA("BasePart") then
-                part.CanCollide = false
-            end
-        end
-        game:GetService("RunService").Stepped:Wait()
-    end
-end)
-local InfiniteJumpEnabled;
-bol:Toggle('Infinite Jump',function(State)
+TabOne:Label("Powered by Volt")
 
-InfiniteJumpEnabled = State
-end)
-bol:TextBox("Fov", "Amount/80", function(txt)
-game.Workspace.CurrentCamera.FieldOfView = txt
-end)
-bol:TextBox("Gravity", "Amount/??", function(boy)
-workspace.Gravity = boy
-end)
-end
-
-function newUI()
-
-print('Universal v2.0 game script from Universe X.')
-local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/h%C3%ACnh%20kh%E1%BB%91i"))()
---- https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua
-local Luxt = Luxtl.CreateWindow("Universe X", 13951232354)
-
-local abbb = Luxt:Tab("Credits")
-local ahl = abbb:Section("#3")
-ahl:Label("Username [ "..game.Players.LocalPlayer.Name.." ]")
-ahl:Label("Display Name [ "..game.Players.LocalPlayer.DisplayName.." ]")
-ahl:Label("User Id [ "..game.Players.LocalPlayer.UserId.." ]")
-ahl:Label("Account Age [ "..game.Players.LocalPlayer.AccountAge.." ]")
-local uov = abbb:Section("#2")
-uov:Label("Game [ "..game.Name.." ]")
-uov:Label("Game's ID [ "..game.PlaceId.." ]")
-uov:Label("Server ID [ "..game.JobId.." ]")
-uov:Label("Time's [ "..os.date("%X").." ]")
-local iops = abbb:Section("#1")
-iops:Label("Health [ "..game.Players.LocalPlayer.Character.Humanoid.Health.." ]")
-iops:Label("Fps [ "..math.floor(workspace:GetRealPhysicsFPS()).." ]")
-iops:Label("Ping [ "..game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString().." ]")
-local ubd = abbb:Section("Creater")
-ubd:Button("Sandbox Of Xirius", function()
-print('')
-end)
-ubd:Button("Helper: rbxscript", function()
-print('')
-end)
-
-local sets = Luxt:Tab("Settings")
-local sy = sets:Section("Server")
-sy:Toggle("Anti LogsChat", function(iop)
-     if iop == false then
-           warn('Disabling logschat..')
-        else
-            RobloxOp()
-            print('done.')
-      end
-end)
-sy:Toggle("Anti Afk", function(opp)
-      if opp == false then
-          warn('Disabling systems..')
-       else
-          loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/anti-afk%20via%20autofocus.txt"))()
-          print('done.')
-      end
-end)
-function RobloxOp() --- Logschat
-
--- This basically makes roblox unable to log your chat messages sent in-game. Meaning if you get reported for saying something bad, you won't get banned!
--- Store in autoexec folder
--- Credits: AnthonyIsntHere and ArianBlaack
-
---[[
-    Change-logs:
-    8/22/2022 - Fixed Chat gui glitching on some games such as Prison Life.
-    9/30/2022 - Fixed chat gui glitching AGAIN... (added better checks too)
-    10/10/2022 - Added gethui() function and fix for Synapse v3.
-    11/11/2022 - Idk what happened but it stopped working... I fixed it though.
-]]--
-
-local ACL_LoadTime = tick()
-
-local ChatChanged = false
-local OldSetting = nil
-local WhitelistedCoreTypes = {
-    "Chat",
-    "All",
-    Enum.CoreGuiType.Chat,
-    Enum.CoreGuiType.All
-}
-
-local StarterGui = game:GetService("StarterGui")
-
-local FixCore = function(x)
-    local CoreHook; CoreHook = hookmetamethod(x, "__namecall", function(self, ...)
-        local Method = getnamecallmethod()
-        local Arguments = {...}
-        
-        if self == x and Method == "SetCoreGuiEnabled" and not checkcaller() then
-            local CoreType = Arguments[1]
-            local Enabled = Arguments[2]
-            
-            if table.find(WhitelistedCoreTypes, CoreType) and not Enabled then
-                if CoreType == ("Chat" or Enum.CoreGuiType.Chat) then
-                    OldSetting = Enabled
-                end
-                ChatChanged = true
-            end
-        end
-        
-        return CoreHook(self, ...)
+TabOne:Button("Button", function() -- Makes Button
+    print('Cannot execute for test.\n[Unavailable for now.')
     end)
-    
-    x.CoreGuiChangedSignal:Connect(function(Type)
-        if table.find(WhitelistedCoreTypes, Type) and ChatChanged then
-            task.wait()
-            if not StarterGui:GetCoreGuiEnabled(Enum.CoreGuiType.Chat) then
-                x:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
-            end
-            wait(1)
-             if StarterGui:GetCoreGuiEnabled(Enum.CoreGuiType.Chat) then
-                x:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, OldSetting) -- probably defaults to false i am too tired for the making of this lol
-            end
-            ChatChanged = false
-        end
-    end)
-end
 
-if StarterGui then
-    FixCore(StarterGui)
-    if not StarterGui:GetCoreGuiEnabled(Enum.CoreGuiType.Chat) then
-        StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
-    end
-else
-    local Connection; Connection = game.ChildAdded:Connect(function(x)
-        if x:IsA("StarterGui") then
-            FixCore(x)
-            Connection:Disconnect()
-        end
-    end)
-end
-
-if not game:IsLoaded() then
-    game.Loaded:wait()
-end
-
-local CoreGui = game:GetService("CoreGui")
-local TweenService = game:GetService("TweenService")
-local Players = game:GetService("Players")
-
-local Player = Players.LocalPlayer
-
-local PlayerGui = Player:FindFirstChildWhichIsA("PlayerGui") do
-    if not PlayerGui then
-        repeat task.wait() until Player:FindFirstChildWhichIsA("PlayerGui")
-        PlayerGui = Player:FindFirstChildWhichIsA("PlayerGui")
-    end
-end
-
-local Notify = function(_Title, _Text , Time)
-    StarterGui:SetCore("SendNotification", {Title = _Title, Text = _Text, Icon = "rbxassetid://2541869220", Duration = Time})
-end
-
-local Tween = function(Object, Time, Style, Direction, Property)
-	return TweenService:Create(Object, TweenInfo.new(Time, Enum.EasingStyle[Style], Enum.EasingDirection[Direction]), Property)
-end
-
-local ACLWarning = Instance.new("ScreenGui")
-local Background = Instance.new("Frame")
-local Top = Instance.new("Frame")
-local Exit = Instance.new("TextButton")
-local UICorner = Instance.new("UICorner")
-local WarningLbl = Instance.new("TextLabel")
-local Loading = Instance.new("Frame")
-local Bar = Instance.new("Frame")
-local WarningBackground = Instance.new("Frame")
-local WarningFrame = Instance.new("Frame")
-local Despair = Instance.new("TextLabel")
-local UIListLayout = Instance.new("UIListLayout")
-local Reason_1 = Instance.new("TextLabel")
-local Reason_2 = Instance.new("TextLabel")
-local Trollge = Instance.new("ImageLabel")
-local UIPadding = Instance.new("UIPadding")
-
-local MakeGuiThread = coroutine.wrap(function()
-    if syn then
-        if gethui then
-            gethui(ACLwarning)
-        else
-            syn.protect_gui(ACLWarning)
-        end
-    end
-    
-    ACLWarning.Name = "Universe X Warning"
-    ACLWarning.Parent = CoreGui
-    ACLWarning.Enabled = false
-    ACLWarning.DisplayOrder = -2147483648
-    
-    Background.Name = "Background"
-    Background.Parent = ACLWarning
-    Background.AnchorPoint = Vector2.new(0.5, 0.5)
-    Background.BackgroundColor3 = Color3.fromRGB(21, 0, 0)
-    Background.BorderSizePixel = 0
-    Background.Position = UDim2.new(0.5, 0, 0.5, 0)
-    Background.Size = UDim2.new(0.300000012, 0, 0.5, 0)
-    
-    Top.Name = "Top"
-    Top.Parent = Background
-    Top.AnchorPoint = Vector2.new(0.5, 0.5)
-    Top.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-    Top.BorderSizePixel = 0
-    Top.Position = UDim2.new(0.5, 0, 0.100000001, 0)
-    Top.Size = UDim2.new(0.899999976, 0, 0.100000001, 0)
-    
-    Exit.Name = "Exit"
-    Exit.Parent = Top
-    Exit.AnchorPoint = Vector2.new(0.5, 0.5)
-    Exit.BackgroundColor3 = Color3.fromRGB(38, 0, 0)
-    Exit.Position = UDim2.new(0.949999988, 0, 0.5, 0)
-    Exit.Size = UDim2.new(0.100000001, -6, 1, -9)
-    Exit.Visible = false
-    Exit.Font = Enum.Font.Arcade
-    Exit.Text = "X"
-    Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Exit.TextScaled = true
-    Exit.TextSize = 14.000
-    Exit.TextWrapped = true
-    
-    UICorner.CornerRadius = UDim.new(0.200000003, 0)
-    UICorner.Parent = Exit
-    
-    WarningLbl.Name = "WarningLbl"
-    WarningLbl.Parent = Top
-    WarningLbl.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    WarningLbl.BackgroundTransparency = 1.000
-    WarningLbl.Position = UDim2.new(0, 17, 0, 0)
-    WarningLbl.Size = UDim2.new(0.5, 0, 1, 0)
-    WarningLbl.Font = Enum.Font.Arcade
-    WarningLbl.Text = "Error.. warning!"
-    WarningLbl.TextColor3 = Color3.fromRGB(255, 255, 255)
-    WarningLbl.TextScaled = true
-    WarningLbl.TextSize = 14.000
-    WarningLbl.TextWrapped = true
-    WarningLbl.TextXAlignment = Enum.TextXAlignment.Left
-    
-    Loading.Name = "Loading"
-    Loading.Parent = Top
-    Loading.AnchorPoint = Vector2.new(0.5, 0.5)
-    Loading.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
-    Loading.BorderSizePixel = 0
-    Loading.Position = UDim2.new(0.699999988, 0, 0.5, 0)
-    Loading.Size = UDim2.new(0.349999994, 0, 0.0199999996, 0)
-    
-    Bar.Name = "Bar"
-    Bar.Parent = Loading
-    Bar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Bar.BorderSizePixel = 0
-    Bar.Size = UDim2.new(0, 0, 1, 0)
-    
-    WarningBackground.Name = "WarningBackground"
-    WarningBackground.Parent = Background
-    WarningBackground.AnchorPoint = Vector2.new(0.5, 0.5)
-    WarningBackground.BackgroundColor3 = Color3.fromRGB(9, 9, 9)
-    WarningBackground.BorderSizePixel = 0
-    WarningBackground.Position = UDim2.new(0.5, 0, 0.550000012, 0)
-    WarningBackground.Size = UDim2.new(0.899999976, 0, 0.800000012, 0)
-    
-    WarningFrame.Name = "WarningFrame"
-    WarningFrame.Parent = WarningBackground
-    WarningFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-    WarningFrame.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-    WarningFrame.BorderSizePixel = 0
-    WarningFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-    WarningFrame.Size = UDim2.new(0.899999976, 0, 0.899999976, 0)
-    
-    Despair.Name = "Despair"
-    Despair.Parent = WarningFrame
-    Despair.AnchorPoint = Vector2.new(0.5, 0.5)
-    Despair.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-    Despair.BackgroundTransparency = 1.000
-    Despair.BorderColor3 = Color3.fromRGB(27, 42, 53)
-    Despair.BorderSizePixel = 0
-    Despair.Position = UDim2.new(0.5, 0, 0.100000001, 0)
-    Despair.Size = UDim2.new(0.949999988, 0, 0.119999997, 0)
-    Despair.Font = Enum.Font.Oswald
-    Despair.Text = "Anti Chat Logger will not work here!"
-    Despair.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Despair.TextScaled = true
-    Despair.TextSize = 50.000
-    Despair.TextWrapped = true
-    Despair.TextYAlignment = Enum.TextYAlignment.Top
-    
-    UIListLayout.Parent = WarningFrame
-    UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
-    UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
-    UIListLayout.Padding = UDim.new(0, 15)
-    
-    Reason_1.Name = "Reason_1"
-    Reason_1.Parent = WarningFrame
-    Reason_1.AnchorPoint = Vector2.new(0.5, 0.5)
-    Reason_1.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-    Reason_1.BackgroundTransparency = 1.000
-    Reason_1.BorderColor3 = Color3.fromRGB(27, 42, 53)
-    Reason_1.BorderSizePixel = 0
-    Reason_1.Position = UDim2.new(0.5, 0, 0.100000001, 0)
-    Reason_1.Size = UDim2.new(0.949999988, 0, 0.100000001, 0)
-    Reason_1.Visible = false
-    Reason_1.Font = Enum.Font.Oswald
-    Reason_1.Text = "-Chat Module was not found."
-    Reason_1.TextColor3 = Color3.fromRGB(255, 0, 0)
-    Reason_1.TextScaled = true
-    Reason_1.TextSize = 50.000
-    Reason_1.TextWrapped = true
-    Reason_1.TextYAlignment = Enum.TextYAlignment.Top
-    
-    Reason_2.Name = "Reason_2"
-    Reason_2.Parent = WarningFrame
-    Reason_2.AnchorPoint = Vector2.new(0.5, 0.5)
-    Reason_2.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
-    Reason_2.BackgroundTransparency = 1.000
-    Reason_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
-    Reason_2.BorderSizePixel = 0
-    Reason_2.Position = UDim2.new(0.5, 0, 0.100000001, 0)
-    Reason_2.Size = UDim2.new(0.949999988, 0, 0.100000001, 0)
-    Reason_2.Visible = false
-    Reason_2.Font = Enum.Font.Oswald
-    Reason_2.Text = "-MessagePosted function is invalid."
-    Reason_2.TextColor3 = Color3.fromRGB(255, 0, 0)
-    Reason_2.TextScaled = true
-    Reason_2.TextSize = 50.000
-    Reason_2.TextWrapped = true
-    Reason_2.TextYAlignment = Enum.TextYAlignment.Top
-    
-    Trollge.Name = "Trollge"
-    Trollge.Parent = WarningFrame
-    Trollge.AnchorPoint = Vector2.new(0.5, 0.5)
-    Trollge.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    Trollge.BackgroundTransparency = 1.000
-    Trollge.Position = UDim2.new(0.5, 0, 0.670000017, 0)
-    Trollge.Size = UDim2.new(0.449999988, 0, 0.5, 0)
-    Trollge.Image = "rbxassetid://10104834800"
-    
-    UIPadding.Parent = WarningFrame
-    UIPadding.PaddingTop = UDim.new(0, 10)
-    
-    Exit.MouseButton1Click:Connect(function()
-        local UpTween = Tween(Background, .2, "Quint", "Out", {Position = UDim2.new(0.5, 0, 0.45, 0)})
-        local DownTween = Tween(Background, 1, "Quad", "Out", {Position = UDim2.new(0.5, 0, 2, 0)})
-        UpTween:Play()
-        UpTween.Completed:wait()
-        DownTween:Play()
-        DownTween.Completed:wait()
-        ACLWarning:Destroy()
-    end)
-end)()
-
-local ExitCooldown = function()
-    wait(.5)
-    local Tween = Tween(Bar, 3, "Quad", "InOut", {Size = UDim2.new(1, 0, 1, 0)})
-    Tween:Play()
-    Tween.Completed:wait()
-    Loading:Destroy()
-    Exit.Visible = true
-end
-
-local PlayerScripts = Player:WaitForChild("PlayerScripts")
-local ChatMain = PlayerScripts:FindFirstChild("ChatMain", true) or false
-
-if not ChatMain then
-    local Timer = tick()
-    repeat
-        task.wait()
-    until PlayerScripts:FindFirstChild("ChatMain", true) or tick() > (Timer + 3)
-    ChatMain = PlayerScripts:FindFirstChild("ChatMain", true)
-    if not ChatMain then
-        ACLWarning.Enabled = true
-        Reason_1.Visible = true
-        ExitCooldown()
-        return
-    end
-end
-
-local PostMessage = require(ChatMain).MessagePosted
-
-if not PostMessage then
-    ACLWarning.Enabled = true
-    Reason_2.Visible = true
-    ExitCooldown()
-    return
-end
-
-local MessageEvent = Instance.new("BindableEvent")
-local OldFunctionHook
-OldFunctionHook = hookfunction(PostMessage.fire, function(self, Message)
-    if not checkcaller() and self == PostMessage then
-        MessageEvent:Fire(Message)
-        return
-    end
-    return OldFunctionHook(self, Message)
-end)
-
-if setfflag then
-    setfflag("AbuseReportScreenshot", "False")
-    setfflag("AbuseReportScreenshotPercentage", "0")
-end
-
-ChatFixToggle = false
-task.spawn(function()
-    wait(1)
-    ACLWarning:Destroy()
-end)
-if OldSetting then
-    StarterGui:SetCoreGuiEnabled(CoreGuiSettings[1], CoreGuiSettings[2])
-end
-Notify("🔹Universal X🔹", "Anti Chat and Screenshot Logger Loaded!", 15)
-print(string.format("Anti Chat-Logger has loaded in %s seconds.", tostring(tick() - ACL_LoadTime):sub(1, 4)))
-end
-
-local set = sets:Section("Interface")
-set:Button('Check', function()
-game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
-end)
-set:Button('Rejoin', function()
-game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
-end)
-set:Button('Exit', function()
-game:Shutdown()
-end)
-local vus = Luxt:Tab("Visual")
-local visa = vus:Section("Esp")
-visa:Toggle("Team Esp [A]", function(state)
-getgenv().enabled = state --Toggle on/off
-getgenv().filluseteamcolor = true --Toggle fill color using player team color on/off
-getgenv().outlineuseteamcolor = true --Toggle outline color using player team color on/off
-getgenv().fillcolor = Color3.new(0, 0, 0) --Change fill color, no need to edit if using team color
-getgenv().outlinecolor = Color3.new(1, 1, 1) --Change outline color, no need to edit if using team color
-getgenv().filltrans = 0.5 --Change fill transparency
-getgenv().outlinetrans = 0.5 --Change outline transparency
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/Highlight-ESP.lua"))()
-end)
-visa:Button("Boxes [?]", function()
--- Create a function to draw an ESP box
-local function drawESP(character)
-    for _, part in ipairs(character:GetDescendants()) do
-        if part:IsA("BasePart") then
-            local box = Instance.new("BoxHandleAdornment")
-            box.Size = part.Size + Vector3.new(0.1, 0.1, 0.1) -- Add a small margin around the part
-            box.Adornee = part
-            box.Parent = part
-
-            -- Customize the appearance of the box
-            box.Color3 = Color3.fromRGB(255, 0, 0)
-            box.Transparency = 0.5
-            box.ZIndex = 1
-        end
-    end
-end
-
--- Function to execute the ESP script
-local function executeESP()
-    -- Loop through all player characters and add an ESP box to each part
-    for _, player in ipairs(game.Players:GetPlayers()) do
-        local character = player.Character
-        if character then
-            drawESP(character)
-        end
-    end
-end
-end)
-visa:Button("Health [N/P]", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%91%D1%80%D1%83%D1%85%20%D0%BD%D1%83%D0%B1"))()
-end)
-visa:Button("Boxes [P]", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%A1%D1%83%D0%BF%D0%B5%D1%80%20%D1%83%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%BD%D0%B5%D1%82"))()
-end)
-visa:Button("Name [S/P]", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%A2%D1%80%D0%B5%D0%B9%D1%81%D0%B5%D1%80%20%D0%BB%D0%BE%D0%BB%20%D0%BD%D1%83%D0%B1%20%D1%85%D0%B0"))()
-end)
-visa:Button("Boxes [N/P]", function()
-while wait(0.5) do
-    for i, box in ipairs(workspace:GetDescendants()) do
-        if box:FindFirstChild("Humanoid") then
-            if not box:FindFirstChild("EspBox") then
-                if box ~= game.Players.LocalPlayer.Character then
-                    local esp = Instance.new("BoxHandleAdornment",box)
-                    esp.Adornee = box
-                    esp.ZIndex = 0
-                    esp.Size = Vector3.new(5, 6, 2)
-                    esp.Transparency = 0.5 --Changes Transparency 
-                    esp.Color3 = Color3.fromRGB(0,255,0) --Color change
-                    esp.AlwaysOnTop = true
-                    esp.Name = "EspBox"
-                end
-            end
-        end
-    end
-end
-end)
-local XD = vus:Section("FPS")
-XD:Button("[2] Unlocker Fps", function()
-loadstring(game:HttpGet("https://fpsplus.000webhostapp.com/OBFUSCATED_SOURCE_FPSPLUS.lua", true))()
-end)
-XD:Button("[1] Unlocker Fps", function()
-loadstring(game:HttpGet"https://pastebinp.com/raw/VekKpUuz")()
-end)
-local boz = vus:Section("Rtx")
-boz:Button("Rtx -- 2.1", function()
-Buz()
-end)
-
-function Buz()
-local a = game.Lighting
-a.Ambient = Color3.fromRGB(33, 33, 33)
-a.Brightness = 6.67
-a.ColorShift_Bottom = Color3.fromRGB(0, 0, 0)
-a.ColorShift_Top = Color3.fromRGB(255, 247, 237)
-a.EnvironmentDiffuseScale = 0.105
-a.EnvironmentSpecularScale = 0.522
-a.GlobalShadows = true
-a.OutdoorAmbient = Color3.fromRGB(51, 54, 67)
-a.ShadowSoftness = 0.04
-a.GeographicLatitude = -15.525
-a.ExposureCompensation = 0.75
-local b = Instance.new("BloomEffect", a)
-b.Enabled = true
-b.Intensity = 0.04
-b.Size = 1900
-b.Threshold = 0.915
-local c = Instance.new("ColorCorrectionEffect", a)
-c.Brightness = 0.176
-c.Contrast = 0.39
-c.Enabled = true
-c.Saturation = 0.2
-c.TintColor = Color3.fromRGB(217, 145, 57)
-if getgenv().mode == "Summer" then
-   c.TintColor = Color3.fromRGB(255, 220, 148)
-elseif getgenv().mode == "Autumn" then
-   c.TintColor = Color3.fromRGB(217, 145, 57)
-else
-   warn("No mode selected!")
-   print("Please select a mode")
-   b:Destroy()
-   c:Destroy()
-end
-local d = Instance.new("DepthOfFieldEffect", a)
-d.Enabled = true
-d.FarIntensity = 0.077
-d.FocusDistance = 21.54
-d.InFocusRadius = 20.77
-d.NearIntensity = 0.277
-local e = Instance.new("ColorCorrectionEffect", a)
-e.Brightness = 0
-e.Contrast = -0.07
-e.Saturation = 0
-e.Enabled = true
-e.TintColor = Color3.fromRGB(255, 247, 239)
-local e2 = Instance.new("ColorCorrectionEffect", a)
-e2.Brightness = 0.2
-e2.Contrast = 0.45
-e2.Saturation = -0.1
-e2.Enabled = true
-e2.TintColor = Color3.fromRGB(255, 255, 255)
-local s = Instance.new("SunRaysEffect", a)
-s.Enabled = true
-s.Intensity = 0.01
-s.Spread = 0.146
-
-Plr = {}
-for i,v in pairs(game:GetService("Players"):GetChildren()) do
-    table.insert(Plr,v.Name) 
-end
-end 
-
-boz:Button("Rtx 0.2", function()
-local find1 = game.Lighting:FindFirstChildWhichIsA("BloomEffect") if find1 then
-    game.Lighting:FindFirstChildWhichIsA("BloomEffect"):Destroy()
-end
-local find2 = game.Lighting:FindFirstChildWhichIsA("SunRaysEffect") if find2 then
-    game.Lighting:FindFirstChildWhichIsA("SunRaysEffect"):Destroy()
-end
-local find3 = game.Lighting:FindFirstChildWhichIsA("ColorCorrectionEffect") if find3 then
-    game.Lighting:FindFirstChildWhichIsA("ColorCorrectionEffect"):Destroy()
-end
-local find4 = game.Lighting:FindFirstChildWhichIsA("BlurEffect") if find4 then
-    game.Lighting:FindFirstChildWhichIsA("BlurEffect"):Destroy()
-end
-local find5 = game.Lighting:FindFirstChildWhichIsA("Sky") if find5 then
-    game.Lighting:FindFirstChildWhichIsA("Sky"):Destroy()
-end
-end)
-boz:Button("Rtx 1", function()
-loadstring(game:HttpGet(('https://pastefy.ga/xXkUxA0P/raw'),true))()
-end)
-boz:Button("Rtx 1.0", function()
-loadstring(game:HttpGet('https://pastebin.com/raw/Bkf0BJb3'))()
-end)
-boz:Button("Black/White", function()
-setting = settings().Network
-local Effect = Instance.new("ColorCorrectionEffect")
-Effect.Parent = game.Lighting
-Effect.Saturation = -1
-Effect.Brightness = 0
-Effect.Contrast = 0
-toggle = false
-end)
-boz:Button("Full Bright", function()
-local Light = game:GetService("Lighting")
-
-function dofullbright()
-Light.Ambient = Color3.new(1, 1, 1)
-Light.ColorShift_Bottom = Color3.new(1, 1, 1)
-Light.ColorShift_Top = Color3.new(1, 1, 1)
-end
-
-dofullbright()
-
-Light.LightingChanged:Connect(dofullbright)
-end)
-
-local YTB = Luxt:Tab("Combat")
-local cv = YTB:Section("Teleport")
-cv:Button("Teleport", function()
-otherss()
-end)
-
-local YT = YTB:Section("Rounds")
-YT:Button("God mode [2]", function()
-	local Cam = workspace.CurrentCamera
-	local Pos, Char = Cam.CFrame, speaker.Character
-	local Human = Char and Char.FindFirstChildWhichIsA(Char, "Humanoid")
-	local nHuman = Human.Clone(Human)
-	nHuman.Parent, speaker.Character = Char, nil
-	nHuman.SetStateEnabled(nHuman, 15, false)
-	nHuman.SetStateEnabled(nHuman, 1, false)
-	nHuman.SetStateEnabled(nHuman, 0, false)
-	nHuman.BreakJointsOnDeath, Human = true, Human.Destroy(Human)
-	speaker.Character, Cam.CameraSubject, Cam.CFrame = Char, nHuman, wait() and Pos
-	nHuman.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
-	local Script = Char.FindFirstChild(Char, "Animate")
-	if Script then
-		Script.Disabled = true
-		wait()
-		Script.Disabled = false
-	end
-	nHuman.Health = nHuman.MaxHealth
-end)
-YT:Button("God mode", function()
-local accessories = {}
-function GodMode()
-    if game.Players.LocalPlayer.Character then
-        if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
-            for _, accessory in pairs(game.Players.LocalPlayer.Character.Humanoid:GetAccessories()) do
-                table.insert(accessories, accessory:Clone())
-            end
-            game.Players.LocalPlayer.Character.Humanoid.Name = "deku"
-        end
-        local v = game.Players.LocalPlayer.Character["deku"]:Clone()
-        v.Parent = game.Players.LocalPlayer.Character
-        v.Name = "Humanoid"
-        wait(0.1)
-        game.Players.LocalPlayer.Character["deku"]:Destroy()
-        workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
-        for _, accessory in pairs(accessories) do
-            game.Players.LocalPlayer.Character.Humanoid:AddAccessory(accessory)
-        end
-        game.Players.LocalPlayer.Character.Animate.Disabled = true
-        wait(0.1)
-        game.Players.LocalPlayer.Character.Animate.Disabled = false
-    end
-end
-GodMode()
-end)
-YT:Button("Kill All [R]", function()
-local localPlayer = game.Players.LocalPlayer
-local localPlayerCF = localPlayer.Character.HumanoidRootPart.CFrame
-
-for _, player in pairs(game.Players:GetPlayers()) do
-    if player ~= localPlayer then
-        player.Character.HumanoidRootPart.CFrame = localPlayerCF
-        player.Character.Humanoid.PlatformStand = true
-        player.Character.Humanoid.WalkSpeed = 0
-        player.Character.Humanoid.JumpPower = 0
-        for _, part in pairs(player.Character:GetDescendants()) do
-            if part:IsA("BasePart") then
-                part.Anchored = true
-            end
-        end
-    end
-end
-
-localPlayer.Character.HumanoidRootPart.Anchored = false
-end)
-YT:Button("Kill All [Permanents]", function()
-local L_1_ = true;
-local L_2_ = game.Players.LocalPlayer.Character.HumanoidRootPart;
-local L_3_ = L_2_.Position - Vector3.new(5, 0, 0)
-
-game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(L_4_arg1)
-	if L_4_arg1 == 'f' then
-		L_1_ = not L_1_
-	end;
-	if L_4_arg1 == 'r' then
-		L_2_ = game.Players.LocalPlayer.Character.HumanoidRootPart;
-		L_3_ = L_2_.Position - Vector3.new(5, 0, 0)
-	end
-end)
-
-for L_5_forvar1, L_6_forvar2 in pairs(game.Players:GetPlayers()) do
-	if L_6_forvar2 == game.Players.LocalPlayer then
-	else
-		local L_7_ = coroutine.create(function()
-			game:GetService('RunService').RenderStepped:Connect(function()
-				local L_8_, L_9_ = pcall(function()
-					local L_10_ = L_6_forvar2.Character;
-					if L_10_ then
-						if L_10_:FindFirstChild("HumanoidRootPart") then
-							if L_1_ then
-								L_6_forvar2.Backpack:ClearAllChildren()
-								for L_11_forvar1, L_12_forvar2 in pairs(L_10_:GetChildren()) do
-									if L_12_forvar2:IsA("Tool") then
-										L_12_forvar2:Destroy()
-									end
-								end;
-								L_10_.HumanoidRootPart.CFrame = CFrame.new(L_3_)
-							end
-						end
-					end
-				end)
-				if L_8_ then
-				else
-					warn("Unnormal error: "..L_9_)
-				end
-			end)
-		end)
-		coroutine.resume(L_7_)
-	end
-end;
-
-game.Players.PlayerAdded:Connect(function(L_13_arg1)   
-	if L_13_arg1 == game.Players.LocalPlayer then
-	else
-		local L_14_ = coroutine.create(function()
-			game:GetService('RunService').RenderStepped:Connect(function()
-				local L_15_, L_16_ = pcall(function()
-					local L_17_ = L_13_arg1.Character;
-					if L_17_ then
-						if L_17_:FindFirstChild("HumanoidRootPart") then
-							if L_1_ then
-								L_13_arg1.Backpack:ClearAllChildren()
-								for L_18_forvar1, L_19_forvar2 in pairs(L_17_:GetChildren()) do
-									if L_19_forvar2:IsA("Tool") then
-										L_19_forvar2:Destroy()
-									end
-								end;
-								L_17_.HumanoidRootPart.CFrame = CFrame.new(L_3_)
-							end
-						end
-					end
-				end)
-				if L_15_ then
-				else
-					warn("Unnormal error: "..L_16_)
-				end
-			end)
-		end)
-		coroutine.resume(L_14_)
-	end           
-end)
-end)
-local othe = Luxt:Tab("Others")
-local cvo = othe:Section("#1")
-cvo:TextBox("WalkSpeed", "Number", function(Op)
-game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Op
-end)
-cvo:TextBox("JumpHeight", "Number", function(Yop)
-game.Players.LocalPlayer.Character.Humanoid.JumpPower = Yop
-end)
-cvo:Label("Ability")
-local InfiniteJumpEnabled;
-cvo:Toggle("Infinite Jump", function(State)
-InfiniteJumpEnabled = State
-end)
-
-local Player = game:GetService("Players").LocalPlayer
-game:GetService("UserInputService").JumpRequest:Connect(function()
-     if InfiniteJumpEnabled then
-         Player.Character:WaitForChild("Humanoid"):ChangeState("Jumping")
-     end
-end)
-local isNoClipEnabled = false
-cvo:Toggle("Noclip", function(enabled)
-     isNoClipEnabled = enabled
-    local character = game.Players.LocalPlayer.Character
-
-    while isNoClipEnabled do
-        for _, part in pairs(character:GetDescendants()) do
-            if part:IsA("BasePart") then
-                part.CanCollide = false
-            end
-        end
-        game:GetService("RunService").Stepped:Wait()
-    end
-end)
-cvo:Button("Clip", function()
-IsNoClipEnabled = false
-end)
-local goreng = false
-cvo:Toggle("XRay", function(goreng)
-       if goreng == true then
-        for _, descendant in pairs(workspace:GetDescendants()) do
-            if descendant:IsA("BasePart") then
-                if not descendant:FindFirstChild("OriginalTransparency") then
-                    local originalTransparency = Instance.new("NumberValue")
-                    originalTransparency.Name = "OriginalTransparency"
-                    originalTransparency.Value = descendant.Transparency
-                    originalTransparency.Parent = descendant
-                end
-                descendant.Transparency = 0.5
-            end
-        end
-        
-    else
-    
-        for _, descendant in pairs(workspace:GetDescendants()) do
-            if descendant:IsA("BasePart") then
-                if descendant:FindFirstChild("OriginalTransparency") then
-                    descendant.Transparency = descendant.OriginalTransparency.Value
-                    descendant.OriginalTransparency:Destroy()
-                end
-            end
-        end
-    end
-end)
-local J = false;
-cvo:Toggle("Bunny Hop", function(K)
-J = K;
-spawn(function()
-while wait()
-and J do game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
-end
-end)
-end)
-cvo:Label("-- More --")
-cvo:Toggle("Fly [E]", function(pp)
-    if bos == false then
-    
-           wsframe.Visible = true
-           Fly.Visible = false
-       
-       else
-       
-          repeat wait() 
-	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Head") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid") 
-local mouse = game.Players.LocalPlayer:GetMouse() 
-repeat wait() until mouse
-local plr = game.Players.LocalPlayer 
-local torso = plr.Character.Head 
-local flying = false
-local deb = true 
-local ctrl = {f = 0, b = 0, l = 0, r = 0} 
-local lastctrl = {f = 0, b = 0, l = 0, r = 0} 
-local maxspeed = 400 
-local speed = 5000 
-
-function Fly() 
-local bg = Instance.new("BodyGyro", torso) 
-bg.P = 9e4 
-bg.maxTorque = Vector3.new(9e9, 9e9, 9e9) 
-bg.cframe = torso.CFrame 
-local bv = Instance.new("BodyVelocity", torso) 
-bv.velocity = Vector3.new(0,0.1,0) 
-bv.maxForce = Vector3.new(9e9, 9e9, 9e9) 
-repeat wait() 
-plr.Character.Humanoid.PlatformStand = true 
-if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then 
-speed = speed+.5+(speed/maxspeed) 
-if speed > maxspeed then 
-speed = maxspeed 
-end 
-elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then 
-speed = speed-1 
-if speed < 0 then 
-speed = 0 
-end 
-end 
-if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then 
-bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
-lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r} 
-elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then 
-bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed 
-else 
-bv.velocity = Vector3.new(0,0.1,0) 
-end 
-bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0) 
-until not flying 
-ctrl = {f = 0, b = 0, l = 0, r = 0} 
-lastctrl = {f = 0, b = 0, l = 0, r = 0} 
-speed = 0 
-bg:Destroy() 
-bv:Destroy() 
-plr.Character.Humanoid.PlatformStand = false 
-end 
-mouse.KeyDown:connect(function(key) 
-if key:lower() == "e" then 
-if flying then flying = false 
-else 
-flying = true 
-Fly() 
-end 
-elseif key:lower() == "w" then 
-ctrl.f = 1 
-elseif key:lower() == "s" then 
-ctrl.b = -1 
-elseif key:lower() == "a" then 
-ctrl.l = -1 
-elseif key:lower() == "d" then 
-ctrl.r = 1 
-end 
-end) 
-mouse.KeyUp:connect(function(key) 
-if key:lower() == "w" then 
-ctrl.f = 0 
-elseif key:lower() == "s" then 
-ctrl.b = 0 
-elseif key:lower() == "a" then 
-ctrl.l = 0 
-elseif key:lower() == "d" then 
-ctrl.r = 0 
-end 
-end)
-Fly()
-end
-end)
-
-local lol = Luxt:Tab("Others")
-local tol = lol:Section("Tool")
-tol:Button("F3X", function()
-loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
-end)
-tol:Button("Noclip Tools", function()
-mouse = game.Players.LocalPlayer:GetMouse()
-tool = Instance.new("Tool")
-tool.RequiresHandle = false
-tool.Name = ("Universe X: Tools")
-tool.Activated:Connect(function()
-game.Players.LocalPlayer.Character.Humanoid.MaxHealth = math.huge
-game.Players.LocalPlayer.Character.Humanoid.Health = math.huge
-while true do
-		game:GetService("RunService").Stepped:wait()
-		game.Players.LocalPlayer.Character.Head.CanCollide = false
-		game.Players.LocalPlayer.Character.Torso.CanCollide = false
-end
-end)
-tool.Parent = game.Players.LocalPlayer.Backpack
-end)
-tol:Button("Teleport Tools", function()
-mouse = game.Players.LocalPlayer:GetMouse()
-tool = Instance.new("Tool")
-tool.RequiresHandle = false
-tool.Name = "Universe X: tools"
-tool.Activated:connect(function()
-local pos = mouse.Hit+Vector3.new(0,2.5,0)
-pos = CFrame.new(pos.X,pos.Y,pos.Z)
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
-end)
-tool.Parent = game.Players.LocalPlayer.Backpack
-end)
-tol:Button("Destroyer Tools", function()
-Instance.new("HopperBin", game.Players.LocalPlayer.Backpack).BinType = 4
-end)
-tol:Button("Other Tools", function()
-backpack = game:GetService("Players").LocalPlayer.Backpack
-
-hammer = Instance.new("HopperBin")
-hammer.Name = "Hammer"
-hammer.BinType = 4
-hammer.Parent = backpack
-
-cloneTool = Instance.new("HopperBin")
-cloneTool.Name = "Clone"
-cloneTool.BinType = 3
-cloneTool.Parent = backpack
-
-grabTool = Instance.new("HopperBin")
-grabTool.Name = "Grab"
-grabTool.BinType = 2
-grabTool.Parent = backpack
-end)
-tol:Button("All Tools", function()
-local tool1 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-local tool2 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-local tool3 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-local tool4 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-local tool5 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
-tool1.BinType = "Clone"
-tool2.BinType = "GameTool"
-tool3.BinType = "Hammer"
-tool4.BinType = "Script"
-tool5.BinType = "Grab"
-end)
-local cmd = lol:Section("Netless")
-cmd:Button("Netless 4", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/ULA6Y3gH", true))()
-end)
-cmd:Button("Netless 1", function()
-    net = true
-notify = false
-loadstring("\13\10\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\71\101\116\79\98\106\101\99\116\115\40\34\114\98\120\97\115\115\101\116\105\100\58\47\47\55\50\53\55\55\54\49\55\56\53\34\41\91\49\93\46\83\111\117\114\99\101\41\40\41\13\10")()
-end)
-cmd:Button("Netless 2", function()
-loadstring(game:HttpGet('https://pastebin.com/raw/7Jtggrqx'))()
-end)
-cmd:Button("Netless 3", function()
-    for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
-    if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
-    game:GetService("RunService").Heartbeat:connect(function()
-    v.Velocity = Vector3.new(-30,0,0)
-    end)
-    end
-    end
-end)
-cmd:Button("Reanimate", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/lib/Reanimate.lua"))()
-end)
-local bb = lol:Section("Anti Fling")
-bb:Button("Anti Fling 1", function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/GxdesRQx'),true))()
-end)
-bb:Button("Anti Fling 2", function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/GxdesRQx'),true))()
-end)
-bb:Button("Anti Fling 3", function()
-
-   -- // Constants \\ --
--- [ Services ] --
-local Services = setmetatable({}, {__index = function(Self, Index)
-local NewService = game.GetService(game, Index)
-if NewService then
-Self[Index] = NewService
-end
-return NewService
-end})
-
--- [ LocalPlayer ] --
-local LocalPlayer = Services.Players.LocalPlayer
-
--- // Functions \\ --
-local function PlayerAdded(Player)
-   local Detected = false
-   local Character;
-   local PrimaryPart;
-
-   local function CharacterAdded(NewCharacter)
-       Character = NewCharacter
-       repeat
-           wait()
-           PrimaryPart = NewCharacter:FindFirstChild("HumanoidRootPart")
-       until PrimaryPart
-       Detected = false
-   end
-
-   CharacterAdded(Player.Character or Player.CharacterAdded:Wait())
-   Player.CharacterAdded:Connect(CharacterAdded)
-   Services.RunService.Heartbeat:Connect(function()
-       if (Character and Character:IsDescendantOf(workspace)) and (PrimaryPart and PrimaryPart:IsDescendantOf(Character)) then
-           if PrimaryPart.AssemblyAngularVelocity.Magnitude > 50 or PrimaryPart.AssemblyLinearVelocity.Magnitude > 100 then
-               if Detected == false then
-                   game.StarterGui:SetCore("ChatMakeSystemMessage", {
-                       Text = "Fling Exploit detected, Player: " .. tostring(Player);
-                       Color = Color3.fromRGB(255, 200, 0);
-                   })
-               end
-               Detected = true
-               for i,v in ipairs(Character:GetDescendants()) do
-                   if v:IsA("BasePart") then
-                       v.CanCollide = false
-                       v.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
-                       v.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-                       v.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0)
-                   end
-               end
-               PrimaryPart.CanCollide = false
-               PrimaryPart.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
-               PrimaryPart.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-               PrimaryPart.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0)
-           end
-       end
-   end)
-end
-
--- // Event Listeners \\ --
-for i,v in ipairs(Services.Players:GetPlayers()) do
-   if v ~= LocalPlayer then
-       PlayerAdded(v)
-   end
-end
-Services.Players.PlayerAdded:Connect(PlayerAdded)
-
-local LastPosition = nil
-Services.RunService.Heartbeat:Connect(function()
-   pcall(function()
-       local PrimaryPart = LocalPlayer.Character.PrimaryPart
-       if PrimaryPart.AssemblyLinearVelocity.Magnitude > 250 or PrimaryPart.AssemblyAngularVelocity.Magnitude > 250 then
-           PrimaryPart.AssemblyAngularVelocity = Vector3.new(0, 0, 0)
-           PrimaryPart.AssemblyLinearVelocity = Vector3.new(0, 0, 0)
-           PrimaryPart.CFrame = LastPosition
-
-           game.StarterGui:SetCore("ChatMakeSystemMessage", {
-               Text = "You were flung. Neutralizing velocity.";
-               Color = Color3.fromRGB(255, 0, 0);
-           })
-       elseif PrimaryPart.AssemblyLinearVelocity.Magnitude < 50 or PrimaryPart.AssemblyAngularVelocity.Magnitude > 50 then
-           LastPosition = PrimaryPart.CFrame
-       end
-   end)
-end)
-end)
-
-function otherss()
-local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/h%C3%ACnh%20kh%E1%BB%91i"))()
---- https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua
-local Luxt = Luxtl.CreateWindow("Universe X", 13951232354)
-
-local other = Luxt:Tab("Teleport")
-local bass = other:Section("Teleport")
-bass:DropDown("Select a player", Plr, function(t) -- food is chosen item
-    PlayerTP = t
-end)
-bass:Button("Teleport to player", function()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[PlayerTP].Character.HumanoidRootPart.CFrame
-end)
-bass:Toggle("Auto Teleport", function(t)
-_G.TPPlayer = t
-while _G.TPPlayer do wait()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[PlayerTP].Character.HumanoidRootPart.CFrame
-end
-end)
-end
 end
