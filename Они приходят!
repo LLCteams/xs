@@ -1,11 +1,9 @@
-game.Players.LocalPlayer:Kick('Ooops! Universe X is down.. Use Volt to changeside of Universe X') 
 
 --- loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/st-%D0%B2%D0%B5%D1%82%D0%B2%D1%8C-%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B0"))()
 
-wait(99999999999999999999)
 -- warn('Server cannot kick; |game.Players| has Universe X Admin.')
 -- warn('Universe X has stopped roblox creators anticheat.')
-
+warn('You Using Old Version Of Universe X!') 
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
 
 local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
