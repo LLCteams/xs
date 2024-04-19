@@ -1,3 +1,12 @@
+local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
+
+Notification.Notify("Systems", "Volt have been executed.", "", {
+    Duration = 4,   
+    Main = {
+        Rounding = true,
+    }
+});
+
 --Made by : https://v3rmillion.net/member.php?action=profile&uid=1265584
 
 _G.Settings = {
