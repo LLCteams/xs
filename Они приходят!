@@ -1,18 +1,5 @@
 --- Universe X Original
 
-for i, v in game:GetService("CoreGui"):GetChildren() do
-    if v.Name == 'Discord' then v:Destroy() end
-     if v:FindFirstChild('MurdLabel') then v:Destroy() end
-     
-     local ImageLabel = Instance.new("ImageLabel", Instance.new("ScreenGui", gethui()))
-   ImageLabel.Image = ''
-   ImageLabel.BackgroundTransparency = 1
-   ImageLabel.Position = UDim2.new(.5, 0, .1, 0)
-   ImageLabel.AnchorPoint = Vector2.new(.5, .1)
-   ImageLabel.Size = UDim2.new(.1, 0, .2, 0)
-   ImageLabel.Name = 'MurdLabel'
-   ImageLabel.Parent.ResetOnSpawn = false
-
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
 --- game.Players.LocalPlayer:Kick("Universe X; in-Upgraded, Use Volt to changeside of Universe X.") 
 
