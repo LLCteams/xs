@@ -8,7 +8,7 @@ wait(0.3)
 warn('Currently Error...!')
 warn('Failed to respond LLCteam.net')
 warn('Failed to connected Vercel.true') 
-warn('Cannot bypass: Server.LockHyperion') 
+warn('Bypass success: Server.LockHyperion') 
 local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
 
 --[[
