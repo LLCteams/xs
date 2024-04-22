@@ -5,9 +5,9 @@ game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
 
 --- Error Information
 wait(0.3) 
-warn('Currently Error...!')
-warn('Failed to respond LLCteam.net')
-warn('Failed to connected Vercel.true') 
+--- warn('Currently Error...!')
+--- warn('Failed to respond LLCteam.net')
+--- warn('Failed to connected Vercel.true') 
 warn('Bypass success: Server.LockHyperion') 
 local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
 
@@ -54,7 +54,7 @@ function ad9()
 -- Credits to infinite yield, harkinian, dex creators
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
-Notification.Notify("Systems", "UniversalX.exe has executed success!", "", {
+Notification.Notify("Systems", "UniversalX.exe has executed, type /console to show", "", {
     Duration = 15,
     Main = {
         Rounding = true,
