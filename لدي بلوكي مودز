@@ -1,4 +1,4 @@
---- Universe X Original
+--- Original
 
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
 --- game.Players.LocalPlayer:Kick("Universe X; in-Upgraded, Use Volt to changeside of Universe X.") 
