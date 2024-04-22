@@ -1,3 +1,5 @@
+
+game.Players.LocalPlayer:Kick('Universe X has patched, pending for Update!')
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D9%84%D8%AF%D9%8A%20%D8%A8%D9%84%D9%88%D9%83%D9%8A%20%D9%85%D9%88%D8%AF%D8%B2"))()
 
 wait(9999999999999999999) 
