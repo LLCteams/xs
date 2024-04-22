@@ -19,16 +19,9 @@ local NotificationLibrary = loadstring(game:HttpGet("https://raw.githubuserconte
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AF%E6%AD%A3%E6%B0%97%E3%81%A0%E3%82%88"))()
 
-local Tab1 = Library:CreateTab('A')
-
-Tab1:Label("Soon!") 
-local Tab2 = Library:CreateTab('B')
-
-Tab2:Label("Soon!") 
-
 local Tab3 = Library:CreateTab('C')
 
-Tab3:Button('Zombie Uprising', function()
+Tab3:Button('Universe X', function()
      loadstring(game:HttpGet("https://pastebin.com/raw/0N1y7RyM"))() 
 end)
 Tab3:Button('Prison Life', function()
