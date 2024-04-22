@@ -9,6 +9,7 @@ wait(0.3)
 --- warn('Failed to respond LLCteam.net')
 --- warn('Failed to connected Vercel.true') 
 warn('Bypass success: Server.LockHyperion') 
+print('Enjoy Premium version of. Universe X')
 local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
 
 --[[
@@ -25,9 +26,20 @@ end
 ]]--
 
 
+local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
+
+Notification.Notify("Systems", "UniverseX.upgraded has executed success!", "rbxassetid://13997143086", {
+    Duration = 4,   
+    Main = {
+        Rounding = true,
+    }
+});
+wait(0.4) 
+wait(0.4)
+
 local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
-local win = DiscordLib:Window("Loader X [v1.8.5]")
+local win = DiscordLib:Window("Loader X [v1.8.6]")
 
 local serv = win:Server("Loader | Universe X", "1")
 
@@ -37,6 +49,18 @@ vivi:Button(
     function()
         DiscordLib:Notification("Notify", "Executed!", "Okay!")
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    end
+)
+
+vivi:Button(
+    "Spotify Player",
+    function()
+        DiscordLib:Notification("Notify", "Executed!", "Okay!")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SkireScripts/Ouxie/main/Utils/Spotify%20Player/Source.lua"))():load({
+        scale = 1; -- ui scale -- normal
+        volume = 0.6; -- track vol -- normal
+        track = "https://open.spotify.com/track/1HCWXAdJ5WB3luE9aOdfL1"; -- url -- supports types track and playlist
+         })
     end
 )
 
@@ -54,7 +78,7 @@ function ad9()
 -- Credits to infinite yield, harkinian, dex creators
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
-Notification.Notify("Systems", "UniversalX.exe has executed, type /console to show", "", {
+Notification.Notify("Systems", "UniversalX.exe has executed, type /console to show", "rbxassetid://13997143086", {
     Duration = 15,
     Main = {
         Rounding = true,
