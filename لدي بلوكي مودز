@@ -1,3 +1,60 @@
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D9%8A%D8%A7%D8%B5%D8%A7%D8%AD"), "Universe X !")()
+local Window = Library:Window("Universe X | InFace", function(Script, Func)
+    warn(Script)
+end, {
+    Translate = false
+})
+
+--[[
+
+Window:Game({
+    Place = 23578803,
+    Status = "Working",
+    Script = "A"
+})
+
+Window:Game({
+    Place = 192800,
+    Status = "Detected",
+    Script = "B"
+})
+
+Window:Game({
+    Place = 6516141723,
+    Status = "Not working",
+    Script = "C"
+})
+
+Window:Game({
+    Place = 189707,
+    Status = "Beta",
+    Script = "D"
+})
+
+Window:Game({
+    Place = 2753915549,
+    Status = "Under Maintenance",
+    Script = "E"
+})
+
+]]--
+
+Window:Game({
+    Status = "Working {PREMIUM}",
+    Script = "https://pastebin.com/raw/0N1y7RyM", 
+    loadstring(game:HttpGet("https://pastebin.com/raw/0N1y7RyM"))(), 
+    Custom = {
+        Name = "Universe X"
+    },
+    UpdateDate = Window:GetDate("Local", "23/04/2024"),
+    Creator = "Vercel"
+})
+
+Window:Initiate()
+ 
+
+wait(999999999999999) 
 --- Original
 
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
