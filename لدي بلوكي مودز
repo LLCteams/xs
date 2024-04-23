@@ -1,7 +1,9 @@
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D9%8A%D8%A7%D8%B5%D8%A7%D8%AD"), "Universe X !")()
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D9%8A%D8%A7%D8%B5%D8%A7%D8%AD"), "Universe X !")()
 local Window = Library:Window("Universe X | InFace", function(Script, Func)
-    warn(Script)
+    loadstring(game:HttpGet("https://pastebin.com/raw/0N1y7RyM"))()
 end, {
     Translate = false
 })
@@ -43,7 +45,6 @@ Window:Game({
 Window:Game({
     Status = "Working {PREMIUM}",
     Script = "https://pastebin.com/raw/0N1y7RyM", 
-    loadstring(game:HttpGet("https://pastebin.com/raw/0N1y7RyM"))(), 
     Custom = {
         Name = "Universe X"
     },
@@ -52,7 +53,6 @@ Window:Game({
 })
 
 Window:Initiate()
- 
 
 wait(999999999999999) 
 --- Original
