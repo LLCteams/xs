@@ -1,19 +1,37 @@
+--- Original
+local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
-game.Players.LocalPlayer:Kick('Universe X has patched, pending for Update!')
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D9%84%D8%AF%D9%8A%20%D8%A8%D9%84%D9%88%D9%83%D9%8A%20%D9%85%D9%88%D8%AF%D8%B2"))()
-
-wait(9999999999999999999) 
---- Universe X Original
+Notification.Notify("Systems", "exe.UniverseX has executed success!", "rbxassetid://13997143086", {
+    Duration = 4,   
+    Main = {
+        Rounding = true,
+    }
+});
 
 game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
 --- game.Players.LocalPlayer:Kick("Universe X; in-Upgraded, Use Volt to changeside of Universe X.") 
 
+--- HITBOX
+getgenv().HitboxSize = 15
+getgenv().HitboxTransparency = 10
+
+getgenv().HitboxStatus = false
+getgenv().TeamCheck = false
+
+getgenv().Walkspeed = game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed
+getgenv().Jumppower = game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower
+
+getgenv().TPSpeed = 3
+getgenv().TPWalk = false
+
+
 --- Error Information
 wait(0.3) 
-warn('Currently Error...!')
-warn('Failed to respond LLCteam.net')
-warn('Failed to connected Vercel.true') 
+--- warn('Currently Error...!')
+--- warn('Failed to respond LLCteam.net')
+--- warn('Failed to connected Vercel.true') 
 warn('Bypass success: Server.LockHyperion') 
+print('Enjoy Premium version of. Universe X')
 local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
 
 --[[
@@ -29,10 +47,13 @@ end
 
 ]]--
 
+wait(0.5) 
+game:GetService("StarterGui"):SetCore("DevConsoleVisible",false)
+wait(0.2) 
 
 local DiscordLib = loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
-local win = DiscordLib:Window("Loader X [v1.8.5]")
+local win = DiscordLib:Window("Loader X [v1.8.6]")
 
 local serv = win:Server("Loader | Universe X", "1")
 
@@ -42,6 +63,18 @@ vivi:Button(
     function()
         DiscordLib:Notification("Notify", "Executed!", "Okay!")
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    end
+)
+
+vivi:Button(
+    "Spotify Player",
+    function()
+        DiscordLib:Notification("Notify", "Executed!", "Okay!")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SkireScripts/Ouxie/main/Utils/Spotify%20Player/Source.lua"))():load({
+        scale = 1; -- ui scale -- normal
+        volume = 0.6; -- track vol -- normal
+        track = "https://open.spotify.com/track/1HCWXAdJ5WB3luE9aOdfL1"; -- url -- supports types track and playlist
+         })
     end
 )
 
@@ -59,7 +92,7 @@ function ad9()
 -- Credits to infinite yield, harkinian, dex creators
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
-Notification.Notify("Systems", "UniversalX.exe has executed success!", "", {
+Notification.Notify("Systems", "UniversalX.exe has executed, type /console to show", "rbxassetid://13997143086", {
     Duration = 15,
     Main = {
         Rounding = true,
@@ -491,7 +524,7 @@ TextLabel.BackgroundTransparency = 1
 TextLabel.Size = UDim2.new(0.930000007, 0, 1, 0)
 TextLabel.Font = Enum.Font.SourceSans
 TextLabel.FontSize = Enum.FontSize.Size18
-TextLabel.Text = "{Fixed} By Vercel & iiremember2\n\n[-] Type /console to show all Commands!\n[1] kill [plr] -- You need a tool! Will kill the player, use rkill to kill you and player,\n[2] bring [plr] -- You need a tool! Will bring player to you,\n[3] spin [plr] -- You need a tool! Makes you and the player spin crazy,\n[4] unspin -- Use after using spin cmd and dying, so you stop loop teleporting,\n[5] attach [plr] -- You need a tool! Attaches you to player,\n[6] unattach [plr] -- Attempts to unattach you from a player,\n[7] follow [plr] -- Makes you follow behind the player,\n[8] unfollow,\n[9] freefall [plr] -- You need a tool! Teleports you and the player up into the air,\n[10] trail [plr] -- The opposite of follow, you stay infront of player,\n[11] untrail,\n[12] orbit [plr] -- Makes you orbit the player,\n[13] unorbit,\n[14] fling [plr] -- Makes you fling the player,\n[15] unfling,\n[16] fecheck -- Checks if the game is FE or not,\n[17] void [plr] -- Teleports player to the void,\n[18] noclip -- Gives you noclip to walk through walls,\n[19] clip -- Removes noclip,\n[20] speed [num]/ws [num] -- Changes how fast you walk 16 is default,\n[21] jumppower [num]/jp [num] -- Changes how high you jump 50 is default,\n[22] hipheight [num]/hh [num] -- Changes how high you float 0 is default,\n[23] default -- Changes your speed, jumppower and hipheight to default values,\n[24] annoy [plr] -- Loop teleports you to the player,\n[25] unannoy,\n[26] headwalk [plr] -- Loop teleports you to the player head,\n[27] unheadwalk,\n[28] nolimbs -- Removes your arms and legs,\n[29] god -- Gives you FE Godmode,\n[30] drophats -- Drops your accessories,\n[31] droptool -- Drops any tool you have equipped,\n[32] loopdhats -- Loop drops your accessories,\n[33] unloopdhats,\n[34] loopdtool -- Loop drops any tools you have equipped,\n[35] unloopdtool,\n[36] invisible -- Gives you invisibility CREDIT TO TIMELESS,\n[37] view [plr] -- Changes your camera to the player character,\n[38] unview,\n[39] goto [plr] -- Teleports you to player,\n[40] fly -- Allows you to fly,\n[41] unfly,\n[42] chat [msg] -- Makes you chat a message,\n[43] spam [msg] -- Spams a message,\n[44] unspam,\n[45] spamwait [num] -- Changes delay of chatting a message for the spam command in seconds default is 1 second,\n[46] pmspam [plr] -- Spams a player in private message,\n[47] unpmspam,\n[48] cfreeze [plr] -- Freezes a player on your client, they will only be frozen for you,\n[49] uncfreeze [plr],\n[50] unlockws -- Unlocks the workspace,\n[51] lockws -- Locks the workspace,\n[52] btools -- Gives you btools that will only show to you useful for deleting certain blocks only for you,\n[53] pstand -- Enables platform stand,\n[54] unpstand -- Disables platform stand,\n[55] blockhead -- Removes your head mesh,\n[56] sit,\n[57] bringobj [obj] -- Only shows on client, brings an object/part to you constantly, can be used to bring healing parts, weapons, money etc, type in exact name,\n[58] wsvis [num] -- Changes visibility of workspace parts, num should be between 0 and 1, only shows client sided,\n[59] hypertotal -- Loads in my FE GUI Hypertotal,\n[60] cmds -- Prints all commands,\n[61] rmeshhats/blockhats -- Removes the meshes of all your accessories aka block hats,\n[62] rmeshtool/blocktool -- Removes the mesh of the tool you have equipped aka block tool,\n[63] spinner -- Makes you spin,\n[64] nospinner,\n[65] reach [num] -- Gives you reach, mostly used for swords, say ;reachd for default and enter number after for custom,\n[66] noreach -- Removes reach, must have tool equipped,\n[67] rkill [plr] -- Kills you and the player, use kill to just kill the player without dying,\n[68] tp me [plr] -- Alternative to goto,\n[69] cbring [plr] -- Brings player infront of you, shows only on client, allows you to do damage to player,\n[70] uncbring,\n[71] swap [plr] -- You need a tool! Swaps players position with yours and your position with players,\n[72] givetool [plr] -- Gives the tool you have equipped to the player,\n[73] glitch [plr] -- Glitches you and the player, looks very cool,\n[74] unglitch -- Unglitches you,\n[75] grespawn -- Alternative to normal respawn and usually works best for when you want to reset with FE Godmode,\n[76] explorer -- Loads up DEX,\n[77] reset -- Resets your character.,\n[78] anim [id] -- Applies an animation on you, must be created by ROBLOX,\n[79] animgui -- Loads up Energize animations GUI,\n[80] savepos -- Saves your current position,\n[81] loadpos -- Teleports you to your saved position,\n[82] bang [plr] -- 18+,\n[83] unbang,\n[84] delcmdbar -- Removes the command bar completely,\n[85] bringmod [obj] -- Brings all the parts in a model, client only, comes from ;bringobj enter exact name of model,\n[86] shutdown -- Uses harkinians script to shutdown server,\n[87] respawn -- If grespawn doesnt work you can use respawn,\n[88] delobj [obj] -- Deletes a certain brick in workspace, client sided,\n[89] getplrs -- Prints all players in game,\n[90] deldecal -- Deletes all decals client sided,\n[91] opfinality -- Loads in my FE GUI Opfinality,\n[92] remotes -- Prints all remotes in the game in the console when added,\n[93] noremotes -- Stops printing remotes,\n[94] tpdefault -- Stops all loop teleports to a player,\n[95] stopsit -- Will not allow you to sit,\n[96] gosit -- Allows you to sit,\n[97] clicktp -- Enables click tp,\n[98] noclicktp -- Disables click tp,\n[99] toolson -- If any tools are dropped in the workspace you will automatically get them,\n[100] toolsoff -- Stops ;toolson,\n[101] version -- Gets the admin version, \n This list of commands is NOT showing everything, go to my thread in the pastebin link to see ALL commands."
+TextLabel.Text = "Please type /console to show commands!\n\nCurrently: v1.1.2\n\nBy Vercel & iiremembeer2"
 TextLabel.TextColor3 = Color3.new(1, 1, 1)
 TextLabel.TextSize = 15
 TextLabel.TextWrapped = true
@@ -3403,7 +3436,7 @@ end
 
 local uni = serv:Channel("Universal X | New UI")
 uni:Button(
-    "[ Volt ] [ Limited ]",
+    "Volt Limited",
     function()
         DiscordLib:Notification("Notify", "Executed!", "Okay!")
         loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/5eff64923d80a5cfe0c78f3344da6cdd58b22714/%D0%9122%D0%BB%D0%BE%D1%87%D0%BD%D0%B0%D1%8F%20%D0%BE%D1%88%D0%B8%D0%B1%D0%BA%D0%B0%20%D0%BA%D0%BE%D0%B4%20%D0%BD%D0%B5%20%D0%BD%D0%B0%D0%B9%D0%B4%D0%B5%D0%BD%20%D0%BD%D0%B5%20%D0%BD%D0%B5%20%D0%BD%D0%B5"))() 
@@ -3445,7 +3478,7 @@ uni:Button(
 local btns = serv:Channel("Universe X | Free-Script")
 
 btns:Button(
-    "Hide And Seek [HOT]",
+    "Hide And Seek [Hot]",
     function()
         DiscordLib:Notification("Notify", "Script in-game has executed!", "Okay!")
         Bar()
@@ -3453,7 +3486,7 @@ btns:Button(
 )
 
 btns:Button(
-    "Murder Mystery 2 [NEW]",
+    "Murder Mystery 2 [New]",
     function()
         DiscordLib:Notification("Notify", "Script in-game has executed!", "Okay!")
         loveyoubb() 
@@ -3461,7 +3494,7 @@ btns:Button(
 )
 
 btns:Button(
-    "Breaking Point [NEW]",
+    "Breaking Point [New]",
     function()
         DiscordLib:Notification("Notify", "Script in-game has executed!", "Okay!")
         dupebp()
@@ -3471,10 +3504,51 @@ btns:Button(
 btns:Seperator()
 
 btns:Button(
-    "Zombie Uprising [UPDATED]",
+    "Zombie Uprising [Updated]",
     function()
         DiscordLib:Notification("Notify", "Script in-game has executed!", "Okay!")
         Zom()
+    end
+)
+
+local ovoi = serv:Channel("Auto | Settings")
+
+ovoi:Bind(
+    "Toggle Universe X",
+     Enum.KeyCode.LeftAlt,
+    function()
+        print('Closed.') 
+    end
+)
+
+ovoi:Button(
+    "{•} Console",
+    function()
+        game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
+    end
+)
+
+ovoi:Button(
+    "{•} Reset",
+    function()
+        DiscordLib:Notification("Notify", "Loading..", "Okay!")
+        game.Players.LocalPlayer.Character.Head:Destroy()
+    end
+)
+
+ovoi:Button(
+    "{•} Rejoin",
+    function()
+        DiscordLib:Notification("Notify", "Script in-game has executed!", "Okay!")
+        game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
+    end
+)
+
+ovoi:Button(
+    "{•} Leave",
+    function()
+        DiscordLib:Notification("Notify", "Script in-game has executed!", "Okay!")
+        game:Shutdown()
     end
 )
 
@@ -6194,6 +6268,20 @@ sy:Toggle("Anti LogsChat", function(iop)
             print('done.')
       end
 end)
+sy:Toggle("[2] Anti Afk", function() 
+Gooo() 
+end) 
+
+function Gooo() 
+assert(firesignal, "Your exploit does not support firesignal.")
+local UserInputService: UserInputService = game:GetService("UserInputService")
+local RunService: RunService = game:GetService("RunService")
+UserInputService.WindowFocusReleased:Connect(function()
+   RunService.Stepped:Wait()
+   pcall(firesignal, UserInputService.WindowFocused)
+end)
+end
+
 sy:Toggle("Anti Afk", function(opp)
       if opp == false then
           warn('Disabling systems..')
@@ -6647,14 +6735,67 @@ while wait(0.5) do
     end
 end
 end)
-local XD = vus:Section("FPS")
+local hop = Luxt:Tab("Useful")
+local HJ = hop:Section("Hitbox") 
+HJ:Toggle("Team Check", function(state) 
+getgenv().TeamCheck = state
+end)
+HJ:Toggle("Status: ", function(state) 
+getgenv().HitboxStatus = state
+    game:GetService('RunService').RenderStepped:connect(function()
+		if HitboxStatus == true and TeamCheck == false then
+			for i,v in next, game:GetService('Players'):GetPlayers() do
+				if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+					pcall(function()
+						v.Character.HumanoidRootPart.Size = Vector3.new(HitboxSize, HitboxSize, HitboxSize)
+						v.Character.HumanoidRootPart.Transparency = HitboxTransparency
+						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+						v.Character.HumanoidRootPart.Material = "Neon"
+						v.Character.HumanoidRootPart.CanCollide = false
+					end)
+				end
+			end
+		elseif HitboxStatus == true and TeamCheck == true then
+			for i,v in next, game:GetService('Players'):GetPlayers() do
+				if game:GetService('Players').LocalPlayer.Team ~= v.Team then
+					pcall(function()
+						v.Character.HumanoidRootPart.Size = Vector3.new(HitboxSize, HitboxSize, HitboxSize)
+						v.Character.HumanoidRootPart.Transparency = HitboxTransparency
+						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really black")
+						v.Character.HumanoidRootPart.Material = "Neon"
+						v.Character.HumanoidRootPart.CanCollide = false
+					end)
+				end
+			end
+		else
+		    for i,v in next, game:GetService('Players'):GetPlayers() do
+				if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+					pcall(function()
+						v.Character.HumanoidRootPart.Size = Vector3.new(2,2,1)
+						v.Character.HumanoidRootPart.Transparency = 1
+						v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Medium stone grey")
+						v.Character.HumanoidRootPart.Material = "Plastic"
+						v.Character.HumanoidRootPart.CanCollide = false
+					end)
+				end
+			end
+		end
+	end)
+end)
+HJ:TextBox("Hitbox Size", "Number", function(value)
+      getgenv().HitboxSize = value
+end) 
+HJ:TextBox("Hitbox Transparency", "Number", function(number) 
+getgenv().HitboxTransparency = number
+end) 
+local XD = hop:Section("FPS")
 XD:Button("[2] Unlocker Fps", function()
 loadstring(game:HttpGet("https://fpsplus.000webhostapp.com/OBFUSCATED_SOURCE_FPSPLUS.lua", true))()
 end)
 XD:Button("[1] Unlocker Fps", function()
 loadstring(game:HttpGet"https://pastebinp.com/raw/VekKpUuz")()
 end)
-local boz = vus:Section("Rtx")
+local boz = hop:Section("Rtx")
 boz:Button("Rtx -- 2.1", function()
 Buz()
 end)
@@ -6795,6 +6936,69 @@ YT:Button("God mode [2]", function()
 	end
 	nHuman.Health = nHuman.MaxHealth
 end)
+YT:Button("Invisible", function() 
+--[[
+A distribution of https://wearedevs.net/scripts
+Last updated August 2, 2021
+
+Description: Makes all of your body parts invisible. Only you can see this effect.
+
+Instruction: Inject this script into any game using a Lua executor like JJSploit. 
+
+I wrote this while off the boof and realized at the end that I'm a goof for not 
+simply looping through for BaseParts... 
+]]
+
+character = game:GetService("Players").LocalPlayer.Character
+
+character.Head.Transparency = 1
+
+--R6 Rigs
+torso = character:FindFirstChild("Torso")
+if torso then torso.Transparency = 1 end
+
+leftArm = character:FindFirstChild("Left Arm")
+if leftArm then leftArm.Transparency = 1 end
+rightArm = character:FindFirstChild("Right Arm")
+if rightArm then rightArm.Transparency = 1 end
+
+leftLeg = character:FindFirstChild("Left Leg")
+if leftLeg then leftLeg.Transparency = 1 end
+rightLeg = character:FindFirstChild("Right Leg")
+if rightLeg then rightLeg.Transparency = 1 end
+
+--R15 Rigs
+upperTorso = character:FindFirstChild("UpperTorso")
+if upperTorso then upperTorso.Transparency = 1 end
+lowerTorso = character:FindFirstChild("LowerTorso")
+if lowerTorso then lowerTorso.Transparency = 1 end
+
+leftUpperArm = character:FindFirstChild("LeftUpperArm")
+if leftUpperArm then leftUpperArm.Transparency = 1 end
+leftLowerArm = character:FindFirstChild("LeftLowerArm")
+if leftLowerArm then leftLowerArm.Transparency = 1 end
+leftFoot = character:FindFirstChild("LeftFoot")
+if leftFoot then leftFoot.Transparency = 1 end
+rightUpperArm = character:FindFirstChild("RightUpperArm")
+if rightUpperArm then rightUpperArm.Transparency = 1 end
+rightLowerArm = character:FindFirstChild("RightLowerArm")
+if rightLowerArm then rightLowerArm.Transparency = 1 end
+rightFoot = character:FindFirstChild("RightFoot")
+if rightFoot then rightFoot.Transparency = 1 end
+
+leftUpperLeg = character:FindFirstChild("LeftUpperLeg")
+if leftUpperLeg then leftUpperLeg.Transparency = 1 end
+leftLowerLeg = character:FindFirstChild("LeftLowerLeg")
+if leftLowerLeg then leftLowerLeg.Transparency = 1 end
+leftFoot = character:FindFirstChild("LeftFoot")
+if leftFoot then leftFoot.Transparency = 1 end
+rightUpperLeg = character:FindFirstChild("RightUpperLeg")
+if rightUpperLeg then rightUpperLeg.Transparency = 1 end
+rightLowerLeg = character:FindFirstChild("RightLowerLeg")
+if rightLowerLeg then rightLowerLeg.Transparency = 1 end
+rightFoot = character:FindFirstChild("RightFoot")
+if rightFoot then rightFoot.Transparency = 1 end
+end) 
 YT:Button("God mode", function()
 local accessories = {}
 function GodMode()
@@ -6919,13 +7123,14 @@ game.Players.PlayerAdded:Connect(function(L_13_arg1)
 end)
 end)
 local othe = Luxt:Tab("Self")
-local cvo = othe:Section("#1")
-cvo:TextBox("WalkSpeed", "Number", function(Op)
+local ceno = othe:Section("#1")
+ceno:TextBox("WalkSpeed", "Number", function(Op)
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = Op
 end)
-cvo:TextBox("JumpHeight", "Number", function(Yop)
+ceno:TextBox("JumpHeight", "Number", function(Yop)
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = Yop
 end)
+local cvo = othe:Section("#2")
 cvo:Label("Ability")
 local InfiniteJumpEnabled;
 cvo:Toggle("Infinite Jump", function(State)
@@ -6951,9 +7156,6 @@ cvo:Toggle("Noclip", function(enabled)
         end
         game:GetService("RunService").Stepped:Wait()
     end
-end)
-cvo:Button("Clip", function()
-IsNoClipEnabled = false
 end)
 local goreng = false
 cvo:Toggle("XRay", function(goreng)
@@ -6991,7 +7193,6 @@ and J do game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
 end
 end)
 end)
-cvo:Label("-- More --")
 cvo:Toggle("Fly [E]", function(pp)
     if bos == false then
     
