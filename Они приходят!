@@ -60,7 +60,7 @@ local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bl
 
 local win = DiscordLib:Window("Loader X [v0.1.9]")
 
-local serv = win:Server("Loader | Universe X", "1")
+local serv = win:Server("Loader | Universe X", "rbxassetid://13997143086") 
 
 local vivi = serv:Channel("Auto | Script")
 vivi:Button(
@@ -68,6 +68,14 @@ vivi:Button(
     function()
         DiscordLib:Notification("Notify", "Executed!", "Okay!")
         loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    end
+)
+
+vivi:Button(
+    "Keyboard",
+    function()
+        DiscordLib:Notification("Notify", "Executed!", "Okay!")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt"))()
     end
 )
 
@@ -80,6 +88,72 @@ vivi:Button(
         volume = 0.6; -- track vol -- normal
         track = "https://open.spotify.com/track/1HCWXAdJ5WB3luE9aOdfL1"; -- url -- supports types track and playlist
          })
+    end
+)
+
+vivi:Button(
+    "Fates Admin",
+    function()
+        DiscordLib:Notification("Notify", "Executed!", "Okay!")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+    end
+)
+
+vivi:Button(
+    "Universal X Admin",
+    function()
+        DiscordLib:Notification("Notify", "Executed!", "Okay!")
+        ad9() 
+    end
+)
+
+vivi:Button(
+    "Shattervast Admin",
+    function()
+        DiscordLib:Notification("Notify", "Executed!", "Okay!")
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub-Backup/main/%5BFE%5D%20Shattervast.lua'))()
+    end
+)
+
+vivi:Button(
+    "Proton Admin",
+    function()
+        DiscordLib:Notification("Notify", "Executed!", "Okay!")
+        _G.UI_Id = "default" --set this to "default" for the default ui
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+    end
+)
+
+vivi:Button(
+    "Infinite Store",
+    function()
+        DiscordLib:Notification("Notify", "Executed!", "Okay!")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Infinite-Store/Infinite-Store/main/main.lua"))()
+    end
+)
+
+vivi:Button(
+    "Reviz Old Admin",
+    function()
+        DiscordLib:Notification("Notify", "Executed!", "Okay!")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+    end
+)
+
+vivi:Button(
+    "Nameless Admin",
+    function()
+        DiscordLib:Notification("Notify", "Executed!", "Okay!")
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/yofriendfromschool1/NamelessAdmin-NO-BYFRON-GUI/main/Source'))()
+    end
+)
+
+
+vivi:Button(
+    "Cmd Admin",
+    function()
+        DiscordLib:Notification("Notify", "Executed!", "Okay!")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/lxte/cmd/main/main.lua"))()
     end
 )
 
@@ -3473,6 +3547,72 @@ uni:Button(
 )
 
 uni:Button(
+    "Universal X [Old]",
+    function()
+        DiscordLib:Notification("Notify", "Executed!", "Okay!")
+        OldUNI() 
+    end
+)
+
+function OldUNI() 
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D9%8A%D8%A7%D8%B5%D8%A7%D8%AD"), "Universe X !")()
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D9%8A%D8%A7%D8%B5%D8%A7%D8%AD"), "Universe X !")()
+local Window = Library:Window("Universe X | InFace", function(Script, Func)
+    loadstring(game:HttpGet("https://pastebin.com/raw/0N1y7RyM"))()
+end, {
+    Translate = false
+})
+
+--[[
+
+Window:Game({
+    Place = 23578803,
+    Status = "Working",
+    Script = "A"
+})
+
+Window:Game({
+    Place = 192800,
+    Status = "Detected",
+    Script = "B"
+})
+
+Window:Game({
+    Place = 6516141723,
+    Status = "Not working",
+    Script = "C"
+})
+
+Window:Game({
+    Place = 189707,
+    Status = "Beta",
+    Script = "D"
+})
+
+Window:Game({
+    Place = 2753915549,
+    Status = "Under Maintenance",
+    Script = "E"
+})
+
+]]--
+
+Window:Game({
+    Status = "Working {PREMIUM}",
+    Script = "https://pastebin.com/raw/0N1y7RyM", 
+    Custom = {
+        Name = "Universe X"
+    },
+    UpdateDate = Window:GetDate("Local", "23/04/2024"),
+    Creator = "Vercel"
+})
+
+Window:Initiate()
+
+end
+
+uni:Button(
     "Universal v1.0",
     function()
         DiscordLib:Notification("Notify", "Executed!", "Okay!")
@@ -3576,26 +3716,77 @@ pfg:Toggle(
     end
 ) 
 
+local isNoClipEnabled = false
 pfg:Toggle(
     "{•} Noclip",
     false,
-    function(noclip)
-    loopnoclip = noclip
-    while loopnoclip do
-        function loopnoclipfix()
-        for a, b in pairs(Workspace:GetChildren()) do
-            if b.Name == LocalPlayer.Name then
-                for i, v in pairs(Workspace[LocalPlayer.Name]:GetChildren()) do
-                    if v:IsA("BasePart") then
-                        v.CanCollide = false
-                    end
-                end 
-            end 
+    function(enabled)
+    isNoClipEnabled = enabled
+    local character = game.Players.LocalPlayer.Character
+
+    while isNoClipEnabled do
+        for _, part in pairs(character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CanCollide = false
+            end
         end
-        wait()
+        game:GetService("RunService").Stepped:Wait()
     end
-    wait()
-    pcall(loopnoclipfix)
+    end
+) 
+
+local J = false;
+pfg:Toggle(
+    "{•} Auto Jump",
+    false,
+    function(K)
+    J = K;
+    spawn(function()
+    while wait()
+    and J do game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
+    end
+    end)
+    end
+) 
+
+local InfiniteJumpEnabled;
+pfg:Toggle(
+    "{•} Fly Jump",
+    false,
+    function(State)
+    InfiniteJumpEnabled = State
+    end
+) 
+
+local goreng = false
+pfg:Toggle(
+    "{•} XRay",
+    false,
+    function(goreng)
+    if goreng == true then
+
+        for _, descendant in pairs(workspace:GetDescendants()) do
+            if descendant:IsA("BasePart") then
+                if not descendant:FindFirstChild("OriginalTransparency") then
+                    local originalTransparency = Instance.new("NumberValue")
+                    originalTransparency.Name = "OriginalTransparency"
+                    originalTransparency.Value = descendant.Transparency
+                    originalTransparency.Parent = descendant
+                end
+                descendant.Transparency = 0.5
+            end
+        end
+    else
+    
+    
+        for _, descendant in pairs(workspace:GetDescendants()) do
+            if descendant:IsA("BasePart") then
+                if descendant:FindFirstChild("OriginalTransparency") then
+                    descendant.Transparency = descendant.OriginalTransparency.Value
+                    descendant.OriginalTransparency:Destroy()
+                end
+            end
+        end
     end
     end
 ) 
@@ -3889,7 +4080,50 @@ abah:Button(
     "{•} Shaders 2.0", 
     function()
         DiscordLib:Notification("Notify", "Loading..", "Okay!")
-        isX() 
+         -- Remove existing effects
+    local effects = {
+        "BloomEffect",
+        "SunRaysEffect",
+        "ColorCorrectionEffect",
+        "BlurEffect",
+        "Sky"
+    }
+    
+    for _, effectName in ipairs(effects) do
+        local effect = game.Lighting:FindFirstChildWhichIsA(effectName)
+        if effect then
+            effect:Destroy()
+        end
+    end
+
+    -- Create new effects
+    local bloomEffect = Instance.new("BloomEffect", game.Lighting)
+    local sunRaysEffect = Instance.new("SunRaysEffect", game.Lighting)
+    local colorCorrectionEffect = Instance.new("ColorCorrectionEffect", game.Lighting)
+    local blurEffect = Instance.new("BlurEffect", game.Lighting)
+    Instance.new("Sky", game.Lighting)
+
+    -- Set properties
+    game.Lighting.ExposureCompensation = 0.34
+    game.Lighting.ShadowSoftness = 1
+    game.Lighting.EnvironmentDiffuseScale = 0.343
+    game.Lighting.EnvironmentSpecularScale = 1
+    game.Lighting.Brightness = 2
+    game.Lighting.ColorShift_Top = Color3.fromRGB(118, 117, 108)
+    game.Lighting.OutdoorAmbient = Color3.fromRGB(141, 141, 141)
+    game.Lighting.GeographicLatitude = 100
+    game.Lighting.Ambient = Color3.fromRGB(112, 112, 112)
+
+    -- Set effect properties
+    bloomEffect.Intensity = 0.5
+    bloomEffect.Size = 22
+    bloomEffect.Threshold = 1.5
+    sunRaysEffect.Intensity = 0.117
+    sunRaysEffect.Spread = 1
+    blurEffect.Size = 2
+    colorCorrectionEffect.Contrast = 0.3
+    colorCorrectionEffect.Saturation = 0.5
+    colorCorrectionEffect.TintColor = Color3.fromRGB(255, 252, 224)
     end
 )
 
@@ -3897,14 +4131,27 @@ abah:Button(
     "{•} Shaders 2.1", 
     function()
         DiscordLib:Notification("Notify", "Loading..", "Okay!")
-        loX() 
+        local find1 = game.Lighting:FindFirstChildWhichIsA("BloomEffect") if find1 then
+    game.Lighting:FindFirstChildWhichIsA("BloomEffect"):Destroy()
+end
+local find2 = game.Lighting:FindFirstChildWhichIsA("SunRaysEffect") if find2 then
+    game.Lighting:FindFirstChildWhichIsA("SunRaysEffect"):Destroy()
+end
+local find3 = game.Lighting:FindFirstChildWhichIsA("ColorCorrectionEffect") if find3 then
+    game.Lighting:FindFirstChildWhichIsA("ColorCorrectionEffect"):Destroy()
+end
+local find4 = game.Lighting:FindFirstChildWhichIsA("BlurEffect") if find4 then
+    game.Lighting:FindFirstChildWhichIsA("BlurEffect"):Destroy()
+end
+local find5 = game.Lighting:FindFirstChildWhichIsA("Sky") if find5 then
+    game.Lighting:FindFirstChildWhichIsA("Sky"):Destroy()
+    end
     end
 )
 
 abah:Button(
     "{•} Remove Fog", 
     function()
-        DiscordLib:Notification("Notify", "Loading..", "Okay!")
         game:GetService("Lighting").FogEnd = 100000
 	for i,v in pairs(game:GetService("Lighting"):GetDescendants()) do
 		if v:IsA("Atmosphere") then
@@ -3916,9 +4163,18 @@ abah:Button(
 
 abah:Button(
     "{•} Fullbright", 
-    function()
-        DiscordLib:Notification("Notify", "Loading..", "Okay!")
-        liX() 
+    function() 
+        local Light = game:GetService("Lighting")
+
+       function dofullbright()
+       Light.Ambient = Color3.new(1, 1, 1)
+       Light.ColorShift_Bottom = Color3.new(1, 1, 1)
+       Light.ColorShift_Top = Color3.new(1, 1, 1)
+       end
+
+       dofullbright()
+
+       Light.LightingChanged:Connect(dofullbright)
     end
 )
 
@@ -6128,10 +6384,10 @@ function isX()
 end
 
 vsx:Button("[4] Shader (1.1)", function()
-loX() 
+loX()
 end) 
 
-function loX() 
+function loX()
 local find1 = game.Lighting:FindFirstChildWhichIsA("BloomEffect") if find1 then
     game.Lighting:FindFirstChildWhichIsA("BloomEffect"):Destroy()
 end
@@ -11380,3 +11636,26 @@ local Toggle = Category:AddToggle("Bypass-Interface", false, function(toggle)
 end)
 end
 end
+
+local serx = win:Server("Global | Universe X", "rbxassetid://13996809508")
+
+local vici = serx:Channel("Global | Script")
+
+vici:Button(
+    "Soon!",
+    function()
+        DiscordLib:Notification("Notify", "Error..", "Okay!") 
+    end
+)
+
+local serb = win:Server("Best | Universe X", "rbxassetid://13991345416")
+
+local cici = serb:Channel("Paid | Script")
+
+cici:Button(
+    "Soon!",
+    function()
+        DiscordLib:Notification("Notify", "Error..", "Okay!") 
+    end
+)
+
