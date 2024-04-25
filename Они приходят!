@@ -11637,9 +11637,31 @@ end)
 end
 end
 
-local serx = win:Server("Global | Universe X", "rbxassetid://13996809508")
 
-local vici = serx:Channel("Global | Script")
+local serp = win:Server("Search | Universe X", "rbxassetid://14592768901") 
+
+local vixi = serp:Channel("Global | Script")
+
+vixi:Textbox(
+    "Global Scripts",
+    "Type a script..",
+    true,
+    function(t)
+        DiscordLib:Notification("Notify", "Error..", "Okay!") 
+        print(t)
+    end
+)
+
+vixi:Button(
+    "Search",
+    function()
+        DiscordLib:Notification("Notify", "Error..", "Okay!") 
+    end
+)
+
+local serx = win:Server("Soon | Universe X", "rbxassetid://13996809508")
+
+local vici = serx:Channel("Soon | Script")
 
 vici:Button(
     "Soon!",
