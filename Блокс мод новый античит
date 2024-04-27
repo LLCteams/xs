@@ -108,7 +108,7 @@ ImageLabel.Position = UDim2.new(0.180995479, 0, 0.2781955, 0)
 ImageLabel.Size = UDim2.new(0, 550, 0, 300)
 ImageLabel.Image = "rbxassetid://17302331824"
 ImageLabel.ImageColor3 = Color3.fromRGB(89, 89, 89)
-ImageLabel.ImageTransparency = 1
+ImageLabel.ImageTransparency = 0.150
 
 UICorner.Parent = ImageLabel
 
