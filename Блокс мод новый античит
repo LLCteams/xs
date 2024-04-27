@@ -108,7 +108,7 @@ ImageLabel.Position = UDim2.new(0.180995479, 0, 0.2781955, 0)
 ImageLabel.Size = UDim2.new(0, 550, 0, 300)
 ImageLabel.Image = "rbxassetid://17302331824"
 ImageLabel.ImageColor3 = Color3.fromRGB(89, 89, 89)
-ImageLabel.ImageTransparency = 0.150
+ImageLabel.ImageTransparency = 1
 
 UICorner.Parent = ImageLabel
 
@@ -127,7 +127,7 @@ TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TextLabel.BorderSizePixel = 0
 TextLabel.Size = UDim2.new(0, 200, 0, 40)
 TextLabel.FontFace = Font.new("rbxassetid://11702779409")
-TextLabel.Text = "Sky Hub"
+TextLabel.Text = "Universe X"
 TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel.TextSize = 25.000
 TextLabel.TextWrapped = true
