@@ -53,7 +53,7 @@ Notification.Notify("Auto System", "Looking for Universe v0.1.9 || SEARCHING ORG
     }
 });
 
-game.Players.LocalPlayer:Kick(" Universe X changing Owner, and rename to Vercel X. ") 
+
 wait(6) 
 print(" Universe - X || Logs ") 
 warn(" Updated: || 25/04/2024 || ") 
