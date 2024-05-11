@@ -30,7 +30,7 @@ end)
 
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
-wait(0.4) 
+wait(0.1) 
 ]]
 
 print(" Universe - X || Logs ") 
