@@ -7,12 +7,6 @@ Notification.Notify("Universe X || Ultra", "Universe X is beta version, some gam
     }
 });
 
-Notification.Notify("Xirius A.z", "We are updating Universe - X for best experience.", "", {
-    Duration = 1000,
-    Main = {
-       Rounding = true,
-    }
-});
 
 wait(0.2)
 -- Gui to Lua
