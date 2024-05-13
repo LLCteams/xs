@@ -33,6 +33,13 @@ local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/Iri
 wait(0.1) 
 ]]
 
+Notification.Notify("Xirius A.z", "We are updating Universe - X for best experience.", "", {
+    Duration = 1000,
+    Main = {
+       Rounding = true,
+    }
+});
+
 print(" Universe - X || Logs ") 
 warn(" Updated: || 29/04/2024 || ") 
 warn(" Last Updated: || 06/05/2024 || ") 
