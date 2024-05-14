@@ -42,6 +42,22 @@ print(" Ended of Universe - X || Logs \n\n ")
 
 ]]
 
+local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
+
+Notification.Notify("Universe X || ULTRA", "Opps! an error happened, Official website is down..", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+
+Notification.Notify("Universe X || ULTRA", "Reloading Roblox MAINTENANCE...!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+
 queueteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
 httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 HttpService = game:GetService("HttpService")
@@ -79,15 +95,6 @@ end
 
 
 ---- Original
-
-local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
-
-Notification.Notify("Universe X || ULTRA", "Opps! an error happened, Official website is down..", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
 
 wait(2) 
 
