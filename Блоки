@@ -19,6 +19,8 @@ local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/Iri
 
 wait(0.4) 
 
+
+
 print(" Universe - X || Logs ") 
 warn(" Updated: || 29/04/2024 || ") 
 warn(" Last Updated: || 10/05/2024 || ") 
@@ -80,15 +82,17 @@ end
 
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
-Notification.Notify("Universe X || ULTRA", "Universe X is ULTRA version, Enjoy Universe - X Ultra now working.", "rbxassetid://17415983489", {
+Notification.Notify("Universe X || ULTRA", "Opps! an error happened, Official website is down..", "rbxassetid://17415983489", {
     Duration = 6,
     Main = {
         Rounding = true,
     }
 });
 
+wait(2) 
 
-wait(0.1) 
+game:Shutdown()
+wait(99) 
 
 Notification.Notify("Universe X || ULTRA", "[FE] Filtering Enabled is actived!", "rbxassetid://17415983489", {
     Duration = 3,
