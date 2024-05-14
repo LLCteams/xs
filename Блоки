@@ -87,9 +87,6 @@ Notification.Notify("Universe X || ULTRA", "Universe X is ULTRA version, Enjoy U
     }
 });
 
-
-wait(0.1) 
-
 Notification.Notify("Universe X || ULTRA", "[FE] Filtering Enabled is actived!", "rbxassetid://17415983489", {
     Duration = 3,
     Main = {
@@ -131,6 +128,7 @@ local serc = win:Server("[HOME | LOGS]", "rbxassetid://17468096773")
 
 local pof = serc:Channel("Update | Logs") 
 
+pof:Label("{•} Fast Show.") 
 pof:Label("{•} Fixes Universe - X can't run.") 
 pof:Label("{•} Fixes Universe - X LOG-In.") 
 pof:Label("{•} Added some scripts on Universe - X. ") 
@@ -309,7 +307,7 @@ ipz:Toggle(
 )
 
 ipz:Label(" [ --- --- Beta Features --- --- ] ") 
-ipz:Label("Universe - X | Note:\nBeta maybe can give more good experiences, vercel has adding..\nthat blocking anything SPYWARE or attacker for users.")
+ipz:Label("Universe - X | Note:\nBeta maybe can give more good experiences, Vercel has adding..\nthat blocking anything SPYWARE or attacker for users.\nUniverse - X is friendly scripts, dont need to worry.")
 
 local ips = serc:Channel("About | Logs") 
 
