@@ -243,7 +243,7 @@ ipz:Textbox(
     "Type a numbers to change Universe - X FPS server.",
     true,
     function(t)
-        DiscordLib:Notification("Notify", "Failed!!!", "Okay!") 
+        DiscordLib:Notification("Notify", "Successful!", "Okay!") 
         print(t)
     end
 )
@@ -314,13 +314,14 @@ ipz:Label("Universe - X | Note:\nBeta maybe can give more good experiences, verc
 local ips = serc:Channel("About | Logs") 
 
 ips:Label(" ••• ••• ••• ••• ") 
-ips:Label("{~} Current Version: 0.2.1") 
+ips:Label("{~} Current Version: 0.2.3") 
+ips:Label("{~} Website: https://olive-loaf-00a.notion.site/Universe-v0-2-3-0b3a55db6fdc4918ae57e3ee810f704d") 
 ips:Label("{~} Current Limited: Ultra version.") 
 ips:Label("{~} Bypass Type: Vercel.Ios.so") 
-ips:Label("{~} Protections Universe - X: 20 Protections.") 
+ips:Label("{~} Protections Universe - X: 21 Protections.") 
 ips:Label("{~} Version Beta: Unavailable.") 
-ips:Label("{~} Information: There is no available new version!") 
-ips:Label("{~} Universe - X new version: 0.2.3") 
+ips:Label("{~} Status new version: Not available.") 
+ips:Label("{~} Universe - X new version: 0.2.4") 
 ips:Label("{~} Type all Library: Private.") 
 ips:Label(" ••• ••• ••• ••• ") 
 
