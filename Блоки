@@ -87,7 +87,9 @@ Notification.Notify("Universe X || ULTRA", "Universe X is ULTRA version, Enjoy U
     }
 });
 
-Notification.Notify("Universe X || ULTRA", "[FE] Filtering Enabled is actived!", "rbxassetid://17415983489", {
+wait(0.1) 
+
+Notification.Notify("Universe X || ULTRA", "[FEU] Filtering Enabled Ultra is actived!", "rbxassetid://17415983489", {
     Duration = 3,
     Main = {
         Rounding = true,
@@ -122,23 +124,25 @@ local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xH
 
 local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord"))()
 
-local win = DiscordLib:Window("Universe - X | ULTRA [v0.2.3]") 
+local win = DiscordLib:Window("Universe - X | ULTRA [v0.2.4]") 
 
 local serc = win:Server("[HOME | LOGS]", "rbxassetid://17468096773") 
 
 local pof = serc:Channel("Update | Logs") 
 
-pof:Label("{•} Fast Show.") 
+pof:Label("{•} Fixes auto close Roblox.") 
+pof:Label("{•} Fixes bypass Hyperion line 4.") 
+pof:Label("{•} Added new bypass Hyperion.") 
+pof:Label("{•} Stability others device.") 
+pof:Label("{•} Added Hitbox scripts.") 
+pof:Label(" [[ -- Bypass Wave -- ]]: v0.2.4") 
+pof:Seperator() 
+pof:Label(" -- -- -- -- ")
+pof:Label("{•} Fast show for UX.") 
 pof:Label("{•} Fixes Universe - X can't run.") 
 pof:Label("{•} Fixes Universe - X LOG-In.") 
 pof:Label("{•} Added some scripts on Universe - X. ") 
-pof:Toggle(
-    "{•} Enable Universe - X [ Active it for Unpatched ]",
-    false,
-    function(bool)
-        print(bool)
-    end
-) 
+pof:Label("{•} Enable Universe - X [ Removed. ]") 
 pof:Label(" [[ -- Remaked for Worked -- ]]: v0.2.3") 
 pof:Seperator() 
 pof:Label(" -- -- -- -- ")
@@ -173,8 +177,6 @@ pof:Label("{•} Added Universal X.")
 pof:Label("{•} Added Undetectable.") 
 pof:Label("{•} Global Update.")
 pof:Label(" [[ -- 29 -- 04 -- 2024 -- ]]: v0.1.0")
-
-game:Shutdown()
 
 local ipz = serc:Channel("Additional Features") 
 
@@ -314,14 +316,14 @@ ipz:Label("Universe - X | Note:\nBeta maybe can give more good experiences, Verc
 local ips = serc:Channel("About | Logs") 
 
 ips:Label(" ••• ••• ••• ••• ") 
-ips:Label("{~} Current Version: 0.2.3") 
+ips:Label("{~} Current Version: 0.2.4") 
 ips:Label("{~} Website: https://olive-loaf-00a.notion.site/Universe-v0-2-3-0b3a55db6fdc4918ae57e3ee810f704d") 
 ips:Label("{~} Current Limited: Ultra version.") 
 ips:Label("{~} Bypass Type: Vercel.Ios.so") 
 ips:Label("{~} Protections Universe - X: 21 Protections.") 
 ips:Label("{~} Version Beta: Unavailable.") 
 ips:Label("{~} Status new version: Not available.") 
-ips:Label("{~} Universe - X new version: 0.2.4") 
+ips:Label("{~} Universe - X new version: 0.2.6") 
 ips:Label("{~} Type all Library: Private.") 
 ips:Label(" ••• ••• ••• ••• ") 
 
@@ -15972,6 +15974,14 @@ tool5.BinType = "Grab"
 local fenrir = serx:Channel("Hitbox | Player") 
 
 fenrir:Button(
+    "{•} Reset Hitbox", 
+    function()
+    DiscordLib:Notification("Notify", "Hitboxes is executed!", "Okay!") 
+        hitpp() 
+    end
+)
+
+fenrir:Button(
     "{•} Hitbox 6", 
     function()
     DiscordLib:Notification("Notify", "Hitboxes is executed!", "Okay!") 
@@ -15986,6 +15996,54 @@ fenrir:Button(
         hitpp2() 
     end
 )
+
+fenrir:Button(
+    "{•} Hitbox 15", 
+    function()
+    DiscordLib:Notification("Notify", "Hitboxes is executed!", "Okay!") 
+        hitpp3() 
+    end
+)
+
+function hitpp3() 
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:Connect(function()
+    vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+    wait(1)
+    vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Becareful, active the anti ban";
+})
+
+wait(1)
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Universe - X | Hitbox";
+    Text = " Executed.";
+    Duration = 10,
+})
+
+_G.HeadSize = 10
+_G.Disabled = true
+
+game:GetService('RunService').RenderStepped:Connect(function()
+    if _G.Disabled then
+        for i,v in pairs(game:GetService('Players'):GetPlayers()) do
+            if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+                pcall(function()
+                    v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+                    v.Character.HumanoidRootPart.Transparency = 0.7
+                    v.Character.HumanoidRootPart.BrickColor = BrickColor.new("Really red")
+                    v.Character.HumanoidRootPart.Material = Enum.Material.Neon
+                    v.Character.HumanoidRootPart.CanCollide = false
+                end)
+            end
+        end
+    end
+end)
+end
 
 function hitpp2() 
 local vu = game:GetService("VirtualUser")
