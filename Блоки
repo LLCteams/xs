@@ -130,6 +130,7 @@ local serc = win:Server("[HOME | LOGS]", "rbxassetid://17468096773")
 
 local pof = serc:Channel("Update | Logs") 
 
+pof:Label("{•} WARNING! Dont added Universe - X in another hubs.") 
 pof:Label("{•} Fixes auto close Roblox.") 
 pof:Label("{•} Fixes bypass Hyperion line 4.") 
 pof:Label("{•} Added new bypass Hyperion.") 
