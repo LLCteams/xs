@@ -40,6 +40,7 @@ print(" Ended of Universe - X || Logs \n\n ")
 
 ]]
 
+warn(" Universe - X Loaded! ") 
 queueteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
 httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 HttpService = game:GetService("HttpService")
@@ -112,10 +113,6 @@ getgenv().Jumppower = game:GetService("Players").LocalPlayer.Character.Humanoid.
 getgenv().TPSpeed = 3
 getgenv().TPWalk = false
 
-warn('Bypass success: Server.SmartOfHyperion') 
-warn('Filtering Enabled: Server.Players.PlayerUser.TypeSelf') 
-print('Enjoy Premium version of ULTRA Universe X')
-
 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 18
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
 local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/NotificationGUI/main/source.lua"))()
@@ -172,6 +169,11 @@ ahx:Label("{•} Ping: [ "..game:GetService("Stats").Network.ServerStatsItem["Da
 
 local pof = serc:Channel("Update | Logs") 
 
+pof:Label("{•} Fixes Bypassed.") 
+pof:Label("{•} Added Godmode scripts.") 
+pof:Label("{•} Added new scripts. ") 
+pof:Label(" [[ -- 18 -- 05 -- 2024 -- ]]: v0.2.5") 
+pof:Seperator() 
 pof:Label("{•} Fixes auto close Roblox.") 
 pof:Label("{•} Fixes bypass Hyperion line 4.") 
 pof:Label("{•} Added new bypass Hyperion.") 
@@ -194,7 +196,7 @@ pof:Label("{•} Added Universal X scripts.")
 pof:Label("{•} Additional feature [Executor feature].") 
 pof:Label("{•} Added some useful scripts on another tabs.")
 pof:Label("{•} Added Game scripts.") 
-pof:Label(" [[ -- 10 -- 05 -- 2024  ]] : v0.2.1")
+pof:Label(" [[ -- 10 -- 05 -- 2024  ]]: v0.2.1")
 pof:Seperator() 
 pof:Label(" -- -- -- -- ") 
 pof:Label("{•} Type /console to show informations of Universe - X.")
@@ -9531,6 +9533,113 @@ abah:Button(
 abah:Seperator() 
 
 abah:Button(
+    "{•} Aimlock", 
+    function() 
+        aimXx() 
+    end
+)
+
+function aimXx() 
+-- Universal Aimlock Script
+-- Made by mxkxkks
+
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local Camera = workspace.CurrentCamera
+local Highlight = Instance.new("Highlight")
+
+local LocalPlayer = Players.LocalPlayer
+local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait()
+local Humanoid = Character:WaitForChild("Humanoid")
+
+local Settings = {
+    Enabled = false,
+    TeamCheck = true,
+    VisibleCheck = false,
+    TargetPart = "Head",
+    SmoothingAmount = 0,
+    FOVRadius = 180,
+    FOVVisible = true,
+    FOVColor = Color3.fromRGB(255, 255, 255),
+    FOVTransparency = 0.5,
+    FOVThickness = 2,
+    FOVFilled = false
+}
+
+local LockedPlayer = nil
+local FOVCircle = Drawing.new("Circle")
+FOVCircle.Visible = Settings.FOVVisible
+FOVCircle.Radius = Settings.FOVRadius
+FOVCircle.Color = Settings.FOVColor
+FOVCircle.Transparency = Settings.FOVTransparency
+FOVCircle.Thickness = Settings.FOVThickness
+FOVCircle.Filled = Settings.FOVFilled
+
+local function GetClosestPlayerToMouse()
+    local ClosestPlayer = nil
+    local ClosestDistance = math.huge
+
+    local MousePosition = UserInputService:GetMouseLocation()
+
+    for _, Player in ipairs(Players:GetPlayers()) do
+        if Player ~= LocalPlayer and Player.Character and Player.Character:FindFirstChild("Humanoid") and Player.Character.Humanoid.Health > 0 then
+            if Settings.TeamCheck and Player.Team == LocalPlayer.Team then
+                continue
+            end
+
+            local TargetPart = Player.Character:FindFirstChild(Settings.TargetPart)
+            if TargetPart then
+                local ScreenPosition, OnScreen = Camera:WorldToViewportPoint(TargetPart.Position)
+                if OnScreen then
+                    local Distance = (Vector2.new(ScreenPosition.X, ScreenPosition.Y) - MousePosition).Magnitude
+                    if Distance < ClosestDistance and (not Settings.VisibleCheck or #Camera:GetPartsObscuringTarget({TargetPart}, {Camera, Character}) == 0) then
+                        ClosestPlayer = Player
+                        ClosestDistance = Distance
+                    end
+                end
+            end
+        end
+    end
+
+    return ClosestPlayer
+end
+
+UserInputService.InputBegan:Connect(function(Input, GameProcessedEvent)
+    if Input.UserInputType == Enum.UserInputType.MouseButton2 then
+        Settings.Enabled = true
+        LockedPlayer = GetClosestPlayerToMouse()
+        Highlight.Parent = LockedPlayer.Character
+    end
+end)
+
+UserInputService.InputEnded:Connect(function(Input, GameProcessedEvent)
+    if Input.UserInputType == Enum.UserInputType.MouseButton2 then
+        Settings.Enabled = false
+        LockedPlayer = nil
+        Highlight.Parent = nil
+    end
+end)
+
+RunService.RenderStepped:Connect(function()
+    FOVCircle.Position = UserInputService:GetMouseLocation()
+    FOVCircle.Visible = Settings.FOVVisible
+    FOVCircle.Radius = Settings.FOVRadius
+    FOVCircle.Color = Settings.FOVColor
+    FOVCircle.Transparency = Settings.FOVTransparency
+    FOVCircle.Thickness = Settings.FOVThickness
+    FOVCircle.Filled = Settings.FOVFilled
+
+    if Settings.Enabled and LockedPlayer ~= nil and LockedPlayer.Character and LockedPlayer.Character:FindFirstChild(Settings.TargetPart) then
+        local TargetPart = LockedPlayer.Character:FindFirstChild(Settings.TargetPart)
+        Camera.CFrame = CFrame.new(Camera.CFrame.Position, TargetPart.Position)
+    end
+end)
+end
+
+abah:Seperator() 
+
+abah:Button(
     "{•} Flashlight", 
     function() 
         falsh2() 
@@ -9901,6 +10010,15 @@ ovoi:Button(
     "{•} Disable ClientRejoin",
     function() 
     allow_rj = false
+    end
+)
+
+ovoi:Seperator() 
+
+ovoi:Button(
+    "{•} Clear Chat",
+    function()
+        clearChat() 
     end
 )
 
