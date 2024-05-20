@@ -276,7 +276,7 @@ local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xH
 
 local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord"))()
 
-local win = DiscordLib:Window("Universe - X | ULTRA [v0.2.6]") 
+local win = DiscordLib:Window("Universe - X | Last | ULTRA [v0.2.6]") 
 
 local serc = win:Server("[HOME | LOGS]", "rbxassetid://17468096773") 
 
@@ -324,6 +324,7 @@ ahx:Label("{•} Ping: [ "..game:GetService("Stats").Network.ServerStatsItem["Da
 
 local pof = serc:Channel("Update | Logs") 
 
+pof:Kabel("{•} Last version:\nWe are making new Universe - X and available very soon and longer!\n\n") 
 pof:Label("{•} AutoScan Loader [Safety Check].") 
 pof:Label("{•} Fixes Fluxus supports.") 
 pof:Label("{•} Fixes Arceus X supports.") 
