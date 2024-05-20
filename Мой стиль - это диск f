@@ -11,7 +11,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCte
 
 local Tab1 = Library:CreateTab('A')
 
-Tab1:Label('Version')
+Tab1:Label('Last Of All Version')
 Tab1:Button("Universe X v0.2.5", function()
       game.CoreGui.ShadowLib:Destroy()
       loadstring(game:HttpGet("https://pastebin.com/raw/4bn47Jb0"))()
@@ -92,10 +92,10 @@ discordLabel.TextTransparency = 1 -- Start with text fully transparent
 discordLabel.Parent = mainFrame
 
 -- Tween settings
-local fadeInTime = 5
-local stayTime = 17
+local fadeInTime = 6
+local stayTime = 18
 -- 9999999999999999999999999
-local fadeOutTime = 3
+local fadeOutTime = 2
 
 -- Fade in the frame and text
 local fadeIn = TweenService:Create(mainFrame, TweenInfo.new(fadeInTime), {BackgroundTransparency = 0})
@@ -235,7 +235,7 @@ end
 
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
-Notification.Notify("Universe X || ULTRA", "Universe X is ULTRA version, Enjoy Universe - X Ultra now working.", "rbxassetid://17415983489", {
+Notification.Notify("Universe X || ULTRA", "Universe X last version, Enjoy Universe - X Ultra now working.", "rbxassetid://17415983489", {
     Duration = 6,
     Main = {
         Rounding = true,
