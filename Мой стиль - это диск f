@@ -19,6 +19,7 @@ end)
 Tab1:Button("Universe X v0.2.6", function()
      game.CoreGui.ShadowLib:Destroy()
       ofall() 
+     game:Shutdown()
 end)
 
 function ofall() 
