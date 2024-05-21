@@ -1,4 +1,4 @@
-
+game.Players.LocalPlayer:Kick("Detected for modified Clients!") 
 _G.Settings = {
 ['Name'] = 'Universe X', 
 ['Intro'] = true,
