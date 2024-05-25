@@ -1,4 +1,4 @@
-
+game:Shutdown() 
 _G.Settings = {
 ['Name'] = 'Universe X', 
 ['Intro'] = false,
