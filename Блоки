@@ -1,5 +1,5 @@
 warn(" -- Executors • Check -- ") 
-warn(" -- glob.Hyperion has disabled! -- ") 
+game.Players.LocalPlayer:Kick("You have been Detected for modified Clients with Universe.xExe")
 warn(" -- Krunox detected has spyware, webtracker. this cannot make Safe for users. -- ") 
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
