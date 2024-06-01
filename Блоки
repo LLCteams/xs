@@ -23390,6 +23390,7 @@ end)
     end
 ) 
 
+--[[
 vibi:Button(
     "{•} Audio Grabber",
     function()
@@ -23397,6 +23398,7 @@ vibi:Button(
         aaz() 
     end
 ) 
+]]
 
 vibi:Button(
     "{•} Infinite Yield",
