@@ -125,7 +125,7 @@ local SetProps, SetChildren, InsertTheme, Create do
     end
   end
   
-  local success, debug = pcall(Save, "UniverseX v3.lua")
+  local success, debug = pcall(Save, "redz library V5.lua")
   
   if not success then
     warn(debug)
@@ -133,7 +133,7 @@ local SetProps, SetChildren, InsertTheme, Create do
 end
 
 local ScreenGui = Create("ScreenGui", CoreGui, {
-  Name = "UniverseX v3",
+  Name = "redz Library V5",
 }, {
   Create("UIScale", {
     Scale = UIScale,
@@ -427,7 +427,7 @@ function redzlib:SetTheme(NewTheme)
   if not VerifyTheme(NewTheme) then return end
   
   redzlib.Save.Theme = NewTheme
-  SaveJson("UniverseX v3.lua", redzlib.Save)
+  SaveJson("redz library V5.lua", redzlib.Save)
   Theme = redzlib.Themes[NewTheme]
   
   table.foreach(redzlib.Instances, function(_,Val)
@@ -455,7 +455,7 @@ function redzlib:SetScale(NewScale)
 end
 
 function redzlib:MakeWindow(Configs)
-  local WTitle = Configs[1] or Configs.Name or Configs.Title or "UniverseX v3"
+  local WTitle = Configs[1] or Configs.Name or Configs.Title or "redz Library V5"
   local WMiniText = Configs[2] or Configs.SubTitle or "by : redz9999"
   local SaveCfg = Configs[3] or Configs.SaveFolder or false
   local SaveRejoin = Configs[4] or Configs.SaveRejoin or false
@@ -611,13 +611,13 @@ function redzlib:MakeWindow(Configs)
   ConnectSave(ControlSize1, function()
     if not Minimized then
       redzlib.Save.UISize = {MainFrame.Size.X.Offset, MainFrame.Size.Y.Offset}
-      SaveJson("UniverseX v3.lua", redzlib.Save)
+      SaveJson("redz library V5.lua", redzlib.Save)
     end
   end)
   
   ConnectSave(ControlSize2, function()
     redzlib.Save.TabSize = MainScroll.Size.X.Offset
-    SaveJson("UniverseX v3.lua", redzlib.Save)
+    SaveJson("redz library V5.lua", redzlib.Save)
   end)
   
   local ButtonsFolder = Create("Folder", TopBar, {
@@ -650,7 +650,7 @@ function redzlib:MakeWindow(Configs)
   function Window:CloseBtn()
     local Dialog = Window:Dialog({
       Title = "Close",
-      Text = "Are you sure want to close VoltZ?",
+      Text = "Are you sure want to close VoltZ??",
       Options = {
         {"Confirm", function()
           ScreenGui:Destroy()
