@@ -650,7 +650,7 @@ function redzlib:MakeWindow(Configs)
   function Window:CloseBtn()
     local Dialog = Window:Dialog({
       Title = "Close",
-      Text = "Are you sure you want to close this script??",
+      Text = "Are you sure want to close Universe - X?",
       Options = {
         {"Confirm", function()
           ScreenGui:Destroy()
