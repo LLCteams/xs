@@ -1,3 +1,210 @@
+local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
+
+--- TRIGON
+if (identifyexecutor()) == "Trigon" then
+Notification.Notify("Universe X || Ultra", "Universe - X not really executed..", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(0.1) 
+print('UX.lua-failed') 
+end
+
+if (identifyexecutor()) == "Solara" then
+Notification.Notify("Universe X || Ultra", "Universe - X not really executed..", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(0.1)
+print('UX.lua-failed') 
+end
+
+--[[
+if (identifyexecutor()) == "Fluxus" then
+Notification.Notify("Universe X || Ultra", "Fluxus too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Fluxus doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Wave" then
+Notification.Notify("Universe X || Ultra", "Wave too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Wave doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Krampus" then
+Notification.Notify("Universe X || Ultra", "Krampus too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Krampus doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Delta" then
+Notification.Notify("Universe X || Ultra", "Delta too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Delta doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Evon" then
+Notification.Notify("Universe X || Ultra", "Evon too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Evon doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "KRNL" then
+Notification.Notify("Universe X || Ultra", "KRNL has error and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that KRNL doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Hydrogen" then
+Notification.Notify("Universe X || Ultra", "Hydrogen too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Hydrogen doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Ro-Exec" then
+Notification.Notify("Universe X || Ultra", "Ro-Exec too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Ro-Exec doesnt have please switch to something else! (Error.)")
+end
+
+
+if (identifyexecutor()) == "Script-Ware" then
+Notification.Notify("Universe X || Ultra", "Script-Ware not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Script-Ware doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Sirhurt" then
+Notification.Notify("Universe X || Ultra", "Sirhurt too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Sirhurt doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Codex" then
+Notification.Notify("Universe X || Ultra", "Codex too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Codex doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Electron" then
+Notification.Notify("Universe X || Ultra", "Electron too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Electron doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Comet" then
+Notification.Notify("Universe X || Ultra", "Comet too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Comet doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Vega X" then
+Notification.Notify("Universe X || Ultra", "Vega X too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Vega X doesnt have please switch to something else! (Error.)")
+end
+
+
+if (identifyexecutor()) == "Sentiner" then
+Notification.Notify("Universe X || Ultra", "Sentiner too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Sentiner doesnt have please switch to something else! (Error.)")
+end
+
+
+if (identifyexecutor()) == "Arceus X" then
+Notification.Notify("Universe X || Ultra", "Arceus X not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Arceus X doesnt have please switch to something else! (Error.)")
+end
+]]
+
+--[[
 -- Vulnerability Test
 -- Inspired By UNC
 
@@ -698,16 +905,13 @@ print("Vulnerability Check Summary - " .. tostring(identifyexecutor()))
 print("✅ Tested with a " .. rate .. "% vulnerability mitigations rate (" .. outOf .. ")")
 print("⛔ " .. fail .. " vulnerabilities not mitigated")
 print("⏺️ " .. unknown .. " vulnerabilities not tested")
+]]
 
-warn(" -- Executors • Check -- ") 
-warn(" -- glob.Hyperion has disabled! -- ") 
-warn(" -- Krunox detected has spyware, webtracker. this cannot make Safe for users. -- ") 
-local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
 
 _G.Settings = {
-['Name'] = 'v0.29a', 
-['Intro'] = true,
+['Name'] = 'v0.12.7e', 
+['Intro'] = false,
 ['Keybind'] = 'F'
 }
 
@@ -725,20 +929,13 @@ end)
 Tab1:Button("Universe X Latest", function()
      game.CoreGui.ShadowLib:Destroy()
       ofall() 
-      local music = Instance.new("Sound", game.Workspace)
-
-music.SoundId = "rbxassetid://12222253"
--- 6842234394"
-
-music.Volume = 1000
-
+    local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://1839961023"
+music.Volume = 0
 music.Looped = false
-
 music.PlayOnRemove = false
-
 music:Play()
-end)
-
+end) 
 function ofall() 
 
 -- dont execute it from here or you'll regret..
@@ -766,7 +963,7 @@ local loadingLabel = Instance.new("TextLabel")
 loadingLabel.Size = UDim2.new(1, 0, 0.8, 0)
 loadingLabel.Position = UDim2.new(0, 0, 0, 0) -- Adjusted position for better centering
 loadingLabel.BackgroundTransparency = 1 -- No background for the text label
-loadingLabel.Text = "Universe X {•} Extra"
+loadingLabel.Text = "Universe X {•} Ultra"
 loadingLabel.TextSize = 32
 loadingLabel.TextColor3 = Color3.new(255, 0, 0) -- Cyan text color
 loadingLabel.Font = Enum.Font.SourceSansBold -- Bold font
@@ -802,7 +999,7 @@ local discordLabel = Instance.new("TextLabel")
 discordLabel.Size = UDim2.new(0, 200, 0, 50)
 discordLabel.Position = UDim2.new(-0.07, 0, 0.78, 0) -- Below the YT label with some padding
 discordLabel.BackgroundTransparency = 1 -- No background for the text label
-discordLabel.Text = "v0.29a || Extra"
+discordLabel.Text = "v0.12.7e || Ultra"
 discordLabel.TextSize = 14
 discordLabel.TextColor3 = Color3.new(10, 150, 200) -- White text color
 discordLabel.Font = Enum.Font.SourceSansBold -- Regular font
@@ -810,10 +1007,10 @@ discordLabel.TextTransparency = 1 -- Start with text fully transparent
 discordLabel.Parent = mainFrame
 
 -- Tween settings
-local fadeInTime = 2
-local stayTime = 5
+local fadeInTime = 4
+local stayTime = 6
 -- 9999999999999999999999999
-local fadeOutTime = 2
+local fadeOutTime = 6
 
 -- Fade in the frame and text
 local fadeIn = TweenService:Create(mainFrame, TweenInfo.new(fadeInTime), {BackgroundTransparency = 0})
@@ -862,7 +1059,7 @@ local index = 1
 
 spawn(function()
     while true do
-        loadingSubLabel.Text = "[Welcome]" .. dots[index]
+        loadingSubLabel.Text = "[[ Updating ]]" .. dots[index]
         index = index % #dots + 1
         wait(0.2) 
     end
@@ -913,7 +1110,7 @@ print(" Ended of Universe - X || Logs \n\n ")
 
 ]]
 
-warn(" ModeratorScript|Universe - X Loaded! ") 
+warn(" Universe - X has been loaded, this causes RbxLogExecution. ") 
 queueteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
 httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
 HttpService = game:GetService("HttpService")
@@ -954,17 +1151,8 @@ end
 
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
-Notification.Notify("Universe X || Extra", "Universe X is ready, Enjoy Universe - X Extra now working.", "rbxassetid://17415983489", {
+Notification.Notify("Universe X || Ultra", "Universe X is ready, Enjoy Universe - X Ultra are ready and now working.", "rbxassetid://17415983489", {
     Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-
-wait(0.1) 
-
-Notification.Notify("Universe X || Extra", "[FE] Filtering Enabled in this game is detected.", "rbxassetid://17415983489", {
-    Duration = 3,
     Main = {
         Rounding = true,
     }
@@ -999,14 +1187,36 @@ local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xH
 
 local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord"))()
 
-local win = DiscordLib:Window("Universe - X • Extra [v0.29a]", Color3.fromRGB(0, 255, 0)) 
+local win = DiscordLib:Window("Universe - X || ULTRA [v0.12.7e]", Color3.fromRGB(0, 255, 0)) 
 
 local serc = win:Server("[HOME | LOGS]", "rbxassetid://17468096773") 
 
 local pof = serc:Channel("Update | Logs") 
 
+pof:Label("{•} Fixed an issues while executing Universe - X.") 
+pof:Label("{•} Fixed an issues, error after execute.") 
+pof:Label("{•} AntiCheat Bypass improved.") 
+pof:Label("{•} AntiLag improved max.") 
+pof:Label("{•} Undetectable improved max.") 
+pof:Label("{•} FPS Unlocker improved.") 
+pof:Label("{•} Added game audio.") 
+pof:Label("{•} Added  3+ new esp.") 
+pof:Label("{•} New undetectable v5.5") 
+pof:Label("{•} Different executors for Universe - X.")
+pof:Label("{•} Different executors for Hrploits.") 
+pof:Label("{•} Universe - X now [Support: Arceus X, Fluxus, CodeX, Delta, Vega X, Hydrogen & more].")
+pof:Label("{•} Hrploits now [Support: Trigon, Solara.] Soon after v0.12.9e") 
+pof:Label("{•} Owner new for Hrploits 2.0 remaked.") 
+pof:Label("{•} New version, Ultra Official updated. [New HRPLOITS for some executors].") 
+pof:Label("{•} Ultra version.") 
+pof:Label(" [[ -- 08 -- 06 -- 2024 -- ]]: v0.12.7e") 
+pof:Seperator() 
+pof:Label(" -- -- -- -- ") 
+pof:Label("{•} Executor support.") 
+pof:Label("{•} Updated undetectable.")
 pof:Label("{•} Added Arceus X features.") 
 pof:Label(" [[ -- 03 -- 06 -- 2024 -- ]]: v0.29a") 
+pof:Seperator() 
 pof:Label(" -- -- -- -- ") 
 pof:Label("{•} Unsupported some executor for Universe - X v0.28a.") 
 pof:Label("{•} Changes of Ultra systems to Extra Verse.")
@@ -1098,9 +1308,9 @@ pof:Label("{•} Added Undetectable.")
 pof:Label("{•} Global Update.")
 pof:Label(" [[ -- 29 -- 04 -- 2024 -- ]]: v0.1.0")
 
-local ipz = serc:Channel("Extra Features") 
+local ipz = serc:Channel("Additional Features") 
 
-ipz:Label(" [ --- Universe - X Extra Features --- ] ") 
+ipz:Label(" [ --- Universe - X Ultra Features --- ] ") 
 
 ipz:Toggle(
     "{•} Active Global Search [ Universe - X | Search ]",
@@ -1145,7 +1355,75 @@ ipz:Toggle(
 ipz:Seperator() 
 
 ipz:Toggle(
-    "{•} Unlocker FPS",
+    "{•} Improve Max AntiLag",
+    false,
+    function(bool)
+        print(bool)
+    end
+)
+
+ipz:Toggle(
+    "{•} Improve Max Undetectable",
+    false,
+    function(bool)
+        print(bool)
+    end
+)
+
+ipz:Toggle(
+    "{•} Improve AntiCheat Bypass to best experience",
+    false,
+    function(bool)
+        print(bool)
+    end
+)
+
+ipz:Toggle(
+    "{•} Improve FPS Unlocker to best experience",
+    false,
+    function(bool)
+        print(bool)
+    end
+)
+
+ipz:Seperator() 
+
+ipz:Toggle(
+    "{•} Universe - X Ultra | MAX FPS Unlocker",
+    false,
+    function(bool)
+        print(bool)
+    end
+)
+
+ipz:Toggle(
+    "{•} Universe - X Ultra | MAX Anti Lag",
+    false,
+    function(bool)
+        print(bool)
+    end
+)
+
+ipz:Toggle(
+    "{•} Universe - X Extra | FPS Unlocker",
+    false,
+    function(bool)
+        print(bool)
+    end
+)
+
+ipz:Toggle(
+    "{•} Universe - X Extra | Anti Lag",
+    false,
+    function(bool)
+        print(bool)
+    end
+)
+
+ipz:Seperator() 
+
+ipz:Toggle(
+    "{•} FPS Unlocker",
     false,
     function(bool)
         print(bool)
@@ -1161,7 +1439,7 @@ ipz:Toggle(
 )
 
 ipz:Textbox(
-    "Unlocker FPS | Auto",
+    "FPS Unlocker | Auto",
     "Type a numbers to change Universe - X FPS server.",
     true,
     function(t)
@@ -1230,7 +1508,7 @@ ipz:Toggle(
     end
 )
 
-ipz:Label(" [ --- --- Extra Features --- --- ] ") 
+ipz:Label(" [ --- --- Additional Features --- --- ] ") 
 ipz:Label("Universe - X | Note:\nBeta maybe can give more good experiences, Vercel has adding..\nthat blocking anything SPYWARE or attacker for users.\nUniverse - X is friendly scripts, dont need to worry.")
 
 local ahx = serc:Channel("Information") 
@@ -1279,18 +1557,18 @@ ahx:Label("{•} Ping: [ "..game:GetService("Stats").Network.ServerStatsItem["Da
 local ips = serc:Channel("About | Logs") 
 
 ips:Label(" ••• ••• ••• ••• ") 
-ips:Label("{~} Current Version: 0.2.8") 
-ips:Label("{~} Website: https://olive-loaf-00a.notion.site/Universe-v0-2-3-0b3a55db6fdc4918ae57e3ee810f704d") 
-ips:Label("{~} Current Limited: Extra version.") 
-ips:Label("{~} Bypass Type: Vercel.ard.so") 
-ips:Label("{~} Protections Universe - X: 30 Protections.") 
-ips:Label("{~} EXTRA Version: || 27777.62300000.99991111111 || ") 
+ips:Label("{~} Current Version: v0.12.7e") 
+ips:Label("{~} Website: \nhttps://olive-loaf-00a.notion.site/Universe-v0-2-3-0b3a55db6fdc4918ae57e3ee810f704d\n") 
+ips:Label("{~} Current Limited: Ultra version.") 
+ips:Label("{~} Bypass Type: Xeri.ard.so") 
+ips:Label("{~} Protections Universe - X: 35 Protections.") 
+ips:Label("{~} Ultra Version: || 2382.77724 || ") 
 ips:Label("{~} Version Beta: Unavailable.") 
-ips:Label("{~} Supported Only: Fluxus") 
-ips:Label("{~} Breaker: Hyp.Universe-X.so") 
+ips:Label("{~} Support: All Executor.") 
+ips:Label("{~} Breaker: Hyp.Verse-X.so") 
 ips:Label("{~} Status new version: Already Updated.") 
-ips:Label("{~} Universe - X new version: 0.3.0") 
-ips:Label("{~} Type all Library: Private.") 
+ips:Label("{~} Universe - X new version:") 
+ips:Label("{~} Type all Library: Locked.") 
 ips:Label(" ••• ••• ••• ••• ") 
 
 local opv = serc:Channel("Credits | Creator") 
@@ -2387,6 +2665,833 @@ vivi:Button(
         ad9() 
     end
 )
+
+
+function XCMMS() 
+--<>----<>----<>----<>----<>----<>----<>--
+repeat wait() until game:IsLoaded() wait()
+    game:GetService("Players").LocalPlayer.Idled:connect(function()
+    game:GetService("VirtualUser"):ClickButton2(Vector2.new());
+end);
+--<>----<>----<>----<>----<>----<>----<>--
+local Library = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Drifter0507/Shamrock/main/MainLibrary", true))();
+--<>----<>----<>----<>----<>----<>----<>--
+pcall(function()
+    for i, v in pairs(getconnections(game:GetService("ScriptContext").Error)) do
+        v:Disable();
+    end;
+end);
+--<>----<>----<>----<>----<>----<>----<>--
+
+--<>----<>----<>----<>----<>----<>----<>--
+local Workspace = game:GetService('Workspace');
+local ReplicatedStorage = game:GetService('ReplicatedStorage');
+local Players = game:GetService('Players');
+local Client = Players.LocalPlayer;
+local RunService = game:GetService('RunService');
+local Workspace = game:GetService("Workspace");
+local Lighting = game:GetService("Lighting");
+local UIS = game:GetService("UserInputService");
+local Teams = game:GetService("Teams");
+local ScriptContext = game:GetService("ScriptContext");
+local CoreGui = game:GetService("CoreGui");
+local Camera = Workspace.CurrentCamera;
+local Mouse = Client:GetMouse();
+local Terrain = Workspace.Terrain;
+local VirtualUser = game:GetService("VirtualUser");
+--<>----<>----<>----<>----<>----<>----<>--
+local Modules = ReplicatedStorage.Modules;
+local EmoteModule = Modules.EmoteModule;
+local Emotes = Client.PlayerGui.MainGUI.Game:FindFirstChild("Emotes");
+local EmoteList = {"headless","zombie","zen","ninja","floss","dab"};
+local CanGrab 
+CanGrab = false;
+
+local Origins = {{2,0,0},{-2,0,0},{0,2,0},{0,-2,0},{0,0,1},{0,0,-1}};
+
+local GunHighlight = Instance.new("Highlight");
+local GunHandleAdornment = Instance.new("SphereHandleAdornment");
+
+GunHighlight.FillColor = Color3.fromRGB(248, 241, 174);
+GunHighlight.Adornee = Workspace:FindFirstChild("GunDrop");
+GunHighlight.OutlineTransparency = 1;
+GunHighlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop;
+GunHighlight.RobloxLocked = true;
+
+GunHandleAdornment.Color3 = Color3.fromRGB(248, 241, 174);
+GunHandleAdornment.Transparency = 0.2;
+GunHandleAdornment.Adornee = Workspace:FindFirstChild("GunDrop");
+GunHandleAdornment.AlwaysOnTop = true;
+GunHandleAdornment.AdornCullingMode = Enum.AdornCullingMode.Never;
+GunHandleAdornment.RobloxLocked = true;
+
+GunHighlight.Parent = CoreGui;
+GunHandleAdornment.Parent = CoreGui;
+
+local TeleportDict = {
+    ["Lobby"] = Vector3.new(-121.12338256836, 138.27394104004, 38.946128845215),
+    ["Map"] = Vector3.new(-107.90824127197266, 138.34988403320312, -10.622464179992676),
+};
+local TeleportTable = {}
+for i, v in pairs(TeleportDict) do
+    table.insert(TeleportTable,i);
+end;
+
+local Murderer, Sheriff = nil, nil;
+
+function GetMurderer()
+    for i,v in pairs(Players:GetChildren()) do 
+        if v.Backpack:FindFirstChild("Knife") or v.Character:FindFirstChild("Knife") and v.Name == "Tool" then
+            return v.Name;
+        end;
+    end;
+    return nil;
+end;
+
+function GetSheriff()
+    for i,v in pairs(Players:GetChildren()) do 
+        if v.Backpack:FindFirstChild("Gun") or v.Character:FindFirstChild("Gun") and v.Name == "Tool" then
+            return v.Name;
+        end;
+        return nil;
+    end;
+end;
+--<>----<>----<>----<>----<>----<>----<>--
+local Character = nil;
+local RootPart = nil;
+local Humanoid = nil;
+
+getgenv().WS = 16
+getgenv().JP = 50
+function SetCharVars()
+	Character = Client.Character;
+	Humanoid = Character:FindFirstChild("Humanoid") or Character:WaitForChild("Humanoid");
+	RootPart = Character:FindFirstChild("HumanoidRootPart") or Character:WaitForChild("HumanoidRootPart");
+	if getgenv().Speed then
+		Humanoid.WalkSpeed = getgenv().WS;
+	end;
+	Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+		if getgenv().Speed then
+			Humanoid.WalkSpeed = getgenv().WS;
+		end;
+	end);
+    if getgenv().Jump then
+		Humanoid.WalkSpeed = getgenv().JP;
+	end;
+	Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+		if getgenv().Jump then
+			Humanoid.WalkSpeed = getgenv().JP;
+		end;
+	end);
+end;
+SetCharVars();
+Client.CharacterAdded:Connect(SetCharVars);
+
+local Ws;
+Ws = hookmetamethod(game, "__index", function(self, Value)
+    if tostring(self) == "Humanoid" and tostring(Value) == "WalkSpeed" then
+        return 16;
+    end;
+    return Ws(self, Value);
+end);
+
+local Jp;
+Jp = hookmetamethod(game, "__index", function(self, Value)
+    if tostring(self) == "Humanoid" and tostring(Value) == "WalkSpeed" then
+        return 16;
+    end;
+    return Jp(self, Value);
+end);
+
+--<>----<>----<>----<>----<>----<>----<>--
+
+--<>----<>----<>----<>----<>----<>----<>--
+local Window = Library:CreateWindow({Title = "Murder Mystery 2"});
+local Tab1 = Window:CreateTab({Title = "Main", ScrollBar = false});
+local Tab2 = Window:CreateTab({Title = "Economy", ScrollBar = false});
+local Tab3 = Window:CreateTab({Title = "Roles", ScrollBar = false});
+
+--<>----<>----<>----<>----<>----<>----<>--
+local ClientSection = Tab1:CreateSection({
+	Title = "Client"
+});
+--<>----<>----<>----<>----<>----<>----<>--
+local WorldSection = Tab1:CreateSection({
+	Title = "World"
+});
+--<>----<>----<>----<>----<>----<>----<>--
+--<>----<>----<>----<>----<>----<>----<>--
+local AutofarmSection = Tab2:CreateSection({
+	Title = "Autofarm"
+});
+--<>----<>----<>----<>----<>----<>----<>--
+--<>----<>----<>----<>----<>----<>----<>--
+local MurderSection = Tab3:CreateSection({
+	Title = "Murderer"
+});
+--<>----<>----<>----<>----<>----<>----<>--
+local SheriffSection = Tab3:CreateSection({
+	Title = "Sheriff"
+});
+--<>----<>----<>----<>----<>----<>----<>--
+
+--<>----<>----<>----<>----<>----<>----<>--
+ClientSection:CreateToggle({
+	Title = "CTRL click tp",
+	Default = false,
+	Callback = function(state)
+        getgenv().ClickTP = state;
+	end;
+});
+Mouse.Button1Down:connect(function()
+    if not game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) then return end;
+    if not Mouse.Target then return end;
+    if not getgenv().ClickTP then return end;
+    Character:MoveTo(Mouse.Hit.p);
+end)
+--<>----<>----<>----<>----<>----<>----<>--
+
+ClientSection:CreateSlider({
+	Title = "WalkSpeed",
+	Min = 16,
+	Max = 200,
+	Default = 16,
+	Callback = function(val)
+		getgenv().WS = tonumber(val)--tonumber(val / 10) or 0;
+        Humanoid.WalkSpeed = val;
+    end
+});
+--<>----<>----<>----<>----<>----<>----<>--
+ClientSection:CreateSlider({
+	Title = "JumpPower",
+	Min = 50,
+	Max = 200,
+	Default = 50,
+	Callback = function(val)
+		getgenv().JP = tonumber(val)--tonumber(val / 10) or 0;
+        Humanoid.JumpPower = val;
+    end
+});
+--<>----<>----<>----<>----<>----<>----<>--
+local c;
+local h;
+local bv;
+local bav;
+local cam;
+local flying;
+local p = Client;
+local buttons = {W = false, S = false, A = false, D = false, Moving = false};
+
+local StartFly = function ()
+    if not Client.Character or not Character.Head or flying then return end;
+    c = Character;
+    h = Humanoid;
+    h.PlatformStand = true;
+    cam = workspace:WaitForChild('Camera');
+    bv = Instance.new("BodyVelocity");
+    bav = Instance.new("BodyAngularVelocity");
+    bv.Velocity, bv.MaxForce, bv.P = Vector3.new(0, 0, 0), Vector3.new(10000, 10000, 10000), 1000;
+    bav.AngularVelocity, bav.MaxTorque, bav.P = Vector3.new(0, 0, 0), Vector3.new(10000, 10000, 10000), 1000;
+    bv.Parent = c.Head;
+    bav.Parent = c.Head;
+    flying = true;
+    h.Died:connect(function() flying = false end);
+end;
+
+local EndFly = function ()
+    if not p.Character or not flying then return end
+    h.PlatformStand = false;
+    bv:Destroy();
+    bav:Destroy();
+    flying = false;
+end;
+
+game:GetService("UserInputService").InputBegan:connect(function (input, GPE) 
+    if GPE then return end;
+    for i, e in pairs(buttons) do
+        if i ~= "Moving" and input.KeyCode == Enum.KeyCode[i] then
+            buttons[i] = true;
+            buttons.Moving = true;
+        end;
+    end;
+end);
+
+game:GetService("UserInputService").InputEnded:connect(function (input, GPE) 
+    if GPE then return end;
+    local a = false;
+    for i, e in pairs(buttons) do
+        if i ~= "Moving" then
+            if input.KeyCode == Enum.KeyCode[i] then
+                buttons[i] = false;
+            end;
+            if buttons[i] then a = true end;
+        end;
+    end;
+    buttons.Moving = a;
+end);
+
+local setVec = function (vec)
+    return vec * ((getgenv().FlySpeed or 50) / vec.Magnitude);
+end;
+
+game:GetService("RunService").Heartbeat:connect(function (step) -- The actual fly function, called every frame
+    if flying and c and c.PrimaryPart then
+        local p = c.PrimaryPart.Position;
+        local cf = cam.CFrame;
+        local ax, ay, az = cf:toEulerAnglesXYZ();
+        c:SetPrimaryPartCFrame(CFrame.new(p.x, p.y, p.z) * CFrame.Angles(ax, ay, az));
+        if buttons.Moving then
+            local t = Vector3.new();
+            if buttons.W then t = t + (setVec(cf.lookVector)) end;
+            if buttons.S then t = t - (setVec(cf.lookVector)) end;
+            if buttons.A then t = t - (setVec(cf.rightVector)) end;
+            if buttons.D then t = t + (setVec(cf.rightVector)) end;
+            c:TranslateBy(t * step);
+        end;
+    end;
+end);
+
+ClientSection:CreateToggle({
+	Title = "Fly",
+	Default = false,
+	Callback = function(state)
+        getgenv().Flying = state;
+        if getgenv().Flying then
+            StartFly();
+        else
+            EndFly();
+        end;
+	end
+});
+
+ClientSection:CreateSlider({
+	Title = "Fly speed",
+	Min = 20,
+	Max = 150,
+	Default = 50,
+	Callback = function(val)
+        getgenv().FlySpeed = tonumber(val) or 50;
+    end
+});
+--<>----<>----<>----<>----<>----<>----<>--
+ClientSection:CreateButton({
+    Title = "Btools",
+    Callback = function()
+        if not Client.Backpack:FindFirstChildOfClass("HopperBun") then
+            local tool1 = Instance.new("HopperBin",Client.Backpack);
+            local tool2 = Instance.new("HopperBin",Client.Backpack);
+            local tool3 = Instance.new("HopperBin",Client.Backpack);
+            local tool4 = Instance.new("HopperBin",Client.Backpack);
+            local tool5 = Instance.new("HopperBin",Client.Backpack);
+            tool1.BinType = "Clone";
+            tool2.BinType = "GameTool";
+            tool3.BinType = "Hammer";
+            tool4.BinType = "Script";
+            tool5.BinType = "Grab";
+        end
+    end
+})
+--<>----<>----<>----<>----<>----<>----<>--
+local accessories = {}
+function GodMode()
+    if game.Players.LocalPlayer.Character then
+        if game.Players.LocalPlayer.Character:FindFirstChild("Humanoid") then
+            for _, accessory in pairs(game.Players.LocalPlayer.Character.Humanoid:GetAccessories()) do
+                table.insert(accessories, accessory:Clone())
+            end
+            game.Players.LocalPlayer.Character.Humanoid.Name = "boop"
+        end
+        local v = game.Players.LocalPlayer.Character["boop"]:Clone()
+        v.Parent = game.Players.LocalPlayer.Character
+        v.Name = "Humanoid"
+        wait(0.1)
+        game.Players.LocalPlayer.Character["boop"]:Destroy()
+        workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+        for _, accessory in pairs(accessories) do
+            game.Players.LocalPlayer.Character.Humanoid:AddAccessory(accessory)
+        end
+        game.Players.LocalPlayer.Character.Animate.Disabled = true
+        wait(0.1)
+        game.Players.LocalPlayer.Character.Animate.Disabled = false
+    end
+end
+
+
+ClientSection:CreateButton({
+    Title = "Godmode",
+    Callback = function()
+        GodMode()
+    end
+})
+
+ClientSection:CreateButton({
+	Title = "Force respawn",
+	Callback = function(state)
+		Character.Head:Remove();
+		Humanoid.BreakJointsOnDeath = false;
+		Humanoid.Health = 0;
+	end;
+});
+--<>----<>----<>----<>----<>----<>----<>--
+ClientSection:CreateButton({
+    Title = "Get all emotes",
+    Callback = function()
+		require(EmoteModule).GeneratePage(EmoteList,Emotes,'Free Emotes');
+    end
+})
+--<>----<>----<>----<>----<>----<>----<>--
+--<>----<>----<>----<>----<>----<>----<>--
+--<>----<>----<>----<>----<>----<>----<>--
+
+local folder = Instance.new("Folder",CoreGui);
+folder.Name = "ESP Holder";
+	
+local function AddBillboard(player)
+    local billboard = Instance.new("BillboardGui",folder);
+    billboard.Name = player.Name;
+    billboard.AlwaysOnTop = true;
+    billboard.Size = UDim2.fromOffset(200,50);
+    billboard.ExtentsOffset = Vector3.new(0,3,0);
+    billboard.Enabled = false
+
+    local textLabel = Instance.new("TextLabel",billboard);
+    textLabel.TextSize = 20;
+    textLabel.Text = player.Name;
+    textLabel.Font = Enum.Font.SourceSans;
+    textLabel.BackgroundTransparency = 1;
+    textLabel.Size = UDim2.fromScale(1,1);
+
+    if getgenv().AllEsp then
+        billboard.Enabled = true
+    end
+    repeat
+        wait()
+        pcall(function()
+            billboard.Adornee = player.Character.Head;
+            if player.Character:FindFirstChild("Knife") or player.Backpack:FindFirstChild("Knife") then
+                textLabel.TextColor3 = Color3.new(1,0,0);
+                if not billboard.Enabled and getgenv().MurderEsp then
+                    billboard.Enabled = true
+                end
+            elseif player.Character:FindFirstChild("Gun") or player.Backpack:FindFirstChild("Gun") then
+                textLabel.TextColor3 = Color3.new(0,0,1);
+                if not billboard.Enabled and getgenv().SheriffEsp then
+                    billboard.Enabled = true
+                end
+            else
+                textLabel.TextColor3 = Color3.new(0,1,0);
+            end;
+        end);
+    until not player.Parent;
+end;
+
+for _,player in pairs(Players:GetPlayers()) do
+    if player ~= Client then
+        coroutine.wrap(AddBillboard)(player);
+    end;
+end;
+Players.PlayerAdded:Connect(AddBillboard);
+
+Players.PlayerRemoving:Connect(function(player)
+    folder[player.Name]:Destroy();
+end);
+
+
+WorldSection:CreateToggle({
+	Title = "Player ESP",
+	Default = false,
+	Callback = function(state)
+        getgenv().AllEsp = state;
+        for i, v in pairs(folder:GetChildren()) do
+            if v:IsA("BillboardGui") and Players[tostring(v.Name)] then
+                if getgenv().AllEsp then
+                    v.Enabled = true;
+                else
+                    v.Enabled = false;
+                end;
+            end;
+        end;
+	end
+});
+
+WorldSection:CreateToggle({
+	Title = "Murderer ESP",
+	Default = false,
+	Callback = function(state)
+        getgenv().MurderEsp = state;
+        while getgenv().MurderEsp do
+            wait()
+            pcall(function()
+                for i, v in pairs(folder:GetChildren()) do
+                    if v:IsA("BillboardGui") and Players[tostring(v.Name)] then
+                        if Players[tostring(v.Name)].Character:FindFirstChild("Knife") or Players[tostring(v.Name)].Backpack:FindFirstChild("Knife")  then
+                            if getgenv().MurderEsp then
+                                v.Enabled = true;
+                            else
+                                v.Enabled = false;
+                            end;
+                        end
+                    end;
+                end;
+            end);
+        end;
+	end
+});
+
+WorldSection:CreateToggle({
+	Title = "Sheriff ESP",
+	Default = false,
+	Callback = function(state)
+        getgenv().SheriffEsp = state;
+        while getgenv().SheriffEsp do
+            wait()
+            pcall(function()
+                for i, v in pairs(folder:GetChildren()) do
+                    if v:IsA("BillboardGui") and Players[tostring(v.Name)] then
+                        if Players[tostring(v.Name)].Character:FindFirstChild("Gun") or Players[tostring(v.Name)].Backpack:FindFirstChild("Gun")  then
+                            if getgenv().SheriffEsp then
+                                v.Enabled = true;
+                            else
+                                v.Enabled = false;
+                            end;
+                        end
+                    end;
+                end;
+            end);
+        end;
+	end
+});
+--<>----<>----<>----<>----<>----<>----<>--
+--<>----<>----<>----<>----<>----<>----<>--
+SheriffSection:CreateToggle({
+	Title = "Gun ESP",
+	Default = false,
+    Order = 50,
+	Callback = function(state)
+        getgenv().GunESP = state;
+	end
+});
+
+coroutine.wrap(function()
+    RunService.RenderStepped:Connect(function()
+        pcall(function()
+            if getgenv().GunESP then
+                local gundrop = Workspace:FindFirstChild("GunDrop");
+                GunHighlight.Adornee = gundrop;
+                GunHandleAdornment.Adornee = gundrop;
+                if gundrop then 
+                    GunHandleAdornment.Size = gundrop.Size + Vector3.new(0.05, 0.05, 0.05) ;
+                end;
+        
+                GunHighlight.Enabled = getgenv().GunESP;
+                GunHandleAdornment.Visible = getgenv().GunESP;
+            end;
+        end);
+    end);
+end)();
+--<>----<>----<>----<>----<>----<>----<>--
+--<>----<>----<>----<>----<>----<>----<>--
+
+function XrayOn(obj)
+    for _,v in pairs(obj:GetChildren()) do
+        if (v:IsA("BasePart")) and not v.Parent:FindFirstChild("Humanoid") then
+            v.LocalTransparencyModifier = 0.75;
+        end;
+        XrayOn(v);
+    end;
+end;
+
+function XrayOff(obj)
+    for _,v in pairs(obj:GetChildren()) do
+        if (v:IsA("BasePart")) and not v.Parent:FindFirstChild("Humanoid") then
+            v.LocalTransparencyModifier = 0;
+        end ;
+        XrayOff(v);
+    end;
+end;
+
+WorldSection:CreateToggle({
+	Title = "Xray",
+	Default = false,
+	Callback = function(state)
+        getgenv().Xray = state;
+        if getgenv().Xray then
+            XrayOn(Workspace);
+        else
+            XrayOff(Workspace);
+        end;
+	end
+});
+--<>----<>----<>----<>----<>----<>----<>--
+WorldSection:CreateButton({
+    Title = "Unlock workspace",
+    Callback = function()
+        function unlock(obj)
+			for i,v in pairs(obj:GetChildren()) do
+				if v:IsA("BasePart") then
+					v.Locked = false;
+				end;
+				unlock(v);
+			end;
+		end;
+		unlock(workspace);
+    end
+})
+--<>----<>----<>----<>----<>----<>----<>--
+WorldSection:CreateDropdown({
+	Text = "Teleports",
+	Array = TeleportTable,
+	Callback = function(val)
+        if val == "Map" then
+            for _,child in pairs(Workspace:GetDescendants()) do
+                if child:IsA("BasePart") and child.Name == "Coin_Server" then
+                    RootPart.CFrame = CFrame.new(child.Parent.Parent.Map:FindFirstChild("Part").Position);
+                end;
+            end;
+        else
+            pcall(function()
+                RootPart.CFrame = CFrame.new(TeleportDict[val]);
+            end)
+        end;
+	end
+})
+--<>----<>----<>----<>----<>----<>----<>--
+AutofarmSection:CreateToggle({
+	Title = "Autofarm",
+	Default = false,
+	Callback = function(state)
+        getgenv().Autofarm = state;
+        if not getgenv().AutofarmMethod then return end;
+        if getgenv().AutofarmMethod == "Coins" then
+            while getgenv().Autofarm do
+                task.wait();
+                local CoinContainer = Workspace:FindFirstChild("CoinContainer", true);
+                if CoinContainer and Client.PlayerGui.MainGUI.Game.CashBag.Visible == true then
+                    local coin = CoinContainer:FindFirstChild("Coin_Server");
+                    if coin then
+                        repeat
+                            RootPart.CFrame = CFrame.new(coin.Position - Vector3.new(0, 2.5, 0)) * CFrame.Angles(0, 0, math.rad(180));
+                            RunService.Stepped:Wait();
+                            if not getgenv().Autofarm then break end;
+                        until not coin:IsDescendantOf(Workspace) or coin.Name ~= "Coin_Server";
+                        task.wait(1.8);
+                    end;
+                else
+                    task.wait(1.5);
+                end;
+            end;
+        else
+            while getgenv().Autofarm do
+                wait();
+                if Client.PlayerGui.MainGUI.Game.CashBag.Visible == true then
+                    RootPart.CFrame = CFrame.new(-121.12338256836, 138.27394104004, 38.946128845215);
+                end;
+            end;
+        end;
+	end
+});
+
+AutofarmSection:CreateDropdown({
+	Text = "Autofarm method",
+	Array = {"XP","Coins"},
+	Callback = function(val)
+        getgenv().AutofarmMethod = val;
+	end,
+});
+--<>----<>----<>----<>----<>----<>----<>--
+--<>----<>----<>----<>----<>----<>----<>--
+getgenv().SheriffAim = false;
+SheriffSection:CreateToggle({
+	Title = "Silent aim",
+	Default = false,
+	Callback = function(state)
+        getgenv().SheriffAim = state;
+        print(getgenv().SheriffAim);
+    end
+});
+getgenv().GunAccuracy = 25;
+SheriffSection:CreateSlider({
+	Title = "Accuracy",
+	Min = 0,
+	Max = 100,
+	Default = 25,
+	Callback = function(val)
+        getgenv().GunAccuracy = tonumber(val) or 25;
+    end
+});
+--<>----<>----<>----<>----<>----<>----<>--
+local GunLabel = SheriffSection:CreateLabel({
+    Title = "Gun Not Dropped",
+});
+coroutine.wrap(function()
+    while wait(1) do
+        if Workspace:FindFirstChild("GunDrop") then
+            SheriffSection:updateLabel(GunLabel,"Gun Dropped",Color3.fromRGB(0,170,126));
+        else
+            SheriffSection:updateLabel(GunLabel,"Gun Not Dropped",Color3.fromRGB(254, 86, 86));
+        end;
+    end;
+end)();
+--<>----<>----<>----<>----<>----<>----<>--
+local lastCFrame;
+SheriffSection:CreateKeybind({
+    Title = "Get gun",
+    Default = "Y",
+    Callback = function()
+        if not CanGrab then return end
+        local gundrop = Workspace:FindFirstChild("GunDrop");
+        if gundrop and not lastCFrame then
+            lastCFrame = RootPart.CFrame;
+            pcall(function()
+                repeat
+                    RootPart.CFrame = gundrop.CFrame;
+                    RunService.Stepped:Wait();
+                until not gundrop:IsDescendantOf(Workspace);
+                RootPart.CFrame = lastCFrame;
+                lastCFrame = false;
+            end);
+        end;
+	end
+})
+
+
+--<>----<>----<>----<>----<>----<>----<>--
+--<>----<>----<>----<>----<>----<>----<>--
+getgenv().KnifeRange = 25;
+MurderSection:CreateToggle({
+	Title = "Kill aura",
+	Default = false,
+	Callback = function(state)
+        getgenv().KnifeAura = state;
+    end
+});
+
+MurderSection:CreateSlider({
+	Title = "Knife Range",
+	Min = 5,
+	Max = 250,
+	Default = 25,
+	Callback = function(val)
+        getgenv().KnifeRange = tonumber(val) or 25;
+    end
+});
+
+local lastAttack = tick();
+RunService.Heartbeat:Connect(function()
+   if (tick() - lastAttack) < 0.1 then
+       return;
+   end;
+    pcall(function()
+        local Knife = Client.Backpack:FindFirstChild("Knife") or Client.Character:FindFirstChild("Knife");
+        if Knife and Knife:IsA("Tool") then
+            for i, v in ipairs(Players:GetPlayers()) do
+                if v ~= Client and v.Character ~= nil and not table.find(getgenv().Whitelisted,v.Name) then
+                    local EnemyRoot = v.Character.HumanoidRootPart;
+                    local EnemyPosition = EnemyRoot.Position;
+                    local Distance = (EnemyPosition - RootPart.Position).Magnitude;
+                    if (Distance <= getgenv().KnifeRange) then
+                        VirtualUser:ClickButton1(Vector2.new());
+                        firetouchinterest(EnemyRoot, Knife.Handle, 1);
+                        firetouchinterest(EnemyRoot, Knife.Handle, 0);
+                        lastAttack = tick();
+                    end;
+                end;
+            end;
+        end;
+    end);
+end);
+
+
+local GameOver = nil;
+local Blocked = nil;
+MurderSection:CreateKeybind({
+	Text = "Kill all",
+	Default = "K",
+	Callback = function()
+        pcall(function()
+            local Knife = Client.Backpack:FindFirstChild("Knife") or Client.Character:FindFirstChild("Knife");
+            if Knife.Parent.Name == "Backpack" then
+                Humanoid:EquipTool(Knife);
+            end;
+            if Knife then
+                if Knife:IsA("Tool") then
+                    for i, v in ipairs(Players:GetPlayers()) do
+                        if v ~= Client and v.Character ~= nil and not table.find(getgenv().Whitelisted,v.Name) then
+                            local EnemyRoot = v.Character.HumanoidRootPart;
+                            local EnemyPosition = EnemyRoot.Position;
+                            VirtualUser:ClickButton1(Vector2.new());
+                            firetouchinterest(EnemyRoot, Knife.Handle, 1);
+                            firetouchinterest(EnemyRoot, Knife.Handle, 0);
+                            lastAttack = tick();
+                        end;
+                    end;
+                end;
+            end;
+        end);
+	end
+});
+
+MurderSection:CreateButton({
+    Title = "Print whitelisted",
+    Callback = function()
+        print("----------WHITELISTED----------");
+        for _,v in pairs(getgenv().Whitelisted) do
+            print(v);
+        end;
+        print("-------------------------------");
+    end
+});
+
+coroutine.wrap(function()
+    repeat wait()
+        pcall(function()
+            Murderer = GetMurderer();
+            Sheriff = GetSheriff();
+        end);
+    until Murderer and Sheriff;
+end)();
+--<>----<>----<>----<>----<>----<>----<>--
+--<>----<>----<>----<>----<>----<>----<>--
+ReplicatedStorage.UpdatePlayerData.OnClientEvent:Connect(function()
+    CanGrab = false;
+end);
+
+local GunHook
+GunHook = hookmetamethod(game, "__namecall", function(self, ...)
+	local method = getnamecallmethod()
+	local args = { ... }
+	if not checkcaller() then
+		if typeof(self) == "Instance" then
+			if self.Name == "ShootGun" and method == "InvokeServer" then
+				if getgenv().SheriffAim and getgenv().GunAccuracy then
+					if Murderer then
+						local Root = Players[tostring(Murderer)].Character.PrimaryPart;
+						local Veloc = Root.AssemblyLinearVelocity;
+						local Pos = Root.Position + (Veloc * Vector3.new(getgenv().GunAccuracy / 200, 0, getgenv().GunAccuracy/ 200));
+						args[2] = Pos;
+					end;
+				end;
+			end;
+		end;
+	end;
+	return GunHook(self, unpack(args));
+end);
+
+local __namecall
+__namecall = hookmetamethod(game, "__namecall", function(self, ...)
+	local method = getnamecallmethod();
+	local args = { ... };
+	if not checkcaller() then
+        if tostring(method) == "InvokeServer" and tostring(self) == "GetChance" then
+            wait(13);
+            Murderer = GetMurderer();
+            Sheriff = GetSheriff();
+            CanGrab = true;
+        end;
+	end;
+	return __namecall(self, unpack(args));
+end);
+end
 
 function ad9() 
 -- Creator: illremember#3799
@@ -12606,6 +13711,277 @@ vercels:Button(
 )
 
 vercels:Button(
+    "{•} NameTag",
+    function()
+        smJ() 
+    end
+)
+
+function smJ() 
+_G.FriendColor = Color3.fromRGB(0, 0, 255)
+_G.EnemyColor = Color3.fromRGB(255, 0, 0)
+_G.UseTeamColor = true
+
+--------------------------------------------------------------------
+local Holder = Instance.new("Folder", game.CoreGui)
+Holder.Name = "ESP"
+
+local Box = Instance.new("BoxHandleAdornment")
+Box.Name = "nilBox"
+Box.Size = Vector3.new(1, 2, 1)
+Box.Color3 = Color3.new(100 / 255, 100 / 255, 100 / 255)
+Box.Transparency = 0.7
+Box.ZIndex = 0
+Box.AlwaysOnTop = false
+Box.Visible = false
+
+local NameTag = Instance.new("BillboardGui")
+NameTag.Name = "nilNameTag"
+NameTag.Enabled = false
+NameTag.Size = UDim2.new(0, 200, 0, 50)
+NameTag.AlwaysOnTop = true
+NameTag.StudsOffset = Vector3.new(0, 1.8, 0)
+local Tag = Instance.new("TextLabel", NameTag)
+Tag.Name = "Tag"
+Tag.BackgroundTransparency = 1
+Tag.Position = UDim2.new(0, -50, 0, 0)
+Tag.Size = UDim2.new(0, 300, 0, 20)
+Tag.TextSize = 15
+Tag.TextColor3 = Color3.new(100 / 255, 100 / 255, 100 / 255)
+Tag.TextStrokeColor3 = Color3.new(0 / 255, 0 / 255, 0 / 255)
+Tag.TextStrokeTransparency = 0.4
+Tag.Text = "nil"
+Tag.Font = Enum.Font.SourceSansBold
+Tag.TextScaled = false
+
+local LoadCharacter = function(v)
+	repeat wait() until v.Character ~= nil
+	v.Character:WaitForChild("Humanoid")
+	local vHolder = Holder:FindFirstChild(v.Name)
+	vHolder:ClearAllChildren()
+	local b = Box:Clone()
+	b.Name = v.Name .. "Box"
+	b.Adornee = v.Character
+	b.Parent = vHolder
+	local t = NameTag:Clone()
+	t.Name = v.Name .. "NameTag"
+	t.Enabled = true
+	t.Parent = vHolder
+	t.Adornee = v.Character:WaitForChild("Head", 5)
+	if not t.Adornee then
+		return UnloadCharacter(v)
+	end
+	t.Tag.Text = v.Name
+	b.Color3 = Color3.new(v.TeamColor.r, v.TeamColor.g, v.TeamColor.b)
+	t.Tag.TextColor3 = Color3.new(v.TeamColor.r, v.TeamColor.g, v.TeamColor.b)
+	local Update
+	local UpdateNameTag = function()
+		if not pcall(function()
+			v.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
+			local maxh = math.floor(v.Character.Humanoid.MaxHealth)
+			local h = math.floor(v.Character.Humanoid.Health)
+		end) then
+			Update:Disconnect()
+		end
+	end
+	UpdateNameTag()
+	Update = v.Character.Humanoid.Changed:Connect(UpdateNameTag)
+end
+
+local UnloadCharacter = function(v)
+	local vHolder = Holder:FindFirstChild(v.Name)
+	if vHolder and (vHolder:FindFirstChild(v.Name .. "Box") ~= nil or vHolder:FindFirstChild(v.Name .. "NameTag") ~= nil) then
+		vHolder:ClearAllChildren()
+	end
+end
+
+local LoadPlayer = function(v)
+	local vHolder = Instance.new("Folder", Holder)
+	vHolder.Name = v.Name
+	v.CharacterAdded:Connect(function()
+		pcall(LoadCharacter, v)
+	end)
+	v.CharacterRemoving:Connect(function()
+		pcall(UnloadCharacter, v)
+	end)
+	v.Changed:Connect(function(prop)
+		if prop == "TeamColor" then
+			UnloadCharacter(v)
+			wait()
+			LoadCharacter(v)
+		end
+	end)
+	LoadCharacter(v)
+end
+
+local UnloadPlayer = function(v)
+	UnloadCharacter(v)
+	local vHolder = Holder:FindFirstChild(v.Name)
+	if vHolder then
+		vHolder:Destroy()
+	end
+end
+
+for i,v in pairs(game:GetService("Players"):GetPlayers()) do
+	spawn(function() pcall(LoadPlayer, v) end)
+end
+
+game:GetService("Players").PlayerAdded:Connect(function(v)
+	pcall(LoadPlayer, v)
+end)
+
+game:GetService("Players").PlayerRemoving:Connect(function(v)
+	pcall(UnloadPlayer, v)
+end)
+
+game:GetService("Players").LocalPlayer.NameDisplayDistance = 0
+
+if _G.Reantheajfdfjdgs then
+    return
+end
+
+_G.Reantheajfdfjdgs = ":suifayhgvsdghfsfkajewfrhk321rk213kjrgkhj432rj34f67df"
+
+local players = game:GetService("Players")
+local plr = players.LocalPlayer
+
+function esp(target, color)
+    if target.Character then
+        if not target.Character:FindFirstChild("GetReal") then
+            local highlight = Instance.new("Highlight")
+            highlight.RobloxLocked = true
+            highlight.Name = "GetReal"
+            highlight.Adornee = target.Character
+            highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+            highlight.FillColor = color
+            highlight.Parent = target.Character
+        else
+            target.Character.GetReal.FillColor = color
+        end
+    end
+end
+
+while task.wait() do
+    for i, v in pairs(players:GetPlayers()) do
+        if v ~= plr then
+            esp(v, _G.UseTeamColor and v.TeamColor.Color or ((plr.TeamColor == v.TeamColor) and _G.FriendColor or _G.EnemyColor))
+        end
+    end
+end
+end
+
+vercels:Button(
+    "{•} New Boxes",
+    function()
+        SMJ() 
+    end
+)
+
+function SMJ() 
+local vu = game:GetService("VirtualUser")
+game:GetService("Players").LocalPlayer.Idled:Connect(function()
+    vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+    wait(1)
+    vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+end)
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Be careful and don't get banned";
+})
+
+wait(1)
+
+game.StarterGui:SetCore("SendNotification", {
+    Title = "Universe - X",
+    Text = "Executed.",
+    Duration = 10,
+})
+
+_G.HeadSize = 20
+_G.Disabled = true
+
+game:GetService('RunService').RenderStepped:Connect(function()
+    if _G.Disabled then
+        for i,v in pairs(game:GetService('Players'):GetPlayers()) do
+            if v.Name ~= game:GetService('Players').LocalPlayer.Name then
+                pcall(function()
+                    v.Character.HumanoidRootPart.Size = Vector3.new(_G.HeadSize,_G.HeadSize,_G.HeadSize)
+                    v.Character.HumanoidRootPart.Transparency = 1.1
+                    v.Character.HumanoidRootPart.BrickColor = BrickColor.new("blue")
+                    v.Character.HumanoidRootPart.Material = Enum.Material.Neon
+                    v.Character.HumanoidRootPart.CanCollide = false
+                end)
+            end
+        end
+    end
+end)
+end
+
+vercels:Button(
+    "{•} New Esp",
+    function()
+        iamHERO() 
+    end
+)
+
+function iamHERO() 
+-- RGB ESP Highlight Script for Solara
+
+-- function to create the ESP highlight
+local function createESP(character)
+    if not character then
+        warn("failed!")
+        return
+    end
+
+    -- creates a highlight instance
+    local highlight = Instance.new("Highlight")
+    highlight.Name = "ESP"
+    highlight.Adornee = character
+    highlight.FillTransparency = 0.5
+    highlight.OutlineTransparency = 0.2
+    highlight.Parent = game.CoreGui
+
+    -- function to cycle rgb colors
+    local function rgbCycle()
+        local hue = 0
+        while true do
+            hue = hue + 1
+            if hue > 360 then hue = 0 end
+            local color = Color3.fromHSV(hue / 360, 1, 1)
+            highlight.FillColor = color
+            highlight.OutlineColor = color
+            wait(0.1)
+        end
+    end
+
+    -- spawn rgb cycle
+    spawn(rgbCycle)
+end
+
+-- highlight every player in the game (even you)
+local function highlightPlayers()
+    for _, player in pairs(game.Players:GetPlayers()) do
+        if player.Character then
+            createESP(player.Character)
+        end
+    end
+end
+
+-- highlighting skibidi
+highlightPlayers()
+
+-- waits for new players joining game
+game.Players.PlayerAdded:Connect(function(player)
+    player.CharacterAdded:Connect(function(character)
+        createESP(character)
+    end)
+end)
+
+warn("success!")
+end
+
+vercels:Button(
     "{•} Bluws",
     function() 
         loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%9D%D0%B8%D1%87%D1%82%D0%BE%20%D0%BD%D0%B8%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0%20%D0%BD%D0%B5%20%D0%B4%D0%BB%D0%B8%D1%82%D1%81%D1%8F%20%D0%B2%D0%B5%D1%87%D0%BD%D0%BE"))()
@@ -21623,6 +22999,12 @@ end
 local serf = win:Server("[GAME SCRIPT]", "rbxassetid://17535592377") 
 
 local conXvs = serf:Channel("Murder Mystery 2") 
+conXvs:Button(
+    "{•} New", 
+    function() 
+    XCMMS() 
+    end
+) 
 
 conXvs:Button(
     "{•} Vynixu", 
@@ -22030,7 +23412,7 @@ vixi:Textbox(
     "Type a script..",
     true,
     function(t)
-        DiscordLib:Notification("Notify", "Active this feature in Universe - X Additional Features, or.maybe your executor too low!", "Okay!") 
+        DiscordLib:Notification("Notify", "Active this feature in Universe - X Additional Features, or something maybe your executor too low!", "Okay!") 
         print(t)
     end
 )
@@ -22040,11 +23422,193 @@ vixi:Seperator()
 vixi:Button(
     "Search",
     function()
-        DiscordLib:Notification("Notify", "Cannot completed, Universe - X Search not supported this executor.", "Okay!") 
+        DiscordLib:Notification("Notify", "Cannot completed, Universe - X Search currently down.", "Okay!") 
     end
 ) 
 
 local indo = serp:Channel("Audio | Script") 
+
+indo:Button(
+    "{•} Zombie Uprising Music 1",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://9207225304"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Button(
+    "{•} Zombie Uprising Music 2",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://1839961023"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Button(
+    "{•} Zombie Uprising Music 3",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://7259727493"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Button(
+    "{•} Zombie Uprising Music 4",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://10779235508"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Button(
+    "{•} Zombie Uprising Music 5",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://7094890925"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Button(
+    "{•} Zombie Uprising Music 6",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://7259734730"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Button(
+    "{•} Zombie Uprising Music 7",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://7094892007"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Button(
+    "{•} Zombie Uprising Music 8",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://1836325389"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Button(
+    "{•} Zombie Uprising Music 9",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://9207225304"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Button(
+    "{•} Zombie Uprising Music 10",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://1836634799"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Button(
+    "{•} Zombie Uprising Music 11",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://9147868974"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Button(
+    "{•} Zombie Uprising Music 12",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = " rbxassetid://9253490240"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Button(
+    "{•} Zombie Uprising Music 13",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://1847398919"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Button(
+    "{•} Zombie Uprising Music 14",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://8521919331"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Button(
+    "{•} Zombie Uprising Music 15",
+    function()
+        local music = Instance.new("Sound", game.Workspace)
+music.SoundId = "rbxassetid://10779221709"
+music.Volume = 2
+music.Looped = false
+music.PlayOnRemove = false
+music:Play()
+    end
+) 
+
+indo:Seperator() 
 
 indo:Button(
     "{•} ??",
@@ -24077,7 +25641,6 @@ vibi:Button(
     function()
         DiscordLib:Notification("Notify", "Executed!", "Okay!")
         aaz() 
-        game:Shutdown() 
     end
 ) 
 
