@@ -1,5 +1,10 @@
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
-
+Notification.Notify("Universe X || Check", "Waiting...!", "", {
+    Duration = 14,
+    Main = {
+        Rounding = true,
+    }
+});
 --- TRIGON
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X || Ultra", "Universe - X not really executed..", "rbxassetid://17415983489", {
