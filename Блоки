@@ -1,7 +1,5 @@
-
 --[[
 
---- TRIGON
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X || Ultra", "Universe - X not really executed..", "rbxassetid://17415983489", {
     Duration = 6,
