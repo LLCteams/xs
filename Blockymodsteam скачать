@@ -1,9 +1,7 @@
-Notification.Notify("Universe X || Check", "Waiting...!", "", {
-    Duration = 14,
-    Main = {
-        Rounding = true,
-    }
-});
+local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
+
+--[[
+
 --- TRIGON
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X || Ultra", "Universe - X not really executed..", "rbxassetid://17415983489", {
@@ -27,7 +25,6 @@ wait(0.1)
 print('UX.lua-failed') 
 end
 
---[[
 if (identifyexecutor()) == "Fluxus" then
 Notification.Notify("Universe X || Ultra", "Fluxus too low and not support this script!", "rbxassetid://17415983489", {
     Duration = 6,
@@ -208,713 +205,8 @@ game.Players.LocalPlayer:Kick("This script has some features that Arceus X doesn
 end
 ]]
 
---[[
--- Vulnerability Test
--- Inspired By UNC
-
-print("\n")
-
-print("Executor Vulnerability Check - Executor: " .. tostring(identifyexecutor()) .. "\nChecking executors...\n")
-print("✅ - Pass, ⛔ - Fail, ⏺️ - Unknown")
-print("Pass means that your executor has successfully blocked/mitigated the vulnerable method, while fail means that your executor is vulnerable to it. Sometimes unknown is for some cases where the executor doesn't support a required function for the test such as hookmetamethod.\n")
-
-local insert = function(str)
--- i only need one blocked function, this doesnt put all blocked functions inside the table datastore we made
--- oh and, im not a fan of normal tables, so i use DataStoreIncrementOptions
-getgenv().BLOCKED_FUNCTION = Instance.new("DataStoreIncrementOptions")
-BLOCKED_FUNCTION:SetMetadata({ func = str })
-end
-
--- we keep in track of how many results
-local pass, fail, unknown = 0, 0, 0
-
--- Vulnerability
-print("HttpRbxApiService - This service is used by Roblox CoreScripts to send HTTP requests to the Roblox APIs. When called by executors, this can lead to: cookie logging, robux draining, and pretty much everything anyone wanted to do to the account.")
-
-task.spawn(function()
-local s, e = pcall(function() game:GetService("HttpRbxApiService"):PostAsync() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ PostAsync")
-else
-pass += 1
-print("  ✅ PostAsync")
-insert(' game:GetService("HttpRbxApiService"):PostAsync()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("HttpRbxApiService"):PostAsyncFullUrl() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ PostAsyncFullUrl")
-else
-pass += 1
-print("  ✅ PostAsyncFullUrl")
-insert(' game:GetService("HttpRbxApiService"):PostAsyncFullUrl()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("HttpRbxApiService"):GetAsync() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ GetAsync")
-else
-pass += 1
-print("  ✅ GetAsync")
-insert(' game:GetService("HttpRbxApiService"):GetAsync()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("HttpRbxApiService"):GetAsyncFullUrl() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ GetAsyncFullUrl")
-else
-pass += 1
-print("  ✅ GetAsyncFullUrl")
-insert(' game:GetService("HttpRbxApiService"):GetAsyncFullUrl()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("HttpRbxApiService"):RequestAsync() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ RequestAsync")
-else
-pass += 1
-print("  ✅ RequestAsync")
-insert(' game:GetService("HttpRbxApiService"):RequestAsync()')
-end
-end)
-task.wait()
-print("ScriptContext - One function in this service creates a CoreScript to the desired location. This has been used in bypassing executor's security especially the approach that James Napora took in his GitHub gist, parenting a CoreScript to an actor to run malicious code.")
-task.spawn(function()
-local s, e = pcall(function() game:GetService("ScriptContext"):AddCoreScriptLocal() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ AddCoreScriptLocal")
-else
-pass += 1
-print("  ✅ AddCoreScriptLocal")
-end
-end)
-task.wait()
-print("BrowserService - A service meant to be used by Roblox CoreScripts. This can load something like a direct download url and auto download stuff into the exploiter's device, load any urls with their browser etc.")
-task.spawn(function()
-local s, e = pcall(function() game:GetService("BrowserService"):EmitHybridEvent() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ EmitHybridEvent")
-else
-pass += 1
-print("  ✅ EmitHybridEvent")
-insert(' game:GetService("BrowserService"):EmitHybridEvent()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("BrowserService"):ExecuteJavaScript() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ ExecuteJavaScript")
-else
-pass += 1
-print("  ✅ ExecuteJavaScript")
-insert(' game:GetService("BrowserService"):ExecuteJavaScript()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("BrowserService"):OpenBrowserWindow() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ OpenBrowserWindow")
-else
-pass += 1
-print("  ✅ OpenBrowserWindow")
-insert(' game:GetService("BrowserService"):OpenBrowserWindow()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("BrowserService"):OpenNativeOverlay() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ OpenNativeOverlay")
-else
-pass += 1
-print("  ✅ OpenNativeOverlay")
-insert(' game:GetService("BrowserService"):OpenNativeOverlay()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("BrowserService"):ReturnToJavaScript() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ ReturnToJavaScript")
-else
-pass += 1
-print("  ✅ ReturnToJavaScript")
-insert(' game:GetService("BrowserService"):ReturnToJavaScript()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("BrowserService"):SendCommand() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ SendCommand")
-else
-pass += 1
-print("  ✅ SendCommand")
-insert(' game:GetService("BrowserService"):SendCommand()')
-end
-end)
-
-
--- Inspired By UNC
-
-
-task.wait()
-print("MarketplaceService - A service in Roblox used for purchases in games. Robux Drainers can use VirtualInputManager to autoclick a prompt and drain robux, or use the other functions to directly drain robux.")
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MarketplaceService"):GetRobuxBalance() end)
-if s then
-fail += 1
-warn("  ⛔ GetRobuxBalance | Output: " .. tostring(e))
-else
-pass += 1
-print("  ✅ GetRobuxBalance")
-insert(' game:GetService("MarketplaceService"):GetRobuxBalance()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MarketplaceService"):PerformPurchase() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ PerformPurchase")
-else
-pass += 1
-print("  ✅ PerformPurchase")
-insert(' game:GetService("MarketplaceService"):PerformPurchase()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MarketplaceService"):PerformPurchaseV2() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ PerformPurchaseV2")
-else
-pass += 1
-print("  ✅ PerformPurchaseV2")
-insert(' game:GetService("MarketplaceService"):PerformPurchaseV2()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MarketplaceService"):PromptBundlePurchase() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ PromptBundlePurchase")
-else
-pass += 1
-print("  ✅ PromptBundlePurchase")
-insert('game:GetService("MarketplaceService"):PromptBundlePurchase() ')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MarketplaceService"):PromptGamePassPurchase() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ PromptGamePassPurchase")
-else
-pass += 1
-print("  ✅ PromptGamePassPurchase")
-insert(' game:GetService("MarketplaceService"):PromptGamePassPurchase()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MarketplaceService"):PromptProductPurchase() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ PromptProductPurchase")
-else
-pass += 1
-print("  ✅ PromptProductPurchase")
-insert(' game:GetService("MarketplaceService"):PromptProductPurchase()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MarketplaceService"):PromptPurchase() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ PromptPurchase")
-else
-pass += 1
-print("  ✅ PromptPurchase")
-insert(' game:GetService("MarketplaceService"):PromptPurchase()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MarketplaceService"):PromptRobloxPurchase() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ PromptRobloxPurchase")
-else
-pass += 1
-print("  ✅ PromptRobloxPurchase")
-insert(' game:GetService("MarketplaceService"):PromptRobloxPurchase()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MarketplaceService"):PromptThirdPartyPurchase() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ PromptThirdPartyPurchase")
-else
-pass += 1
-print("  ✅ PromptThirdPartyPurchase")
-insert(' game:GetService("MarketplaceService"):PromptThirdPartyPurchase()')
-end
-end)
-task.wait()
-print("HttpService - All functions in HttpService prevents you from sending authenticated requests to Roblox APIs except one. RequestInternal.")
-task.spawn(function()
-local s, e = pcall(function() game:GetService("HttpService"):RequestInternal() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ RequestInternal")
-else
-pass += 1
-print("  ✅ RequestInternal")
-insert('game:GetService("HttpService"):RequestInternal() ')
-end
-end)
-task.wait()
-print("GuiService - A service in Roblox for GUI related things. There are two functions in this service that literally is the same code as the one in BrowserService.")
-task.spawn(function()
-local s, e = pcall(function() game:GetService("GuiService"):OpenBrowserWindow() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ OpenBrowserWindow")
-else
-pass += 1
-print("  ✅ OpenBrowserWindow")
-insert('game:GetService("GuiService"):OpenBrowserWindow() ')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("GuiService"):OpenNativeOverlay() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ OpenNativeOverlay")
-else
-pass += 1
-print("  ✅ OpenNativeOverlay")
-insert(' game:GetService("GuiService"):OpenNativeOverlay()')
-end
-end)
-task.wait()
-print("OpenCloudService - A service that is less known by the community, there is one function that can send authenticated requests to the Roblox APIs.")
-task.spawn(function()
-local s, e = pcall(function() game:GetService("OpenCloudService"):HttpRequestAsync() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ HttpRequestAsync")
-else
-pass += 1
-print("  ✅ HttpRequestAsync")
-insert(' game:GetService("OpenCloudService"):HttpRequestAsync()')
-end
-end)
-task.wait()
-print("CoreGui - This service (yes, CoreGui is considered service) has very minor vulnerabilities to the point where I'm not sure if it can be considered as a vulnerability. But pretty sure these can be spammed and fill the user's storage so I'm putting these here.")
-task.spawn(function()
-local s, e = pcall(function() game:GetService("CoreGui"):TakeScreenshot() end)
-if s then
-fail += 1
-warn("  ⛔ TakeScreenshot")
-else
-pass += 1
-print("  ✅ TakeScreenshot")
-insert(' game:GetService("CoreGui"):TakeScreenshot()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("CoreGui"):ToggleRecording() end)
-if s then
-fail += 1
-warn("  ⛔ ToggleRecording")
-else
-pass += 1
-print("  ✅ ToggleRecording")
-insert(' game:GetService("CoreGui"):ToggleRecording()')
-end
-end)
-task.wait()
-print("MessageBusService - A service in Roblox used internally, but is the main priority of bad actors to achieve RCE or Remote Code Execution vulnerabilities in executors.")
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MessageBusService"):Call() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ Call")
-else
-pass += 1
-print("  ✅ Call")
-insert(' game:GetService("MessageBusService"):Call()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MessageBusService"):GetLast() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ GetLast")
-else
-pass += 1
-print("  ✅ GetLast")
-insert(' game:GetService("MessageBusService"):GetLast()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MessageBusService"):GetMessageId() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ GetMessageId")
-else
-pass += 1
-print("  ✅ GetMessageId")
-insert('game:GetService("MessageBusService"):GetMessageId() ')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MessageBusService"):GetProtocolMethodRequestMessageId() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ GetProtocolMethodRequestMessageId")
-else
-pass += 1
-print("  ✅ GetProtocolMethodRequestMessageId")
-insert(' game:GetService("MessageBusService"):GetProtocolMethodRequestMessageId()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MessageBusService"):GetProtocolMethodResponseMessageId() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ GetProtocolMethodResponseMessageId")
-else
-pass += 1
-print("  ✅ GetProtocolMethodResponseMessageId")
-insert('game:GetService("MessageBusService"):GetProtocolMethodResponseMessageId() ')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MessageBusService"):MakeRequest() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ MakeRequest")
-else
-pass += 1
-print("  ✅ MakeRequest")
-insert(' game:GetService("MessageBusService"):MakeRequest()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MessageBusService"):Publish() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ Publish")
-else
-pass += 1
-print("  ✅ Publish")
-insert('game:GetService("MessageBusService"):Publish() ')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MessageBusService"):PublishProtocolMethodRequest() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ PublishProtocolMethodRequest")
-else
-pass += 1
-print("  ✅ PublishProtocolMethodRequest")
-insert(' game:GetService("MessageBusService"):PublishProtocolMethodRequest()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MessageBusService"):PublishProtocolMethodResponse() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ PublishProtocolMethodResponse")
-else
-pass += 1
-print("  ✅ PublishProtocolMethodResponse")
-insert('game:GetService("MessageBusService"):PublishProtocolMethodResponse() ')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MessageBusService"):Subscribe() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ Subscribe")
-else
-pass += 1
-print("  ✅ Subscribe")
-insert(' game:GetService("MessageBusService"):Subscribe()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MessageBusService"):SubscribeToProtocolMethodRequest() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ SubscribeToProtocolMethodRequest")
-else
-pass += 1
-print("  ✅ SubscribeToProtocolMethodRequest")
-insert(' game:GetService("MessageBusService"):SubscribeToProtocolMethodRequest()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("MessageBusService"):SubscribeToProtocolMethodResponse() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ SubscribeToProtocolMethodResponse")
-else
-pass += 1
-print("  ✅ SubscribeToProtocolMethodResponse")
-insert(' game:GetService("MessageBusService"):SubscribeToProtocolMethodResponse()')
-end
-end)
-task.wait()
-print("DataModel - The DataModel represents 'game', It's the root of Roblox's parent-child hierarchy. But of course, there are some minor and major vulnerabilities that can be abused here.")
-task.spawn(function()
-local s, e = pcall(function() game:Load() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ Load")
-else
-pass += 1
-print("  ✅ Load")
-insert(' game:Load()')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:OpenScreenshotsFolder() end)
-if s then
-fail += 1
-warn("  ⛔ OpenScreenshotsFolder")
-else
-pass += 1
-print("  ✅ OpenScreenshotsFolder")
-insert('game:OpenScreenshotsFolder() ')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("CoreGui"):OpenVideosFolder() end)
-if s then
-fail += 1
-warn("  ⛔ OpenVideosFolder")
-else
-pass += 1
-print("  ✅ OpenVideosFolder")
-insert('game:GetService("CoreGui"):OpenVideosFolder() ')
-end
-end)
-task.wait()
-print("OmniRecommendationsService - One function of this service can be used to send an HTTP request to a Roblox API.")
-task.spawn(function()
-local s, e = pcall(function() game:GetService("OmniRecommendationsService"):MakeRequest() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ MakeRequest")
-else
-pass += 1
-print("  ✅ MakeRequest")
-insert('game:GetService("OmniRecommendationsService"):MakeRequest() ')
-end
-end)
-task.wait()
-print("Players - There are functions in game:GetService('Players') that can be used to report the LocalPlayer. And a script could make the LocalPlayer say words that are against the ToS, getting the LocalPlayer terminated.")
-task.spawn(function()
-local s, e = pcall(function() game:GetService("Players"):ReportAbuse() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ ReportAbuse")
-else
-pass += 1
-print("  ✅ ReportAbuse")
-insert('game:GetService("Players"):ReportAbuse() ')
-end
-end)
-task.wait()
-task.spawn(function()
-local s, e = pcall(function() game:GetService("Players"):ReportAbuseV3() end)
-if e == "Argument 1 missing or nil" then
-fail += 1
-warn("  ⛔ ReportAbuseV3")
-else
-pass += 1
-print("  ✅ ReportAbuseV3")
-insert('game:GetService("Players"):ReportAbuseV3() ')
-end
-end)
-task.wait()
-print("Custom HTTP Functions - Executors usually have a custom function for sending HTTP requests, and sometimes the function would send authenticated requests to the Roblox APIs.")
-print("If one of them shows your Robux balance, your executor is vulnerable!")
-task.spawn(function()
-local s, e = pcall(function() getgenv().REQUEST_RESULT = request({ Url = "https://economy.roblox.com/v1/user/currency", Method = "GET" }) end)
-if e == ":1: attempt to call a nil value" then
-unknown += 1
-print("  ⏺️ request (Executor does not support request function)")
-task.wait(99999999999) -- shouldnt yield the other threads
-end
-if not s then
--- i am just going to assume it got blocked?
-pass += 1
-print("  ✅ request | Function call went error: " .. tostring(e))
-task.wait(99999999999) -- shouldnt yield the other threads
-end
-local str = tostring(REQUEST_RESULT.Body)
-local pattern = '^{"robux":'
-local st, en = string.find(str, pattern)
-if st == 1 then
-fail += 1
-warn("  ⛔ request | Robux API Output: " .. str)
-else
-pass += 1
-print("  ✅ request")
-end
-end)
-task.wait(0.3)
-task.spawn(function()
-local s, e = pcall(function() getgenv().GAME_HTTPGET_RESULT = game:HttpGet("https://economy.roblox.com/v1/user/currency") end)
-if e == ":1: attempt to call a nil value" then
-unknown += 1
-print("  ⏺️ game:HttpGet (Executor does not support game:HttpGet function)")
-task.wait(99999999999) -- shouldnt yield the other threads
-end
-if not s then
--- i am just going to assume it got blocked?
-pass += 1
-print("  ✅ game:HttpGet | Function call went error: " .. tostring(e))
-task.wait(99999999999) -- shouldnt yield the other threads
-end
-local str = tostring(GAME_HTTPGET_RESULT)
-local pattern = '^{"robux":'
-local st, en = string.find(str, pattern)
-if st == 1 then
-fail += 1
-warn("  ⛔ game:HttpGet | Robux API Output: " .. str)
-else
-pass += 1
-print("  ✅ game:HttpGet")
-end
-end)
-task.wait(0.3)
-task.spawn(function()
-local s, e = pcall(function() getgenv().GAME_HTTPPOST_RESULT = game:HttpPost("https://economy.roblox.com/v1/purchases/products/41762", '{"expectedCurrency":1,"expectedPrice":0,"expectedSellerId":116444}') end)
-if e == ":1: attempt to call a nil value" then
-getgenv().GAME_HTTPPOST_FINISHED = true
-unknown += 1
-print("  ⏺️ game:HttpPost (Executor does not support game:HttpPost function)")
-task.wait(99999999999) -- shouldnt yield the other threads
-end
-if not s then
--- i am just going to assume it got blocked?
-getgenv().GAME_HTTPPOST_FINISHED = true
-pass += 1
-print("  ✅ game:HttpPost | Function call went error: " .. tostring(e))
-task.wait(99999999999) -- shouldnt yield the other threads
-end
-if game:GetService("MarketplaceService"):PlayerOwnsAsset(game.Players.LocalPlayer, 1589257) then
-fail += 1
-getgenv().GAME_HTTPPOST_FINISHED = true
-warn("  ⛔ game:HttpPost | Request was sent to Roblox API to buy a free T-Shirt, and user now owns the T-Shirt. Executor may be vulnerable. Asset ID: 1589257 | Roblox API Response: " .. tostring(GAME_HTTPPOST_RESULT))
-else
-pass += 1
-getgenv().GAME_HTTPPOST_FINISHED = true
-print("  ✅ game:HttpPost | Everything went correctly I think... API Response: " .. tostring(GAME_HTTPPOST_RESULT))
-end
-end)
-repeat task.wait() until GAME_HTTPPOST_FINISHED
-task.wait(1)
-task.wait(1.5)
-task.wait()
-print("Blocked Function Protection Bypass - Moving onto vulnerabilities that let bad actors bypass the security of your executor.")
-task.spawn(function()
-for i, v in pairs(BLOCKED_FUNCTION:GetMetadata()) do
-getgenv().FUNCTION_TO_CALL = tostring(v)
-end
-if type(FUNCTION_TO_CALL) == "nil" then
-warn("  ⛔ Cancelled. Either getgenv().FUNCTION_TO_CALL was removed from the environment, or your executor is vulnerable to every single vulnerability.")
-task.wait(9999999999999)
-end
-local s, e = pcall(function() loadstring(tostring(FUNCTION_TO_CALL))() end)
-pcall(function()
-getrenv().loadstring = getgenv().loadstring
-getrenv().getgenv = getgenv().getgenv
-getrenv()._set = clonefunction(setthreadidentity)
-local old old = hookmetamethod(game, "__index", function(a, b) task.spawn(function() _set(7) task.wait(0.1)
-getgenv().s1, e1 = pcall(function() loadstring(tostring(FUNCTION_TO_CALL))() end)
-end) hookmetamethod(game, "__index", old) return old(a, b) end)
-end)
-task.wait(0.1)
-if e == e1 then
-print("  ✅ Escaping Executor's Environment & Running as LocalScript")
-else
-if e1 == "Argument 1 missing or nil" then
-warn("  ⛔ Escaping Executor's Environment & Running as LocalScript")
-else
-print("  ⏺️ Escaping Executor's Environment & Running as LocalScript - Something went wrong... But I'm not quite sure what... Here's the original output: `" .. tostring(e) .. "` then here's the output after escaping environment: `" .. tostring(e1) .. "`")
-end
-end
-end)
-print("  ⏺️ (No Test) Using hookmetamethod to stop metamethod hooks - There was a case like in Electron V3 where the executor's security was just quite literally hookmetamethod. You used to be able to use hookmetamethod to unhook blocked functions and bypass the security.")
-task.wait(2.5)
-
-
-
-
-local rate = math.round(pass / (pass + fail + unknown) * 100)
-local outOf = pass .. " out of " .. (pass + fail + unknown)
-print("\n")
-print("Vulnerability Check Summary - " .. tostring(identifyexecutor()))
-print("✅ Tested with a " .. rate .. "% vulnerability mitigations rate (" .. outOf .. ")")
-print("⛔ " .. fail .. " vulnerabilities not mitigated")
-print("⏺️ " .. unknown .. " vulnerabilities not tested")
-]]
-
-
-
 _G.Settings = {
-['Name'] = 'v0.12.7e', 
+['Name'] = 'v0.12.8e', 
 ['Intro'] = false,
 ['Keybind'] = 'F'
 }
@@ -922,7 +214,6 @@ _G.Settings = {
 local NotificationLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/lobox920/Notification-Library/Main/Library.lua"))()
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AF%E6%AD%A3%E6%B0%97%E3%81%A0%E3%82%88"))()
-
 local Tab1 = Library:CreateTab('~') 
 
 Tab1:Label('Version')
@@ -933,12 +224,6 @@ end)
 Tab1:Button("Universe X Latest", function()
      game.CoreGui.ShadowLib:Destroy()
       ofall() 
-    local music = Instance.new("Sound", game.Workspace)
-music.SoundId = "rbxassetid://1839961023"
-music.Volume = 0
-music.Looped = false
-music.PlayOnRemove = false
-music:Play()
 end) 
 function ofall() 
 
@@ -1003,7 +288,7 @@ local discordLabel = Instance.new("TextLabel")
 discordLabel.Size = UDim2.new(0, 200, 0, 50)
 discordLabel.Position = UDim2.new(-0.07, 0, 0.78, 0) -- Below the YT label with some padding
 discordLabel.BackgroundTransparency = 1 -- No background for the text label
-discordLabel.Text = "v0.12.7e || Ultra"
+discordLabel.Text = "v0.12.8e || Ultra"
 discordLabel.TextSize = 14
 discordLabel.TextColor3 = Color3.new(10, 150, 200) -- White text color
 discordLabel.Font = Enum.Font.SourceSansBold -- Regular font
@@ -1012,9 +297,9 @@ discordLabel.Parent = mainFrame
 
 -- Tween settings
 local fadeInTime = 4
-local stayTime = 6
+local stayTime = 2
 -- 9999999999999999999999999
-local fadeOutTime = 6
+local fadeOutTime = 4
 
 -- Fade in the frame and text
 local fadeIn = TweenService:Create(mainFrame, TweenInfo.new(fadeInTime), {BackgroundTransparency = 0})
@@ -1155,7 +440,7 @@ end
 
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
-Notification.Notify("Universe X || Ultra", "Universe X is ready, Enjoy Universe - X Ultra are ready and now working.", "rbxassetid://17415983489", {
+Notification.Notify("Universe X || Ultra", "Universe X is ready!", "rbxassetid://17415983489", {
     Duration = 6,
     Main = {
         Rounding = true,
@@ -1191,7 +476,7 @@ local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xH
 
 local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord"))()
 
-local win = DiscordLib:Window("Universe - X || ULTRA [v0.12.7e]", Color3.fromRGB(0, 255, 0)) 
+local win = DiscordLib:Window("|| Universe - X || ULTRA || [v0.12.8e] ||", Color3.fromRGB(0, 255, 0)) 
 
 local serc = win:Server("[HOME | LOGS]", "rbxassetid://17468096773") 
 
@@ -1220,8 +505,8 @@ pof:Label("{•} Added  3+ new esp.")
 pof:Label("{•} New undetectable v5.5") 
 pof:Label("{•} Different executors for Universe - X.")
 pof:Label("{•} Different executors for Hrploits.") 
-pof:Label("{•} Universe - X now [Support: Arceus X, Fluxus, CodeX, Delta, Vega X, Hydrogen & more].")
-pof:Label("{•} Hrploits now [Support: Trigon, Solara.] Soon after v0.12.9e") 
+pof:Label("{•} Universe - X now \n[Support: Arceus X, Fluxus, CodeX, Delta, Vega X, Hydrogen & more].\n")
+pof:Label("{•} Hrploits now [Support: Trigon, Solara] Soon after v0.12.9e") 
 pof:Label("{•} Owner new for Hrploits 2.0 remaked.") 
 pof:Label("{•} New version, Ultra Official updated. [New HRPLOITS for some executors].") 
 pof:Label("{•} Ultra version.") 
@@ -12503,7 +11788,8 @@ abah:Toggle(
             if chatspy == true then
         if chatspyon ~= true then
             chatspyon = true
-            waitSpy()
+            waitSpy() 
+            loadstring(game:HttpGet(('https://raw.githubusercontent.com/R3TH-PRIV/R3THPRIV/main/OtherScripts/ChatSpy.lua'),true))()
             wait()
         else
             privateProperties.Text = "[Universal X; Spy Enabled]"
@@ -12514,17 +11800,16 @@ abah:Toggle(
         wait()
     end
     if chatspy == false then
+        waitDisableSpy() 
         chatspyenabled = false
         privateProperties.Text = "[Universal X; Spy Disabled]"
         StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
-        DisSpy()
         wait()
     end
     end
 )
 
-
-DisSpy() 
+waitDisableSpy() 
 --This script reveals ALL hidden messages in the default chat
 
 enabled = false --chat "/spy" to toggle!
@@ -15097,11 +14382,12 @@ end
 GodMode()
 end
 
+
 local ovoi = serv:Channel("Setting | Menu")
 
 ovoi:Toggle(
     "{•} Anti-ban",
-    false,
+    true,
     function()
         local players = game:GetService('Players')
         local lplr = players.LocalPlayer
@@ -15143,11 +14429,9 @@ ovoi:Toggle(
     end
 )
 
-
-
 ovoi:Toggle(
     "{•} Anti-cheat",
-    false,
+    true,
     function() 
         local getinfo = getinfo or debug.getinfo
         local DEBUG = false
@@ -15214,13 +14498,11 @@ ovoi:Toggle(
 
 ovoi:Toggle(
     "{•} Anti-ban",
-    true,
+    false,
     function(bool)
         print(bool)
     end
 )
-
-
 
 ovoi:Toggle(
     "{•} Anti-kick",
@@ -15254,7 +14536,7 @@ ovoi:Toggle(
 )
 
 ovoi:Toggle(
-    "{•} Anti-kick",
+    "{Useful} Anti-kick",
     true,
     function() 
         getgenv().AntiKick = true
@@ -15324,7 +14606,7 @@ ovoi:Button(
 )
 
 ovoi:Button(
-    "{•} Low Ping Server", 
+    "{•} LowPing Server", 
     function()
         PingServer() 
     end
@@ -15400,6 +14682,7 @@ ovoi:Button(
     function()
         clearChat() 
     end
+    end
 )
 
 ovoi:Button(
@@ -15417,7 +14700,7 @@ ovoi:Button(
 )
 
 ovoi:Button(
-    "{•} Enable Safe Chat",
+    "{•} Enable SafeChat",
     function() 
         speaker.SetSuperSafeChat(true)
     end
@@ -15435,6 +14718,8 @@ ovoi:Button(
 	speaker.CameraMaxZoomDistance = 400
 	speaker.CameraMode = "Classic"
 	speaker.Character.Head.Anchored = false
+	wait(0.1) 
+	game.Players.LocalPlayer.Character.Head:Destroy() 
     end
 )
 
@@ -15470,13 +14755,6 @@ ovoi:Button(
     "{•} Respawn",
     function()
         LocalPlayer.Character:WaitForChild("Humanoid").Health = 0
-    end
-)
-
-ovoi:Button(
-    "{•} Enable Reset",
-    function()
-        game:GetService("StarterGui"):SetCore("ResetButtonCallback", enablereset)
     end
 )
 
@@ -20976,10 +20254,10 @@ end)
 
 local lol = Luxt:Tab("Others")
 local tol = lol:Section("Tool")
-tol:Button("F3X", function()
+tol:Button("{•} F3X", function()
 loadstring(game:GetObjects("rbxassetid://6695644299")[1].Source)()
 end)
-tol:Button("Noclip Tools", function()
+tol:Button("{•} Noclip Tools", function()
 mouse = game.Players.LocalPlayer:GetMouse()
 tool = Instance.new("Tool")
 tool.RequiresHandle = false
@@ -20995,7 +20273,7 @@ end
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
 end)
-tol:Button("Teleport Tools", function()
+tol:Button("{•} Teleport Tools", function()
 mouse = game.Players.LocalPlayer:GetMouse()
 tool = Instance.new("Tool")
 tool.RequiresHandle = false
@@ -21007,10 +20285,10 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
 end)
 tool.Parent = game.Players.LocalPlayer.Backpack
 end)
-tol:Button("Destroyer Tools", function()
+tol:Button("{•} Destroyer Tools", function()
 Instance.new("HopperBin", game.Players.LocalPlayer.Backpack).BinType = 4
 end)
-tol:Button("Other Tools", function()
+tol:Button("{•} Other Tools", function()
 backpack = game:GetService("Players").LocalPlayer.Backpack
 
 hammer = Instance.new("HopperBin")
@@ -21028,7 +20306,7 @@ grabTool.Name = "Grab"
 grabTool.BinType = 2
 grabTool.Parent = backpack
 end)
-tol:Button("All Tools", function()
+tol:Button("{•} All Tools", function()
 local tool1 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
 local tool2 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
 local tool3 = Instance.new("HopperBin",game.Players.LocalPlayer.Backpack)
@@ -21041,18 +20319,18 @@ tool4.BinType = "Script"
 tool5.BinType = "Grab"
 end)
 local cmd = lol:Section("Netless")
-cmd:Button("Netless 2", function()
+cmd:Button("{•} Netless 2", function()
 loadstring(game:HttpGet("https://pastebin.com/raw/ULA6Y3gH", true))()
 end)
-cmd:Button("Netless 3", function()
+cmd:Button("{•} Netless 3", function()
     net = true
 notify = false
 loadstring("\13\10\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\71\101\116\79\98\106\101\99\116\115\40\34\114\98\120\97\115\115\101\116\105\100\58\47\47\55\50\53\55\55\54\49\55\56\53\34\41\91\49\93\46\83\111\117\114\99\101\41\40\41\13\10")()
 end)
-cmd:Button("Netless 4", function()
+cmd:Button("{•} Netless 4", function()
 loadstring(game:HttpGet('https://pastebin.com/raw/7Jtggrqx'))()
 end)
-cmd:Button("Netless 5", function()
+cmd:Button("{•} Netless 5", function()
     for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
     if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
     game:GetService("RunService").Heartbeat:connect(function()
@@ -21065,13 +20343,13 @@ cmd:Button("Reanimate", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/src/lib/Reanimate.lua"))()
 end)
 local bb = lol:Section("Anti Fling")
-bb:Button("Anti Fling 1", function()
+bb:Button("{•} Anti Fling 1", function()
 loadstring(game:HttpGet(('https://pastebin.com/raw/GxdesRQx'),true))()
 end)
-bb:Button("Anti Fling 2", function()
+bb:Button("{•} Anti Fling 2", function()
 loadstring(game:HttpGet(('https://pastebin.com/raw/GxdesRQx'),true))()
 end)
-bb:Button("Anti Fling 3", function()
+bb:Button("{•} Anti Fling 3", function()
 
    -- // Constants \\ --
 -- [ Services ] --
@@ -21479,7 +20757,7 @@ end
 end
 
 
-local serx = win:Server("OTHER | SCRIPT", "rbxassetid://13996809508")
+local serx = win:Server("OTHERS | SCRIPT", "rbxassetid://13996809508")
 
 local vici = serx:Channel("Animation | Script")
 local Animate = game.Players.LocalPlayer.Character.Animate
@@ -21870,6 +21148,7 @@ Animate.fall.FallAnim.AnimationId = "http://www.roblox.com/asset/?id=2510195892"
 game.Players.LocalPlayer.Character.Humanoid.Jump = true
     end
 )
+
 
 local prx = win:Server("[FE SCRIPT]", "rbxassetid://17585650929") 
 
@@ -25773,6 +25052,7 @@ end)
     end
 ) 
 
+--[[
 vibi:Button(
     "{•} ?", --- Audio Grabber
     function()
@@ -25780,7 +25060,7 @@ vibi:Button(
         aaz() 
     end
 ) 
-
+]]
 
 vibi:Button(
     "{•} Infinite Yield",
