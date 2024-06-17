@@ -1,11 +1,6 @@
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
-Notification.Notify("Universe X || Check", "Waiting...!", "", {
-    Duration = 14,
-    Main = {
-        Rounding = true,
-    }
-});
---- TRIGON
+
+--[[
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X || Ultra", "Universe - X not really executed..", "rbxassetid://17415983489", {
     Duration = 6,
@@ -28,7 +23,6 @@ wait(0.1)
 print('UX.lua-failed') 
 end
 
---[[
 if (identifyexecutor()) == "Fluxus" then
 Notification.Notify("Universe X || Ultra", "Fluxus too low and not support this script!", "rbxassetid://17415983489", {
     Duration = 6,
@@ -915,11 +909,11 @@ print("⏺️ " .. unknown .. " vulnerabilities not tested")
 
 
 _G.Settings = {
-['Name'] = 'v0.12.7e', 
+['Name'] = 'v0.12.9e', 
 ['Intro'] = false,
 ['Keybind'] = 'F'
 }
-
+local Asset = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
 local NotificationLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/lobox920/Notification-Library/Main/Library.lua"))()
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%E3%81%82%E3%81%AA%E3%81%9F%E3%81%AF%E6%AD%A3%E6%B0%97%E3%81%A0%E3%82%88"))()
@@ -927,6 +921,10 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCte
 local Tab1 = Library:CreateTab('~') 
 
 Tab1:Label('Version')
+Tab1:Button("Universe - X | 2.0", function() 
+game.CoreGui.ShadowLib:Destroy()
+m999c()
+end) 
 Tab1:Button("Universe X Premium", function()
       game.CoreGui.ShadowLib:Destroy()
       loadstring(game:HttpGet("https://pastebin.com/raw/4bn47Jb0"))()
@@ -992,7 +990,7 @@ local ytLabel = Instance.new("TextLabel")
 ytLabel.Size = UDim2.new(0, 200, 0, 50)
 ytLabel.Position = UDim2.new(-0.1, 0, 0.70, 0) -- Bottom left corner with some padding
 ytLabel.BackgroundTransparency = 1 -- No background for the text label
-ytLabel.Text = "["..game.Players.LocalPlayer.Name.."]"
+ytLabel.Text = "[".. Asset.Name.."]"
 ytLabel.TextSize = 14
 ytLabel.TextColor3 = Color3.new(1, 1, 1) -- White text color
 ytLabel.Font = Enum.Font.SourceSansBold -- Regular font
@@ -1004,7 +1002,7 @@ local discordLabel = Instance.new("TextLabel")
 discordLabel.Size = UDim2.new(0, 200, 0, 50)
 discordLabel.Position = UDim2.new(-0.07, 0, 0.78, 0) -- Below the YT label with some padding
 discordLabel.BackgroundTransparency = 1 -- No background for the text label
-discordLabel.Text = "v0.12.7e || Ultra"
+discordLabel.Text = "v0.12.9e || Ultra"
 discordLabel.TextSize = 14
 discordLabel.TextColor3 = Color3.new(10, 150, 200) -- White text color
 discordLabel.Font = Enum.Font.SourceSansBold -- Regular font
@@ -1064,7 +1062,7 @@ local index = 1
 
 spawn(function()
     while true do
-        loadingSubLabel.Text = "[[ Updating ]]" .. dots[index]
+        loadingSubLabel.Text = "Bypassing" .. dots[index]
         index = index % #dots + 1
         wait(0.2) 
     end
@@ -1162,8 +1160,6 @@ Notification.Notify("Universe X || Ultra", "Universe X is ready, Enjoy Universe 
         Rounding = true,
     }
 });
-
-local Asset = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
 --- game:GetService("StarterGui"):SetCore("DevConsoleVisible",true)
 --- game.Players.LocalPlayer:Kick("Universe X; in-Upgraded, Use Volt to changeside of Universe X.") 
 
@@ -1198,6 +1194,17 @@ local serc = win:Server("[HOME | LOGS]", "rbxassetid://17468096773")
 
 local pof = serc:Channel("Update | Logs") 
 
+pof:Label("{•} Removed script name [ ? ] for safety.") 
+pof:Label("{•} Fixed an script [Spy Chat] bypassed to working.") 
+pof:Label("{•} Fixed an script [Esp] bypassed to working.") 
+pof:Label("{•} Fixed an issues Crashed.") 
+pof:Label("{•} Fixed an Animation moved to new menu. [Others Menu].") 
+pof:Label("{•} Fixed an issues patched by Survive the killer in area 51.") 
+pof:Label("{•} Fixed an issues patched by Eclipse Hub.") 
+pof:Label("{•} Improved Universe - X Settings.") 
+pof:Label("{•} Added support executor. [Support: Solara, Trigon].") 
+pof:Seperator() 
+pof:Label(" -- -- -- -- ") 
 pof:Label("{•} Fixed an issues while executing Universe - X.") 
 pof:Label("{•} Fixed an issues, error after execute.") 
 pof:Label("{•} AntiCheat Bypass improved.") 
@@ -11960,7 +11967,7 @@ abah:Toggle(
     end
 )
 
-abah:Seperator() 
+
 
 abah:Button(
     "{•} Shaders 2.0", 
@@ -12013,7 +12020,7 @@ abah:Button(
     end
 )
 
-abah:Seperator() 
+
 
 abah:Button(
     "{•} Shaders 2.1", 
@@ -12037,7 +12044,7 @@ local find5 = game.Lighting:FindFirstChildWhichIsA("Sky") if find5 then
     end
 )
 
-abah:Seperator() 
+
 
 
 function LowZ()
@@ -12075,7 +12082,7 @@ abah:Button(
     end
 )
 
-abah:Seperator() 
+
 
 abah:Button(
     "{•} Remove Fog", 
@@ -12089,7 +12096,7 @@ abah:Button(
     end
 )
 
-abah:Seperator() 
+
 
 abah:Button(
     "{•} Fullbright", 
@@ -12108,7 +12115,7 @@ abah:Button(
     end
 )
 
-abah:Seperator() 
+
 
 abah:Button(
     "{•} Global Shadows", 
@@ -12117,7 +12124,7 @@ abah:Button(
     end
 )
 
-abah:Seperator() 
+
 
 abah:Button(
     "{•} Free Cam", 
@@ -12243,7 +12250,7 @@ UIS.TouchMoved:Connect(function(input)
 end)
 end
 
-abah:Seperator() 
+
 
 
 
@@ -12319,7 +12326,7 @@ local args = {
 game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
 end
 
-abah:Seperator() 
+
 
 abah:Button(
     "{•} Naked", 
@@ -12329,7 +12336,7 @@ abah:Button(
     end
 )
 
-abah:Seperator() 
+
 
 abah:Button(
     "{•} Aimlock", 
@@ -12436,7 +12443,7 @@ RunService.RenderStepped:Connect(function()
 end)
 end
 
-abah:Seperator() 
+
 
 abah:Button(
     "{•} Flashlight", 
@@ -12451,7 +12458,7 @@ pointLight = Instance.new("PointLight")
 pointLight.Parent = character.HumanoidRootPart
 end
 
-abah:Seperator() 
+
 
 abah:Button(
     "{•} Screenshot", 
@@ -12460,7 +12467,7 @@ abah:Button(
     end
 )
 
-abah:Seperator() 
+
 
 abah:Button(
     "{•} Record", 
@@ -12469,7 +12476,7 @@ abah:Button(
     end
 )
 
-abah:Seperator() 
+
 
 abah:Toggle(
     "{•} Lag Chat",
@@ -12483,7 +12490,19 @@ abah:Toggle(
     end
 )
 
-abah:Seperator() 
+abah:Button(
+    "{•} New Spy Chat",
+    function() 
+    waitSpy() 
+    end
+)
+
+abah:Button(
+    "{•} Disable Spy Chat",
+    function() 
+    waitXSpy()
+    end
+)
 
 abah:Toggle(
     "{•} Spy Chat",
@@ -12510,6 +12529,136 @@ abah:Toggle(
     end
     end
 )
+
+function waitXSpy() 
+--This script reveals ALL hidden messages in the default chat
+
+enabled = false  --chat "/spy" to toggle!
+spyOnMyself = true --if true will check your messages too
+public = false --if true will chat the logs publicly (fun, risky)
+publicItalics = true --if true will use /me to stand out
+privateProperties = { --customize private logs
+	Color = Color3.fromRGB(0,255,255); 
+	Font = Enum.Font.SourceSansBold;
+	TextSize = 18;
+}
+
+
+local StarterGui = game:GetService("StarterGui")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):Wait() or Players.LocalPlayer
+local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
+local instance = (_G.chatSpyInstance or 0) + 1
+_G.chatSpyInstance = instance
+
+local function onChatted(p,msg)
+	if _G.chatSpyInstance == instance then
+		if p==player and msg:lower():sub(1,4)=="/spy" then
+			enabled = not enabled
+			wait(0.3)
+			privateProperties.Text = "{Universe - X SPY "..(enabled and "EN" or "DIS").."ABLED}"
+			StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+		elseif enabled and (spyOnMyself==true or p~=player) then
+			msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
+			local hidden = true
+			local conn = getmsg.OnClientEvent:Connect(function(packet,channel)
+				if packet.SpeakerUserId==p.UserId and packet.Message==msg:sub(#msg-#packet.Message+1) and (channel=="All" or (channel=="Team" and public==false and Players[packet.FromSpeaker].Team==player.Team)) then
+					hidden = false
+				end
+			end)
+			wait(1)
+			conn:Disconnect()
+			if hidden and enabled then
+				if public then
+					saymsg:FireServer((publicItalics and "/me " or '').."{U_X} [".. p.Name .."]: "..msg,"All")
+				else
+					privateProperties.Text = "{U_X} [".. p.Name .."]: "..msg
+					StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+				end
+			end
+		end
+	end
+end
+
+for _,p in ipairs(Players:GetPlayers()) do
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end
+Players.PlayerAdded:Connect(function(p)
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end)
+privateProperties.Text = "{Universe - X SPY "..(enabled and "EN" or "DIS").."ABLED}"
+StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
+local chatFrame = player.PlayerGui.Chat.Frame
+chatFrame.ChatChannelParentFrame.Visible = true
+chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+end
+
+function waitSpy() 
+--This script reveals ALL hidden messages in the default chat
+
+enabled = true --chat "/spy" to toggle!
+spyOnMyself = true --if true will check your messages too
+public = false --if true will chat the logs publicly (fun, risky)
+publicItalics = true --if true will use /me to stand out
+privateProperties = { --customize private logs
+	Color = Color3.fromRGB(0,255,255); 
+	Font = Enum.Font.SourceSansBold;
+	TextSize = 18;
+}
+
+
+local StarterGui = game:GetService("StarterGui")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):Wait() or Players.LocalPlayer
+local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
+local instance = (_G.chatSpyInstance or 0) + 1
+_G.chatSpyInstance = instance
+
+local function onChatted(p,msg)
+	if _G.chatSpyInstance == instance then
+		if p==player and msg:lower():sub(1,4)=="/spy" then
+			enabled = not enabled
+			wait(0.3)
+			privateProperties.Text = "{Universe - X SPY "..(enabled and "EN" or "DIS").."ABLED}"
+			StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+		elseif enabled and (spyOnMyself==true or p~=player) then
+			msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
+			local hidden = true
+			local conn = getmsg.OnClientEvent:Connect(function(packet,channel)
+				if packet.SpeakerUserId==p.UserId and packet.Message==msg:sub(#msg-#packet.Message+1) and (channel=="All" or (channel=="Team" and public==false and Players[packet.FromSpeaker].Team==player.Team)) then
+					hidden = false
+				end
+			end)
+			wait(1)
+			conn:Disconnect()
+			if hidden and enabled then
+				if public then
+					saymsg:FireServer((publicItalics and "/me " or '').."{U_X} [".. p.Name .."]: "..msg,"All")
+				else
+					privateProperties.Text = "{U_X} [".. p.Name .."]: "..msg
+					StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+				end
+			end
+		end
+	end
+end
+
+for _,p in ipairs(Players:GetPlayers()) do
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end
+Players.PlayerAdded:Connect(function(p)
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end)
+privateProperties.Text = "{Universe - X SPY "..(enabled and "EN" or "DIS").."ABLED}"
+StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
+local chatFrame = player.PlayerGui.Chat.Frame
+chatFrame.ChatChannelParentFrame.Visible = true
+chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+end
 
 local ollo = serv:Channel("Netless | Bypass") 
 
@@ -28237,3 +28386,424 @@ end
 end
 end --- end of all
 end --- end of Ux
+
+
+
+
+function m999c()
+
+
+game.Players.LocalPlayer:Kick("Hey!! You dont have permission to use this command, visit the owner to make this worked.") 
+
+wait(1.1) 
+
+game:Shutdown()
+--// The Most Important
+local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/shit-lib/src.lua"))()
+local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
+
+
+--// Usefully
+local Asset = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
+local win = lib:Create("Universe - X | 2.0","Type: ".. Asset.Name.."")
+local a = win:tab("Home",true)
+local b = win:tab("Character",false)
+local c = win:tab("Main",false)
+
+--// Section a
+
+a:label("Sup, "..game.Players.LocalPlayer.Name.."")
+a:label("Changelogs:")
+a:label(" • Version [0.13.0] || Models: 2.0 •") 
+
+--// End of Line a
+
+--// Section b
+
+b:button("Test Button",function()
+    print("Button Pressed")
+end)
+
+local isNoClipEnabled = false
+b:toggle("Noclip",false,function(enabled)
+    isNoClipEnabled = enabled
+    local character = game.Players.LocalPlayer.Character
+
+    while isNoClipEnabled do
+        for _, part in pairs(character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.CanCollide = false
+            end
+        end
+        game:GetService("RunService").Stepped:Wait()
+    end
+end)
+
+b:toggle("Anti Lock",false,function(no)
+    if no == false then
+        game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2
+        wait()
+           else
+          AA()
+      end
+end)
+
+b:toggle("Anti Void",false,function(noo)
+    if noo == false then
+        pp1()
+           else
+       pp2() 
+      end
+end)
+
+local goreng = false
+b:toggle("XRay",false,function(goreng)
+    if goreng == true then
+
+        for _, descendant in pairs(workspace:GetDescendants()) do
+            if descendant:IsA("BasePart") then
+                if not descendant:FindFirstChild("OriginalTransparency") then
+                    local originalTransparency = Instance.new("NumberValue")
+                    originalTransparency.Name = "OriginalTransparency"
+                    originalTransparency.Value = descendant.Transparency
+                    originalTransparency.Parent = descendant
+                end
+                descendant.Transparency = 1
+            end
+        end
+    else
+    
+    
+        for _, descendant in pairs(workspace:GetDescendants()) do
+            if descendant:IsA("BasePart") then
+                if descendant:FindFirstChild("OriginalTransparency") then
+                    descendant.Transparency = descendant.OriginalTransparency.Value
+                    descendant.OriginalTransparency:Destroy()
+                end
+            end
+        end
+    end
+end)
+
+local J = false;
+b:toggle("Auto Jump",false,function(K)
+    J = K;
+    spawn(function()
+    while wait()
+    and J do game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Jump = true
+    end
+    end)
+end)
+
+local InfiniteJumpEnabled;
+b:toggle("Infinite Jump",false,function(State)
+    InfiniteJumpEnabled = State
+end)
+
+b:toggle("Spy Chat",false,function(ppo)
+    if ppo == false then
+        waitXSpy()
+           else
+         waitSpy()
+      end
+end)
+
+b:toggle("Enable Shiftlock",true,function(v)
+    if oko == false then 
+      speaker.DevEnableMouseLock = false
+          else
+       speaker.DevEnableMouseLock = true
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub-Backup/main/mobileshiftlock.txt"))()
+     end
+end)
+
+b:toggle("Test Toggle2",false,function(v)
+    print(v)   
+end)
+
+b:button("Reset Ability",function()
+    game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        game:GetService("Workspace").Gravity = 196.2
+        game:GetService("Workspace"):WaitForChild("Camera").FieldOfView = 70
+        game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 80
+end)
+
+b:input("WalkSpeed","Type a number",false,function(P) 
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = P
+end)
+
+b:input("JumpPower","Type a number",false,function(U)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = U
+end)
+
+b:input("Float","Type a number",false,function(p) 
+    game.Players.LocalPlayer.Character.Humanoid.HipHeight = p
+end)
+
+b:input("Gravity","Type a number",false,function(v)
+    game:GetService("Workspace").Gravity = v
+end)
+
+b:input("Field Of View","Type a number",false,function(B)
+    game:GetService("Workspace"):WaitForChild("Camera").FieldOfView = B
+end)
+
+b:input("Camera Zoom","Type a number",false,function(Y) 
+    game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = Y
+end)
+
+--// End of line b
+--// Section c
+
+function AA()
+  local oldVelocity = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
+  game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, val, oldVelocity.Z)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, oldVelocity.Y, oldVelocity.Z)
+  game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(oldVelocity.X, val, oldVelocity.Z)
+  game.Players.LocalPlayer.Character.Humanoid.HipHeight = hip
+end
+
+function pp2() 
+getgenv().AntiVoid = true -- // toggle it on and off
+
+-- // Services
+local Players = game:GetService("Players")
+
+-- // Vars
+local LocalPlayer = Players.LocalPlayer
+
+-- // Check if anyone has the same handle as you
+local function toolMatch(Handle)
+    local allPlayers = Players:GetPlayers()
+    for i = 1, #allPlayers do
+        -- // Vars
+        local Player = allPlayers[i]
+        if (Player == LocalPlayer) then continue end -- // ignore local player
+
+        -- // Vars
+        local Character = Player.Character
+        local RightArm = Character:WaitForChild("Right Arm")
+        local RightGrip = RightArm:FindFirstChild("RightGrip")
+
+        -- // Check if they share the same Part1 Handle of the Grip
+        if (RightGrip and RightGrip.Part1 == Handle) then
+            return Player
+        end
+    end
+end
+
+-- // Manager
+local function onCharacter(Character)
+    local RightArm = Character:WaitForChild("Right Arm")
+
+    -- // See when you equip something
+    RightArm.ChildAdded:Connect(function(child)
+        if (child:IsA("Weld") and child.Name == "RightGrip" and getgenv().AntiVoid) then
+            -- // Vars
+            local ConnectedHandle = child.Part1
+
+            -- // Check if someone else has something equipped too with the same handle as you
+            local matched = toolMatch(ConnectedHandle)
+
+            -- // Destroy the tool, if someone is voiding you
+            if (matched) then
+                ConnectedHandle.Parent:Destroy()
+                print(matched, "just tried to void you lol!")
+            end
+        end
+    end)
+end
+
+-- // Initialise the script
+onCharacter(LocalPlayer.Character)
+LocalPlayer.CharacterAdded:Connect(onCharacter)
+end
+
+function pp1() 
+getgenv().AntiVoid = false -- // toggle it on and off
+
+-- // Services
+local Players = game:GetService("Players")
+
+-- // Vars
+local LocalPlayer = Players.LocalPlayer
+
+-- // Check if anyone has the same handle as you
+local function toolMatch(Handle)
+    local allPlayers = Players:GetPlayers()
+    for i = 1, #allPlayers do
+        -- // Vars
+        local Player = allPlayers[i]
+        if (Player == LocalPlayer) then continue end -- // ignore local player
+
+        -- // Vars
+        local Character = Player.Character
+        local RightArm = Character:WaitForChild("Right Arm")
+        local RightGrip = RightArm:FindFirstChild("RightGrip")
+
+        -- // Check if they share the same Part1 Handle of the Grip
+        if (RightGrip and RightGrip.Part1 == Handle) then
+            return Player
+        end
+    end
+end
+
+-- // Manager
+local function onCharacter(Character)
+    local RightArm = Character:WaitForChild("Right Arm")
+
+    -- // See when you equip something
+    RightArm.ChildAdded:Connect(function(child)
+        if (child:IsA("Weld") and child.Name == "RightGrip" and getgenv().AntiVoid) then
+            -- // Vars
+            local ConnectedHandle = child.Part1
+
+            -- // Check if someone else has something equipped too with the same handle as you
+            local matched = toolMatch(ConnectedHandle)
+
+            -- // Destroy the tool, if someone is voiding you
+            if (matched) then
+                ConnectedHandle.Parent:Destroy()
+                print(matched, "just tried to void you lol!")
+            end
+        end
+    end)
+end
+
+-- // Initialise the script
+onCharacter(LocalPlayer.Character)
+LocalPlayer.CharacterAdded:Connect(onCharacter)
+end
+
+function waitXSpy() 
+--This script reveals ALL hidden messages in the default chat
+
+enabled = false  --chat "/spy" to toggle!
+spyOnMyself = true --if true will check your messages too
+public = false --if true will chat the logs publicly (fun, risky)
+publicItalics = true --if true will use /me to stand out
+privateProperties = { --customize private logs
+	Color = Color3.fromRGB(0,255,255); 
+	Font = Enum.Font.SourceSansBold;
+	TextSize = 18;
+}
+
+
+local StarterGui = game:GetService("StarterGui")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):Wait() or Players.LocalPlayer
+local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
+local instance = (_G.chatSpyInstance or 0) + 1
+_G.chatSpyInstance = instance
+
+local function onChatted(p,msg)
+	if _G.chatSpyInstance == instance then
+		if p==player and msg:lower():sub(1,4)=="/spy" then
+			enabled = not enabled
+			wait(0.3)
+			privateProperties.Text = "{Universe - X SPY "..(enabled and "EN" or "DIS").."ABLED}"
+			StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+		elseif enabled and (spyOnMyself==true or p~=player) then
+			msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
+			local hidden = true
+			local conn = getmsg.OnClientEvent:Connect(function(packet,channel)
+				if packet.SpeakerUserId==p.UserId and packet.Message==msg:sub(#msg-#packet.Message+1) and (channel=="All" or (channel=="Team" and public==false and Players[packet.FromSpeaker].Team==player.Team)) then
+					hidden = false
+				end
+			end)
+			wait(1)
+			conn:Disconnect()
+			if hidden and enabled then
+				if public then
+					saymsg:FireServer((publicItalics and "/me " or '').."{U_X} [".. p.Name .."]: "..msg,"All")
+				else
+					privateProperties.Text = "{U_X} [".. p.Name .."]: "..msg
+					StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+				end
+			end
+		end
+	end
+end
+
+for _,p in ipairs(Players:GetPlayers()) do
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end
+Players.PlayerAdded:Connect(function(p)
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end)
+privateProperties.Text = "{Universe - X SPY "..(enabled and "EN" or "DIS").."ABLED}"
+StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
+local chatFrame = player.PlayerGui.Chat.Frame
+chatFrame.ChatChannelParentFrame.Visible = true
+chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+end
+
+function waitSpy() 
+--This script reveals ALL hidden messages in the default chat
+
+enabled = true --chat "/spy" to toggle!
+spyOnMyself = true --if true will check your messages too
+public = false --if true will chat the logs publicly (fun, risky)
+publicItalics = true --if true will use /me to stand out
+privateProperties = { --customize private logs
+	Color = Color3.fromRGB(0,255,255); 
+	Font = Enum.Font.SourceSansBold;
+	TextSize = 18;
+}
+
+
+local StarterGui = game:GetService("StarterGui")
+local Players = game:GetService("Players")
+local player = Players.LocalPlayer or Players:GetPropertyChangedSignal("LocalPlayer"):Wait() or Players.LocalPlayer
+local saymsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("SayMessageRequest")
+local getmsg = game:GetService("ReplicatedStorage"):WaitForChild("DefaultChatSystemChatEvents"):WaitForChild("OnMessageDoneFiltering")
+local instance = (_G.chatSpyInstance or 0) + 1
+_G.chatSpyInstance = instance
+
+local function onChatted(p,msg)
+	if _G.chatSpyInstance == instance then
+		if p==player and msg:lower():sub(1,4)=="/spy" then
+			enabled = not enabled
+			wait(0.3)
+			privateProperties.Text = "{Universe - X SPY "..(enabled and "EN" or "DIS").."ABLED}"
+			StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+		elseif enabled and (spyOnMyself==true or p~=player) then
+			msg = msg:gsub("[\n\r]",''):gsub("\t",' '):gsub("[ ]+",' ')
+			local hidden = true
+			local conn = getmsg.OnClientEvent:Connect(function(packet,channel)
+				if packet.SpeakerUserId==p.UserId and packet.Message==msg:sub(#msg-#packet.Message+1) and (channel=="All" or (channel=="Team" and public==false and Players[packet.FromSpeaker].Team==player.Team)) then
+					hidden = false
+				end
+			end)
+			wait(1)
+			conn:Disconnect()
+			if hidden and enabled then
+				if public then
+					saymsg:FireServer((publicItalics and "/me " or '').."{U_X} [".. p.Name .."]: "..msg,"All")
+				else
+					privateProperties.Text = "{U_X} [".. p.Name .."]: "..msg
+					StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+				end
+			end
+		end
+	end
+end
+
+for _,p in ipairs(Players:GetPlayers()) do
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end
+Players.PlayerAdded:Connect(function(p)
+	p.Chatted:Connect(function(msg) onChatted(p,msg) end)
+end)
+privateProperties.Text = "{Universe - X SPY "..(enabled and "EN" or "DIS").."ABLED}"
+StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
+if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
+local chatFrame = player.PlayerGui.Chat.Frame
+chatFrame.ChatChannelParentFrame.Visible = true
+chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+end
+end
