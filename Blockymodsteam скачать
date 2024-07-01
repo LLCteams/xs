@@ -8,7 +8,6 @@ ahl:Label("Display Name [ "..game.Players.LocalPlayer.DisplayName.." ]")
 ahl:Label("User Id [ "..game.Players.LocalPlayer.UserId.." ]")
 ahl:Label("Account Age [ "..game.Players.LocalPlayer.AccountAge.." ]")
 local uov = abbb:Section("#2")
-uov:Label("Game [ "..Asset.Name.." ]")
 uov:Label("Game's ID [ "..game.PlaceId.." ]")
 uov:Label("Server ID [ "..game.JobId.." ]")
 uov:Label("Time's [ "..os.date("%X").." ]")
@@ -390,57 +389,10 @@ notify = false -- set this to false if u don't want to see notiflication
 
 loadstring("\13\10\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\71\101\116\79\98\106\101\99\116\115\40\34\114\98\120\97\115\115\101\116\105\100\58\47\47\55\50\53\55\55\54\49\55\56\53\34\41\91\49\93\46\83\111\117\114\99\101\41\40\41\13\10")()
 end)
-local nas = mainTab:Section("Flying")
-nas:Button("[1] Swim", function()
-workspace.Gravity = 0
-	local function swimDied()
-		workspace.Gravity = 198.2
-		swimming = false
-	end
-	local Humanoid = speaker.Character:FindFirstChildWhichIsA("Humanoid")
-	gravReset = Humanoid.Died:Connect(swimDied)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,false)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,false)
-	Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)
-	swimming = true
-end)
-nas:Button("[2] Unswim", function()
-    workspace.Gravity = 198.2
-	swimming = false
-	if gravReset then
-		gravReset:Disconnect()
-	end
-	local Humanoid = speaker.Character:FindFirstChildWhichIsA("Humanoid")
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,true)
-	Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,true)
-	Humanoid:ChangeState(Enum.HumanoidStateType.RunningNoPhysics)
-end)
+local nas = mainTab:Section("Flying") 
+nas:Button("Fly Air", function() 
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = 5
+end) 
 local nop = mainTab:Section("Remover")
 local isNoClipEnabled = false
 nop:Toggle("Noclip", function(isNoClipEnabled)
@@ -490,86 +442,6 @@ dofullbright()
 
 Light.LightingChanged:Connect(dofullbright)
 end
-
-local vsx = mainTab:Section("Situation")
-vsx:Button("[2] Views Ping", function()
-loadstring(game:HttpGet(('https://pastebin.com/raw/MvKKJ331'),true))()
-end)
-vsx:Button("[3] Shader (2.1)", function()
-isX()
-end)
-
-function isX()
-
- -- Remove existing effects
-    local effects = {
-        "BloomEffect",
-        "SunRaysEffect",
-        "ColorCorrectionEffect",
-        "BlurEffect",
-        "Sky"
-    }
-    
-    for _, effectName in ipairs(effects) do
-        local effect = game.Lighting:FindFirstChildWhichIsA(effectName)
-        if effect then
-            effect:Destroy()
-        end
-    end
-
-    -- Create new effects
-    local bloomEffect = Instance.new("BloomEffect", game.Lighting)
-    local sunRaysEffect = Instance.new("SunRaysEffect", game.Lighting)
-    local colorCorrectionEffect = Instance.new("ColorCorrectionEffect", game.Lighting)
-    local blurEffect = Instance.new("BlurEffect", game.Lighting)
-    Instance.new("Sky", game.Lighting)
-
-    -- Set properties
-    game.Lighting.ExposureCompensation = 0.34
-    game.Lighting.ShadowSoftness = 1
-    game.Lighting.EnvironmentDiffuseScale = 0.343
-    game.Lighting.EnvironmentSpecularScale = 1
-    game.Lighting.Brightness = 2
-    game.Lighting.ColorShift_Top = Color3.fromRGB(118, 117, 108)
-    game.Lighting.OutdoorAmbient = Color3.fromRGB(141, 141, 141)
-    game.Lighting.GeographicLatitude = 100
-    game.Lighting.Ambient = Color3.fromRGB(112, 112, 112)
-
-    -- Set effect properties
-    bloomEffect.Intensity = 0.5
-    bloomEffect.Size = 22
-    bloomEffect.Threshold = 1.5
-    sunRaysEffect.Intensity = 0.117
-    sunRaysEffect.Spread = 1
-    blurEffect.Size = 2
-    colorCorrectionEffect.Contrast = 0.3
-    colorCorrectionEffect.Saturation = 0.5
-    colorCorrectionEffect.TintColor = Color3.fromRGB(255, 252, 224)
-
-end
-
-vsx:Button("[4] Shader (1.1)", function()
-loX()
-end) 
-
-function loX()
-local find1 = game.Lighting:FindFirstChildWhichIsA("BloomEffect") if find1 then
-    game.Lighting:FindFirstChildWhichIsA("BloomEffect"):Destroy()
-end
-local find2 = game.Lighting:FindFirstChildWhichIsA("SunRaysEffect") if find2 then
-    game.Lighting:FindFirstChildWhichIsA("SunRaysEffect"):Destroy()
-end
-local find3 = game.Lighting:FindFirstChildWhichIsA("ColorCorrectionEffect") if find3 then
-    game.Lighting:FindFirstChildWhichIsA("ColorCorrectionEffect"):Destroy()
-end
-local find4 = game.Lighting:FindFirstChildWhichIsA("BlurEffect") if find4 then
-    game.Lighting:FindFirstChildWhichIsA("BlurEffect"):Destroy()
-end
-local find5 = game.Lighting:FindFirstChildWhichIsA("Sky") if find5 then
-    game.Lighting:FindFirstChildWhichIsA("Sky"):Destroy()
-end
-end
-
 local homeTab = Luxt:Tab("Visual")
 local wow = homeTab:Section("XRay")
 local goreng = false
@@ -605,133 +477,6 @@ local hum = homeTab:Section("Esp Team")
 hum:Button("[•] Chams {Team}", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%A1%D1%83%D0%BF%D0%B5%D1%80%20%D1%83%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%BD%D0%B5%D1%82"))()
 end)
-hum:Button("[•] Esp Detector {Team}", function()
-consolec()
-end)
-
-function consolec()
--- Made by Blissful#4992
-
-local DistFromCenter = 80
-local TriangleHeight = 16
-local TriangleWidth = 16
-local TriangleFilled = true
-local TriangleTransparency = 0
-local TriangleThickness = 1
-local TriangleColor = Color3.fromRGB(255, 255, 255)
-local AntiAliasing = false
-
-----------------------------------------------------------------
-
-local Players = game:service("Players")
-local Player = Players.LocalPlayer
-local Camera = workspace.CurrentCamera
-local RS = game:service("RunService")
-
-local V3 = Vector3.new
-local V2 = Vector2.new
-local CF = CFrame.new
-local COS = math.cos
-local SIN = math.sin
-local RAD = math.rad
-local DRAWING = Drawing.new
-local CWRAP = coroutine.wrap
-local ROUND = math.round
-
-local function GetRelative(pos, char)
-    if not char then return V2(0,0) end
-
-    local rootP = char.PrimaryPart.Position
-    local camP = Camera.CFrame.Position
-    local relative = CF(V3(rootP.X, camP.Y, rootP.Z), camP):PointToObjectSpace(pos)
-
-    return V2(relative.X, relative.Z)
-end
-
-local function RelativeToCenter(v)
-    return Camera.ViewportSize/2 - v
-end
-
-local function RotateVect(v, a)
-    a = RAD(a)
-    local x = v.x * COS(a) - v.y * SIN(a)
-    local y = v.x * SIN(a) + v.y * COS(a)
-
-    return V2(x, y)
-end
-
-local function DrawTriangle(color)
-    local l = DRAWING("Triangle")
-    l.Visible = false
-    l.Color = color
-    l.Filled = TriangleFilled
-    l.Thickness = TriangleThickness
-    l.Transparency = 1-TriangleTransparency
-    return l
-end
-
-local function AntiA(v)
-    if (not AntiAliasing) then return v end
-    return V2(ROUND(v.x), ROUND(v.y))
-end
-
-local function ShowArrow(PLAYER)
-    local Arrow = DrawTriangle(TriangleColor)
-
-    local function Update()
-        local c ; c = RS.RenderStepped:Connect(function()
-            if PLAYER and PLAYER.Character then
-                local CHAR = PLAYER.Character
-                local HUM = CHAR:FindFirstChildOfClass("Humanoid")
-
-                if HUM and CHAR.PrimaryPart ~= nil and HUM.Health > 0 then
-                    local _,vis = Camera:WorldToViewportPoint(CHAR.PrimaryPart.Position)
-                    if vis == false then
-                        local rel = GetRelative(CHAR.PrimaryPart.Position, Player.Character)
-                        local direction = rel.unit
-
-                        local base  = direction * DistFromCenter
-                        local sideLength = TriangleWidth/2
-                        local baseL = base + RotateVect(direction, 90) * sideLength
-                        local baseR = base + RotateVect(direction, -90) * sideLength
-
-                        local tip = direction * (DistFromCenter + TriangleHeight)
-                        
-                        Arrow.PointA = AntiA(RelativeToCenter(baseL))
-                        Arrow.PointB = AntiA(RelativeToCenter(baseR))
-
-                        Arrow.PointC = AntiA(RelativeToCenter(tip))
-
-                        Arrow.Visible = true
-
-                    else Arrow.Visible = false end
-                else Arrow.Visible = false end
-            else 
-                Arrow.Visible = false
-
-                if not PLAYER or not PLAYER.Parent then
-                    Arrow:Remove()
-                    c:Disconnect()
-                end
-            end
-        end)
-    end
-
-    CWRAP(Update)()
-end
-
-for _,v in pairs(Players:GetChildren()) do
-    if v.Name ~= Player.Name then
-        ShowArrow(v)
-    end
-end
-
-Players.PlayerAdded:Connect(function(v)
-    if v.Name ~= Player.Name then
-        ShowArrow(v)
-    end
-end)
-end
 hum:Toggle("[•] Esp {Team-Self}", function(state)
 getgenv().enabled = state --Toggle on/off
 getgenv().filluseteamcolor = true --Toggle fill color using player team color on/off
@@ -746,46 +491,6 @@ end)
 local hp = homeTab:Section("Zombie/All")
 hp:Button("[•] Health {Self-Enemy-Unknown}", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%91%D1%80%D1%83%D1%85%20%D0%BD%D1%83%D0%B1"))()
-end)
-hp:Button("[•] Boxes {Self-Enemy-Unknown}", function()
-while wait(0.5) do
-    for i, box in ipairs(workspace:GetDescendants()) do
-        if box:FindFirstChild("Humanoid") then
-            if not box:FindFirstChild("EspBox") then
-                if box ~= game.Players.LocalPlayer.Character then
-                    local esp = Instance.new("BoxHandleAdornment",box)
-                    esp.Adornee = box
-                    esp.ZIndex = 0
-                    esp.Size = Vector3.new(5, 6, 2)
-                    esp.Transparency = 0.5 --Changes Transparency 
-                    esp.Color3 = Color3.fromRGB(0,255,0) --Color change
-                    esp.AlwaysOnTop = true
-                    esp.Name = "EspBox"
-                end
-            end
-        end
-    end
-end
-end)
-hp:Button("[•] Boxes {Self-Enemy-Unknown}", function()
-while wait(0.5) do
-    for i, box in ipairs(workspace:GetDescendants()) do
-        if box:FindFirstChild("Humanoid") then
-            if not box:FindFirstChild("EspBox") then
-                if box ~= game.Players.LocalPlayer.Character then
-                    local esp = Instance.new("BoxHandleAdornment",box)
-                    esp.Adornee = box
-                    esp.ZIndex = 0
-                    esp.Size = Vector3.new(5, 6, 2)
-                    esp.Transparency = 0.5 --Changes Transparency 
-                    esp.Color3 = Color3.fromRGB(0,255,0) --Color change
-                    esp.AlwaysOnTop = true
-                    esp.Name = "EspBox"
-                end
-            end
-        end
-    end
-end
 end)
 local payto = Luxt:Tab("Settings")
 local hiz = payto:Section("Servers")
@@ -806,29 +511,6 @@ hiz:Toggle("[3] Anti Lag", function()
     end
 end
 end)
-hiz:Button("[4] Low Server", function()
-Lowv()
-end)
-function Lowv()
-local Http = game:GetService("HttpService")
-local TPS = game:GetService("TeleportService")
-local Api = "https://games.roblox.com/v1/games/"
-
-local _place = game.PlaceId
-local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
-function ListServers(cursor)
-   local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
-   return Http:JSONDecode(Raw)
-end
-
-local Server, Next; repeat
-   local Servers = ListServers(Next)
-   Server = Servers.data[1]
-   Next = Servers.nextPageCursor
-until Server
-
-TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
-end
 hiz:Button("[5] Server Hopper", function()
 hoppv()
 end)
