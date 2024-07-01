@@ -47,6 +47,31 @@ function Utility:TweenObject(obj, properties, duration, ...)
     tween:Create(obj, tweeninfo(duration, ...), properties):Play()
 end
 
+local LibName = "HubDestroyer"
+
+function Kavo:ToggleUI()
+    if game.CoreGui[LibName].Enabled then  
+        game.CoreGui[LibName].Enabled = false
+    else  
+        game.CoreGui[LibName].Enabled = true 
+    end
+end  
+
+function Kavo:BGLoader(id)
+	for i,v in pairs(game.CoreGui:FindFirstChild("HubDestroyer"):GetDescendants()) do
+		if v:IsA("TextButton") or v.Name == "MainHeader" or v.Name == "coverup" then
+			v.BackgroundTransparency = v.BackgroundTransparency + .7
+		else if v.Name:find("MainSide") or v.Name:find("sectionHead") or v.Name:find("sectionFrame") or v.Name=="Page" then
+				v.BackgroundTransparency = .75
+			end
+		end
+	end
+	wait()
+	local Fondo = Instance.new("ImageLabel",game.CoreGui:FindFirstChild("HubDestroyer").Main)
+	Fondo.Image = "rbxassetid://18138943003"
+	Fondo.ZIndex = 0
+	Fondo.Size = game.CoreGui:FindFirstChild("HubDestroyer").Main.Size
+end
 
 local themes = {
     SchemeColor = Color3.fromRGB(74, 99, 135),
