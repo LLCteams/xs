@@ -1,6 +1,5 @@
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
---[[
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X || Ultra", "Universe - X not really executed..", "rbxassetid://17415983489", {
     Duration = 6,
@@ -9,17 +8,6 @@ Notification.Notify("Universe X || Ultra", "Universe - X not really executed..",
     }
 });
 wait(0.1) 
-print('UX.lua-failed') 
-end
-
-if (identifyexecutor()) == "Solara" then
-Notification.Notify("Universe X || Ultra", "Universe - X not really executed..", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(0.1)
 print('UX.lua-failed') 
 end
 
@@ -32,6 +20,64 @@ Notification.Notify("Universe X || Ultra", "Fluxus too low and not support this 
 });
 wait(8) 
 game.Players.LocalPlayer:Kick("This script has some features that Fluxus doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Evon" then
+Notification.Notify("Universe X || Ultra", "Evon too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Evon doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Hydrogen" then
+Notification.Notify("Universe X || Ultra", "Hydrogen too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Hydrogen doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Codex" then
+Notification.Notify("Universe X || Ultra", "Codex too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Codex doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Vega X" then
+Notification.Notify("Universe X || Ultra", "Vega X too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Vega X doesnt have please switch to something else! (Error.)")
+end
+
+
+--[[
+
+if (identifyexecutor()) == "Solara" then
+Notification.Notify("Universe X || Ultra", "Universe - X not really executed..", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(0.1)
+print('UX.lua-failed') 
 end
 
 if (identifyexecutor()) == "Wave" then
@@ -67,17 +113,6 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that Delta doesnt have please switch to something else! (Error.)")
 end
 
-if (identifyexecutor()) == "Evon" then
-Notification.Notify("Universe X || Ultra", "Evon too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Evon doesnt have please switch to something else! (Error.)")
-end
-
 if (identifyexecutor()) == "KRNL" then
 Notification.Notify("Universe X || Ultra", "KRNL has error and not support this script!", "rbxassetid://17415983489", {
     Duration = 6,
@@ -87,17 +122,6 @@ Notification.Notify("Universe X || Ultra", "KRNL has error and not support this 
 });
 wait(8) 
 game.Players.LocalPlayer:Kick("This script has some features that KRNL doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Hydrogen" then
-Notification.Notify("Universe X || Ultra", "Hydrogen too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Hydrogen doesnt have please switch to something else! (Error.)")
 end
 
 if (identifyexecutor()) == "Ro-Exec" then
@@ -134,17 +158,6 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that Sirhurt doesnt have please switch to something else! (Error.)")
 end
 
-if (identifyexecutor()) == "Codex" then
-Notification.Notify("Universe X || Ultra", "Codex too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Codex doesnt have please switch to something else! (Error.)")
-end
-
 if (identifyexecutor()) == "Electron" then
 Notification.Notify("Universe X || Ultra", "Electron too low and not support this script!", "rbxassetid://17415983489", {
     Duration = 6,
@@ -166,18 +179,6 @@ Notification.Notify("Universe X || Ultra", "Comet too low and not support this s
 wait(8) 
 game.Players.LocalPlayer:Kick("This script has some features that Comet doesnt have please switch to something else! (Error.)")
 end
-
-if (identifyexecutor()) == "Vega X" then
-Notification.Notify("Universe X || Ultra", "Vega X too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Vega X doesnt have please switch to something else! (Error.)")
-end
-
 
 if (identifyexecutor()) == "Sentiner" then
 Notification.Notify("Universe X || Ultra", "Sentiner too low and not support this script!", "rbxassetid://17415983489", {
