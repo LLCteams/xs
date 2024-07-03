@@ -927,7 +927,7 @@ m999c()
 end) 
 Tab1:Button("Universe X Premium", function()
       game.CoreGui.ShadowLib:Destroy()
---- loadstring(game:HttpGet("https://pastebin.com/raw/4bn47Jb0"))()
+      loadstring(game:HttpGet("https://pastebin.com/raw/4bn47Jb0"))()
 end)
 Tab1:Button("Universe X Latest", function()
      game.CoreGui.ShadowLib:Destroy()
@@ -1011,9 +1011,9 @@ discordLabel.Parent = mainFrame
 
 -- Tween settings
 local fadeInTime = 4
-local stayTime = 2
+local stayTime = 6
 -- 9999999999999999999999999
-local fadeOutTime = 5
+local fadeOutTime = 6
 
 -- Fade in the frame and text
 local fadeIn = TweenService:Create(mainFrame, TweenInfo.new(fadeInTime), {BackgroundTransparency = 0})
@@ -1188,7 +1188,7 @@ local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xH
 
 local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord"))()
 
-local win = DiscordLib:Window("Universe - X || ULTRA [v0.12.9e]", Color3.fromRGB(0, 255, 0)) 
+local win = DiscordLib:Window("Universe - X || ULTRA [v0.12.7e]", Color3.fromRGB(0, 255, 0)) 
 
 local serc = win:Server("[HOME | LOGS]", "rbxassetid://17468096773") 
 
@@ -1203,7 +1203,6 @@ pof:Label("{•} Fixed an issues patched by Survive the killer in area 51.")
 pof:Label("{•} Fixed an issues patched by Eclipse Hub.") 
 pof:Label("{•} Improved Universe - X Settings.") 
 pof:Label("{•} Added support executor. [Support: Solara, Trigon].") 
-pof:Label("[[ -- 14 -- 06 -- 2024 -- ]]: v0.12.9e") 
 pof:Seperator() 
 pof:Label(" -- -- -- -- ") 
 pof:Label("{•} Fixed an issues while executing Universe - X.") 
@@ -1570,11 +1569,11 @@ ahx:Label("{•} Ping: [ "..game:GetService("Stats").Network.ServerStatsItem["Da
 local ips = serc:Channel("About | Logs") 
 
 ips:Label(" ••• ••• ••• ••• ") 
-ips:Label("{~} Current Version: v0.12.9e") 
-ips:Label("{~} Website:\nhttps://olive-loaf-00a.notion.site/Universe-v0-2-3-0b3a55db6fdc4918ae57e3ee810f704d\n") 
+ips:Label("{~} Current Version: v0.12.7e") 
+ips:Label("{~} Website: \nhttps://olive-loaf-00a.notion.site/Universe-v0-2-3-0b3a55db6fdc4918ae57e3ee810f704d\n") 
 ips:Label("{~} Current Limited: Ultra version.") 
 ips:Label("{~} Bypass Type: Xeri.ard.so") 
-ips:Label("{~} Protections Universe - X: 40 Protections.") 
+ips:Label("{~} Protections Universe - X: 35 Protections.") 
 ips:Label("{~} Ultra Version: || 2382.77724 || ") 
 ips:Label("{~} Version Beta: Unavailable.") 
 ips:Label("{~} Support: All Executor.") 
@@ -1588,7 +1587,6 @@ local opv = serc:Channel("Credits | Creator")
 
 opv:Label(" • Universe - X • ") 
 opv:Label("~ Vercel • Owner of Universe - X.") 
-opv:Label("~ UwuXD • Re-maked, best recreation.") 
 opv:Label("~ Xirius • Re-maked Uis, Creating Unfair script.") 
 opv:Label("~ SplazhQ12 • Re-maked, Scripting Better.") 
 opv:Label("~ SupersX902 • Updating, changelogs.") 
@@ -28394,7 +28392,12 @@ end --- end of Ux
 
 function m999c()
 
-wait(0.3) 
+
+game.Players.LocalPlayer:Kick("Hey!! You dont have permission to use this command, visit the owner to make this worked.") 
+
+wait(1.1) 
+
+game:Shutdown()
 --// The Most Important
 local lib = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/shit-lib/src.lua"))()
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
@@ -28417,7 +28420,7 @@ a:label(" • Version [0.13.0] || Models: 2.0 •")
 
 --// Section b
 
-b:button("Test",function()
+b:button("Test Button",function()
     print("Button Pressed")
 end)
 
