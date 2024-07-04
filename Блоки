@@ -1,141 +1,15 @@
---Pode Skiddar fudido, coisa facil de fazer :cc
-
--- Importar serviços
-local TweenService = game:GetService("TweenService")
-
--- ScreenGui object
-local gui = Instance.new("ScreenGui")
-gui.Name = "CustomLoader"
-gui.ResetOnSpawn = false -- Evitar resetar o GUI quando o jogador reaparece
-gui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
--- Frame
-local frame = Instance.new("Frame")
-frame.Size = UDim2.new(0, 350, 0, 250) -- Tamanho original
-frame.Position = UDim2.new(0.5, -175, 0.5, -125) -- Posição original
-frame.BackgroundColor3 = Color3.fromRGB(0, 0, 255)
-frame.Active = true
-frame.Draggable = true
-frame.Parent = gui
-
--- UICorner of the frame
-local corner = Instance.new("UICorner")
-corner.CornerRadius = UDim.new(0, 5)
-corner.Parent = frame
-
--- Close button
-local closeButton = Instance.new("TextButton")
-closeButton.Size = UDim2.new(0, 20, 0, 20) -- Tamanho original
-closeButton.Position = UDim2.new(1, -30, 0, 10) -- Posição original
-closeButton.BackgroundTransparency = 1
-closeButton.TextColor3 = Color3.new(1, 1, 1)
-closeButton.TextSize = 12 -- Tamanho original
-closeButton.Text = "[ X ]"
-closeButton.MouseButton1Click:Connect(function()
-    animateFrameOut()
-end)
-closeButton.Parent = frame
-
--- Icon
-local icon = Instance.new("ImageButton")
-icon.Size = UDim2.new(0, 135, 0, 135) -- 150 is original
-icon.Position = UDim2.new(0.77, -100, 0.10, 0) -- Movido mais para a direita, altere isso nao porra
-icon.AnchorPoint = Vector2.new(0.5, 0)
-icon.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
-icon.Image = "rbxassetid://18138943003"
-icon.Parent = frame
-
--- Loading text
-local loadingText = Instance.new("TextLabel")
-loadingText.Size = UDim2.new(0.8, 0, 0, 30) -- Tamanho original
-loadingText.Position = UDim2.new(0.1, 0, 0.76, 0) -- Posição original
-loadingText.BackgroundColor3 = Color3.new(0, 255, 0) -- Original is 0
-loadingText.BackgroundTransparency = 1
-loadingText.TextColor3 = Color3.new(1, 1, 1)
-loadingText.TextSize = 14 -- Tamanho original
-loadingText.Font = Enum.Font.SourceSansBold
-loadingText.Text = "Saving protecting..."
-loadingText.Parent = frame
-
--- Loading bar frame
-local loadingBarFrame = Instance.new("Frame")
-loadingBarFrame.Size = UDim2.new(0.6, 0, 0, 10) -- Tamanho original
-loadingBarFrame.Position = UDim2.new(0.025, 0, 0.9, 0) -- Posição original
-loadingBarFrame.AnchorPoint = Vector2.new(0, 1)
-loadingBarFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-loadingBarFrame.Parent = frame
-
--- UICorner of the loading bar frame
-local corner_2 = Instance.new("UICorner")
-corner_2.CornerRadius = UDim.new(0, 5)
-corner_2.Parent = loadingBarFrame
-
--- Function to animate the loading bar
-function animateLoadingBar()
-    local progress = 0
-
-    while progress < 100 do
-        progress = progress + 1
-        updateProgress(progress)
-        wait(0.5) 
-    end
-    
-    loadingText.Text = "Failed to update for 3.0"
-    wait(1.0) 
-    animateFrameOut()
-     ADEGAN() 
-end
-
--- Function to update the loading progress
-function updateProgress(progress)
-    loadingBarFrame.Size = UDim2.new(progress / 105, 0, 0, 10)
-    loadingText.Text = "Updating to 3.0 | " .. progress .. "%"
-end
-
-
--- Função para animar a entrada do frame
-function animateFrameIn()
-  frame.Position = UDim2.new(0.5, -175, 1.5, -125) -- Posição abaixo da tela
-  frame.Visible = true -- Certifique-se de que o quadro esteja visível antes da animação
-  local endPosition = UDim2.new(0.5, -175, 0.5, -125) -- Posição original
-  local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.Out, 0, false, 0) -- Ajustar duração para 1 segundo
-  local tween = TweenService:Create(frame, tweenInfo, {Position = endPosition})
-  tween:Play()
-end
-
--- Função para animar a saída do frame
-function animateFrameOut()
-  local endPosition = UDim2.new(0.5, -175, 1.5, -125) -- Posição abaixo da tela
-  local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.In, 0, false, 0) -- Ajustar duração para 1 segundo
-  local tween = TweenService:Create(frame, tweenInfo, {Position = endPosition})
-  tween:Play()
-  tween.Completed:Connect(function()
-      gui:Destroy()
-  end)
-end
-
-
--- Função para animar o brilho e escurecimento do ícone
-function animateIconBrightness()
-    while true do
-        TweenService:Create(icon, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageTransparency = 0}):Play()
-        wait(1)
-        TweenService:Create(icon, TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.In), {ImageTransparency = 0.5}):Play()
-        wait(1)
-    end
-end
-
-animateFrameIn() -- Iniciar animação de entrada
-spawn(animateLoadingBar)
-spawn(animateIconBrightness)
-
-
-function ADEGAN()
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
-
+Notification.Notify("Universe X || Ultra", "Universe - X version is low, new version available 3.0 in Discord.", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+warn("Universe - X detected was modified clients, but in marketPlace.Beta is only 500HTT") 
+warn("Clients modified! • This function has changed.") 
+--[[
 if (identifyexecutor()) == "Trigon" then
-Notification.Notify("Universe X || Ultra", "Universe - X not really executed..", "rbxassetid://17415983489", {
+Notification.Notify("Universe X || Ultra", "Universe - X detected low-execution, UX Handler has been used.", "rbxassetid://17415983489", {
     Duration = 6,
     Main = {
         Rounding = true,
@@ -199,9 +73,6 @@ Notification.Notify("Universe X || Ultra", "Vega X too low and not support this 
 wait(8) 
 game.Players.LocalPlayer:Kick("This script has some features that Vega X doesnt have please switch to something else! (Error.)")
 end
-
-
---[[
 
 if (identifyexecutor()) == "Solara" then
 Notification.Notify("Universe X || Ultra", "Universe - X not really executed..", "rbxassetid://17415983489", {
@@ -1044,7 +915,7 @@ print("⏺️ " .. unknown .. " vulnerabilities not tested")
 
 
 _G.Settings = {
-['Name'] = 'v0.12.9e', 
+['Name'] = 'v029a', 
 ['Intro'] = false,
 ['Keybind'] = 'F'
 }
@@ -1101,7 +972,7 @@ local loadingLabel = Instance.new("TextLabel")
 loadingLabel.Size = UDim2.new(1, 0, 0.8, 0)
 loadingLabel.Position = UDim2.new(0, 0, 0, 0) -- Adjusted position for better centering
 loadingLabel.BackgroundTransparency = 1 -- No background for the text label
-loadingLabel.Text = "Universe X {•} Ultra"
+loadingLabel.Text = "Universe X {|} Ultra-Aze"
 loadingLabel.TextSize = 32
 loadingLabel.TextColor3 = Color3.new(255, 0, 0) -- Cyan text color
 loadingLabel.Font = Enum.Font.SourceSansBold -- Bold font
@@ -1137,7 +1008,7 @@ local discordLabel = Instance.new("TextLabel")
 discordLabel.Size = UDim2.new(0, 200, 0, 50)
 discordLabel.Position = UDim2.new(-0.07, 0, 0.78, 0) -- Below the YT label with some padding
 discordLabel.BackgroundTransparency = 1 -- No background for the text label
-discordLabel.Text = "v0.12.9e || Ultra"
+discordLabel.Text = "v0.29a || Ultra-Aze"
 discordLabel.TextSize = 14
 discordLabel.TextColor3 = Color3.new(10, 150, 200) -- White text color
 discordLabel.Font = Enum.Font.SourceSansBold -- Regular font
@@ -1197,7 +1068,7 @@ local index = 1
 
 spawn(function()
     while true do
-        loadingSubLabel.Text = "Bypassing" .. dots[index]
+        loadingSubLabel.Text = "Checking" .. dots[index]
         index = index % #dots + 1
         wait(0.2) 
     end
@@ -1289,7 +1160,7 @@ end
 
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
 
-Notification.Notify("Universe X || Ultra", "Universe X is ready, Enjoy Universe - X Ultra are ready and now working.", "rbxassetid://17415983489", {
+Notification.Notify("Universe X || Ultra-Aze", "Universe X is ready, Enjoy Universe - X Ultra are ready and now working.", "rbxassetid://17415983489", {
     Duration = 6,
     Main = {
         Rounding = true,
@@ -1323,21 +1194,16 @@ local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xH
 
 local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord"))()
 
-local win = DiscordLib:Window("Universe - X || ULTRA [v0.12.7e]", Color3.fromRGB(0, 255, 0)) 
+local win = DiscordLib:Window("Universe - X || [v0.29a]", Color3.fromRGB(0, 255, 0)) 
 
 local serc = win:Server("[HOME | LOGS]", "rbxassetid://17468096773") 
 
 local pof = serc:Channel("Update | Logs") 
 
-pof:Label("{•} Removed script name [ ? ] for safety.") 
-pof:Label("{•} Fixed an script [Spy Chat] bypassed to working.") 
-pof:Label("{•} Fixed an script [Esp] bypassed to working.") 
-pof:Label("{•} Fixed an issues Crashed.") 
-pof:Label("{•} Fixed an Animation moved to new menu. [Others Menu].") 
-pof:Label("{•} Fixed an issues patched by Survive the killer in area 51.") 
-pof:Label("{•} Fixed an issues patched by Eclipse Hub.") 
-pof:Label("{•} Improved Universe - X Settings.") 
-pof:Label("{•} Added support executor. [Support: Solara, Trigon].") 
+pof:Label("{•} Improved feature.") 
+pof:Label("{•} Improved Universe X working on all executors.") 
+pof:Label("{•} Updated to latest version, v0.29a") 
+--[[
 pof:Seperator() 
 pof:Label(" -- -- -- -- ") 
 pof:Label("{•} Fixed an issues while executing Universe - X.") 
@@ -1454,6 +1320,7 @@ pof:Label("{•} Added Universal X.")
 pof:Label("{•} Added Undetectable.") 
 pof:Label("{•} Global Update.")
 pof:Label(" [[ -- 29 -- 04 -- 2024 -- ]]: v0.1.0")
+]]
 
 local ipz = serc:Channel("Additional Features") 
 
@@ -1681,41 +1548,41 @@ else
 end
 
 -- Add a label for the executor type
-ahx:Label("{•} Executors " .. (identifyexecutor() .. " [All Type]")) 
-ahx:Label("{•} Executors: " .. executor)
-ahx:Label("{•} Universe Auto: Bypass") 
-ahx:Label("{•} Server Type: Hyperion.globHyperion") 
+ahx:Label("{•} [All Type] Executors " .. (identifyexecutor() .. "")) 
+ahx:Label("{•} [Beta Type] Executors: " .. executor)
+ahx:Label("{•} [Bypass] Universe-Aze: v3.2") 
+ahx:Label("{•} [N.G] Server Type: Hyperion.globHyperion") 
 ahx:Seperator() 
-ahx:Label("{•} Username: [ "..game.Players.LocalPlayer.Name.." ]")
-ahx:Label("{•} Display Name: [ "..game.Players.LocalPlayer.DisplayName.." ]")
-ahx:Label("{•} User Id: [ "..game.Players.LocalPlayer.UserId.." ]")
-ahx:Label("{•} Account Age: [ "..game.Players.LocalPlayer.AccountAge.." ]")
+ahx:Label("{•} Username Player: [ "..game.Players.LocalPlayer.Name.." ]")
+ahx:Label("{•} Display Name Player: [ "..game.Players.LocalPlayer.DisplayName.." ]")
+ahx:Label("{•} User Id Player: [ "..game.Players.LocalPlayer.UserId.." ]")
+ahx:Label("{•} Account Age Player: [ "..game.Players.LocalPlayer.AccountAge.." ]")
 ahx:Seperator()
 ahx:Label("{•} Game: [ ".. Asset.Name.." ]") 
 ahx:Label("{•} Game's ID: [ "..game.PlaceId.." ]")
 ahx:Label("{•} Server ID: [ "..game.JobId.." ]")
 ahx:Label("{•} Time's: [ "..os.date("%X").." ]") 
-ahx:Label("{•} Players: [ .... ]") 
+ahx:Label("{•} Current Player's: [ .... ]") 
 ahx:Seperator()
-ahx:Label("{•} Health: [ "..game.Players.LocalPlayer.Character.Humanoid.Health.." ]")
-ahx:Label("{•} Fps: [ "..math.floor(workspace:GetRealPhysicsFPS()).." ]")
-ahx:Label("{•} Ping: [ "..game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString().." ]")
+ahx:Label("{•} Health Player: [ "..game.Players.LocalPlayer.Character.Humanoid.Health.." ]")
+ahx:Label("{•} Fps Player: [ "..math.floor(workspace:GetRealPhysicsFPS()).." ]")
+ahx:Label("{•} Ping Player: [ "..game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString().." ]")
 
 local ips = serc:Channel("About | Logs") 
 
 ips:Label(" ••• ••• ••• ••• ") 
-ips:Label("{~} Current Version: v0.12.7e") 
-ips:Label("{~} Website: \nhttps://olive-loaf-00a.notion.site/Universe-v0-2-3-0b3a55db6fdc4918ae57e3ee810f704d\n") 
+ips:Label("{~} Current Version: v0.29a") 
+ips:Label("{~} Save-File: Saved!") 
+ips:Label("{~} Current Names: Universe - X Ultra-Aze") 
+ips:Label("{~} Official Website: \nhttps://olive-loaf-00a.notion.site/Universe-v0-2-3-0b3a55db6fdc4918ae57e3ee810f704d\n") 
 ips:Label("{~} Current Limited: Ultra version.") 
-ips:Label("{~} Bypass Type: Xeri.ard.so") 
-ips:Label("{~} Protections Universe - X: 35 Protections.") 
-ips:Label("{~} Ultra Version: || 2382.77724 || ") 
-ips:Label("{~} Version Beta: Unavailable.") 
+ips:Label("{~} Bypass Type: Nevi.ariesthen.ard.so") 
+ips:Label("{~} Protections Universe - X: 20 Protections.") 
+ips:Label("{~} Ultra Code: || 394.24 || ")
 ips:Label("{~} Support: All Executor.") 
 ips:Label("{~} Breaker: Hyp.Verse-X.so") 
-ips:Label("{~} Status new version: Already Updated.") 
-ips:Label("{~} Universe - X new version:") 
-ips:Label("{~} Type all Library: Locked.") 
+ips:Label("{~} Locations: Unknown Server.") 
+ips:Label("{~} Type all Library: Disabled.") 
 ips:Label(" ••• ••• ••• ••• ") 
 
 local opv = serc:Channel("Credits | Creator") 
@@ -28942,4 +28809,3 @@ chatFrame.ChatChannelParentFrame.Visible = true
 chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
 end
 end
-end -- for UX 3.0
