@@ -1203,7 +1203,6 @@ local pof = serc:Channel("Update | Logs")
 pof:Label("{•} Improved feature.") 
 pof:Label("{•} Improved Universe X working on all executors.") 
 pof:Label("{•} Updated to latest version, v0.29a") 
---[[
 pof:Seperator() 
 pof:Label(" -- -- -- -- ") 
 pof:Label("{•} Fixed an issues while executing Universe - X.") 
@@ -1320,7 +1319,6 @@ pof:Label("{•} Added Universal X.")
 pof:Label("{•} Added Undetectable.") 
 pof:Label("{•} Global Update.")
 pof:Label(" [[ -- 29 -- 04 -- 2024 -- ]]: v0.1.0")
-]]
 
 local ipz = serc:Channel("Additional Features") 
 
