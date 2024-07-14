@@ -69,7 +69,7 @@ function Kavo:BGLoader(id)
 	end
 	wait()
 	local Fondo = Instance.new("ImageLabel",game.CoreGui:FindFirstChild("HubDestroyer").Main)
-	Fondo.Image = "https://www.roblox.com/asset-thumbnail/image?assetId="..id.."&width=420&height=420&format=png"
+	Fondo.Image = "rbxassetid://18138943003"
 	Fondo.ZIndex = 0
 	Fondo.Size = game.CoreGui:FindFirstChild("HubDestroyer").Main.Size
 end
@@ -166,7 +166,7 @@ Settings = game:service'HttpService':JSONEncode(readfile(Name))
 end)
 
 
-function Kavo.CreateLib(kavName, themeList, kavTitle)
+function Kavo.CreateLib(kavName, themeList)
     if not themeList then
         themeList = themes
     end
@@ -218,12 +218,12 @@ function Kavo.CreateLib(kavName, themeList, kavTitle)
     local headerCover = Instance.new("UICorner")
     local coverup = Instance.new("Frame")
     local title = Instance.new("TextLabel")
+    
     local MainSide = Instance.new("ScrollingFrame")
     local sideCorner = Instance.new("UICorner")
     local coverup_2 = Instance.new("Frame")
     local tabFrames = Instance.new("Frame")
     local tabListing = Instance.new("UIListLayout")
-    local close = Instance.new("ImageButton")
     local pages = Instance.new("Frame")
     local Pages = Instance.new("Folder")
     local infoContainer = Instance.new("Frame")
@@ -280,13 +280,13 @@ function Kavo.CreateLib(kavName, themeList, kavTitle)
     title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     title.BackgroundTransparency = 1.000
     title.BorderSizePixel = 0
-    title.Position = UDim2.new(0, 50, 0, 8)
+    title.Position = UDim2.new(0, 50, 0, 7)
     title.Size = UDim2.new(0, 204, 0, 8)
     title.Font = Enum.Font.Gotham
     title.RichText = true
     title.Text = kavName
     title.TextColor3 = Color3.fromRGB(255, 25, 25 )
-    title.TextSize = 15
+    title.TextSize = 16.000
     title.TextXAlignment = Enum.TextXAlignment.Left
    
    local title2 = Instance.new("TextLabel")
@@ -296,65 +296,17 @@ function Kavo.CreateLib(kavName, themeList, kavTitle)
     title2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     title2.BackgroundTransparency = 1.000
     title2.BorderSizePixel = 0
-    title2.Position = UDim2.new(0, 170, 0, 8)
+    title2.Position = UDim2.new(0, 175, 0, 7)
     title2.Size = UDim2.new(0, 204, 0, 8)
     title2.Font = Enum.Font.Gotham
     title2.RichText = true
-    title2.Text = kavTitle
+    title2.Text = "Developed by DXP Team"
     title2.TextColor3 = Color3.fromRGB(255, 218, 31)
-    title2.TextSize = 15
+    title2.TextSize = 16.000
     title2.TextXAlignment = Enum.TextXAlignment.Left
 
  
-local Corner3 = Instance.new("UICorner")
-
-Corner3.Name = "Corner3"
-Corner3.Parent = close
-Corner3.CornerRadius = UDim.new(0.5, 0)
-
-    close.Name = "close"
-    close.Parent = MainHeader
-    close.BackgroundColor3 = Color3.fromRGB(255, 5, 5)
-    close.BackgroundTransparency = 0
-    close.Position = UDim2.new(0.949999988, 0, 0.137999997, 0)
-    close.Size = UDim2.new(0, 21, 0, 21)
-    close.ZIndex = 2
-    close.Image = "rbxassetid://3926305904"
-    close.ImageRectOffset = Vector2.new(284, 4)
-    close.ImageRectSize = Vector2.new(24, 24)
-    close.MouseButton1Click:Connect(function()
-        game.TweenService:Create(close, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
-            ImageTransparency = 1
-        }):Play()
-        wait()
-        game.TweenService:Create(Main, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-            Size = UDim2.new(0, 0, 0, 0),
-            Position = UDim2.new(0, Main.AbsolutePosition.X + (Main.AbsoluteSize.X / 2), 0, Main.AbsolutePosition.Y + (Main.AbsoluteSize.Y / 2))
-        }):Play()
-        wait(1)
-        ScreenGui:Destroy()
-    end) 
-  
-     local minimize = Instance.new("TextButton")
-minimize.Name = "minimize"
-minimize.Parent = MainHeader 
-minimize.BackgroundTransparency = 0 
-minimize.BackgroundColor3 = Color3.fromRGB(48, 123, 242)
-minimize.Size = UDim2.new(0, 21, 0, 21)
-minimize.Position = UDim2.new(0.9, 0, 0.137999997, 0)   
-minimize.Text = "-"
-minimize.TextColor3 = Color3.fromRGB(255, 255, 255) 
-minimize.MouseButton1Click:Connect(function() 
-Kavo:ToggleUI() 
-end) 
-
-
-local MiniCorner = Instance.new("UICorner")
-MiniCorner.Name = "MiniCorner"
-MiniCorner.Parent = minimize  
-MiniCorner.CornerRadius = UDim.new(0.5, 0)    
-   
-  function Kavo:Logo(id) 
+  function Logo(id) 
  
     local Logo = Instance.new("ImageLabel")
     
@@ -364,8 +316,8 @@ MiniCorner.CornerRadius = UDim.new(0.5, 0)
     Logo.Position = UDim2.new(0, 10, 0, 3)
     Logo.Size = UDim2.new(0, 30, 0, 25)
     Logo.ZIndex = 2
-    Logo.Image = "rbxassetid://18138943003"..id
-  end 
+    Logo.Image = "http://www.roblox.com/asset/?id="..id
+  end
     
     MainSide.Name = "MainSide"
     MainSide.Parent = Main
@@ -376,7 +328,7 @@ MiniCorner.CornerRadius = UDim.new(0.5, 0)
     MainSide.Size = UDim2.new(0, 149, 0, 289)
     MainSide.ScrollBarImageColor3 = Color3.new(1, 0.794521, 0) 
     MainSide.CanvasSize = UDim2.new(0, 0, 1, 0)   
-    MainSide.ScrollBarThickness = 1.5 
+    MainSide.ScrollBarThickness = 6     
 
     sideCorner.CornerRadius = UDim.new(0, 4)
     sideCorner.Name = "sideCorner"
