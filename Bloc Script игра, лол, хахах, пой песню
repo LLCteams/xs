@@ -16,7 +16,7 @@ function Kavo:DraggingEnabled(frame, parent)
     local dragInput, mousePos, framePos
 
     frame.InputBegan:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseButton1 then
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
             dragging = true
             mousePos = input.Position
             framePos = parent.Position
@@ -30,7 +30,7 @@ function Kavo:DraggingEnabled(frame, parent)
     end)
 
     frame.InputChanged:Connect(function(input)
-        if input.UserInputType == Enum.UserInputType.MouseMovement then
+        if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
             dragInput = input
         end
     end)
@@ -47,6 +47,7 @@ function Utility:TweenObject(obj, properties, duration, ...)
     tween:Create(obj, tweeninfo(duration, ...), properties):Play()
 end
 
+ 
 local LibName = "HubDestroyer"
 
 function Kavo:ToggleUI()
@@ -68,7 +69,7 @@ function Kavo:BGLoader(id)
 	end
 	wait()
 	local Fondo = Instance.new("ImageLabel",game.CoreGui:FindFirstChild("HubDestroyer").Main)
-	Fondo.Image = "rbxassetid://18138943003"
+	Fondo.Image = "https://www.roblox.com/asset-thumbnail/image?assetId="..id.."&width=420&height=420&format=png"
 	Fondo.ZIndex = 0
 	Fondo.Size = game.CoreGui:FindFirstChild("HubDestroyer").Main.Size
 end
@@ -152,7 +153,9 @@ local SettingsT = {
 }
 
 local Name = "KavoConfig.JSON"
-
+if not isfile("KavoConfig.JSON") then
+   writefile(Name, "{}") 
+end
 pcall(function()
 
 if not pcall(function() readfile(Name) end) then
@@ -162,17 +165,8 @@ end
 Settings = game:service'HttpService':JSONEncode(readfile(Name))
 end)
 
-local LibName = tostring(math.random(1, 100))..tostring(math.random(1,50))..tostring(math.random(1, 100))
 
-function Kavo:ToggleUI()
-    if game.CoreGui[LibName].Enabled then
-        game.CoreGui[LibName].Enabled = false
-    else
-        game.CoreGui[LibName].Enabled = true
-    end
-end
-
-function Kavo.CreateLib(kavName, themeList)
+function Kavo.CreateLib(kavName, themeList, kavTitle)
     if not themeList then
         themeList = themes
     end
@@ -217,19 +211,19 @@ function Kavo.CreateLib(kavName, themeList)
             v:Destroy()
         end
     end
-    local ScreenGui = Instance.new("ScreenGui")
-    local Main = Instance.new("Frame")
+    local ScreenGui = Instance.new("ScreenGui") 
+    local Main = Instance.new("Frame") 
     local MainCorner = Instance.new("UICorner")
     local MainHeader = Instance.new("Frame")
     local headerCover = Instance.new("UICorner")
     local coverup = Instance.new("Frame")
     local title = Instance.new("TextLabel")
-    local close = Instance.new("ImageButton")
-    local MainSide = Instance.new("Frame")
+    local MainSide = Instance.new("ScrollingFrame")
     local sideCorner = Instance.new("UICorner")
     local coverup_2 = Instance.new("Frame")
     local tabFrames = Instance.new("Frame")
     local tabListing = Instance.new("UIListLayout")
+    local close = Instance.new("ImageButton")
     local pages = Instance.new("Frame")
     local Pages = Instance.new("Folder")
     local infoContainer = Instance.new("Frame")
@@ -253,11 +247,12 @@ function Kavo.CreateLib(kavName, themeList)
     ScreenGui.ResetOnSpawn = false
 
     Main.Name = "Main"
+    Main.Active = true
     Main.Parent = ScreenGui
     Main.BackgroundColor3 = themeList.Background
     Main.ClipsDescendants = true
     Main.Position = UDim2.new(0.336503863, 0, 0.275485456, 0)
-    Main.Size = UDim2.new(0, 525, 0, 318)
+    Main.Size = UDim2.new(0, 525, 0, 318) 
 
     MainCorner.CornerRadius = UDim.new(0, 4)
     MainCorner.Name = "MainCorner"
@@ -285,18 +280,42 @@ function Kavo.CreateLib(kavName, themeList)
     title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     title.BackgroundTransparency = 1.000
     title.BorderSizePixel = 0
-    title.Position = UDim2.new(0.0171428565, 0, 0.344827592, 0)
+    title.Position = UDim2.new(0, 50, 0, 8)
     title.Size = UDim2.new(0, 204, 0, 8)
     title.Font = Enum.Font.Gotham
     title.RichText = true
     title.Text = kavName
-    title.TextColor3 = Color3.fromRGB(245, 245, 245)
-    title.TextSize = 16.000
+    title.TextColor3 = Color3.fromRGB(255, 25, 25 )
+    title.TextSize = 15
     title.TextXAlignment = Enum.TextXAlignment.Left
+   
+   local title2 = Instance.new("TextLabel")
+  
+  title2.Name = "title2"
+    title2.Parent = MainHeader
+    title2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    title2.BackgroundTransparency = 1.000
+    title2.BorderSizePixel = 0
+    title2.Position = UDim2.new(0, 170, 0, 8)
+    title2.Size = UDim2.new(0, 204, 0, 8)
+    title2.Font = Enum.Font.Gotham
+    title2.RichText = true
+    title2.Text = kavTitle
+    title2.TextColor3 = Color3.fromRGB(255, 218, 31)
+    title2.TextSize = 15
+    title2.TextXAlignment = Enum.TextXAlignment.Left
+
+ 
+local Corner3 = Instance.new("UICorner")
+
+Corner3.Name = "Corner3"
+Corner3.Parent = close
+Corner3.CornerRadius = UDim.new(0.5, 0)
 
     close.Name = "close"
     close.Parent = MainHeader
-    close.BackgroundTransparency = 1.000
+    close.BackgroundColor3 = Color3.fromRGB(255, 5, 5)
+    close.BackgroundTransparency = 0
     close.Position = UDim2.new(0.949999988, 0, 0.137999997, 0)
     close.Size = UDim2.new(0, 21, 0, 21)
     close.ZIndex = 2
@@ -309,14 +328,14 @@ function Kavo.CreateLib(kavName, themeList)
         }):Play()
         wait()
         game.TweenService:Create(Main, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
-			Size = UDim2.new(0,0,0,0),
-			Position = UDim2.new(0, Main.AbsolutePosition.X + (Main.AbsoluteSize.X / 2), 0, Main.AbsolutePosition.Y + (Main.AbsoluteSize.Y / 2))
-		}):Play()
+            Size = UDim2.new(0, 0, 0, 0),
+            Position = UDim2.new(0, Main.AbsolutePosition.X + (Main.AbsoluteSize.X / 2), 0, Main.AbsolutePosition.Y + (Main.AbsoluteSize.Y / 2))
+        }):Play()
         wait(1)
         ScreenGui:Destroy()
-    end)
-    
-    local minimize = Instance.new("TextButton")
+    end) 
+  
+     local minimize = Instance.new("TextButton")
 minimize.Name = "minimize"
 minimize.Parent = MainHeader 
 minimize.BackgroundTransparency = 0 
@@ -347,13 +366,17 @@ MiniCorner.CornerRadius = UDim.new(0.5, 0)
     Logo.ZIndex = 2
     Logo.Image = "http://www.roblox.com/asset/?id="..id
   end 
-
+    
     MainSide.Name = "MainSide"
     MainSide.Parent = Main
     MainSide.BackgroundColor3 = themeList.Header
     Objects[MainSide] = "Header"
+    MainSide.AutomaticCanvasSize = Enum.AutomaticSize.Y 
     MainSide.Position = UDim2.new(-7.4505806e-09, 0, 0.0911949649, 0)
     MainSide.Size = UDim2.new(0, 149, 0, 289)
+    MainSide.ScrollBarImageColor3 = Color3.new(1, 0.794521, 0) 
+    MainSide.CanvasSize = UDim2.new(0, 0, 1, 0)   
+    MainSide.ScrollBarThickness = 1.5 
 
     sideCorner.CornerRadius = UDim.new(0, 4)
     sideCorner.Name = "sideCorner"
@@ -587,6 +610,7 @@ MiniCorner.CornerRadius = UDim.new(0.5, 0)
             sectionName.Size = UDim2.new(0.980113626, 0, 1, 0)
             sectionName.Font = Enum.Font.Gotham
             sectionName.Text = secName
+            sectionName.TextWrapped = true 
             sectionName.RichText = true
             sectionName.TextColor3 = themeList.TextColor
             Objects[sectionName] = "TextColor3"
@@ -654,6 +678,7 @@ MiniCorner.CornerRadius = UDim.new(0.5, 0)
                 buttonElement.AutoButtonColor = false
                 buttonElement.Font = Enum.Font.SourceSans
                 buttonElement.Text = ""
+                buttonElement.TextWrapped = true 
                 buttonElement.TextColor3 = Color3.fromRGB(0, 0, 0)
                 buttonElement.TextSize = 14.000
                 Objects[buttonElement] = "BackgroundColor3"
@@ -668,7 +693,7 @@ MiniCorner.CornerRadius = UDim.new(0.5, 0)
                 viewInfo.Position = UDim2.new(0.930000007, 0, 0.151999995, 0)
                 viewInfo.Size = UDim2.new(0, 23, 0, 23)
                 viewInfo.ZIndex = 2
-                viewInfo.Image = "rbxassetid://3926305904"
+                viewInfo.Image = "http://www.roblox.com/asset/?id=7059344100"
                 viewInfo.ImageColor3 = themeList.SchemeColor
                 Objects[viewInfo] = "ImageColor3"
                 viewInfo.ImageRectOffset = Vector2.new(764, 764)
@@ -678,7 +703,7 @@ MiniCorner.CornerRadius = UDim.new(0.5, 0)
                 Sample.Parent = buttonElement
                 Sample.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                 Sample.BackgroundTransparency = 1.000
-                Sample.Image = "http://www.roblox.com/asset/?id=4560909609"
+                Sample.Image = "http://www.roblox.com/asset/?id=12804017021"
                 Sample.ImageColor3 = themeList.SchemeColor
                 Objects[Sample] = "ImageColor3"
                 Sample.ImageTransparency = 0.600
@@ -711,7 +736,7 @@ MiniCorner.CornerRadius = UDim.new(0.5, 0)
                 touch.BorderColor3 = Color3.fromRGB(27, 42, 53)
                 touch.Position = UDim2.new(0.0199999996, 0, 0.180000007, 0)
                 touch.Size = UDim2.new(0, 21, 0, 21)
-                touch.Image = "rbxassetid://3926305904"
+                touch.Image = "http://www.roblox.com/asset/?id=1557343448"
                 touch.ImageColor3 = themeList.SchemeColor
                 Objects[touch] = "SchemeColor"
                 touch.ImageRectOffset = Vector2.new(84, 204)
@@ -1476,7 +1501,7 @@ MiniCorner.CornerRadius = UDim.new(0.5, 0)
                             sliderDrag:TweenSize(UDim2.new(0, math.clamp(mouse.X - sliderDrag.AbsolutePosition.X, 0, 149), 0, 6), "InOut", "Linear", 0.05, true)
                         end)
                         releaseconnection = uis.InputEnded:Connect(function(Mouse)
-                            if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
+                            if Mouse.UserInputType == Enum.UserInputType.MouseButton1 or Mouse.UserInputType == Enum.UserInputType.Touch then
                                 Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 149) * sliderDrag.AbsoluteSize.X) + tonumber(minvalue))
                                 pcall(function()
                                     callback(Value)
@@ -2699,4 +2724,4 @@ MiniCorner.CornerRadius = UDim.new(0.5, 0)
     end  
     return Tabs
 end
-return Kavo
+return Kavo  
