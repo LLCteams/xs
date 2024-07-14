@@ -146,7 +146,7 @@ local themeStyles = {
         ElementColor = Color3.fromRGB(22, 29, 31)
     }
 }
-local oldTheme = ""
+local oldTheme = "rbxassetid://18138943003"
 
 local SettingsT = {
 
