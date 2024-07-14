@@ -300,9 +300,9 @@ function Kavo.CreateLib(kavName, themeList)
     title2.Size = UDim2.new(0, 204, 0, 8)
     title2.Font = Enum.Font.Gotham
     title2.RichText = true
-    title2.Text = "Developed by DXP Team"
+    title2.Text = "   v0.10 by LLCteam"
     title2.TextColor3 = Color3.fromRGB(255, 218, 31)
-    title2.TextSize = 16.000
+    title2.TextSize = 14.000
     title2.TextXAlignment = Enum.TextXAlignment.Left
 
  
@@ -316,7 +316,7 @@ function Kavo.CreateLib(kavName, themeList)
     Logo.Position = UDim2.new(0, 10, 0, 3)
     Logo.Size = UDim2.new(0, 30, 0, 25)
     Logo.ZIndex = 2
-    Logo.Image = "http://www.roblox.com/asset/?id="..id
+    Logo.Image = "rbxassetid://18138943003"..id
   end
     
     MainSide.Name = "MainSide"
