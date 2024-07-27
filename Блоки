@@ -3376,7 +3376,7 @@ StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
 if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
 local chatFrame = player.PlayerGui.Chat.Frame
 chatFrame.ChatChannelParentFrame.Visible = true
-chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Siz)
+chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y) 
 end
 
 local InfiniteJumpEnabled;
@@ -4855,7 +4855,7 @@ Toggle21:Callback(function(Value)
 		end
 end)
 
-Toggle6:Callback(function()
+Toggle6:Callback(function(state)
   getgenv().enabled = state --Toggle on/off
 getgenv().filluseteamcolor = true --Toggle fill color using player team color on/off
 getgenv().outlineuseteamcolor = true --Toggle outline color using player team color on/off
@@ -12215,7 +12215,7 @@ StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
 if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
 local chatFrame = player.PlayerGui.Chat.Frame
 chatFrame.ChatChannelParentFrame.Visible = true
-chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Siz)
+chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
 end
 
 local InfiniteJumpEnabled;
@@ -13692,7 +13692,7 @@ Toggle20:Callback(function(Value)
 		end
 end)
 
-Toggle6:Callback(function()
+Toggle6:Callback(function(state)
   getgenv().enabled = state --Toggle on/off
 getgenv().filluseteamcolor = true --Toggle fill color using player team color on/off
 getgenv().outlineuseteamcolor = true --Toggle outline color using player team color on/off
