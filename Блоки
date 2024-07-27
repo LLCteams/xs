@@ -92,7 +92,7 @@ local function CreateGUI(title)
     agreeFrame.Size = UDim2.new(0.8, 0, 0.5, 0)
     agreeFrame.Position = UDim2.new(0.1, 0, 0.22, 0)
     agreeFrame.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
-    agreeFrame.Text = "1. this script need High exploits to run with high experience.\n 2. Credits are from our LLCteam.\n 3. Easy-user interface for use mobile, pc executors.\n 4. Don't use if not officially version.\n 5. Changelogs ：2024-07-26"
+    agreeFrame.Text = "Welcome to Universe - X 3.0!\n 1. Universe - X script need High exploits to run, are you sure to entering high experience?\n 2. Thanks to our team, LLCteam.\n 3. Easy-user interface for use mobile, pc executors.\n 4. Don't use if not officially version.\n 5. All devices should working now.\n 6. Changelogs ：2024-07-27"
     agreeFrame.TextWrapped = true
 
     
@@ -115,7 +115,7 @@ local function CreateGUI(title)
     minimizeButton.BackgroundTransparency = 0
     minimizeButton.BackgroundColor3 = Color3.fromRGB(199, 199, 199)
     minimizeButton.Text = "--"
-    minimizeButton.TextSize = 28  
+    minimizeButton.TextSize = 20
     minimizeButton.TextColor3 = Color3.new(0, 0, 0)
     minimizeButton.Font = Enum.Font.SourceSans
     minimizeButton.Parent = frame
@@ -131,7 +131,7 @@ local function CreateGUI(title)
             frame.Size = UDim2.new(0, 500, 0, 280)
             titleLabel.Position = UDim2.new(0, 0, 0.01, 0)
             minimizeButton.Text = "-"
-            minimizeButton.TextSize = 28
+            minimizeButton.TextSize = 20
             isMinimized = false
             disagreeButton.Visible = true
             agreeButton.Visible = true
@@ -140,7 +140,7 @@ local function CreateGUI(title)
             frame.Size = UDim2.new(0, 500, 0, 60)
             titleLabel.Position = UDim2.new(0, 0, 0, 0)
             minimizeButton.Text = "-"
-            minimizeButton.TextSize = 28 
+            minimizeButton.TextSize = 20
             isMinimized = true
             disagreeButton.Visible = false
             agreeButton.Visible = false
@@ -2430,7 +2430,7 @@ function TOJIAFJ_fake_script() -- Hoho.LocalScript
 	local script = Instance.new('LocalScript', Hoho)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		uxpro() 
+		uxpro()
 		game:Shutdown() 
 	end)
 end
@@ -2724,7 +2724,7 @@ end
 -- Function to update the loading progress
 function updateProgress(progress)
     loadingBarFrame.Size = UDim2.new(progress / 105, 0, 0, 10)
-    loadingText.Text = "| Repairing System | " .. progress .. "% |"
+    loadingText.Text = "| System | " .. progress .. "% |"
 end
 
 
@@ -3243,18 +3243,14 @@ Toggle10:Callback(function(K)
     end
     end)
 end)
-local Toggle11 = Tab3:AddToggle({
-  Name = "Disable-Spy Chat",
-  Description = "Spy on players chat, <font color='rgb(88, 101, 242)'>active it</font> to know what they talkin.",
-  Default = true
-})
-local Toggle12 = Tab3:AddToggle({
-  Name = "Enable-Spy Chat",
-  Description = "Team check for every players, <font color='rgb(88, 101, 242)'>active it</font> to show the team, unknown or enemy.",
-  Default = true
-})
-
-Toggle11:Callback(function()
+Tab3:AddButton({"Disable SpyChat", function() 
+offSpy() 
+end}) 
+Tab3:AddButton({"Enable SpyChat", function()
+onSpy() 
+end}) 
+  
+function offSpy() 
 --This script reveals ALL hidden messages in the default chat
 
 enabled = false  --chat "/spy" to toggle!
@@ -3317,8 +3313,8 @@ if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
 local chatFrame = player.PlayerGui.Chat.Frame
 chatFrame.ChatChannelParentFrame.Visible = true
 chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
-end) 
-Toggle12:Callback(function()
+end
+function onSpy() 
 --This script reveals ALL hidden messages in the default chat
 
 enabled = true --chat "/spy" to toggle!
@@ -3380,8 +3376,8 @@ StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
 if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
 local chatFrame = player.PlayerGui.Chat.Frame
 chatFrame.ChatChannelParentFrame.Visible = true
-chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
-end)
+chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Siz)
+end
 
 local InfiniteJumpEnabled;
 local Toggle9 = Tab3:AddToggle({
@@ -3401,6 +3397,9 @@ Tab3:AddButton({"Reset Ability", function()
         game:GetService("Workspace"):WaitForChild("Camera").FieldOfView = 70
         game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 70
 end})
+Tab3:AddButton({"Restore Health", function() 
+      game.Players.LocalPlayer.Character.Humanoid.Health = game.Players.LocalPlayer.Character.Humanoid.MaxHealth 
+end}) 
 Tab3:AddSlider({
   Name = "WalkSpeed",
   Min = 16,
@@ -3462,6 +3461,22 @@ Tab3:AddSlider({
   end
 })
 Tab3:AddTextBox({
+  Name = "Current Health",
+  Description = "Enter a number.",
+  Default = "100",
+  Callback = function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.Health = Value
+  end
+})
+Tab3:AddTextBox({
+  Name = "Max Health",
+  Description = "Enter a number.",
+  Default = "100",
+  Callback = function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.MaxHealth = Value
+  end
+})
+Tab3:AddTextBox({
   Name = "Walk Speed",
   Description = "Enter a number.",
   Default = "16", 
@@ -3509,6 +3524,7 @@ Tab3:AddTextBox({
     game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = Y
   end
 })
+
 
 local Paragraph = Tab4:AddParagraph({"Testing 3.0", "Universe - X giving a kill all script, beat them all!"})
 Tab4:AddButton({"Kill All", function()
@@ -4825,7 +4841,21 @@ local Toggle6 = Tab5:AddToggle({
   Default = false
 })
 
-Toggle6:Callback(function(state)
+local Toggle21 = Tab5:AddToggle({
+  Name = "Night Vision",
+  Description = "Night vision, <font color='rgb(88, 101, 242)'>active it</font> to view around brilightnerlightner.",
+  Default = false
+})
+
+Toggle21:Callback(function(Value)
+		if Value then
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
+		else
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
+		end
+end)
+
+Toggle6:Callback(function()
   getgenv().enabled = state --Toggle on/off
 getgenv().filluseteamcolor = true --Toggle fill color using player team color on/off
 getgenv().outlineuseteamcolor = true --Toggle outline color using player team color on/off
@@ -12052,18 +12082,14 @@ Toggle10:Callback(function(K)
     end
     end)
 end)
-local Toggle11 = Tab3:AddToggle({
-  Name = "Disable-Spy Chat",
-  Description = "Spy on players chat, <font color='rgb(88, 101, 242)'>active it</font> to know what they talkin.",
-  Default = true
-})
-local Toggle12 = Tab3:AddToggle({
-  Name = "Enable-Spy Chat",
-  Description = "Team check for every players, <font color='rgb(88, 101, 242)'>active it</font> to show the team, unknown or enemy.",
-  Default = true
-})
-
-Toggle11:Callback(function()
+Tab3:AddButton({"Disable SpyChat", function() 
+offSpy() 
+end}) 
+Tab3:AddButton({"Enable SpyChat", function()
+onSpy() 
+end}) 
+  
+function offSpy() 
 --This script reveals ALL hidden messages in the default chat
 
 enabled = false  --chat "/spy" to toggle!
@@ -12126,8 +12152,8 @@ if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
 local chatFrame = player.PlayerGui.Chat.Frame
 chatFrame.ChatChannelParentFrame.Visible = true
 chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
-end) 
-Toggle12:Callback(function()
+end
+function onSpy() 
 --This script reveals ALL hidden messages in the default chat
 
 enabled = true --chat "/spy" to toggle!
@@ -12189,8 +12215,8 @@ StarterGui:SetCore("ChatMakeSystemMessage",privateProperties)
 if not player.PlayerGui:FindFirstChild("Chat") then wait(3) end
 local chatFrame = player.PlayerGui.Chat.Frame
 chatFrame.ChatChannelParentFrame.Visible = true
-chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
-end)
+chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Siz)
+end
 
 local InfiniteJumpEnabled;
 local Toggle9 = Tab3:AddToggle({
@@ -12210,6 +12236,9 @@ Tab3:AddButton({"Reset Ability", function()
         game:GetService("Workspace"):WaitForChild("Camera").FieldOfView = 70
         game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 70
 end})
+Tab3:AddButton({"Restore Health", function() 
+      game.Players.LocalPlayer.Character.Humanoid.Health = game.Players.LocalPlayer.Character.Humanoid.MaxHealth 
+end}) 
 Tab3:AddSlider({
   Name = "WalkSpeed",
   Min = 16,
@@ -12268,6 +12297,22 @@ Tab3:AddSlider({
   Default = 75,
   Callback = function(Y) 
     game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = Y
+  end
+})
+Tab3:AddTextBox({
+  Name = "Current Health",
+  Description = "Enter a number.",
+  Default = "100",
+  Callback = function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.Health = Value
+  end
+})
+Tab3:AddTextBox({
+  Name = "Max Health",
+  Description = "Enter a number.",
+  Default = "100",
+  Callback = function(Value)
+    game.Players.LocalPlayer.Character.Humanoid.MaxHealth = Value
   end
 })
 Tab3:AddTextBox({
@@ -13634,7 +13679,20 @@ local Toggle6 = Tab5:AddToggle({
   Default = false
 })
 
-Toggle6:Callback(function(state)
+local Toggle20 = Tab5:AddToggle({
+  Name = "Night Vision",
+  Description = "Night vision for fun <font color='rgb(88, 101, 242)'>active it</font> to see lightning textures.",
+  Default = false
+})
+Toggle20:Callback(function(Value)
+		if Value then
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
+		else
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
+		end
+end)
+
+Toggle6:Callback(function()
   getgenv().enabled = state --Toggle on/off
 getgenv().filluseteamcolor = true --Toggle fill color using player team color on/off
 getgenv().outlineuseteamcolor = true --Toggle outline color using player team color on/off
