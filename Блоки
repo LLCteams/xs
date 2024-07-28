@@ -1,4 +1,72 @@
 
+local creditText = "UX Update-v0.327.116 || ありがとう😍 "
+local creditDuration = 99999999999999
+
+local decalIds = {
+    5479567228,
+    5479565074,
+    5479559610,
+}
+
+local decalId = decalIds[math.random(#decalIds)]
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "NotificationCreditsGui"
+ScreenGui.ResetOnSpawn = false
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent = game.Players.LocalPlayer.PlayerGui
+
+local Frame = Instance.new("Frame")
+Frame.BackgroundTransparency = 1
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(1, -200, 1, -50)
+Frame.Size = UDim2.new(0, 200, 0, 50)
+Frame.Parent = ScreenGui
+
+local Decal = Instance.new("Decal")
+Decal.Texture = "rbxassetid://16060333448" .. decalId
+Decal.Face = Enum.NormalId.Back
+Decal.Parent = Frame
+
+local TextLabel = Instance.new("TextLabel")
+TextLabel.BackgroundTransparency = 1
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = creditText
+TextLabel.TextColor3 = Color3.fromRGB(0, 255, 0) -- 255 x 3
+TextLabel.TextSize = 16
+TextLabel.Position = UDim2.new(0, 10, 0, 10)
+TextLabel.Size = UDim2.new(1, -20, 1, -20)
+TextLabel.Parent = Frame
+
+local function animateNotification()
+    Frame:TweenPosition(UDim2.new(1, -200, 1, -50), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.5, true)
+    wait(creditDuration - 1)
+    Frame:TweenPosition(UDim2.new(1, 0, 1, -50), Enum.EasingDirection.InOut, Enum.EasingStyle.Sine, 0.5, true)
+    wait(0.5)
+    ScreenGui:Destroy()
+end
+
+local LBLG = Instance.new("ScreenGui", getParent)
+local LBL = Instance.new("TextLabel", getParent)
+local player = game.Players.LocalPlayer
+
+LBLG.Name = "LBLG"
+LBLG.Parent = game.CoreGui
+LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LBLG.Enabled = true
+LBL.Name = "LBL"
+LBL.Parent = LBLG
+LBL.BackgroundColor3 = Color3.new(1, 1, 1)
+LBL.BackgroundTransparency = 1
+LBL.BorderColor3 = Color3.new(0, 0, 0)
+LBL.Position = UDim2.new(0.75,0,0.010,0)
+LBL.Size = UDim2.new(0, 133, 0, 30)
+LBL.Font = Enum.Font.GothamSemibold
+LBL.Text = "UX - 3.0"
+LBL.TextColor3 = Color3.new(255, 0, 0)
+LBL.TextScaled = true
+LBL.TextSize = 5
+LBL.TextWrapped = true
+LBL.Visible = true
 
 local UserInputService = game:GetService("UserInputService")
 
@@ -65,7 +133,7 @@ local function CreateGUI(title)
         frame.Size.Y.Offset - 0.25 * frame.Size.Y.Offset)
     disagreeButton.BackgroundTransparency = 0
     disagreeButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    disagreeButton.Text = "X"
+    disagreeButton.Text = "×"
     disagreeButton.TextColor3 = Color3.new(255, 0, 0)
     disagreeButton.TextSize = math.floor(frame.Size.Y.Offset * 0.08)
     disagreeButton.Font = Enum.Font.SourceSans
@@ -92,7 +160,7 @@ local function CreateGUI(title)
     agreeFrame.Size = UDim2.new(0.8, 0, 0.5, 0)
     agreeFrame.Position = UDim2.new(0.1, 0, 0.22, 0)
     agreeFrame.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
-    agreeFrame.Text = "Welcome to Universe - X 3.0!\n 1. Universe - X script need High exploits to run, are you sure to entering high experience?\n 2. Thanks to our team, LLCteam.\n 3. Easy-user interface for use mobile, pc executors.\n 4. Don't use if not officially version.\n 5. All devices should working now.\n 6. Changelogs ：2024-07-27"
+    agreeFrame.Text = " Welcome to Universe - X!\n Announcements!!\n Universe - X currently changing new owners & helper because BUYED by someone, if you reading this UX will be different for next time.\n\n 1. Universe - X script need High exploits to run, are you sure to entering high experience?\n 2. Thanks to our team, LLCteam.\n 3. Easy-user interface for use mobile, pc executors.\n 4. Don't use if not officially version.\n 5. All devices should working now.\n 6. Changelogs ：2024-07-27"
     agreeFrame.TextWrapped = true
 
     
