@@ -1,5 +1,5 @@
 
-local creditText = "UX Update-v0.327.116 || ありがとう😍 "
+local creditText = "UX Update-v0.422.252 || ありがとう😍 "
 local creditDuration = 99999999999999
 
 local decalIds = {
@@ -160,7 +160,7 @@ local function CreateGUI(title)
     agreeFrame.Size = UDim2.new(0.8, 0, 0.5, 0)
     agreeFrame.Position = UDim2.new(0.1, 0, 0.22, 0)
     agreeFrame.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
-    agreeFrame.Text = " Welcome to Universe - X!\n Announcements!!\n Universe - X currently changing new owners & helper because BUYED by someone, if you reading this UX will be different for next time.\n\n 1. Universe - X script need High exploits to run, are you sure to entering high experience?\n 2. Thanks to our team, LLCteam.\n 3. Easy-user interface for use mobile, pc executors.\n 4. Don't use if not officially version.\n 5. All devices should working now.\n 6. Changelogs ：2024-07-27"
+    agreeFrame.Text = " Welcome to Universe - X!\n 1. Universe - X script need High exploits to run, are you sure to entering high experience?\n 2. Thanks to our team, LLCteam.\n 3. Easy-user interface for use mobile, pc executors.\n 4. Don't use if not officially version.\n 5. All devices should working now.\n 6. Changelogs ：2024-07-27"
     agreeFrame.TextWrapped = true
 
     
