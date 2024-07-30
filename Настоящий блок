@@ -8,7 +8,7 @@ local window = DrRayLibrary:Load("UX 3.0", "Default")
 local tab1 = DrRayLibrary.newTab("Home", "ImageIdHere")
 
 -- Add elements to the first tab
-tab1.newLabel("Hello, Welcome to Loader of UX!")
+tab1.newLabel("Watch out! Universe - X was lost control of protection.")
 tab1.newButton("Universe - X 3.0", "Loads Universe - X", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/4bn47Jb0"))()
 end)
