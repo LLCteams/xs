@@ -45,6 +45,9 @@ local function onButtonClick()
     Funtouch() 
 end
 
+-- Connect the button click event to the function
+imageButton.MouseButton1Click:Connect(onButtonClick)
+
 function Funtouch() 
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
