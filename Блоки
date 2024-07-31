@@ -1,5 +1,276 @@
+-- Create ScreenGui and ImageButton if not already created
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
 
-local creditText = "UX Update-v0.422.252 || ありがとう😍 "
+-- Create and configure ScreenGui
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "CenteredImageGui"
+screenGui.Parent = playerGui
+
+-- Add BlurEffect to Lighting
+local lighting = game:GetService("Lighting")
+local blurEffect = Instance.new("BlurEffect")
+blurEffect.Size = 24 -- Adjust the blur intensity (higher values mean more blur)
+blurEffect.Parent = lighting
+
+-- Create and configure ImageButton
+local imageButton = Instance.new("ImageButton")
+imageButton.Size = UDim2.new(0, 100, 0, 100) -- Size of the button
+imageButton.AnchorPoint = Vector2.new(0.5, 0.5) -- Anchor to center
+imageButton.Position = UDim2.new(0.5, 0, 0.5, 0) -- Centered on the screen
+imageButton.Image = "rbxassetid://18646253053" -- Your image ID
+imageButton.Parent = screenGui
+
+-- Create the TextLabel
+
+local textLabel = Instance.new("TextLabel") 
+textLabel.Parent = screenGui
+textLabel.Text = "You have locked, verify your executors to continue!"
+textLabel.Size = UDim2.new(1, 0, 0, 100)  -- Adjust size to make text bigger
+textLabel.Position = UDim2.new(0, 0, 0, 0)  -- Adjust position as needed
+
+-- Set the TextLabel's properties
+textLabel.TextTransparency = 0  -- Text is visible
+textLabel.BackgroundTransparency = 1  -- Label background is invisible
+textLabel.TextStrokeTransparency = 1  -- No stroke around the text
+textLabel.TextColor3 = Color3.fromRGB(255, 0, 0)  -- Set text color to black
+textLabel.Font = Enum.Font.SourceSans
+textLabel.TextSize = 48  -- Make text larger
+
+-- Function to handle button click
+local function onButtonClick()
+    textLabel:Destroy()  -- Destroy the ROBLOX text
+    imageButton:Destroy()
+    blurEffect:Destroy()
+    Funtouch() 
+end
+
+function Funtouch() 
+if (identifyexecutor()) == "Trigon" then
+Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Trigon Evo doesnt have please switch to something else! (Error.)") 
+end
+
+if (identifyexecutor()) == "Fluxus" then
+Notification.Notify("Universe X 3.0", "Fluxus too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Fluxus doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Evon" then
+Notification.Notify("Universe X 3.0", "Evon too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Evon doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Hydrogen" then
+Notification.Notify("Universe X 3.0", "Hydrogen too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Hydrogen doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Codex" then
+Notification.Notify("Universe X 3.0", "Codex too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Codex doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Vega X" then
+Notification.Notify("Universe X 3.0", "Vega X too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Vega X doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Wave" then
+Notification.Notify("Universe X 3.0", "Wave too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Wave doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Krampus" then
+Notification.Notify("Universe X 3.0", "Krampus too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Krampus doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Delta" then
+Notification.Notify("Universe X 3.0", "Delta too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Delta doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "KRNL" then
+Notification.Notify("Universe X 3.0", "KRNL has error and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that KRNL doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Ro-Exec" then
+Notification.Notify("Universe X 3.0", "Ro-Exec too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Ro-Exec doesnt have please switch to something else! (Error.)")
+end
+
+
+if (identifyexecutor()) == "Script-Ware" then
+Notification.Notify("Universe X 3.0", "Script-Ware not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Script-Ware doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Sirhurt" then
+Notification.Notify("Universe X 3.0", "Sirhurt too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Sirhurt doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Electron" then
+Notification.Notify("Universe X 3.0", "Electron too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Electron doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Comet" then
+Notification.Notify("Universe X 3.0", "Comet too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Comet doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Sentiner" then
+Notification.Notify("Universe X 3.0", "Sentiner too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Sentiner doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Celery" then
+Notification.Notify("Universe X 3.0", "Celery not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Celery doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "JJSploit" then
+Notification.Notify("Universe X 3.0", "Arceus X not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that JJSploit doesnt have please switch to something else! (Error.)")
+end
+
+--[[
+if (identifyexecutor()) == "Solara" then
+Notification.Notify("Universe X 3.0", "Universe - X failed..", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Solara doesnt have please switch to something else! (Error.)") 
+end
+
+if (identifyexecutor()) == "Arceus X" then
+Notification.Notify("Universe X 3.0", "Arceus X not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Arceus X doesnt have please switch to something else! (Error.)")
+end
+]]
+
+
+local creditText = "UX Update-v0.512.276 || ありがとう😍 "
 local creditDuration = 99999999999999
 
 local decalIds = {
@@ -160,7 +431,7 @@ local function CreateGUI(title)
     agreeFrame.Size = UDim2.new(0.8, 0, 0.5, 0)
     agreeFrame.Position = UDim2.new(0.1, 0, 0.22, 0)
     agreeFrame.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
-    agreeFrame.Text = " Welcome to Universe - X!\n 1. Universe - X script need High exploits to run, are you sure to entering high experience?\n 2. Thanks to our team, LLCteam.\n 3. Easy-user interface for use mobile, pc executors.\n 4. Don't use if not officially version.\n 5. All devices should working now.\n 6. Changelogs ：2024-07-27"
+    agreeFrame.Text = "\n 1. Universe - X currently supporting HIGH execution are you continue?\n 2. Thanks to our team, LLCteam.\n 3. Arceus X, Solara only.\n 4. Don't use if not officially version.\n 5. Changelogs ：2024-07-31"
     agreeFrame.TextWrapped = true
 
     
@@ -49219,3 +49490,4 @@ RemoverSection:NewButton("Clear All Lighting", "Remove every items in Lighting."
 end)
 end
 end -- Of all line
+end -- Funtouch
