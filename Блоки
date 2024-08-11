@@ -26,7 +26,7 @@ imageButton.Parent = screenGui
 local textLabel = Instance.new("TextLabel") 
 textLabel.Parent = screenGui
 textLabel.Text = "You have locked, verify your executors to continue!"
-textLabel.Size = UDim2.new(1, 0, 0, 100)  -- Adjust size to make text bigger
+textLabel.Size = UDim2.new(1, 0, 0, 75)  -- Adjust size to make text bigger
 textLabel.Position = UDim2.new(0, 0, 0, 0)  -- Adjust position as needed
 
 -- Set the TextLabel's properties
@@ -49,6 +49,8 @@ end
 imageButton.MouseButton1Click:Connect(onButtonClick)
 
 function Funtouch() 
+
+--[[
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
     Duration = 6,
@@ -248,18 +250,6 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that JJSploit doesnt have please switch to something else! (Error.)")
 end
 
---[[
-if (identifyexecutor()) == "Solara" then
-Notification.Notify("Universe X 3.0", "Universe - X failed..", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Solara doesnt have please switch to something else! (Error.)") 
-end
-
 if (identifyexecutor()) == "Arceus X" then
 Notification.Notify("Universe X 3.0", "Arceus X not support this script!", "rbxassetid://17415983489", {
     Duration = 6,
@@ -271,6 +261,18 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that Arceus X doesnt have please switch to something else! (Error.)")
 end
 ]]
+
+if (identifyexecutor()) == "Solara" then
+Notification.Notify("Universe X 3.0", "Universe - X failed..", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Solara doesnt have please switch to something else! (Error.)") 
+end
+
 
 
 local creditText = "UX Update-v0.512.276 || ありがとう😍 "
@@ -434,7 +436,7 @@ local function CreateGUI(title)
     agreeFrame.Size = UDim2.new(0.8, 0, 0.5, 0)
     agreeFrame.Position = UDim2.new(0.1, 0, 0.22, 0)
     agreeFrame.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
-    agreeFrame.Text = "\n 1. Universe - X currently supporting HIGH execution are you continue?\n 2. Thanks to our team, LLCteam.\n 3. Arceus X, Solara only.\n 4. Don't use if not officially version.\n 5. Changelogs ：2024-07-31"
+    agreeFrame.Text = " Universe - X || 3.0\n 1. Universe - X currently supporting HIGH execution are you continue?\n 2. Thanks to our team, LLCteam.\n 3. Solara was blocked.\n 4. Don't use if not officially version.\n 5. Changelogs ：2024-07-31"
     agreeFrame.TextWrapped = true
 
     
@@ -1997,7 +1999,7 @@ Icon.Parent = SonicT
 Icon.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
 Icon.Position = UDim2.new(0.0464059711, 0, 0, 0)
 Icon.Size = UDim2.new(0, 37, 0, 37)
-Icon.Image = "rbxassetid://13981987402"
+Icon.Image = "rbxassetid://18817407273"
 
 UICorner_66.Parent = Icon
 
@@ -2772,8 +2774,8 @@ function TOJIAFJ_fake_script() -- Hoho.LocalScript
 	local script = Instance.new('LocalScript', Hoho)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		uxpro()
-		game:Shutdown() 
+		uxpro() 
+		-- Shutdown
 	end)
 end
 coroutine.wrap(TOJIAFJ_fake_script)()
@@ -3114,8 +3116,8 @@ Notification.Notify("Universe X 3.0", "feature has been actived successfully, fe
         Rounding = true,
     }
 });
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/2.Bloxy%20%D1%82%D0%B5%D1%81%D1%82%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D1%81%D0%B5%D1%85%2C%20%D0%BA%D1%80%D0%BE%D0%BC%D0%B5%20%D0%B8%D0%B3%D1%80%D1%8B%20%D1%81%D1%83%D0%BF%D0%B5%D1%80"))()
---- https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
+--- https://raw.githubusercontent.com/LLCteams/xs/main/2.Bloxy%20%D1%82%D0%B5%D1%81%D1%82%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D1%81%D0%B5%D1%85%2C%20%D0%BA%D1%80%D0%BE%D0%BC%D0%B5%20%D0%B8%D0%B3%D1%80%D1%8B%20%D1%81%D1%83%D0%BF%D0%B5%D1%80"))()
 
 local Window = redzlib:MakeWindow({
   Title = "UX",
@@ -19761,7 +19763,7 @@ local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xH
 
 --- game:GetService("StarterGui"):SetCore("DevConsoleVisible",false)
 
-local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord"))()
+local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/testingstuffs/main/uilib"))()
 
 local win = DiscordLib:Window("Universe - X || [v0.29a]", Color3.fromRGB(0, 255, 0)) 
 
