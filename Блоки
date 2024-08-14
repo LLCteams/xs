@@ -10,7 +10,7 @@ screenGui.Parent = playerGui
 -- Add BlurEffect to Lighting
 local lighting = game:GetService("Lighting")
 local blurEffect = Instance.new("BlurEffect")
-blurEffect.Size = 24 -- Adjust the blur intensity (higher values mean more blur)
+blurEffect.Size = 34 -- Adjust the blur intensity (higher values mean more blur)
 blurEffect.Parent = lighting
 
 -- Create and configure ImageButton
@@ -25,15 +25,15 @@ imageButton.Parent = screenGui
 
 local textLabel = Instance.new("TextLabel") 
 textLabel.Parent = screenGui
-textLabel.Text = "You have locked, verify your executors to continue!"
-textLabel.Size = UDim2.new(1, 0, 0, 75)  -- Adjust size to make text bigger
+textLabel.Text = "Welcome, we need verify you before continue"
+textLabel.Size = UDim2.new(1, 0, 0, 100)  -- Adjust size to make text bigger
 textLabel.Position = UDim2.new(0, 0, 0, 0)  -- Adjust position as needed
 
 -- Set the TextLabel's properties
 textLabel.TextTransparency = 0  -- Text is visible
 textLabel.BackgroundTransparency = 1  -- Label background is invisible
 textLabel.TextStrokeTransparency = 1  -- No stroke around the text
-textLabel.TextColor3 = Color3.fromRGB(255, 0, 0)  -- Set text color to black
+textLabel.TextColor3 = Color3.fromRGB(0, 255, 0)  -- Set text color to black
 textLabel.Font = Enum.Font.SourceSans
 textLabel.TextSize = 48  -- Make text larger
 
@@ -49,6 +49,16 @@ end
 imageButton.MouseButton1Click:Connect(onButtonClick)
 
 function Funtouch() 
+function chatnotify(msg)
+	game.StarterGui:SetCore("ChatMakeSystemMessage", {
+		Text = msg,
+		Color = Color3.fromRGB(255, 0, 0),
+		Font = Enum.Font.SourceSans,
+		FontSize = Enum.FontSize.Size48
+	})
+end
+
+chatnotify("Updated to latest version: 638.791")
 
 --[[
 if (identifyexecutor()) == "Trigon" then
@@ -250,6 +260,17 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that JJSploit doesnt have please switch to something else! (Error.)")
 end
 
+if (identifyexecutor()) == "Solara" then
+Notification.Notify("Universe X 3.0", "Universe - X failed..", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Solara doesnt have please switch to something else! (Error.)") 
+end
+
 if (identifyexecutor()) == "Arceus X" then
 Notification.Notify("Universe X 3.0", "Arceus X not support this script!", "rbxassetid://17415983489", {
     Duration = 6,
@@ -262,20 +283,8 @@ game.Players.LocalPlayer:Kick("This script has some features that Arceus X doesn
 end
 ]]
 
-if (identifyexecutor()) == "Solara" then
-Notification.Notify("Universe X 3.0", "Universe - X failed..", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Solara doesnt have please switch to something else! (Error.)") 
-end
 
-
-
-local creditText = "UX Update-v0.512.276 || ありがとう😍 "
+local creditText = "UX Update-v0.638.791 || ありがとう😍 "
 local creditDuration = 99999999999999
 
 local decalIds = {
@@ -337,10 +346,10 @@ LBL.BorderColor3 = Color3.new(0, 0, 0)
 LBL.Position = UDim2.new(0.75,0,0.010,0)
 LBL.Size = UDim2.new(0, 133, 0, 30)
 LBL.Font = Enum.Font.GothamSemibold
-LBL.Text = "UX - 3.0"
+LBL.Text = "UX 3.0"
 LBL.TextColor3 = Color3.new(255, 0, 0)
 LBL.TextScaled = true
-LBL.TextSize = 5
+LBL.TextSize = 3
 LBL.TextWrapped = true
 LBL.Visible = true
 
@@ -436,7 +445,7 @@ local function CreateGUI(title)
     agreeFrame.Size = UDim2.new(0.8, 0, 0.5, 0)
     agreeFrame.Position = UDim2.new(0.1, 0, 0.22, 0)
     agreeFrame.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
-    agreeFrame.Text = " Universe - X || 3.0\n 1. Universe - X currently supporting HIGH execution are you continue?\n 2. Thanks to our team, LLCteam.\n 3. Solara was blocked.\n 4. Don't use if not officially version.\n 5. Changelogs ：2024-07-31"
+    agreeFrame.Text = "\n 1. Universe - X currently supporting HIGH execution are you continue?\n 2. Thanks to our team, LLCteam.\n 3. All executors.\n 4. Don't use if not officially version.\n 5. Changelogs ：2024-08-15"
     agreeFrame.TextWrapped = true
 
     
@@ -1998,8 +2007,8 @@ Icon.Name = "Icon"
 Icon.Parent = SonicT
 Icon.BackgroundColor3 = Color3.fromRGB(39, 39, 39)
 Icon.Position = UDim2.new(0.0464059711, 0, 0, 0)
-Icon.Size = UDim2.new(0, 37, 0, 37)
-Icon.Image = "rbxassetid://18817407273"
+Icon.Size = UDim2.new(0, 40, 0, 40)
+Icon.Image = "rbxassetid://13981987402"
 
 UICorner_66.Parent = Icon
 
@@ -2774,8 +2783,8 @@ function TOJIAFJ_fake_script() -- Hoho.LocalScript
 	local script = Instance.new('LocalScript', Hoho)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		uxpro() 
-		-- Shutdown
+		uxpro()
+		game:Shutdown() 
 	end)
 end
 coroutine.wrap(TOJIAFJ_fake_script)()
@@ -3116,8 +3125,8 @@ Notification.Notify("Universe X 3.0", "feature has been actived successfully, fe
         Rounding = true,
     }
 });
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
---- https://raw.githubusercontent.com/LLCteams/xs/main/2.Bloxy%20%D1%82%D0%B5%D1%81%D1%82%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D1%81%D0%B5%D1%85%2C%20%D0%BA%D1%80%D0%BE%D0%BC%D0%B5%20%D0%B8%D0%B3%D1%80%D1%8B%20%D1%81%D1%83%D0%BF%D0%B5%D1%80"))()
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/2.Bloxy%20%D1%82%D0%B5%D1%81%D1%82%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D1%81%D0%B5%D1%85%2C%20%D0%BA%D1%80%D0%BE%D0%BC%D0%B5%20%D0%B8%D0%B3%D1%80%D1%8B%20%D1%81%D1%83%D0%BF%D0%B5%D1%80"))()
+--- https://raw.githubusercontent.com/REDzHUB/RedzLibV5/main/Source.Lua"))()
 
 local Window = redzlib:MakeWindow({
   Title = "UX",
@@ -19763,7 +19772,7 @@ local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xH
 
 --- game:GetService("StarterGui"):SetCore("DevConsoleVisible",false)
 
-local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/testingstuffs/main/uilib"))()
+local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord"))()
 
 local win = DiscordLib:Window("Universe - X || [v0.29a]", Color3.fromRGB(0, 255, 0)) 
 
