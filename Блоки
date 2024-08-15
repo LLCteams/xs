@@ -1,3 +1,19 @@
+Notification.Notify("Universe-X", "Official Versions.", "rbxassetid://13981987402", {
+    Duration = 10,
+    
+    TitleSettings = {
+        TextXAlignment = Enum.TextXAlignment.Center,
+        Font = Enum.Font.SourceSansSemibold,
+    },
+
+    GradientSettings = {
+        GradientEnabled = false,
+        SolidColorEnabled = true,
+        SolidColor = Color3.fromRGB(124, 83, 240),
+        Retract = true
+    }
+})
+
 -- Create ScreenGui and ImageButton if not already created
 local player = game.Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
@@ -25,7 +41,7 @@ imageButton.Parent = screenGui
 
 local textLabel = Instance.new("TextLabel") 
 textLabel.Parent = screenGui
-textLabel.Text = "Welcome, we need verify you before continue"
+textLabel.Text = "Welcome to Universe-X! we need verify you before using."
 textLabel.Size = UDim2.new(1, 0, 0, 100)  -- Adjust size to make text bigger
 textLabel.Position = UDim2.new(0, 0, 0, 0)  -- Adjust position as needed
 
@@ -284,7 +300,7 @@ end
 ]]
 
 
-local creditText = "UX Update-v0.638.791 || ありがとう😍 "
+local creditText = "UX Update-v0.701.958 || ありがとう😍 "
 local creditDuration = 99999999999999
 
 local decalIds = {
@@ -445,7 +461,7 @@ local function CreateGUI(title)
     agreeFrame.Size = UDim2.new(0.8, 0, 0.5, 0)
     agreeFrame.Position = UDim2.new(0.1, 0, 0.22, 0)
     agreeFrame.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
-    agreeFrame.Text = "\n 1. Universe - X currently supporting HIGH execution are you continue?\n 2. Thanks to our team, LLCteam.\n 3. All executors.\n 4. Don't use if not officially version.\n 5. Changelogs ：2024-08-15"
+    agreeFrame.Text = " Universe-X {|} 3.0\n 1. Universe - X currently supporting HIGH execution are you continue?\n 2. Thanks to our team, LLCteam.\n 3. All executors.\n 4. Don't use if not officially version.\n 5. Changelogs ：2024-08-15"
     agreeFrame.TextWrapped = true
 
     
@@ -10824,12 +10840,21 @@ end
 
 function uxtestbro() 
 local Notification = loadstring(game:HttpGet("https://api.irisapp.ca/Scripts/IrisBetterNotifications.lua"))()
-Notification.Notify("Universe - X", "Welcome to Universe - X!", "", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
+Notification.Notify("Universe-X", "Welcome back.", "rbxassetid://13981987402", {
+    Duration = 7,
+    
+    TitleSettings = {
+        TextXAlignment = Enum.TextXAlignment.Center,
+        Font = Enum.Font.SourceSansSemibold,
+    },
+
+    GradientSettings = {
+        GradientEnabled = false,
+        SolidColorEnabled = true,
+        SolidColor = Color3.fromRGB(124, 83, 240),
+        Retract = true
     }
-});
+})
 warn("Universe - X detected was modified clients, but in marketPlace.Beta is only 500HTT") 
 warn("Clients modified! • name: 3.0 • This function has changed.") 
 --[[
@@ -19772,17 +19797,17 @@ local MessageBox = loadstring(game:HttpGet("https://raw.githubusercontent.com/xH
 
 --- game:GetService("StarterGui"):SetCore("DevConsoleVisible",false)
 
-local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord"))()
+local DiscordLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/testingstuffs/main/uilib"))()
 
-local win = DiscordLib:Window("Universe - X || [v0.29a]", Color3.fromRGB(0, 255, 0)) 
+local win = DiscordLib:Window("Universe - X || [v12a]", Color3.fromRGB(0, 255, 0)) 
 
 local serc = win:Server("[HOME | LOGS]", "rbxassetid://17468096773") 
 
 local pof = serc:Channel("Update | Logs") 
 
-pof:Label("{•} Improved feature.") 
-pof:Label("{•} Improved Universe X working on all executors.") 
-pof:Label("{•} Updated to latest version, v0.29a") 
+pof:Label("{•} Fix experience.") 
+pof:Label("{•} Fix Antipatch.") 
+pof:Label("{•} Updated to latest version, v12a.") 
 pof:Seperator() 
 pof:Label(" -- -- -- -- ") 
 pof:Label("{•} Fixed an issues while executing Universe - X.") 
@@ -20149,7 +20174,7 @@ ahx:Label("{•} Ping Player: [ "..game:GetService("Stats").Network.ServerStatsI
 local ips = serc:Channel("About | Logs") 
 
 ips:Label(" ••• ••• ••• ••• ") 
-ips:Label("{~} Current Version: v0.29a") 
+ips:Label("{~} Current Version: v12a") 
 ips:Label("{~} Save-File: Saved!") 
 ips:Label("{~} Current Names: Universe - X Ultra-Aze") 
 ips:Label("{~} Official Website: \nhttps://olive-loaf-00a.notion.site/Universe-v0-2-3-0b3a55db6fdc4918ae57e3ee810f704d\n") 
