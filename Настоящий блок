@@ -13,7 +13,7 @@ tab1.newButton("Universe - X 3.0", "Loads Universe - X", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/4bn47Jb0"))()
 end)
 tab1.newButton("Universal Fling", "Loads Universe-X Fling", function()
-    loadstring(game:HttpGet(" https://pastefy.app/lQcZ8Ba3/raw"))()
+    loadstring(game:HttpGet("https://pastefy.app/lQcZ8Ba3/raw"))()
 end)
 
 
