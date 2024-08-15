@@ -1,3 +1,17 @@
+queueteleport = (syn and syn.queue_on_teleport) or queue_on_teleport or (fluxus and fluxus.queue_on_teleport)
+httprequest = (syn and syn.request) or (http and http.request) or http_request or (fluxus and fluxus.request) or request
+HttpService = game:GetService("HttpService")
+local OptTheme = "Midnight"
+local string2 = ""
+_G.infydtype = 1
+_G.guidragtype = "https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%BE%D0%BA%D1%81%20%D0%BC%D0%BE%D0%B4%20%D0%BD%D0%BE%D0%B2%D1%8B%D0%B9%20%D0%B0%D0%BD%D1%82%D0%B8%D1%87%D0%B8%D1%82"
+UserInputService = game:GetService("UserInputService")
+VREnabled = game:GetService("VRService").VREnabled
+local IsOnMobile = table.find({
+	Enum.Platform.IOS,
+	Enum.Platform.Android
+}, UserInputService:GetPlatform())
+
 local Library = loadstring(game:HttpGet(_G.guidragtype))()
     local Window = Library.CreateLib("Universe X | SplazhQ12", OptTheme)
     local Main = Window:NewTab("Home", 16716232082)
