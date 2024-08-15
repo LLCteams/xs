@@ -1,1088 +1,972 @@
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/Bloc%20Script%20%D0%B8%D0%B3%D1%80%D0%B0%2C%20%D0%BB%D0%BE%D0%BB%2C%20%D1%85%D0%B0%D1%85%D0%B0%D1%85%2C%20%D0%BF%D0%BE%D0%B9%20%D0%BF%D0%B5%D1%81%D0%BD%D1%8E"))()
-
-local Window = redzlib:MakeWindow({
-  Title = "Universe - X",
-  SubTitle = "v0.31e",
-  SaveFolder = "UX.bt"
-})
-local Tab1 = Window:MakeTab({"Home", "info"})
-local Tab2 = Window:MakeTab({"Settings", "setting"})
-local Tab3 = Window:MakeTab({"LocalPlayer", "user"})
-local Tab4 = Window:MakeTab({"Combat", "swords"})
-local Tab5 = Window:MakeTab({"Visual", "esp"})
-local Tab6 = Window:MakeTab({"Audio", "audio"})
-local Tab7 = Window:MakeTab({"Game", "game"}) 
-local Tab8 = Window:MakeTab({"Beta", "tool"}) 
-local Tab9 = Window:MakeTab({"Misc", "box"}) 
-local Tab10 = Window:MakeTab({"Soon", "music"}) 
-local Tab11 = Window:MakeTab({"Animation", "rbxassetid://13996809508"}) 
-local Tab12 = Window:MakeTab({"Misc", "home"}) 
-local Tab13 = Window:MakeTab({"Feedback", "picker"}) 
-local Tab13 = Window:MakeTab({"GMusic", "paper"}) 
-local Tab14 = Window:MakeTab({"Search", "rbxassetid://14592768901"}) 
-local Tab15 = Window:MakeTab({"Update", "rbxassetid://18138943003"}) 
-local Tab16 = Window:MakeTab({"Home", "info"})
-local Tab17 = Window:MakeTab({"Arceus X", "rbxassetid://13964634855"})
-local Tab18 = Window:MakeTab({"Soon", "rbxassetid://13951253605"})
-local Tab19 = Window:MakeTab({"?", "rbxassetid://13981959945"})
-local Tab20 = Window:MakeTab({"?", "rbxassetid://13991345416"})
-local Tab21 = Window:MakeTab({"?", "rbxassetid://17535592377"})
-local Tab22 = Window:MakeTab({"GTeleport", ""}) 
-local Tab23 = Window:MakeTab({"Soon", ""}) 
-local Tab24 = Window:MakeTab({"Soon", ""}) 
-local Tab25  = Window:MakeTab({"Soon", ""}) 
-local Tab26 = Window:MakeTab({"Soon", ""}) 
-local Tab27 = Window:MakeTab({"Soon", ""}) 
-local Tab28 = Window:MakeTab({"Soon", ""}) 
-local Tab29 = Window:MakeTab({"Soon", ""}) 
-local Tab30= Window:MakeTab({"Soon", ""}) 
-local Tab31 = Window:MakeTab({"Soon", ""}) 
-local Paragraph = Tab1:AddParagraph({"UI Remake", "<font color='rgb(0, 255, 0)'>UIs remaked by Hyptex, some of features maybe dissapear or won't work with beta, Recommended using Premium version that handle anything error! with very fast update. All experience has been use Universe - X for 2 years!</font>"})
-local Paragraph = Tab1:AddParagraph({"Changelogs", "BIG next for Experience has been updated with best <font color='rgb(88, 101, 242)'>Performance</font>. Strong Universal X script that remaked for best script."})
-local Paragraph = Tab1:AddParagraph({"Protections Handler", "We've the one script that making big protection from attacker, this system is very stable for experience with <font color='rgb(0, 255, 0)'>Universe - X</font> and anything with it."})
-local Paragraph = Tab1:AddParagraph({"Easy Interface", "Improved easy interface sliders, bugs won't show up in new version."})
-local Paragraph = Tab1:AddParagraph({"Bypass Function", "Bypass is usefully to make user have good experience. One of type bypass with add-in many new secure for disabling developers commands as kicked & banned."})
-local Paragraph = Tab1:AddParagraph({"Stability", "Stability is also can be useful! with this feature an <font color='rgb(255, 0, 0)'>extremely</font> descrased lag from your experience server and removing error."})
-local Paragraph = Tab1:AddParagraph({"Fix-Auto", "Fix auto Handler is super useful for new features, this will make <font color='rgb(255, 0, 0)'>extremely</font> error script became working normally again."})
-local Paragraph = Tab1:AddParagraph({"Fast-Update", "Improved fast update after get patched, this time <font color='rgb(255, 0, 0)'>Universe - X</font> will be having new inform about update auto or get newone with <font color='rgb(88, 101, 242)'>Original Official UX website!</font>"})
-local Paragraph = Tab1:AddParagraph({"Extra Feature", "We've added very useful and good feature that counter some of hubs and attacker, with this feature you can be safely from website attack because now <font color='rgb(255, 0, 0)'>Universe - X</font> has 40 protections type."})
-local Paragraph = Tab1:AddParagraph({"Key System", "Improved key system for protecting your account backconsole into secured with <font color='rgb(88, 101, 242)'>UX Handler</font> We're not make it hard for key system but for it, beta maybe has no key system."})
-local Paragraph = Tab1:AddParagraph({"Privates Gen", "Version of <font color='rgb(0, 255, 0)'>Universe - X</font> that have got private because so much strong and this time for it, to know you is nextgen experience with 2nd generation from <font color='rgb(88, 101, 242)'>VoltZ.</font>"})
-local Paragraph = Tab1:AddParagraph({"Improved Executors", "Improved others experience like mobile or pc maybe can also executor supported <font color='rgb(255, 0, 0)'>Universe - X</font> next latest version!"})
-
-Tab1:AddDiscordInvite({
-  Name = "LLC Team | Community",
-  Logo = "rbxassetid://18138943003",
-  Invite = "https://discord.gg/7aR7kNVt4g"
-})
-
-Tab1:AddDiscordInvite({
-  Name = "LLC Team | Official Website",
-  Logo = "rbxassetid://18138943003",
-  Invite = "https://olive-loaf-00a.notion.site/Universe-Ultra-0b3a55db6fdc4918ae57e3ee810f704d"
-})
-
-
-Tab1:AddButton({"Dark Theme", function()
-  redzlib:SetTheme("Dark")
-end})
-
-Tab1:AddButton({"Darker Theme", function()
-  redzlib:SetTheme("Darker")
-end})
-
-Tab1:AddButton({"Dark Purple", function()
-  redzlib:SetTheme("Purple")
-end})
-
-Window:SelectTab(Tab1)
--- local Section = Tab2:AddSection({"Section"})
-local Paragraph = Tab2:AddParagraph({"Additional Features", "Handle your experience with new additional features from UX 3.0 all your experience will be handle just with some clicks!"})
-
-local Toggle1 = Tab2:AddToggle({
-  Name = "Anti-ban",
-  Description = "This is a <font color='rgb(0, 255, 0)'>Anti-ban</font> this recommended usefully when admins in server, do not use this anti ban for now its have error because beta.",
-  Default = false
-})
-
-local Toggle3 = Tab2:AddToggle({
-  Name = "Anti-cheat",
-  Description = "This is a <font color='rgb(0, 255, 0)'>Anticheat</font> this auto active for users.",
-  Default = false
-})
-
-local Toggle4 = Tab3:AddToggle({
-  Name = "Anti-kick",
-  Description = "This is a <font color='rgb(0, 255, 0)'>Anti-kick</font> this recommended usefully for afk or grinding in server, auto active for users.",
-  Default = false
-})
-
-Tab1:AddButton({"Fix Camera", function()
-         cam.CameraType = Enum.CameraType.Fixed 
-         cam.CameraType = Enum.CameraType.Custom 
-end})
-
-local Button = Tab2:AddButton({"Roblox Settings", function()
-  local Dialog = Window:Dialog({
-    Title = "Roblox Settings",
-    Text = "choose a settings that you need most to make it quickly without original settings.",
-    Options = {
-      {"Kick", function()
-        game.Players.LocalPlayer:Kick(" Resquest has unavailable. ") 
-      end},
-      {"Leave", function()
-        game:Shutdown() 
-      end},
-      {"Reset", function()
-        game.Players.LocalPlayer.Character.Head:Destroy()
-      end},
-      {"Rejoin", function()
-        game:GetService("TeleportService"):Teleport(game.PlaceId, Player)
-      end}, 
-      {"Resume", function()
-        
-      end}
-    }
-  })
-end})
-
--- Anticheat 1
-Toggle3:Callback(function()
-local getinfo = getinfo or debug.getinfo
-        local DEBUG = false
-        local Hooked = {}
-
-        local Detected, Kill
-
-        setthreadidentity(2)
-
-        for i, v in getgc(true) do
-            if typeof(v) == "table" then
-                local DetectFunc = rawget(v, "Detected")
-                local KillFunc = rawget(v, "Kill")
-            
-                if typeof(DetectFunc) == "function" and not Detected then
-                    Detected = DetectFunc
-                    
-                    local Old; Old = hookfunction(Detected, function(Action, Info, NoCrash)
-                        if Action ~= "_" then
-                            if DEBUG then
-                                warn(`Adonis AntiCheat flagged\nMethod: {Action}\nInfo: {Info}`)
-                            end
-                        end
-                        
-                        return true
-                    end)
-
-                    table.insert(Hooked, Detected)
-                end
-
-                if rawget(v, "Variables") and rawget(v, "Process") and typeof(KillFunc) == "function" and not Kill then
-                    Kill = KillFunc
-                    local Old; Old = hookfunction(Kill, function(Info)
-                        if DEBUG then
-                            warn(`Adonis AntiCheat tried to kill (fallback): {Info}`)
-                        end
-                    end)
-
-                    table.insert(Hooked, Kill)
-                end
-            end
-        end
-
-        local Old; Old = hookfunction(getrenv().debug.info, newcclosure(function(...)
-            local LevelOrFunc, Info = ...
-
-            if Detected and LevelOrFunc == Detected then
-                if DEBUG then
-                    warn(`!!! | adonis bypassed`)
-                end
-
-                return coroutine.yield(coroutine.running())
-            end
-            
-            return Old(...)
-        end))
-        -- setthreadidentity(9)
-        setthreadidentity(7)
-end) 
-
-Toggle4:Callback(function()
-getgenv().AntiKick = true
-getgenv().Notifications = true
-local StarterGui = game:GetService("StarterGui")
-
-local kick; kick = hookmetamethod(game, "__namecall", function(obj, ...)
-	local args = {...}
-	local method = getnamecallmethod()
-	if method == "Kick" and AntiKick then
-		if args[1] and Notifications then
-			StarterGui:SetCore("SendNotification", {
-				Title = "Universe X Bypass";
-				Icon = "";
-				Text = "A kick attempt was blocked. Reason: "..args[1]
-			})
-			print("A kick attempt was blocked. Reason: "..args[1])
-		elseif Notifications then
-			StarterGui:SetCore("SendNotification", {
-				Title = "Universe X Bypass";
-				Icon = "";
-				Text = "A kick attempt was blocked."
-			})
-			print("A kick attempt was blocked.")
-		end
-		return nil
-	end
-	return kick(obj, unpack(args))
-    end)
-end)
--- Antiban 1
-Toggle1:Callback(function()
-proC()
-end)
-
-function proC()
-  local players = game:GetService('Players')
-        local lplr = players.LocalPlayer
-        local lastCF, stop, heartbeatConnection
-        local function start()
-            heartbeatConnection = game:GetService('RunService').Heartbeat:Connect(function()
-                if stop then
-                    return 
-                end 
-                lastCF = lplr.Character:FindFirstChildOfClass('Humanoid').RootPart.CFrame
-            end)
-            lplr.Character:FindFirstChildOfClass('Humanoid').RootPart:GetPropertyChangedSignal('CFrame'):Connect(function()
-                stop = true
-                lplr.Character:FindFirstChildOfClass('Humanoid').RootPart.CFrame = lastCF
-                game:GetService('RunService').Heartbeat:Wait()
-                stop = false
-            end)    
-            lplr.Character:FindFirstChildOfClass('Humanoid').Died:Connect(function()
-                heartbeatConnection:Disconnect()
-            end)
-        end
-
-        lplr.CharacterAdded:Connect(function(character)
-            repeat 
-                game:GetService('RunService').Heartbeat:Wait() 
-            until character:FindFirstChildOfClass('Humanoid')
-            repeat 
-                game:GetService('RunService').Heartbeat:Wait() 
-            until character:FindFirstChildOfClass('Humanoid').RootPart
-            start()
-        end)
-
-        lplr.CharacterRemoving:Connect(function()
-            heartbeatConnection:Disconnect()
-        end)
-
-      start()
-end
-
-local Number = 0
-
-local Button = Tab2:AddButton({
-  Name = "Invisible Toggle",
-  Description = "Makes the Toggles Invisible"
-})
-
-local Toggle2 = Tab2:AddToggle({
-  Name = "Toggle 1",
-  Description = "This is a <font color='rgb(88, 101, 242)'>Toggle</font> Example",
-  Default = false
-})
-
-local Toggle3 = Tab2:AddToggle({
-  Name = "Toggle 2",
-  Default = true
-})
-
-Button:Callback(Toggle1.Visible)
-Button:Callback(Toggle2.Visible)
-
-Toggle2:Callback(function(Value)
-  Toggle3:Set(false)
-end)
-Toggle3:Callback(function(Value)
-  Toggle2:Set(false)
-end)
-
-Tab2:AddSlider({
-  Name = "Slider",
-  Min = 1,
-  Max = 10,
-  Increase = 1,
-  Default = 5,
-  Callback = function(Value)
+local Library = loadstring(game:HttpGet(_G.guidragtype))()
+    local Window = Library.CreateLib("Universe X | SplazhQ12", OptTheme)
+    local Main = Window:NewTab("Home", 16716232082)
     
-  end
-})
-
--- local Button = Tab2:AddButton({"Refresh Dropdown"})
-
-local Dropdown = Tab2:AddDropdown({
-  Name = "FPS Unlocker",
-  Description = "Select the <font color='rgb(88, 101, 242)'>Number</font>",
-  Options = {"60 FPS", "120 FPS", "180 FPS", "MAX FPS"},
-  Default = "60 FPS",
-  Flag = "60 FPS",
-  Callback = function(Value)
-    print('8') 
-  end
-})
-
-Tab3:AddButton({"Reset Ability", function()
-  game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-        game:GetService("Workspace").Gravity = 196.2
-        game.Players.LocalPlayer.Character.Humanoid.HipHeight = 2
-        game:GetService("Workspace"):WaitForChild("Camera").FieldOfView = 70
-        game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 70
-end})
-Tab3:AddSlider({
-  Name = "WalkSpeed",
-  Min = 16,
-  Max = 300,
-  Increase = 1,
-  Default = 16,
-  Callback = function(P)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = P
-  end
-})
-Tab3:AddSlider({
-  Name = "JumpPower",
-  Min = 50,
-  Max = 200,
-  Increase = 1,
-  Default = 50,
-  Callback = function(P)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = P
-  end
-})
-Tab3:AddSlider({
-  Name = "Floating",
-  Min = 2,
-  Max = 20,
-  Increase = 1,
-  Default = 2,
-  Callback = function(P)
-    game.Players.LocalPlayer.Character.Humanoid.HipHeight = P
-  end
-})
-Tab3:AddSlider({
-  Name = "Gravity",
-  Min = 196.2,
-  Max = 200.6,
-  Increase = 1,
-  Default = 196.2,
-  Callback = function(p) 
-    game:GetService("Workspace").Gravity = p
-  end
-}) 
-Tab3:AddSlider({
-  Name = "Field Of View",
-  Min = 75,
-  Max = 200,
-  Increase = 1,
-  Default = 75,
-  Callback = function(B)
-    game:GetService("Workspace"):WaitForChild("Camera").FieldOfView = B
-  end
-})
-Tab3:AddSlider({
-  Name = "Zoom",
-  Min = 80,
-  Max = 999,
-  Increase = 1,
-  Default = 75,
-  Callback = function(Y) 
-    game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = Y
-  end
-})
-Tab3:AddTextBox({
-  Name = "Walk Speed",
-  Description = "Enter a number.",
-  Default = "16", 
-  Callback = function(P)
-    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = P
-  end
-})
-Tab3:AddTextBox({
-  Name = "Jump Power",
-  Description = "Enter a number.",
-  Default = "50",
-  Callback = function(P)
-    game.Players.LocalPlayer.Character.Humanoid.JumpPower = P
-  end
-})
-Tab3:AddTextBox({
-  Name = "Float",
-  Description = "Enter a number.",
-  Default = "2", 
-  Callback = function(P)
-    game.Players.LocalPlayer.Character.Humanoid.HipHeight = P
-  end
-})
-Tab3:AddTextBox({
-  Name = "Gravity",
-  Description = "Enter a number.",
-  Default = "196.2",
-  Callback = function(p)
-    game:GetService("Workspace").Gravity = p
-  end
-})
-Tab3:AddTextBox({
-  Name = "Field Of View",
-  Description = "Enter a number.",
-  Default = "70",
-  Callback = function(B)
-    game:GetService("Workspace"):WaitForChild("Camera").FieldOfView = B
-  end
-})
-Tab3:AddTextBox({
-  Name = "Camera",
-  Description = "Enter a number.",
-  Default = "80",
-  Callback = function(Y)
-    game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = Y
-  end
-})
-
-Tab4:AddButton({"Kill All", function()
-  local localPlayer = game.Players.LocalPlayer
-local localPlayerCF = localPlayer.Character.HumanoidRootPart.CFrame
-
-for _, player in pairs(game.Players:GetPlayers()) do
-    if player ~= localPlayer then
-        player.Character.HumanoidRootPart.CFrame = localPlayerCF
-        player.Character.Humanoid.PlatformStand = true
-        player.Character.Humanoid.WalkSpeed = 0
-        player.Character.Humanoid.JumpPower = 0
-        for _, part in pairs(player.Character:GetDescendants()) do
-            if part:IsA("BasePart") then
-                part.Anchored = true
-            end
-        end
-    end
-end
-
-    localPlayer.Character.HumanoidRootPart.Anchored = false
-end})
-Tab4:AddButton({"Kill All Permanent", function()
-
-end})
-Tab4:AddButton({"Kill All Zombie & Human", function()
-  
-end})
-Tab4:AddButton({"Destroy Safe Human Area", function()
-  
-end})
-Tab4:AddButton({"Destroy Anti Zone Weapon", function()
-  
-end})
-
-Tab5:AddButton({"Health", function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%91%D1%80%D1%83%D1%85%20%D0%BD%D1%83%D0%B1"))()
-end})
-Tab5:AddButton({"TagName", function()
-  _G.FriendColor = Color3.fromRGB(0, 0, 255)
-_G.EnemyColor = Color3.fromRGB(255, 0, 0)
-_G.UseTeamColor = true
-
---------------------------------------------------------------------
-local Holder = Instance.new("Folder", game.CoreGui)
-Holder.Name = "ESP"
-
-local Box = Instance.new("BoxHandleAdornment")
-Box.Name = "nilBox"
-Box.Size = Vector3.new(1, 2, 1)
-Box.Color3 = Color3.new(100 / 255, 100 / 255, 100 / 255)
-Box.Transparency = 0.7
-Box.ZIndex = 0
-Box.AlwaysOnTop = false
-Box.Visible = false
-
-local NameTag = Instance.new("BillboardGui")
-NameTag.Name = "nilNameTag"
-NameTag.Enabled = false
-NameTag.Size = UDim2.new(0, 200, 0, 50)
-NameTag.AlwaysOnTop = true
-NameTag.StudsOffset = Vector3.new(0, 1.8, 0)
-local Tag = Instance.new("TextLabel", NameTag)
-Tag.Name = "Tag"
-Tag.BackgroundTransparency = 1
-Tag.Position = UDim2.new(0, -50, 0, 0)
-Tag.Size = UDim2.new(0, 300, 0, 20)
-Tag.TextSize = 15
-Tag.TextColor3 = Color3.new(100 / 255, 100 / 255, 100 / 255)
-Tag.TextStrokeColor3 = Color3.new(0 / 255, 0 / 255, 0 / 255)
-Tag.TextStrokeTransparency = 0.5
-Tag.Text = "nil"
-Tag.Font = Enum.Font.SourceSansBold
-Tag.TextScaled = false
-
-local LoadCharacter = function(v)
-	repeat wait() until v.Character ~= nil
-	v.Character:WaitForChild("Humanoid")
-	local vHolder = Holder:FindFirstChild(v.Name)
-	vHolder:ClearAllChildren()
-	local b = Box:Clone()
-	b.Name = v.Name .. "Box"
-	b.Adornee = v.Character
-	b.Parent = vHolder
-	local t = NameTag:Clone()
-	t.Name = v.Name .. "NameTag"
-	t.Enabled = true
-	t.Parent = vHolder
-	t.Adornee = v.Character:WaitForChild("Head", 5)
-	if not t.Adornee then
-		return UnloadCharacter(v)
-	end
-	t.Tag.Text = v.Name
-	b.Color3 = Color3.new(v.TeamColor.r, v.TeamColor.g, v.TeamColor.b)
-	t.Tag.TextColor3 = Color3.new(v.TeamColor.r, v.TeamColor.g, v.TeamColor.b)
-	local Update
-	local UpdateNameTag = function()
-		if not pcall(function()
-			v.Character.Humanoid.DisplayDistanceType = Enum.HumanoidDisplayDistanceType.None
-			local maxh = math.floor(v.Character.Humanoid.MaxHealth)
-			local h = math.floor(v.Character.Humanoid.Health)
-		end) then
-			Update:Disconnect()
+        local MainSection = Main:NewSection("Home")
+    
+        MainSection:NewButton("Save Game", "Executed!", function()
+        local SSSSSS = ""
+		if identifyexecutor then
+			SSSSSS = select(1, identifyexecutor())
 		end
-	end
-	UpdateNameTag()
-	Update = v.Character.Humanoid.Changed:Connect(UpdateNameTag)
-end
-
-local UnloadCharacter = function(v)
-	local vHolder = Holder:FindFirstChild(v.Name)
-	if vHolder and (vHolder:FindFirstChild(v.Name .. "Box") ~= nil or vHolder:FindFirstChild(v.Name .. "NameTag") ~= nil) then
-		vHolder:ClearAllChildren()
-	end
-end
-
-local LoadPlayer = function(v)
-	local vHolder = Instance.new("Folder", Holder)
-	vHolder.Name = v.Name
-	v.CharacterAdded:Connect(function()
-		pcall(LoadCharacter, v)
-	end)
-	v.CharacterRemoving:Connect(function()
-		pcall(UnloadCharacter, v)
-	end)
-	v.Changed:Connect(function(prop)
-		if prop == "TeamColor" then
-			UnloadCharacter(v)
-			wait()
-			LoadCharacter(v)
+		if SSSSSS == "Krampus" then
+			saveplace({
+				FileName = "UXsavedFile",
+				CopyToClipboard = true
+			})
+			return
+		end
+		if saveplace then
+			saveplace({
+				FileName = "UXsavedFile", 
+			})
+		end
+		if saveinstance then
+			saveinstance()
+		else
+			Library.Notify("Universal X ", "Your executor doesn't support this Save Game script, use the Save Game Script 2 in main of Universe - X. ", 10)
 		end
 	end)
-	LoadCharacter(v)
-end
+    
+--[[
+        MainSection:NewSlider("Slider", "This is a Slider", "100", "1",function(Value)
+            
+        end)
+ ]]
 
-local UnloadPlayer = function(v)
-	UnloadCharacter(v)
-	local vHolder = Holder:FindFirstChild(v.Name)
-	if vHolder then
-		vHolder:Destroy()
+        MainSection:NewTextBox("Walk Speed", "Walk Speed", function(v)
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+        end)
+        
+        MainSection:NewTextBox("Jump Height", "Jump Height", function(v)
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+        end)
+        
+        MainSection:NewTextBox("Gravity", "Gravity", function(v)
+            game:GetService("Workspace").Gravity = v
+        end)
+        
+        MainSection:NewTextBox("Fov", "Fov Camera", function(v)
+            game:GetService("Workspace"):WaitForChild("Camera").FieldOfView = v
+        end)
+        
+        MainSection:NewButton("Unlock Third Person", "Unlocks third person.", function()
+		game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 99999
+		game:GetService("Players").LocalPlayer.CameraMode = Enum.CameraMode.Classic
+        end) 
+        
+        MainSection:NewTextBox("Zoom", " Zoom Camera", function(v)
+            game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = v
+        end)
+        
+        	if IsOnMobile or VREnabled then
+		MainSection:NewButton("Enable Shiftlock", "Unlocks a shiftlock.", function()
+			Library.Notify("Shift Lock Enabled", "Gui should pop up on your right", 5)
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub-Backup/main/mobileshiftlock.txt"))()
+		end) 
+		
+		MainSection:NewToggle("Shiftlock Mode", "Turn off or on.", function(value)
+			game:GetService("Players").LocalPlayer.DevEnableMouseLock = value
+			if value then
+				Library.Notify("Shift Lock Enabled", "Just press shift or enable it in roblox settings", 5)
+			else
+				Library.Notify("Shift Lock Disabled", "", 5)
+			end
+		end)
 	end
-end
 
-for i,v in pairs(game:GetService("Players"):GetPlayers()) do
-	spawn(function() pcall(LoadPlayer, v) end)
-end
+--[[
+        MainSection:NewDropdown("Dropdown", "This is a Dropdown", {"Dropdown1", "Dropdown2", "Dropdown3"}, function(value)
+            print("Choose : "..value)
+        end)  
+]]
+        
+        local Home = Window:NewTab("Universal X", 17415983489)
+    
+        local MainSection = Home:NewSection("Murder Mystery 2") 
+        
+        MainSection:NewTextBox("Fling Player", "Flings player", function(txt)
+		local Targets = {txt} -- "All", "Target Name", "arian_was_here"
 
-game:GetService("Players").PlayerAdded:Connect(function(v)
-	pcall(LoadPlayer, v)
-end)
+		local Players = game:GetService("Players")
+		local Player = Players.LocalPlayer
 
-game:GetService("Players").PlayerRemoving:Connect(function(v)
-	pcall(UnloadPlayer, v)
-end)
+		local AllBool = false
 
-game:GetService("Players").LocalPlayer.NameDisplayDistance = 0
+		local GetPlayer = function(Name)
+			Name = Name:lower()
+			if Name == "all" or Name == "others" then
+				AllBool = true
+				return
+			elseif Name == "random" then
+				local GetPlayers = Players:GetPlayers()
+				if table.find(GetPlayers,Player) then table.remove(GetPlayers,table.find(GetPlayers,Player)) end
+				return GetPlayers[math.random(#GetPlayers)]
+			elseif Name ~= "random" and Name ~= "all" and Name ~= "others" then
+				for _,x in next, Players:GetPlayers() do
+					if x ~= Player then
+						if x.Name:lower():match("^"..Name) then
+							return x;
+						elseif x.DisplayName:lower():match("^"..Name) then
+							return x;
+						end
+					end
+				end
+			else
+				return
+			end
+		end
 
-if _G.Reantheajfdfjdgs then
-    return
-end
+		local Message = function(_Title, _Text, Time)
+			game:GetService("StarterGui"):SetCore("SendNotification", {Title = _Title, Text = _Text, Duration = Time})
+		end
 
-_G.Reantheajfdfjdgs = ":suifayhgvsdghfsfkajewfrhk321rk213kjrgkhj432rj34f67df"
+		local SkidFling = function(TargetPlayer)
+			local Character = Player.Character
+			local Humanoid = Character and Character:FindFirstChildOfClass("Humanoid")
+			local RootPart = Humanoid and Humanoid.RootPart
 
-local players = game:GetService("Players")
-local plr = players.LocalPlayer
+			local TCharacter = TargetPlayer.Character
+			local THumanoid
+			local TRootPart
+			local THead
+			local Accessory
+			local Handle
 
-function esp(target, color)
-    if target.Character then
-        if not target.Character:FindFirstChild("GetReal") then
-            local highlight = Instance.new("Highlight")
-            highlight.RobloxLocked = true
-            highlight.Name = "GetReal"
-            highlight.Adornee = target.Character
-            highlight.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
-            highlight.FillColor = color
-            highlight.Parent = target.Character
-        else
-            target.Character.GetReal.FillColor = color
-        end
-    end
-end
+			if TCharacter:FindFirstChildOfClass("Humanoid") then
+				THumanoid = TCharacter:FindFirstChildOfClass("Humanoid")
+			end
+			if THumanoid and THumanoid.RootPart then
+				TRootPart = THumanoid.RootPart
+			end
+			if TCharacter:FindFirstChild("Head") then
+				THead = TCharacter.Head
+			end
+			if TCharacter:FindFirstChildOfClass("Accessory") then
+				Accessory = TCharacter:FindFirstChildOfClass("Accessory")
+			end
+			if Accessoy and Accessory:FindFirstChild("Handle") then
+				Handle = Accessory.Handle
+			end
 
-while task.wait() do
-    for i, v in pairs(players:GetPlayers()) do
-        if v ~= plr then
-            esp(v, _G.UseTeamColor and v.TeamColor.Color or ((plr.TeamColor == v.TeamColor) and _G.FriendColor or _G.EnemyColor))
-        end
-    end
-end
-end})
-Tab5:AddButton({"Tracers", function()
-          --// Made by Blissful#4992
---// Locals:
-local workspace = game:GetService("Workspace")
-local player = game:GetService("Players").LocalPlayer
-local camera = workspace.CurrentCamera
+			if Character and Humanoid and RootPart then
+				if RootPart.Velocity.Magnitude < 50 then
+					getgenv().OldPos = RootPart.CFrame
+				end
+				if THumanoid and THumanoid.Sit and not AllBool then
+					return Message("Error Occurred", "Targeting is sitting", 5) -- u can remove dis part if u want lol
+				end
+				if THead then
+					workspace.CurrentCamera.CameraSubject = THead
+				elseif not THead and Handle then
+					workspace.CurrentCamera.CameraSubject = Handle
+				elseif THumanoid and TRootPart then
+					workspace.CurrentCamera.CameraSubject = THumanoid
+				end
+				if not TCharacter:FindFirstChildWhichIsA("BasePart") then
+					return
+				end
+				
+				local FPos = function(BasePart, Pos, Ang)
+					RootPart.CFrame = CFrame.new(BasePart.Position) * Pos * Ang
+					Character:SetPrimaryPartCFrame(CFrame.new(BasePart.Position) * Pos * Ang)
+					RootPart.Velocity = Vector3.new(9e7, 9e7 * 10, 9e7)
+					RootPart.RotVelocity = Vector3.new(9e8, 9e8, 9e8)
+				end
+				
+				local SFBasePart = function(BasePart)
+					local TimeToWait = 2
+					local Time = tick()
+					local Angle = 0
 
---// Settings:
-local on = true -- Use this if your making gui
+					repeat
+						if RootPart and THumanoid then
+							if BasePart.Velocity.Magnitude < 50 then
+								Angle = Angle + 100
 
-local Box_Color = Color3.fromRGB(0, 255, 50)
-local Box_Thickness = 1.4
-local Box_Transparency = 1 -- 1 Visible, 0 Not Visible
+								FPos(BasePart, CFrame.new(0, 1.5, 0) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle),0 ,0))
+								task.wait()
 
-local Tracers = true
-local Tracer_Color = Color3.fromRGB(0, 255, 50)
-local Tracer_Thickness = 1.4
-local Tracer_Transparency = 1 -- 1 Visible, 0 Not Visible
+								FPos(BasePart, CFrame.new(0, -1.5, 0) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
 
-local Autothickness = false -- Makes screen less encumbered
+								FPos(BasePart, CFrame.new(2.25, 1.5, -2.25) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
 
-local Team_Check = false
-local red = Color3.fromRGB(227, 52, 52)
-local green = Color3.fromRGB(88, 217, 24)
+								FPos(BasePart, CFrame.new(-2.25, -1.5, 2.25) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
 
-local function NewLine()
-    local line = Drawing.new("Line")
-    line.Visible = false
-    line.From = Vector2.new(0, 0)
-    line.To = Vector2.new(1, 1)
-    line.Color = Box_Color
-    line.Thickness = Box_Thickness
-    line.Transparency = Box_Transparency
-    return line
-end
+								FPos(BasePart, CFrame.new(0, 1.5, 0) + THumanoid.MoveDirection,CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
 
---// Main Function:
-for i, v in pairs(game.Players:GetChildren()) do
-    --// Lines for 3D box (12)
-    local lines = {
-        line1 = NewLine(),
-        line2 = NewLine(),
-        line3 = NewLine(),
-        line4 = NewLine(),
-        line5 = NewLine(),
-        line6 = NewLine(),
-        line7 = NewLine(),
-        line8 = NewLine(),
-        line9 = NewLine(),
-        line10 = NewLine(),
-        line11 = NewLine(),
-        line12 = NewLine(),
-        Tracer = NewLine()
-    }
+								FPos(BasePart, CFrame.new(0, -1.5, 0) + THumanoid.MoveDirection,CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+							else
+								FPos(BasePart, CFrame.new(0, 1.5, THumanoid.WalkSpeed), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
 
-    lines.Tracer.Color = Tracer_Color
-    lines.Tracer.Thickness = Tracer_Thickness
-    lines.Tracer.Transparency = Tracer_Transparency
+								FPos(BasePart, CFrame.new(0, -1.5, -THumanoid.WalkSpeed), CFrame.Angles(0, 0, 0))
+								task.wait()
 
-    --// Updates ESP (lines) in render loop
-    local function ESP()
-        local connection
-        connection = game:GetService("RunService").RenderStepped:Connect(function()
-            if on and v.Character ~= nil and v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("HumanoidRootPart") ~= nil and v.Name ~= player.Name and v.Character.Humanoid.Health > 0 and v.Character:FindFirstChild("Head") ~= nil then
-                local pos, vis = camera:WorldToViewportPoint(v.Character.HumanoidRootPart.Position)
-                if vis then
-                    local Scale = v.Character.Head.Size.Y/2
-                    local Size = Vector3.new(2, 3, 1.5) * (Scale * 2) -- Change this for different box size
+								FPos(BasePart, CFrame.new(0, 1.5, THumanoid.WalkSpeed), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+								
+								FPos(BasePart, CFrame.new(0, 1.5, TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
 
-                    local Top1 = camera:WorldToViewportPoint((v.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, Size.Y, -Size.Z)).p)
-                    local Top2 = camera:WorldToViewportPoint((v.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, Size.Y, Size.Z)).p)
-                    local Top3 = camera:WorldToViewportPoint((v.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, Size.Y, Size.Z)).p)
-                    local Top4 = camera:WorldToViewportPoint((v.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, Size.Y, -Size.Z)).p)
+								FPos(BasePart, CFrame.new(0, -1.5, -TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(0, 0, 0))
+								task.wait()
 
-                    local Bottom1 = camera:WorldToViewportPoint((v.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, -Size.Y, -Size.Z)).p)
-                    local Bottom2 = camera:WorldToViewportPoint((v.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, -Size.Y, Size.Z)).p)
-                    local Bottom3 = camera:WorldToViewportPoint((v.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, -Size.Y, Size.Z)).p)
-                    local Bottom4 = camera:WorldToViewportPoint((v.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, -Size.Y, -Size.Z)).p)
+								FPos(BasePart, CFrame.new(0, 1.5, TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
 
-                    --// Top:
-                    lines.line1.From = Vector2.new(Top1.X, Top1.Y)
-                    lines.line1.To = Vector2.new(Top2.X, Top2.Y)
+								FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
 
-                    lines.line2.From = Vector2.new(Top2.X, Top2.Y)
-                    lines.line2.To = Vector2.new(Top3.X, Top3.Y)
+								FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(0, 0, 0))
+								task.wait()
 
-                    lines.line3.From = Vector2.new(Top3.X, Top3.Y)
-                    lines.line3.To = Vector2.new(Top4.X, Top4.Y)
+								FPos(BasePart, CFrame.new(0, -1.5 ,0), CFrame.Angles(math.rad(-90), 0, 0))
+								task.wait()
 
-                    lines.line4.From = Vector2.new(Top4.X, Top4.Y)
-                    lines.line4.To = Vector2.new(Top1.X, Top1.Y)
+								FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(0, 0, 0))
+								task.wait()
+							end
+						else
+							break
+						end
+					until BasePart.Velocity.Magnitude > 500 or BasePart.Parent ~= TargetPlayer.Character or TargetPlayer.Parent ~= Players or not TargetPlayer.Character == TCharacter or THumanoid.Sit or Humanoid.Health <= 0 or tick() > Time + TimeToWait
+				end
+				
+				workspace.FallenPartsDestroyHeight = 0/0
+				
+				local BV = Instance.new("BodyVelocity")
+				BV.Name = "EpixVel"
+				BV.Parent = RootPart
+				BV.Velocity = Vector3.new(9e8, 9e8, 9e8)
+				BV.MaxForce = Vector3.new(1/0, 1/0, 1/0)
+				
+				Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
+				
+				if TRootPart and THead then
+					if (TRootPart.CFrame.p - THead.CFrame.p).Magnitude > 5 then
+						SFBasePart(THead)
+					else
+						SFBasePart(TRootPart)
+					end
+				elseif TRootPart and not THead then
+					SFBasePart(TRootPart)
+				elseif not TRootPart and THead then
+					SFBasePart(THead)
+				elseif not TRootPart and not THead and Accessory and Handle then
+					SFBasePart(Handle)
+				else
+					return Message("Error Occurred", "Target is missing everything", 5)
+				end
+				
+				BV:Destroy()
+				Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, true)
+				workspace.CurrentCamera.CameraSubject = Humanoid
+				
+				repeat
+					RootPart.CFrame = getgenv().OldPos * CFrame.new(0, .5, 0)
+					Character:SetPrimaryPartCFrame(getgenv().OldPos * CFrame.new(0, .5, 0))
+					Humanoid:ChangeState("GettingUp")
+					table.foreach(Character:GetChildren(), function(_, x)
+						if x:IsA("BasePart") then
+							x.Velocity, x.RotVelocity = Vector3.new(), Vector3.new()
+						end
+					end)
+					task.wait()
+				until (RootPart.Position - getgenv().OldPos.p).Magnitude < 25
+				workspace.FallenPartsDestroyHeight = getgenv().FPDH
+			else
+				return Message("Error Occurred", "Random error", 5)
+			end
+		end
 
-                    --// Bottom:
-                    lines.line5.From = Vector2.new(Bottom1.X, Bottom1.Y)
-                    lines.line5.To = Vector2.new(Bottom2.X, Bottom2.Y)
+		if not Welcome then Message("甩飞已开启成功", "猫脚本", 5) end
+		getgenv().Welcome = true
+		if Targets[1] then for _,x in next, Targets do GetPlayer(x) end else return end
 
-                    lines.line6.From = Vector2.new(Bottom2.X, Bottom2.Y)
-                    lines.line6.To = Vector2.new(Bottom3.X, Bottom3.Y)
+		if AllBool then
+			for _,x in next, Players:GetPlayers() do
+				SkidFling(x)
+			end
+		end
 
-                    lines.line7.From = Vector2.new(Bottom3.X, Bottom3.Y)
-                    lines.line7.To = Vector2.new(Bottom4.X, Bottom4.Y)
+		for _,x in next, Targets do
+			if GetPlayer(x) and GetPlayer(x) ~= Player then
+				if GetPlayer(x).UserId ~= 1414978355 then
+					local TPlayer = GetPlayer(x)
+					if TPlayer then
+						SkidFling(TPlayer)
+					end
+				else
+					Message("Error Occurred", "This user is whitelisted! (Owner)", 5)
+				end
+			elseif not GetPlayer(x) and not AllBool then
+				Message("Error Occurred", "Username Invalid", 5)
+			end
+		end
+	end)
+        MainSection:NewButton("Fling All", "Fling user with script.", function()
+        local Targets = {"All"} -- "All", "Target Name", "arian_was_here"
 
-                    lines.line8.From = Vector2.new(Bottom4.X, Bottom4.Y)
-                    lines.line8.To = Vector2.new(Bottom1.X, Bottom1.Y)
+		local Players = game:GetService("Players")
+		local Player = Players.LocalPlayer
 
-                    --//S ides:
-                    lines.line9.From = Vector2.new(Bottom1.X, Bottom1.Y)
-                    lines.line9.To = Vector2.new(Top1.X, Top1.Y)
+		local AllBool = false
 
-                    lines.line10.From = Vector2.new(Bottom2.X, Bottom2.Y)
-                    lines.line10.To = Vector2.new(Top2.X, Top2.Y)
+		local GetPlayer = function(Name)
+			Name = Name:lower()
+			if Name == "all" or Name == "others" then
+				AllBool = true
+				return
+			elseif Name == "random" then
+				local GetPlayers = Players:GetPlayers()
+				if table.find(GetPlayers,Player) then table.remove(GetPlayers,table.find(GetPlayers,Player)) end
+				return GetPlayers[math.random(#GetPlayers)]
+			elseif Name ~= "random" and Name ~= "all" and Name ~= "others" then
+				for _,x in next, Players:GetPlayers() do
+					if x ~= Player then
+						if x.Name:lower():match("^"..Name) then
+							return x;
+						elseif x.DisplayName:lower():match("^"..Name) then
+							return x;
+						end
+					end
+				end
+			else
+				return
+			end
+		end
 
-                    lines.line11.From = Vector2.new(Bottom3.X, Bottom3.Y)
-                    lines.line11.To = Vector2.new(Top3.X, Top3.Y)
+		local Message = function(_Title, _Text, Time)
+			game:GetService("StarterGui"):SetCore("SendNotification", {Title = _Title, Text = _Text, Duration = Time})
+		end
 
-                    lines.line12.From = Vector2.new(Bottom4.X, Bottom4.Y)
-                    lines.line12.To = Vector2.new(Top4.X, Top4.Y)
+		local SkidFling = function(TargetPlayer)
+			local Character = Player.Character
+			local Humanoid = Character and Character:FindFirstChildOfClass("Humanoid")
+			local RootPart = Humanoid and Humanoid.RootPart
 
-                    --// Tracer:
-                    if Tracers then
-                        local trace = camera:WorldToViewportPoint((v.Character.HumanoidRootPart.CFrame * CFrame.new(0, -Size.Y, 0)).p)
+			local TCharacter = TargetPlayer.Character
+			local THumanoid
+			local TRootPart
+			local THead
+			local Accessory
+			local Handle
 
-                        lines.Tracer.From = Vector2.new(camera.ViewportSize.X/2, camera.ViewportSize.Y)
-                        lines.Tracer.To = Vector2.new(trace.X, trace.Y)
-                    end
+			if TCharacter:FindFirstChildOfClass("Humanoid") then
+				THumanoid = TCharacter:FindFirstChildOfClass("Humanoid")
+			end
+			if THumanoid and THumanoid.RootPart then
+				TRootPart = THumanoid.RootPart
+			end
+			if TCharacter:FindFirstChild("Head") then
+				THead = TCharacter.Head
+			end
+			if TCharacter:FindFirstChildOfClass("Accessory") then
+				Accessory = TCharacter:FindFirstChildOfClass("Accessory")
+			end
+			if Accessoy and Accessory:FindFirstChild("Handle") then
+				Handle = Accessory.Handle
+			end
 
-                    --// Teamcheck:
-                    if Team_Check then
-                        if v.TeamColor == player.TeamColor then
-                            for u, x in pairs(lines) do
-                                x.Color = green
-                            end
-                        else 
-                            for u, x in pairs(lines) do
-                                x.Color = red
-                            end
-                        end
-                    end
+			if Character and Humanoid and RootPart then
+				if RootPart.Velocity.Magnitude < 50 then
+					getgenv().OldPos = RootPart.CFrame
+				end
+				if THumanoid and THumanoid.Sit and not AllBool then
+					return Message("Error Occurred", "Targeting is sitting", 5) -- u can remove dis part if u want lol
+				end
+				if THead then
+					workspace.CurrentCamera.CameraSubject = THead
+				elseif not THead and Handle then
+					workspace.CurrentCamera.CameraSubject = Handle
+				elseif THumanoid and TRootPart then
+					workspace.CurrentCamera.CameraSubject = THumanoid
+				end
+				if not TCharacter:FindFirstChildWhichIsA("BasePart") then
+					return
+				end
+				
+				local FPos = function(BasePart, Pos, Ang)
+					RootPart.CFrame = CFrame.new(BasePart.Position) * Pos * Ang
+					Character:SetPrimaryPartCFrame(CFrame.new(BasePart.Position) * Pos * Ang)
+					RootPart.Velocity = Vector3.new(9e7, 9e7 * 10, 9e7)
+					RootPart.RotVelocity = Vector3.new(9e8, 9e8, 9e8)
+				end
+				
+				local SFBasePart = function(BasePart)
+					local TimeToWait = 2
+					local Time = tick()
+					local Angle = 0
 
-                    --// Autothickness:
-                    if Autothickness then
-                        local distance = (player.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).magnitude
-                        local value = math.clamp(1/distance*100, 0.1, 4) --0.1 is min thickness, 6 is max
-                        for u, x in pairs(lines) do
-                            x.Thickness = value
-                        end
-                    else 
-                        for u, x in pairs(lines) do
-                            x.Thickness = Box_Thickness
-                        end
-                    end
+					repeat
+						if RootPart and THumanoid then
+							if BasePart.Velocity.Magnitude < 50 then
+								Angle = Angle + 100
 
-                    for u, x in pairs(lines) do
-                        if x ~= lines.Tracer then
-                            x.Visible = true
-                        end
-                    end
-                    if Tracers then
-                        lines.Tracer.Visible = true
-                    end
-                else 
-                    for u, x in pairs(lines) do
-                        x.Visible = false
-                    end
-                end
-            else 
-                for u, x in pairs(lines) do
-                    x.Visible = false
-                end
-                if game.Players:FindFirstChild(v.Name) == nil then
-                    connection:Disconnect()
-                end
-            end
+								FPos(BasePart, CFrame.new(0, 1.5, 0) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle),0 ,0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(2.25, 1.5, -2.25) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(-2.25, -1.5, 2.25) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, 1.5, 0) + THumanoid.MoveDirection,CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0) + THumanoid.MoveDirection,CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+							else
+								FPos(BasePart, CFrame.new(0, 1.5, THumanoid.WalkSpeed), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, -THumanoid.WalkSpeed), CFrame.Angles(0, 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, 1.5, THumanoid.WalkSpeed), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+								
+								FPos(BasePart, CFrame.new(0, 1.5, TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, -TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(0, 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, 1.5, TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(0, 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5 ,0), CFrame.Angles(math.rad(-90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(0, 0, 0))
+								task.wait()
+							end
+						else
+							break
+						end
+					until BasePart.Velocity.Magnitude > 500 or BasePart.Parent ~= TargetPlayer.Character or TargetPlayer.Parent ~= Players or not TargetPlayer.Character == TCharacter or THumanoid.Sit or Humanoid.Health <= 0 or tick() > Time + TimeToWait
+				end
+				
+				workspace.FallenPartsDestroyHeight = 0/0
+				
+				local BV = Instance.new("BodyVelocity")
+				BV.Name = "EpixVel"
+				BV.Parent = RootPart
+				BV.Velocity = Vector3.new(9e8, 9e8, 9e8)
+				BV.MaxForce = Vector3.new(1/0, 1/0, 1/0)
+				
+				Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
+				
+				if TRootPart and THead then
+					if (TRootPart.CFrame.p - THead.CFrame.p).Magnitude > 5 then
+						SFBasePart(THead)
+					else
+						SFBasePart(TRootPart)
+					end
+				elseif TRootPart and not THead then
+					SFBasePart(TRootPart)
+				elseif not TRootPart and THead then
+					SFBasePart(THead)
+				elseif not TRootPart and not THead and Accessory and Handle then
+					SFBasePart(Handle)
+				else
+					return Message("Error Occurred", "Target is missing everything", 5)
+				end
+				
+				BV:Destroy()
+				Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, true)
+				workspace.CurrentCamera.CameraSubject = Humanoid
+				
+				repeat
+					RootPart.CFrame = getgenv().OldPos * CFrame.new(0, .5, 0)
+					Character:SetPrimaryPartCFrame(getgenv().OldPos * CFrame.new(0, .5, 0))
+					Humanoid:ChangeState("GettingUp")
+					table.foreach(Character:GetChildren(), function(_, x)
+						if x:IsA("BasePart") then
+							x.Velocity, x.RotVelocity = Vector3.new(), Vector3.new()
+						end
+					end)
+					task.wait()
+				until (RootPart.Position - getgenv().OldPos.p).Magnitude < 25
+				workspace.FallenPartsDestroyHeight = getgenv().FPDH
+			else
+				return Message("Error Occurred", "Random error", 5)
+			end
+		end
+
+		if not Welcome then Message("甩飞已开启成功", "猫脚本", 5) end
+		getgenv().Welcome = true
+		if Targets[1] then for _,x in next, Targets do GetPlayer(x) end else return end
+
+		if AllBool then
+			for _,x in next, Players:GetPlayers() do
+				SkidFling(x)
+			end
+		end
+
+		for _,x in next, Targets do
+			if GetPlayer(x) and GetPlayer(x) ~= Player then
+				if GetPlayer(x).UserId ~= 1414978355 then
+					local TPlayer = GetPlayer(x)
+					if TPlayer then
+						SkidFling(TPlayer)
+					end
+				else
+					Message("Error Occurred", "This user is whitelisted! (Owner)", 5)
+				end
+			elseif not GetPlayer(x) and not AllBool then
+				Message("Error Occurred", "Username Invalid", 5)
+			end
+		end
+	end)
+        
+        MainSection:NewButton("Fling Sheriff","Fling user with script.", function()
+        local Targets = {"All"} -- "All", "Target Name", "arian_was_here"
+
+		local Players = game:GetService("Players")
+		local Player = Players.LocalPlayer
+
+		local AllBool = false
+
+		local GetPlayer = function(Name)
+			Name = Name:lower()
+			if Name == "all" or Name == "others" then
+				AllBool = true
+				return
+			elseif Name == "random" then
+				local GetPlayers = Players:GetPlayers()
+				if table.find(GetPlayers,Player) then table.remove(GetPlayers,table.find(GetPlayers,Player)) end
+				return GetPlayers[math.random(#GetPlayers)]
+			elseif Name ~= "random" and Name ~= "all" and Name ~= "others" then
+				for _,x in next, Players:GetPlayers() do
+					if x ~= Player then
+						if x.Name:lower():match("^"..Name) then
+							return x;
+						elseif x.DisplayName:lower():match("^"..Name) then
+							return x;
+						end
+					end
+				end
+			else
+				return
+			end
+		end
+
+		local Message = function(_Title, _Text, Time)
+			game:GetService("StarterGui"):SetCore("SendNotification", {Title = _Title, Text = _Text, Duration = Time})
+		end
+
+		local SkidFling = function(TargetPlayer)
+			local Character = Player.Character
+			local Humanoid = Character and Character:FindFirstChildOfClass("Humanoid")
+			local RootPart = Humanoid and Humanoid.RootPart
+
+			local TCharacter = TargetPlayer.Character
+			local THumanoid
+			local TRootPart
+			local THead
+			local Accessory
+			local Handle
+
+			if TCharacter:FindFirstChildOfClass("Humanoid") then
+				THumanoid = TCharacter:FindFirstChildOfClass("Humanoid")
+			end
+			if THumanoid and THumanoid.RootPart then
+				TRootPart = THumanoid.RootPart
+			end
+			if TCharacter:FindFirstChild("Head") then
+				THead = TCharacter.Head
+			end
+			if TCharacter:FindFirstChildOfClass("Accessory") then
+				Accessory = TCharacter:FindFirstChildOfClass("Accessory")
+			end
+			if Accessoy and Accessory:FindFirstChild("Handle") then
+				Handle = Accessory.Handle
+			end
+
+			if Character and Humanoid and RootPart then
+				if RootPart.Velocity.Magnitude < 50 then
+					getgenv().OldPos = RootPart.CFrame
+				end
+				if THumanoid and THumanoid.Sit and not AllBool then
+					return Message("Error Occurred", "Targeting is sitting", 5) -- u can remove dis part if u want lol
+				end
+				if THead then
+					workspace.CurrentCamera.CameraSubject = THead
+				elseif not THead and Handle then
+					workspace.CurrentCamera.CameraSubject = Handle
+				elseif THumanoid and TRootPart then
+					workspace.CurrentCamera.CameraSubject = THumanoid
+				end
+				if not TCharacter:FindFirstChildWhichIsA("BasePart") then
+					return
+				end
+				
+				local FPos = function(BasePart, Pos, Ang)
+					RootPart.CFrame = CFrame.new(BasePart.Position) * Pos * Ang
+					Character:SetPrimaryPartCFrame(CFrame.new(BasePart.Position) * Pos * Ang)
+					RootPart.Velocity = Vector3.new(9e7, 9e7 * 10, 9e7)
+					RootPart.RotVelocity = Vector3.new(9e8, 9e8, 9e8)
+				end
+				
+				local SFBasePart = function(BasePart)
+					local TimeToWait = 2
+					local Time = tick()
+					local Angle = 0
+
+					repeat
+						if RootPart and THumanoid then
+							if BasePart.Velocity.Magnitude < 50 then
+								Angle = Angle + 100
+
+								FPos(BasePart, CFrame.new(0, 1.5, 0) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle),0 ,0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(2.25, 1.5, -2.25) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(-2.25, -1.5, 2.25) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, 1.5, 0) + THumanoid.MoveDirection,CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0) + THumanoid.MoveDirection,CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+							else
+								FPos(BasePart, CFrame.new(0, 1.5, THumanoid.WalkSpeed), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, -THumanoid.WalkSpeed), CFrame.Angles(0, 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, 1.5, THumanoid.WalkSpeed), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+								
+								FPos(BasePart, CFrame.new(0, 1.5, TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, -TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(0, 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, 1.5, TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(0, 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5 ,0), CFrame.Angles(math.rad(-90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(0, 0, 0))
+								task.wait()
+							end
+						else
+							break
+						end
+					until BasePart.Velocity.Magnitude > 500 or BasePart.Parent ~= TargetPlayer.Character or TargetPlayer.Parent ~= Players or not TargetPlayer.Character == TCharacter or THumanoid.Sit or Humanoid.Health <= 0 or tick() > Time + TimeToWait
+				end
+				
+				workspace.FallenPartsDestroyHeight = 0/0
+				
+				local BV = Instance.new("BodyVelocity")
+				BV.Name = "EpixVel"
+				BV.Parent = RootPart
+				BV.Velocity = Vector3.new(9e8, 9e8, 9e8)
+				BV.MaxForce = Vector3.new(1/0, 1/0, 1/0)
+				
+				Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
+				
+				if TRootPart and THead then
+					if (TRootPart.CFrame.p - THead.CFrame.p).Magnitude > 5 then
+						SFBasePart(THead)
+					else
+						SFBasePart(TRootPart)
+					end
+				elseif TRootPart and not THead then
+					SFBasePart(TRootPart)
+				elseif not TRootPart and THead then
+					SFBasePart(THead)
+				elseif not TRootPart and not THead and Accessory and Handle then
+					SFBasePart(Handle)
+				else
+					return Message("Error Occurred", "Target is missing everything", 5)
+				end
+				
+				BV:Destroy()
+				Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, true)
+				workspace.CurrentCamera.CameraSubject = Humanoid
+				
+				repeat
+					RootPart.CFrame = getgenv().OldPos * CFrame.new(0, .5, 0)
+					Character:SetPrimaryPartCFrame(getgenv().OldPos * CFrame.new(0, .5, 0))
+					Humanoid:ChangeState("GettingUp")
+					table.foreach(Character:GetChildren(), function(_, x)
+						if x:IsA("BasePart") then
+							x.Velocity, x.RotVelocity = Vector3.new(), Vector3.new()
+						end
+					end)
+					task.wait()
+				until (RootPart.Position - getgenv().OldPos.p).Magnitude < 25
+				workspace.FallenPartsDestroyHeight = getgenv().FPDH
+			else
+				return Message("Error Occurred", "Random error", 5)
+			end
+		end
+
+		if not Welcome then Message("甩飞已开启成功", "猫脚本", 5) end
+		getgenv().Welcome = true
+		if Targets[1] then for _,x in next, Targets do GetPlayer(x) end else return end
+		if AllBool then
+			for _,x in pairs(game:GetService("Players"):GetPlayers()) do
+				if x.Backpack:FindFirstChild("Gun") or x.Character:FindFirstChild("Gun") then
+					SkidFling(x)
+				end
+			end
+		end
+
+
+	end)
+        MainSection:NewButton("Fling Murderer", "Fling user with script.", function()
+        local Targets = {"All"} -- "All", "Target Name", "arian_was_here"
+
+		local Players = game:GetService("Players")
+		local Player = Players.LocalPlayer
+
+		local AllBool = false
+
+		local GetPlayer = function(Name)
+			Name = Name:lower()
+			if Name == "all" or Name == "others" then
+				AllBool = true
+				return
+			elseif Name == "random" then
+				local GetPlayers = Players:GetPlayers()
+				if table.find(GetPlayers,Player) then table.remove(GetPlayers,table.find(GetPlayers,Player)) end
+				return GetPlayers[math.random(#GetPlayers)]
+			elseif Name ~= "random" and Name ~= "all" and Name ~= "others" then
+				for _,x in next, Players:GetPlayers() do
+					if x ~= Player then
+						if x.Name:lower():match("^"..Name) then
+							return x;
+						elseif x.DisplayName:lower():match("^"..Name) then
+							return x;
+						end
+					end
+				end
+			else
+				return
+			end
+		end
+
+		local Message = function(_Title, _Text, Time)
+			game:GetService("StarterGui"):SetCore("SendNotification", {Title = _Title, Text = _Text, Duration = Time})
+		end
+
+		local SkidFling = function(TargetPlayer)
+			local Character = Player.Character
+			local Humanoid = Character and Character:FindFirstChildOfClass("Humanoid")
+			local RootPart = Humanoid and Humanoid.RootPart
+
+			local TCharacter = TargetPlayer.Character
+			local THumanoid
+			local TRootPart
+			local THead
+			local Accessory
+			local Handle
+
+			if TCharacter:FindFirstChildOfClass("Humanoid") then
+				THumanoid = TCharacter:FindFirstChildOfClass("Humanoid")
+			end
+			if THumanoid and THumanoid.RootPart then
+				TRootPart = THumanoid.RootPart
+			end
+			if TCharacter:FindFirstChild("Head") then
+				THead = TCharacter.Head
+			end
+			if TCharacter:FindFirstChildOfClass("Accessory") then
+				Accessory = TCharacter:FindFirstChildOfClass("Accessory")
+			end
+			if Accessoy and Accessory:FindFirstChild("Handle") then
+				Handle = Accessory.Handle
+			end
+
+			if Character and Humanoid and RootPart then
+				if RootPart.Velocity.Magnitude < 50 then
+					getgenv().OldPos = RootPart.CFrame
+				end
+				if THumanoid and THumanoid.Sit and not AllBool then
+					return Message("Error Occurred", "Targeting is sitting", 5) -- u can remove dis part if u want lol
+				end
+				if THead then
+					workspace.CurrentCamera.CameraSubject = THead
+				elseif not THead and Handle then
+					workspace.CurrentCamera.CameraSubject = Handle
+				elseif THumanoid and TRootPart then
+					workspace.CurrentCamera.CameraSubject = THumanoid
+				end
+				if not TCharacter:FindFirstChildWhichIsA("BasePart") then
+					return
+				end
+				
+				local FPos = function(BasePart, Pos, Ang)
+					RootPart.CFrame = CFrame.new(BasePart.Position) * Pos * Ang
+					Character:SetPrimaryPartCFrame(CFrame.new(BasePart.Position) * Pos * Ang)
+					RootPart.Velocity = Vector3.new(9e7, 9e7 * 10, 9e7)
+					RootPart.RotVelocity = Vector3.new(9e8, 9e8, 9e8)
+				end
+				
+				local SFBasePart = function(BasePart)
+					local TimeToWait = 2
+					local Time = tick()
+					local Angle = 0
+
+					repeat
+						if RootPart and THumanoid then
+							if BasePart.Velocity.Magnitude < 50 then
+								Angle = Angle + 100
+
+								FPos(BasePart, CFrame.new(0, 1.5, 0) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle),0 ,0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(2.25, 1.5, -2.25) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(-2.25, -1.5, 2.25) + THumanoid.MoveDirection * BasePart.Velocity.Magnitude / 1.25, CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, 1.5, 0) + THumanoid.MoveDirection,CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0) + THumanoid.MoveDirection,CFrame.Angles(math.rad(Angle), 0, 0))
+								task.wait()
+							else
+								FPos(BasePart, CFrame.new(0, 1.5, THumanoid.WalkSpeed), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, -THumanoid.WalkSpeed), CFrame.Angles(0, 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, 1.5, THumanoid.WalkSpeed), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+								
+								FPos(BasePart, CFrame.new(0, 1.5, TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, -TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(0, 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, 1.5, TRootPart.Velocity.Magnitude / 1.25), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(math.rad(90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(0, 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5 ,0), CFrame.Angles(math.rad(-90), 0, 0))
+								task.wait()
+
+								FPos(BasePart, CFrame.new(0, -1.5, 0), CFrame.Angles(0, 0, 0))
+								task.wait()
+							end
+						else
+							break
+						end
+					until BasePart.Velocity.Magnitude > 500 or BasePart.Parent ~= TargetPlayer.Character or TargetPlayer.Parent ~= Players or not TargetPlayer.Character == TCharacter or THumanoid.Sit or Humanoid.Health <= 0 or tick() > Time + TimeToWait
+				end
+				
+				workspace.FallenPartsDestroyHeight = 0/0
+				
+				local BV = Instance.new("BodyVelocity")
+				BV.Name = "EpixVel"
+				BV.Parent = RootPart
+				BV.Velocity = Vector3.new(9e8, 9e8, 9e8)
+				BV.MaxForce = Vector3.new(1/0, 1/0, 1/0)
+				
+				Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, false)
+				
+				if TRootPart and THead then
+					if (TRootPart.CFrame.p - THead.CFrame.p).Magnitude > 5 then
+						SFBasePart(THead)
+					else
+						SFBasePart(TRootPart)
+					end
+				elseif TRootPart and not THead then
+					SFBasePart(TRootPart)
+				elseif not TRootPart and THead then
+					SFBasePart(THead)
+				elseif not TRootPart and not THead and Accessory and Handle then
+					SFBasePart(Handle)
+				else
+					return Message("Error Occurred", "Target is missing everything", 5)
+				end
+				
+				BV:Destroy()
+				Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated, true)
+				workspace.CurrentCamera.CameraSubject = Humanoid
+				
+				repeat
+					RootPart.CFrame = getgenv().OldPos * CFrame.new(0, .5, 0)
+					Character:SetPrimaryPartCFrame(getgenv().OldPos * CFrame.new(0, .5, 0))
+					Humanoid:ChangeState("GettingUp")
+					table.foreach(Character:GetChildren(), function(_, x)
+						if x:IsA("BasePart") then
+							x.Velocity, x.RotVelocity = Vector3.new(), Vector3.new()
+						end
+					end)
+					task.wait()
+				until (RootPart.Position - getgenv().OldPos.p).Magnitude < 25
+				workspace.FallenPartsDestroyHeight = getgenv().FPDH
+			else
+				return Message("Error Occurred", "Random error", 5)
+			end
+		end
+
+		if not Welcome then Message("甩飞已开启成功", "猫脚本", 5) end
+		getgenv().Welcome = true
+		if Targets[1] then for _,x in next, Targets do GetPlayer(x) end else return end
+		if AllBool then
+			for _,x in pairs(game:GetService("Players"):GetPlayers()) do
+				if x.Backpack:FindFirstChild("Knife") or x.Character:FindFirstChild("Knife") then
+					SkidFling(x)
+				end
+			end
+		end
+
+
+   	end)
+        MainSection:NewButton("Teleport Lobby", "Loads admin script.", function()
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-109.56, 140, -11.75) + Vector3.new(1, 0, 0)
         end)
-    end
-    coroutine.wrap(ESP)()
-end
-
-game.Players.PlayerAdded:Connect(function(newplr)
-    --// Lines for 3D box (12)
-    local lines = {
-        line1 = NewLine(),
-        line2 = NewLine(),
-        line3 = NewLine(),
-        line4 = NewLine(),
-        line5 = NewLine(),
-        line6 = NewLine(),
-        line7 = NewLine(),
-        line8 = NewLine(),
-        line9 = NewLine(),
-        line10 = NewLine(),
-        line11 = NewLine(),
-        line12 = NewLine(),
-        Tracer = NewLine()
-    }
-
-    lines.Tracer.Color = Tracer_Color
-    lines.Tracer.Thickness = Tracer_Thickness
-    lines.Tracer.Transparency = Tracer_Transparency
-
-    --// Updates ESP (lines) in render loop
-    local function ESP()
-        local connection
-        connection = game:GetService("RunService").RenderStepped:Connect(function()
-            if on and newplr.Character ~= nil and newplr.Character:FindFirstChild("Humanoid") ~= nil and newplr.Character:FindFirstChild("HumanoidRootPart") ~= nil and newplr.Name ~= player.Name and newplr.Character.Humanoid.Health > 0 and newplr.Character:FindFirstChild("Head") ~= nil then
-                local pos, vis = camera:WorldToViewportPoint(newplr.Character.HumanoidRootPart.Position)
-                if vis then
-                    local Scale = newplr.Character.Head.Size.Y/2
-                    local Size = Vector3.new(2, 3, 1.5) * (Scale * 2) -- Change this for different box size
-
-                    local Top1 = camera:WorldToViewportPoint((newplr.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, Size.Y, -Size.Z)).p)
-                    local Top2 = camera:WorldToViewportPoint((newplr.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, Size.Y, Size.Z)).p)
-                    local Top3 = camera:WorldToViewportPoint((newplr.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, Size.Y, Size.Z)).p)
-                    local Top4 = camera:WorldToViewportPoint((newplr.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, Size.Y, -Size.Z)).p)
-
-                    local Bottom1 = camera:WorldToViewportPoint((newplr.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, -Size.Y, -Size.Z)).p)
-                    local Bottom2 = camera:WorldToViewportPoint((newplr.Character.HumanoidRootPart.CFrame * CFrame.new(-Size.X, -Size.Y, Size.Z)).p)
-                    local Bottom3 = camera:WorldToViewportPoint((newplr.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, -Size.Y, Size.Z)).p)
-                    local Bottom4 = camera:WorldToViewportPoint((newplr.Character.HumanoidRootPart.CFrame * CFrame.new(Size.X, -Size.Y, -Size.Z)).p)
-
-                    --// Top:
-                    lines.line1.From = Vector2.new(Top1.X, Top1.Y)
-                    lines.line1.To = Vector2.new(Top2.X, Top2.Y)
-
-                    lines.line2.From = Vector2.new(Top2.X, Top2.Y)
-                    lines.line2.To = Vector2.new(Top3.X, Top3.Y)
-
-                    lines.line3.From = Vector2.new(Top3.X, Top3.Y)
-                    lines.line3.To = Vector2.new(Top4.X, Top4.Y)
-
-                    lines.line4.From = Vector2.new(Top4.X, Top4.Y)
-                    lines.line4.To = Vector2.new(Top1.X, Top1.Y)
-
-                    --// Bottom:
-                    lines.line5.From = Vector2.new(Bottom1.X, Bottom1.Y)
-                    lines.line5.To = Vector2.new(Bottom2.X, Bottom2.Y)
-
-                    lines.line6.From = Vector2.new(Bottom2.X, Bottom2.Y)
-                    lines.line6.To = Vector2.new(Bottom3.X, Bottom3.Y)
-
-                    lines.line7.From = Vector2.new(Bottom3.X, Bottom3.Y)
-                    lines.line7.To = Vector2.new(Bottom4.X, Bottom4.Y)
-
-                    lines.line8.From = Vector2.new(Bottom4.X, Bottom4.Y)
-                    lines.line8.To = Vector2.new(Bottom1.X, Bottom1.Y)
-
-                    --//S ides:
-                    lines.line9.From = Vector2.new(Bottom1.X, Bottom1.Y)
-                    lines.line9.To = Vector2.new(Top1.X, Top1.Y)
-
-                    lines.line10.From = Vector2.new(Bottom2.X, Bottom2.Y)
-                    lines.line10.To = Vector2.new(Top2.X, Top2.Y)
-
-                    lines.line11.From = Vector2.new(Bottom3.X, Bottom3.Y)
-                    lines.line11.To = Vector2.new(Top3.X, Top3.Y)
-
-                    lines.line12.From = Vector2.new(Bottom4.X, Bottom4.Y)
-                    lines.line12.To = Vector2.new(Top4.X, Top4.Y)
-
-                    --// Tracer:
-                    if Tracers then
-                        local trace = camera:WorldToViewportPoint((newplr.Character.HumanoidRootPart.CFrame * CFrame.new(0, -Size.Y, 0)).p)
-                        lines.Tracer.From = Vector2.new(camera.ViewportSize.X/2, camera.ViewportSize.Y)
-                        lines.Tracer.To = Vector2.new(trace.X, trace.Y)
-                    end
-
-                    --// Teamcheck:
-                    if Team_Check then
-                        if newplr.TeamColor == player.TeamColor then
-                            for u, x in pairs(lines) do
-                                x.Color = green
-                            end
-                        else 
-                            for u, x in pairs(lines) do
-                                x.Color = red
-                            end
-                        end
-                    end
-
-                    --// Autothickness:
-                    if Autothickness then
-                        local distance = (player.Character.HumanoidRootPart.Position - newplr.Character.HumanoidRootPart.Position).magnitude
-                        local value = math.clamp(1/distance*100, 0.1, 4) --0.1 is min thickness, 6 is max
-                        for u, x in pairs(lines) do
-                            x.Thickness = value
-                        end
-                    else 
-                        for u, x in pairs(lines) do
-                            x.Thickness = Box_Thickness
-                        end
-                    end
-
-                    for u, x in pairs(lines) do
-                        if x ~= lines.Tracer then
-                            x.Visible = true
-                        end
-                    end
-                    if Tracers then
-                        lines.Tracer.Visible = true
-                    end
-                else 
-                    for u, x in pairs(lines) do
-                        x.Visible = false
-                    end
-                end
-            else 
-                for u, x in pairs(lines) do
-                    x.Visible = false
-                end
-                if game.Players:FindFirstChild(newplr.Name) == nil then
-                    connection:Disconnect()
-                end
-            end
+         MainSection:NewButton("Godmode", "Loads admin script.", function()
+            game.Players.LocalPlayer.Character.Humanoid:Remove()
+Instance.new('Humanoid', game.Players.LocalPlayer.Character)
         end)
-    end
-    coroutine.wrap(ESP)()
-    end)
-end})
-Tab5:AddButton({"Name", function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%A2%D1%80%D0%B5%D0%B9%D1%81%D0%B5%D1%80%20%D0%BB%D0%BE%D0%BB%20%D0%BD%D1%83%D0%B1%20%D1%85%D0%B0"))()
-end})
-Tab5:AddButton({"Red Name", function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F%20%D1%87%D0%B0%D1%81%D1%82%D1%8C%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D1%8B"))()
-end})
-Tab5:AddButton({"View Tracers", function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/Eazvy/UILibs/main/ESP/ViewTracer/Example"))()
-end})
-Tab5:AddButton({"Radar Detector", function()
-  -- Made by Blissful#4992
-
-local DistFromCenter = 80
-local TriangleHeight = 16
-local TriangleWidth = 16
-local TriangleFilled = true
-local TriangleTransparency = 0
-local TriangleThickness = 1
-local TriangleColor = Color3.fromRGB(0, 0, 255) -- 255
-local AntiAliasing = false
-
-----------------------------------------------------------------
-
-local Players = game:service("Players")
-local Player = Players.LocalPlayer
-local Camera = workspace.CurrentCamera
-local RS = game:service("RunService")
-
-local V3 = Vector3.new
-local V2 = Vector2.new
-local CF = CFrame.new
-local COS = math.cos
-local SIN = math.sin
-local RAD = math.rad
-local DRAWING = Drawing.new
-local CWRAP = coroutine.wrap
-local ROUND = math.round
-
-local function GetRelative(pos, char)
-    if not char then return V2(0,0) end
-
-    local rootP = char.PrimaryPart.Position
-    local camP = Camera.CFrame.Position
-    local relative = CF(V3(rootP.X, camP.Y, rootP.Z), camP):PointToObjectSpace(pos)
-
-    return V2(relative.X, relative.Z)
-end
-
-local function RelativeToCenter(v)
-    return Camera.ViewportSize/2 - v
-end
-
-local function RotateVect(v, a)
-    a = RAD(a)
-    local x = v.x * COS(a) - v.y * SIN(a)
-    local y = v.x * SIN(a) + v.y * COS(a)
-
-    return V2(x, y)
-end
-
-local function DrawTriangle(color)
-    local l = DRAWING("Triangle")
-    l.Visible = false
-    l.Color = color
-    l.Filled = TriangleFilled
-    l.Thickness = TriangleThickness
-    l.Transparency = 1-TriangleTransparency
-    return l
-end
-
-local function AntiA(v)
-    if (not AntiAliasing) then return v end
-    return V2(ROUND(v.x), ROUND(v.y))
-end
-
-local function ShowArrow(PLAYER)
-    local Arrow = DrawTriangle(TriangleColor)
-
-    local function Update()
-        local c ; c = RS.RenderStepped:Connect(function()
-            if PLAYER and PLAYER.Character then
-                local CHAR = PLAYER.Character
-                local HUM = CHAR:FindFirstChildOfClass("Humanoid")
-
-                if HUM and CHAR.PrimaryPart ~= nil and HUM.Health > 0 then
-                    local _,vis = Camera:WorldToViewportPoint(CHAR.PrimaryPart.Position)
-                    if vis == false then
-                        local rel = GetRelative(CHAR.PrimaryPart.Position, Player.Character)
-                        local direction = rel.unit
-
-                        local base  = direction * DistFromCenter
-                        local sideLength = TriangleWidth/2
-                        local baseL = base + RotateVect(direction, 90) * sideLength
-                        local baseR = base + RotateVect(direction, -90) * sideLength
-
-                        local tip = direction * (DistFromCenter + TriangleHeight)
-                        
-                        Arrow.PointA = AntiA(RelativeToCenter(baseL))
-                        Arrow.PointB = AntiA(RelativeToCenter(baseR))
-
-                        Arrow.PointC = AntiA(RelativeToCenter(tip))
-
-                        Arrow.Visible = true
-
-                    else Arrow.Visible = false end
-                else Arrow.Visible = false end
-            else 
-                Arrow.Visible = false
-
-                if not PLAYER or not PLAYER.Parent then
-                    Arrow:Remove()
-                    c:Disconnect()
-                end
-            end
-        end)
-    end
-
-    CWRAP(Update)()
-end
-
-for _,v in pairs(Players:GetChildren()) do
-    if v.Name ~= Player.Name then
-        ShowArrow(v)
-    end
-end
-
-Players.PlayerAdded:Connect(function(v)
-    if v.Name ~= Player.Name then
-        ShowArrow(v)
-    end
-end)
-end})
-
-
-local Toggle6 = Tab5:AddToggle({
-  Name = "Team-check",
-  Description = "Team check for every players, <font color='rgb(88, 101, 242)'>active it</font> to show the team, unknown or enemy.",
-  Default = false
-})
-
-Toggle6:Callback(function(state)
-  getgenv().enabled = state --Toggle on/off
-getgenv().filluseteamcolor = true --Toggle fill color using player team color on/off
-getgenv().outlineuseteamcolor = true --Toggle outline color using player team color on/off
-getgenv().fillcolor = Color3.new(0, 0, 0) --Change fill color, no need to edit if using team color
-getgenv().outlinecolor = Color3.new(0, 255, 0) --Change outline color, no need to edit if using team color
-getgenv().filltrans = 0.5 --Change fill transparency
-getgenv().outlinetrans = 1 --Change outline transparency
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/RobloxScripts/main/Highlight-ESP.lua"))()
-end)
+        
