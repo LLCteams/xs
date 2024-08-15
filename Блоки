@@ -1,3 +1,5 @@
+
+
 Notification.Notify("Universe-X", "Official Versions.", "rbxassetid://13981987402", {
     Duration = 10,
     
@@ -64,18 +66,7 @@ end
 -- Connect the button click event to the function
 imageButton.MouseButton1Click:Connect(onButtonClick)
 
-function Funtouch() 
-function chatnotify(msg)
-	game.StarterGui:SetCore("ChatMakeSystemMessage", {
-		Text = msg,
-		Color = Color3.fromRGB(255, 0, 0),
-		Font = Enum.Font.SourceSans,
-		FontSize = Enum.FontSize.Size48
-	})
-end
-
-chatnotify("Updated to latest version: 638.791")
-
+function Funtouch()
 --[[
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
