@@ -18,7 +18,7 @@ end)
 
 local tab2 = DrRayLibrary.newTab("Script", " ImageIdHere")
 
-tab1.newButton("Universe - X 3.0", "Discontinued.", function()
+tab2.newButton("Universe - X 3.0", "Discontinued.", function()
     game.Shutdown()
 end)
 
