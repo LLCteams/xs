@@ -8,18 +8,18 @@ local window = DrRayLibrary:Load("UX 3.0", "Default")
 local tab1 = DrRayLibrary.newTab("Home", "ImageIdHere")
 
 -- Add elements to the first tab
-tab1.newLabel("Welcome to Universe-X, hope you enjoy. [Universe-X Discontinued!]")
-tab1.newButton("Slap Battles", "Loads Slap Battles script.", function()
+tab1.newLabel("Welcome to Universe-X, hope you enjoy.")
+tab1.newButton("Universe-X", "Universe-X, click to load the script", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/4bn47Jb0"))()
 end)
-tab1.newButton("Zombie Uprising", "Loads Zombie Uprising script.", function()
+tab1.newButton("New Universe-X", "Coming Soon.", function()
     loadstring(game:HttpGet("https://pastefy.app/lQcZ8Ba3/raw"))()
 end)
 
 local tab2 = DrRayLibrary.newTab("Script", " ImageIdHere")
 
-tab2.newButton("Universe - X 3.0", "Discontinued.", function()
-    game.Shutdown()
+tab2.newButton("Universe - X 3.0", "Features are in Universe-X.", function()
+    print('no.') 
 end)
 
 
