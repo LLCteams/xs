@@ -1930,7 +1930,7 @@ Synergy.BackgroundColor3 = Color3.fromRGB(208, 0, 0)
 Synergy.Position = UDim2.new(0.0257069413, 0, 0.084615387, 0)
 Synergy.Size = UDim2.new(0, 161, 0, 29)
 Synergy.Font = Enum.Font.Ubuntu
-Synergy.Text = "Slap Battles"
+Synergy.Text = ""
 Synergy.TextColor3 = Color3.fromRGB(255, 255, 255)
 Synergy.TextScaled = true
 Synergy.TextSize = 19.000
@@ -1944,7 +1944,7 @@ NovaH.BackgroundColor3 = Color3.fromRGB(208, 0, 0)
 NovaH.Position = UDim2.new(0.473007709, 0, 0.16538462, 0)
 NovaH.Size = UDim2.new(0, 161, 0, 29)
 NovaH.Font = Enum.Font.Ubuntu
-NovaH.Text = "Zombie Uprising"
+NovaH.Text = ""
 NovaH.TextColor3 = Color3.fromRGB(255, 255, 255)
 NovaH.TextSize = 19.000
 NovaH.TextWrapped = true
@@ -2808,7 +2808,7 @@ function YQILUT_fake_script() -- Synergy.LocalScript
 	local script = Instance.new('LocalScript', Synergy)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		nubproT() 
+	 -- 0
 	end)
 end
 coroutine.wrap(YQILUT_fake_script)()
@@ -2816,7 +2816,7 @@ function MONUDZD_fake_script() -- NovaH.LocalScript
 	local script = Instance.new('LocalScript', NovaH)
 
 	script.Parent.MouseButton1Click:Connect(function()
-		Zom() 
+		-- 0
 	end)
 end
 coroutine.wrap(MONUDZD_fake_script)()
@@ -31600,60 +31600,7 @@ while true do
 end
 end}) 
 
-local folder = Instance.new("Folder",CoreGui);
-folder.Name = "ESP Holder";
-	
-local function AddBillboard(player)
-    local billboard = Instance.new("BillboardGui",folder);
-    billboard.Name = player.Name;
-    billboard.AlwaysOnTop = true;
-    billboard.Size = UDim2.fromOffset(200,50);
-    billboard.ExtentsOffset = Vector3.new(0,3,0);
-    billboard.Enabled = false
-
-    local textLabel = Instance.new("TextLabel",billboard);
-    textLabel.TextSize = 20;
-    textLabel.Text = player.Name;
-    textLabel.Font = Enum.Font.SourceSans;
-    textLabel.BackgroundTransparency = 1;
-    textLabel.Size = UDim2.fromScale(1,1);
-
-    if getgenv().AllEsp then
-        billboard.Enabled = true
-    end
-    repeat
-        wait()
-        pcall(function()
-            billboard.Adornee = player.Character.Head;
-            if player.Character:FindFirstChild("Knife") or player.Backpack:FindFirstChild("Knife") then
-                textLabel.TextColor3 = Color3.new(1,0,0);
-                if not billboard.Enabled and getgenv().MurderEsp then
-                    billboard.Enabled = true
-                end
-            elseif player.Character:FindFirstChild("Gun") or player.Backpack:FindFirstChild("Gun") then
-                textLabel.TextColor3 = Color3.new(0,0,1);
-                if not billboard.Enabled and getgenv().SheriffEsp then
-                    billboard.Enabled = true
-                end
-            else
-                textLabel.TextColor3 = Color3.new(0,1,0);
-            end;
-        end);
-    until not player.Parent;
-end;
-
-for _,player in pairs(Players:GetPlayers()) do
-    if player ~= Client then
-        coroutine.wrap(AddBillboard)(player);
-    end;
-end;
-Players.PlayerAdded:Connect(AddBillboard);
-
-Players.PlayerRemoving:Connect(function(player)
-    folder[player.Name]:Destroy();
-end);
-
-Tab12:AddButton({"New Esp", function(state) 
+Tab12:AddButton({"New Esp", function() 
    getgenv().AllEsp = state;
         for i, v in pairs(folder:GetChildren()) do
             if v:IsA("BillboardGui") and Players[tostring(v.Name)] then
