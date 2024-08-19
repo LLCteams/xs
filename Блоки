@@ -31586,6 +31586,93 @@ end})
 
 --- Tab 11
 
+local Paragraph = Tab12:AddParagraph({"Testing 3.0", "Universe - X script random that actually works."})
+Tab12:AddButton({"Spam Block", function() 
+while true do
+	wait(0.1)
+
+	game:GetService("RunService").Stepped:Connect(function()
+		local e = Instance.new("Part")
+		e.Anchored = false
+		e.Position = Vector3.new(math.random(1, 100), math.random(1, 100), math.random(1, 100))
+		e.Parent = workspace
+	end)
+end
+end}) 
+
+local folder = Instance.new("Folder",CoreGui);
+folder.Name = "ESP Holder";
+	
+local function AddBillboard(player)
+    local billboard = Instance.new("BillboardGui",folder);
+    billboard.Name = player.Name;
+    billboard.AlwaysOnTop = true;
+    billboard.Size = UDim2.fromOffset(200,50);
+    billboard.ExtentsOffset = Vector3.new(0,3,0);
+    billboard.Enabled = false
+
+    local textLabel = Instance.new("TextLabel",billboard);
+    textLabel.TextSize = 20;
+    textLabel.Text = player.Name;
+    textLabel.Font = Enum.Font.SourceSans;
+    textLabel.BackgroundTransparency = 1;
+    textLabel.Size = UDim2.fromScale(1,1);
+
+    if getgenv().AllEsp then
+        billboard.Enabled = true
+    end
+    repeat
+        wait()
+        pcall(function()
+            billboard.Adornee = player.Character.Head;
+            if player.Character:FindFirstChild("Knife") or player.Backpack:FindFirstChild("Knife") then
+                textLabel.TextColor3 = Color3.new(1,0,0);
+                if not billboard.Enabled and getgenv().MurderEsp then
+                    billboard.Enabled = true
+                end
+            elseif player.Character:FindFirstChild("Gun") or player.Backpack:FindFirstChild("Gun") then
+                textLabel.TextColor3 = Color3.new(0,0,1);
+                if not billboard.Enabled and getgenv().SheriffEsp then
+                    billboard.Enabled = true
+                end
+            else
+                textLabel.TextColor3 = Color3.new(0,1,0);
+            end;
+        end);
+    until not player.Parent;
+end;
+
+for _,player in pairs(Players:GetPlayers()) do
+    if player ~= Client then
+        coroutine.wrap(AddBillboard)(player);
+    end;
+end;
+Players.PlayerAdded:Connect(AddBillboard);
+
+Players.PlayerRemoving:Connect(function(player)
+    folder[player.Name]:Destroy();
+end);
+
+Tab12:AddButton({"New Esp", function(state) 
+   getgenv().AllEsp = state;
+        for i, v in pairs(folder:GetChildren()) do
+            if v:IsA("BillboardGui") and Players[tostring(v.Name)] then
+                if getgenv().AllEsp then
+                    v.Enabled = true;
+                else
+                    v.Enabled = false;
+                end;
+            end;
+        end;
+end}) 
+Tab12:AddButton({"Fast-Cooldown", function()
+if hookfunction then 
+    g = hookfunction(wait, function(seconds) return g(0) end)
+    else
+        game.Players.LocalPlayer:Kick("Your exploit does not support this script please try using a better exploit other than "..identifyexecutor())
+    end
+end}) 
+
 local Paragraph = Tab17:AddParagraph({"Testing 3.0", "Universe - X available you a free server access."})
 Tab15:AddButton({"Teleport to Safe Server #1", function() 
 TeleportService:Teleport(5247067896, Players.LocalPlayer)
