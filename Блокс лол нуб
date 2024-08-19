@@ -9,7 +9,7 @@ Text = "Zombie Uprising",
 
 wait(1)
 -- Instances:
-
+local Asset = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId)
 local ScreenGui = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
