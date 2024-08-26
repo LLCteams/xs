@@ -143,7 +143,7 @@ Close.BackgroundColor3 = Color3.fromRGB(61, 81, 198)
 Close.Position = UDim2.new(0.777126074, 0, 0.0404411778, 0)
 Close.Size = UDim2.new(0.168883905, 0, 0.221656457, 0)
 Close.Font = Enum.Font.GothamBold
-Close.Text = "X"
+Close.Text = "[X]"
 Close.TextColor3 = Color3.fromRGB(255, 255, 255)
 Close.TextSize = 14.000
 Close.TextWrapped = true
@@ -239,7 +239,7 @@ TextLabel_2.BackgroundTransparency = 1.000
 TextLabel_2.Position = UDim2.new(0.0483091772, 0, 0.0772357732, 0)
 TextLabel_2.Size = UDim2.new(0, 180, 0, 50)
 TextLabel_2.Font = Enum.Font.GothamBold
-TextLabel_2.Text = "Kazuka max"
+TextLabel_2.Text = "Xirius"
 TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_2.TextSize = 14.000
 
@@ -249,7 +249,7 @@ TextLabel_3.BackgroundTransparency = 1.000
 TextLabel_3.Position = UDim2.new(0.0531400964, 0, 0.16704379, 0)
 TextLabel_3.Size = UDim2.new(0, 180, 0, 50)
 TextLabel_3.Font = Enum.Font.GothamBold
-TextLabel_3.Text = "SkyComboSky"
+TextLabel_3.Text = "Momo"
 TextLabel_3.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_3.TextSize = 14.000
 
@@ -259,7 +259,7 @@ TextLabel_4.BackgroundTransparency = 1.000
 TextLabel_4.Position = UDim2.new(0.0531400964, 0, 0.247767508, 0)
 TextLabel_4.Size = UDim2.new(0, 180, 0, 50)
 TextLabel_4.Font = Enum.Font.GothamBold
-TextLabel_4.Text = "Syctro"
+TextLabel_4.Text = "Vercel"
 TextLabel_4.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_4.TextSize = 14.000
 
@@ -269,7 +269,7 @@ TextLabel_5.BackgroundTransparency = 1.000
 TextLabel_5.Position = UDim2.new(0.0531400964, 0, 0.309598446, 0)
 TextLabel_5.Size = UDim2.new(0, 180, 0, 50)
 TextLabel_5.Font = Enum.Font.GothamBold
-TextLabel_5.Text = "Necro"
+TextLabel_5.Text = "Cavou"
 TextLabel_5.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_5.TextSize = 14.000
 
@@ -279,7 +279,7 @@ TextLabel_6.BackgroundTransparency = 1.000
 TextLabel_6.Position = UDim2.new(0.0531400964, 0, 0.395474732, 0)
 TextLabel_6.Size = UDim2.new(0, 180, 0, 50)
 TextLabel_6.Font = Enum.Font.GothamBold
-TextLabel_6.Text = "Cluck"
+TextLabel_6.Text = "Zolo"
 TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_6.TextSize = 14.000
 
@@ -289,7 +289,7 @@ TextLabel_7.BackgroundTransparency = 1.000
 TextLabel_7.Position = UDim2.new(0.0531400964, 0, 0.481351018, 0)
 TextLabel_7.Size = UDim2.new(0, 180, 0, 50)
 TextLabel_7.Font = Enum.Font.GothamBold
-TextLabel_7.Text = "SUPERSONIC"
+TextLabel_7.Text = "SuperX"
 TextLabel_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_7.TextSize = 14.000
 
@@ -299,7 +299,7 @@ TextLabel_8.BackgroundTransparency = 1.000
 TextLabel_8.Position = UDim2.new(0.0531400964, 0, 0.567227304, 0)
 TextLabel_8.Size = UDim2.new(0, 180, 0, 50)
 TextLabel_8.Font = Enum.Font.GothamBold
-TextLabel_8.Text = "Issak"
+TextLabel_8.Text = "Aries"
 TextLabel_8.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_8.TextSize = 14.000
 
@@ -309,7 +309,7 @@ TextLabel_9.BackgroundTransparency = 1.000
 TextLabel_9.Position = UDim2.new(0.0531400964, 0, 0.65310359, 0)
 TextLabel_9.Size = UDim2.new(0, 180, 0, 50)
 TextLabel_9.Font = Enum.Font.GothamBold
-TextLabel_9.Text = "Tihax"
+TextLabel_9.Text = "SplashQ12"
 TextLabel_9.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_9.TextSize = 14.000
 
