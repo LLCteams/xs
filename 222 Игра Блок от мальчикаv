@@ -117,7 +117,7 @@ local function MNQEF_fake_script()
 	wait(3) 
 	script.Parent:TweenSize(UDim2.new(0,0,0,158), "Out", "Quad", 0.5, true)
 	wait(1.2) 
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/Jfdedit3/Mada-hub/main/Mada%20hub%20v1'),true))()
+	print('---') 
 end
 coroutine.wrap(MNQEF_fake_script)()
 
