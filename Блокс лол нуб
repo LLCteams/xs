@@ -68,7 +68,7 @@ VHubAndSection.BackgroundTransparency = 1.000
 VHubAndSection.Position = UDim2.new(0.0820000023, 0, 0, 0)
 VHubAndSection.Size = UDim2.new(0, 164, 0, 30)
 VHubAndSection.Font = Enum.Font.GothamBold
-VHubAndSection.Text = "|  Universe X  | Beta | v1.6.1  |"
+VHubAndSection.Text = "|  Universe X  | Fixed | v2.3.9 |"
 VHubAndSection.TextColor3 = Color3.fromRGB(0, 0, 0)
 VHubAndSection.TextSize = 14.000
 VHubAndSection.TextXAlignment = Enum.TextXAlignment.Left
@@ -95,7 +95,7 @@ VersionOutdatedText.BackgroundTransparency = 1.000
 VersionOutdatedText.Position = UDim2.new(0.228888884, 0, 0.203703701, 0)
 VersionOutdatedText.Size = UDim2.new(0, 317, 0, 50)
 VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = " Status: Bypass Update  |  v1.6.1"
+VersionOutdatedText.Text = " Status: New Esp |  v2.3.9"
 VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 0, 255)
 VersionOutdatedText.TextSize = 15.000
 VersionOutdatedText.TextXAlignment = Enum.TextXAlignment.Left
@@ -161,7 +161,7 @@ UICorner_4.Parent = CloseButton
 
 function newonep()
 local Luxtl = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Luxware-UI-Library/main/Source.lua"))()
-local Luxt = Luxtl.CreateWindow("Universe X", 13951232354)
+local Luxt = Luxtl.CreateWindow("Universe-X", 13951232354)
 
 local abbb = Luxt:Tab("Credits")
 local ahl = abbb:Section("#3")
@@ -764,6 +764,261 @@ wow:Toggle("[#] XRay", function(goreng)
     end
 end)
 local hum = homeTab:Section("Esp Team")
+hum:Button("[•] New Esp {Machines, Zombie}", function() 
+--:// OPEN SOURCE \\:--
+--:// OPEN SOURCE \\:--
+--:// OPEN SOURCE \\:--
+--:// OPEN SOURCE \\:--
+
+--:// MADE BY THENUBREAL (ANTHONY) \\:--
+
+local Map_ = game:GetService("Workspace").Map
+
+local zombies = game:GetService("Workspace").Zombies
+local perkMachines = Map_.PerkMachines
+local turrets = Map_.Turrets
+
+local debris = game:GetService("Debris")
+local StarterGui = game:GetService("StarterGui")
+
+local function createEsp(Name,Text)
+	local ESP = Instance.new("BillboardGui")
+	local TextLabel = Instance.new("TextLabel")
+    local Stroke = Instance.new("UIStroke")
+
+	ESP.Name = "[ESP]"
+	ESP.Parent = Name
+	ESP.AlwaysOnTop = true
+	ESP.Size = UDim2.new(3, 0, 1.5, 0)
+	ESP.StudsOffset = Vector3.new(0.5, 2, 0)
+
+	TextLabel.Parent = ESP
+	TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.BackgroundTransparency = 1.000
+	TextLabel.Position = UDim2.new(-0.170000002, -20, -0, 0)
+	TextLabel.Size = UDim2.new(1, 40, 0.899999976, -1)
+	TextLabel.Font = Enum.Font.Unknown
+	TextLabel.Text = tostring(Text)
+	TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextLabel.TextScaled = true
+	TextLabel.TextSize = 12.000
+	TextLabel.TextStrokeColor3 = Color3.fromRGB(51, 51, 51)
+	TextLabel.TextStrokeTransparency = 0.500
+	TextLabel.TextWrapped = true
+	TextLabel.TextYAlignment = Enum.TextYAlignment.Bottom
+
+    Stroke.Parent = TextLabel
+    Stroke.Thickness = 1.5
+end
+
+local function notification(title,txt)
+    StarterGui:SetCore("SendNotification", {
+		Title = title;
+		Text = txt;
+	})
+end
+
+Map_:GetPropertyChangedSignal("Name"):Connect(function()
+    if game.Workspace:FindFirstChild("OldMap") then
+        repeat
+            wait()
+        until game.Workspace:FindFirstChild("Map")
+
+        if game.Workspace:FindFirstChild("Map") then
+            wait(1)
+            Map_ = game.Workspace:FindFirstChild("Map")
+
+            repeat
+                wait()
+            until Map_:FindFirstChild("PerkMachines")
+
+            repeat
+                wait()
+            until Map_:FindFirstChild("Turrets")
+
+            wait(2)
+            
+            for i,v in pairs(Map_.PerkMachines:GetDescendants()) do
+                if v:FindFirstChild("Glass") then
+                    createEsp(v.Glass, tostring(v.Name))
+                end
+            end
+            for i,v in pairs(Map_.Turrets:GetDescendants()) do
+                if v:FindFirstChild("Activated") and v:FindFirstChild("Emitter") then
+                    createEsp(v.Emitter, tostring(v.Name))
+            
+                    if v.Activated.Value == false then
+                        v.Emitter:FindFirstChild("[ESP]").TextLabel.TextColor3 = Color3.new(255,0,0)
+                        if v.Name == "Auto" then
+                            v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = "Machine Gun [OFF]"
+                        else
+                            v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = v.Name.." [OFF]"
+                        end
+                    end
+                    if v.Activated.Value == true then
+                        v.Emitter:FindFirstChild("[ESP]").TextLabel.TextColor3 = Color3.new(0,255,0)
+                        if v.Name == "Auto" then
+                            v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = "Machine Gun [ON]"
+                        else
+                            v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = v.Name.." [ON]"
+                        end
+                        if v.Name == "Auto" then
+                            notification("Active Gun","a Machine gun is active")
+                        else
+                            notification("Active Gun",v.Name.." is active")
+                        end
+                    end
+            
+                    v.Activated:GetPropertyChangedSignal("Value"):Connect(function()
+                        if v.Activated.Value == true then
+                            v.Emitter:FindFirstChild("[ESP]").TextLabel.TextColor3 = Color3.new(0,255,0)
+                            if v.Name == "Auto" then
+                                v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = "Machine Gun [ON]"
+                            else
+                                v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = v.Name.." [ON]"
+                            end
+                            if v.Name == "Auto" then
+                                notification("Active Gun","A Machine gun has been activated")
+                            else
+                                notification("Active Gun","A "..v.Name.." has been activated")
+                            end
+                        elseif v.Activated.Value == false then
+                            v.Emitter:FindFirstChild("[ESP]").TextLabel.TextColor3 = Color3.new(255,0,0)
+                            if v.Name == "Auto" then
+                                v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = "Machine Gun [OFF]"
+                            else
+                                v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = v.Name.." [OFF]"
+                            end
+                            if v.Name == "Auto" then
+                                notification("Unactive Gun","A Machine gun has been de-activated")
+                            else
+                                notification("Unactive Gun","A "..v.Name.." has been de-activated")
+                            end
+                        end
+                    end)
+                end
+            end
+            notification("[ESP]","ESP Has been reloaded for the new map!")
+        end
+    end
+end)
+
+zombies.ChildAdded:Connect(function(child)
+    if child:FindFirstChild("Head") and child:FindFirstChild("ZombieName") then
+        createEsp(child.Head, tostring(child.ZombieName.Value))
+
+        if child:FindFirstChild("Humanoid") then
+            child.Humanoid.HealthChanged:Connect(function()
+                if child.Humanoid.Health <= 0 then
+                    child.Head:FindFirstChild("[ESP]").TextLabel.TextColor3 = Color3.new(255,0,0)
+                    child.Head:FindFirstChild("[ESP]").TextLabel.Text = child.ZombieName.Value.." [DEAD]"
+                 end
+            end)
+         end
+    end 
+end)
+
+perkMachines.ChildAdded:Connect(function(child)
+    if child:IsA("Model") and child:FindFirstChild("Glass")  then
+        createEsp(child.Glass, tostring(child.Name))
+    end 
+end)
+
+turrets.ChildAdded:Connect(function(child)
+    if child:FindFirstChild("Emitter") then
+        createEsp(child.Emitter, tostring(child.Name))
+        if child:FindFirstChild("Activated") then
+            child.Activated:GetPropertyChangedSignal("Value"):Connect(function()
+                if child.Activated.Value == true then
+                    child.Emitter:FindFirstChild("[ESP]").TextLabel.TextColor3 = Color3.new(0,255,0)
+                    child.Emitter:FindFirstChild("[ESP]").TextLabel.Text = v.Name.." [ON]"
+                elseif child.Activated.Value == false then
+                    child.Emitter:FindFirstChild("[ESP]").TextLabel.TextColor3 = Color3.new(255,0,0)
+                    child.Emitter:FindFirstChild("[ESP]").TextLabel.Text = v.Name.." [OFF]"
+                end
+            end)
+        end
+    end 
+end)
+
+for i,v in pairs(zombies:GetDescendants()) do
+    if v:FindFirstChild("Head") and v:FindFirstChild("ZombieName") then
+        createEsp(v.Head, tostring(v.ZombieName.Value))
+        if v:FindFirstChild("Humanoid") then
+            v.Humanoid.HealthChanged:Connect(function()
+                if v.Humanoid.Health <= 0 then
+                    v.Head:FindFirstChild("[ESP]").TextLabel.TextColor3 = Color3.new(255,0,0)
+                    v.Head:FindFirstChild("[ESP]").TextLabel.Text = v.ZombieName.Value.." [DEAD]"
+                 end
+            end)
+         end
+    end
+end
+
+for i,v in pairs(perkMachines:GetDescendants()) do
+    if v:FindFirstChild("Glass") then
+        createEsp(v.Glass, tostring(v.Name))
+    end
+end
+
+for i,v in pairs(turrets:GetDescendants()) do
+    if v:FindFirstChild("Activated") and v:FindFirstChild("Emitter") then
+        createEsp(v.Emitter, tostring(v.Name))
+
+        if v.Activated.Value == false then
+            v.Emitter:FindFirstChild("[ESP]").TextLabel.TextColor3 = Color3.new(255,0,0)
+            if v.Name == "Auto" then
+                v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = "Machine Gun [OFF]"
+            else
+                v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = v.Name.." [OFF]"
+            end
+        end
+        if v.Activated.Value == true then
+            v.Emitter:FindFirstChild("[ESP]").TextLabel.TextColor3 = Color3.new(0,255,0)
+            if v.Name == "Auto" then
+                v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = "Machine Gun [ON]"
+            else
+                v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = v.Name.." [ON]"
+            end
+            if v.Name == "Auto" then
+                notification("Active Gun","a Machine gun is active")
+            else
+                notification("Active Gun","a"..v.Name.." is active")
+            end
+        end
+
+        v.Activated:GetPropertyChangedSignal("Value"):Connect(function()
+            if v.Activated.Value == true then
+                v.Emitter:FindFirstChild("[ESP]").TextLabel.TextColor3 = Color3.new(0,255,0)
+                if v.Name == "Auto" then
+                    v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = "Machine Gun [ON]"
+                else
+                    v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = v.Name.." [ON]"
+                end
+                if v.Name == "Auto" then
+                    notification("Active Gun","A Machine gun has been activated")
+                else
+                    notification("Active Gun","A "..v.Name.." has been activated")
+                end
+            elseif v.Activated.Value == false then
+                v.Emitter:FindFirstChild("[ESP]").TextLabel.TextColor3 = Color3.new(255,0,0)
+                if v.Name == "Auto" then
+                    v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = "Machine Gun [OFF]"
+                else
+                    v.Emitter:FindFirstChild("[ESP]").TextLabel.Text = v.Name.." [OFF]"
+                end
+                if v.Name == "Auto" then
+                    notification("Unactive Gun","A Machine gun has been de-activated")
+                else
+                    notification("Unactive Gun","A "..v.Name.." has been de-activated")
+                end
+            end
+        end)
+    end
+end
+
+notification("[ESP]","ESP has loaded!")
+end)
 hum:Button("[•] Chams {Team}", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/ZKHub/main/%D0%A1%D1%83%D0%BF%D0%B5%D1%80%20%D1%83%20%D0%BC%D0%B5%D0%BD%D1%8F%20%D0%BD%D0%B5%D1%82"))()
 end)
