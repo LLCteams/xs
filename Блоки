@@ -42,7 +42,7 @@ imageButton.Parent = screenGui
 
 local textLabel = Instance.new("TextLabel") 
 textLabel.Parent = screenGui
-textLabel.Text = "Welcome to Universe-X! we need verify you before using."
+textLabel.Text = "[ Loaded ]"
 textLabel.Size = UDim2.new(1, 0, 0, 100)  -- Adjust size to make text bigger
 textLabel.Position = UDim2.new(0, 0, 0, 0)  -- Adjust position as needed
 
@@ -65,6 +65,120 @@ end
 -- Connect the button click event to the function
 imageButton.MouseButton1Click:Connect(onButtonClick)
 
+local CCOpeningScreen = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local CocoLogo = Instance.new("ImageLabel")
+local T1 = Instance.new("TextLabel")
+local T2 = Instance.new("TextLabel")
+local T3 = Instance.new("TextLabel")
+local LoadBar = Instance.new("Frame")
+
+CCOpeningScreen.Name = "CCOpeningScreen"
+CCOpeningScreen.Parent = game.CoreGui
+CCOpeningScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = CCOpeningScreen
+MainFrame.Active = true
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+MainFrame.BorderSizePixel = 0
+MainFrame.ClipsDescendants = true
+MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+MainFrame.Selectable = true
+MainFrame.Size = UDim2.new(0, 0, 0, 158)
+
+CocoLogo.Name = "CocoLogo"
+CocoLogo.Parent = MainFrame
+CocoLogo.AnchorPoint = Vector2.new(0.5, 0.5)
+CocoLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CocoLogo.BackgroundTransparency = 1.000
+CocoLogo.BorderSizePixel = 0
+CocoLogo.ClipsDescendants = true
+CocoLogo.Position = UDim2.new(0.255176783, 0, 0.49999997, 0)
+CocoLogo.Size = UDim2.new(0, 86, 0, 86)
+CocoLogo.Image = "rbxassetid://127621555938784"
+
+T1.Name = "T1"
+T1.Parent = MainFrame
+T1.AnchorPoint = Vector2.new(0.5, 0.5)
+T1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T1.BackgroundTransparency = 1.000
+T1.BorderSizePixel = 0
+T1.Position = UDim2.new(0.646776021, 0, 0.407925308, 0)
+T1.Size = UDim2.new(0, 144, 0, 13)
+T1.Font = Enum.Font.Gotham
+T1.Text = "Welcome "..game.Players.LocalPlayer.Name..""
+T1.TextColor3 = Color3.fromRGB(255, 255, 255)
+T1.TextScaled = true
+T1.TextSize = 14.000
+T1.TextWrapped = true
+T1.TextXAlignment = Enum.TextXAlignment.Left
+
+T2.Name = "T2"
+T2.Parent = MainFrame
+T2.AnchorPoint = Vector2.new(0.5, 0.5)
+T2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T2.BackgroundTransparency = 1.000
+T2.BorderSizePixel = 0
+T2.Position = UDim2.new(0.646776021, 0, 0.538823366, 0)
+T2.Size = UDim2.new(0, 144, 0, 28)
+T2.Font = Enum.Font.GothamBold
+T2.Text = "to Universe-X 3.5!"
+T2.TextColor3 = Color3.fromRGB(255, 255, 255)
+T2.TextScaled = true
+T2.TextSize = 14.000
+T2.TextWrapped = true
+T2.TextXAlignment = Enum.TextXAlignment.Left
+
+T3.Name = "T3"
+T3.Parent = MainFrame
+T3.AnchorPoint = Vector2.new(0.5, 0.5)
+T3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+T3.BackgroundTransparency = 1.000
+T3.BorderSizePixel = 0
+T3.Position = UDim2.new(0.5, 0, 0.885999978, 0)
+T3.Size = UDim2.new(1, 0, 0, 10)
+T3.Font = Enum.Font.Gotham
+T3.Text = ""
+T3.TextColor3 = Color3.fromRGB(255, 255, 255)
+T3.TextScaled = true
+T3.TextSize = 14.000
+T3.TextWrapped = true
+
+LoadBar.Name = "LoadBar"
+LoadBar.Parent = MainFrame
+LoadBar.Active = true
+LoadBar.AnchorPoint = Vector2.new(0, 0.5)
+LoadBar.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+LoadBar.BorderSizePixel = 0
+LoadBar.ClipsDescendants = true
+LoadBar.Position = UDim2.new(0, 0, 0.977999985, 0)
+LoadBar.Selectable = true
+LoadBar.Size = UDim2.new(0, 0, 0, 7)
+
+-- Scripts:
+
+local function MNQEF_fake_script()
+	local script = Instance.new('LocalScript', MainFrame)
+
+	wait(1.8)
+	script.Parent:TweenSize(UDim2.new(0,310,0,158), "Out", "Quad", 0.5, true)
+	wait(3.2) 
+	script.Parent.LoadBar:TweenSize(UDim2.new(0.1,0,0,7), "Out", "Quad", 0.5, true)
+	script.Parent.T3.Text = "Experience is Extreme, are you wondering?.."
+	wait(3.1) 
+	script.Parent.LoadBar:TweenSize(UDim2.new(0.50,0,0,7), "Out", "Quad", 0.5, true)
+	script.Parent.T3.Text = "Such a best experience with Universe-X.."
+	wait(3.1)
+	script.Parent.LoadBar:TweenSize(UDim2.new(1,0,0,7), "Out", "Quad", 0.5, true)
+	script.Parent.T3.Text = "Well Done! entering the experience.."
+	wait(3.5) 
+	script.Parent:TweenSize(UDim2.new(0,0,0,158), "Out", "Quad", 0.5, true)
+	wait(2.2) 
+	Functouch()
+end
+
 function Funtouch() 
 function chatnotify(msg)
 	game.StarterGui:SetCore("ChatMakeSystemMessage", {
@@ -75,7 +189,9 @@ function chatnotify(msg)
 	})
 end
 
-chatnotify("Updated to latest version: 638.791")
+chatnotify("Key System has been Disabled!") 
+chatnotify("Updated to latest version: 719.520.22")
+chatnotify("Universe-X [Extreme Experience]")
 
 --[[
 if (identifyexecutor()) == "Trigon" then
@@ -301,7 +417,7 @@ end
 ]]
 
 
-local creditText = "UX Update-v1.82.11 || ありがとう😍 "
+local creditText = "Universe-X || v3.5"
 local creditDuration = 99999999999999
 
 local decalIds = {
@@ -462,7 +578,7 @@ local function CreateGUI(title)
     agreeFrame.Size = UDim2.new(0.8, 0, 0.5, 0)
     agreeFrame.Position = UDim2.new(0.1, 0, 0.22, 0)
     agreeFrame.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
-    agreeFrame.Text = " Universe-X {|} 3.0\n 1. Universe - X currently supporting HIGH execution are you continue?\n 2. Thanks to our team, LLCteam.\n 3. All executors.\n 4. Don't use if not officially version.\n 5. Changelogs ：2024-08-19"
+    agreeFrame.Text = " Universe-X {|} 3.5\n [ 231,014 users on at Universe-X ]\n - Undetected and Free 100%.\n - Recommended all executors supported!\n - Universal X, Universe-X\n [ Changelogs ：2024-09-18 ]"
     agreeFrame.TextWrapped = true
 
     
