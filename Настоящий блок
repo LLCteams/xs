@@ -23,7 +23,7 @@ tab1.newButton("Volt-X [Hot]", "Volt-X, click to load the script", function()
 end)
 
 tab1.newButton("SuperX [Beta]", "SuperX, click to load the script", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/77%D0%91%D0%BB%D0%BE%D0%BA%20%D0%BC%D0%B0%D0%BD%20%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%20%D0%B4%D0%BB%D1%8F%20gg"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D0%BB%D0%B0%20%D1%82%D1%8B%20%D1%81%D0%BF%D1%80%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%B5%D1%88%D1%8C"))()
 end)
 tab1.newButton("Universe-X Remake [Beta]", "load Universe-X remaked.", function()
     loadstring(game:HttpGet(" https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%B5%D1%82%D0%B0."))()
