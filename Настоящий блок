@@ -1,7 +1,6 @@
 
 
 
-
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
     Duration = 6,
@@ -11,17 +10,6 @@ Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbx
 });
 wait(8) 
 game.Players.LocalPlayer:Kick("This script has some features that Trigon Evo doesnt have please switch to something else! (Error.)") 
-end
-
-if (identifyexecutor()) == "Fluxus" then
-Notification.Notify("Universe X 3.0", "Fluxus too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Fluxus doesnt have please switch to something else! (Error.)")
 end
 
 if (identifyexecutor()) == "Evon" then
@@ -121,17 +109,6 @@ Notification.Notify("Universe X 3.0", "Cryptic too low and not support this scri
 });
 wait(8) 
 game.Players.LocalPlayer:Kick("This script has some features that Cryptic doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Delta" then
-Notification.Notify("Universe X 3.0", "Delta too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Delta doesnt have please switch to something else! (Error.)")
 end
 
 if (identifyexecutor()) == "KRNL" then
@@ -277,6 +254,29 @@ Notification.Notify("Universe X 3.0", "Arceus X not support this script!", "rbxa
 wait(8) 
 game.Players.LocalPlayer:Kick("This script has some features that Arceus X doesnt have please switch to something else! (Error.)")
 end
+
+if (identifyexecutor()) == "Delta" then
+Notification.Notify("Universe X 3.0", "Delta too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Delta doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Fluxus" then
+Notification.Notify("Universe X 3.0", "Fluxus too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Fluxus doesnt have please switch to something else! (Error.)")
+end
+
 ]]
 
 -- Load the DrRay library from the GitHub repository Library
@@ -322,10 +322,10 @@ tab2.newButton("Slap Battles [Best]", "Slap Battles script.", function()
 end)
 
 local tab3 = DrRayLibrary.newTab("Executor", " ImageIdHere")
-tab1.newButton("Universe-X", "Executor cracked.", function()
+tab3.newButton("Universe-X", "Executor cracked.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C"))()
 end)
-tab1.newButton("Universe-X", "Executor script.", function()
+tab3.newButton("Universe-X", "Executor script.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%BE%D0%BA%D1%81%20%D0%BE%D0%B1%D0%BE%D0%B9%D1%82%D0%B8%20%D1%85%D0%B0%D1%85%D0%B0%D1%85%D0%B0"))()
 end) 
 tab3.newButton("Krypton", "Executor script.", function()
