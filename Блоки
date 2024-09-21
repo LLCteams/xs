@@ -42,7 +42,7 @@ imageButton.Parent = screenGui
 
 local textLabel = Instance.new("TextLabel") 
 textLabel.Parent = screenGui
-textLabel.Text = "[ Loaded ]"
+textLabel.Text = "[ Access Needed! ]"
 textLabel.Size = UDim2.new(1, 0, 0, 100)  -- Adjust size to make text bigger
 textLabel.Position = UDim2.new(0, 0, 0, 0)  -- Adjust position as needed
 
@@ -65,121 +65,7 @@ end
 -- Connect the button click event to the function
 imageButton.MouseButton1Click:Connect(onButtonClick)
 
-local CCOpeningScreen = Instance.new("ScreenGui")
-local MainFrame = Instance.new("Frame")
-local CocoLogo = Instance.new("ImageLabel")
-local T1 = Instance.new("TextLabel")
-local T2 = Instance.new("TextLabel")
-local T3 = Instance.new("TextLabel")
-local LoadBar = Instance.new("Frame")
-
-CCOpeningScreen.Name = "CCOpeningScreen"
-CCOpeningScreen.Parent = game.CoreGui
-CCOpeningScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-MainFrame.Name = "MainFrame"
-MainFrame.Parent = CCOpeningScreen
-MainFrame.Active = true
-MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-MainFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-MainFrame.BorderSizePixel = 0
-MainFrame.ClipsDescendants = true
-MainFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
-MainFrame.Selectable = true
-MainFrame.Size = UDim2.new(0, 0, 0, 158)
-
-CocoLogo.Name = "CocoLogo"
-CocoLogo.Parent = MainFrame
-CocoLogo.AnchorPoint = Vector2.new(0.5, 0.5)
-CocoLogo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-CocoLogo.BackgroundTransparency = 1.000
-CocoLogo.BorderSizePixel = 0
-CocoLogo.ClipsDescendants = true
-CocoLogo.Position = UDim2.new(0.255176783, 0, 0.49999997, 0)
-CocoLogo.Size = UDim2.new(0, 86, 0, 86)
-CocoLogo.Image = "rbxassetid://127621555938784"
-
-T1.Name = "T1"
-T1.Parent = MainFrame
-T1.AnchorPoint = Vector2.new(0.5, 0.5)
-T1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-T1.BackgroundTransparency = 1.000
-T1.BorderSizePixel = 0
-T1.Position = UDim2.new(0.646776021, 0, 0.407925308, 0)
-T1.Size = UDim2.new(0, 144, 0, 13)
-T1.Font = Enum.Font.Gotham
-T1.Text = "Welcome "..game.Players.LocalPlayer.Name..""
-T1.TextColor3 = Color3.fromRGB(255, 255, 255)
-T1.TextScaled = true
-T1.TextSize = 14.000
-T1.TextWrapped = true
-T1.TextXAlignment = Enum.TextXAlignment.Left
-
-T2.Name = "T2"
-T2.Parent = MainFrame
-T2.AnchorPoint = Vector2.new(0.5, 0.5)
-T2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-T2.BackgroundTransparency = 1.000
-T2.BorderSizePixel = 0
-T2.Position = UDim2.new(0.646776021, 0, 0.538823366, 0)
-T2.Size = UDim2.new(0, 144, 0, 28)
-T2.Font = Enum.Font.GothamBold
-T2.Text = "to Universe-X 3.5!"
-T2.TextColor3 = Color3.fromRGB(255, 255, 255)
-T2.TextScaled = true
-T2.TextSize = 14.000
-T2.TextWrapped = true
-T2.TextXAlignment = Enum.TextXAlignment.Left
-
-T3.Name = "T3"
-T3.Parent = MainFrame
-T3.AnchorPoint = Vector2.new(0.5, 0.5)
-T3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-T3.BackgroundTransparency = 1.000
-T3.BorderSizePixel = 0
-T3.Position = UDim2.new(0.5, 0, 0.885999978, 0)
-T3.Size = UDim2.new(1, 0, 0, 10)
-T3.Font = Enum.Font.Gotham
-T3.Text = ""
-T3.TextColor3 = Color3.fromRGB(255, 255, 255)
-T3.TextScaled = true
-T3.TextSize = 14.000
-T3.TextWrapped = true
-
-LoadBar.Name = "LoadBar"
-LoadBar.Parent = MainFrame
-LoadBar.Active = true
-LoadBar.AnchorPoint = Vector2.new(0, 0.5)
-LoadBar.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-LoadBar.BorderSizePixel = 0
-LoadBar.ClipsDescendants = true
-LoadBar.Position = UDim2.new(0, 0, 0.977999985, 0)
-LoadBar.Selectable = true
-LoadBar.Size = UDim2.new(0, 0, 0, 7)
-
--- Scripts:
-
-local function MNQEF_fake_script()
-	local script = Instance.new('LocalScript', MainFrame)
-
-	wait(1.8)
-	script.Parent:TweenSize(UDim2.new(0,310,0,158), "Out", "Quad", 0.5, true)
-	wait(3.2) 
-	script.Parent.LoadBar:TweenSize(UDim2.new(0.1,0,0,7), "Out", "Quad", 0.5, true)
-	script.Parent.T3.Text = "Experience is Extreme, are you wondering?.."
-	wait(3.1) 
-	script.Parent.LoadBar:TweenSize(UDim2.new(0.50,0,0,7), "Out", "Quad", 0.5, true)
-	script.Parent.T3.Text = "Such a best experience with Universe-X.."
-	wait(3.1)
-	script.Parent.LoadBar:TweenSize(UDim2.new(1,0,0,7), "Out", "Quad", 0.5, true)
-	script.Parent.T3.Text = "Well Done! entering the experience.."
-	wait(3.5) 
-	script.Parent:TweenSize(UDim2.new(0,0,0,158), "Out", "Quad", 0.5, true)
-	wait(2.2) 
-	Functouch()
-end
-
-function Funtouch() 
+function Funtouch()
 function chatnotify(msg)
 	game.StarterGui:SetCore("ChatMakeSystemMessage", {
 		Text = msg,
@@ -189,232 +75,13 @@ function chatnotify(msg)
 	})
 end
 
-chatnotify("Key System has been Disabled!") 
-chatnotify("Updated to latest version: 719.520.22")
+chatnotify("ArceusX is recommended to executing Universe-X!") 
+chatnotify("Fluxus is recommended to executing Universe-X!") 
+chatnotify("Delta is recommended to executing Universe-X!") 
+chatnotify("Updated to latest version: 3.21")
 chatnotify("Universe-X [Extreme Experience]")
 
---[[
-if (identifyexecutor()) == "Trigon" then
-Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Trigon Evo doesnt have please switch to something else! (Error.)") 
-end
-
-if (identifyexecutor()) == "Fluxus" then
-Notification.Notify("Universe X 3.0", "Fluxus too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Fluxus doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Evon" then
-Notification.Notify("Universe X 3.0", "Evon too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Evon doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Hydrogen" then
-Notification.Notify("Universe X 3.0", "Hydrogen too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Hydrogen doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Codex" then
-Notification.Notify("Universe X 3.0", "Codex too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Codex doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Vega X" then
-Notification.Notify("Universe X 3.0", "Vega X too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Vega X doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Wave" then
-Notification.Notify("Universe X 3.0", "Wave too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Wave doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Krampus" then
-Notification.Notify("Universe X 3.0", "Krampus too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Krampus doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Delta" then
-Notification.Notify("Universe X 3.0", "Delta too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Delta doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "KRNL" then
-Notification.Notify("Universe X 3.0", "KRNL has error and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that KRNL doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Ro-Exec" then
-Notification.Notify("Universe X 3.0", "Ro-Exec too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Ro-Exec doesnt have please switch to something else! (Error.)")
-end
-
-
-if (identifyexecutor()) == "Script-Ware" then
-Notification.Notify("Universe X 3.0", "Script-Ware not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Script-Ware doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Sirhurt" then
-Notification.Notify("Universe X 3.0", "Sirhurt too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Sirhurt doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Electron" then
-Notification.Notify("Universe X 3.0", "Electron too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Electron doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Comet" then
-Notification.Notify("Universe X 3.0", "Comet too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Comet doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Sentiner" then
-Notification.Notify("Universe X 3.0", "Sentiner too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Sentiner doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Celery" then
-Notification.Notify("Universe X 3.0", "Celery not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Celery doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "JJSploit" then
-Notification.Notify("Universe X 3.0", "Arceus X not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that JJSploit doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Solara" then
-Notification.Notify("Universe X 3.0", "Universe - X failed..", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Solara doesnt have please switch to something else! (Error.)") 
-end
-
-if (identifyexecutor()) == "Arceus X" then
-Notification.Notify("Universe X 3.0", "Arceus X not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Arceus X doesnt have please switch to something else! (Error.)")
-end
-]]
+-- Executor Only
 
 
 local creditText = "Universe-X || v3.5"
@@ -578,7 +245,7 @@ local function CreateGUI(title)
     agreeFrame.Size = UDim2.new(0.8, 0, 0.5, 0)
     agreeFrame.Position = UDim2.new(0.1, 0, 0.22, 0)
     agreeFrame.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
-    agreeFrame.Text = " Universe-X {|} 3.5\n [ 231,014 users on at Universe-X ]\n - Undetected and Free 100%.\n - Recommended all executors supported!\n - Universal X, Universe-X\n [ Changelogs ：2024-09-18 ]"
+    agreeFrame.Text = " Universe-X {|} 3.5\n [ 470,827 users active at Universe-X ]\n - Undetected and Free 100%.\n - Recommended 3 Executor for now!\n - Universal X, Universe-X\n [ Changelogs ：2024-09-29 ]"
     agreeFrame.TextWrapped = true
 
     
@@ -656,7 +323,7 @@ local function CreateGUI(title)
        LOLSX() 
     end)
 end
-local myTitle = " Are You Sure ？" 
+local myTitle = " Ready ？" 
 CreateGUI(myTitle)
 
 
@@ -34131,7 +33798,7 @@ end)
 if OldSetting then
     StarterGui:SetCoreGuiEnabled(CoreGuiSettings[1], CoreGuiSettings[2])
 end
-Notify("🔹Universal X🔹", "Anti Chat and Screenshot Logger Loaded!", 15)
+Notify("🔹Universal X??", "Anti Chat and Screenshot Logger Loaded!", 15)
 print(string.format("Anti Chat-Logger has loaded in %s seconds.", tostring(tick() - ACL_LoadTime):sub(1, 4)))
 end
 end
