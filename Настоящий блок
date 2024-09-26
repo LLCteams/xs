@@ -1,6 +1,177 @@
+local UserInputService = game:GetService("UserInputService")
+
+local function CreateGUI(title)
+    local gui = Instance.new("ScreenGui")
+    gui.Name = "UX-Notify"
+    gui.ResetOnSpawn = false
+    gui.DisplayOrder = 10
+    gui.Parent = game.Players.LocalPlayer.PlayerGui
+    local frame = Instance.new("Frame")
+    frame.Name = "MainFrame"
+    frame.BackgroundTransparency = 0
+    frame.BackgroundColor3 = Color3.fromRGB(240, 248, 255)
+    frame.BorderSizePixel = 0
+    frame.Position = UDim2.new(0, 110, 0, -20) 
+    frame.Size = UDim2.new(0, 500, 0, 280)
+    frame.Parent = gui
+
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 10)
+    corner.Parent = frame
+
+    local dragging = false
+    local startPos, startOffset
+
+    frame.InputBegan:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = true
+            startPos = input.Position
+            startOffset = frame.Position
+            gui.Active = true 
+        end
+    end)
+
+    frame.InputEnded:Connect(function(input)
+        if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+            dragging = false
+            startPos = nil
+            startOffset = nil
+            gui.Active = false
+        end
+    end)
+
+    UserInputService.InputChanged:Connect(function(input)
+        if dragging and input.UserInputType == Enum.UserInputType.MouseMovement then
+            local delta = input.Position - startPos
+            frame.Position = UDim2.new(startOffset.X.Scale, startOffset.X.Offset + delta.X, startOffset.Y.Scale,  
+                startOffset.Y.Offset + delta.Y)
+        end
+    end)
+    local titleLabel = Instance.new("TextLabel")
+    titleLabel.Name = "TitleLabel"
+    titleLabel.Size = UDim2.new(1, 0, 0.05, 0.15 * frame.Size.Y.Offset)
+    titleLabel.Position = UDim2.new(0, 0, 0.01, 0)
+    titleLabel.BackgroundTransparency = 1
+    titleLabel.Text = title
+    titleLabel.TextColor3 = Color3.new(0, 0, 0)
+    titleLabel.TextSize = math.floor(frame.Size.Y.Offset * 0.1)
+    titleLabel.Parent = frame
+    local disagreeButton = Instance.new("TextButton")
+    disagreeButton.Name = "DisagreeButton"
+    disagreeButton.Size = UDim2.new(0, 0.4 * frame.Size.X.Offset, 0, 0.15 * frame.Size.Y.Offset)
+    disagreeButton.Position = UDim2.new(0, 0.1 * frame.Size.X.Offset, 0,
+        frame.Size.Y.Offset - 0.25 * frame.Size.Y.Offset)
+    disagreeButton.BackgroundTransparency = 0
+    disagreeButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    disagreeButton.Text = "×"
+    disagreeButton.TextColor3 = Color3.new(255, 0, 0)
+    disagreeButton.TextSize = math.floor(frame.Size.Y.Offset * 0.08)
+    disagreeButton.Font = Enum.Font.SourceSans
+    disagreeButton.Parent = frame
+    local disagreeCorner = Instance.new("UICorner")
+    disagreeCorner.CornerRadius = UDim.new(0, 10)
+    disagreeCorner.Parent = disagreeButton
+
+    local agreeButton = Instance.new("TextButton")
+    agreeButton.Name = "AgreeButton"
+    agreeButton.Size = UDim2.new(0, 0.4 * frame.Size.X.Offset, 0, 0.15 * frame.Size.Y.Offset)
+    agreeButton.Position = UDim2.new(0, frame.Size.X.Offset - 0.5 * frame.Size.X.Offset, 0,
+        frame.Size.Y.Offset - 0.25 * frame.Size.Y.Offset)
+    agreeButton.BackgroundTransparency = 0
+    agreeButton.BackgroundColor3 = Color3.fromRGB(106, 159, 255)
+    agreeButton.Text = "√"
+    agreeButton.TextColor3 = Color3.new(255, 255, 255)
+    agreeButton.TextSize = math.floor(frame.Size.Y.Offset * 0.08)
+    agreeButton.Font = Enum.Font.SourceSans 
+    agreeButton.Parent = frame
+
+    
+    local agreeFrame = Instance.new("TextLabel")
+    agreeFrame.Size = UDim2.new(0.8, 0, 0.5, 0)
+    agreeFrame.Position = UDim2.new(0.1, 0, 0.22, 0)
+    agreeFrame.BackgroundColor3 = Color3.fromRGB(240, 240, 240)
+    agreeFrame.Text = " Universe-X {|} 3.5\n [ 621,887 users active at Universe-X ]\n - Undetected and Free 100%.\n - Recommended all executor\n - Universal X, Universe-X\n [ Changelogs ：2024-09-26 ]"
+    agreeFrame.TextWrapped = true
+
+    
+    agreeFrame.TextSize = 12
 
 
---[[
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 10)
+    corner.Parent = agreeFrame
+
+    agreeFrame.Parent = frame
+
+    local agreeCorner = Instance.new("UICorner")
+    agreeCorner.CornerRadius = UDim.new(0, 10)
+    agreeCorner.Parent = agreeButton
+    local minimizeButton = Instance.new("TextButton")
+    minimizeButton.Name = "MinimizeButton"
+    minimizeButton.Size = UDim2.new(0, 40, 0, 40)
+    minimizeButton.Position = UDim2.new(1, -65, 0, 10)
+    minimizeButton.BackgroundTransparency = 0
+    minimizeButton.BackgroundColor3 = Color3.fromRGB(199, 199, 199)
+    minimizeButton.Text = "{=}"
+    minimizeButton.TextSize = 20
+    minimizeButton.TextColor3 = Color3.new(0, 0, 0)
+    minimizeButton.Font = Enum.Font.SourceSans
+    minimizeButton.Parent = frame
+
+    local isMinimized = false
+
+    local minimizeCorner = Instance.new("UICorner")
+    minimizeCorner.CornerRadius = UDim.new(0, 5)
+    minimizeCorner.Parent = minimizeButton
+
+    minimizeButton.MouseButton1Click:Connect(function()
+        if isMinimized then
+            frame.Size = UDim2.new(0, 500, 0, 280)
+            titleLabel.Position = UDim2.new(0, 0, 0.01, 0)
+            minimizeButton.Text = "-"
+            minimizeButton.TextSize = 20
+            isMinimized = false
+            disagreeButton.Visible = true
+            agreeButton.Visible = true
+            agreeFrame.Visible = true
+        else
+            frame.Size = UDim2.new(0, 500, 0, 60)
+            titleLabel.Position = UDim2.new(0, 0, 0, 0)
+            minimizeButton.Text = "-"
+            minimizeButton.TextSize = 20
+            isMinimized = true
+            disagreeButton.Visible = false
+            agreeButton.Visible = false
+            agreeFrame.Visible = false
+        end
+    end)
+
+    local function AnimateExit()
+        local duration = 1
+        local startTime = tick()
+        local initialSize = frame.Size
+        while (tick() - startTime) < duration do
+            local elapsedTime = tick() - startTime
+            local scale = 1 - elapsedTime / duration
+            frame.Size = UDim2.new(initialSize.X.Scale * scale, initialSize.X.Offset * scale,
+                initialSize.Y.Scale * scale, initialSize.Y.Offset * scale)
+            frame.Position = frame.Position + UDim2.new((1 - scale) / 2, 0, (1 - scale) / 2, 0)
+            wait()
+        end
+        gui:Destroy()
+    end
+    disagreeButton.MouseButton1Click:Connect(function()
+        AnimateExit()
+    end)
+    agreeButton.MouseButton1Click:Connect(function()
+        AnimateExit()
+    end)
+end
+local myTitle = " Ready ？" 
+CreateGUI(myTitle)
+
+
+wait(0.2) 
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
     Duration = 6,
@@ -243,6 +414,7 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that Solara doesnt have please switch to something else! (Error.)") 
 end
 
+--[[
 if (identifyexecutor()) == "Arceus X" then
 Notification.Notify("Universe X 3.0", "Arceus X not support this script!", "rbxassetid://17415983489", {
     Duration = 6,
@@ -275,7 +447,355 @@ Notification.Notify("Universe X 3.0", "Fluxus too low and not support this scrip
 wait(8) 
 game.Players.LocalPlayer:Kick("This script has some features that Fluxus doesnt have please switch to something else! (Error.)")
 end
+
 ]]
+
+local plr = game.Players.LocalPlayer
+local mouse = plr:GetMouse()
+local coregui = game.CoreGui or plr:WaitForChild("PlayerGui")
+
+if coregui:FindFirstChild("LinkStart") then
+	coregui:FindFirstChild("LinkStart"):Destroy()
+end
+if coregui:FindFirstChild("SAO_GUI") then
+	coregui:FindFirstChild("SAO_GUI"):Destroy()
+end
+
+
+local SAO = {}
+
+function SAO:Intro()
+	local Intro_Tab = {}
+	local DoneIntro = false
+	function Intro_Tab:Done()
+		return DoneIntro
+	end
+	local function AnimateText(label, Text)
+		for i = 1, #Text, 1 do
+			label.Text = string.sub(Text, 1, i)
+			wait(0.03)
+		end
+	end
+	local LinkStart = Instance.new("ScreenGui")
+	local Thing = Instance.new("ViewportFrame")
+
+	LinkStart.Name = "LinkStart"
+	LinkStart.Parent = coregui
+	LinkStart.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	LinkStart.IgnoreGuiInset = true
+
+	Thing.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+	Thing.Name = "Thing"
+	Thing.Size = UDim2.new(1, 0,1, 0)
+	Thing.Position = UDim2.new(0, 0,0, 0)
+	Thing.Parent = LinkStart
+
+	local World = Thing
+	local cam = Instance.new("Camera",script.Parent)
+
+	local mid_part = Instance.new("Part")
+	mid_part.Transparency = 1
+	mid_part.Anchored = true
+	mid_part.Name = "Mid"
+	mid_part.Parent = World
+
+	World.CurrentCamera = cam
+	cam.CFrame = mid_part.CFrame
+
+	game:GetService("TweenService"):Create(World,TweenInfo.new(0.5),{
+		BackgroundColor3 = Color3.new(1, 1, 1)
+	}):Play()
+
+	wait(0.2)
+
+	local function make_go()
+		local cl_part = Instance.new("Part")
+		cl_part.Transparency = 0
+		cl_part.Material = Enum.Material.SmoothPlastic
+		cl_part.Anchored = true
+		cl_part.BrickColor = BrickColor.random()
+		cl_part.CFrame = mid_part.CFrame * CFrame.new(math.random(-15,15),math.random(-15,15),-math.random(60,80))
+		cl_part.Size = Vector3.new(1, 1, math.random(9,20))
+		cl_part.Parent = World
+		game:GetService("TweenService"):Create(cl_part,TweenInfo.new(0.5),{
+			CFrame = cl_part.CFrame * CFrame.new(0,0,130)
+		}):Play()
+		game.Debris:AddItem(cl_part,1)
+	end
+	make_go()
+	for i = 1, 40 do
+		make_go()
+		make_go()
+		make_go()
+		make_go()
+		make_go()
+		make_go()
+		make_go()
+		make_go()
+		make_go()
+		make_go()
+		make_go()
+		make_go()
+		wait()
+	end
+
+	wait(0.3)
+
+	local function create_ring()
+		local RoundRing = Instance.new("ImageLabel")
+		RoundRing.Name = "RoundRing"
+		RoundRing.Parent = World
+		RoundRing.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		RoundRing.BackgroundTransparency = 1.000
+		RoundRing.BorderSizePixel = 0
+		RoundRing.Position = UDim2.new(0.427655667, 0, 0.374803185, 0)
+		RoundRing.Size = UDim2.new(0.144688651, 0, 0.24724409, 0)
+		RoundRing.Image = "rbxassetid://1022962506"
+		RoundRing.ZIndex = 2
+		return RoundRing
+	end
+
+	local ring1 = create_ring()
+	local ring2 = create_ring()
+	game:GetService("TweenService"):Create(ring1,TweenInfo.new(0.5),{
+		Position = UDim2.new(-0.172, 0,-0.082, 0),
+		Size = UDim2.new(0.851, 0,1.454, 0)
+	}):Play()
+	game:GetService("TweenService"):Create(ring2,TweenInfo.new(0.5),{
+		Position = UDim2.new(0.326, 0,-0.313, 0),
+		Size = UDim2.new(0.851, 0,1.454, 0)
+	}):Play()
+	delay(0.1,function()
+		wait(0.1)
+		game:GetService("TweenService"):Create(ring1,TweenInfo.new(0.5),{
+			Position = UDim2.new(0.848, 0,0.009, 0),
+			Size = UDim2.new(0.145, 0,0.247, 0)
+		}):Play()
+		game:GetService("TweenService"):Create(ring2,TweenInfo.new(0.5),{
+			Position = UDim2.new(0.848, 0,0.165, 0),
+			Size = UDim2.new(0.145, 0,0.247, 0)
+		}):Play()
+	end)
+	wait(0.1)
+	local ring3 = create_ring()
+	game:GetService("TweenService"):Create(ring3,TweenInfo.new(0.5),{
+		Position = UDim2.new(-0.331, 0,0.253, 0),
+		Size = UDim2.new(0.851, 0,1.454, 0)
+	}):Play()
+	delay(0.3,function()
+		wait(0.2)
+		game:GetService("TweenService"):Create(ring3,TweenInfo.new(0.5),{
+			Position = UDim2.new(0.848, 0,0.315, 0),
+			Size = UDim2.new(0.145, 0,0.247, 0)
+		}):Play()
+	end)
+	wait(0.3)
+	local ring4 = create_ring()
+	game:GetService("TweenService"):Create(ring4,TweenInfo.new(0.5),{
+		Position = UDim2.new(0.018, 0,-0.325, 0),
+		Size = UDim2.new(0.851, 0,1.454, 0)
+	}):Play()
+	delay(0.3,function()
+		wait(0.2)
+		game:GetService("TweenService"):Create(ring4,TweenInfo.new(0.5),{
+			Position = UDim2.new(0.848, 0,0.46, 0),
+			Size = UDim2.new(0.145, 0,0.247, 0)
+		}):Play()
+	end)
+	wait(0.3)
+	local ring5 = create_ring()
+	game:GetService("TweenService"):Create(ring5,TweenInfo.new(0.5),{
+		Position = UDim2.new(0.404, 0,-0.013, 0),
+		Size = UDim2.new(0.851, 0,1.454, 0)
+	}):Play()
+	delay(0.3,function()
+		wait(0.2)
+		game:GetService("TweenService"):Create(ring5,TweenInfo.new(0.5),{
+			Position = UDim2.new(0.848, 0,0.613, 0),
+			Size = UDim2.new(0.145, 0,0.247, 0)
+		}):Play()
+	end)
+
+	wait(.6)
+	ring1.ImageColor3 = Color3.new(0, 1, 0.498039)
+	ring2.ImageColor3 = Color3.new(0, 1, 0.498039)
+	ring3.ImageColor3 = Color3.new(0, 1, 0.498039)
+	ring4.ImageColor3 = Color3.new(0, 1, 0.498039)
+	ring5.ImageColor3 = Color3.new(0, 1, 0.498039)
+	wait(0.3)
+	game:GetService("TweenService"):Create(ring1,TweenInfo.new(0.5),{
+		Position = UDim2.new(-0.5, 0,0.009, 0),
+	}):Play()
+	game:GetService("TweenService"):Create(ring3,TweenInfo.new(0.5),{
+		Position = UDim2.new(-0.5, 0,0.315, 0),
+	}):Play()
+	game:GetService("TweenService"):Create(ring5,TweenInfo.new(0.5),{
+		Position = UDim2.new(-0.5, 0,0.613, 0),
+	}):Play()
+
+	game:GetService("TweenService"):Create(ring2,TweenInfo.new(0.5),{
+		Position = UDim2.new(1.4, 0,0.165, 0),
+	}):Play()
+	game:GetService("TweenService"):Create(ring4,TweenInfo.new(0.5),{
+		Position = UDim2.new(1.4, 0,0.46, 0),
+	}):Play()
+
+	game.Debris:AddItem(ring1,0.5)
+	game.Debris:AddItem(ring2,0.5)
+	game.Debris:AddItem(ring3,0.5)
+	game.Debris:AddItem(ring4,0.5)
+	game.Debris:AddItem(ring5,0.5)
+	wait(0.3)
+
+	local LogInpage = Instance.new("ImageLabel")
+	local password = Instance.new("TextLabel")
+	local username = Instance.new("TextLabel")
+
+	LogInpage.Name = "Đăng Nhập"
+	LogInpage.Parent = World
+	LogInpage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	LogInpage.BackgroundTransparency = 1.000
+	LogInpage.Position = UDim2.new(0.179799423, 0, 0.11182519, 0)
+	LogInpage.Size = UDim2.new(0.688395441, 0, 0.827763498, 0)
+	LogInpage.Image = "rbxassetid://1022953222"
+
+	password.Name = "Mật Khẩu"
+	password.Parent = LogInpage
+	password.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	password.BackgroundTransparency = 1.000
+	password.Position = UDim2.new(0.517169595, 0, 0.574534178, 0)
+	password.Size = UDim2.new(0.184183136, 0, 0.0372670814, 0)
+	password.Font = Enum.Font.SciFi
+	password.Text = ""
+	password.TextScaled = true
+	password.TextSize = 20.000
+	password.TextWrapped = true
+	password.TextXAlignment = Enum.TextXAlignment.Left
+
+	username.Name = "Tên Đăng Nhập"
+	username.Parent = LogInpage
+	username.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	username.BackgroundTransparency = 1.000
+	username.Position = UDim2.new(0.516469061, 0, 0.461180121, 0)
+	username.Size = UDim2.new(0.184183136, 0, 0.0372670814, 0)
+	username.Font = Enum.Font.SciFi
+	username.Text = ""
+	username.TextScaled = true
+	username.TextSize = 20.000
+	username.TextWrapped = true
+	username.TextXAlignment = Enum.TextXAlignment.Left
+
+	wait(0.50)
+	AnimateText(username, "Universe-X_VIP-21")
+	wait(0.50)
+	AnimateText(password, "UX_2JQ9P0Q81N")
+	wait(0.50)
+
+	game:GetService("TweenService"):Create(LogInpage,TweenInfo.new(0.5),{
+		Position = UDim2.new(2, 0,0.112, 0),
+	}):Play()
+
+	wait(0.3) 
+	local welcome = Instance.new("TextLabel")
+	welcome.Name = "welcome"
+	welcome.Parent = World
+	welcome.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	welcome.BackgroundTransparency = 1.000
+	welcome.Position = UDim2.new(0.171230972, 0, 0.28165254, 0)
+	welcome.Size = UDim2.new(0.656593561, 0, 0.434117258, 0)
+	welcome.Font = Enum.Font.SciFi
+	welcome.Text = "Universe-X"
+	welcome.TextColor3 = Color3.fromRGB(0, 1, 0.498039)
+	welcome.TextScaled = true
+	welcome.TextSize = 20.000
+	welcome.TextTransparency = 1.000
+	welcome.TextWrapped = true
+
+	game:GetService("TweenService"):Create(welcome,TweenInfo.new(0.5),{
+		TextTransparency = 0
+	}):Play()
+	game:GetService("TweenService"):Create(World,TweenInfo.new(0.5),{
+		BackgroundColor3 = Color3.fromRGB(173, 173, 173)
+	}):Play()
+	wait(.3)
+	game:GetService("TweenService"):Create(welcome,TweenInfo.new(0.5),{
+		TextTransparency = 0.5,
+		Size = UDim2.new(1.254, 0,0.829, 0)
+	}):Play()
+	game.Debris:AddItem(welcome,0.5)
+	wait(0.3)
+	local function make_go2()
+		local cl_part = Instance.new("Part")
+		cl_part.Transparency = tonumber("0." .. math.random(0,5))
+		cl_part.Material = Enum.Material.Neon
+		cl_part.Anchored = true
+		cl_part.BrickColor = BrickColor.Blue()
+		cl_part.CFrame = mid_part.CFrame * CFrame.new(math.random(-15,15),math.random(-15,15),-math.random(60,80))
+		cl_part.Size = Vector3.new(1, 1, math.random(9,20))
+		cl_part.Parent = World
+		game:GetService("TweenService"):Create(cl_part,TweenInfo.new(0.5),{
+			CFrame = cl_part.CFrame * CFrame.new(0,0,130)
+		}):Play()
+		game.Debris:AddItem(cl_part,1)
+	end
+	game:GetService("TweenService"):Create(World,TweenInfo.new(1.5),{
+		BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	}):Play()
+	for i = 1, 70 do
+		if i > 20 then
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+		elseif i > 30 then
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+		else
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+			make_go2()
+		end
+		wait()
+	end
+	game:GetService("TweenService"):Create(World,TweenInfo.new(1),{
+		BackgroundTransparency = 1
+	}):Play()
+	game.Debris:AddItem(LinkStart, 1)
+	delay(0.7,function()
+		DoneIntro = true
+	end)
+	return Intro_Tab
+end
+SAO:Intro()
+repeat wait() until SAO:Done()
+
+wait(0.2) 
 
 -- Load the DrRay library from the GitHub repository Library
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
@@ -288,11 +808,8 @@ local tab1 = DrRayLibrary.newTab("Hot-News", "ImageIdHere")
 
 -- Add elements to the first tab
 tab1.newLabel("Welcome to Universe-X, hope you enjoy the experience.")
-tab1.newButton("Executor 4.0 [New]", "Executors 4.0 click go load the script", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D0%BB%D0%BE%D0%BA%D1%81%20%D0%91%D0%BE%D0%B3%20%D0%BC%D0%B8%D1%80%D0%B0"))()
-end)
-tab1.newButton("Universe-X 4.0", "Script coming soon", function()
-    print('error.') 
+tab1.newButton("Universe-X 4.0", "Coming Soon.", function()
+    print('no.') 
 end)
 tab1.newButton("Universe-X [Top]", "Universe-X, click to load the script", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/4bn47Jb0"))()
@@ -306,27 +823,27 @@ end)
 tab1.newButton("SuperX [Hot]", "SuperX, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D0%BB%D0%B0%20%D1%82%D1%8B%20%D1%81%D0%BF%D1%80%D0%B0%D1%88%D0%B8%D0%B2%D0%B0%D0%B5%D1%88%D1%8C"))()
 end)
-tab1.newButton("Universe-X Remake [Beta]", "load Universe-X remaked", function()
+tab1.newButton("Universe-X Remake [Beta]", "load Universe-X remaked.", function()
     loadstring(game:HttpGet(" https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%B5%D1%82%D0%B0."))()
 end)
-tab1.newButton("Universe-X Remake [Beta]", "load Universe-X remaked", function()
+tab1.newButton("Universe-X Remake [Beta]", "load Universe-X remaked.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BE%20%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%B1%D0%BB%D0%BE%D0%BA%20%D0%91%D0%BB%D0%BE%D0%BA%D1%81"))()
 end)
 
 local tab2 = DrRayLibrary.newTab("Game", " ImageIdHere")
 
-tab2.newButton("Zombie Uprising [Best]", "Zombie Uprising script", function()
+tab2.newButton("Zombie Uprising [Best]", "Zombie Uprising script.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%BE%D0%BA%D1%81%20%D0%BB%D0%BE%D0%BB%20%D0%BD%D1%83%D0%B1"))()
 end)
-tab2.newButton("Slap Battles [Best]", "Slap Battles script", function()
+tab2.newButton("Slap Battles [Best]", "Slap Battles script.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%97%D0%B2%D0%BE%D0%BD%D0%B8%D1%82%D0%B5%20%D0%B2%20%D0%A1%D0%A8%D0%90%2C%20%D1%85%D0%B0-%D1%85%D0%B0%2C%20%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B1%D0%B5%D1%82%D0%B0-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%2C%20%D0%BB%D0%BE%D0%BB%20%20%D1%85%D0%B0%D1%85%D0%B0%D1%85%D0%B0%20%D1%87%D0%B8%D1%82"))()
 end)
 
 local tab3 = DrRayLibrary.newTab("Executor", " ImageIdHere")
-tab3.newButton("Universe-X", "Executor cracked", function()
+tab3.newButton("Universe-X", "Executor cracked.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C"))()
 end)
-tab3.newButton("Universe-X", "Executor script", function()
+tab3.newButton("Universe-X", "Executor script.", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%BE%D0%BA%D1%81%20%D0%BE%D0%B1%D0%BE%D0%B9%D1%82%D0%B8%20%D1%85%D0%B0%D1%85%D0%B0%D1%85%D0%B0"))()
 end) 
 tab3.newButton("Krypton", "Executor script.", function()
