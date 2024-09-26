@@ -172,6 +172,7 @@ CreateGUI(myTitle)
 
 
 wait(0.2) 
+--[[
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
     Duration = 6,
@@ -414,7 +415,6 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that Solara doesnt have please switch to something else! (Error.)") 
 end
 
---[[
 if (identifyexecutor()) == "Arceus X" then
 Notification.Notify("Universe X 3.0", "Arceus X not support this script!", "rbxassetid://17415983489", {
     Duration = 6,
@@ -447,7 +447,6 @@ Notification.Notify("Universe X 3.0", "Fluxus too low and not support this scrip
 wait(8) 
 game.Players.LocalPlayer:Kick("This script has some features that Fluxus doesnt have please switch to something else! (Error.)")
 end
-
 ]]
 
 local plr = game.Players.LocalPlayer
