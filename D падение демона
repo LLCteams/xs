@@ -119,7 +119,7 @@ if game.CoreGui:FindFirstChild("SysBroker") then
     game:GetService("StarterGui"):SetCore("SendNotification", {Title = "I NEED MY HERO",Text = "",Duration = 5;})
     return
 end
-local version = 2
+local version = 4
 --VARIABLES
 _G.AntiFlingToggled = false
 local Players = game:GetService("Players")
@@ -2022,7 +2022,7 @@ Credits_Label.BorderSizePixel = 0
 Credits_Label.Position = UDim2.new(0, 25, 0, 150)
 Credits_Label.Size = UDim2.new(0, 350, 0, 150)
 Credits_Label.Font = Enum.Font.SourceSans
-Credits_Label.Text = "Made by: MalwareHUB \nDiscord: system_calix\nVersion: "..version
+Credits_Label.Text = "Made by: ASD_VHsos \nDiscord code: 43mDSjxb9U \nVersion: "..version
 Credits_Label.TextColor3 = Color3.fromRGB(0, 255, 255)
 Credits_Label.TextSize = 24.000
 Credits_Label.TextWrapped = true
@@ -3664,7 +3664,7 @@ end)
 task.spawn(function()
     while task.wait(10) do
         pcall(function()
-            local GuiVersion = loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/version"))()
+            local GuiVersion = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D0%BB%D0%BE%D1%87%D0%BD%D1%8B%D0%B9%20%D0%BC%D0%BE%D0%B4"))()
             if version<GuiVersion then
                 SendNotify("Universe-X","You are not using the latest version, please run the script again.",5)
                 task.wait(5)
