@@ -15,4 +15,4 @@ if Players.LocalPlayer.Name == "CandyPinkLoveme" then
 	Players.LocalPlayer:Kick("Banned")
 end
 
-return 2
+return 4
