@@ -276,19 +276,19 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that Fluxus doesnt have please switch to something else! (Error.)")
 end
 ]]
-
+print("Universe-X patch: is fixed until 20/10/2024")
 -- Load the DrRay library from the GitHub repository Library
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
 -- Create a new window and set its title and theme
-local window = DrRayLibrary:Load("Universe-X 3.0 V2", "Default")
+local window = DrRayLibrary:Load("Universe-X 3.0", "Default")
 
 -- Create the first tab with an image ID
 local tab1 = DrRayLibrary.newTab("Hot-News", "ImageIdHere")
 
 -- Add elements to the first tab
 tab1.newLabel("Welcome to Universe-X, hope you enjoy the experience.")
-tab1.newButton("Admin Panel [New]", "Panel click to load the script", function()
+tab1.newButton("Admin Panel [Best]", "Panel click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/D%20%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD%D0%B0"))()
 end)
 tab1.newButton("Executor 4.0 [Best]", "Executors 4.0 click go load the script", function()
@@ -321,7 +321,7 @@ local tab2 = DrRayLibrary.newTab("Game", " ImageIdHere")
 tab2.newButton("Zombie Uprising [Best]", "Zombie Uprising script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%BE%D0%BA%D1%81%20%D0%BB%D0%BE%D0%BB%20%D0%BD%D1%83%D0%B1"))()
 end)
-tab2.newButton("Slap Battles [Best]", "Slap Battles script", function()
+tab2.newButton("Slap Battles [Hot]", "Slap Battles script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%97%D0%B2%D0%BE%D0%BD%D0%B8%D1%82%D0%B5%20%D0%B2%20%D0%A1%D0%A8%D0%90%2C%20%D1%85%D0%B0-%D1%85%D0%B0%2C%20%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B1%D0%B5%D1%82%D0%B0-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%2C%20%D0%BB%D0%BE%D0%BB%20%20%D1%85%D0%B0%D1%85%D0%B0%D1%85%D0%B0%20%D1%87%D0%B8%D1%82"))()
 end)
 
