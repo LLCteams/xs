@@ -1,5 +1,3 @@
-
-
 --[[
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
@@ -276,8 +274,7 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that Fluxus doesnt have please switch to something else! (Error.)")
 end
 ]]
-print("Universe-X patch: is fixed until 20/10/2024")
-game.Players.LocalPlayer:kick("Detected by modified client systems.")
+print("Universe-X patch: is fixed until 22/10/2024")
 -- Load the DrRay library from the GitHub repository Library
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
