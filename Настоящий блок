@@ -1,4 +1,4 @@
-game:shudown()
+game:shutdown()
 --[[
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
