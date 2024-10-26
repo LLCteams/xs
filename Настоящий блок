@@ -1,4 +1,4 @@
-game:shutdown()
+
 --[[
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
@@ -275,32 +275,111 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that Fluxus doesnt have please switch to something else! (Error.)")
 end
 ]]
-print("Universe-X patch: is fixed until 22/10/2024")
+
+-- Universe-X Loader
+
+-- Join 
+_G.JoinSoundId = "5606953326"
+_G.LeaveSoundId = "5606947971"
+_G.Volume = 0.6
+
+local function SendNotification(title,text,icon,duration,...)
+	game.StarterGui:SetCore("SendNotification", {
+		Title = title;
+		Text = text;
+		Icon = icon;
+		Duration = duration;
+	})
+end
+
+game.Players.ChildAdded:Connect(function(player)
+	if not pcall(function()
+		SendNotification("Universe-X [🔍]", "[ " .. player.Name .. " ] Joined the server!", game:GetService("Players"):GetUserThumbnailAsync(player.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420), 5)
+		PlayJoinedSound(_G.JoinSoundId, _G.Volume)
+	end) then
+		print ("UX:🔍 Joined!")
+	end
+end)
+
+game.Players.ChildRemoved:Connect(function(player)
+	if not pcall(function()
+		SendNotification("Universe-X [🔍]", "[ "..player.Name.." ] Leave the server!", game:GetService("Players"):GetUserThumbnailAsync(player.UserId, Enum.ThumbnailType.HeadShot, Enum.ThumbnailSize.Size420x420), 5)
+		PlayLeaveSound(_G.LeaveSoundId, _G.Volume)
+	end) then
+		print ("UX:🔍 Leaved!")
+	end
+end)
+
+game:GetService("CoreGui").RobloxGui.NotificationFrame.ChildAdded:Connect(function()
+	spawn(function()
+		for i,v in pairs(game:GetService("CoreGui").RobloxGui.NotificationFrame:GetDescendants()) do
+			if v:IsA("TextLabel") and v.Text == "Player Joined" then
+				v.TextColor3 = Color3.new(0, 1, 0)
+			end
+		end
+	end)
+	spawn(function()
+		for i,v in pairs(game:GetService("CoreGui").RobloxGui.NotificationFrame:GetDescendants ()) do
+			if v:IsA("TextLabel") and v.Text == "Player Left" then
+				v.TextColor3 = Color3.new(1, 0, 0)
+			end
+		end
+	end)
+end)
+
+function PlayJoinedSound(Id, Volume)
+	JoinSound = Instance.new("Sound", game:GetService("Lighting"))
+	JoinSound.SoundId = "rbxassetid://" .. Id
+	JoinSound.Volume = Volume
+	JoinSound.Name = "JoinSound"
+	JoinSound:Play()
+	wait(3)
+	JoinSound:Destroy()
+end
+
+function PlayLeaveSound(Id, Volume)
+	LeaveSound = Instance.new("Sound", game:GetService("Lighting"))
+	LeaveSound.SoundId = "rbxassetid://" .. Id
+	LeaveSound.Volume = Volume
+	LeaveSound.Name = "LeaveSound"
+	LeaveSound:Play()
+	wait(3)
+	LeaveSound:Destroy()
+end
+
+SendNotification("Players-Info", "[ Universe-X [🔍] Notificationer ] Actived!", nil, 7.5)
+
+-- End of Universe-X Loader Notifier
+
+print("Universe-X patch: is fixed until 25/10/2024")
 -- Load the DrRay library from the GitHub repository Library
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
 -- Create a new window and set its title and theme
-local window = DrRayLibrary:Load("Universe-X 3.0", "Default")
+local window = DrRayLibrary:Load("Universe-X AvecX", "Default")
 
 -- Create the first tab with an image ID
 local tab1 = DrRayLibrary.newTab("Hot-News", "ImageIdHere")
 
 -- Add elements to the first tab
 tab1.newLabel("Welcome to Universe-X, hope you enjoy the experience.")
-tab1.newButton("Admin Panel [Best]", "Panel click to load the script", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/D%20%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD%D0%B0"))()
-end)
-tab1.newButton("Executor 4.0 [Best]", "Executors 4.0 click go load the script", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D0%BB%D0%BE%D0%BA%D1%81%20%D0%91%D0%BE%D0%B3%20%D0%BC%D0%B8%D1%80%D0%B0"))()
-end)
-tab1.newButton("Universe-X 4.0", "Script coming soon", function()
-    print('error.') 
-end)
-tab1.newButton("Universe-X [Top]", "Universe-X, click to load the script", function()
+tab1.newButton("Universe-X V2 [New]", "Universe-X, click to load the script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D1%80%D1%83%D1%85%20%D0%BD%D0%B8%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0%20%D0%BD%D0%B5%20%D1%81%D1%82%D0%B0%D1%80%D0%B5%D0%B5%D1%82%20%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9b"))()
+end) 
+tab1.newButton("Universe-X 3.0 [Waiting for updates]", "Universe-X, click to load the script", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/4bn47Jb0"))()
+end)
+tab1.newButton("Admin Panel [Top]", "Panel, click to load the script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/D%20%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD%D0%B0"))()
 end)
 tab1.newButton("Admin Command [Top]", "Universe-X admin commands, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/222%20%D0%98%D0%B3%D1%80%D0%B0%20%D0%91%D0%BB%D0%BE%D0%BA%20%D0%BE%D1%82%20%D0%BC%D0%B0%D0%BB%D1%8C%D1%87%D0%B8%D0%BA%D0%B0v"))()
+end)
+tab1.newButton("Executor 4.0 [Top]", "Executors 4.0 click go load the script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D0%BB%D0%BE%D0%BA%D1%81%20%D0%91%D0%BE%D0%B3%20%D0%BC%D0%B8%D1%80%D0%B0"))()
+end)
+tab1.newButton("Universe-X 4.0 [Coming Soon]", "Script coming soon", function()
+    print('error.') 
 end)
 tab1.newButton("Volt-X [Hot]", "Volt-X, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%B0-%D0%B1%D0%BB%D0%B0-%D0%BD%D1%83%D0%B1%20%D1%85%D0%B0-%D1%85%D0%B0"))()
