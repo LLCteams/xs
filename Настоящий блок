@@ -19,9 +19,6 @@ mewing10.ReplyNofitication({
 })
 
 setclipboard("https://discord.gg/43mDSjxb9U")
-wait(10) 
-game:Shutdown() 
-
 --[[
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
