@@ -14,7 +14,7 @@ Notification.Notify("Universe-X", "Official Versions.", "rbxassetid://1398198740
         Retract = true
     }
 })
-
+ --[[
 -- Create ScreenGui and ImageButton if not already created
 local player = game.Players.LocalPlayer
 local playerGui = player:WaitForChild("PlayerGui")
@@ -64,8 +64,8 @@ end
 
 -- Connect the button click event to the function
 imageButton.MouseButton1Click:Connect(onButtonClick)
+]]
 
-function Funtouch()
 function chatnotify(msg)
 	game.StarterGui:SetCore("ChatMakeSystemMessage", {
 		Text = msg,
@@ -67949,7 +67949,7 @@ xpp:Button(
     local flu = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 if (identifyexecutor()) == "Delta" then
 flu:Notify({
-Title = "Delta Detected â˜¢ï¸�",
+Title = "Delta Detected â˜¢ï¸ ",
 Content = "This script has some features that Delta doesnt have please switch to something else! (Example: Codex)",
 Duration = 999999
 })
@@ -75352,4 +75352,3 @@ RemoverSection:NewButton("Clear All Lighting", "Remove every items in Lighting."
 end)
 end
 end -- Of all line
-end -- Funtouch
