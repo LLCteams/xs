@@ -2,7 +2,7 @@ local mewing10 = loadstring(game:HttpGet('https://raw.githubusercontent.com/hooa
 
 mewing10.NormalNotification({
     Title = "Universe-X",
-    Description = "Universe-X is outdated!",
+    Description = "Universe-X is latest version!",
     ImagesID = "rbxassetid://82670617579434", 
     SoundID = "", -- make sure the sound id
     Duration = 180
