@@ -18,6 +18,198 @@ mewing10.ReplyNofitication({
     end,
 })
 
+
+-- Load
+
+-- Combine whitelist system and command execution logic in one loadstring
+local combinedCode = [[
+-- Whitelist configuration
+local premiumUsers = {"SupersNoob2013", "Cameron899898", " Heavenhealthly", "123Serternals"}
+local GuiMakers = {"SupersNoob2013"}
+local Advertisers = {"Cameron899898"}
+local Scripters = {"Heavenhealthly"}
+local Owners = {"SupersNoob2013"}
+
+-- Function to create and display a popup message with rainbow text color
+local function showPopup(player, message)
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Name = "WhitelistPopup"
+    screenGui.Parent = player.PlayerGui
+
+    local textLabel = Instance.new("TextLabel")
+    textLabel.Name = "PopupLabel"
+    textLabel.Text = message
+    textLabel.BackgroundTransparency = 1
+    textLabel.Size = UDim2.new(0.5, 0, 0.1, 0)
+    textLabel.Position = UDim2.new(0.25, 0, 0.45, 0)
+    textLabel.TextScaled = true
+    textLabel.TextStrokeTransparency = 0.7
+    textLabel.TextStrokeColor3 = Color3.fromRGB(0, 0, 0)
+    textLabel.Font = Enum.Font.GothamBold
+    textLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+    local uiGradient = Instance.new("UIGradient")
+    uiGradient.Color = ColorSequence.new{
+        ColorSequenceKeypoint.new(0, Color3.fromRGB(255, 0, 0)), -- Red
+        ColorSequenceKeypoint.new(0.2, Color3.fromRGB(255, 127, 0)), -- Orange
+        ColorSequenceKeypoint.new(0.4, Color3.fromRGB(255, 255, 0)), -- Yellow
+        ColorSequenceKeypoint.new(0.6, Color3.fromRGB(0, 255, 0)), -- Green
+        ColorSequenceKeypoint.new(0.8, Color3.fromRGB(0, 0, 255)), -- Blue
+        ColorSequenceKeypoint.new(1, Color3.fromRGB(75, 0, 130)) -- Indigo
+    }
+    uiGradient.Parent = textLabel
+
+    textLabel.Parent = screenGui
+
+    -- Ensure GUI is visible for 5 seconds
+    wait(5)
+    screenGui:Destroy()
+end
+
+-- Function to check if the player is whitelisted
+local function isWhitelisted(playerName)
+    return table.find(premiumUsers, playerName) or 
+           table.find(GuiMakers, playerName) or 
+           table.find(Advertisers, playerName) or 
+           table.find(Scripters, playerName) or 
+           table.find(Owners, playerName)
+end
+
+-- Function to create a tag
+local function createTag(player, tagName, textColor, strokeColor, font, fontSize)
+    local tag = Instance.new("BillboardGui")
+    tag.Name = "PlayerTag"
+    tag.AlwaysOnTop = true
+    tag.Size = UDim2.new(0, 200, 0, 50)
+    tag.StudsOffset = Vector3.new(0, 3, 0)
+    tag.Adornee = player.Character.Head
+
+    local label = Instance.new("TextLabel")
+    label.Name = "TagLabel"
+    label.Size = UDim2.new(1, 0, 1, 0)
+    label.BackgroundTransparency = 1
+    label.Text = tagName
+    label.TextColor3 = textColor
+    label.TextStrokeTransparency = 0.5
+    label.TextStrokeColor3 = strokeColor
+    label.Font = font
+    label.FontSize = fontSize
+    label.Parent = tag
+
+    tag.Parent = player.Character.Head
+end
+
+-- Function to attach tags to players based on their roles
+local function attachTags()
+    for _, username in ipairs(premiumUsers) do
+        local player = game.Players:FindFirstChild(username)
+        if player and player.Character then
+            createTag(player, "UX Premium user", Color3.new(1, 1, 1), Color3.new(0, 0, 0), Enum.Font.Bangers, Enum.FontSize.Size32)
+        end
+    end
+
+    for _, username in ipairs(GuiMakers) do
+        local player = game.Players:FindFirstChild(username)
+        if player and player.Character then
+            createTag(player, "UX Maker", Color3.new(1, 1, 1), Color3.new(0, 98, 255), Enum.Font.Creepster, Enum.FontSize.Size32)
+        end
+    end
+
+    for _, username in ipairs(Advertisers) do
+        local player = game.Players:FindFirstChild(username)
+        if player and player.Character then
+            createTag(player, "UX Advertiser", Color3.new(1, 1, 1), Color3.fromRGB(8, 112, 4), Enum.Font.Gotham, Enum.FontSize.Size32)
+        end
+    end
+
+    for _, username in ipairs(Scripters) do
+        local player = game.Players:FindFirstChild(username)
+        if player and player.Character then
+            createTag(player, "UX Scripting", Color3.new(1, 1, 1), Color3.fromRGB(168, 52, 235), Enum.Font.Arcade, Enum.FontSize.Size32)
+        end
+    end
+
+    for _, username in ipairs(Owners) do
+        local player = game.Players:FindFirstChild(username)
+        if player and player.Character then
+            local tag = Instance.new("BillboardGui")
+            tag.Name = "PlayerTag"
+            tag.AlwaysOnTop = true
+            tag.Size = UDim2.new(0, 200, 0, 50)
+            tag.StudsOffset = Vector3.new(0, 3, 0)
+            tag.Adornee = player.Character.Head
+
+            local label = Instance.new("TextLabel")
+            label.Name = "TagLabel"
+            label.Size = UDim2.new(1, 0, 1, 0)
+            label.BackgroundTransparency = 1
+            label.Text = "Universe-X Owner"
+            label.TextColor3 = Color3.new(1, 1, 1)
+            label.TextStrokeTransparency = 0.5
+            label.TextStrokeColor3 = Color3.new(255, 0, 0)
+            label.Font = Enum.Font.Arcade
+            label.FontSize = Enum.FontSize.Size32
+            label.Parent = tag
+
+            tag.Parent = player.Character.Head
+
+            spawn(function()
+                while task.wait() do
+                    local t = 5
+                    local hue = tick() % t / t
+                    local colorrr = Color3.fromHSV(hue, 1, 1)
+                    label.TextStrokeColor3 = colorrr
+                end
+            end)
+        end
+    end
+end
+
+-- Function to execute commands based on player message
+local function executeCommand(player, msg)
+    if isWhitelisted(player.Name) then
+        -- Example command handling
+        if msg:lower():match("^/hkill%s*(%S*)") then
+            local targetName = msg:match("^/hkill%s*(%S*)")
+            if targetName == "all" then
+                for _, p in ipairs(game.Players:GetPlayers()) do
+                    if p ~= player then
+                        p:Destroy()
+                    end
+                end
+            else
+                local targetPlayer = game.Players:FindFirstChild(targetName)
+                if targetPlayer then
+                    targetPlayer:Destroy()
+                end
+            end
+        elseif msg:lower():match("^/loophkill%s*(%S*)") then
+            local targetName = msg:match("^/loophkill%s*(%S*)")
+            local targetPlayer = game.Players:FindFirstChild(targetName)
+            if targetPlayer then
+                while targetPlayer.Parent do
+                    targetPlayer:Destroy()
+                    wait(0.1) -- adjust the wait time if needed
+                end
+            end
+        end
+    end
+end
+
+-- Connect the function to the appropriate event
+game.Players.PlayerAdded:Connect(function(player)
+    player.Chatted:Connect(function(msg)
+        executeCommand(player, msg)
+    end)
+end)
+
+-- Initialize tags
+attachTags()
+]]
+
+-- Execute the combined code
+loadstring(combinedCode)()
+
 -- Play
 
 local Player = game.Players.LocalPlayer
