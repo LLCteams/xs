@@ -2,7 +2,7 @@ local mewing10 = loadstring(game:HttpGet('https://raw.githubusercontent.com/hooa
 
 mewing10.NormalNotification({
     Title = "Universe-X",
-    Description = "Universe-X is latest version!",
+    Description = "Universe-X is latest version, Paid-mode actived!",
     ImagesID = "rbxassetid://82670617579434", 
     SoundID = "", -- make sure the sound id
     Duration = 180
@@ -17,6 +17,111 @@ mewing10.ReplyNofitication({
         warn('Feedback appeals are successfully sending to teams!') 
     end,
 })
+
+-- Play
+
+local Player = game.Players.LocalPlayer
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+local BlurEffect = Instance.new("BlurEffect")
+local UIGradient = Instance.new("UIGradient")
+local UICorner = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local TweenService = game:GetService("TweenService")
+
+-- Set up ScreenGui
+ScreenGui.Parent = Player:WaitForChild("PlayerGui")
+
+-- Set up TextLabel
+TextLabel.Parent = ScreenGui
+TextLabel.Size = UDim2.new(0.1, 0, 0.05, 0)
+TextLabel.Position = UDim2.new(0.45, 0, 0.45, 0)
+TextLabel.Text = "Universe-X"  -- Only "AK"
+TextLabel.TextScaled = true
+TextLabel.Font = Enum.Font.GothamBlack
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 255) -- Gray Color (192, 192, 192)
+TextLabel.BackgroundTransparency = 1
+TextLabel.TextStrokeTransparency = 1
+TextLabel.TextTransparency = 1
+TextLabel.Rotation = 0
+
+-- 3D Effect with UIStroke
+UIStroke.Parent = TextLabel
+UIStroke.Color = Color3.fromRGB(169, 169, 169)  -- Gray color
+UIStroke.Thickness = 2  -- Thinner stroke for smoother appearance
+UIStroke.Transparency = 1
+
+-- Gradient setup (gray tones)
+UIGradient.Parent = TextLabel
+UIGradient.Color = ColorSequence.new{
+    ColorSequenceKeypoint.new(0, Color3.fromRGB(211, 211, 211)),
+    ColorSequenceKeypoint.new(0.5, Color3.fromRGB(192, 192, 192)),
+    ColorSequenceKeypoint.new(1, Color3.fromRGB(169, 169, 169))
+}
+UIGradient.Rotation = 0
+
+-- Round corners
+UICorner.Parent = TextLabel
+UICorner.CornerRadius = UDim.new(0.2, 0)
+
+-- Blur effect
+BlurEffect.Parent = game.Lighting
+BlurEffect.Size = 0
+
+-- Initial animation: Appearance with rotation and size change
+wait(1.2) 
+
+-- Disable UIStroke during the intro to avoid artifacts
+UIStroke.Enabled = false
+
+-- Smooth intro: Rotation and size animation
+local rotationTween = TweenService:Create(TextLabel, TweenInfo.new(3, Enum.EasingStyle.Back), {Rotation = 360})
+local sizeTween = TweenService:Create(TextLabel, TweenInfo.new(3, Enum.EasingStyle.Elastic), {
+    Size = UDim2.new(0.5, 0, 0.15, 0),
+    Position = UDim2.new(0.25, 0, 0.4, 0)
+})
+rotationTween:Play()
+sizeTween:Play()
+
+-- Smooth fade-in effect
+for i = 1, 40 do
+    local transparency = 1 - (i / 40)
+    TextLabel.TextTransparency = transparency
+    BlurEffect.Size = i / 2
+    wait(0.05)
+end
+
+-- Hold the text visible for a moment
+wait(6) 
+
+-- Re-enable UIStroke for the outro
+UIStroke.Enabled = true  -- Enable outline for the fade-out
+
+-- Reverse deletion: Fade out letter-by-letter from the last character
+local text = TextLabel.Text
+local length = #text
+
+-- Reverse letter deletion animation (like erasing the text from last letter to first)
+for i = length, 1, -1 do
+    -- Cut the text to progressively remove one character at a time (reverse)
+    TextLabel.Text = text:sub(1, i - 1)  -- This removes the last character one by one
+
+    -- Smoothly reduce text transparency and blur effect
+    TextLabel.TextTransparency = 1 - (i / length)  -- Gradually make the text fully transparent
+    BlurEffect.Size = 20 - (i / 2)  -- Gradually reduce the blur as the text disappears
+
+    -- Add smooth delay for the gradual effect
+    wait(0.1)  -- Adjust this to make the effect smoother or faster
+end
+
+-- Once all letters are deleted, the blur effect should also be at 0
+BlurEffect.Size = 0
+
+-- Clean-up (just in case)
+BlurEffect:Destroy()
+ScreenGui:Destroy()
+
+-- End
 
 setclipboard("https://discord.gg/43mDSjxb9U")
 --[[
