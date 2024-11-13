@@ -24,9 +24,9 @@ mewing10.ReplyNofitication({
 -- Combine whitelist system and command execution logic in one loadstring
 local combinedCode = [[
 -- Whitelist configuration
-local premiumUsers = {"SupersNoob2013", "Cameron899898", " Heavenhealthly", "123Serternals"}
-local GuiMakers = {"SupersNoob2013"}
-local Advertisers = {"Cameron899898"}
+local premiumUsers = {"Cameron899898", "123Serternals"}
+local GuiMakers = {""}
+local Advertisers = {""}
 local Scripters = {"Heavenhealthly"}
 local Owners = {"SupersNoob2013"}
 
@@ -316,7 +316,18 @@ ScreenGui:Destroy()
 -- End
 
 setclipboard("https://discord.gg/43mDSjxb9U")
---[[
+
+if (identifyexecutor()) == "Xeno" then
+Notification.Notify("Universe X 3.0", "Xeno too low for executing..", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Xeno doesnt have please switch to something else! (Error.)") 
+end
+
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
     Duration = 6,
@@ -559,6 +570,18 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that Solara doesnt have please switch to something else! (Error.)") 
 end
 
+if (identifyexecutor()) == "Fluxus" then
+Notification.Notify("Universe X 3.0", "Fluxus too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Fluxus doesnt have please switch to something else! (Error.)")
+end
+
+--[[
 if (identifyexecutor()) == "Arceus X" then
 Notification.Notify("Universe X 3.0", "Arceus X not support this script!", "rbxassetid://17415983489", {
     Duration = 6,
@@ -580,20 +603,9 @@ Notification.Notify("Universe X 3.0", "Delta too low and not support this script
 wait(8) 
 game.Players.LocalPlayer:Kick("This script has some features that Delta doesnt have please switch to something else! (Error.)")
 end
-
-if (identifyexecutor()) == "Fluxus" then
-Notification.Notify("Universe X 3.0", "Fluxus too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Fluxus doesnt have please switch to something else! (Error.)")
-end
 ]]
 
--- Universe-X Loader
+-- UnLo
 
 -- Join 
 _G.JoinSoundId = "5606953326"
