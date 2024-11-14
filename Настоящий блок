@@ -328,6 +328,28 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that Xeno doesnt have please switch to something else! (Error.)") 
 end
 
+if (identifyexecutor()) == "Nezur" then
+Notification.Notify("Universe X 3.0", "Nezur too low for executing..", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Nezur doesnt have please switch to something else! (Error.)") 
+end
+
+if (identifyexecutor()) == "Synapse Z" then
+Notification.Notify("Universe X 3.0", "Synapse Z too low for executing..", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Synapse Z doesnt have please switch to something else! (Error.)") 
+end
+
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
     Duration = 6,
