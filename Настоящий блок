@@ -2,7 +2,7 @@ local mewing10 = loadstring(game:HttpGet('https://raw.githubusercontent.com/hooa
 
 mewing10.NormalNotification({
     Title = "Universe-X",
-    Description = "Universe-X is private version, Paid+Premium mode actived!",
+    Description = "Universe-X is Outdated! update the UniverseX to Additional version.",
     ImagesID = "rbxassetid://82670617579434", 
     SoundID = "", -- make sure the sound id
     Duration = 20
@@ -17,6 +17,89 @@ mewing10.ReplyNofitication({
         warn('Feedback appeals are successfully sending to teams!') 
     end,
 })
+
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+local TextLabel_4 = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(155, 16, 255)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.154838711, 0, 0.230283916, 0)
+Frame.Size = UDim2.new(0, 552, 0, 329)
+
+UICorner.Parent = Frame
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 6666.000
+TextLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(0.228260875, 0, -0.0303951371, 0)
+TextLabel.Size = UDim2.new(0, 262, 0, 43)
+TextLabel.Font = Enum.Font.Unknown
+TextLabel.Text = "Universe-X | Not Responding!"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 255)
+TextLabel.TextSize = 20.000
+
+TextLabel_2.Parent = Frame
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.BorderSizePixel = 0
+TextLabel_2.Position = UDim2.new(0.0344202891, 0, 0.0942249224, 0)
+TextLabel_2.Size = UDim2.new(0, 533, 0, 280)
+TextLabel_2.Font = Enum.Font.SourceSans
+TextLabel_2.Text = "Since we have made mistakes in Universe-X for this issues"
+TextLabel_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_2.TextSize = 14.000
+
+TextLabel_3.Parent = Frame
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.BorderSizePixel = 0
+TextLabel_3.Position = UDim2.new(0.356678337, 0, 0.344682276, 0)
+TextLabel_3.Size = UDim2.new(0, 200, 0, 50)
+TextLabel_3.Font = Enum.Font.SourceSans
+TextLabel_3.Text = "Experience hasn't loaded."
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_3.TextSize = 14.000
+
+TextLabel_4.Parent = Frame
+TextLabel_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.BorderSizePixel = 0
+TextLabel_4.Position = UDim2.new(0.0344202891, 0, 0.534954429, 0)
+TextLabel_4.Size = UDim2.new(0, 527, 0, 50)
+TextLabel_4.Font = Enum.Font.SourceSans
+TextLabel_4.Text = "so we will close this version for a while, you can use the new Universe-X version on our discord."
+TextLabel_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_4.TextSize = 14.000
+
+TextLabel_5.Parent = Frame
+TextLabel_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.BorderSizePixel = 0
+TextLabel_5.Position = UDim2.new(0.0344202891, 0, 0.534954429, 0)
+TextLabel_5.Size = UDim2.new(0, 527, 0, 50)
+TextLabel_5.Font = Enum.Font.SourceSans
+TextLabel_5.Text = "Kami menghentikan skrip untuk sementara waktu, kamu tidak dapat mengakses Universe-X 3.0 untuk sekarang."
+TextLabel_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel_5.TextSize = 14.000
 
 -- LoadV
 
@@ -306,7 +389,6 @@ end
 playEntranceAnimation().Completed:Wait()
 animateLoading()
 
---[[
 -- Exp
 
 local OutdatedScreen = Instance.new("ScreenGui")
@@ -593,7 +675,6 @@ end)
 
 -- Initialize tags
 attachTags()
-]]
 
 -- Execute the combined code
 loadstring(combinedCode)()
@@ -616,7 +697,7 @@ ScreenGui.Parent = Player:WaitForChild("PlayerGui")
 TextLabel.Parent = ScreenGui
 TextLabel.Size = UDim2.new(0.1, 0, 0.05, 0)
 TextLabel.Position = UDim2.new(0.45, 0, 0.45, 0)
-TextLabel.Text = "Universe-X"
+TextLabel.Text = "Welcome to Universe-X! | V2"
 TextLabel.TextScaled = true
 TextLabel.Font = Enum.Font.GothamBlack
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 255) -- Gray Color (192, 192, 192)
@@ -1102,7 +1183,7 @@ SendNotification("Players-Info", "[ Universe-X [🔍] Notificationer ] Actived!"
 
 -- End of Universe-X Loader Notifier
 
-print("Universe-X patch: is fixed until 10/11/2024")
+print("Universe-X patch: is fixed until 09/11/2024")
 -- Load the DrRay library from the GitHub repository Library
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
@@ -1115,7 +1196,7 @@ local tab1 = DrRayLibrary.newTab("Hot-News", "18662117170")
 -- Add elements to the first tab
 tab1.newLabel("Welcome to Universe-X, hope you enjoy the experience.")
 
-tab1.newButton("UX Executor Remake [New]", "Universe-X, click to load the script", function()
+tab1.newButton("UX Executor Remake [Top]", "Universe-X, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%9F%D0%BE%D0%BC%D0%BE%D0%B3%D0%B8%D1%82%D0%B5%20%D0%BC%D0%BD%D0%B5%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D0%BA%D0%B0%D0%BA%20%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B5"))()
 end)
 tab1.newButton("Universe-X V2 [Top]", "Universe-X, click to load the script", function()
