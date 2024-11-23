@@ -1,10 +1,5 @@
 getgenv().whitelistedPlayers = {
-    "SupersNoob2013", 
-    "Fortniteroham", 
-    "Emilcarevskiy2006", 
-    "PRESTORE19", 
-    "", 
-    "veearty2", 
+    "",
     ""
 }
 
