@@ -1,3 +1,140 @@
+
+if _G.UXversLoaded then
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+        Title = "UX",
+        Text = "Script is already running!",
+        Duration = 5
+    })
+    return
+end
+
+_G.UXversLoaded = true
+
+local function RemoveAtmosphereAndSetFog()
+    local Lighting = game:GetService("Lighting")
+    Lighting.FogEnd = 100000
+    
+    for _, v in pairs(Lighting:GetDescendants()) do
+        if v:IsA("Atmosphere") then
+            v:Destroy()
+        end
+    end
+end
+
+-- Call the function
+RemoveAtmosphereAndSetFog()
+
+-- Load external scripts with better error handling
+local function loadExternalScript(url)
+    local success, result = pcall(function()
+        return loadstring(game:HttpGet(url))()
+    end)
+    
+    if not success then
+        warn("Failed to load script from " .. url .. ": " .. tostring(result))
+    end
+end
+
+-- URLs for external scripts
+local scriptUrls = {
+
+    "" -- for Urls
+}
+
+-- Load all external scripts
+for _, url in ipairs(scriptUrls) do
+    loadExternalScript(url)
+end
+
+local player = game.Players.LocalPlayer
+local oldChat = game.ReplicatedStorage:FindFirstChild("DefaultChatSystemChatEvents")
+
+local function Chat(msg)
+    if oldChat then
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg, "All")
+    else
+        game.TextChatService.TextChannels.RBXGeneral:SendAsync(msg)
+    end
+end
+
+--[[
+-- Load additional scripts
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Alikhammass/MyAdmin/refs/heads/main/loadownercmds.luau"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Alikhammass/MyAdmin/refs/heads/main/loadhook.luau"))()
+]]
+
+-- Notification system
+local function showNotification(message, backgroundColor)
+    local gui = Instance.new("ScreenGui")
+    gui.Name = "Notification"
+    gui.Parent = player.PlayerGui
+    
+    local frame = Instance.new("Frame")
+    frame.Size = UDim2.new(1, 0, 1, 0)
+    frame.BackgroundColor3 = backgroundColor
+    frame.Parent = gui
+    
+    local messageLabel = Instance.new("TextLabel")
+    messageLabel.Size = UDim2.new(1, 0, 1, 0)
+    messageLabel.Position = UDim2.new(0, 0, 0, 0)
+    messageLabel.Text = message
+    messageLabel.TextSize = 36
+    messageLabel.Parent = frame
+    
+    repeat
+        wait(1)
+        isWhitelisted = false
+        for _, whitelistedUser in ipairs(whitelistedPlayers) do
+            if (playerName:lower() == whitelistedUser:lower()) then
+                isWhitelisted = true
+                break
+            end
+        end
+    until isWhitelisted 
+    gui:Destroy()
+end
+
+-- Whitelist check
+local playerName = player.Name
+local isWhitelisted = false
+
+for _, whitelistedUser in ipairs(getgenv().whitelistedPlayers) do
+    if (playerName:lower() == whitelistedUser:lower()) then
+        isWhitelisted = true
+        break
+    end
+end
+
+if not isWhitelisted then
+    local function kickPlayer()
+        print("https://discord.gg/")
+        game.Players.LocalPlayer:Kick("You are not whitelisted. discord copied to clipboard, get points or buy lifetime.")
+    end
+    kickPlayer()
+    print("You are not whitelisted. Execute non-whitelisted logic here.")
+else
+    -- Load whitelisted player scripts
+    local whitelistedScripts = {
+        "https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D1%80%D1%83%D1%85%20%D0%BD%D1%83%D0%B1"
+    }
+    
+    for _, url in ipairs(whitelistedScripts) do
+        loadExternalScript(url)
+    end
+end
+
+-- Connect chat command handler
+
+local id=game.Players.LocalPlayer.UserId
+
+while wait() do
+if game:GetService("CoreGui").ExperienceChat.bubbleChat:FindFirstChild("BubbleChat_"..id) then
+game:GetService("CoreGui").ExperienceChat.bubbleChat["BubbleChat_"..id].StudsOffset = Vector3.new(0, 1, 0)
+else
+print("Bubble error, not found")
+end
+end
+
 local mewing10 = loadstring(game:HttpGet('https://raw.githubusercontent.com/hooaczx/Notifications-Code/main/Notifications/Mewing10'))()
 
 mewing10.NormalNotification({
@@ -5,7 +142,7 @@ mewing10.NormalNotification({
     Description = "Key is disabled.",
     ImagesID = "rbxassetid://82670617579434", 
     SoundID = "", -- make sure the sound id
-    Duration = 45
+    Duration = 3
 })
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D1%80%D1%83%D1%85%20%D0%BD%D1%83%D0%B1"))()
+-- loadstring(game:HttpGet(""))()
