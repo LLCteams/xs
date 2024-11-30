@@ -55649,7 +55649,6 @@ tab4.newToggle("Fullbright", "Fullbright script", false, function(Value)
 		else
 		    game.Lighting.Ambient = Color3.new(0, 0, 0)
 		end
-end)
 end) 
 tab4.newToggle("Freecam", "Freecam script", false, function(state)
         local player = game.Players.LocalPlayer
