@@ -2,10 +2,9 @@ local mewing10 = loadstring(game:HttpGet('https://raw.githubusercontent.com/hooa
 
 mewing10.NormalNotification({
     Title = "System",
-    Description = "Sorry for everyone, Universe-X back to free.",
+    Description = "Loaded",
     ImagesID = "rbxassetid://82670617579434", 
     SoundID = "", -- make sure the sound id
     Duration = 3
 })
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D1%80%D1%83%D1%85%20%D0%BD%D1%83%D0%B1"))()
