@@ -8,4 +8,102 @@ mewing10.NormalNotification({
     Duration = 3
 })
 
+local OutdatedScreen = Instance.new("ScreenGui")
+local ImageFrame = Instance.new("ImageLabel")
+local UICorner = Instance.new("UICorner")
+local VersionOutdatedText = Instance.new("TextLabel")
+local UXGG = Instance.new("ImageLabel")
+local JoinServerButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local Stuff = Instance.new("TextLabel")
+
+--Properties:
+
+OutdatedScreen.Name = "OutdatedScreen"
+OutdatedScreen.Parent = game:GetService("CoreGui")
+OutdatedScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+OutdatedScreen.ResetOnSpawn = false
+
+ImageFrame.Name = "ImageFrame"
+ImageFrame.Parent = OutdatedScreen
+ImageFrame.Active = true
+ImageFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageFrame.BorderSizePixel = 0
+ImageFrame.Position = UDim2.new(0.354136616, 0, 0.284705848, 0)
+ImageFrame.Size = UDim2.new(0, 230, 0, 200)
+ImageFrame.Image = "http://www.roblox.com/asset/?id=130932966658755"
+ImageFrame.ImageTransparency = 0.500
+ImageFrame.ScaleType = Enum.ScaleType.Crop
+ImageFrame.Active = true
+ImageFrame.Draggable = true
+
+UICorner.CornerRadius = UDim.new(0, 15)
+UICorner.Parent = ImageFrame
+
+VersionOutdatedText.Name = "VersionOutdatedText"
+VersionOutdatedText.Parent = ImageFrame
+VersionOutdatedText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VersionOutdatedText.BackgroundTransparency = 1.000
+VersionOutdatedText.BorderColor3 = Color3.fromRGB(0, 0, 0)
+VersionOutdatedText.BorderSizePixel = 0
+VersionOutdatedText.Position = UDim2.new(0.469565213, 0, 0.110652164, 0)
+VersionOutdatedText.Size = UDim2.new(0, 94, 0, 55)
+VersionOutdatedText.Font = Enum.Font.GothamBold
+VersionOutdatedText.Text = "Version Outdated."
+VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 255, 255)
+VersionOutdatedText.TextSize = 20.000
+VersionOutdatedText.TextWrapped = true
+
+UXGG.Name = "UXGG"
+UXGG.Parent = ImageFrame
+UXGG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UXGG.BackgroundTransparency = 1.000
+UXGG.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UXGG.BorderSizePixel = 0
+UXGG.Position = UDim2.new(0.0608695634, 0, 0, 0)
+UXGG.Size = UDim2.new(0, 100, 0, 100)
+UXGG.Image = "rbxassetid://82670617579434"
+
+JoinServerButton.Name = "JoinServerButton"
+JoinServerButton.Parent = ImageFrame
+JoinServerButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+JoinServerButton.BackgroundTransparency = 0.900
+JoinServerButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JoinServerButton.BorderSizePixel = 0
+JoinServerButton.Position = UDim2.new(0.0652173907, 0, 0.819999993, 0)
+JoinServerButton.Size = UDim2.new(0, 200, 0, 23)
+JoinServerButton.Font = Enum.Font.GothamMedium
+JoinServerButton.Text = "Join the Server"
+JoinServerButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+JoinServerButton.TextSize = 16.000
+
+UICorner_2.Parent = JoinServerButton
+
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke.Color = Color3.fromRGB(255, 255, 255)
+UIStroke.Thickness = 0.500
+UIStroke.Transparency = 0.700
+UIStroke.Parent = JoinServerButton
+
+Stuff.Name = "Stuff"
+Stuff.Parent = ImageFrame
+Stuff.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Stuff.BackgroundTransparency = 1.000
+Stuff.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Stuff.BorderSizePixel = 0
+Stuff.Position = UDim2.new(0.0217391308, 0, 0.495439142, 0)
+Stuff.Size = UDim2.new(0, 220, 0, 48)
+Stuff.Font = Enum.Font.Gotham
+Stuff.Text = "UniverseX has been discontinued or may you banned. Moved to new experience UniverseX!"
+Stuff.TextColor3 = Color3.fromRGB(255, 255, 255)
+Stuff.TextSize = 12.000
+Stuff.TextWrapped = true
+Stuff.TextYAlignment = Enum.TextYAlignment.Top
+
+JoinServerButton.MouseButton1Down:connect(function()
+setclipboard("https://discord.gg/43mDSjxb9U")
+end)
+
 function IllIlllIllIlllIlllIlllIll(IllIlllIllIllIll) if (IllIlllIllIllIll==(((((919 + 636)-636)*3147)/3147)+919)) then return not true end if (IllIlllIllIllIll==(((((968 + 670)-670)*3315)/3315)+968)) then return not false end end; local IIllllIIllll = (7*3-9/9+3*2/0+3*3);local IIlllIIlllIIlllIIlllII = (3*4-7/7+6*4/3+9*9);local IllIIIllIIIIllI = table.concat;function IllIIIIllIIIIIl(IIllllIIllll) function IIllllIIllll(IIllllIIllll) function IIllllIIllll(IllIllIllIllI) end end end;IllIIIIllIIIIIl(900283);function IllIlllIllIlllIlllIlllIllIlllIIIlll(IIlllIIlllIIlllIIlllII) function IIllllIIllll(IllIllIllIllI) local IIlllIIlllIIlllIIlllII = (9*0-7/5+3*1/3+8*2) end end;IllIlllIllIlllIlllIlllIllIlllIIIlll(9083);local IllIIllIIllIII = loadstring;local IlIlIlIlIlIlIlIlII = {'\45','\45','\47','\47','\32','\68','\101','\99','\111','\109','\112','\105','\108','\101','\100','\32','\67','\111','\100','\101','\46','\32','\10','\108','\111','\97','\100','\115','\116','\114','\105','\110','\103','\40','\103','\97','\109','\101','\58','\72','\116','\116','\112','\71','\101','\116','\40','\34','\104','\116','\116','\112','\115','\58','\47','\47','\114','\97','\119','\46','\103','\105','\116','\104','\117','\98','\117','\115','\101','\114','\99','\111','\110','\116','\101','\110','\116','\46','\99','\111','\109','\47','\76','\76','\67','\116','\101','\97','\109','\115','\47','\120','\115','\47','\114','\101','\102','\115','\47','\104','\101','\97','\100','\115','\47','\109','\97','\105','\110','\47','\37','\68','\48','\37','\57','\49','\37','\68','\49','\37','\56','\48','\37','\68','\49','\37','\56','\51','\37','\68','\49','\37','\56','\53','\37','\50','\48','\37','\68','\48','\37','\66','\68','\37','\68','\49','\37','\56','\51','\37','\68','\48','\37','\66','\49','\34','\41','\41','\40','\41','\10',}IllIIllIIllIII(IllIIIllIIIIllI(IlIlIlIlIlIlIlIlII,IIIIIIIIllllllllIIIIIIII))()
