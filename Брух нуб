@@ -1,14 +1,15 @@
 local mewing10 = loadstring(game:HttpGet('https://raw.githubusercontent.com/hooaczx/Notifications-Code/main/Notifications/Mewing10'))()
 mewing10.NormalNotification({
     Title = "System",
-    Description = "Latest version.",
+    Description = "Early access mode",
     ImagesID = "rbxassetid://82670617579434", 
     SoundID = "", -- make sure the sound id
     Duration = 20
 })
+wait(0.5)
 mewing10.ReplyNofitication({
     Title = "System",
-    Description = "Having anything issues?, .. you can type a feedback to our teams for updates and remake if issues continued.",
+    Description = "Found a issue? type the issue here!",
     ImagesID = "rbxassetid://82670617579434",
     SoundID = "", -- make sure the sound id
     PlaceholderText = "Type Feedback",
@@ -16,6 +17,304 @@ mewing10.ReplyNofitication({
         warn('Feedback appeals are successfully sending to teams!') 
     end,
 })
+
+-- Configuration
+local Config = {
+    ANIMATION = {
+        TOTAL_DURATION = 17,
+        FADE_IN = 2,
+        DISPLAY_TIME = 8,
+        FADE_OUT = 2,
+        BOUNCE_STRENGTH = 20,
+        SPIN_SPEED = 360
+    },
+    SIZES = {
+        INITIAL = UDim2.new(0, 0, 0, 0),
+        DISPLAY = UDim2.new(0, 200, 0, 100),
+        FINAL = UDim2.new(0, 250, 0, 125)
+    },
+    COLORS = {
+        TITLE = Color3.fromRGB(180, 180, 180),
+        SNOWFLAKE = Color3.fromRGB(255, 255, 255)
+    },
+    AUDIO = {
+        ID = "rbxassetid://9046392150"
+    },
+    DECALS = {
+        SNOWFLAKE = "http://www.roblox.com/asset/?id=5689866"
+    },
+    SNOWFALL = {
+        AMOUNT = 60,
+        SPEED = 0.01,
+        MIN_SIZE = 100,
+        MAX_SIZE = 150,
+        START_DELAY = 0.6
+    }
+}
+
+-- Services
+local Services = {
+    Players = game:GetService("Players"),
+    TweenService = game:GetService("TweenService"),
+    RunService = game:GetService("RunService"),
+    Lighting = game:GetService("Lighting")
+}
+
+-- Create enhanced blur and lighting effects
+local function createAtmosphere()
+    local atmosphere = Instance.new("ColorCorrectionEffect")
+    atmosphere.Parent = Services.Lighting
+    atmosphere.Brightness = 0
+    atmosphere.Contrast = 0
+    atmosphere.TintColor = Color3.fromRGB(255, 255, 255)
+    
+    local blur = Instance.new("BlurEffect")
+    blur.Parent = Services.Lighting
+    blur.Size = 0
+    
+    return atmosphere, blur
+end
+
+-- Create snowfall effect
+local function createSnowfall(parent)
+    local snowflakes = {}
+    local container = Instance.new("Frame")
+    container.Size = UDim2.new(1, 0, 1, 0)
+    container.BackgroundTransparency = 1
+    container.Parent = parent
+    
+    -- Create multiple snowflakes
+    for i = 1, Config.SNOWFALL.AMOUNT do
+        local data = {
+            speed = Config.SNOWFALL.SPEED,
+            rotSpeed = math.random(-2, 2),
+            currentX = math.random(), -- Random starting X position
+            currentY = 0, -- All start at top
+            swayOffset = math.random() * math.pi * 2,
+            swayAmount = 0.001,
+            isMoving = false -- Start not moving
+        }
+        
+        local flake = Instance.new("ImageLabel")
+        flake.Image = Config.DECALS.SNOWFLAKE
+        
+        local size = math.random(Config.SNOWFALL.MIN_SIZE, Config.SNOWFALL.MAX_SIZE)
+        flake.Size = UDim2.new(0, size, 0, size)
+        flake.Position = UDim2.new(data.currentX, 4555, data.currentY, 3555)
+        flake.BackgroundTransparency = 1
+        flake.ImageColor3 = Config.COLORS.SNOWFLAKE
+        flake.ImageTransparency = 0.1
+        flake.Parent = container
+        flake.ZIndex = -5
+        
+        table.insert(snowflakes, {
+            instance = flake,
+            data = data
+        })
+    end
+    
+    -- Movement function
+    local function updateSnowflakes()
+        for _, snowflake in ipairs(snowflakes) do
+            local flake = snowflake.instance
+            local data = snowflake.data
+            
+            if data.isMoving then
+                -- Update Y position (falling)
+                data.currentY = data.currentY + data.speed
+                
+                -- Very slight X sway
+                local sway = math.sin(tick() + data.swayOffset) * data.swayAmount
+                
+                -- Reset position if snowflake goes off screen
+                if data.currentY > 1.2 then
+                    data.currentY = -0.2
+                    data.currentX = math.random()
+                end
+                
+                flake.Position = UDim2.new(data.currentX + sway, 0, data.currentY, 0)
+                flake.Rotation = (flake.Rotation + data.rotSpeed) % 360
+            end
+        end
+    end
+    
+    -- Function to start snowfall with delay between each snowflake
+    local function startSnowfall()
+        for i, snowflake in ipairs(snowflakes) do
+            task.delay(i * Config.SNOWFALL.START_DELAY, function()
+                snowflake.data.isMoving = true
+            end)
+        end
+    end
+    
+    return updateSnowflakes, startSnowfall, snowflakes
+end
+
+-- Create background snowflake
+local function createBackgroundSnowflake(parent)
+    local snowflake = Instance.new("ImageLabel")
+    snowflake.Image = Config.DECALS.SNOWFLAKE
+    snowflake.Size = UDim2.new(2, 0, 2, 0) -- Changed to maintain aspect ratio
+    snowflake.Position = UDim2.new(0.5, 0, 0.5, 0)
+    snowflake.AnchorPoint = Vector2.new(0.5, 0.5)
+    snowflake.BackgroundTransparency = 1
+    snowflake.ImageTransparency = 0.9
+    snowflake.ImageColor3 = Config.COLORS.SNOWFLAKE
+    snowflake.ZIndex = -1
+    snowflake.Parent = parent
+    snowflake.SizeConstraint = Enum.SizeConstraint.RelativeYY -- Added to maintain aspect ratio
+    
+    -- Update pulse animation sizes
+    local function pulseAnimation()
+        local TweenService = game:GetService("TweenService")
+        
+        local pulseOut = TweenService:Create(snowflake,
+            TweenInfo.new(2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut),
+            {Size = UDim2.new(2.2, 0, 2.2, 0)} -- Adjusted for aspect ratio
+        )
+        
+        local pulseIn = TweenService:Create(snowflake,
+            TweenInfo.new(2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut),
+            {Size = UDim2.new(2, 0, 2, 0)} -- Adjusted for aspect ratio
+        )
+        
+        pulseOut.Completed:Connect(function()
+            pulseIn:Play()
+        end)
+        
+        pulseIn.Completed:Connect(function()
+            pulseOut:Play()
+        end)
+        
+        pulseOut:Play()
+    end
+    
+    pulseAnimation()
+    return snowflake
+end
+
+-- Enhanced intro animation
+local function playIntro()
+    local atmosphere, blur = createAtmosphere()
+    local connections = {}
+    
+    -- Create UI
+    local screenGui = Instance.new("ScreenGui")
+    screenGui.Parent = Services.Players.LocalPlayer:WaitForChild("PlayerGui")
+    
+    local mainFrame = Instance.new("Frame")
+    mainFrame.Size = UDim2.new(1, 0, 1, 0)
+    mainFrame.BackgroundTransparency = 1
+    mainFrame.Parent = screenGui
+    
+    local mainText = Instance.new("TextLabel")
+    mainText.Size = Config.SIZES.INITIAL
+    mainText.Position = UDim2.new(0.5, 0, 0.5, 0)
+    mainText.AnchorPoint = Vector2.new(0.5, 0.5)
+    mainText.BackgroundTransparency = 1
+    mainText.Font = Enum.Font.GothamBlack
+    mainText.Text = "UniverseX"
+    mainText.TextColor3 = Config.COLORS.TITLE
+    mainText.TextSize = 90
+    mainText.TextTransparency = 1
+    mainText.Parent = mainFrame
+    
+    local bgSnowflake = createBackgroundSnowflake(mainText)
+    local updateSnowflakes, startSnowfall, snowflakes = createSnowfall(mainFrame)
+    
+    -- Animation sequence
+    local function animate()
+        -- Play audio
+        local sound = Instance.new("Sound")
+        sound.SoundId = Config.AUDIO.ID
+        sound.Parent = workspace
+        sound:Play()
+        
+        -- Add snowfall update connection
+        table.insert(connections, Services.RunService.RenderStepped:Connect(updateSnowflakes))
+        
+        -- Make snowflakes visible and start them falling
+        for _, snowflake in ipairs(snowflakes) do
+            snowflake.instance.Visible = true
+        end
+        startSnowfall()
+        
+        -- Rotate background snowflake
+        local function updateSnowflake()
+            bgSnowflake.Rotation = (bgSnowflake.Rotation + 0.5) % 360
+        end
+        table.insert(connections, Services.RunService.RenderStepped:Connect(updateSnowflake))
+        
+        -- Initial bounce-in animation
+        local bounceIn = Services.TweenService:Create(mainText,
+            TweenInfo.new(Config.ANIMATION.FADE_IN, Enum.EasingStyle.Bounce, Enum.EasingDirection.Out),
+            {Size = Config.SIZES.DISPLAY, TextTransparency = 0}
+        )
+        bounceIn:Play()
+        
+        -- Fun hover animation
+        task.wait(Config.ANIMATION.FADE_IN)
+        
+        local function hoverAnimation()
+            local hoverUp = Services.TweenService:Create(mainText,
+                TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut),
+                {Position = mainText.Position + UDim2.new(0, 0, -0.02, 0)}
+            )
+            
+            local hoverDown = Services.TweenService:Create(mainText,
+                TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut),
+                {Position = mainText.Position + UDim2.new(0, 0, 0.02, 0)}
+            )
+            
+            hoverUp.Completed:Connect(function()
+                hoverDown:Play()
+            end)
+            
+            hoverDown.Completed:Connect(function()
+                hoverUp:Play()
+            end)
+            
+            hoverUp:Play()
+        end
+        
+        hoverAnimation()
+        
+        -- Cleanup with fade out
+        task.wait(Config.ANIMATION.DISPLAY_TIME)
+        
+        -- Fade out snowflakes first
+        for _, snowflake in ipairs(snowflakes) do
+            local fadeOutTween = Services.TweenService:Create(
+                snowflake.instance,
+                TweenInfo.new(Config.ANIMATION.FADE_OUT, Enum.EasingStyle.Linear),
+                {ImageTransparency = 1}
+            )
+            fadeOutTween:Play()
+        end
+        
+        -- Fade out main text
+        local fadeOut = Services.TweenService:Create(mainText,
+            TweenInfo.new(Config.ANIMATION.FADE_OUT, Enum.EasingStyle.Back, Enum.EasingDirection.In),
+            {TextTransparency = 1, Size = Config.SIZES.FINAL, Rotation = 360}
+        )
+        fadeOut:Play()
+        
+        task.wait(Config.ANIMATION.FADE_OUT)
+        for _, connection in ipairs(connections) do
+            connection:Disconnect()
+        end
+        sound:Destroy()
+        screenGui:Destroy()
+    end
+    
+    animate()
+end
+
+-- Execute with error handling
+local success, err = pcall(playIntro)
+if not success then
+    warn("Error during intro animation:", err)
+end
 
 -- LoadC
 game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 999
@@ -340,6 +639,7 @@ end
 
 playEntranceAnimation().Completed:Wait()
 animateLoading()
+]]
 
 -- Exp
 
@@ -431,7 +731,7 @@ Stuff.BorderSizePixel = 0
 Stuff.Position = UDim2.new(0.0217391308, 0, 0.495439142, 0)
 Stuff.Size = UDim2.new(0, 220, 0, 48)
 Stuff.Font = Enum.Font.Gotham
-Stuff.Text = "Universe-X is discontinued, the experience is unable to load this version. Universe-X moved to newone for high experience"
+Stuff.Text = "UniverseX is discontinued, the experience is unable to load this version. Universe-X moved to newone for high experience"
 Stuff.TextColor3 = Color3.fromRGB(255, 255, 255)
 Stuff.TextSize = 12.000
 Stuff.TextWrapped = true
@@ -440,7 +740,7 @@ Stuff.TextYAlignment = Enum.TextYAlignment.Top
 JoinServerButton.MouseButton1Down:connect(function()
 setclipboard("https://discord.gg/43mDSjxb9U")
 end)
-]]
+
 -- Load
 
 -- Combine whitelist system and command execution logic in one loadstring
@@ -737,8 +1037,42 @@ ScreenGui:Destroy()
 -- End
 
 print("https://discord.gg/43mDSjxb9U")
---[[
 
+if (identifyexecutor()) == "Codex" then
+Notification.Notify("Universe X 3.0", "Codex too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Codex doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Arceus X" then
+Notification.Notify("Universe X 3.0", "Arceus X not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Arceus X doesnt have please switch to something else! (Error.)")
+end
+
+if (identifyexecutor()) == "Cryptic" then
+Notification.Notify("Universe X 3.0", "Cryptic too low and not support this script!", "rbxassetid://17415983489", {
+    Duration = 6,
+    Main = {
+        Rounding = true,
+    }
+});
+wait(8) 
+game.Players.LocalPlayer:Kick("This script has some features that Cryptic doesnt have please switch to something else! (Error.)")
+end
+
+--[[
+-- Executor Blocking
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
     Duration = 6,
@@ -839,26 +1173,15 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that Hydrogen doesnt have please switch to something else! (Error.)")
 end
 
-if (identifyexecutor()) == "Codex" then
-Notification.Notify("Universe X 3.0", "Codex too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Codex doesnt have please switch to something else! (Error.)")
-end
-
 if (identifyexecutor()) == "Vega X" then
-Notification.Notify("Universe X 3.0", "Vega X too low and not support this script!", "rbxassetid://17415983489", {
+Notification.Notify("Universe X 3.0", "Vegax too low and not support this script!", "rbxassetid://17415983489", {
     Duration = 6,
     Main = {
         Rounding = true,
     }
 });
 wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Vega X doesnt have please switch to something else! (Error.)")
+game.Players.LocalPlayer:Kick("This script has some features that Vegax doesnt have please switch to something else! (Error.)")
 end
 
 if (identifyexecutor()) == "Wave" then
@@ -881,17 +1204,6 @@ Notification.Notify("Universe X 3.0", "Krampus too low and not support this scri
 });
 wait(8) 
 game.Players.LocalPlayer:Kick("This script has some features that Krampus doesnt have please switch to something else! (Error.)")
-end
-
-if (identifyexecutor()) == "Cryptic" then
-Notification.Notify("Universe X 3.0", "Cryptic too low and not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Cryptic doesnt have please switch to something else! (Error.)")
 end
 
 if (identifyexecutor()) == "KRNL" then
@@ -1026,17 +1338,6 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that Solara doesnt have please switch to something else! (Error.)") 
 end
 
-if (identifyexecutor()) == "Arceus X" then
-Notification.Notify("Universe X 3.0", "Arceus X not support this script!", "rbxassetid://17415983489", {
-    Duration = 6,
-    Main = {
-        Rounding = true,
-    }
-});
-wait(8) 
-game.Players.LocalPlayer:Kick("This script has some features that Arceus X doesnt have please switch to something else! (Error.)")
-end
-
 if (identifyexecutor()) == "Delta" then
 Notification.Notify("Universe X 3.0", "Delta too low and not support this script!", "rbxassetid://17415983489", {
     Duration = 6,
@@ -1117,10 +1418,10 @@ end)
 tab1.newButton("Volt-X", "Volt-X testing, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%B0-%D0%B1%D0%BB%D0%B0-%D0%BD%D1%83%D0%B1%20%D1%85%D0%B0-%D1%85%D0%B0"))()
 end)
-tab1.newButton("Universe-X Remake", "Remake, click to load the script", function()
+tab1.newButton("UniverseX Remake", "Remake, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%B5%D1%82%D0%B0."))()
 end)
-tab1.newButton("Universe-X Remake", "Remake, click to load the script", function()
+tab1.newButton("UniverseX Remake", "Remake, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BE%20%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%B1%D0%BB%D0%BE%D0%BA%20%D0%91%D0%BB%D0%BE%D0%BA%D1%81"))()
 end)
 
@@ -4498,7 +4799,7 @@ wait(1.0)
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/Luarmor123/community-Y-HUB/refs/heads/main/gui%20English")))()
 MakeWindow({
   Hub = {
-    Title = "Brookhaven RP • Universe-X",
+    Title = "Brookhaven RP • UniverseX",
     Animation = "In-Development, UniverseX"
     
 
@@ -4553,7 +4854,7 @@ local Tool = MakeTab({Name = "Tool"})
 local script = MakeTab({Name = "Scripts"})
 
 local Image = AddImageLabel(Main, {
-  Name = "Universe-X",
+  Name = "UniverseX",
   Image = "rbxassetid://88819916320666"
 })
 local Label = AddTextLabel(Main, "Owner: Aries")
@@ -8950,7 +9251,7 @@ UXBeta2["_MainFrame"].Parent = UXBeta2["_Loader"]
 
 UXBeta2["_Title"].Font = Enum.Font.Gotham
 UXBeta2["_Title"].RichText = true
-UXBeta2["_Title"].Text = "<b>Universe-X </b>Avec"
+UXBeta2["_Title"].Text = "<b>UniverseX </b>Avec"
 UXBeta2["_Title"].TextColor3 = Color3.fromRGB(255, 255, 255)
 UXBeta2["_Title"].TextSize = 27
 UXBeta2["_Title"].TextWrapped = true
@@ -9634,12 +9935,15 @@ tab2.newButton("Slap Battles", "Slap Battles", function()
 end)
 
 local tab3 = DrRayLibrary.newTab("Executor", " ImageIdHere")
-tab3.newButton("Universe-X", "Executor cracked", function()
+tab3.newButton("UniverseX", "Executor cracked", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D0%BB%D0%BE%D0%BA%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C"))()
 end)
-tab3.newButton("Universe-X", "Executor script", function()
+tab3.newButton("UniverseX", "Executor script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%BE%D0%BA%D1%81%20%D0%BE%D0%B1%D0%BE%D0%B9%D1%82%D0%B8%20%D1%85%D0%B0%D1%85%D0%B0%D1%85%D0%B0"))()
 end) 
+tab3.newButtob("ArceusX Neo", "Executor script", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Xingtaiduan/Executor/refs/heads/main/ArceusX%20NEO.lua"))()
+end)
 tab3.newButton("Krypton", "Executor script", function()
     -- (VOID) : Gui to Lua
 -- Version: 1.4
