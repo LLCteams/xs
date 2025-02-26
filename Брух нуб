@@ -1,4 +1,4 @@
-local mewing10 = loadstring(game:HttpGet('https://raw.githubusercontent.com/hooaczx/Notifications-Code/main/Notifications/Mewing10'))()
+local mewing10 = loadstring(game:HttpGet('https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%E8%A6%81%E6%8A%93%E5%88%B0%E7%9A%84%E5%B0%B1%E6%98%AF%E5%9D%97%E7%8A%B6%E7%89%A9'))()
 mewing10.NormalNotification({
     Title = "System",
     Description = "Early access mode",
@@ -14,9 +14,45 @@ mewing10.ReplyNofitication({
     SoundID = "", -- make sure the sound id
     PlaceholderText = "Type Feedback",
     SendCallback = function() 
-        warn('Feedback appeals are successfully sending to teams!') 
+        warn('Reported to the teams!') 
     end,
 })
+
+-- LoadC
+game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 95000
+
+local TweenService = game:GetService("TweenService")
+local PlayerGui = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = PlayerGui
+
+local textLabel = Instance.new("TextLabel", screenGui)
+textLabel.Size = UDim2.new(0.5, 0, 0.1, 0)  
+textLabel.Position = UDim2.new(0.5, 0, 0.5, 0) 
+textLabel.AnchorPoint = Vector2.new(0.5, 0.5)  
+textLabel.TextScaled = true  
+textLabel.BackgroundTransparency = 1  
+textLabel.TextTransparency = 1 
+textLabel.Font = Enum.Font.GothamBold 
+textLabel.TextColor3 = Color3.new(1, 1, 1)  
+textLabel.Text = "Edition Models - 2024"
+
+local function animateTextInOut(duration, pauseTime)
+    local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+    
+    local appearGoal = {TextTransparency = 0}
+    local appearTween = TweenService:Create(textLabel, tweenInfo, appearGoal)
+    appearTween:Play()
+    wait(duration + pauseTime) 
+    
+    local disappearGoal = {TextTransparency = 1}
+    local disappearTween = TweenService:Create(textLabel, tweenInfo, disappearGoal)
+    disappearTween:Play()
+end
+
+animateTextInOut(5, 5)
+--[[
 
 -- Configuration
 local Config = {
@@ -316,43 +352,9 @@ if not success then
     warn("Error during intro animation:", err)
 end
 
--- LoadC
-game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 999
+-- end of Winter Load
 
-local TweenService = game:GetService("TweenService")
-local PlayerGui = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.Parent = PlayerGui
-
-local textLabel = Instance.new("TextLabel", screenGui)
-textLabel.Size = UDim2.new(0.5, 0, 0.1, 0)  
-textLabel.Position = UDim2.new(0.5, 0, 0.5, 0) 
-textLabel.AnchorPoint = Vector2.new(0.5, 0.5)  
-textLabel.TextScaled = true  
-textLabel.BackgroundTransparency = 1  
-textLabel.TextTransparency = 1 
-textLabel.Font = Enum.Font.GothamBold 
-textLabel.TextColor3 = Color3.new(1, 1, 1)  
-textLabel.Text = "4"
-
-local function animateTextInOut(duration, pauseTime)
-    local tweenInfo = TweenInfo.new(duration, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-    
-    local appearGoal = {TextTransparency = 0}
-    local appearTween = TweenService:Create(textLabel, tweenInfo, appearGoal)
-    appearTween:Play()
-    wait(duration + pauseTime) 
-    
-    local disappearGoal = {TextTransparency = 1}
-    local disappearTween = TweenService:Create(textLabel, tweenInfo, disappearGoal)
-    disappearTween:Play()
-end
-
-animateTextInOut(5, 5)
---[[
-
--- LoadV
+-- others loader
 
 local TweenService = game:GetService("TweenService")
 local Players = game:GetService("Players")
@@ -686,7 +688,7 @@ VersionOutdatedText.BorderSizePixel = 0
 VersionOutdatedText.Position = UDim2.new(0.469565213, 0, 0.110652164, 0)
 VersionOutdatedText.Size = UDim2.new(0, 94, 0, 55)
 VersionOutdatedText.Font = Enum.Font.GothamBold
-VersionOutdatedText.Text = "Version Outdated."
+VersionOutdatedText.Text = "Version Unstable"
 VersionOutdatedText.TextColor3 = Color3.fromRGB(255, 255, 255)
 VersionOutdatedText.TextSize = 20.000
 VersionOutdatedText.TextWrapped = true
@@ -731,7 +733,7 @@ Stuff.BorderSizePixel = 0
 Stuff.Position = UDim2.new(0.0217391308, 0, 0.495439142, 0)
 Stuff.Size = UDim2.new(0, 220, 0, 48)
 Stuff.Font = Enum.Font.Gotham
-Stuff.Text = "UniverseX is discontinued, the experience is unable to load this version. Universe-X moved to newone for high experience"
+Stuff.Text = "UniverseX is discontinued, which newest 4.0 version will available soon with higher experiences" -- UniverseX is discontinued, the experience is unable to load this version. UniverseX moved to newone for high experience
 Stuff.TextColor3 = Color3.fromRGB(255, 255, 255)
 Stuff.TextSize = 12.000
 Stuff.TextWrapped = true
@@ -1038,6 +1040,7 @@ ScreenGui:Destroy()
 
 print("https://discord.gg/43mDSjxb9U")
 
+--[[
 if (identifyexecutor()) == "Codex" then
 Notification.Notify("Universe X 3.0", "Codex too low and not support this script!", "rbxassetid://17415983489", {
     Duration = 6,
@@ -1071,7 +1074,6 @@ wait(8)
 game.Players.LocalPlayer:Kick("This script has some features that Cryptic doesnt have please switch to something else! (Error.)")
 end
 
---[[
 -- Executor Blocking
 if (identifyexecutor()) == "Trigon" then
 Notification.Notify("Universe X 3.0", "Trigon Evo too low for executing..", "rbxassetid://17415983489", {
@@ -1362,16 +1364,17 @@ end
 ]]
 
 print("Issues patch: is fixed until 20/11/2024")
+warn("patch-issues-2025 is actived!") 
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
 -- Create a new window and set its title and theme
-local window = DrRayLibrary:Load("Universe-X V2", "18662117170")
+local window = DrRayLibrary:Load("UniverseX V2", "18662117170")
 
 -- Create the first tab with an image ID
-local tab1 = DrRayLibrary.newTab("Hot-News", "18662117170")
+local tab1 = DrRayLibrary.newTab("Popular Script", "18662117170")
 
 -- Add elements to the first tab
-tab1.newLabel("Welcome to Universe-X, hope you enjoy the experience.")
+tab1.newLabel("Welcome to UniverseX, this version is low need to update")
 
 tab1.newButton("Universe-X Old", "Universe-X, click to load the script", function()
     loadstring(game:HttpGet("https://pastebin.com/raw/4bn47Jb0"))()
@@ -1401,21 +1404,21 @@ tab1.newButton("Admin Command", "Admin commands, click to load the script", func
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/222%20%D0%98%D0%B3%D1%80%D0%B0%20%D0%91%D0%BB%D0%BE%D0%BA%20%D0%BE%D1%82%20%D0%BC%D0%B0%D0%BB%D1%8C%D1%87%D0%B8%D0%BA%D0%B0v"))()
 end)
 tab1.newButton("UX Executor 4.1", "Executors, click to load the script", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/77%D0%91%D0%BB%D0%BE%D0%BA%20%D0%BC%D0%B0%D0%BD%20%D1%81%D0%BA%D1%80%D0%B8%D0%BF%D1%82%20%D0%B4%D0%BB%D1%8F%20gg"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%9C%D0%BE%D0%B9%20%D1%81%D1%82%D0%B8%D0%BB%D1%8C%20-%20%D1%8D%D1%82%D0%BE%20%D0%B4%D0%B8%D1%81%D0%BA%20f"))()
 end) 
-tab1.newButton("UX Executor 4.0", "Executors, click to load the script", function()
+tab1.newButton("Waiting update", "Executors, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D0%BB%D0%BE%D0%BA%D1%81%20%D0%91%D0%BE%D0%B3%20%D0%BC%D0%B8%D1%80%D0%B0"))()
 end)
 tab1.newButton("UX Executor 3.0", "Remake, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%9F%D0%BE%D0%BC%D0%BE%D0%B3%D0%B8%D1%82%D0%B5%20%D0%BC%D0%BD%D0%B5%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D0%BA%D0%B0%D0%BA%20%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B5"))()
 end)
-tab1.newButton("Universe-X 1.0", "Universe-X coming soon", function()
+tab1.newButton("UniverseX 1.0", "UniverseX coming soon", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%9F%D0%BE%D0%BC%D0%BE%D0%B3%D0%B8%D1%82%D0%B5%20%D0%BC%D0%BD%D0%B5%20%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D1%8C"))()
 end)
-tab1.newButton("Universe-X 4.0", "Coming soon", function()
+tab1.newButton("UniverseX 4.0", "Coming soon", function()
     print('error.') 
 end)
-tab1.newButton("Volt-X", "Volt-X testing, click to load the script", function()
+tab1.newButton("VoltX", "VoltX testing, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%B0-%D0%B1%D0%BB%D0%B0-%D0%BD%D1%83%D0%B1%20%D1%85%D0%B0-%D1%85%D0%B0"))()
 end)
 tab1.newButton("UniverseX Remake", "Remake, click to load the script", function()
@@ -7983,7 +7986,6 @@ tab2.newButton("Survive the Killer", "Survive the Killer", function()
 Jkowi()
 end) 
 function Jkowi() 
-local mewing10 = loadstring(game:HttpGet('https://raw.githubusercontent.com/hooaczx/Notifications-Code/main/Notifications/Mewing10'))()
 
 mewing10.NormalNotification({
     Title = "Universe-X",
