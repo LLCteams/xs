@@ -18,6 +18,31 @@ mewing10.ReplyNofitication({
     end,
 })
 
+local Library = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Acrylic/refs/heads/main/source'))();
+
+local Window = Library:CreateWindow({
+	Title = 'UniverseX',
+	Logo = "rbxassetid://128000497825850",
+	KeySystem = true,
+	KeySystemInfo = {
+		Title = "UniverseX",
+		OnGetKey = function()
+			return setclipboard('Please report to our teams')
+		end,
+		OnLogin = function(key)
+			if key == "UX_20862094739373638" then
+				wait(0.1);
+				return true;
+			end;
+			
+			wait();
+			
+			return false;
+		end,
+	}
+});
+Window:Destroy()
+
 -- LoadC
 game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 95000
 
@@ -867,7 +892,7 @@ local function attachTags()
             label.Name = "TagLabel"
             label.Size = UDim2.new(1, 0, 1, 0)
             label.BackgroundTransparency = 1
-            label.Text = "Universe-X Owner"
+            label.Text = "UniverseX Owner"
             label.TextColor3 = Color3.new(1, 1, 1)
             label.TextStrokeTransparency = 0.5
             label.TextStrokeColor3 = Color3.new(255, 0, 0)
@@ -951,7 +976,7 @@ ScreenGui.Parent = Player:WaitForChild("PlayerGui")
 TextLabel.Parent = ScreenGui
 TextLabel.Size = UDim2.new(0.1, 0, 0.05, 0)
 TextLabel.Position = UDim2.new(0.45, 0, 0.45, 0)
-TextLabel.Text = "Welcome to Universe-X! | V2"
+TextLabel.Text = "Welcome to UniverseX! | V2"
 TextLabel.TextScaled = true
 TextLabel.Font = Enum.Font.GothamBlack
 TextLabel.TextColor3 = Color3.fromRGB(0, 0, 255) -- Gray Color (192, 192, 192)
@@ -1376,13 +1401,13 @@ local tab1 = DrRayLibrary.newTab("Popular Script", "18662117170")
 -- Add elements to the first tab
 tab1.newLabel("Welcome to UniverseX, this version is low need to update")
 
-tab1.newButton("Universe-X Old", "Universe-X, click to load the script", function()
-    loadstring(game:HttpGet("https://pastebin.com/raw/4bn47Jb0"))()
+tab1.newButton("UniverseX 1.0", "UniverseX, click to load the script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D0%BB%D0%BE%D0%BA%D0%B8"))()
 end)
-tab1.newButton("Universe-X 3.0", "Remake, click to load the script", function()
+tab1.newButton("UniverseX 3.0", "Remake, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%2C%20%D1%80%D0%B5%D0%B1%D1%8F%D1%82%D0%B0%2C%20%D0%B4%D0%BE%D0%B1%D1%80%D0%BE%20%D0%BF%D0%BE%D0%B6%D0%B0%D0%BB%D0%BE%D0%B2%D0%B0%D1%82%D1%8C"))()
 end)
-tab1.newButton("Universe-X V2", "Universe-X, click to load the script", function()
+tab1.newButton("UniverseX V2", "UniverseX, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D1%80%D1%83%D1%85%20%D0%BD%D0%B8%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0%20%D0%BD%D0%B5%20%D1%81%D1%82%D0%B0%D1%80%D0%B5%D0%B5%D1%82%20%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9b"))()
 end) 
 tab1.newButton("Keyboard", "Keyboard, click to load the script", function()
@@ -7988,7 +8013,7 @@ end)
 function Jkowi() 
 
 mewing10.NormalNotification({
-    Title = "Universe-X",
+    Title = "UniverseX",
     Description = "Loaded - Survive the Killer",
     ImagesID = "rbxassetid://82670617579434", 
     SoundID = "", -- make sure the sound id
@@ -9370,7 +9395,7 @@ do
     script.Parent = UXBeta2["_Loader"]
     local function module_script()
         local Settings = {
-            TitleText = "<b>Universe-X </b>Avec",-- Titulo
+            TitleText = "<b>UniverseX </b>Avec",-- Titulo
             DescriptionText = "High class experience fresh", -- SubTitulo
             UIGradientEnabled = true,
             ProgressBarEnabled = true,
@@ -9494,7 +9519,7 @@ script.Parent.MainFrame.ProgressBar.Content:TweenSize(UDim2.new(0, 40,0, 18), En
 local naga=Instance.new("Model", workspace) naga.Name="NagaLoaded"
 SetText("Checking all Information...")
 script.Parent.MainFrame.ProgressBar.Content:TweenSize(UDim2.new(0, 77,0, 18), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.2)
-SetText("Bypassing system for Universe-X...")
+SetText("Bypassing system for UniverseX...")
 script.Parent.MainFrame.ProgressBar.Content:TweenSize(UDim2.new(0, 100,0, 18), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.2)
 SetText("Clearing up for fresh experiences...")
 script.Parent.MainFrame.ProgressBar.Content:TweenSize(UDim2.new(0, 188,0, 18), Enum.EasingDirection.Out, Enum.EasingStyle.Quint, 0.2)
@@ -9516,7 +9541,7 @@ Esp.Enabled = false
 Esp.Tracers = false
 Esp.Boxes = false
 
-local Window = Library:CreateWindow("Universe-X | Evade", Vector2.new(500, 300), Enum.KeyCode.RightShift)
+local Window = Library:CreateWindow("UniverseX | Evade", Vector2.new(500, 300), Enum.KeyCode.RightShift)
 local Evade = Window:CreateTab("Menu")
 local AutoFarms = Window:CreateTab("Farm")
 local Gamee = Window:CreateTab("Game")
@@ -9645,8 +9670,8 @@ Visuals:AddColorpicker("Downed Player Color", Color3.fromRGB(255,255,0), functio
     Settings.DownedColor = Color
 end)
 
-Credits:AddLabel("English vers, Universe-X by UXteam.")
-Credits:AddLabel("Universe-X game script.")
+Credits:AddLabel("English vers, UniverseX by UXteam.")
+Credits:AddLabel("UniverseX game script.")
 Credits:AddLabel("Updated: v2.1")
 Configs:CreateConfigSystem()
 
@@ -25233,7 +25258,7 @@ TextLabel_6.BorderSizePixel = 0
 TextLabel_6.Position = UDim2.new(0.0199999548, 0, 0.437084794, 0)
 TextLabel_6.Size = UDim2.new(0, 208, 0, 28)
 TextLabel_6.Font = Enum.Font.FredokaOne
-TextLabel_6.Text = "- Bypassed by Universe-X"
+TextLabel_6.Text = "- Bypassed by UniverseX"
 TextLabel_6.TextColor3 = Color3.fromRGB(255, 255, 255)
 TextLabel_6.TextSize = 20.000
 TextLabel_6.TextXAlignment = Enum.TextXAlignment.Left
@@ -35996,7 +36021,7 @@ trii.TextLabel_5.TextSize = 14
 trii.TextLabel_5.Size = UDim2.new(0.961488, 0, 0.222536, 0)
 trii.TextLabel_5.TextColor3 = Color3.fromRGB(225, 225, 225)
 trii.TextLabel_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
-trii.TextLabel_5.Text = "Universe-X Note: You just need to set the script name. The script will be added from your clipboard, so make sure to copy it before adding it."
+trii.TextLabel_5.Text = "UniverseX Note: You just need to set the script name. The script will be added from your clipboard, so make sure to copy it before adding it."
 trii.TextLabel_5.Position = UDim2.new(0.0158422, 0, 0.0507511, 0)
 trii.TextLabel_5.BackgroundTransparency = 1
 trii.TextLabel_5.TextXAlignment = Enum.TextXAlignment.Left
@@ -39564,7 +39589,7 @@ text1.Font = Enum.Font.SourceSans
 
 text1.MultiLine = true
 
-text1.PlaceholderText = "--[[\\nscript 1\\n Universe-X FIXED remaked!\\n]]--"
+text1.PlaceholderText = "--[[\\nscript 1\\n UniverseX FIXED remaked!\\n]]--"
 
 text1.Text = ""
 
@@ -40988,7 +41013,7 @@ local function KUUPKPY_fake_script() -- Newfluxsos.LocalScript
 
 	wait(2)
 
-	status.Text = "Universe-X is on top!"
+	status.Text = "UniverseX is on top!"
 
 	if not game:IsLoaded() then
 
@@ -60904,7 +60929,7 @@ end
 player.CharacterAdded:Connect(onCharacterAdded)
 
 -- Debugging information
-print("Shiftlock was enabled, Universe-X has check but if it's visible.")
+print("Shiftlock was enabled, UniverseX has check but if it's visible.")
 end)
 tab5.newButton("Fling", "Fling script", function()
 smX()
@@ -62028,7 +62053,7 @@ local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")
 nowe = false 
 
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-Title = "Universe-X Remake";
+Title = "UniverseX Remake";
 Text = "By Rezux & SuperzQ12";
 Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
 Duration = 5; 
