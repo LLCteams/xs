@@ -3,18 +3,18 @@ mewing10.NormalNotification({
     Title = "System",
     Description = "This is remaked, thanks for using!",
     ImagesID = "rbxassetid://82670617579434", 
-    SoundID = "rbxassetid://76463442516219", -- make sure the sound id
+    SoundID = "rbxassetid://", -- make sure the sound id
     Duration = 20
 })
 wait(0.5)
 mewing10.ReplyNofitication({
     Title = "Feedback - Team",
     Description = "Found a issue? type the issue here!",
-    ImagesID = "rbxassetid://82670617579434",
+    ImagesID = "rbxassetid://",
     SoundID = "", -- make sure the sound id
     PlaceholderText = "Type Feedback",
     SendCallback = function() 
-        warn('Reported to the teams!') 
+        warn('Reported issues and bugs to the teams!') 
     end,
 })
 
@@ -77,7 +77,8 @@ local function animateTextInOut(duration, pauseTime)
 end
 
 animateTextInOut(5, 5)
---[[
+
+-- NEW
 
 -- Configuration
 local Config = {
@@ -378,7 +379,8 @@ if not success then
 end
 
 -- end of Winter Load
-
+--[[ 
+unuse
 -- others loader
 
 local TweenService = game:GetService("TweenService")
@@ -1063,7 +1065,7 @@ ScreenGui:Destroy()
 -- End
 ]]
 
-print("https://discord.gg/43mDSjxb9U")
+print("Join: https://discord.gg/43mDSjxb9U")
 
 --[[
 if (identifyexecutor()) == "Codex" then
@@ -1389,7 +1391,8 @@ end
 ]]
 
 print("Issues patch: is fixed until 20/11/2024")
-warn("patch-issues-2025 is actived!") 
+warn("Key System is Disabled!")
+warn("Patch-AI-Issues-2025 is Actived!") 
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
 -- Create a new window and set its title and theme
