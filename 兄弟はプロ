@@ -1,1 +1,1901 @@
-test("")
+-- // Anti-Ban Section (run first)
+local detectionRemotes = {
+    BANREMOTE = true,
+    KICKREMOTE = true,
+    CHECKER_1 = true,
+    TeleportDetect = true,
+    OneMoreTime = true
+}
+
+local mt = getrawmetatable(game)
+setreadonly(mt, false)
+local oldNamecall = mt.__namecall
+
+mt.__namecall = newcclosure(function(self, ...)
+    local method = getnamecallmethod()
+    local args = {...}
+
+    if method == "FireServer" and detectionRemotes[tostring(args[1])] then
+        warn("Antiban Blocked:", args[1])
+        return wait(9e9)
+    end
+
+    return oldNamecall(self, ...)
+end)
+
+setreadonly(mt, true)
+warn("Antiban Active")
+
+-- // Your Main Script Below
+local UserInputService = game:GetService("UserInputService")
+
+local function MakeDraggable(topbarobject, object)
+	local Dragging = nil
+	local DragInput = nil
+	local DragStart = nil
+	local StartPosition = nil
+	local function Update(input)
+		local Delta = input.Position - DragStart
+		local pos =
+			UDim2.new(
+				StartPosition.X.Scale,
+				StartPosition.X.Offset + Delta.X,
+				StartPosition.Y.Scale,
+				StartPosition.Y.Offset + Delta.Y
+			)
+		object.Position = pos
+	end
+	topbarobject.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			Dragging = true
+			DragStart = input.Position
+			StartPosition = object.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					Dragging = false
+				end
+			end)
+		end
+	end)
+	topbarobject.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			DragInput = input
+		end
+	end)
+	UserInputService.InputChanged:Connect(function(input)
+		if input == DragInput and Dragging then
+			Update(input)
+		end
+	end)
+end
+
+function MakePrGui()
+	local PrEz = Instance.new("ScreenGui")
+	local Back = Instance.new("ImageLabel")
+	local vip = Instance.new("ImageLabel")
+	local vip2 = Instance.new("ImageLabel")
+	local vip3 = Instance.new("ImageLabel")
+	local vip4 = Instance.new("ImageLabel")
+	local vip5 = Instance.new("ImageLabel")
+	local vip6 = Instance.new("ImageLabel")
+	local vip7 = Instance.new("ImageLabel")
+	local CloseButton = Instance.new("TextButton")
+	
+	
+	MakeDraggable(vip2,vip2)
+	MakeDraggable(vip3,vip3)
+	MakeDraggable(vip4,vip4)
+	MakeDraggable(vip5,vip5)
+	MakeDraggable(vip6,vip6)
+	MakeDraggable(vip7,vip7)
+	MakeDraggable(vip,vip)
+
+	PrEz.Name = "PrEz"
+	PrEz.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	PrEz.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	Back.Name = "Back"
+	Back.Parent = PrEz
+	Back.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+	Back.BorderSizePixel = 0
+	Back.Size = UDim2.new(0.627615035, 0, 1, 0)
+	Back.Image = "rbxassetid://10527571475"
+
+	vip2.Name = "vip2"
+	vip2.Parent = PrEz
+	vip2.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+	vip2.BackgroundTransparency = 1.000
+	vip2.BorderSizePixel = 0
+	vip2.Position = UDim2.new(0.420420021, 0, 0.846267462, 0)
+	vip2.Size = UDim2.new(0.0744769871, 0, 0.139931738, 0)
+	vip2.Image = "rbxassetid://2747399912"
+
+	vip3.Name = "vip3"
+	vip3.Parent = PrEz
+	vip3.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+	vip3.BackgroundTransparency = 1.000
+	vip3.BorderSizePixel = 0
+	vip3.Position = UDim2.new(0.00703088567, 0, 0.0186223984, 0)
+	vip3.Size = UDim2.new(0.066945605, 0, 0.139931738, 0)
+	vip3.Image = "rbxassetid://8009374519"
+
+	vip4.Name = "vip4"
+	vip4.Parent = PrEz
+	vip4.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+	vip4.BackgroundTransparency = 1.000
+	vip4.BorderSizePixel = 0
+	vip4.Position = UDim2.new(0.514143884, 0, 0.48449266, 0)
+	vip4.Size = UDim2.new(0.0744769871, 0, 0.139931738, 0)
+	vip4.Image = "rbxassetid://11147059397"
+
+	vip5.Name = "vip5"
+	vip5.Parent = PrEz
+	vip5.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+	vip5.BackgroundTransparency = 1.000
+	vip5.BorderSizePixel = 0
+	vip5.Position = UDim2.new(0.44970876, 0, 0.745143771, 0)
+	vip5.Size = UDim2.new(0.134728029, 0, 0.254266202, 0)
+	vip5.Image = "rbxassetid://490683944"
+
+	vip6.Name = "vip6"
+	vip6.Parent = PrEz
+	vip6.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+	vip6.BackgroundTransparency = 1.000
+	vip6.BorderSizePixel = 0
+	vip6.Position = UDim2.new(0.00696146116, 0, 0.802327693, 0)
+	vip6.Size = UDim2.new(0.103765689, 0, 0.19624573, 0)
+	vip6.Image = "rbxassetid://214488498"
+
+	vip7.Name = "vip7"
+	vip7.Parent = PrEz
+	vip7.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
+	vip7.BackgroundTransparency = 1.000
+	vip7.BorderSizePixel = 0
+	vip7.Position = UDim2.new(0.189128265, 0, 0.772447526, 0)
+	vip7.Size = UDim2.new(0.0928870291, 0, 0.175767913, 0)
+	vip7.Image = "rbxassetid://6023250471"
+
+	CloseButton.Name = "CloseButton"
+	CloseButton.Parent = PrEz
+	CloseButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	CloseButton.BackgroundTransparency = 1.000
+	CloseButton.Position = UDim2.new(0.441004187, 0, 0, 0)
+	CloseButton.Size = UDim2.new(0.185774058, 0, 0.100682594, 0)
+	CloseButton.Font = Enum.Font.Cartoon
+	CloseButton.Text = "[Close]"
+	CloseButton.TextColor3 = Color3.fromRGB(255, 0, 0)
+	CloseButton.TextScaled = true
+	CloseButton.TextSize = 14.000
+	CloseButton.TextWrapped = true
+
+	CloseButton.MouseButton1Click:Connect(function()
+		game.Debris:AddItem(PrEz,0)
+	end)
+	
+	local sec = 0
+	game.Debris:AddItem(PrEz, 0)
+	spawn(function()
+		while wait(1) do
+			if PrEz then
+				sec = sec - 1
+				CloseButton.Text = "[Close "..sec.."s ]"
+			else
+				break
+			end
+		end
+	end)
+end
+
+
+function CreateSupportList(list_game)
+	local function RainbowText(text)
+		spawn(function()
+			local add = 10
+			wait(1)
+			local k = 1
+			while k <= 255 do
+				text.TextColor3 = Color3.new(k/255,0/255,0/255)
+				k = k + add
+				wait()
+			end
+			while true do
+				k = 1
+				while k <= 255 do
+					text.TextColor3 = Color3.new(255/255,k/255,0/255)
+					k = k + add
+					wait()
+				end
+				k = 1
+				while k <= 255 do
+					text.TextColor3 = Color3.new(255/255 - k/255,255/255,0/255)
+					k = k + add
+					wait()
+				end
+				k = 1
+				while k <= 255 do
+					text.TextColor3 = Color3.new(0/255,255/255,k/255)
+					k = k + add
+					wait()
+				end
+				k = 1
+				while k <= 255 do
+					text.TextColor3 = Color3.new(0/255,255/255 - k/255,255/255)
+					k = k + add
+					wait()
+				end
+				k = 1
+				while k <= 255 do
+					text.TextColor3 = Color3.new(k/255,0/255,255/255)
+					k = k + add
+					wait()
+				end
+				k = 1
+				while k <= 255 do
+					text.TextColor3 = Color3.new(255/255,0/255,255/255 - k/255)
+					k = k + add
+					wait()
+				end
+				while k <= 255 do
+					text.TextColor3 = Color3.new(255/255 - k/255,0/255,0/255)
+					k = k + add
+					wait()
+				end
+			end
+		end)
+	end
+	
+	local Anh_Gai_Alimi = {"rbxassetid://6942501524","rbxassetid://7903531742","rbxassetid://7903522083","rbxassetid://6409799523","rbxassetid://8881175113",
+		"rbxassetid://7584008919","rbxassetid://6271530098","rbxassetid://7388383866","rbxassetid://7962732035","rbxassetid://6842416695","rbxassetid://6576447146",
+		"rbxassetid://10171317457","rbxassetid://10171317457","rbxassetid://8598068647","rbxassetid://8192162908","rbxassetid://8677814109","rbxassetid://4597457883","rbxassetid://13964592926","rbxassetid://13969186916","rbxassetid://13969219052"
+	}
+	
+	local SupportUi = Instance.new("ScreenGui")
+	local BackImg = Instance.new("ImageLabel")
+	local Black = Instance.new("Frame")
+	local Tittle = Instance.new("TextLabel")
+	local ScrollingFrame = Instance.new("ScrollingFrame")
+	local UIListLayout = Instance.new("UIListLayout")
+	local CloseButton = Instance.new("TextButton")
+	
+    MakeDraggable(BackImg,BackImg)
+
+	SupportUi.Name = "SupportUi"
+	SupportUi.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+	SupportUi.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	BackImg.Name = "BackImg"
+	BackImg.Parent = SupportUi
+	BackImg.BackgroundColor3 = Color3.fromRGB(48, 48, 48)
+	BackImg.BorderSizePixel = 0
+	BackImg.Position = UDim2.new(0.667782426, 0, 0.33959043, 0)
+	BackImg.Size = UDim2.new(0, 375, 0, 375)
+	BackImg.Image = Anh_Gai_Alimi[math.random(1,#Anh_Gai_Alimi)]
+
+	Black.Name = "Black"
+	Black.Parent = BackImg
+	Black.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Black.BackgroundTransparency = 0.4
+	Black.BorderSizePixel = 0
+	Black.Size = UDim2.new(0, 375, 0, 375)
+
+	Tittle.Name = "Tittle"
+	Tittle.Parent = Black
+	Tittle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Tittle.BackgroundTransparency = 1.000
+	Tittle.Position = UDim2.new(0.0399999991, 0, 0, 0)
+	Tittle.Size = UDim2.new(0, 265, 0, 39)
+	Tittle.Font = Enum.Font.Highway
+	Tittle.Text = "Script | UniX"
+	Tittle.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Tittle.TextScaled = true
+	Tittle.TextSize = 14.000
+	Tittle.TextWrapped = true
+	Tittle.TextXAlignment = Enum.TextXAlignment.Left
+
+	ScrollingFrame.Parent = Black
+	ScrollingFrame.Active = true
+	ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	ScrollingFrame.BackgroundTransparency = 1.000
+	ScrollingFrame.BorderSizePixel = 0
+	ScrollingFrame.Position = UDim2.new(0.0240000002, 0, 0.104000002, 0)
+	ScrollingFrame.Size = UDim2.new(0, 366, 0, 329)
+	ScrollingFrame.CanvasSize = UDim2.new(0, 0, 4, 0)
+	ScrollingFrame.ScrollBarThickness = 10
+
+	UIListLayout.Parent = ScrollingFrame
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+	CloseButton.Name = "CloseButton"
+	CloseButton.Parent = Black
+	CloseButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	CloseButton.BackgroundTransparency = 1.000
+	CloseButton.BorderSizePixel = 0
+	CloseButton.Position = UDim2.new(0.896000028, 0, 0, 0)
+	CloseButton.Size = UDim2.new(0, 39, 0, 39)
+	CloseButton.Font = Enum.Font.FredokaOne
+	CloseButton.Text = "X"
+	CloseButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+	CloseButton.TextScaled = true
+	CloseButton.TextSize = 14.000
+	CloseButton.TextWrapped = true
+	
+	RainbowText(Tittle)
+	RainbowText(CloseButton)
+
+	for i,v in pairs(list_game) do
+		local TextLabel = Instance.new("TextLabel")
+		TextLabel.Parent = ScrollingFrame
+		TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.BackgroundTransparency = 1.000
+		TextLabel.Size = UDim2.new(0, 353, 0, 24)
+		TextLabel.Font = Enum.Font.Highway
+		TextLabel.Text = "# " .. v
+		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TextLabel.TextScaled = true
+		TextLabel.TextSize = 14.000
+		TextLabel.TextTransparency = 0.500
+		TextLabel.TextWrapped = true
+		TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+		RainbowText(TextLabel)
+	end
+	
+	CloseButton.MouseButton1Click:Connect(function()
+		game.Debris:AddItem(SupportUi, 0)
+	end)
+end
+
+MakePrGui()
+CreateSupportList({"Changelogs","Version: 0.1","• Added 10+ new features","• Reworked +8 features","• Disabled key system","• Display script"
+})
+-- FORSAKEN
+
+local Library = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/3345-c-a-t-s-u-s/Acrylic/refs/heads/main/source'))();
+local Window = Library:CreateWindow({
+	Title = 'UniX',
+	Logo = "rbxassetid://128000497825850",
+	KeySystem = false,
+	KeySystemInfo = {
+		Title = "UniX",
+		OnGetKey = function()
+			return setclipboard('https://www-uxvip.notion.site/RV-Key-System-ddc00d75056442069f1fe67639e129ae?pvs=4')
+		end,
+		OnLogin = function(key)
+			if key == "RV_10981097" then
+				wait(0.1);
+				return true;
+			end;
+			
+			wait();
+			
+			return false;
+		end,
+	}
+});
+Window:Destroy()
+
+local NothingLibrary = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/LLCteams/II/refs/heads/main/%D9%83%D8%AD%D8%A7%D8%AC%D8%B2'))();
+-- https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D0%BB%D0%BE%D1%87%D0%BD%D0%B0%D1%8F%20%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0%20%D1%82%D0%BE%D0%BB%D1%8C%D0%BA%D0%BE%20%D0%B4%D0%BB%D1%8F%20%D1%82%D0%B5%D1%81%D1%82%D0%BE%D0%B2'))();
+
+local Notification = NothingLibrary.Notification();
+Notification.new({
+	Title = "UniX",
+	Description = "Some features may stopped after new round.",
+	Duration = 20,
+	Icon = "rbxassetid://13996809508"
+})
+Notification.new({
+	Title = "UniX",
+	Description = "Tips to open UniX by clicking LeftShift.",
+	Duration = 8, 
+	Icon = "rbxassetid://13996809508"
+})
+Notification.new({
+	Title = "UniX",
+	Description = "Thanks for use Uwu",
+	Duration = 20,
+	Icon = "rbxassetid://13996809508"
+})
+
+local Windows = NothingLibrary.new({
+	Title = "UniX",
+	Description = "Made by UXteam",
+	Keybind = Enum.KeyCode.LeftShift,
+	Logo = 'http://www.roblox.com/asset/?id=82670617579434'
+})
+
+local TabFrame = Windows:NewTab({
+	Title = "Home",
+	Description = "Home, the start page",
+	Icon = "rbxassetid://7733960981"
+})
+
+local TabFrame = Windows:NewTab({
+	Title = "Main",
+	Description = "Other features",
+	Icon = "rbxassetid://7733960981"
+})
+
+local Section = TabFrame:NewSection({
+	Title = "Features - Forsaken",
+	Icon = "rbxassetid://13996809508",
+	Position = "Left"
+})
+
+local InfoSection = TabFrame:NewSection({
+	Title = "Esp - Other",
+	Icon = "rbxassetid://7733964719",
+	Position = "Right"
+})
+
+local killer = game.Workspace.Players.Killers:GetChildren()[1]
+local localplayer = game.Players.LocalPlayer
+local wsmultiplier = 1
+
+localplayer.CharacterAdded:Connect(function()
+    localplayer.Character.Humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+        if noslow == true and localplayer.Character.Humanoid.WalkSpeed < minimum then
+            localplayer.Character.Humanoid.WalkSpeed = minimum
+        end
+    end)
+end)
+
+-- Speed
+local minimum = 12
+local noslow = false
+local walkSpeedConnection = nil
+
+local function setupWalkSpeedMonitor(character)
+    local humanoid = character:WaitForChild("Humanoid")
+    
+    -- Disconnect previous connection if it exists
+    if walkSpeedConnection then
+        walkSpeedConnection:Disconnect()
+        walkSpeedConnection = nil
+    end
+
+    -- Create new connection
+    walkSpeedConnection = humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+        if noslow and humanoid.WalkSpeed < minimum then
+            humanoid.WalkSpeed = minimum
+        end
+    end)
+end
+
+-- Initial setup if character exists
+if localplayer.Character then
+    setupWalkSpeedMonitor(localplayer.Character)
+end
+
+-- Reconnect on character respawn
+localplayer.CharacterAdded:Connect(setupWalkSpeedMonitor)
+
+-- GUI toggle
+Section:NewToggle({
+    Title = "Disable Slow/Stun",
+    Default = false,
+    Callback = function(state)
+        noslow = state
+    end,
+})
+
+local autoGenActive = false
+local autoGenConnection
+
+Section:NewToggle({
+    Title = "Auto Generator",
+    Default = false,
+    Callback = function(state)
+        autoGenActive = state
+        if state then
+            autoGenConnection = game:GetService("RunService").Heartbeat:Connect(function()
+                for _, gen in pairs(workspace.Map.Ingame.Map:GetChildren()) do
+                    if gen.Name == "Generator" then
+                        local prompt = gen:FindFirstChildWhichIsA("ProximityPrompt", true)
+                        if prompt and prompt:IsA("ProximityPrompt") and prompt.MaxActivationDistance >= 10 then
+                            pcall(function()
+                                prompt:InputHoldBegin()
+                                task.wait(0.3)
+                                prompt:InputHoldEnd()
+                            end)
+                        end
+                    end
+                end
+            end)
+        else
+            if autoGenConnection then
+                autoGenConnection:Disconnect()
+                autoGenConnection = nil
+            end
+        end
+    end,
+})
+
+Section:NewToggle({
+	Title = "Shader",
+	Default = false,
+	Callback = function(state)
+		if state then
+      local a = game.Lighting
+a.Ambient = Color3.fromRGB(33, 33, 33)
+a.Brightness = 5.69
+a.ColorShift_Bottom = Color3.fromRGB(0, 0, 0)
+a.ColorShift_Top = Color3.fromRGB(255, 247, 237)
+a.EnvironmentDiffuseScale = 0.105
+a.EnvironmentSpecularScale = 0.522
+a.GlobalShadows = true
+a.OutdoorAmbient = Color3.fromRGB(51, 54, 67)
+a.ShadowSoftness = 0.18
+a.GeographicLatitude = -15.525
+a.ExposureCompensation = 0.75
+b.Enabled = true
+b.Intensity = 0.99
+b.Size = 9999 
+b.Threshold = 0
+local c = Instance.new("ColorCorrectionEffect", a)
+c.Brightness = 0.015
+c.Contrast = 0.25
+c.Enabled = true
+c.Saturation = 0.2
+c.TintColor = Color3.fromRGB(217, 145, 57)
+if getgenv().mode == "Summer" then
+   c.TintColor = Color3.fromRGB(255, 220, 148)
+elseif getgenv().mode == "Autumn" then
+   c.TintColor = Color3.fromRGB(217, 145, 57)
+else
+   warn("No mode selected!")
+   print("Please select a mode")
+   b:Destroy()
+   c:Destroy()
+end
+local d = Instance.new("DepthOfFieldEffect", a)
+d.Enabled = true
+d.FarIntensity = 0.077
+d.FocusDistance = 21.54
+d.InFocusRadius = 20.77
+d.NearIntensity = 0.277
+local e = Instance.new("ColorCorrectionEffect", a)
+e.Brightness = 0
+e.Contrast = -0.07
+e.Saturation = 0
+e.Enabled = true
+e.TintColor = Color3.fromRGB(255, 247, 239)
+local e2 = Instance.new("ColorCorrectionEffect", a)
+e2.Brightness = 0.2
+e2.Contrast = 0.45
+e2.Saturation = -0.1
+e2.Enabled = true
+e2.TintColor = Color3.fromRGB(255, 255, 255)
+local s = Instance.new("SunRaysEffect", a)
+s.Enabled = true
+s.Intensity = 0.01
+s.Spread = 0.146
+
+print("RTX Graphics: Loaded!")
+     else
+         warn("RTX Graphics: Disabled!") 
+         end
+	end,
+})
+
+local fullbrightConnection = nil
+local fullbrightActive = false
+
+Section:NewButton({
+    Title = "Modified Fullbright",
+    Callback = function()
+        local Lighting = game:GetService("Lighting")
+        Lighting.Brightness = 2
+        Lighting.ClockTime = 14
+        Lighting.FogEnd = 100000
+        Lighting.GlobalShadows = false
+        Lighting.OutdoorAmbient = Color3.fromRGB(128, 128, 128)
+    end,
+})
+
+Section:NewButton({
+    Title = "Modified Shader V2",
+    Callback = function()
+        local find1 = game.Lighting:FindFirstChildWhichIsA("BloomEffect") if find1 then
+    game.Lighting:FindFirstChildWhichIsA("BloomEffect"):Destroy()
+end
+local find2 = game.Lighting:FindFirstChildWhichIsA("SunRaysEffect") if find2 then
+    game.Lighting:FindFirstChildWhichIsA("SunRaysEffect"):Destroy()
+end
+local find3 = game.Lighting:FindFirstChildWhichIsA("ColorCorrectionEffect") if find3 then
+    game.Lighting:FindFirstChildWhichIsA("ColorCorrectionEffect"):Destroy()
+end
+local find4 = game.Lighting:FindFirstChildWhichIsA("BlurEffect") if find4 then
+    game.Lighting:FindFirstChildWhichIsA("BlurEffect"):Destroy()
+end
+local find5 = game.Lighting:FindFirstChildWhichIsA("Sky") if find5 then
+    game.Lighting:FindFirstChildWhichIsA("Sky"):Destroy()
+end
+    end,
+})
+
+Section:NewButton({
+    Title = "Fullbright 2",
+    Callback = function()
+        if fullbrightActive then
+            warn("Fullbright is already active.")
+            return
+        end
+
+        local Lighting = game:GetService("Lighting")
+        local function dofullbright()
+            Lighting.Ambient = Color3.new(1, 1, 1)
+            Lighting.ColorShift_Bottom = Color3.new(1, 1, 1)
+            Lighting.ColorShift_Top = Color3.new(1, 1, 1)
+        end
+
+        dofullbright()
+        fullbrightConnection = Lighting.LightingChanged:Connect(dofullbright)
+        fullbrightActive = true
+        print("Fullbright activated.")
+    end,
+})
+
+local SprintingModule = require(game:GetService("ReplicatedStorage").Systems.Character.Game.Sprinting)
+
+Section:NewToggle({
+    Title = "Disable Energy",
+    Default = false,
+    Callback = function(state)
+        if state then
+            SprintingModule.MaxStamina = 1000
+            SprintingModule.StaminaGain = 1000
+            SprintingModule.StaminaLoss = 0
+            SprintingModule.SprintSpeed = 31
+        else
+            SprintingModule.MaxStamina = 100
+            SprintingModule.StaminaGain = 20
+            SprintingModule.StaminaLoss = 10
+            SprintingModule.SprintSpeed = 25
+        end
+    end,
+})
+
+Section:NewToggle({
+    Title = "Disable Energy [S;30]",
+    Default = false,
+    Callback = function(state)
+        if state then
+            SprintingModule.MaxStamina = 1000
+            SprintingModule.StaminaGain = 1000
+            SprintingModule.StaminaLoss = 0
+            SprintingModule.SprintSpeed = 30
+        else
+            SprintingModule.MaxStamina = 100
+            SprintingModule.StaminaGain = 20
+            SprintingModule.StaminaLoss = 10
+            SprintingModule.SprintSpeed = 25
+        end
+    end,
+})
+
+Section:NewToggle({
+    Title = "Disable Energy [S:29]",
+    Default = false,
+    Callback = function(state)
+        if state then
+            SprintingModule.MaxStamina = 1000
+            SprintingModule.StaminaGain = 1000
+            SprintingModule.StaminaLoss = 0
+            SprintingModule.SprintSpeed = 29
+        else
+            SprintingModule.MaxStamina = 100
+            SprintingModule.StaminaGain = 20
+            SprintingModule.StaminaLoss = 10
+            SprintingModule.SprintSpeed = 28
+        end
+    end,
+})
+
+-- === Show Items Toggle ===
+local itemHighlightEnabled = false
+local itemLoop
+
+Section:NewToggle({
+    Title = "Show Items (Medkit, BloxyCola)",
+    Default = false,
+    Callback = function(state)
+        itemHighlightEnabled = state
+        if state then
+            Notification.new({
+                Title = "Show Items",
+                Description = "Highlighting enabled",
+                Duration = 8,
+                Icon = "rbxassetid://128000497825850"
+            })
+            itemLoop = task.spawn(function()
+                while itemHighlightEnabled do
+                    for _, tool in ipairs(workspace.Map.Ingame:GetChildren()) do
+                        if tool:IsA("Tool") and not tool:FindFirstChild("Highlight") then
+                            local hl = Instance.new("Highlight")
+                            hl.Name = "Highlight"
+                            hl.Parent = tool
+                            hl.FillColor = Color3.fromRGB(0, 255, 255)
+                            hl.FillTransparency = 0.3
+                        end
+                    end
+                    task.wait(3)
+                end
+            end)
+        else
+            if itemLoop then
+                itemLoop = nil
+            end
+            -- Remove highlights
+            for _, tool in ipairs(workspace.Map.Ingame:GetChildren()) do
+                local hl = tool:FindFirstChild("Highlight")
+                if hl then hl:Destroy() end
+            end
+        end
+    end
+})
+
+-- === Show Generators Toggle ===
+local genHighlightEnabled = false
+local genLoop
+
+Section:NewToggle({
+    Title = "Show Generators",
+    Default = false,
+    Callback = function(state)
+        genHighlightEnabled = state
+        if state then
+            Notification.new({
+                Title = "Show Generators",
+                Description = "Highlighting enabled",
+                Duration = 8,
+                Icon = "rbxassetid://128000497825850"
+            })
+            genLoop = task.spawn(function()
+                while genHighlightEnabled do
+                    for _, generator in ipairs(workspace.Map.Ingame.Map:GetChildren()) do
+                        if generator.Name == "Generator" and not generator:FindFirstChild("Highlight") then
+                            local hl = Instance.new("Highlight")
+                            hl.Name = "Highlight"
+                            hl.Parent = generator
+                            hl.FillColor = Color3.fromRGB(0, 255, 0)
+                            hl.FillTransparency = 0.3
+                        end
+                    end
+                    task.wait(3)
+                end
+            end)
+        else
+            if genLoop then
+                genLoop = nil
+            end
+            for _, generator in ipairs(workspace.Map.Ingame.Map:GetChildren()) do
+                local hl = generator:FindFirstChild("Highlight")
+                if hl then hl:Destroy() end
+            end
+        end
+    end
+})
+
+--[[
+StarterGui:SetCore("SendNotification", {
+    Title = "Default is 0.2",
+    Text = "Remake by xirius#000",
+    Duration = 3
+})
+
+--> Services <--
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local TweenService = game:GetService("TweenService")
+local Lighting = game:GetService("Lighting")
+
+--> LocalPlayerPlayer Varaiables <--
+local player = Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+local playerCharacter = player.Character
+local playerHumanoid = playerCharacter:WaitForChild("Humanoid")
+local playerHumanoidRootPart = playerCharacter:WaitForChild("HumanoidRootPart")
+
+--> Tpwalk Varaiables <--
+local ToggleTpwalk = false
+local TpwalkValue = 1
+local TpwalkNegativeValues = false
+local TpwalkConnection = nil
+
+--> Dragging Varaiables <--
+local ThirdTextButtonMouseButton1Down = 0
+local FourthTextButtonMouseButton1Down = 0
+local FourthTextButtonToggled = false
+
+--> Creates a ScreenGui <--
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Parent = playerGui
+ScreenGui.Name = "Tpwalk"
+ScreenGui.ResetOnSpawn = false
+ScreenGui.DisplayOrder = 999
+ScreenGui.Enabled = true 
+ScreenGui.IgnoreGuiInset = false
+ScreenGui.AutoLocalize = true
+
+--> Creates a Frame Within ScreenGui <--
+local Frame = Instance.new("Frame")
+Frame.Parent = ScreenGui
+Frame.Name = "Container"
+Frame.Size = UDim2.new(0, 0, 0, 0)
+Frame.Position = UDim2.new(0.5, 0, 0.3, 0)
+Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+Frame.BackgroundColor3 = Color3.fromRGB(24, 24, 36)
+Frame.BackgroundTransparency = 0
+Frame.BorderColor3 = Color3.new(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Visible = true
+Frame.ZIndex = 999
+Frame.Active = true
+Frame.ClipsDescendants = true
+Frame.Draggable = true
+Frame.Rotation = 0
+Frame.AutoLocalize = true
+Frame.LayoutOrder = 0
+Frame.SizeConstraint = Enum.SizeConstraint.RelativeXY
+
+--> Creates a UICorner Within Frame <--
+local FrameUICorner = Instance.new("UICorner")
+FrameUICorner.Parent = Frame
+FrameUICorner.CornerRadius = UDim.new(0.1, 0)
+
+--> Creates a TextLabel Within Frame <--
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Parent = Frame
+TextLabel.Name = "Title"
+TextLabel.Text = "TPWALK V4 | GUI"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Font = Enum.Font.GothamBold
+TextLabel.TextSize = 18
+TextLabel.TextWrapped = true
+TextLabel.TextScaled = false
+TextLabel.TextXAlignment = Enum.TextXAlignment.Center
+TextLabel.TextYAlignment = Enum.TextYAlignment.Center
+TextLabel.RichText = false
+TextLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
+TextLabel.TextStrokeTransparency = 1
+TextLabel.TextTransparency = 0
+TextLabel.TextTruncate = Enum.TextTruncate.None
+TextLabel.LineHeight = 1
+TextLabel.MaxVisibleGraphemes = -1
+TextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.BackgroundTransparency = 1
+TextLabel.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(1, 0, 0, 0)
+TextLabel.Position = UDim2.new(0.5, 0, 0.15, 0)
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.ZIndex = 999
+TextLabel.Visible = true
+TextLabel.ClipsDescendants = false
+TextLabel.LayoutOrder = 1
+TextLabel.Selectable = true
+TextLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
+TextLabel.Rotation = 0
+TextLabel.AutoLocalize = true
+
+--> Creates a Second TextLabel Within Frame <--
+local SecondTextLabel = Instance.new("TextLabel")
+SecondTextLabel.Parent = Frame
+SecondTextLabel.Name = "Tpwalk Value Label"
+SecondTextLabel.Text = "Welcome "..player.DisplayName
+SecondTextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+SecondTextLabel.Font = Enum.Font.GothamBold
+SecondTextLabel.TextSize = 14
+SecondTextLabel.TextWrapped = true
+SecondTextLabel.TextScaled = false
+SecondTextLabel.TextXAlignment = Enum.TextXAlignment.Center
+SecondTextLabel.TextYAlignment = Enum.TextYAlignment.Center
+SecondTextLabel.RichText = false
+SecondTextLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
+SecondTextLabel.TextStrokeTransparency = 1
+SecondTextLabel.TextTransparency = 0
+SecondTextLabel.TextTruncate = Enum.TextTruncate.None
+SecondTextLabel.LineHeight = 1
+SecondTextLabel.MaxVisibleGraphemes = -1
+SecondTextLabel.BackgroundColor3 = Color3.fromRGB(32, 32, 48)
+SecondTextLabel.BackgroundTransparency = 0
+SecondTextLabel.BorderColor3 = Color3.new(0, 0, 0)
+SecondTextLabel.BorderSizePixel = 0
+SecondTextLabel.Size = UDim2.new(0.85, 0, 0.125, 0)
+SecondTextLabel.Position = UDim2.new(0.5, 0, 0.3, 0)
+SecondTextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+SecondTextLabel.ZIndex = 999
+SecondTextLabel.Visible = true
+SecondTextLabel.ClipsDescendants = true
+SecondTextLabel.LayoutOrder = 1
+SecondTextLabel.Selectable = true
+SecondTextLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
+SecondTextLabel.Rotation = 0
+SecondTextLabel.AutoLocalize = true
+
+--> Creates a UICorner Within Second TextLabel <--
+local SecondTextLabelUICorner = Instance.new("UICorner")
+SecondTextLabelUICorner.Parent = SecondTextLabel
+SecondTextLabelUICorner.CornerRadius = UDim.new(0.25, 0)
+
+--> Creates a Third TextLabel Within Frame <--
+local ThirdTextLabel = Instance.new("TextLabel")
+ThirdTextLabel.Parent = Frame
+ThirdTextLabel.Name = "Discord Link"
+ThirdTextLabel.Text = "discord.gg/43mDSjxb9U"
+ThirdTextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+ThirdTextLabel.Font = Enum.Font.GothamBold
+ThirdTextLabel.TextSize = 13
+ThirdTextLabel.TextWrapped = true
+ThirdTextLabel.TextScaled = false
+ThirdTextLabel.TextXAlignment = Enum.TextXAlignment.Center
+ThirdTextLabel.TextYAlignment = Enum.TextYAlignment.Center
+ThirdTextLabel.RichText = false
+ThirdTextLabel.TextStrokeColor3 = Color3.new(0, 0, 0)
+ThirdTextLabel.TextStrokeTransparency = 1
+ThirdTextLabel.TextTransparency = 0
+ThirdTextLabel.TextTruncate = Enum.TextTruncate.None
+ThirdTextLabel.LineHeight = 1
+ThirdTextLabel.MaxVisibleGraphemes = -1
+ThirdTextLabel.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ThirdTextLabel.BackgroundTransparency = 1
+ThirdTextLabel.BorderColor3 = Color3.new(0, 0, 0)
+ThirdTextLabel.BorderSizePixel = 0
+ThirdTextLabel.Size = UDim2.new(1, 0, 0, 0)
+ThirdTextLabel.Position = UDim2.new(0.5, 0, 0.95, 0)
+ThirdTextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+ThirdTextLabel.ZIndex = 1000
+ThirdTextLabel.Visible = true
+ThirdTextLabel.ClipsDescendants = false
+ThirdTextLabel.LayoutOrder = 1
+ThirdTextLabel.Selectable = true
+ThirdTextLabel.SizeConstraint = Enum.SizeConstraint.RelativeXY
+ThirdTextLabel.Rotation = 0
+ThirdTextLabel.AutoLocalize = true
+
+--> Creates a Rainbow Text Color For Third TextLabel <--
+local hue = 0
+RunService.Heartbeat:Connect(function(deltaTime)
+    hue = (hue + deltaTime * 0.1) % 1
+    local color = Color3.fromHSV(hue, 1, 1)
+    ThirdTextLabel.TextColor3 = color
+end)
+
+--> Creates a TextBox Within Frame <--
+local TextBox = Instance.new("TextBox")
+TextBox.Parent = Frame
+TextBox.Name = "Tpwalk Value Changer"
+TextBox.Text = ""
+TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.TextScaled = false
+TextBox.TextSize = 14
+TextBox.Font = Enum.Font.GothamBold
+TextBox.TextWrapped = true
+TextBox.TextXAlignment = Enum.TextXAlignment.Center
+TextBox.TextYAlignment = Enum.TextYAlignment.Center
+TextBox.PlaceholderText = "Default is 0.2"
+TextBox.PlaceholderColor3 = Color3.fromRGB(178, 178, 178)
+TextBox.ClearTextOnFocus = true
+TextBox.MultiLine = true
+TextBox.LineHeight = 1
+TextBox.BackgroundColor3 = Color3.fromRGB(32, 32, 48)
+TextBox.BackgroundTransparency = 0
+TextBox.BorderColor3 = Color3.fromRGB(255, 255, 255)
+TextBox.BorderSizePixel = 0
+TextBox.Size = UDim2.new(0.85, 0, 0.125, 0)
+TextBox.Position = UDim2.new(0.5, 0, 0.475, 0)
+TextBox.AnchorPoint = Vector2.new(0.5, 0.5)
+TextBox.Visible = true
+TextBox.ZIndex = 999
+TextBox.Selectable = true
+TextBox.SelectionStart = 0
+TextBox.CursorPosition = 0
+TextBox.ShowNativeInput = true
+TextBox.AutoLocalize = true
+TextBox.LayoutOrder = 1
+TextBox.MaxVisibleGraphemes = -1
+TextBox.RichText = false
+TextBox.Rotation = 0
+
+--> Creates a UICorner Within TextBox <--
+local TextBoxUICorner = Instance.new("UICorner")
+TextBoxUICorner.Parent = TextBox
+TextBoxUICorner.CornerRadius = UDim.new(0.25, 0)
+
+--> Creates a TextButton Within Frame <--
+local TextButton = Instance.new("TextButton")
+TextButton.Parent = Frame
+TextButton.Name = "Tpwalk Enabler"
+TextButton.Size = UDim2.new(0.85, 0, 0.125, 0)
+TextButton.Position = UDim2.new(0.5, 0, 0.655, 0)
+TextButton.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton.Text = "Enable Tpwalk"
+TextButton.Font = Enum.Font.GothamBold
+TextButton.TextSize = 14
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundColor3 = Color3.fromRGB(75, 175, 255)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.AutoButtonColor = true
+TextButton.TextScaled = false
+TextButton.TextWrapped = true
+TextButton.TextXAlignment = Enum.TextXAlignment.Center
+TextButton.TextYAlignment = Enum.TextYAlignment.Center
+TextButton.Rotation = 0
+TextButton.Visible = true
+TextButton.ZIndex = 999
+TextButton.Active = true
+TextButton.Selectable = true
+TextButton.Style = Enum.ButtonStyle.Custom
+
+--> Creates a UICorner Within TextButton <--
+local TextButtonUICorner = Instance.new("UICorner")
+TextButtonUICorner.Parent = TextButton
+TextButtonUICorner.CornerRadius = UDim.new(0.25, 0)
+
+--> Creates a Second TextButton Within Frame <--
+local SecondTextButton = Instance.new("TextButton")
+SecondTextButton.Parent = Frame
+SecondTextButton.Name = "Negative Value Enabler"
+SecondTextButton.Size = UDim2.new(0.85, 0, 0.125, 0)
+SecondTextButton.Position = UDim2.new(0.5, 0, 0.835, 0)
+SecondTextButton.AnchorPoint = Vector2.new(0.5, 0.5)
+SecondTextButton.Text = "Enable Negative Values"
+SecondTextButton.Font = Enum.Font.GothamBold
+SecondTextButton.TextSize = 14
+SecondTextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+SecondTextButton.BackgroundColor3 = Color3.fromRGB(75, 175, 255)
+SecondTextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SecondTextButton.AutoButtonColor = true
+SecondTextButton.TextScaled = false
+SecondTextButton.TextWrapped = true
+SecondTextButton.TextXAlignment = Enum.TextXAlignment.Center
+SecondTextButton.TextYAlignment = Enum.TextYAlignment.Center
+SecondTextButton.Rotation = 0
+SecondTextButton.Visible = true
+SecondTextButton.ZIndex = 999
+SecondTextButton.Active = true
+SecondTextButton.Selectable = true
+SecondTextButton.Style = Enum.ButtonStyle.Custom
+
+--> Creates a UICorner Within Second TextButton <-- 
+local SecondTextButtonUICorner = Instance.new("UICorner")
+SecondTextButtonUICorner.Parent = SecondTextButton
+SecondTextButtonUICorner.CornerRadius = UDim.new(0.25, 0)
+
+--> Creates a Third TextButton Within Frame <--
+local ThirdTextButton = Instance.new("TextButton")
+ThirdTextButton.Parent = ScreenGui
+ThirdTextButton.Name = "Tpwalk ScreenGui Destroyer"
+ThirdTextButton.Size = UDim2.new(0.1, 0, 0.04, 0)
+ThirdTextButton.Position = UDim2.new(0.6, 0, 0.05, 0)
+ThirdTextButton.AnchorPoint = Vector2.new(0.5, 0.5)
+ThirdTextButton.Text = "Destroy"
+ThirdTextButton.Font = Enum.Font.GothamBold
+ThirdTextButton.TextSize = 20
+ThirdTextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+ThirdTextButton.BackgroundColor3 = Color3.fromRGB(255, 65, 65)
+ThirdTextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ThirdTextButton.AutoButtonColor = true
+ThirdTextButton.TextScaled = false
+ThirdTextButton.TextWrapped = true
+ThirdTextButton.TextXAlignment = Enum.TextXAlignment.Center
+ThirdTextButton.TextYAlignment = Enum.TextYAlignment.Center
+ThirdTextButton.Rotation = 0
+ThirdTextButton.Visible = true
+ThirdTextButton.ZIndex = 999
+ThirdTextButton.Active = true
+ThirdTextButton.Draggable = true
+ThirdTextButton.Selectable = true
+ThirdTextButton.Style = Enum.ButtonStyle.Custom
+
+--> Creates a UICorner Within Third TextButton <-- 
+local ThirdTextButtonUICorner = Instance.new("UICorner")
+ThirdTextButtonUICorner.Parent = ThirdTextButton
+ThirdTextButtonUICorner.CornerRadius = UDim.new(1, 0)
+
+--> Creates a Fourth TextButton Within Frame <--
+local FourthTextButton = Instance.new("TextButton")
+FourthTextButton.Parent = ScreenGui
+FourthTextButton.Name = "Tpwalk ScreenGui Hider"
+FourthTextButton.Size = UDim2.new(0.1, 0, 0.04, 0)
+FourthTextButton.Position = UDim2.new(0.4, 0, 0.05, 0)
+FourthTextButton.AnchorPoint = Vector2.new(0.5, 0.5)
+FourthTextButton.Text = "Hide"
+FourthTextButton.Font = Enum.Font.GothamBold
+FourthTextButton.TextSize = 20
+FourthTextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+FourthTextButton.BackgroundColor3 = Color3.fromRGB(75, 175, 255)
+FourthTextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FourthTextButton.AutoButtonColor = true
+FourthTextButton.TextScaled = false
+FourthTextButton.TextWrapped = true
+FourthTextButton.TextXAlignment = Enum.TextXAlignment.Center
+FourthTextButton.TextYAlignment = Enum.TextYAlignment.Center
+FourthTextButton.Rotation = 0
+FourthTextButton.Visible = true
+FourthTextButton.ZIndex = 999
+FourthTextButton.Active = true
+FourthTextButton.Draggable = true
+FourthTextButton.Selectable = true
+FourthTextButton.Style = Enum.ButtonStyle.Custom
+
+--> Creates a UICorner Within Fourth TextButton <-- 
+local FourthTextButtonUICorner = Instance.new("UICorner")
+FourthTextButtonUICorner.Parent = FourthTextButton
+FourthTextButtonUICorner.CornerRadius = UDim.new(1, 0)
+
+--> Creates a Blur Instance Within Frame TweenService <--
+local Blur = Instance.new("BlurEffect")
+Blur.Name = "Blur Screen Effect"
+Blur.Enabled = true 
+Blur.Size = 0
+Blur.Parent = Lighting
+
+--> Event Handler When The Player Respawns <--
+player.CharacterAdded:Connect(function(NewCharacter)
+    playerCharacter = NewCharacter
+    playerHumanoid = playerCharacter:WaitForChild("Humanoid")
+    playerHumanoidRootPart = playerCharacter:WaitForChild("HumanoidRootPart")
+end)
+
+--> Event Handler For Textbox Lost Focus <--
+TextBox.FocusLost:Connect(function()
+    local textInput = TextBox.Text
+    local inputValue = tonumber(textInput)
+    
+    if not TpwalkNegativeValues then
+        if textInput == "" then
+            TextBox.Text = ""
+            TextBox.PlaceholderText = "Please, Enter a Number!"
+            TextBox.TextSize = 14
+        elseif not inputValue then
+            TextBox.Text = ""
+            TextBox.PlaceholderText = "Please, Enter a Number And Not Characters!"
+            TextBox.TextSize = 12
+        elseif inputValue <= 0 then
+            TextBox.Text = ""
+            TextBox.PlaceholderText = "Please, Enter a Number Greater Than 0!"
+            TextBox.TextSize = 14
+        else
+            TpwalkValue = inputValue
+            SecondTextLabel.Text = "Tpwalk speed: "..TpwalkValue
+            TextBox.TextSize = 18
+        end
+    else 
+        if textInput == "" then
+            TextBox.Text = ""
+            TextBox.PlaceholderText = "Please, Enter a Number!"
+            TextBox.TextSize = 14
+        elseif not inputValue then
+            TextBox.Text = ""
+            TextBox.PlaceholderText = "Please, Enter a Number And Not Characters!"
+            TextBox.TextSize = 12
+        elseif inputValue == 0 then
+            TextBox.Text = ""
+            TextBox.PlaceholderText = "Please, Enter a Number That Is Not 0!"
+            TextBox.TextSize = 14
+        else
+            TpwalkValue = inputValue
+            SecondTextLabel.Text = "Tpwalk Value: "..tostring(TpwalkValue)
+            TextBox.TextSize = 18
+        end
+    end
+end)
+
+--> Event Handler For Textbox Focused <--
+TextBox.Focused:Connect(function()
+    if SecondTextLabel.Text == "Welcome "..player.DisplayName then
+        SecondTextLabel.Text = "Tpwalk Value: "..TpwalkValue
+    elseif TextBox.PlaceholderText == "Please, Enter a Number And Not Characters!" then
+        TextBox.TextSize = 12
+    else
+        TextBox.TextSize = 14
+    end
+end)
+
+--> Event Hanlder For TextButton Clicked [ Tpwalk Enabler Button ] <--
+TextButton.MouseButton1Click:Connect(function()
+    ToggleTpwalk = not ToggleTpwalk
+
+    local function Tpwalking()
+        if ToggleTpwalk and playerCharacter and playerHumanoid and playerHumanoidRootPart then
+            playerHumanoidRootPart.CFrame += (playerHumanoid.MoveDirection * TpwalkValue)
+            playerHumanoidRootPart.CanCollide = true
+        end
+    end
+
+    if ToggleTpwalk and not TpwalkConnection then
+        TpwalkConnection = RunService.Heartbeat:Connect(Tpwalking)
+        TextButton.Text = "Disable Tpwalk"
+        TextButton.BackgroundColor3 = Color3.fromRGB(255, 65, 65)
+
+        if SecondTextLabel.Text == "Welcome "..player.DisplayName then
+           SecondTextLabel.Text = "Tpwalk Value: "..TpwalkValue
+        end
+    
+    elseif not ToggleTpwalk and TpwalkConnection then
+        TpwalkConnection:Disconnect()
+        TpwalkConnection = nil
+        playerHumanoidRootPart.CanCollide = false
+        TextButton.Text = "Enable Tpwalk"
+        TextButton.BackgroundColor3 = Color3.fromRGB(75, 175, 255)
+    end
+end)
+
+--> Event Hanlder For Second TextButton Clicked [ Negative Values Button ] <--
+SecondTextButton.MouseButton1Click:Connect(function()
+    TpwalkNegativeValues = not TpwalkNegativeValues
+
+    if TpwalkNegativeValues then
+       SecondTextButton.Text = "Disable Negative Values"
+       SecondTextButton.BackgroundColor3 = Color3.fromRGB(255, 65, 65)
+    elseif not TpwalkNegativeValues then
+        if TpwalkValue < 0 then
+            TpwalkValue = 1
+            SecondTextLabel.Text = "Tpwalk Value: "..TpwalkValue
+            TextBox.Text = "1"
+        end   
+        SecondTextButton.Text = "Enable Negative Values"
+        SecondTextButton.BackgroundColor3 = Color3.fromRGB(75, 175, 255)
+    end
+end)
+
+--> Event Handler For Third TextButton Down [ Destroy Button ] <--
+ThirdTextButton.MouseButton1Down:Connect(function()
+    ThirdTextButtonMouseButton1Down = tick()
+end)
+
+--> Event Hanlder For Third TextButton Clicked [ Destroy Button ] <--
+ThirdTextButton.MouseButton1Click:Connect(function()
+    if tick() - ThirdTextButtonMouseButton1Down < 0.2 then
+        local FramePositionTweenInfo = TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0)
+        local FramePositionTween = TweenService:Create(Frame, FramePositionTweenInfo, {Position = UDim2.new(0.5, 0, -1.5, 0)})
+        local FourthTextButtonPositionTweenInfo = TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0)
+        local FourthTextButtonPositionTween = TweenService:Create(FourthTextButton, FourthTextButtonPositionTweenInfo, {Position = UDim2.new(0.5, 0, -1.5, 0)})
+        local ThirdTextButtonPositionTweenInfo = TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0)
+        local ThirdTextButtonPositionTween = TweenService:Create(ThirdTextButton, ThirdTextButtonPositionTweenInfo, {Position = UDim2.new(0.5, 0, -1.5, 0)})
+        FramePositionTween:Play()
+        FourthTextButtonPositionTween:Play()
+        ThirdTextButtonPositionTween:Play()
+        FramePositionTween.Completed:Connect(function()
+            if TpwalkConnection then
+                TpwalkConnection:Disconnect()
+                TpwalkConnection = nil
+            end
+            TpwalkNegativeValues = false
+            ToggleTpwalk = false
+            TpwalkValue = nil
+            ScreenGui:Destroy()
+       end)
+    end
+end)
+
+--> Event Handler For Fourth TextButton Down [ Hide/Show Button ] <--
+FourthTextButton.MouseButton1Down:Connect(function()
+    FourthTextButtonMouseButton1Down = tick()
+end)
+
+--> Event Hanlder For Fourth TextButton Clicked [ Hide/Show Button ] <--
+local LastFramePosition = Frame.Position
+
+FourthTextButton.MouseButton1Click:Connect(function()
+    if tick() - FourthTextButtonMouseButton1Down < 0.2 then
+        FourthTextButtonToggled = not FourthTextButtonToggled 
+        if FourthTextButtonToggled then
+            LastFramePosition = Frame.Position
+            local FramePositionTweenInfo = TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0)
+            local FramePositionTween = TweenService:Create(Frame, FramePositionTweenInfo, {Position = UDim2.new(0.5, 0, -1.5, 0)})
+            local ThirdTextButtonPositionTweenInfo = TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0)
+            local ThirdTextButtonPositionTween = TweenService:Create(ThirdTextButton, ThirdTextButtonPositionTweenInfo, {Position = UDim2.new(0.5, 0, -1.5, 0)})
+            ThirdTextButtonPositionTween:Play() 
+            FramePositionTween:Play()
+            FourthTextButton.Text = "Show"
+        elseif not FourthTextButtonToggled then
+            local FramePositionTweenInfo = TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0)
+            local FramePositionTween = TweenService:Create(Frame, FramePositionTweenInfo, {Position = LastFramePosition})
+            local ThirdTextButtonPositionTweenInfo = TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0)
+            local ThirdTextButtonPositionTween = TweenService:Create(ThirdTextButton, ThirdTextButtonPositionTweenInfo, {Position = UDim2.new(0.6, 0, 0.05, 0)})
+            ThirdTextButtonPositionTween:Play() 
+            FramePositionTween:Play()
+            FourthTextButton.Text = "Hide"
+        end
+    end
+end)
+
+local function StartScreenTween()
+    local BlurStartTweenInfo = TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0)
+    local BlurStartTween = TweenService:Create(Blur, BlurStartTweenInfo, {Size = 24})
+
+    BlurStartTween:Play()
+
+    local BlueEndTweenInfo = TweenInfo.new(2, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0.5)
+    local BlurEndTween = TweenService:Create(Blur, BlueEndTweenInfo, {Size = 0})
+
+    local FrameStartTweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut, 0, false, 1)
+    local FrameStartTween = TweenService:Create(Frame, FrameStartTweenInfo, {Size = UDim2.new(0.1, 0, 0.175, 0)})
+
+    FrameStartTween:Play()
+
+    local FrameEndTweenInfo = TweenInfo.new(1, Enum.EasingStyle.Sine, Enum.EasingDirection.InOut, 0, false, 0)
+    local FrameEndTween = TweenService:Create(Frame, FrameEndTweenInfo, {Size = UDim2.new(0.2, 0, 0.35, 0)})
+
+    FrameStartTween.Completed:Connect(function()
+        FrameEndTween:Play()
+    end)
+
+    FrameEndTween.Completed:Connect(function()
+        BlurEndTween:Play()
+    end)
+end
+
+StartScreenTween()
+
+--> Services <--
+local Players = game:GetService("Players")
+local HttpService = game:GetService("HttpService")
+local MarketplaceService = game:GetService("MarketplaceService")
+local GroupService = game:GetService("GroupService")
+local LocalizationService = game:GetService("LocalizationService")
+
+--> Function to fetch group name <--
+local function fetchGroupName(groupId)
+    local success, groupInfo = pcall(GroupService.GetGroupInfoAsync, GroupService, groupId)
+    if success then
+        return groupInfo.Name
+    else
+        warn("Failed to fetch group name for ID: " .. tostring(groupId))
+        return "Unknown Group"
+    end
+end
+
+--> Trims leading and trailing spaces from a string and removes dots <--
+local function trimAndRemoveDots(s)
+    return s:match("^%s*(.-)%s*$"):gsub("%.", "")
+end
+
+--> Attempt to fetch the country region for a player <--
+local function getPlayerCountry(player)
+    local success, countryRegionCode = pcall(function()
+        return LocalizationService:GetCountryRegionForPlayerAsync(player)
+    end)
+    return success and countryRegionCode or "Unknown"
+end
+
+--> Safe call to get product info <--
+local success, productInfo = pcall(MarketplaceService.GetProductInfo, MarketplaceService, game.PlaceId)
+local gameName, gameDescription = "N/A", "N/A"
+local creatorType, creatorId, creatorName = "N/A", "N/A", "Unknown"
+local creatorProfileUrl, creatorLabel, creatorIdLabel = "", "", ""
+local gameUrl = "https://[Log in to view URL]" .. tostring(game.PlaceId)
+
+if success and productInfo then
+    gameName = trimAndRemoveDots(productInfo.Name)
+    gameDescription = productInfo.Description or "N/A"
+    creatorType = productInfo.Creator.CreatorType
+    creatorId = productInfo.Creator.CreatorTargetId
+
+    if creatorType == "User" then
+        creatorProfileUrl = "https://[Log in to view URL]" .. tostring(creatorId) .. "/profile/"
+        creatorLabel = "**Game Creator Profile:** "
+        creatorIdLabel = "**Game Creator User ID:** "
+        local usernameSuccess, username = pcall(Players.GetNameFromUserIdAsync, Players, creatorId)
+        creatorName = usernameSuccess and username or "Unknown User"
+    elseif creatorType == "Group" then
+        creatorProfileUrl = "https://[Log in to view URL]" .. tostring(creatorId)
+        creatorLabel = "**Game Creator Group:** "
+        creatorIdLabel = "**Game Creator Group ID:** "
+        creatorName = fetchGroupName(creatorId)
+    end
+    gameUrl = "https://[Log in to view URL]" .. tostring(game.PlaceId) .. "/" .. HttpService:UrlEncode(gameName)
+end
+
+--> Player Variables <--
+local player = Players.LocalPlayer
+local playerCountry = getPlayerCountry(player)
+
+--> Discord Embed <--
+local embedDescription = "## __SCRIPT EXECUTED!__\n"
+    .. "**Script:** Tpwalk V4\n"
+    .. "**User:** " .. player.Name .. " (" .. player.DisplayName .. ")\n"
+    .. "**User ID:** " .. tostring(player.UserId) .. "\n"
+    .. "**Server ID :** " .. game.JobId .."\n"
+    .. "**Country:** " .. playerCountry .. "\n\n"
+    .. "**Game Name:** " .. gameName .. "\n"
+    .. "**Game ID:** " .. game.PlaceId .. "\n"
+    .. "**Game Description:** " .. gameDescription .. "\n\n"
+    .. "**Game URL:** " .. gameUrl .. "\n\n"
+    .. "**Game " .. (creatorType == "User" and "Creator" or "Group") .. " Name:** " .. creatorName .. "\n"
+    .. creatorIdLabel .. tostring(creatorId) .. "\n"
+    .. creatorLabel .. creatorProfileUrl .. "\n"
+
+local embed = {
+    ["title"] = gameName,
+    ["description"] = embedDescription,
+    ["type"] = "rich",
+    ["color"] = tonumber(0x2b2d31),
+    ["footer"] = {
+        ["text"] = "discord.gg/iosexploiters",
+    },
+    ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ"),
+}
+
+--> Send the Discord webhook request <--
+(syn and syn.request or http_request or http.request)({
+    Url = 'https://[Log in to view URL]',
+    Method = 'POST',
+    Headers = {
+        ['Content-Type'] = 'application/json',
+    },
+    Body = HttpService:JSONEncode({ content = "-- Teleports To " .. player.Name .. "'s Server\n" .. "game:GetService(\"TeleportService\"):TeleportToPlaceInstance(\"" .. tostring(game.PlaceId) .. "\", \"" .. game.JobId .. "\", game.Players.LocalPlayer)", embeds = {embed} }),
+})
+]]
+
+InfoSection:NewToggle({
+    Title = "No Fog",
+    Default = false,
+    Callback = function(state)
+        Notification.new({
+            Title = "No Fog",
+            Description = state and "Enabled" or "Disabled",
+            Duration = 6,
+            Icon = "rbxassetid://128000497825850"
+        })
+
+        if state then
+            game.Lighting.Atmosphere.Density = 0
+        else
+            game.Lighting.Atmosphere.Density = 0.6
+        end
+    end,
+})
+
+Section:NewButton({
+	Title = "Bring All Survivor",
+	Callback = function()
+	Notification.new({
+			Title = "Warning",
+			Description = "Make sure you are the Killer!",
+			Duration = 10,
+			Icon = "rbxassetid://128000497825850"
+		})
+		    local localPlayer = game.Players.LocalPlayer
+local localPlayerCF = localPlayer.Character.HumanoidRootPart.CFrame
+
+for _, player in pairs(game.Players:GetPlayers()) do
+    if player ~= localPlayer then
+        player.Character.HumanoidRootPart.CFrame = localPlayerCF
+        player.Character.Humanoid.PlatformStand = true
+        player.Character.Humanoid.WalkSpeed = 0
+        player.Character.Humanoid.JumpPower = 0
+        for _, part in pairs(player.Character:GetDescendants()) do
+            if part:IsA("BasePart") then
+                part.Anchored = true
+            end
+        end
+    end
+end
+
+localPlayer.Character.HumanoidRootPart.Anchored = false
+	end,
+})
+
+--[[
+InfoSection:NewButton({
+	Title = "Jason Animation",
+	Callback = function()
+	Notification.new({
+			Title = "Warning",
+			Description = "This feature works all Character!",
+			Duration = 10,
+			Icon = "rbxassetid://128000497825850"
+		})
+		local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+
+local function stopAllAnimations()
+    local animator = humanoid:FindFirstChildOfClass("Animator")
+    if animator then
+        for _, track in pairs(animator:GetPlayingAnimationTracks()) do
+            track:Stop()
+        end
+    end
+end
+stopAllAnimations()
+
+local idleAnimId = "rbxassetid://134912704311964"
+local walkAnimId = "rbxassetid://72876915959076"
+local runAnimId = "rbxassetid://75409814098993"
+local m1AnimId = "rbxassetid://123569615350667"
+local blockedAnimId = "rbxassetid://80277760801310"
+
+local idleAnim = Instance.new("Animation")
+idleAnim.AnimationId = idleAnimId
+local walkAnim = Instance.new("Animation") 
+walkAnim.AnimationId = walkAnimId
+local runAnim = Instance.new("Animation")
+runAnim.AnimationId = runAnimId
+local m1Anim = Instance.new("Animation")
+m1Anim.AnimationId = m1AnimId
+
+local idleTrack = humanoid:LoadAnimation(idleAnim)
+local walkTrack = humanoid:LoadAnimation(walkAnim) 
+local runTrack = humanoid:LoadAnimation(runAnim)
+local m1Track = humanoid:LoadAnimation(m1Anim)
+
+local isMoving = false
+local isRunning = false
+local canAttack = true
+local cooldown = 2
+
+local function blockUnwantedAnimations(animator)
+    animator.AnimationPlayed:Connect(function(animationTrack)
+        if animationTrack.Animation.AnimationId == blockedAnimId then
+            animationTrack:Stop()
+        end
+    end)
+end
+
+local animator = humanoid:FindFirstChildOfClass("Animator")
+if animator then
+    blockUnwantedAnimations(animator)
+else
+    humanoid.ChildAdded:Connect(function(child)
+        if child:IsA("Animator") then
+            blockUnwantedAnimations(child)
+        end
+    end)
+end
+
+local function updateAnimations()
+    if isMoving then
+        if isRunning then
+            if not runTrack.IsPlaying then
+                idleTrack:Stop()
+                walkTrack:Stop()
+                runTrack:Play()
+            end
+        else
+            if not walkTrack.IsPlaying then
+                idleTrack:Stop()
+                runTrack:Stop()
+                walkTrack:Play()
+            end
+        end
+    else
+        if not idleTrack.IsPlaying then
+            walkTrack:Stop()
+            runTrack:Stop()
+            idleTrack:Play()
+        end
+    end
+end
+
+local function onM1Click()
+    if canAttack then
+        canAttack = false
+        m1Track:Play()
+        idleTrack:Stop()
+        walkTrack:Stop()
+        runTrack:Stop()
+        task.wait(cooldown)
+        canAttack = true
+    end
+end
+
+game:GetService("RunService").Heartbeat:Connect(function()
+    isMoving = humanoid.MoveDirection.Magnitude > 0
+    isRunning = humanoid.WalkSpeed > 16
+    updateAnimations()
+end)
+
+local overrideAnimId = "rbxassetid://87259391926321"
+
+if animator then
+    animator.AnimationPlayed:Connect(function(track)
+        if track.Animation.AnimationId == overrideAnimId then
+            onM1Click()
+        end
+    end)
+end
+
+
+humanoid.WalkSpeed = 16
+updateAnimations()
+ 
+local Sprinting = game:GetService("ReplicatedStorage").Systems.Character.Game.Sprinting
+local m = require(Sprinting)
+m.MaxStamina = 99999999
+m.StaminaGain = 100
+m.StaminaLoss = 0
+m.SprintSpeed = 29
+	end,
+})
+]]
+
+Section:NewButton({
+	Title = "ForceField [C]",
+	Callback = function()
+ff = Instance.new("ForceField", game.Players.LocalPlayer.Character)
+ff.Visible = true
+ 
+-- Sets health to max
+maxHealth = game.Players.LocalPlayer.Humanoid.MaxHealth
+player.Health = maxHealth
+	end,
+})
+
+Section:NewButton({
+	Title = "Teleport SafeArea",
+	Callback = function()
+	Notification.new({
+			Title = "Warning",
+			Description = "Make sure you are in the Round!",
+			Duration = 10,
+			Icon = "rbxassetid://128000497825850"
+		})
+		    local oh1 = CFrame.new(-3553, 12, 268)
+      local oh2 = game:GetService("Players")
+      local oh3 = oh2.LocalPlayer.Character.HumanoidRootPart
+
+     oh3.CFrame = oh1
+	end,
+})
+
+local staminaLoopActive = false
+local staminaLoopThread = nil
+local StaminaModule = require(game.ReplicatedStorage.Systems.Character.Game.Sprinting)
+
+InfoSection:NewToggle({
+    Title = "Infinite Stamina (V1)",
+    Default = false,
+    Callback = function(enabled)
+        staminaLoopActive = enabled
+
+        if enabled then
+            StaminaModule.StaminaLossDisabled = true
+
+            -- Only start the loop if not already running
+            if not staminaLoopThread then
+                staminaLoopThread = task.spawn(function()
+                    while staminaLoopActive do
+                        task.wait(0.1)
+                        StaminaModule.Stamina = StaminaModule.MaxStamina
+                        StaminaModule.StaminaChanged:Fire()
+                    end
+                    staminaLoopThread = nil -- reset when stopped
+                end)
+            end
+        else
+            StaminaModule.StaminaLossDisabled = false
+        end
+    end,
+})
+
+InfoSection:NewToggle({
+	Title = "Players Esp",
+	Default = false,
+	Callback = function(state) 
+		for _, player in pairs(game.Players:GetPlayers()) do
+            if player ~= game.Players.LocalPlayer then
+                if state then
+                    local highlight = Instance.new("Highlight")
+                    highlight.Parent = player.Character
+                    highlight.Adornee = player.Character
+
+                    local billboard = Instance.new("BillboardGui")
+                    billboard.Parent = player.Character
+                    billboard.Adornee = player.Character
+                    billboard.Size = UDim2.new(0, 100, 0, 100)
+                    billboard.StudsOffset = Vector3.new(0, 3, 0)
+                    billboard.AlwaysOnTop = true
+
+                    local nameLabel = Instance.new("TextLabel")
+                    nameLabel.Parent = billboard
+                    nameLabel.Size = UDim2.new(1, 0, 1, 0)
+                    nameLabel.BackgroundTransparency = 1
+                    nameLabel.Text = player.Name
+                    nameLabel.TextColor3 = Color3.new(1, 1, 1)
+                    nameLabel.TextStrokeTransparency = 0.5
+                    nameLabel.TextScaled = true
+
+                    local circle = Instance.new("ImageLabel")
+                    circle.Parent = billboard
+                    circle.Size = UDim2.new(0, 50, 0, 50)
+                    circle.Position = UDim2.new(0.5, 0, 0.5, 0) -- Center the circle
+                    circle.AnchorPoint = Vector2.new(0.5, 0.5) -- Set the anchor point to the center
+                    circle.BackgroundTransparency = 1
+                    circle.Image = "rbxassetid://2200552246" -- Replace with your circle image asset ID
+                else
+                    if player.Character:FindFirstChildOfClass("Highlight") then
+                        player.Character:FindFirstChildOfClass("Highlight"):Destroy()
+                    end
+                    if player.Character:FindFirstChildOfClass("BillboardGui") then
+                        player.Character:FindFirstChildOfClass("BillboardGui"):Destroy()
+                    end
+                end
+            end
+        end
+	end,
+})
+
+-- Handle Survivor ESP
+game.Workspace.Players.Survivors.ChildAdded:Connect(function(child)
+    if survivorchams == false then return end
+
+    local existingHL = child:FindFirstChild("SurvivorHL")
+    if existingHL then
+        existingHL:Destroy()
+    end
+
+    local hl = Instance.new("Highlight")
+    hl.Name = "SurvivorHL"
+    hl.Parent = child
+    hl.DepthMode = "AlwaysOnTop"
+    hl.FillColor = Color3.fromRGB(0, 255, 0)
+    hl.FillTransparency = 0.9
+end)
+
+local survivorchams = false
+local survivoremit = false
+local killerchams = false
+local killeremit = false
+
+game.Workspace.Players.Killers.ChildAdded:Connect(function(child)
+    if killerchams == false then return end
+
+    local hl = Instance.new("Highlight")
+    hl.Parent = child
+    hl.DepthMode = "AlwaysOnTop"
+    hl.FillColor = Color3.fromRGB(255, 0, 0)
+end)
+
+
+InfoSection:NewToggle({
+	Title = "Killer Esp",
+	Default = false,
+	Callback = function(state) 
+		if state then
+        killerchams = true
+
+        killer = game.Workspace.Players.Killers:GetChildren()[1]
+
+        if killer then
+            local hl = Instance.new("Highlight")
+            hl.Name = "Chams"
+            hl.Parent = killer
+            hl.DepthMode = "AlwaysOnTop"
+            hl.FillColor = Color3.new(255, 0, 0)
+        end
+        
+        print("Actived")
+    else
+        killerchams = false
+
+        if killer then
+            local highlight = killer:FindFirstChildOfClass("Highlight")
+            if highlight then
+                highlight:Destroy()
+            end
+        end
+        
+        print("Disabled")
+    end
+	end,
+})
+
+InfoSection:NewToggle({
+	Title = "Survivor Esp",
+	Default = false,
+	Callback = function(state)
+  survivorchams = state
+
+    if state then
+        for i, survivor in ipairs(game.Workspace.Players.Survivors:GetChildren()) do
+            local existingHL = survivor:FindFirstChild("SurvivorHL")
+            if existingHL then existingHL:Destroy() end
+
+            local hl = Instance.new("Highlight")
+            hl.Name = "SurvivorHL"
+            hl.Parent = survivor
+            hl.DepthMode = "AlwaysOnTop"
+            hl.FillColor = Color3.fromRGB(0, 255, 0)
+            hl.FillTransparency = 0.9
+            print(i, survivor.Name)
+        end
+    else
+        for i, survivor in ipairs(game.Workspace.Players.Survivors:GetChildren()) do
+            local hl = survivor:FindFirstChild("SurvivorHL")
+            if hl then
+                hl:Destroy()
+            end
+        end
+        print("Disabled")
+    end
+	end,
+})
+
+InfoSection:NewToggle({
+	Title = "No Fog (V1)",
+	Default = false,
+	Callback = function(Value)
+		if Value then
+		    game.Lighting.Ambient = Color3.new(1, 1, 1)
+		else
+		    game.Lighting.Ambient = Color3.new(0, 0, 0)
+		end
+	end,
+})
+
+InfoSection:NewToggle({
+	Title = "No Fog (V2)",
+	Default = false,
+	Callback = function(state)
+		if state then
+        game.Lighting.Atmosphere.Density = 0
+    else
+        game.Lighting.Atmosphere.Density = .6
+    end
+	end,
+})
+
+InfoSection:NewSlider({
+    Title = "Sprint Speed",
+    Min = 29,
+    Max = 35,
+    Default = 29,
+    Callback = function(s)
+   local Sprinting = game:GetService("ReplicatedStorage").Systems.Character.Game.Sprinting
+   local m = require(Sprinting)
+    m.SprintSpeed = s
+    end,
+})
+
+
+InfoSection:NewSlider({
+    Title = "Minium Slow",
+    Min = 500,
+    Max = 500,
+    Default = 500,
+    Callback = function(s)
+    minium = s
+    end,
+})
+
+InfoSection:NewSlider({
+	Title = "Camera",
+	Min = 500,
+	Max = 99999,
+	Default = 500,
+	Callback = function(a)
+		game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = a
+	end,
+})
+
+InfoSection:NewSlider({
+	Title = "FPS Unlocker",
+	Min = 150,
+	Max = 200,
+	Default = 150,
+	Callback = function(a)
+		print(a)
+	end,
+})
+
+InfoSection:NewTitle('Version: 1.0')
+InfoSection:NewTitle('Thanks to UXteam') 
+InfoSection:NewButton({
+
+	Title = "Discord",
+	Callback = function()
+		print('https://discord.gg/43mDSjxb9U')
+	end,
+})
+
+Section:NewKeybind({
+	Title = "Keybind",
+	Default = Enum.KeyCode.RightAlt,
+	Callback = function(a)
+		print(a)
+	end,
+})
