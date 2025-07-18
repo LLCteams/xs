@@ -4,7 +4,7 @@ local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCte
 local Window = redzlib:MakeWindow({
   Title = "UX",
   SubTitle = "3.0 Testing",
-  SaveFolder = "UX.bt"
+  SaveFolder = "UX.vip"
 })
 local Tab1 = Window:MakeTab({"Home", "info"})
 local Tab2 = Window:MakeTab({"Settings", "setting"})
