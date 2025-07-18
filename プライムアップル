@@ -45,7 +45,7 @@ Window:Destroy()
 
 -- LoadC
 game:GetService("Players").LocalPlayer.CameraMaxZoomDistance = 980000
-
+--[[
 local TweenService = game:GetService("TweenService")
 local PlayerGui = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
@@ -379,8 +379,6 @@ if not success then
 end
 
 -- end of Winter Load
---[[ 
-unuse
 -- others loader
 
 local TweenService = game:GetService("TweenService")
@@ -668,6 +666,7 @@ end
 
 playEntranceAnimation().Completed:Wait()
 animateLoading()
+]]
 
 -- Exp
 
@@ -770,7 +769,7 @@ setclipboard("https://discord.gg/43mDSjxb9U")
 end)
 
 -- Load
-
+--[[
 -- Combine whitelist system and command execution logic in one loadstring
 local combinedCode = [[
 -- Whitelist configuration
@@ -1063,11 +1062,9 @@ BlurEffect:Destroy()
 ScreenGui:Destroy()
 
 -- End
-]]
 
 print("Join: https://discord.gg/43mDSjxb9U")
 
---[[
 if (identifyexecutor()) == "Codex" then
 Notification.Notify("Universe X 3.0", "Codex too low and not support this script!", "rbxassetid://17415983489", {
     Duration = 6,
@@ -1396,14 +1393,16 @@ warn("Patch-AI-Issues-2025 is Actived!")
 local DrRayLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/DrRay-UI-Library/main/DrRay.lua"))()
 
 -- Create a new window and set its title and theme
-local window = DrRayLibrary:Load("UniverseX V2", "")
+local window = DrRayLibrary:Load("UniverseX 0.31", "")
 
 -- Create the first tab with an image ID
 local tab1 = DrRayLibrary.newTab("Popular", "")
 
 -- Add elements to the first tab
 tab1.newLabel("Welcome to UniverseX, this is the newest version.")
-
+tab1.newButton("UniverseX AI", "Coming soon", function()
+    print('error.') 
+end)
 tab1.newButton("UniverseX 1.0", "UniverseX, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D0%BB%D0%BE%D0%BA%D0%B8"))()
 end)
@@ -1412,12 +1411,18 @@ tab1.newButton("UniverseX 3.0", "Remake, click to load the script", function()
 end)
 tab1.newButton("UniverseX V2", "UniverseX, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D1%80%D1%83%D1%85%20%D0%BD%D0%B8%D0%BA%D0%BE%D0%B3%D0%B4%D0%B0%20%D0%BD%D0%B5%20%D1%81%D1%82%D0%B0%D1%80%D0%B5%D0%B5%D1%82%20%D0%9D%D0%BE%D0%B2%D1%8B%D0%B9b"))()
-end) 
-tab1.newButton("Keyboard", "Keyboard, click to load the script", function()
+end)
+tab1.newButton("Keyboard", "click to load the script", function()
 opvers()
 end)
 tab1.newButton("Shader", "click to load the script", function()
     ShaderBeta()
+end) 
+tab1.newButton("Noclip", "click to load the script", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%9D%D0%B8%D0%B7%D0%BA%D0%B8%D0%B9%20%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%B9%20%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%B9%20%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%B9%20%D0%BD%D0%B8%D0%B7%D0%BA%D0%B8%D0%B9"))()
+end)
+tab1.newButton("Invisible", "click to load the script", function()
+    loadstring(game:HttpGet("https://pastefy.app/AsFFApeN/raw"))()
 end)
 tab1.newButton("Infinite Yield", "click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
@@ -1425,34 +1430,28 @@ end)
 tab1.newButton("Infinite Yield Delta", "click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/mobile-delta-inf-yield/main/deltainfyield.txt"))()
 end)
-tab1.newButton("Admin Panel", "Panel, click to load the script", function()
+tab1.newButton("Admin Panel", "AdminPanel, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/D%20%D0%BF%D0%B0%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5%20%D0%B4%D0%B5%D0%BC%D0%BE%D0%BD%D0%B0"))()
 end)
-tab1.newButton("Admin Command", "Admin commands, click to load the script", function()
+tab1.newButton("Admin Command", "AdminCommands, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/222%20%D0%98%D0%B3%D1%80%D0%B0%20%D0%91%D0%BB%D0%BE%D0%BA%20%D0%BE%D1%82%20%D0%BC%D0%B0%D0%BB%D1%8C%D1%87%D0%B8%D0%BA%D0%B0v"))()
 end)
-tab1.newButton("UX Executor 4.1", "Executors, click to load the script", function()
+tab1.newButton("UniX 4.1", "Executors, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%9C%D0%BE%D0%B9%20%D1%81%D1%82%D0%B8%D0%BB%D1%8C%20-%20%D1%8D%D1%82%D0%BE%20%D0%B4%D0%B8%D1%81%D0%BA%20f"))()
 end) 
-tab1.newButton("Waiting update", "Executors, click to load the script", function()
+tab1.newButton("UniX 3.0", "Executors, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%91%D0%BB%D0%BE%D0%BA%D1%81%20%D0%91%D0%BE%D0%B3%20%D0%BC%D0%B8%D1%80%D0%B0"))()
 end)
-tab1.newButton("UX Executor 3.0", "Remake, click to load the script", function()
+tab1.newButton("UniX 3.0", "Remake, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%9F%D0%BE%D0%BC%D0%BE%D0%B3%D0%B8%D1%82%D0%B5%20%D0%BC%D0%BD%D0%B5%20%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C%20%D0%BA%D0%B0%D0%BA%20%D0%BC%D0%BE%D0%B6%D0%BD%D0%BE%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B5"))()
 end)
-tab1.newButton("UniverseX 1.0", "UniverseX coming soon", function()
+tab1.newButton("UniX 1.0", "UniverseX coming soon", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%9F%D0%BE%D0%BC%D0%BE%D0%B3%D0%B8%D1%82%D0%B5%20%D0%BC%D0%BD%D0%B5%20%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D1%8C"))()
 end)
-tab1.newButton("UniverseX 4.0", "Coming soon", function()
-    print('error.') 
-end)
-tab1.newButton("VoltX", "VoltX testing, click to load the script", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%B0-%D0%B1%D0%BB%D0%B0-%D0%BD%D1%83%D0%B1%20%D1%85%D0%B0-%D1%85%D0%B0"))()
-end)
-tab1.newButton("UniverseX Remake", "Remake, click to load the script", function()
+tab1.newButton("UniX Remake", "Remake, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%B5%D1%82%D0%B0."))()
 end)
-tab1.newButton("UniverseX Remake", "Remake, click to load the script", function()
+tab1.newButton("UniX Remake", "Remake, click to load the script", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BE%20%D0%B8%D0%B3%D1%80%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%B1%D0%BB%D0%BE%D0%BA%20%D0%91%D0%BB%D0%BE%D0%BA%D1%81"))()
 end)
 
@@ -4789,7 +4788,12 @@ end)
 end
 
 local tab2 = DrRayLibrary.newTab("Game", "")
-
+tab1.newButton("Hide And Seek", "click to load the script", function()
+loadstring(Game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%9A%D0%B0%D0%BA%20%D0%B1%D1%83%D0%B4%D1%82%D0%BE%20%D0%B2%D1%8B%20%D1%81%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%20%D0%B1%D0%BE%D0%BB%D1%8C%D1%88%D0%B5%D0%B9%20%D1%81%D0%B2%D0%BE%D0%B1%D0%BE%D0%B4%D0%BE%D0%B9%20%D0%B8%20%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D0%B5%D1%82%D0%B5%20%D0%BC%D0%BE%D1%80%D0%B5%D0%BC"))()
+end)
+tab1.newButton("Forsaken", "Forsaken", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%E5%85%84%E5%BC%9F%E3%81%AF%E3%83%97%E3%83%AD"))()
+end)
 tab2.newButton("Piggy", "Piggy", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%95%D1%81%D1%82%D1%8C%20%D0%B1%D0%BE%D1%82%D1%8B-%D0%B1%D0%BB%D0%BE%D0%BA%D0%BC%D0%B0%D0%BD%D1%8B"))()
 end)
@@ -9950,8 +9954,13 @@ end
         MainSection:NewButton("Role: Hacker", "Executed!", function()
         Library.Notify("UXteam", "Miniverse has executed!", 5)
             game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole:FireServer("Phone", true, false)
+        end) 
+
+        MainSection:NewButton("Script", "Executed!", function()
+        Library.Notify("UXteam", "Miniverse has executed!", 5)
+           loadstring(Game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%9D%D0%B5%D0%BE%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5%20%D0%B1%D0%BE%D0%B3%D0%B0%D1%82%D1%81%D1%82%D0%B2%D0%BE"))()
         end)
-        
+
         MainSection:NewButton("Role: Nerd", "Executed!", function()
         Library.Notify("UXteam", "Miniverse has executed!", 5)
             game:GetService("ReplicatedStorage").RemoteEvents.OutsideRole:FireServer("Book", true, false)
@@ -9959,6 +9968,9 @@ end
 end
 tab2.newButton("Zombie Uprising", "Zombie Uprising", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%91%D0%BB%D0%BE%D0%BA%D1%81%20%D0%BB%D0%BE%D0%BB%20%D0%BD%D1%83%D0%B1"))()
+end)
+tab2.newButton("Prison Life", "Zombie Uprising", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%D0%9A%D1%82%D0%BE%20%D1%83%D0%BA%D1%80%D0%B0%D0%BB%20%D1%87%D0%B5%D1%80%D1%82%D0%B5%D0%B6"))()
 end)
 tab2.newButton("Slap Battles", "Slap Battles", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/main/%D0%97%D0%B2%D0%BE%D0%BD%D0%B8%D1%82%D0%B5%20%D0%B2%20%D0%A1%D0%A8%D0%90%2C%20%D1%85%D0%B0-%D1%85%D0%B0%2C%20%D0%BD%D0%BE%D0%B2%D0%B0%D1%8F%20%D0%B1%D0%B5%D1%82%D0%B0-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F%2C%20%D0%BB%D0%BE%D0%BB%20%20%D1%85%D0%B0%D1%85%D0%B0%D1%85%D0%B0%20%D1%87%D0%B8%D1%82"))()
@@ -74206,205 +74218,3 @@ end
 
 
 --END TEST
-
-local PLAYERS = game:GetService("Players")
-
-local GravityController = _GravityController()
-local Controller = GravityController.new(PLAYERS.LocalPlayer)
-
-local DrawClass = _DrawClass()
-
-local PI2 = math.pi*2
-local ZERO = Vector3.new(0, 0, 0)
-
-local LOWER_RADIUS_OFFSET = 3 
-local NUM_DOWN_RAYS = 24
-local ODD_DOWN_RAY_START_RADIUS = 3	
-local EVEN_DOWN_RAY_START_RADIUS = 2
-local ODD_DOWN_RAY_END_RADIUS = 1.66666
-local EVEN_DOWN_RAY_END_RADIUS = 1
-
-local NUM_FEELER_RAYS = 9
-local FEELER_LENGTH = 2
-local FEELER_START_OFFSET = 2
-local FEELER_RADIUS = 3.5
-local FEELER_APEX_OFFSET = 1
-local FEELER_WEIGHTING = 8
-
-function GetGravityUp(self, oldGravityUp)
-	local ignoreList = {}
-	for i, player in next, PLAYERS:GetPlayers() do
-		ignoreList[i] = player.Character
-	end
-	
-	-- get the normal
-	
-	local hrpCF = self.HRP.CFrame
-	local isR15 = (self.Humanoid.RigType == Enum.HumanoidRigType.R15)
-	
-	local origin = isR15 and hrpCF.p or hrpCF.p + 0.35*oldGravityUp
-	local radialVector = math.abs(hrpCF.LookVector:Dot(oldGravityUp)) < 0.999 and hrpCF.LookVector:Cross(oldGravityUp) or hrpCF.RightVector:Cross(oldGravityUp)
-	
-	local centerRayLength = 25
-	local centerRay = Ray.new(origin, -centerRayLength * oldGravityUp)
-	local centerHit, centerHitPoint, centerHitNormal = workspace:FindPartOnRayWithIgnoreList(centerRay, ignoreList)
-	
-	--[[disable
-	DrawClass:Clear()
-	DrawClass.Draw3D.Ray(centerRay.Origin, centerRay.Direction)
-	]]
-	local downHitCount = 0
-	local totalHitCount = 0
-	local centerRayHitCount = 0
-	local evenRayHitCount = 0
-	local oddRayHitCount = 0
-	
-	local mainDownNormal = ZERO
-	if (centerHit) then
-		mainDownNormal = centerHitNormal
-		centerRayHitCount = 0
-	end
-	
-	local downRaySum = ZERO
-	for i = 1, NUM_DOWN_RAYS do
-		local dtheta = PI2 * ((i-1)/NUM_DOWN_RAYS)
-		
-		local angleWeight = 0.25 + 0.75 * math.abs(math.cos(dtheta))
-		local isEvenRay = (i%2 == 0)
-		local startRadius = isEvenRay and EVEN_DOWN_RAY_START_RADIUS or ODD_DOWN_RAY_START_RADIUS	
-		local endRadius = isEvenRay and EVEN_DOWN_RAY_END_RADIUS or ODD_DOWN_RAY_END_RADIUS
-		local downRayLength = centerRayLength
-		
-		local offset = CFrame.fromAxisAngle(oldGravityUp, dtheta) * radialVector
-		local dir = (LOWER_RADIUS_OFFSET * -oldGravityUp + (endRadius - startRadius) * offset)
-		local ray = Ray.new(origin + startRadius * offset, downRayLength * dir.unit)
-		local hit, hitPoint, hitNormal = workspace:FindPartOnRayWithIgnoreList(ray, ignoreList)
-		--[[disable
-		DrawClass.Draw3D.Ray(ray.Origin, ray.Direction)
-		]]
-		if (hit) then
-			downRaySum = downRaySum + angleWeight * hitNormal
-			downHitCount = downHitCount + 1
-			if isEvenRay then
-				evenRayHitCount = evenRayHitCount + 1					
-			else
-				oddRayHitCount = oddRayHitCount + 1
-			end
-		end
-	end
-	
-	local feelerHitCount = 0	
-	local feelerNormalSum = ZERO
-	
-	for i = 1, NUM_FEELER_RAYS do
-		local dtheta = 2 * math.pi * ((i-1)/NUM_FEELER_RAYS)
-		local angleWeight =  0.25 + 0.75 * math.abs(math.cos(dtheta))	
-		local offset = CFrame.fromAxisAngle(oldGravityUp, dtheta) * radialVector
-		local dir = (FEELER_RADIUS * offset + LOWER_RADIUS_OFFSET * -oldGravityUp).unit
-		local feelerOrigin = origin - FEELER_APEX_OFFSET * -oldGravityUp + FEELER_START_OFFSET * dir
-		local ray = Ray.new(feelerOrigin, FEELER_LENGTH * dir)
-		local hit, hitPoint, hitNormal = workspace:FindPartOnRayWithIgnoreList(ray, ignoreList)
-		--[[disable
-		DrawClass.Draw3D.Ray(ray.Origin, ray.Direction)
-		]]
-		if (hit) then
-			feelerNormalSum = feelerNormalSum + FEELER_WEIGHTING * angleWeight * hitNormal --* hitDistSqInv
-			feelerHitCount = feelerHitCount + 1
-		end
-	end
-	
-	if (centerRayHitCount + downHitCount + feelerHitCount > 0) then
-		local normalSum = mainDownNormal + downRaySum + feelerNormalSum
-		if (normalSum ~= ZERO) then
-			return normalSum.unit
-		end
-	end
-	
-	return oldGravityUp
-end
-
-Controller.GetGravityUp = GetGravityUp
-
--- E toggles
-game:GetService("ContextActionService"):BindAction("Toggle", function(action, state, input)
-	if not (state == Enum.UserInputState.Begin) then
-		return
-	end
-	
-	if (Controller) then
-		Controller:Destroy()
-		Controller = nil
-	else
-		Controller = GravityController.new(PLAYERS.LocalPlayer)
-		Controller.GetGravityUp = GetGravityUp
-	end
-end, false, Enum.KeyCode.Z)
-print("end")
-end
-
--- Graphic
-if getgenv().GraphicsLevel then
-    local removedTextures = {}
-    local removedParticles = {}
-    local disabledScripts = {}
-
-    function setGraphicsQuality(level)
-        if level == "uxlol" then
-            settings().Rendering.QualityLevel = Enum.QualityLevel.Level01
-        elseif level == "low" then
-            settings().Rendering.QualityLevel = Enum.QualityLevel.Level04
-        elseif level == "mid" then
-            settings().Rendering.QualityLevel = Enum.QualityLevel.Level06
-        elseif level == "normal" then
-            settings().Rendering.QualityLevel = Enum.QualityLevel.Automatic
-        end
-    end
-
-    function applyGraphicsSettings(level)
-        if level == "normal" then
-            for _, texture in pairs(removedTextures) do
-                texture.obj.Parent = texture.originalParent
-            end
-            removedTextures = {}
-
-            for _, particle in pairs(removedParticles) do
-                particle.obj.Parent = particle.originalParent
-            end
-            removedParticles = {}
-
-            for _, script in pairs(disabledScripts) do
-                script.Disabled = false
-            end
-            disabledScripts = {}
-            return
-        end
-
-        for _, obj in pairs(workspace:GetDescendants()) do
-            if obj:IsA("Texture") and level ~= "normal" then
-                table.insert(removedTextures, {obj = obj, originalParent = obj.Parent})
-                obj.Parent = nil
-            elseif obj:IsA("ParticleEmitter") or obj:IsA("Smoke") or obj:IsA("Fire") then
-                if level == "uxlol" then
-                    table.insert(removedParticles, {obj = obj, originalParent = obj.Parent})
-                    obj.Parent = nil
-                end
-            elseif obj:IsA("Script") or obj:IsA("LocalScript") then
-                if (level == "low" or level == "uxlol") and not obj.Disabled then
-                    table.insert(disabledScripts, obj)
-                    obj.Disabled = true
-                end
-            end
-        end
-    end
-
-    setGraphicsQuality(getgenv().GraphicsLevel)
-    applyGraphicsSettings(getgenv().GraphicsLevel)
-else
-    print("No graphics.")
-end
---// Example
--- Set the graphics level
---// getgenv().GraphicsLevel = "uxlol"  -- Options: "uxlol", "low", "mid", "normal"
-
---// Load and execute the external graphics and cleanup script
---// loadstring(game:HttpGet("https://raw.githubusercontent.com/John142-dot/graphicschanger/refs/heads/main/main.lua"))()
