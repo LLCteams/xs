@@ -1,4 +1,4 @@
-
+game:Shutdown()
 local mewing10 = loadstring(game:HttpGet('https://raw.githubusercontent.com/hooaczx/Notifications-Code/main/Notifications/Mewing10'))()
 
 mewing10.NormalNotification({
