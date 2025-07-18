@@ -2,7 +2,7 @@
 local mewing10 = loadstring(game:HttpGet('https://raw.githubusercontent.com/hooaczx/Notifications-Code/main/Notifications/Mewing10'))()
 
 mewing10.NormalNotification({
-	Title = "Universe-X",
+	Title = "UniverseX",
 	Description = "All rights reserved by UXteam.",
 	ImagesID = "rbxassetid://91708365445524", 
 	SoundID = "rbxassetid://5525281334", -- make sure the sound id
