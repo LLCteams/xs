@@ -1,1 +1,1 @@
-loadstring(game:HttpGet(""))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/%E5%8F%97%E4%BF%9D%E6%8A%A4%E7%9A%84.txt"))()
