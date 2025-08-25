@@ -1,1 +1,8 @@
+if not game:IsLoaded() then
+    game.Loaded:Wait()
+end
+
+local Place = game.PlaceId
+
+if Place == tonumber(4924922222) then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/LLCteams/xs/refs/heads/main/Protected_4908993117284070.lua"))()
